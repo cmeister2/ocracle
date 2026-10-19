@@ -1,0 +1,1413 @@
+[
+  {
+    "base_id": "de-dom-88-01",
+    "card_id": "8c58a343-be7e-497f-baae-e804a553eaf7",
+    "text": "Furchteinflößender Schatten",
+    "bbox": [
+      49,
+      48,
+      485,
+      88
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-dom-88-02",
+    "card_id": "8c58a343-be7e-497f-baae-e804a553eaf7",
+    "text": "Der Furchteinflößende Schatten",
+    "bbox": [
+      95,
+      582,
+      560,
+      611
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-dom-88-03",
+    "card_id": "8c58a343-be7e-497f-baae-e804a553eaf7",
+    "text": "„Der Wald, der einst die Vess-Ländereien",
+    "bbox": [
+      52,
+      667,
+      552,
+      697
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png",
+      "additional_evidence": "Native full flavor crop independently reviewed: U+201E opening low quote and ä in Vess-Ländereien confirmed"
+    },
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference"
+  },
+  {
+    "base_id": "de-dom-88-04",
+    "card_id": "8c58a343-be7e-497f-baae-e804a553eaf7",
+    "text": "umgab, wurde zum Kaligo-Morast,",
+    "bbox": [
+      52,
+      697,
+      510,
+      727
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-m21-67-01",
+    "card_id": "7fe6e6f8-41c0-441d-a72e-501444b2aa7b",
+    "text": "Aufwühlende Lektüre",
+    "bbox": [
+      44,
+      45,
+      367,
+      84
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-m21-67-02",
+    "card_id": "7fe6e6f8-41c0-441d-a72e-501444b2aa7b",
+    "text": "Wenn die Aufwühlende Lektüre ins",
+    "bbox": [
+      47,
+      566,
+      494,
+      594
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-m21-67-03",
+    "card_id": "7fe6e6f8-41c0-441d-a72e-501444b2aa7b",
+    "text": "Spiel kommt, ziehe zwei Karten und",
+    "bbox": [
+      47,
+      593,
+      510,
+      621
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-m21-67-04",
+    "card_id": "7fe6e6f8-41c0-441d-a72e-501444b2aa7b",
+    "text": "Große Literatur kann den Leser beflügeln.",
+    "bbox": [
+      47,
+      736,
+      531,
+      765
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-01.png"
+    }
+  },
+  {
+    "base_id": "de-m21-212-01",
+    "card_id": "6db906e6-1e3c-4836-99c0-ace2fdaeb2aa",
+    "text": "Trüffelschnüffler",
+    "bbox": [
+      44,
+      45,
+      319,
+      85
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "de-m21-212-02",
+    "card_id": "6db906e6-1e3c-4836-99c0-ace2fdaeb2aa",
+    "text": "Wenn der Trüffelschnüffler ins Spiel",
+    "bbox": [
+      47,
+      525,
+      480,
+      553
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "de-m21-212-03",
+    "card_id": "6db906e6-1e3c-4836-99c0-ace2fdaeb2aa",
+    "text": "Seine Taten sind Legende unter den lokalen",
+    "bbox": [
+      48,
+      687,
+      530,
+      715
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "de-m21-212-04",
+    "card_id": "6db906e6-1e3c-4836-99c0-ace2fdaeb2aa",
+    "text": "Köchen und Quell von Albträumen bei den",
+    "bbox": [
+      48,
+      714,
+      530,
+      741
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "en-5ed-282-01",
+    "card_id": "b0180bd6-f8eb-4cf7-b6d0-acb513076e00",
+    "text": "Cat Warriors",
+    "bbox": [
+      74,
+      47,
+      322,
+      97
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "en-5ed-282-02",
+    "card_id": "b0180bd6-f8eb-4cf7-b6d0-acb513076e00",
+    "text": "any forests, this creature is unblockable.)",
+    "bbox": [
+      92,
+      712,
+      657,
+      750
+    ],
+    "style": "reminder",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "en-5ed-282-03",
+    "card_id": "b0180bd6-f8eb-4cf7-b6d0-acb513076e00",
+    "text": "These stealthy felines have survived so",
+    "bbox": [
+      92,
+      768,
+      650,
+      806
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "en-5ed-282-04",
+    "card_id": "b0180bd6-f8eb-4cf7-b6d0-acb513076e00",
+    "text": "many battles that some believe they must",
+    "bbox": [
+      92,
+      806,
+      660,
+      842
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-02.png"
+    }
+  },
+  {
+    "base_id": "en-7ed-51-01",
+    "card_id": "e6fdb8e2-76d6-4471-8fe3-c83872f0c198",
+    "text": "Sunweb",
+    "bbox": [
+      75,
+      47,
+      230,
+      99
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-7ed-51-02",
+    "card_id": "e6fdb8e2-76d6-4471-8fe3-c83872f0c198",
+    "text": "(Walls can’t attack.)",
+    "bbox": [
+      91,
+      638,
+      418,
+      678
+    ],
+    "style": "reminder",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-7ed-51-03",
+    "card_id": "e6fdb8e2-76d6-4471-8fe3-c83872f0c198",
+    "text": "Sometimes the wings of fallen dragons",
+    "bbox": [
+      91,
+      830,
+      655,
+      873
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-7ed-51-04",
+    "card_id": "e6fdb8e2-76d6-4471-8fe3-c83872f0c198",
+    "text": "refuse to give up the sky.",
+    "bbox": [
+      91,
+      872,
+      465,
+      914
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-8ed-154-01",
+    "card_id": "a1476320-efed-433c-adad-cda2d2a3997f",
+    "text": "Plague Beetle",
+    "bbox": [
+      60,
+      58,
+      328,
+      103
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-8ed-154-02",
+    "card_id": "a1476320-efed-433c-adad-cda2d2a3997f",
+    "text": "as long as defending player controls a",
+    "bbox": [
+      69,
+      712,
+      605,
+      751
+    ],
+    "style": "reminder",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-8ed-154-03",
+    "card_id": "a1476320-efed-433c-adad-cda2d2a3997f",
+    "text": "No one knows whether they were named for",
+    "bbox": [
+      68,
+      803,
+      662,
+      841
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-8ed-154-04",
+    "card_id": "a1476320-efed-433c-adad-cda2d2a3997f",
+    "text": "the disease they carry or for the speed at",
+    "bbox": [
+      68,
+      841,
+      613,
+      879
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-03.png"
+    }
+  },
+  {
+    "base_id": "en-dom-171-01",
+    "card_id": "db18bbcd-527d-4134-a6ae-6f4381419867",
+    "text": "Mammoth Spider",
+    "bbox": [
+      59,
+      55,
+      377,
+      103
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "en-dom-171-02",
+    "card_id": "db18bbcd-527d-4134-a6ae-6f4381419867",
+    "text": "Most spiders of Llanowar disdain elvish",
+    "bbox": [
+      61,
+      781,
+      676,
+      821
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "en-dom-171-03",
+    "card_id": "db18bbcd-527d-4134-a6ae-6f4381419867",
+    "text": "alliances. No elf has as many beautiful",
+    "bbox": [
+      61,
+      820,
+      666,
+      859
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "en-dom-171-04",
+    "card_id": "db18bbcd-527d-4134-a6ae-6f4381419867",
+    "text": "eyes or as many strong arms.",
+    "bbox": [
+      61,
+      858,
+      511,
+      898
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "es-dom-79-01",
+    "card_id": "12ad2957-6ac3-4444-bee2-1274f75554d2",
+    "text": "Paladín de la Cábala",
+    "bbox": [
+      51,
+      48,
+      378,
+      88
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "es-dom-79-02",
+    "card_id": "12ad2957-6ac3-4444-bee2-1274f75554d2",
+    "text": "las cartas legendarias son cartas históricas.)",
+    "bbox": [
+      51,
+      660,
+      555,
+      685
+    ],
+    "style": "reminder",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "es-dom-79-03",
+    "card_id": "12ad2957-6ac3-4444-bee2-1274f75554d2",
+    "text": "“El señor demonio ha reinado en todas las eras.",
+    "bbox": [
+      52,
+      708,
+      583,
+      737
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "es-dom-79-04",
+    "card_id": "12ad2957-6ac3-4444-bee2-1274f75554d2",
+    "text": "Todas las ruinas, mitos y pesadillas son una",
+    "bbox": [
+      52,
+      736,
+      552,
+      765
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-04.png"
+    }
+  },
+  {
+    "base_id": "es-m21-29-01",
+    "card_id": "4545d414-4a4b-47aa-ba2b-9bf465d0a80e",
+    "text": "Líder de la jauría",
+    "bbox": [
+      45,
+      45,
+      300,
+      84
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "es-m21-29-02",
+    "card_id": "4545d414-4a4b-47aa-ba2b-9bf465d0a80e",
+    "text": "Siempre que el Líder de la jauría ataque, prevén",
+    "bbox": [
+      47,
+      573,
+      552,
+      599
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "es-m21-29-03",
+    "card_id": "4545d414-4a4b-47aa-ba2b-9bf465d0a80e",
+    "text": "Será tu fiel campeón; y su jauría, tus protectores.",
+    "bbox": [
+      47,
+      666,
+      517,
+      692
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "es-m21-29-04",
+    "card_id": "4545d414-4a4b-47aa-ba2b-9bf465d0a80e",
+    "text": "al lado del fuego y todo el amor en tu corazón.",
+    "bbox": [
+      47,
+      713,
+      505,
+      740
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "fr-dom-139-01",
+    "card_id": "1f3d7ea1-e762-46a5-805a-c9dd73676b11",
+    "text": "Cyclope déchaîné",
+    "bbox": [
+      51,
+      48,
+      337,
+      89
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "fr-dom-139-02",
+    "card_id": "1f3d7ea1-e762-46a5-805a-c9dd73676b11",
+    "text": "Le Cyclope déchaîné gagne -2/-0",
+    "bbox": [
+      51,
+      587,
+      539,
+      623
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    },
+    "transcription_convention": "ASCII U+002D for the printed numeric minus signs; pixels cannot identify a Unicode codepoint"
+  },
+  {
+    "base_id": "fr-dom-139-03",
+    "card_id": "1f3d7ea1-e762-46a5-805a-c9dd73676b11",
+    "text": "l’incapacité des cyclopes à se concentrer",
+    "bbox": [
+      51,
+      744,
+      582,
+      775
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "fr-dom-139-04",
+    "card_id": "1f3d7ea1-e762-46a5-805a-c9dd73676b11",
+    "text": "sur plus d’une chose à la fois.",
+    "bbox": [
+      51,
+      775,
+      470,
+      813
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-05.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-76-01",
+    "card_id": "aae97dde-15ea-441f-a061-0d41bcecdbd4",
+    "text": "Perspicacité sans âge de Téfeiri",
+    "bbox": [
+      45,
+      45,
+      448,
+      83
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-76-02",
+    "card_id": "aae97dde-15ea-441f-a061-0d41bcecdbd4",
+    "text": "Si vous deviez piocher une carte, excepté",
+    "bbox": [
+      47,
+      541,
+      552,
+      569
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-76-03",
+    "card_id": "aae97dde-15ea-441f-a061-0d41bcecdbd4",
+    "text": "« D’accord, tu en sais plus que moi. Mais",
+    "bbox": [
+      47,
+      670,
+      525,
+      701
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-76-04",
+    "card_id": "aae97dde-15ea-441f-a061-0d41bcecdbd4",
+    "text": "est-ce une raison de jouer les prétentieux ? »",
+    "bbox": [
+      47,
+      700,
+      538,
+      728
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-77-01",
+    "card_id": "928c60bd-b59f-4682-af76-77f14e10d389",
+    "text": "Protégée de Téfeiri",
+    "bbox": [
+      45,
+      45,
+      324,
+      85
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-77-02",
+    "card_id": "928c60bd-b59f-4682-af76-77f14e10d389",
+    "text": "défaussez-vous d’une carte.",
+    "bbox": [
+      47,
+      591,
+      424,
+      620
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-77-03",
+    "card_id": "928c60bd-b59f-4682-af76-77f14e10d389",
+    "text": "Sur Tolaria, l’héritage de Téfeiri perdure",
+    "bbox": [
+      47,
+      644,
+      540,
+      676
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "fr-m21-77-04",
+    "card_id": "928c60bd-b59f-4682-af76-77f14e10d389",
+    "text": "à travers l’étude de la magie temporelle",
+    "bbox": [
+      47,
+      676,
+      539,
+      706
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-06.png"
+    }
+  },
+  {
+    "base_id": "it-dom-97-01",
+    "card_id": "a3db7580-b13f-4dc9-b08e-ce0fdb3e2b8a",
+    "text": "Cavaliera della Malvagità",
+    "bbox": [
+      51,
+      48,
+      443,
+      88
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-dom-97-02",
+    "card_id": "a3db7580-b13f-4dc9-b08e-ce0fdb3e2b8a",
+    "text": "La Cavaliera della Malvagità prende +1/+0",
+    "bbox": [
+      51,
+      691,
+      542,
+      721
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "transcription_convention": "ASCII U+002B plus and U+002F slash in numeric power/toughness modification",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-dom-97-03",
+    "card_id": "a3db7580-b13f-4dc9-b08e-ce0fdb3e2b8a",
+    "text": "non può essere bersaglio di magie o abilità bianche",
+    "bbox": [
+      51,
+      634,
+      584,
+      661
+    ],
+    "style": "reminder",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-dom-97-04",
+    "card_id": "a3db7580-b13f-4dc9-b08e-ce0fdb3e2b8a",
+    "text": "Un’oscurità che inghiotte la luce.",
+    "bbox": [
+      51,
+      791,
+      404,
+      819
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-m21-166-01",
+    "card_id": "79c4c2cd-d3f9-4510-85d0-5aaf5b802a35",
+    "text": "Avidità Traditrice",
+    "bbox": [
+      45,
+      45,
+      307,
+      85
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-m21-166-02",
+    "card_id": "79c4c2cd-d3f9-4510-85d0-5aaf5b802a35",
+    "text": "creatura. Ha rapidità fino alla fine del turno.",
+    "bbox": [
+      47,
+      589,
+      530,
+      610
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-m21-166-03",
+    "card_id": "79c4c2cd-d3f9-4510-85d0-5aaf5b802a35",
+    "text": "“Rinfrescami la memoria: qual è la tariffa per i",
+    "bbox": [
+      47,
+      680,
+      531,
+      709
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "it-m21-166-04",
+    "card_id": "79c4c2cd-d3f9-4510-85d0-5aaf5b802a35",
+    "text": "tradimenti, di questi tempi?”",
+    "bbox": [
+      47,
+      708,
+      359,
+      732
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-07.png"
+    }
+  },
+  {
+    "base_id": "pt-dom-178-01",
+    "card_id": "85499ec4-3df8-448d-a46f-9a480924a547",
+    "text": "Migração das Saprófitas",
+    "bbox": [
+      51,
+      48,
+      438,
+      89
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-dom-178-02",
+    "card_id": "85499ec4-3df8-448d-a46f-9a480924a547",
+    "text": "Saprófita. Se esta mágica tiver sido reforçada,",
+    "bbox": [
+      51,
+      679,
+      571,
+      705
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-dom-178-03",
+    "card_id": "85499ec4-3df8-448d-a46f-9a480924a547",
+    "text": "As talídias pastoreiam as saprófitas de um lugar",
+    "bbox": [
+      51,
+      752,
+      566,
+      780
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-dom-178-04",
+    "card_id": "85499ec4-3df8-448d-a46f-9a480924a547",
+    "text": "para o outro em busca de detritos para alimentá-las.",
+    "bbox": [
+      51,
+      779,
+      596,
+      806
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-m21-149-01",
+    "card_id": "aaed6c68-be60-41db-9471-52044233c0cd",
+    "text": "Bufão da Destruição",
+    "bbox": [
+      45,
+      45,
+      349,
+      85
+    ],
+    "style": "title",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-m21-149-02",
+    "card_id": "aaed6c68-be60-41db-9471-52044233c0cd",
+    "text": "permanente, Bufão da Destruição",
+    "bbox": [
+      47,
+      575,
+      507,
+      605
+    ],
+    "style": "rules",
+    "italic": false,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-m21-149-03",
+    "card_id": "aaed6c68-be60-41db-9471-52044233c0cd",
+    "text": "Para os Rakdos, gritos de deleite e terror",
+    "bbox": [
+      47,
+      687,
+      549,
+      719
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  },
+  {
+    "base_id": "pt-m21-149-04",
+    "card_id": "aaed6c68-be60-41db-9471-52044233c0cd",
+    "text": "são a mesma coisa.",
+    "bbox": [
+      47,
+      723,
+      298,
+      748
+    ],
+    "style": "flavor",
+    "italic": true,
+    "review_status": "pixel_reviewed",
+    "label_source": "Manual transcription from the exact native source pixels; no model inference",
+    "normalization": "NFC; preserve printed case, accents and punctuation",
+    "reviewer": "gallery agent; native source and final line crops inspected before any model inference",
+    "independent_review": {
+      "reviewer": "root agent",
+      "status": "confirmed literal transcription, accents, punctuation and complete physical line boundaries from native pixel contact sheet; no OCR or inference used",
+      "evidence": "review/clean-08.png"
+    }
+  }
+]

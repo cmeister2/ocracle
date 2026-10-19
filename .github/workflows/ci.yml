@@ -114,6 +114,7 @@ jobs:
       - run: python training/experimental_colour/evaluate.py --check
       - run: python training/experimental_paddle_candidates/evaluate.py --check
       - run: python training/punctuation-corpus/prepare.py --check
+      - run: python training/blur_prepare.py --check
       - run: python training/rare-scripts/prepare.py --check
       - run: python training/style-eval/prepare.py --check
       - run: python training/style-eval/score.py --check
