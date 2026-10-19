@@ -1,0 +1,4698 @@
+{
+  "generated_at": "2026-10-19T17:26:14.845763+00:00",
+  "executable_sha256": "6502aaba4ab440b61324ed492b616480fd773be62c43cf3e45a3972bf71b8b12",
+  "fixtures_sha256": "fe9770d78b97500b7019e6a7949c791f1f9a0d5ec8966df1f3fbaa36d080cb3f",
+  "model_metadata": {
+    "japanese_g1": {
+      "model_sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+      "configuration_sha256": "aa9f592cd114fd344ea0f7cb0f44bd392b8c0f0d54a3db3db887ddb9cac22ae4",
+      "provenance": {
+        "generated_at": "2026-10-19T17:19:10.229554+00:00",
+        "checkpoint": "japanese_g1",
+        "upstream_repository": "https://github.com/JaidedAI/EasyOCR",
+        "source_revision": "363afb184047ce452e436f4224f3098422df872e",
+        "checkpoint_url": "https://github.com/JaidedAI/EasyOCR/releases/download/pre-v1.1.6/japanese.zip",
+        "checkpoint_sha256": "d639aa54484314bf4125bb6f59088cfa5162f3d089ebccf3a9d8c6c362776856",
+        "license": "Apache-2.0",
+        "source_changes": "Removed unused torchvision detector imports; equivalent height pooling uses mean; input scaling and TNC log_softmax wrapper added.",
+        "onnx_sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+        "onnx_bytes": 221237470,
+        "onnx_operators": [
+          "Add",
+          "Concat",
+          "Constant",
+          "ConstantOfShape",
+          "Conv",
+          "Gather",
+          "LSTM",
+          "LogSoftmax",
+          "MatMul",
+          "MaxPool",
+          "Mul",
+          "ReduceMean",
+          "Relu",
+          "Reshape",
+          "Shape",
+          "Transpose",
+          "Unsqueeze"
+        ],
+        "wrapper_max_error_against_upstream": 0.0,
+        "pytorch_onnx_parity": [
+          {
+            "width": 128,
+            "output_shape": [
+              33,
+              1,
+              3111
+            ],
+            "max_absolute_log_probability_error": 1.9073486328125e-05,
+            "identical_argmax": true
+          },
+          {
+            "width": 160,
+            "output_shape": [
+              41,
+              1,
+              3111
+            ],
+            "max_absolute_log_probability_error": 2.288818359375e-05,
+            "identical_argmax": true
+          },
+          {
+            "width": 287,
+            "output_shape": [
+              72,
+              1,
+              3111
+            ],
+            "max_absolute_log_probability_error": 2.6702880859375e-05,
+            "identical_argmax": true
+          }
+        ],
+        "alphabet_audit": {
+          "profile": "ja",
+          "corpus_sha256": "7813b8b62e8c34e3b05aad4a33aa593914b2d3e84a633769c16238d7f0b64e63",
+          "printings": 90,
+          "unique_reference_characters": 673,
+          "normalization": "NFC; whitespace excluded from the coverage count; fullwidth digits and punctuation preserved",
+          "scope": "Alphabet membership only. Presence of a character does not prove that its printed glyph is recognized. Mana-symbol tokens in printing metadata are not verified image recognition.",
+          "candidates": [
+            {
+              "model": "japanese_g1",
+              "alphabet_characters": 3110,
+              "missing_unique_characters": 43,
+              "missing_occurrences": 793,
+              "missing": [
+                {
+                  "character": "—",
+                  "codepoint": "U+2014",
+                  "name": "EM DASH",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d",
+                    "ac62fae3-2525-4b71-80d1-83e608070e4f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "―",
+                  "codepoint": "U+2015",
+                  "name": "HORIZONTAL BAR",
+                  "occurrences": 28,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9",
+                    "dd6c7e5e-b8ff-4fb6-b8b8-39aa3dfc1f74",
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41"
+                  ]
+                },
+                {
+                  "character": "•",
+                  "codepoint": "U+2022",
+                  "name": "BULLET",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62"
+                  ]
+                },
+                {
+                  "character": "−",
+                  "codepoint": "U+2212",
+                  "name": "MINUS SIGN",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "956a54a5-bae2-4db3-b53f-e4b7917b84d4"
+                  ]
+                },
+                {
+                  "character": "、",
+                  "codepoint": "U+3001",
+                  "name": "IDEOGRAPHIC COMMA",
+                  "occurrences": 157,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "。",
+                  "codepoint": "U+3002",
+                  "name": "IDEOGRAPHIC FULL STOP",
+                  "occurrences": 234,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "々",
+                  "codepoint": "U+3005",
+                  "name": "IDEOGRAPHIC ITERATION MARK",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "「",
+                  "codepoint": "U+300C",
+                  "name": "LEFT CORNER BRACKET",
+                  "occurrences": 25,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "」",
+                  "codepoint": "U+300D",
+                  "name": "RIGHT CORNER BRACKET",
+                  "occurrences": 25,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "『",
+                  "codepoint": "U+300E",
+                  "name": "LEFT WHITE CORNER BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "』",
+                  "codepoint": "U+300F",
+                  "name": "RIGHT WHITE CORNER BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "囁",
+                  "codepoint": "U+56C1",
+                  "name": "CJK UNIFIED IDEOGRAPH-56C1",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "慄",
+                  "codepoint": "U+6144",
+                  "name": "CJK UNIFIED IDEOGRAPH-6144",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "憑",
+                  "codepoint": "U+6191",
+                  "name": "CJK UNIFIED IDEOGRAPH-6191",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "6f42161f-915b-430f-8c48-244762f89fa3",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655"
+                  ]
+                },
+                {
+                  "character": "柩",
+                  "codepoint": "U+67E9",
+                  "name": "CJK UNIFIED IDEOGRAPH-67E9",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "澤",
+                  "codepoint": "U+6FA4",
+                  "name": "CJK UNIFIED IDEOGRAPH-6FA4",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "55a682c5-a51c-4820-81bb-341a4f36c00c"
+                  ]
+                },
+                {
+                  "character": "瘍",
+                  "codepoint": "U+760D",
+                  "name": "CJK UNIFIED IDEOGRAPH-760D",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "笏",
+                  "codepoint": "U+7B0F",
+                  "name": "CJK UNIFIED IDEOGRAPH-7B0F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "92dc5d06-d688-41bb-80f2-f6964f57abca"
+                  ]
+                },
+                {
+                  "character": "罠",
+                  "codepoint": "U+7F60",
+                  "name": "CJK UNIFIED IDEOGRAPH-7F60",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "d363d477-83a3-416b-b3ce-0b3bb75e389c",
+                    "efaf3542-d83c-4b8f-8422-2cacd368d7fe"
+                  ]
+                },
+                {
+                  "character": "蜥",
+                  "codepoint": "U+8725",
+                  "name": "CJK UNIFIED IDEOGRAPH-8725",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蜴",
+                  "codepoint": "U+8734",
+                  "name": "CJK UNIFIED IDEOGRAPH-8734",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蠢",
+                  "codepoint": "U+8822",
+                  "name": "CJK UNIFIED IDEOGRAPH-8822",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "譚",
+                  "codepoint": "U+8B5A",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B5A",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "贄",
+                  "codepoint": "U+8D04",
+                  "name": "CJK UNIFIED IDEOGRAPH-8D04",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "！",
+                  "codepoint": "U+FF01",
+                  "name": "FULLWIDTH EXCLAMATION MARK",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "（",
+                  "codepoint": "U+FF08",
+                  "name": "FULLWIDTH LEFT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "）",
+                  "codepoint": "U+FF09",
+                  "name": "FULLWIDTH RIGHT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "＋",
+                  "codepoint": "U+FF0B",
+                  "name": "FULLWIDTH PLUS SIGN",
+                  "occurrences": 26,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "c83b110b-16e1-486c-8b39-75637ba4923c"
+                  ]
+                },
+                {
+                  "character": "－",
+                  "codepoint": "U+FF0D",
+                  "name": "FULLWIDTH HYPHEN-MINUS",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "０",
+                  "codepoint": "U+FF10",
+                  "name": "FULLWIDTH DIGIT ZERO",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "１",
+                  "codepoint": "U+FF11",
+                  "name": "FULLWIDTH DIGIT ONE",
+                  "occurrences": 121,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "２",
+                  "codepoint": "U+FF12",
+                  "name": "FULLWIDTH DIGIT TWO",
+                  "occurrences": 24,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "３",
+                  "codepoint": "U+FF13",
+                  "name": "FULLWIDTH DIGIT THREE",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "４",
+                  "codepoint": "U+FF14",
+                  "name": "FULLWIDTH DIGIT FOUR",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "86447dc1-b38b-4361-a58e-c1c4111692a2",
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "５",
+                  "codepoint": "U+FF15",
+                  "name": "FULLWIDTH DIGIT FIVE",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "７",
+                  "codepoint": "U+FF17",
+                  "name": "FULLWIDTH DIGIT SEVEN",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "：",
+                  "codepoint": "U+FF1A",
+                  "name": "FULLWIDTH COLON",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "＝",
+                  "codepoint": "U+FF1D",
+                  "name": "FULLWIDTH EQUALS SIGN",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "c83b110b-16e1-486c-8b39-75637ba4923c",
+                    "03170579-8322-4bf3-bb3e-f117fa826df7"
+                  ]
+                },
+                {
+                  "character": "？",
+                  "codepoint": "U+FF1F",
+                  "name": "FULLWIDTH QUESTION MARK",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "Ｘ",
+                  "codepoint": "U+FF38",
+                  "name": "FULLWIDTH LATIN CAPITAL LETTER X",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "［",
+                  "codepoint": "U+FF3B",
+                  "name": "FULLWIDTH LEFT SQUARE BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "］",
+                  "codepoint": "U+FF3D",
+                  "name": "FULLWIDTH RIGHT SQUARE BRACKET",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4"
+                  ]
+                },
+                {
+                  "character": "･",
+                  "codepoint": "U+FF65",
+                  "name": "HALFWIDTH KATAKANA MIDDLE DOT",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0"
+                  ]
+                }
+              ]
+            },
+            {
+              "model": "japanese_g2",
+              "alphabet_characters": 2214,
+              "missing_unique_characters": 71,
+              "missing_occurrences": 421,
+              "missing": [
+                {
+                  "character": "—",
+                  "codepoint": "U+2014",
+                  "name": "EM DASH",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d",
+                    "ac62fae3-2525-4b71-80d1-83e608070e4f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "―",
+                  "codepoint": "U+2015",
+                  "name": "HORIZONTAL BAR",
+                  "occurrences": 28,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9",
+                    "dd6c7e5e-b8ff-4fb6-b8b8-39aa3dfc1f74",
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41"
+                  ]
+                },
+                {
+                  "character": "•",
+                  "codepoint": "U+2022",
+                  "name": "BULLET",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62"
+                  ]
+                },
+                {
+                  "character": "−",
+                  "codepoint": "U+2212",
+                  "name": "MINUS SIGN",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "956a54a5-bae2-4db3-b53f-e4b7917b84d4"
+                  ]
+                },
+                {
+                  "character": "凌",
+                  "codepoint": "U+51CC",
+                  "name": "CJK UNIFIED IDEOGRAPH-51CC",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "卜",
+                  "codepoint": "U+535C",
+                  "name": "CJK UNIFIED IDEOGRAPH-535C",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "厄",
+                  "codepoint": "U+5384",
+                  "name": "CJK UNIFIED IDEOGRAPH-5384",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "6c8a0897-21fe-449e-8916-4ad0ed41037d"
+                  ]
+                },
+                {
+                  "character": "呪",
+                  "codepoint": "U+546A",
+                  "name": "CJK UNIFIED IDEOGRAPH-546A",
+                  "occurrences": 20,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5"
+                  ]
+                },
+                {
+                  "character": "囁",
+                  "codepoint": "U+56C1",
+                  "name": "CJK UNIFIED IDEOGRAPH-56C1",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "奪",
+                  "codepoint": "U+596A",
+                  "name": "CJK UNIFIED IDEOGRAPH-596A",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a4dd21fe-e973-4583-bb5e-fd4b4d301a28",
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "媒",
+                  "codepoint": "U+5A92",
+                  "name": "CJK UNIFIED IDEOGRAPH-5A92",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "90f74db5-f51e-44fa-a529-8a555e02e23f"
+                  ]
+                },
+                {
+                  "character": "寓",
+                  "codepoint": "U+5BD3",
+                  "name": "CJK UNIFIED IDEOGRAPH-5BD3",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "弧",
+                  "codepoint": "U+5F27",
+                  "name": "CJK UNIFIED IDEOGRAPH-5F27",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "忘",
+                  "codepoint": "U+5FD8",
+                  "name": "CJK UNIFIED IDEOGRAPH-5FD8",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "怪",
+                  "codepoint": "U+602A",
+                  "name": "CJK UNIFIED IDEOGRAPH-602A",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "恨",
+                  "codepoint": "U+6068",
+                  "name": "CJK UNIFIED IDEOGRAPH-6068",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "悔",
+                  "codepoint": "U+6094",
+                  "name": "CJK UNIFIED IDEOGRAPH-6094",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "悶",
+                  "codepoint": "U+60B6",
+                  "name": "CJK UNIFIED IDEOGRAPH-60B6",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "慄",
+                  "codepoint": "U+6144",
+                  "name": "CJK UNIFIED IDEOGRAPH-6144",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "憑",
+                  "codepoint": "U+6191",
+                  "name": "CJK UNIFIED IDEOGRAPH-6191",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "6f42161f-915b-430f-8c48-244762f89fa3",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655"
+                  ]
+                },
+                {
+                  "character": "把",
+                  "codepoint": "U+628A",
+                  "name": "CJK UNIFIED IDEOGRAPH-628A",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "択",
+                  "codepoint": "U+629E",
+                  "name": "CJK UNIFIED IDEOGRAPH-629E",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "e67f9f14-b404-4b88-8878-32c06f38b1d3"
+                  ]
+                },
+                {
+                  "character": "括",
+                  "codepoint": "U+62EC",
+                  "name": "CJK UNIFIED IDEOGRAPH-62EC",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "捉",
+                  "codepoint": "U+6349",
+                  "name": "CJK UNIFIED IDEOGRAPH-6349",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "捧",
+                  "codepoint": "U+6367",
+                  "name": "CJK UNIFIED IDEOGRAPH-6367",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "斧",
+                  "codepoint": "U+65A7",
+                  "name": "CJK UNIFIED IDEOGRAPH-65A7",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "朽",
+                  "codepoint": "U+673D",
+                  "name": "CJK UNIFIED IDEOGRAPH-673D",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d"
+                  ]
+                },
+                {
+                  "character": "柩",
+                  "codepoint": "U+67E9",
+                  "name": "CJK UNIFIED IDEOGRAPH-67E9",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "槍",
+                  "codepoint": "U+69CD",
+                  "name": "CJK UNIFIED IDEOGRAPH-69CD",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "6156f738-14f4-46fa-83fb-bb9c7db0d8be",
+                    "a11fc008-6490-4a2d-a0aa-d3b82929845c"
+                  ]
+                },
+                {
+                  "character": "沿",
+                  "codepoint": "U+6CBF",
+                  "name": "CJK UNIFIED IDEOGRAPH-6CBF",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "492ac6df-13aa-46a3-b02a-207e3ffd1771"
+                  ]
+                },
+                {
+                  "character": "瘍",
+                  "codepoint": "U+760D",
+                  "name": "CJK UNIFIED IDEOGRAPH-760D",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "癒",
+                  "codepoint": "U+7652",
+                  "name": "CJK UNIFIED IDEOGRAPH-7652",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "4f52358e-e5a4-428d-a15f-711f24b341a0",
+                    "5650effb-2685-4baf-a090-3b2ef7058504"
+                  ]
+                },
+                {
+                  "character": "笏",
+                  "codepoint": "U+7B0F",
+                  "name": "CJK UNIFIED IDEOGRAPH-7B0F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "92dc5d06-d688-41bb-80f2-f6964f57abca"
+                  ]
+                },
+                {
+                  "character": "縛",
+                  "codepoint": "U+7E1B",
+                  "name": "CJK UNIFIED IDEOGRAPH-7E1B",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "c66fa955-54b8-48ca-b76b-886374456da4"
+                  ]
+                },
+                {
+                  "character": "罠",
+                  "codepoint": "U+7F60",
+                  "name": "CJK UNIFIED IDEOGRAPH-7F60",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "d363d477-83a3-416b-b3ce-0b3bb75e389c",
+                    "efaf3542-d83c-4b8f-8422-2cacd368d7fe"
+                  ]
+                },
+                {
+                  "character": "臆",
+                  "codepoint": "U+81C6",
+                  "name": "CJK UNIFIED IDEOGRAPH-81C6",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "蓄",
+                  "codepoint": "U+84C4",
+                  "name": "CJK UNIFIED IDEOGRAPH-84C4",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "蜥",
+                  "codepoint": "U+8725",
+                  "name": "CJK UNIFIED IDEOGRAPH-8725",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蜴",
+                  "codepoint": "U+8734",
+                  "name": "CJK UNIFIED IDEOGRAPH-8734",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蠢",
+                  "codepoint": "U+8822",
+                  "name": "CJK UNIFIED IDEOGRAPH-8822",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "誰",
+                  "codepoint": "U+8AB0",
+                  "name": "CJK UNIFIED IDEOGRAPH-8AB0",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838"
+                  ]
+                },
+                {
+                  "character": "謎",
+                  "codepoint": "U+8B0E",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B0E",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "b024b2e5-4c29-403d-a287-25b48bbe82b6"
+                  ]
+                },
+                {
+                  "character": "譚",
+                  "codepoint": "U+8B5A",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B5A",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "賊",
+                  "codepoint": "U+8CCA",
+                  "name": "CJK UNIFIED IDEOGRAPH-8CCA",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "9ab524ae-e24c-4ef8-84b5-5261f75b7c4f",
+                    "492ac6df-13aa-46a3-b02a-207e3ffd1771"
+                  ]
+                },
+                {
+                  "character": "贄",
+                  "codepoint": "U+8D04",
+                  "name": "CJK UNIFIED IDEOGRAPH-8D04",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "遁",
+                  "codepoint": "U+9041",
+                  "name": "CJK UNIFIED IDEOGRAPH-9041",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "還",
+                  "codepoint": "U+9084",
+                  "name": "CJK UNIFIED IDEOGRAPH-9084",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "9cdadb4f-0e5b-4322-8de8-023171d61bab"
+                  ]
+                },
+                {
+                  "character": "錬",
+                  "codepoint": "U+932C",
+                  "name": "CJK UNIFIED IDEOGRAPH-932C",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "錯",
+                  "codepoint": "U+932F",
+                  "name": "CJK UNIFIED IDEOGRAPH-932F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "駕",
+                  "codepoint": "U+99D5",
+                  "name": "CJK UNIFIED IDEOGRAPH-99D5",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "骸",
+                  "codepoint": "U+9AB8",
+                  "name": "CJK UNIFIED IDEOGRAPH-9AB8",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "髭",
+                  "codepoint": "U+9AED",
+                  "name": "CJK UNIFIED IDEOGRAPH-9AED",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf"
+                  ]
+                },
+                {
+                  "character": "！",
+                  "codepoint": "U+FF01",
+                  "name": "FULLWIDTH EXCLAMATION MARK",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "（",
+                  "codepoint": "U+FF08",
+                  "name": "FULLWIDTH LEFT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "）",
+                  "codepoint": "U+FF09",
+                  "name": "FULLWIDTH RIGHT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "＋",
+                  "codepoint": "U+FF0B",
+                  "name": "FULLWIDTH PLUS SIGN",
+                  "occurrences": 26,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "c83b110b-16e1-486c-8b39-75637ba4923c"
+                  ]
+                },
+                {
+                  "character": "－",
+                  "codepoint": "U+FF0D",
+                  "name": "FULLWIDTH HYPHEN-MINUS",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "０",
+                  "codepoint": "U+FF10",
+                  "name": "FULLWIDTH DIGIT ZERO",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "１",
+                  "codepoint": "U+FF11",
+                  "name": "FULLWIDTH DIGIT ONE",
+                  "occurrences": 121,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "２",
+                  "codepoint": "U+FF12",
+                  "name": "FULLWIDTH DIGIT TWO",
+                  "occurrences": 24,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "３",
+                  "codepoint": "U+FF13",
+                  "name": "FULLWIDTH DIGIT THREE",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "４",
+                  "codepoint": "U+FF14",
+                  "name": "FULLWIDTH DIGIT FOUR",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "86447dc1-b38b-4361-a58e-c1c4111692a2",
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "５",
+                  "codepoint": "U+FF15",
+                  "name": "FULLWIDTH DIGIT FIVE",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "７",
+                  "codepoint": "U+FF17",
+                  "name": "FULLWIDTH DIGIT SEVEN",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "：",
+                  "codepoint": "U+FF1A",
+                  "name": "FULLWIDTH COLON",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "＝",
+                  "codepoint": "U+FF1D",
+                  "name": "FULLWIDTH EQUALS SIGN",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "c83b110b-16e1-486c-8b39-75637ba4923c",
+                    "03170579-8322-4bf3-bb3e-f117fa826df7"
+                  ]
+                },
+                {
+                  "character": "？",
+                  "codepoint": "U+FF1F",
+                  "name": "FULLWIDTH QUESTION MARK",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "Ｘ",
+                  "codepoint": "U+FF38",
+                  "name": "FULLWIDTH LATIN CAPITAL LETTER X",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "［",
+                  "codepoint": "U+FF3B",
+                  "name": "FULLWIDTH LEFT SQUARE BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "］",
+                  "codepoint": "U+FF3D",
+                  "name": "FULLWIDTH RIGHT SQUARE BRACKET",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4"
+                  ]
+                },
+                {
+                  "character": "･",
+                  "codepoint": "U+FF65",
+                  "name": "HALFWIDTH KATAKANA MIDDLE DOT",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "preferred_model_by_coverage": "japanese_g2",
+          "complete_alphabet": false
+        },
+        "limitations": "Unmodified pretrained recognition, not MTG-fine-tuned. Alphabet gaps are explicit in the audit. No language-wide, font-wide, vertical text or furigana coverage claim."
+      }
+    },
+    "japanese_g2": {
+      "model_sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+      "configuration_sha256": "6a1a64efcf8c96560f3d443a9d56304d6faa7f3c41bbb0a55df19ff09ca67906",
+      "provenance": {
+        "generated_at": "2026-10-19T17:17:34.036166+00:00",
+        "checkpoint": "japanese_g2",
+        "upstream_repository": "https://github.com/JaidedAI/EasyOCR",
+        "source_revision": "363afb184047ce452e436f4224f3098422df872e",
+        "checkpoint_url": "https://github.com/JaidedAI/EasyOCR/releases/download/v1.3/japanese_g2.zip",
+        "checkpoint_sha256": "afbb32b0485297de5a7c1f59aeecac12c69f32b15cedd3c3d8c2e8529de85af3",
+        "license": "Apache-2.0",
+        "source_changes": "Removed unused torchvision detector imports; equivalent height pooling uses mean; input scaling and TNC log_softmax wrapper added.",
+        "onnx_sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+        "onnx_bytes": 17314362,
+        "onnx_operators": [
+          "Add",
+          "Concat",
+          "Constant",
+          "ConstantOfShape",
+          "Conv",
+          "Gather",
+          "LSTM",
+          "LogSoftmax",
+          "MatMul",
+          "MaxPool",
+          "Mul",
+          "ReduceMean",
+          "Relu",
+          "Reshape",
+          "Shape",
+          "Transpose",
+          "Unsqueeze"
+        ],
+        "wrapper_max_error_against_upstream": 0.0,
+        "pytorch_onnx_parity": [
+          {
+            "width": 128,
+            "output_shape": [
+              31,
+              1,
+              2215
+            ],
+            "max_absolute_log_probability_error": 4.57763671875e-05,
+            "identical_argmax": true
+          },
+          {
+            "width": 160,
+            "output_shape": [
+              39,
+              1,
+              2215
+            ],
+            "max_absolute_log_probability_error": 4.863739013671875e-05,
+            "identical_argmax": true
+          },
+          {
+            "width": 287,
+            "output_shape": [
+              70,
+              1,
+              2215
+            ],
+            "max_absolute_log_probability_error": 5.435943603515625e-05,
+            "identical_argmax": true
+          }
+        ],
+        "alphabet_audit": {
+          "profile": "ja",
+          "corpus_sha256": "7813b8b62e8c34e3b05aad4a33aa593914b2d3e84a633769c16238d7f0b64e63",
+          "printings": 90,
+          "unique_reference_characters": 673,
+          "normalization": "NFC; whitespace excluded from the coverage count; fullwidth digits and punctuation preserved",
+          "scope": "Alphabet membership only. Presence of a character does not prove that its printed glyph is recognized. Mana-symbol tokens in printing metadata are not verified image recognition.",
+          "candidates": [
+            {
+              "model": "japanese_g1",
+              "alphabet_characters": 3110,
+              "missing_unique_characters": 43,
+              "missing_occurrences": 793,
+              "missing": [
+                {
+                  "character": "—",
+                  "codepoint": "U+2014",
+                  "name": "EM DASH",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d",
+                    "ac62fae3-2525-4b71-80d1-83e608070e4f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "―",
+                  "codepoint": "U+2015",
+                  "name": "HORIZONTAL BAR",
+                  "occurrences": 28,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9",
+                    "dd6c7e5e-b8ff-4fb6-b8b8-39aa3dfc1f74",
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41"
+                  ]
+                },
+                {
+                  "character": "•",
+                  "codepoint": "U+2022",
+                  "name": "BULLET",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62"
+                  ]
+                },
+                {
+                  "character": "−",
+                  "codepoint": "U+2212",
+                  "name": "MINUS SIGN",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "956a54a5-bae2-4db3-b53f-e4b7917b84d4"
+                  ]
+                },
+                {
+                  "character": "、",
+                  "codepoint": "U+3001",
+                  "name": "IDEOGRAPHIC COMMA",
+                  "occurrences": 157,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "。",
+                  "codepoint": "U+3002",
+                  "name": "IDEOGRAPHIC FULL STOP",
+                  "occurrences": 234,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "々",
+                  "codepoint": "U+3005",
+                  "name": "IDEOGRAPHIC ITERATION MARK",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "「",
+                  "codepoint": "U+300C",
+                  "name": "LEFT CORNER BRACKET",
+                  "occurrences": 25,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "」",
+                  "codepoint": "U+300D",
+                  "name": "RIGHT CORNER BRACKET",
+                  "occurrences": 25,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "『",
+                  "codepoint": "U+300E",
+                  "name": "LEFT WHITE CORNER BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "』",
+                  "codepoint": "U+300F",
+                  "name": "RIGHT WHITE CORNER BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "囁",
+                  "codepoint": "U+56C1",
+                  "name": "CJK UNIFIED IDEOGRAPH-56C1",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "慄",
+                  "codepoint": "U+6144",
+                  "name": "CJK UNIFIED IDEOGRAPH-6144",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "憑",
+                  "codepoint": "U+6191",
+                  "name": "CJK UNIFIED IDEOGRAPH-6191",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "6f42161f-915b-430f-8c48-244762f89fa3",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655"
+                  ]
+                },
+                {
+                  "character": "柩",
+                  "codepoint": "U+67E9",
+                  "name": "CJK UNIFIED IDEOGRAPH-67E9",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "澤",
+                  "codepoint": "U+6FA4",
+                  "name": "CJK UNIFIED IDEOGRAPH-6FA4",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "55a682c5-a51c-4820-81bb-341a4f36c00c"
+                  ]
+                },
+                {
+                  "character": "瘍",
+                  "codepoint": "U+760D",
+                  "name": "CJK UNIFIED IDEOGRAPH-760D",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "笏",
+                  "codepoint": "U+7B0F",
+                  "name": "CJK UNIFIED IDEOGRAPH-7B0F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "92dc5d06-d688-41bb-80f2-f6964f57abca"
+                  ]
+                },
+                {
+                  "character": "罠",
+                  "codepoint": "U+7F60",
+                  "name": "CJK UNIFIED IDEOGRAPH-7F60",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "d363d477-83a3-416b-b3ce-0b3bb75e389c",
+                    "efaf3542-d83c-4b8f-8422-2cacd368d7fe"
+                  ]
+                },
+                {
+                  "character": "蜥",
+                  "codepoint": "U+8725",
+                  "name": "CJK UNIFIED IDEOGRAPH-8725",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蜴",
+                  "codepoint": "U+8734",
+                  "name": "CJK UNIFIED IDEOGRAPH-8734",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蠢",
+                  "codepoint": "U+8822",
+                  "name": "CJK UNIFIED IDEOGRAPH-8822",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "譚",
+                  "codepoint": "U+8B5A",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B5A",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "贄",
+                  "codepoint": "U+8D04",
+                  "name": "CJK UNIFIED IDEOGRAPH-8D04",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "！",
+                  "codepoint": "U+FF01",
+                  "name": "FULLWIDTH EXCLAMATION MARK",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "（",
+                  "codepoint": "U+FF08",
+                  "name": "FULLWIDTH LEFT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "）",
+                  "codepoint": "U+FF09",
+                  "name": "FULLWIDTH RIGHT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "＋",
+                  "codepoint": "U+FF0B",
+                  "name": "FULLWIDTH PLUS SIGN",
+                  "occurrences": 26,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "c83b110b-16e1-486c-8b39-75637ba4923c"
+                  ]
+                },
+                {
+                  "character": "－",
+                  "codepoint": "U+FF0D",
+                  "name": "FULLWIDTH HYPHEN-MINUS",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "０",
+                  "codepoint": "U+FF10",
+                  "name": "FULLWIDTH DIGIT ZERO",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "１",
+                  "codepoint": "U+FF11",
+                  "name": "FULLWIDTH DIGIT ONE",
+                  "occurrences": 121,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "２",
+                  "codepoint": "U+FF12",
+                  "name": "FULLWIDTH DIGIT TWO",
+                  "occurrences": 24,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "３",
+                  "codepoint": "U+FF13",
+                  "name": "FULLWIDTH DIGIT THREE",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "４",
+                  "codepoint": "U+FF14",
+                  "name": "FULLWIDTH DIGIT FOUR",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "86447dc1-b38b-4361-a58e-c1c4111692a2",
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "５",
+                  "codepoint": "U+FF15",
+                  "name": "FULLWIDTH DIGIT FIVE",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "７",
+                  "codepoint": "U+FF17",
+                  "name": "FULLWIDTH DIGIT SEVEN",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "：",
+                  "codepoint": "U+FF1A",
+                  "name": "FULLWIDTH COLON",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "＝",
+                  "codepoint": "U+FF1D",
+                  "name": "FULLWIDTH EQUALS SIGN",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "c83b110b-16e1-486c-8b39-75637ba4923c",
+                    "03170579-8322-4bf3-bb3e-f117fa826df7"
+                  ]
+                },
+                {
+                  "character": "？",
+                  "codepoint": "U+FF1F",
+                  "name": "FULLWIDTH QUESTION MARK",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "Ｘ",
+                  "codepoint": "U+FF38",
+                  "name": "FULLWIDTH LATIN CAPITAL LETTER X",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "［",
+                  "codepoint": "U+FF3B",
+                  "name": "FULLWIDTH LEFT SQUARE BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "］",
+                  "codepoint": "U+FF3D",
+                  "name": "FULLWIDTH RIGHT SQUARE BRACKET",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4"
+                  ]
+                },
+                {
+                  "character": "･",
+                  "codepoint": "U+FF65",
+                  "name": "HALFWIDTH KATAKANA MIDDLE DOT",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0"
+                  ]
+                }
+              ]
+            },
+            {
+              "model": "japanese_g2",
+              "alphabet_characters": 2214,
+              "missing_unique_characters": 71,
+              "missing_occurrences": 421,
+              "missing": [
+                {
+                  "character": "—",
+                  "codepoint": "U+2014",
+                  "name": "EM DASH",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d",
+                    "ac62fae3-2525-4b71-80d1-83e608070e4f",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "―",
+                  "codepoint": "U+2015",
+                  "name": "HORIZONTAL BAR",
+                  "occurrences": 28,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9",
+                    "dd6c7e5e-b8ff-4fb6-b8b8-39aa3dfc1f74",
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41"
+                  ]
+                },
+                {
+                  "character": "•",
+                  "codepoint": "U+2022",
+                  "name": "BULLET",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62"
+                  ]
+                },
+                {
+                  "character": "−",
+                  "codepoint": "U+2212",
+                  "name": "MINUS SIGN",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "956a54a5-bae2-4db3-b53f-e4b7917b84d4"
+                  ]
+                },
+                {
+                  "character": "凌",
+                  "codepoint": "U+51CC",
+                  "name": "CJK UNIFIED IDEOGRAPH-51CC",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "卜",
+                  "codepoint": "U+535C",
+                  "name": "CJK UNIFIED IDEOGRAPH-535C",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "厄",
+                  "codepoint": "U+5384",
+                  "name": "CJK UNIFIED IDEOGRAPH-5384",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "6c8a0897-21fe-449e-8916-4ad0ed41037d"
+                  ]
+                },
+                {
+                  "character": "呪",
+                  "codepoint": "U+546A",
+                  "name": "CJK UNIFIED IDEOGRAPH-546A",
+                  "occurrences": 20,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5"
+                  ]
+                },
+                {
+                  "character": "囁",
+                  "codepoint": "U+56C1",
+                  "name": "CJK UNIFIED IDEOGRAPH-56C1",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "奪",
+                  "codepoint": "U+596A",
+                  "name": "CJK UNIFIED IDEOGRAPH-596A",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a4dd21fe-e973-4583-bb5e-fd4b4d301a28",
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "媒",
+                  "codepoint": "U+5A92",
+                  "name": "CJK UNIFIED IDEOGRAPH-5A92",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "90f74db5-f51e-44fa-a529-8a555e02e23f"
+                  ]
+                },
+                {
+                  "character": "寓",
+                  "codepoint": "U+5BD3",
+                  "name": "CJK UNIFIED IDEOGRAPH-5BD3",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "弧",
+                  "codepoint": "U+5F27",
+                  "name": "CJK UNIFIED IDEOGRAPH-5F27",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "忘",
+                  "codepoint": "U+5FD8",
+                  "name": "CJK UNIFIED IDEOGRAPH-5FD8",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "f46877c0-02ff-4029-8fa9-22e0e0121b41",
+                    "13636e52-aee6-4262-9b4d-a2979193bfa3"
+                  ]
+                },
+                {
+                  "character": "怪",
+                  "codepoint": "U+602A",
+                  "name": "CJK UNIFIED IDEOGRAPH-602A",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "恨",
+                  "codepoint": "U+6068",
+                  "name": "CJK UNIFIED IDEOGRAPH-6068",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "悔",
+                  "codepoint": "U+6094",
+                  "name": "CJK UNIFIED IDEOGRAPH-6094",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "悶",
+                  "codepoint": "U+60B6",
+                  "name": "CJK UNIFIED IDEOGRAPH-60B6",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "85280d87-9a51-432c-9083-2d04428dcd14"
+                  ]
+                },
+                {
+                  "character": "慄",
+                  "codepoint": "U+6144",
+                  "name": "CJK UNIFIED IDEOGRAPH-6144",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "憑",
+                  "codepoint": "U+6191",
+                  "name": "CJK UNIFIED IDEOGRAPH-6191",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "6f42161f-915b-430f-8c48-244762f89fa3",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655"
+                  ]
+                },
+                {
+                  "character": "把",
+                  "codepoint": "U+628A",
+                  "name": "CJK UNIFIED IDEOGRAPH-628A",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "択",
+                  "codepoint": "U+629E",
+                  "name": "CJK UNIFIED IDEOGRAPH-629E",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "2607d870-4995-489f-b5f9-76999a45958d",
+                    "e67f9f14-b404-4b88-8878-32c06f38b1d3"
+                  ]
+                },
+                {
+                  "character": "括",
+                  "codepoint": "U+62EC",
+                  "name": "CJK UNIFIED IDEOGRAPH-62EC",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "捉",
+                  "codepoint": "U+6349",
+                  "name": "CJK UNIFIED IDEOGRAPH-6349",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "捧",
+                  "codepoint": "U+6367",
+                  "name": "CJK UNIFIED IDEOGRAPH-6367",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "斧",
+                  "codepoint": "U+65A7",
+                  "name": "CJK UNIFIED IDEOGRAPH-65A7",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "d33751a1-0c13-4a4e-9057-ed00c0566ec5"
+                  ]
+                },
+                {
+                  "character": "朽",
+                  "codepoint": "U+673D",
+                  "name": "CJK UNIFIED IDEOGRAPH-673D",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d"
+                  ]
+                },
+                {
+                  "character": "柩",
+                  "codepoint": "U+67E9",
+                  "name": "CJK UNIFIED IDEOGRAPH-67E9",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5a086199-4c0d-4353-b1d0-8747ab9bad1b"
+                  ]
+                },
+                {
+                  "character": "槍",
+                  "codepoint": "U+69CD",
+                  "name": "CJK UNIFIED IDEOGRAPH-69CD",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "6156f738-14f4-46fa-83fb-bb9c7db0d8be",
+                    "a11fc008-6490-4a2d-a0aa-d3b82929845c"
+                  ]
+                },
+                {
+                  "character": "沿",
+                  "codepoint": "U+6CBF",
+                  "name": "CJK UNIFIED IDEOGRAPH-6CBF",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "492ac6df-13aa-46a3-b02a-207e3ffd1771"
+                  ]
+                },
+                {
+                  "character": "瘍",
+                  "codepoint": "U+760D",
+                  "name": "CJK UNIFIED IDEOGRAPH-760D",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "癒",
+                  "codepoint": "U+7652",
+                  "name": "CJK UNIFIED IDEOGRAPH-7652",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "4f52358e-e5a4-428d-a15f-711f24b341a0",
+                    "5650effb-2685-4baf-a090-3b2ef7058504"
+                  ]
+                },
+                {
+                  "character": "笏",
+                  "codepoint": "U+7B0F",
+                  "name": "CJK UNIFIED IDEOGRAPH-7B0F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "92dc5d06-d688-41bb-80f2-f6964f57abca"
+                  ]
+                },
+                {
+                  "character": "縛",
+                  "codepoint": "U+7E1B",
+                  "name": "CJK UNIFIED IDEOGRAPH-7E1B",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "c66fa955-54b8-48ca-b76b-886374456da4"
+                  ]
+                },
+                {
+                  "character": "罠",
+                  "codepoint": "U+7F60",
+                  "name": "CJK UNIFIED IDEOGRAPH-7F60",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "d363d477-83a3-416b-b3ce-0b3bb75e389c",
+                    "efaf3542-d83c-4b8f-8422-2cacd368d7fe"
+                  ]
+                },
+                {
+                  "character": "臆",
+                  "codepoint": "U+81C6",
+                  "name": "CJK UNIFIED IDEOGRAPH-81C6",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e"
+                  ]
+                },
+                {
+                  "character": "蓄",
+                  "codepoint": "U+84C4",
+                  "name": "CJK UNIFIED IDEOGRAPH-84C4",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829"
+                  ]
+                },
+                {
+                  "character": "蜥",
+                  "codepoint": "U+8725",
+                  "name": "CJK UNIFIED IDEOGRAPH-8725",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蜴",
+                  "codepoint": "U+8734",
+                  "name": "CJK UNIFIED IDEOGRAPH-8734",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "75fabada-e03d-41c2-9db1-b9a507f05b6e"
+                  ]
+                },
+                {
+                  "character": "蠢",
+                  "codepoint": "U+8822",
+                  "name": "CJK UNIFIED IDEOGRAPH-8822",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "誰",
+                  "codepoint": "U+8AB0",
+                  "name": "CJK UNIFIED IDEOGRAPH-8AB0",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838"
+                  ]
+                },
+                {
+                  "character": "謎",
+                  "codepoint": "U+8B0E",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B0E",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "b024b2e5-4c29-403d-a287-25b48bbe82b6"
+                  ]
+                },
+                {
+                  "character": "譚",
+                  "codepoint": "U+8B5A",
+                  "name": "CJK UNIFIED IDEOGRAPH-8B5A",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "賊",
+                  "codepoint": "U+8CCA",
+                  "name": "CJK UNIFIED IDEOGRAPH-8CCA",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "9ab524ae-e24c-4ef8-84b5-5261f75b7c4f",
+                    "492ac6df-13aa-46a3-b02a-207e3ffd1771"
+                  ]
+                },
+                {
+                  "character": "贄",
+                  "codepoint": "U+8D04",
+                  "name": "CJK UNIFIED IDEOGRAPH-8D04",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "f68ddcc3-f237-450a-89c3-e44142e7b36e",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "遁",
+                  "codepoint": "U+9041",
+                  "name": "CJK UNIFIED IDEOGRAPH-9041",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "還",
+                  "codepoint": "U+9084",
+                  "name": "CJK UNIFIED IDEOGRAPH-9084",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "9cdadb4f-0e5b-4322-8de8-023171d61bab"
+                  ]
+                },
+                {
+                  "character": "錬",
+                  "codepoint": "U+932C",
+                  "name": "CJK UNIFIED IDEOGRAPH-932C",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "錯",
+                  "codepoint": "U+932F",
+                  "name": "CJK UNIFIED IDEOGRAPH-932F",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "駕",
+                  "codepoint": "U+99D5",
+                  "name": "CJK UNIFIED IDEOGRAPH-99D5",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "fd4a7437-52a0-4800-9910-763ed1e72f6f"
+                  ]
+                },
+                {
+                  "character": "骸",
+                  "codepoint": "U+9AB8",
+                  "name": "CJK UNIFIED IDEOGRAPH-9AB8",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "1b255627-e9d0-4ed3-95bf-70c498bba9d1"
+                  ]
+                },
+                {
+                  "character": "髭",
+                  "codepoint": "U+9AED",
+                  "name": "CJK UNIFIED IDEOGRAPH-9AED",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "a3799b37-edf1-4cc4-9f1e-1c31497c40bf"
+                  ]
+                },
+                {
+                  "character": "！",
+                  "codepoint": "U+FF01",
+                  "name": "FULLWIDTH EXCLAMATION MARK",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "（",
+                  "codepoint": "U+FF08",
+                  "name": "FULLWIDTH LEFT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "）",
+                  "codepoint": "U+FF09",
+                  "name": "FULLWIDTH RIGHT PARENTHESIS",
+                  "occurrences": 22,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "＋",
+                  "codepoint": "U+FF0B",
+                  "name": "FULLWIDTH PLUS SIGN",
+                  "occurrences": 26,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "c83b110b-16e1-486c-8b39-75637ba4923c"
+                  ]
+                },
+                {
+                  "character": "－",
+                  "codepoint": "U+FF0D",
+                  "name": "FULLWIDTH HYPHEN-MINUS",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "c3914d56-625e-40dd-8073-388b83f22d88"
+                  ]
+                },
+                {
+                  "character": "０",
+                  "codepoint": "U+FF10",
+                  "name": "FULLWIDTH DIGIT ZERO",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "07629ce8-1f2f-488d-b1b5-4ffd6a9fcb2e"
+                  ]
+                },
+                {
+                  "character": "１",
+                  "codepoint": "U+FF11",
+                  "name": "FULLWIDTH DIGIT ONE",
+                  "occurrences": 121,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "27589431-7162-4586-a0fd-268082bc7dae"
+                  ]
+                },
+                {
+                  "character": "２",
+                  "codepoint": "U+FF12",
+                  "name": "FULLWIDTH DIGIT TWO",
+                  "occurrences": 24,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "a5b8b462-8509-4ead-9e1f-339842c0c7d3",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8"
+                  ]
+                },
+                {
+                  "character": "３",
+                  "codepoint": "U+FF13",
+                  "name": "FULLWIDTH DIGIT THREE",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8f0352e2-e075-463d-9d13-30877ed22df0",
+                    "27589431-7162-4586-a0fd-268082bc7dae",
+                    "721e4e49-cc9c-4c46-b497-45db33317db9"
+                  ]
+                },
+                {
+                  "character": "４",
+                  "codepoint": "U+FF14",
+                  "name": "FULLWIDTH DIGIT FOUR",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0",
+                    "86447dc1-b38b-4361-a58e-c1c4111692a2",
+                    "30a56ecf-2131-4c5f-81fb-d89e382ea5b6"
+                  ]
+                },
+                {
+                  "character": "５",
+                  "codepoint": "U+FF15",
+                  "name": "FULLWIDTH DIGIT FIVE",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "７",
+                  "codepoint": "U+FF17",
+                  "name": "FULLWIDTH DIGIT SEVEN",
+                  "occurrences": 3,
+                  "example_print_ids": [
+                    "ff5f2c89-dbe9-4b44-b892-8e2325860e62",
+                    "a3659c5d-b6c2-4df8-9b35-a13017147655",
+                    "35153d97-ced4-449b-b3f1-ffbe64926f8e"
+                  ]
+                },
+                {
+                  "character": "：",
+                  "codepoint": "U+FF1A",
+                  "name": "FULLWIDTH COLON",
+                  "occurrences": 16,
+                  "example_print_ids": [
+                    "8b4b60d6-da34-4c80-b618-1c14c61df829",
+                    "0be4357c-9086-415b-8fb7-2b2808f588a5",
+                    "697477d7-0085-45d5-bc03-1f58b5abeba6"
+                  ]
+                },
+                {
+                  "character": "＝",
+                  "codepoint": "U+FF1D",
+                  "name": "FULLWIDTH EQUALS SIGN",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "c83b110b-16e1-486c-8b39-75637ba4923c",
+                    "03170579-8322-4bf3-bb3e-f117fa826df7"
+                  ]
+                },
+                {
+                  "character": "？",
+                  "codepoint": "U+FF1F",
+                  "name": "FULLWIDTH QUESTION MARK",
+                  "occurrences": 4,
+                  "example_print_ids": [
+                    "98c8ad33-23f2-47a0-97f8-3ab1144ead3e",
+                    "72b50478-5b97-4109-8746-ededdd8e4838",
+                    "26f60a3c-0a1e-459d-abfb-914b748ef04c"
+                  ]
+                },
+                {
+                  "character": "Ｘ",
+                  "codepoint": "U+FF38",
+                  "name": "FULLWIDTH LATIN CAPITAL LETTER X",
+                  "occurrences": 6,
+                  "example_print_ids": [
+                    "d581e98f-98a9-4c31-9470-2825a192ec9d",
+                    "e8de1c0d-115a-4a72-9eb3-5509fd8f18b8",
+                    "eda5264e-eff8-4c32-881d-cf823daf800d"
+                  ]
+                },
+                {
+                  "character": "［",
+                  "codepoint": "U+FF3B",
+                  "name": "FULLWIDTH LEFT SQUARE BRACKET",
+                  "occurrences": 2,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4",
+                    "5ed14812-0940-44c2-81c2-67b23a6af195"
+                  ]
+                },
+                {
+                  "character": "］",
+                  "codepoint": "U+FF3D",
+                  "name": "FULLWIDTH RIGHT SQUARE BRACKET",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "af12f2d7-baa5-4ca1-bffd-50b0d247dfb4"
+                  ]
+                },
+                {
+                  "character": "･",
+                  "codepoint": "U+FF65",
+                  "name": "HALFWIDTH KATAKANA MIDDLE DOT",
+                  "occurrences": 1,
+                  "example_print_ids": [
+                    "bcd1a6cc-b475-42f4-be80-bc299279aee0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "preferred_model_by_coverage": "japanese_g2",
+          "complete_alphabet": false
+        },
+        "limitations": "Unmodified pretrained recognition, not MTG-fine-tuned. Alphabet gaps are explicit in the audit. No language-wide, font-wide, vertical text or furigana coverage claim."
+      }
+    }
+  },
+  "groups": {
+    "japanese_g1/all": {
+      "observations": 14,
+      "characters": 148,
+      "character_errors": 99,
+      "exact_matches": 1,
+      "character_error_rate": 0.668918918918919
+    },
+    "japanese_g1/source": {
+      "observations": 7,
+      "characters": 74,
+      "character_errors": 25,
+      "exact_matches": 1,
+      "character_error_rate": 0.33783783783783783
+    },
+    "japanese_g1/treatment:title": {
+      "observations": 2,
+      "characters": 4,
+      "character_errors": 2,
+      "exact_matches": 1,
+      "character_error_rate": 0.5
+    },
+    "japanese_g1/blur": {
+      "observations": 7,
+      "characters": 74,
+      "character_errors": 74,
+      "exact_matches": 0,
+      "character_error_rate": 1.0
+    },
+    "japanese_g1/treatment:furigana": {
+      "observations": 2,
+      "characters": 8,
+      "character_errors": 6,
+      "exact_matches": 0,
+      "character_error_rate": 0.75
+    },
+    "japanese_g1/treatment:rules": {
+      "observations": 2,
+      "characters": 18,
+      "character_errors": 13,
+      "exact_matches": 0,
+      "character_error_rate": 0.7222222222222222
+    },
+    "japanese_g1/treatment:rules and reminder": {
+      "observations": 2,
+      "characters": 46,
+      "character_errors": 28,
+      "exact_matches": 0,
+      "character_error_rate": 0.6086956521739131
+    },
+    "japanese_g1/treatment:flavor": {
+      "observations": 2,
+      "characters": 50,
+      "character_errors": 28,
+      "exact_matches": 0,
+      "character_error_rate": 0.56
+    },
+    "japanese_g1/treatment:title in low-resolution source": {
+      "observations": 2,
+      "characters": 4,
+      "character_errors": 4,
+      "exact_matches": 0,
+      "character_error_rate": 1.0
+    },
+    "japanese_g1/treatment:rules in low-resolution source": {
+      "observations": 2,
+      "characters": 18,
+      "character_errors": 18,
+      "exact_matches": 0,
+      "character_error_rate": 1.0
+    },
+    "japanese_g2/all": {
+      "observations": 14,
+      "characters": 148,
+      "character_errors": 84,
+      "exact_matches": 1,
+      "character_error_rate": 0.5675675675675675
+    },
+    "japanese_g2/source": {
+      "observations": 7,
+      "characters": 74,
+      "character_errors": 14,
+      "exact_matches": 1,
+      "character_error_rate": 0.1891891891891892
+    },
+    "japanese_g2/treatment:title": {
+      "observations": 2,
+      "characters": 4,
+      "character_errors": 3,
+      "exact_matches": 0,
+      "character_error_rate": 0.75
+    },
+    "japanese_g2/blur": {
+      "observations": 7,
+      "characters": 74,
+      "character_errors": 70,
+      "exact_matches": 0,
+      "character_error_rate": 0.9459459459459459
+    },
+    "japanese_g2/treatment:furigana": {
+      "observations": 2,
+      "characters": 8,
+      "character_errors": 4,
+      "exact_matches": 1,
+      "character_error_rate": 0.5
+    },
+    "japanese_g2/treatment:rules": {
+      "observations": 2,
+      "characters": 18,
+      "character_errors": 10,
+      "exact_matches": 0,
+      "character_error_rate": 0.5555555555555556
+    },
+    "japanese_g2/treatment:rules and reminder": {
+      "observations": 2,
+      "characters": 46,
+      "character_errors": 26,
+      "exact_matches": 0,
+      "character_error_rate": 0.5652173913043478
+    },
+    "japanese_g2/treatment:flavor": {
+      "observations": 2,
+      "characters": 50,
+      "character_errors": 25,
+      "exact_matches": 0,
+      "character_error_rate": 0.5
+    },
+    "japanese_g2/treatment:title in low-resolution source": {
+      "observations": 2,
+      "characters": 4,
+      "character_errors": 4,
+      "exact_matches": 0,
+      "character_error_rate": 1.0
+    },
+    "japanese_g2/treatment:rules in low-resolution source": {
+      "observations": 2,
+      "characters": 18,
+      "character_errors": 12,
+      "exact_matches": 0,
+      "character_error_rate": 0.6666666666666666
+    }
+  },
+  "confidence_note": "Raw, uncalibrated geometric mean of emitted CTC character posterior peaks; not whole-line accuracy. Candidate preprocessing selection uses model score, never the reference text.",
+  "metric_note": "NFC Unicode normalization and collapsed whitespace; fullwidth digits and punctuation count. Reported scores reflect actual horizontal Japanese crops only.",
+  "coverage_limitations": [
+    "Only two card identities; not a language-wide accuracy estimate",
+    "No MTG fine-tuning",
+    "Both upstream Japanese alphabets miss printed corpus characters",
+    "Japanese flavor/reminder text is upright here, not evidence of Latin italic coverage",
+    "Furigana is isolated manually; mixed furigana/main-line segmentation is unverified",
+    "Vertical Japanese remains unverified"
+  ],
+  "records": [
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-title",
+      "variant_id": "source",
+      "image_sha256": "491ed8fbb696247d8a7e13b8b07c9f49b77d900ffc9ed5baa8883830e8ab8395",
+      "reference": "選択",
+      "reference_characters": 2,
+      "character_errors": 0,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "選択",
+        "confidence": 0.9984937,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          72,
+          32
+        ],
+        "lines": [
+          {
+            "text": "選択",
+            "confidence": 0.9984937,
+            "bounds": [
+              0,
+              0,
+              72,
+              32
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "選択",
+            "confidence": 0.9984937,
+            "lines": [
+              {
+                "text": "選択",
+                "confidence": 0.9984937,
+                "bounds": [
+                  0,
+                  0,
+                  72,
+                  32
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "選択",
+            "confidence": 0.9852353,
+            "lines": [
+              {
+                "text": "選択",
+                "confidence": 0.9852353,
+                "bounds": [
+                  0,
+                  0,
+                  72,
+                  32
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-title",
+      "variant_id": "blur",
+      "image_sha256": "a34089af3a614b9e96d08c451c43c65df307a2be897ce663a901cd9394873169",
+      "reference": "選択",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "一",
+        "confidence": 0.30683756,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          22,
+          10
+        ],
+        "lines": [
+          {
+            "text": "一",
+            "confidence": 0.30683756,
+            "bounds": [
+              0,
+              0,
+              22,
+              10
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "一",
+            "confidence": 0.30683756,
+            "lines": [
+              {
+                "text": "一",
+                "confidence": 0.30683756,
+                "bounds": [
+                  0,
+                  0,
+                  22,
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "コ",
+            "confidence": 0.21698806,
+            "lines": [
+              {
+                "text": "コ",
+                "confidence": 0.21698806,
+                "bounds": [
+                  0,
+                  0,
+                  22,
+                  10
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-furigana",
+      "variant_id": "source",
+      "image_sha256": "c656566d386f80761fe7a13451e60c8eae185d6a67da179aa4ab3edd079c2c16",
+      "reference": "せんたく",
+      "reference_characters": 4,
+      "character_errors": 2,
+      "character_error_rate": 0.5,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "せhた<",
+        "confidence": 0.9230056,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          64,
+          18
+        ],
+        "lines": [
+          {
+            "text": "せhた<",
+            "confidence": 0.9230056,
+            "bounds": [
+              0,
+              0,
+              64,
+              18
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "せんた<",
+            "confidence": 0.75228363,
+            "lines": [
+              {
+                "text": "せんた<",
+                "confidence": 0.75228363,
+                "bounds": [
+                  0,
+                  0,
+                  64,
+                  18
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "せhた<",
+            "confidence": 0.9230056,
+            "lines": [
+              {
+                "text": "せhた<",
+                "confidence": 0.9230056,
+                "bounds": [
+                  0,
+                  0,
+                  64,
+                  18
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-furigana",
+      "variant_id": "blur",
+      "image_sha256": "e24a1e441533977ce53d775628c9e68029e5829c8f708b325d3626a3b4c401e5",
+      "reference": "せんたく",
+      "reference_characters": 4,
+      "character_errors": 4,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "一",
+        "confidence": 0.12988715,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          19,
+          5
+        ],
+        "lines": [
+          {
+            "text": "一",
+            "confidence": 0.12988715,
+            "bounds": [
+              0,
+              0,
+              19,
+              5
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "一",
+            "confidence": 0.12988715,
+            "lines": [
+              {
+                "text": "一",
+                "confidence": 0.12988715,
+                "bounds": [
+                  0,
+                  0,
+                  19,
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-rules",
+      "variant_id": "source",
+      "image_sha256": "08b11b35a4bad03f5fc3727a1d011f91166196d03b565abe6185e548f2815ca9",
+      "reference": "カード１枚を引く。",
+      "reference_characters": 9,
+      "character_errors": 4,
+      "character_error_rate": 0.4444444444444444,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "１"
+      ],
+      "inference": {
+        "text": "力ード1枚を引<6",
+        "confidence": 0.8772776,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          261,
+          42
+        ],
+        "lines": [
+          {
+            "text": "力ード1枚を引<6",
+            "confidence": 0.8772776,
+            "bounds": [
+              0,
+              0,
+              261,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "力ード1枚を引<6",
+            "confidence": 0.8772776,
+            "lines": [
+              {
+                "text": "力ード1枚を引<6",
+                "confidence": 0.8772776,
+                "bounds": [
+                  0,
+                  0,
+                  261,
+                  42
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "力一ド1枚を引<6",
+            "confidence": 0.7811756,
+            "lines": [
+              {
+                "text": "力一ド1枚を引<6",
+                "confidence": 0.7811756,
+                "bounds": [
+                  0,
+                  0,
+                  261,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-rules",
+      "variant_id": "blur",
+      "image_sha256": "9195e6de53315ce9fa01061bea14a3fd9e3c50e64f0ae190609e5057035d258f",
+      "reference": "カード１枚を引く。",
+      "reference_characters": 9,
+      "character_errors": 9,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "１"
+      ],
+      "inference": {
+        "text": "0-~]763)<",
+        "confidence": 0.6537728,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          78,
+          13
+        ],
+        "lines": [
+          {
+            "text": "0-~]763)<",
+            "confidence": 0.6537728,
+            "bounds": [
+              0,
+              0,
+              78,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "0-~]763)<",
+            "confidence": 0.6537728,
+            "lines": [
+              {
+                "text": "0-~]763)<",
+                "confidence": 0.6537728,
+                "bounds": [
+                  0,
+                  0,
+                  78,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-reminder",
+      "variant_id": "source",
+      "image_sha256": "f6f270cc911fb94b0657630cb8f52b35c2fdfca028fd496a51d1d566f4d95ddf",
+      "reference": "占術１を行う。（あなたのライブラリーの一番上に",
+      "reference_characters": 23,
+      "character_errors": 5,
+      "character_error_rate": 0.21739130434782608,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "（",
+        "１"
+      ],
+      "inference": {
+        "text": "占術1を行うo(あなた0ライブラリ一の一番上に",
+        "confidence": 0.91913545,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          614,
+          34
+        ],
+        "lines": [
+          {
+            "text": "占術1を行うo(あなた0ライブラリ一の一番上に",
+            "confidence": 0.91913545,
+            "bounds": [
+              0,
+              0,
+              614,
+              34
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "占術1を行うo(あなた0ライブラリ一の一番上に",
+            "confidence": 0.91913545,
+            "lines": [
+              {
+                "text": "占術1を行うo(あなた0ライブラリ一の一番上に",
+                "confidence": 0.91913545,
+                "bounds": [
+                  0,
+                  0,
+                  614,
+                  34
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "占術1を行えo(あなを0ライブラリ一の一番上ヒ",
+            "confidence": 0.74890274,
+            "lines": [
+              {
+                "text": "占術1を行えo(あなを0ライブラリ一の一番上ヒ",
+                "confidence": 0.74890274,
+                "bounds": [
+                  0,
+                  0,
+                  614,
+                  34
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-reminder",
+      "variant_id": "blur",
+      "image_sha256": "86c7ca4f00d31c1a00076d222ff6c39fdbbf7d8d4a8c95c99894a40918e8bdf4",
+      "reference": "占術１を行う。（あなたのライブラリーの一番上に",
+      "reference_characters": 23,
+      "character_errors": 23,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "（",
+        "１"
+      ],
+      "inference": {
+        "text": "6)12]977)",
+        "confidence": 0.44021314,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          184,
+          10
+        ],
+        "lines": [
+          {
+            "text": "6)12]977)",
+            "confidence": 0.44021314,
+            "bounds": [
+              0,
+              0,
+              184,
+              10
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "6)12]977)",
+            "confidence": 0.44021314,
+            "lines": [
+              {
+                "text": "6)12]977)",
+                "confidence": 0.44021314,
+                "bounds": [
+                  0,
+                  0,
+                  184,
+                  10
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-flavor",
+      "variant_id": "source",
+      "image_sha256": "53dcfbbbdd41029631121c85dc0f8127e6d2d9fb2786f308585518fb91656a0e",
+      "reference": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "reference_characters": 25,
+      "character_errors": 3,
+      "character_error_rate": 0.12,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "「",
+        "『"
+      ],
+      "inference": {
+        "text": "[風雲船長の命令は予想がつくな[危険な方の航路を",
+        "confidence": 0.98566735,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          612,
+          31
+        ],
+        "lines": [
+          {
+            "text": "[風雲船長の命令は予想がつくな[危険な方の航路を",
+            "confidence": 0.98566735,
+            "bounds": [
+              0,
+              0,
+              612,
+              31
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "[風雲船長の命令は予想がつくな[危険な方の航路を",
+            "confidence": 0.98566735,
+            "lines": [
+              {
+                "text": "[風雲船長の命令は予想がつくな[危険な方の航路を",
+                "confidence": 0.98566735,
+                "bounds": [
+                  0,
+                  0,
+                  612,
+                  31
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "丁風雲船長の命令は予想がつ<な[危険な方の航路を",
+            "confidence": 0.8235201,
+            "lines": [
+              {
+                "text": "丁風雲船長の命令は予想がつ<な[危険な方の航路を",
+                "confidence": 0.8235201,
+                "bounds": [
+                  0,
+                  0,
+                  612,
+                  31
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-flavor",
+      "variant_id": "blur",
+      "image_sha256": "a11107b8c420073d3f9cf8cb77e10b3932858b619babd364adb652c91f0dbf03",
+      "reference": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "reference_characters": 25,
+      "character_errors": 25,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "「",
+        "『"
+      ],
+      "inference": {
+        "text": "7",
+        "confidence": 0.4829277,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          184,
+          9
+        ],
+        "lines": [
+          {
+            "text": "7",
+            "confidence": 0.4829277,
+            "bounds": [
+              0,
+              0,
+              184,
+              9
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "7",
+            "confidence": 0.4829277,
+            "lines": [
+              {
+                "text": "7",
+                "confidence": 0.4829277,
+                "bounds": [
+                  0,
+                  0,
+                  184,
+                  9
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-lowres-title",
+      "variant_id": "source",
+      "image_sha256": "10bfd321d3d354e5e3d1a28bfadf21fd3861d9aab079912767de4807f5b8bcf2",
+      "reference": "予言",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "船",
+        "confidence": 0.61324924,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          122,
+          46
+        ],
+        "lines": [
+          {
+            "text": "船",
+            "confidence": 0.61324924,
+            "bounds": [
+              0,
+              0,
+              122,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "A",
+            "confidence": 0.06248319,
+            "lines": [
+              {
+                "text": "A",
+                "confidence": 0.06248319,
+                "bounds": [
+                  0,
+                  0,
+                  122,
+                  46
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "船",
+            "confidence": 0.61324924,
+            "lines": [
+              {
+                "text": "船",
+                "confidence": 0.61324924,
+                "bounds": [
+                  0,
+                  0,
+                  122,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-lowres-title",
+      "variant_id": "blur",
+      "image_sha256": "dee9c1a20d0f179fc832bd5587bbc0448c1444641789b89297a674f8030c33a3",
+      "reference": "予言",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "一",
+        "confidence": 0.6466231,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          37,
+          14
+        ],
+        "lines": [
+          {
+            "text": "一",
+            "confidence": 0.6466231,
+            "bounds": [
+              0,
+              0,
+              37,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "一",
+            "confidence": 0.6466231,
+            "lines": [
+              {
+                "text": "一",
+                "confidence": 0.6466231,
+                "bounds": [
+                  0,
+                  0,
+                  37,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "F",
+            "confidence": 0.028494718,
+            "lines": [
+              {
+                "text": "F",
+                "confidence": 0.028494718,
+                "bounds": [
+                  0,
+                  0,
+                  37,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-lowres-rules",
+      "variant_id": "source",
+      "image_sha256": "ee7d4495a17db57f729c14f5827bda3e17ed35141f594de164f0223f0a5b3447",
+      "reference": "カードを２枚引く。",
+      "reference_characters": 9,
+      "character_errors": 9,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "２"
+      ],
+      "inference": {
+        "text": ")~<?73|<",
+        "confidence": 0.6458396,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          268,
+          43
+        ],
+        "lines": [
+          {
+            "text": ")~<?73|<",
+            "confidence": 0.6458396,
+            "bounds": [
+              0,
+              0,
+              268,
+              43
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": ")~<?73|<",
+            "confidence": 0.6458396,
+            "lines": [
+              {
+                "text": ")~<?73|<",
+                "confidence": 0.6458396,
+                "bounds": [
+                  0,
+                  0,
+                  268,
+                  43
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "0=ド&27引|<,",
+            "confidence": 0.5664145,
+            "lines": [
+              {
+                "text": "0=ド&27引|<,",
+                "confidence": 0.5664145,
+                "bounds": [
+                  0,
+                  0,
+                  268,
+                  43
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g1",
+      "sample_id": "ja-lowres-rules",
+      "variant_id": "blur",
+      "image_sha256": "7e5bd6ad20b008f56813f6070129d4d59b6c20949e6dc8a0c38667c6370a7647",
+      "reference": "カードを２枚引く。",
+      "reference_characters": 9,
+      "character_errors": 9,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "。",
+        "２"
+      ],
+      "inference": {
+        "text": "2-273<",
+        "confidence": 0.7398791,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          80,
+          13
+        ],
+        "lines": [
+          {
+            "text": "2-273<",
+            "confidence": 0.7398791,
+            "bounds": [
+              0,
+              0,
+              80,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (ResNet + two BiLSTMs) / greedy CTC",
+            "text": "2-273<",
+            "confidence": 0.7398791,
+            "lines": [
+              {
+                "text": "2-273<",
+                "confidence": 0.7398791,
+                "bounds": [
+                  0,
+                  0,
+                  80,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g1-pretrained-experiment",
+          "language": "ja",
+          "sha256": "ff63f7bedba2b1e749934b827ba7fab22f39f29ba7bb7d2f0b6d7592b17c7a04",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-title",
+      "variant_id": "source",
+      "image_sha256": "491ed8fbb696247d8a7e13b8b07c9f49b77d900ffc9ed5baa8883830e8ab8395",
+      "reference": "選択",
+      "reference_characters": 2,
+      "character_errors": 1,
+      "character_error_rate": 0.5,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "択"
+      ],
+      "inference": {
+        "text": "選沢",
+        "confidence": 0.4076635,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          72,
+          32
+        ],
+        "lines": [
+          {
+            "text": "選沢",
+            "confidence": 0.4076635,
+            "bounds": [
+              0,
+              0,
+              72,
+              32
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "選沢",
+            "confidence": 0.4076635,
+            "lines": [
+              {
+                "text": "選沢",
+                "confidence": 0.4076635,
+                "bounds": [
+                  0,
+                  0,
+                  72,
+                  32
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "選沢",
+            "confidence": 0.37349755,
+            "lines": [
+              {
+                "text": "選沢",
+                "confidence": 0.37349755,
+                "bounds": [
+                  0,
+                  0,
+                  72,
+                  32
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-title",
+      "variant_id": "blur",
+      "image_sha256": "a34089af3a614b9e96d08c451c43c65df307a2be897ce663a901cd9394873169",
+      "reference": "選択",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "択"
+      ],
+      "inference": {
+        "text": "り",
+        "confidence": 0.4527003,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          22,
+          10
+        ],
+        "lines": [
+          {
+            "text": "り",
+            "confidence": 0.4527003,
+            "bounds": [
+              0,
+              0,
+              22,
+              10
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "山",
+            "confidence": 0.11475905,
+            "lines": [
+              {
+                "text": "山",
+                "confidence": 0.11475905,
+                "bounds": [
+                  0,
+                  0,
+                  22,
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "り",
+            "confidence": 0.4527003,
+            "lines": [
+              {
+                "text": "り",
+                "confidence": 0.4527003,
+                "bounds": [
+                  0,
+                  0,
+                  22,
+                  10
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-furigana",
+      "variant_id": "source",
+      "image_sha256": "c656566d386f80761fe7a13451e60c8eae185d6a67da179aa4ab3edd079c2c16",
+      "reference": "せんたく",
+      "reference_characters": 4,
+      "character_errors": 0,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "せんたく",
+        "confidence": 0.99999356,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          64,
+          18
+        ],
+        "lines": [
+          {
+            "text": "せんたく",
+            "confidence": 0.99999356,
+            "bounds": [
+              0,
+              0,
+              64,
+              18
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "せんたく",
+            "confidence": 0.9998673,
+            "lines": [
+              {
+                "text": "せんたく",
+                "confidence": 0.9998673,
+                "bounds": [
+                  0,
+                  0,
+                  64,
+                  18
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "せんたく",
+            "confidence": 0.99999356,
+            "lines": [
+              {
+                "text": "せんたく",
+                "confidence": 0.99999356,
+                "bounds": [
+                  0,
+                  0,
+                  64,
+                  18
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-furigana",
+      "variant_id": "blur",
+      "image_sha256": "e24a1e441533977ce53d775628c9e68029e5829c8f708b325d3626a3b4c401e5",
+      "reference": "せんたく",
+      "reference_characters": 4,
+      "character_errors": 4,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "ts』』",
+        "confidence": 0.1522721,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          19,
+          5
+        ],
+        "lines": [
+          {
+            "text": "ts』』",
+            "confidence": 0.1522721,
+            "bounds": [
+              0,
+              0,
+              19,
+              5
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "~",
+            "confidence": 0.09830952,
+            "lines": [
+              {
+                "text": "~",
+                "confidence": 0.09830952,
+                "bounds": [
+                  0,
+                  0,
+                  19,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "ts』』",
+            "confidence": 0.1522721,
+            "lines": [
+              {
+                "text": "ts』』",
+                "confidence": 0.1522721,
+                "bounds": [
+                  0,
+                  0,
+                  19,
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-rules",
+      "variant_id": "source",
+      "image_sha256": "08b11b35a4bad03f5fc3727a1d011f91166196d03b565abe6185e548f2815ca9",
+      "reference": "カード１枚を引く。",
+      "reference_characters": 9,
+      "character_errors": 2,
+      "character_error_rate": 0.2222222222222222,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "１"
+      ],
+      "inference": {
+        "text": "カード1枚を引く",
+        "confidence": 0.99952865,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          261,
+          42
+        ],
+        "lines": [
+          {
+            "text": "カード1枚を引く",
+            "confidence": 0.99952865,
+            "bounds": [
+              0,
+              0,
+              261,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "カード1枚を引く",
+            "confidence": 0.99952865,
+            "lines": [
+              {
+                "text": "カード1枚を引く",
+                "confidence": 0.99952865,
+                "bounds": [
+                  0,
+                  0,
+                  261,
+                  42
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "カード1枚を引く。",
+            "confidence": 0.96603686,
+            "lines": [
+              {
+                "text": "カード1枚を引く。",
+                "confidence": 0.96603686,
+                "bounds": [
+                  0,
+                  0,
+                  261,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-rules",
+      "variant_id": "blur",
+      "image_sha256": "9195e6de53315ce9fa01061bea14a3fd9e3c50e64f0ae190609e5057035d258f",
+      "reference": "カード１枚を引く。",
+      "reference_characters": 9,
+      "character_errors": 8,
+      "character_error_rate": 0.8888888888888888,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "１"
+      ],
+      "inference": {
+        "text": "クーいりこら <』",
+        "confidence": 0.42136422,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          78,
+          13
+        ],
+        "lines": [
+          {
+            "text": "クーいりこら <』",
+            "confidence": 0.42136422,
+            "bounds": [
+              0,
+              0,
+              78,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "〈",
+            "confidence": 0.05034869,
+            "lines": [
+              {
+                "text": "〈",
+                "confidence": 0.05034869,
+                "bounds": [
+                  0,
+                  0,
+                  78,
+                  13
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "クーいりこら <』",
+            "confidence": 0.42136422,
+            "lines": [
+              {
+                "text": "クーいりこら <』",
+                "confidence": 0.42136422,
+                "bounds": [
+                  0,
+                  0,
+                  78,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-reminder",
+      "variant_id": "source",
+      "image_sha256": "f6f270cc911fb94b0657630cb8f52b35c2fdfca028fd496a51d1d566f4d95ddf",
+      "reference": "占術１を行う。（あなたのライブラリーの一番上に",
+      "reference_characters": 23,
+      "character_errors": 5,
+      "character_error_rate": 0.21739130434782608,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "（",
+        "１"
+      ],
+      "inference": {
+        "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+        "confidence": 0.9965957,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          614,
+          34
+        ],
+        "lines": [
+          {
+            "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+            "confidence": 0.9965957,
+            "bounds": [
+              0,
+              0,
+              614,
+              34
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+            "confidence": 0.9965957,
+            "lines": [
+              {
+                "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+                "confidence": 0.9965957,
+                "bounds": [
+                  0,
+                  0,
+                  614,
+                  34
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+            "confidence": 0.9721042,
+            "lines": [
+              {
+                "text": "占術 1 を行う。 (あなたのライブラリーの一番上に",
+                "confidence": 0.9721042,
+                "bounds": [
+                  0,
+                  0,
+                  614,
+                  34
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-reminder",
+      "variant_id": "blur",
+      "image_sha256": "86c7ca4f00d31c1a00076d222ff6c39fdbbf7d8d4a8c95c99894a40918e8bdf4",
+      "reference": "占術１を行う。（あなたのライブラリーの一番上に",
+      "reference_characters": 23,
+      "character_errors": 21,
+      "character_error_rate": 0.9130434782608695,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "（",
+        "１"
+      ],
+      "inference": {
+        "text": "古り、こりう ‥このううり ・‥‥",
+        "confidence": 0.30625218,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          184,
+          10
+        ],
+        "lines": [
+          {
+            "text": "古り、こりう ‥このううり ・‥‥",
+            "confidence": 0.30625218,
+            "bounds": [
+              0,
+              0,
+              184,
+              10
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "~",
+            "confidence": 0.05633399,
+            "lines": [
+              {
+                "text": "~",
+                "confidence": 0.05633399,
+                "bounds": [
+                  0,
+                  0,
+                  184,
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "古り、こりう ‥このううり ・‥‥",
+            "confidence": 0.30625218,
+            "lines": [
+              {
+                "text": "古り、こりう ‥このううり ・‥‥",
+                "confidence": 0.30625218,
+                "bounds": [
+                  0,
+                  0,
+                  184,
+                  10
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-flavor",
+      "variant_id": "source",
+      "image_sha256": "53dcfbbbdd41029631121c85dc0f8127e6d2d9fb2786f308585518fb91656a0e",
+      "reference": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "reference_characters": 25,
+      "character_errors": 1,
+      "character_error_rate": 0.04,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+        "confidence": 0.9982798,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          612,
+          31
+        ],
+        "lines": [
+          {
+            "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+            "confidence": 0.9982798,
+            "bounds": [
+              0,
+              0,
+              612,
+              31
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+            "confidence": 0.9982798,
+            "lines": [
+              {
+                "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+                "confidence": 0.9982798,
+                "bounds": [
+                  0,
+                  0,
+                  612,
+                  31
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+            "confidence": 0.99611026,
+            "lines": [
+              {
+                "text": "「風雲船長の命令は予想がつくな『危険な方の航路を",
+                "confidence": 0.99611026,
+                "bounds": [
+                  0,
+                  0,
+                  612,
+                  31
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-flavor",
+      "variant_id": "blur",
+      "image_sha256": "a11107b8c420073d3f9cf8cb77e10b3932858b619babd364adb652c91f0dbf03",
+      "reference": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "reference_characters": 25,
+      "character_errors": 24,
+      "character_error_rate": 0.96,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "Dogwnり‥う‥りつし‥いんgnn",
+        "confidence": 0.2519333,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          184,
+          9
+        ],
+        "lines": [
+          {
+            "text": "Dogwnり‥う‥りつし‥いんgnn",
+            "confidence": 0.2519333,
+            "bounds": [
+              0,
+              0,
+              184,
+              9
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "Dogwnり‥う‥りつし‥いんgnn",
+            "confidence": 0.2519333,
+            "lines": [
+              {
+                "text": "Dogwnり‥う‥りつし‥いんgnn",
+                "confidence": 0.2519333,
+                "bounds": [
+                  0,
+                  0,
+                  184,
+                  9
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-lowres-title",
+      "variant_id": "source",
+      "image_sha256": "10bfd321d3d354e5e3d1a28bfadf21fd3861d9aab079912767de4807f5b8bcf2",
+      "reference": "予言",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "T",
+        "confidence": 0.166898,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          122,
+          46
+        ],
+        "lines": [
+          {
+            "text": "T",
+            "confidence": 0.166898,
+            "bounds": [
+              0,
+              0,
+              122,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "T",
+            "confidence": 0.166898,
+            "lines": [
+              {
+                "text": "T",
+                "confidence": 0.166898,
+                "bounds": [
+                  0,
+                  0,
+                  122,
+                  46
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "f",
+            "confidence": 0.16542582,
+            "lines": [
+              {
+                "text": "f",
+                "confidence": 0.16542582,
+                "bounds": [
+                  0,
+                  0,
+                  122,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-lowres-title",
+      "variant_id": "blur",
+      "image_sha256": "dee9c1a20d0f179fc832bd5587bbc0448c1444641789b89297a674f8030c33a3",
+      "reference": "予言",
+      "reference_characters": 2,
+      "character_errors": 2,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [],
+      "inference": {
+        "text": "〈",
+        "confidence": 0.033647794,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          37,
+          14
+        ],
+        "lines": [
+          {
+            "text": "〈",
+            "confidence": 0.033647794,
+            "bounds": [
+              0,
+              0,
+              37,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "~",
+            "confidence": 0.020204721,
+            "lines": [
+              {
+                "text": "~",
+                "confidence": 0.020204721,
+                "bounds": [
+                  0,
+                  0,
+                  37,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "〈",
+            "confidence": 0.033647794,
+            "lines": [
+              {
+                "text": "〈",
+                "confidence": 0.033647794,
+                "bounds": [
+                  0,
+                  0,
+                  37,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-lowres-rules",
+      "variant_id": "source",
+      "image_sha256": "ee7d4495a17db57f729c14f5827bda3e17ed35141f594de164f0223f0a5b3447",
+      "reference": "カードを２枚引く。",
+      "reference_characters": 9,
+      "character_errors": 3,
+      "character_error_rate": 0.3333333333333333,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "２"
+      ],
+      "inference": {
+        "text": "カードを?れ引く",
+        "confidence": 0.63498163,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          268,
+          43
+        ],
+        "lines": [
+          {
+            "text": "カードを?れ引く",
+            "confidence": 0.63498163,
+            "bounds": [
+              0,
+              0,
+              268,
+              43
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "ニドき?ク引くう",
+            "confidence": 0.28878337,
+            "lines": [
+              {
+                "text": "ニドき?ク引くう",
+                "confidence": 0.28878337,
+                "bounds": [
+                  0,
+                  0,
+                  268,
+                  43
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "カードを?れ引く",
+            "confidence": 0.63498163,
+            "lines": [
+              {
+                "text": "カードを?れ引く",
+                "confidence": 0.63498163,
+                "bounds": [
+                  0,
+                  0,
+                  268,
+                  43
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "model": "japanese_g2",
+      "sample_id": "ja-lowres-rules",
+      "variant_id": "blur",
+      "image_sha256": "7e5bd6ad20b008f56813f6070129d4d59b6c20949e6dc8a0c38667c6370a7647",
+      "reference": "カードを２枚引く。",
+      "reference_characters": 9,
+      "character_errors": 9,
+      "character_error_rate": 1.0,
+      "exact_match": false,
+      "reference_alphabet_gaps": [
+        "２"
+      ],
+      "inference": {
+        "text": "一 ‥うりら <",
+        "confidence": 0.35964236,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+        "image_size": [
+          80,
+          13
+        ],
+        "lines": [
+          {
+            "text": "一 ‥うりら <",
+            "confidence": 0.35964236,
+            "bounds": [
+              0,
+              0,
+              80,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "",
+            "confidence": 0.0,
+            "lines": []
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + EasyOCR CRNN (VGG + two BiLSTMs) / greedy CTC",
+            "text": "一 ‥うりら <",
+            "confidence": 0.35964236,
+            "lines": [
+              {
+                "text": "一 ‥うりら <",
+                "confidence": 0.35964236,
+                "bounds": [
+                  0,
+                  0,
+                  80,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "easyocr-japanese_g2-pretrained-experiment",
+          "language": "ja",
+          "sha256": "00e6dedd39ed29f14b16431db58a09c0c8d9118ba6da1ed8b81271b669fd81e5",
+          "detector_sha256": null
+        }
+      }
+    }
+  ]
+}

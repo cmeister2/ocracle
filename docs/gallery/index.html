@@ -16,11 +16,11 @@
   </header>
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">Magic: The Gathering · English OCR baseline</p>
+      <p class="eyebrow">Magic: The Gathering · OCR gallery</p>
       <h1 id="page-title">Card text, read back.</h1>
-      <p class="lede">Actual card scans. Actual neural OCR output. Compare original text with severe blur, including historical titles and italic flavor and reminder text.</p>
-      <p class="scope">These English examples are held out from ocracle’s MTG fine-tuning, not a claim of complete font coverage. Confidence is an uncalibrated model score; check the transcription and measured errors beside it.</p>
-      <p id="coverage-note" class="scope">The project aims to recognize every printed Magic language. The current checkpoints and examples cover English only; other scripts remain untrained and unverified.</p>
+      <p class="lede">Actual card scans. Actual neural OCR output. Compare fonts, accented titles and italic flavor and reminder text, with original and severely blurred inputs.</p>
+      <p class="scope">These fixed examples do not establish complete font coverage. Custom fine-tuning excludes their card identities; original pretrained model training membership is unknown. Confidence is an uncalibrated model score; check the transcription and measured errors beside it.</p>
+      <p id="coverage-note" class="scope">Latin-script text is the main target; non-Latin scripts are best effort. The examples below show English fonts and five accented Latin-script languages.</p>
     </section>
     <section class="gallery-section" aria-labelledby="gallery-title">
       <div class="section-heading">
@@ -31,8 +31,9 @@
       <div class="controls" aria-label="Filter examples">
         <fieldset id="model-controls" hidden>
           <legend>Model</legend>
-          <label><input type="radio" name="model" value="mtg" checked> MTG tuned</label>
-          <label><input type="radio" name="model" value="base"> General base</label>
+          <label><input type="radio" name="model" value="paddle" checked> Paddle baseline</label>
+          <label><input type="radio" name="model" value="mtg"> MTG tuned (English)</label>
+          <label><input type="radio" name="model" value="base"> General base (English)</label>
         </fieldset>
         <fieldset>
           <legend>Language</legend>
@@ -58,17 +59,18 @@
     </section>
     <section class="method" aria-labelledby="method-title">
       <h2 id="method-title">What produced these results?</h2>
-      <p>Each card line is cropped by fixed coordinates and passed to ocracle’s neural text recognizer. The crop coordinates and printed transcription are human supplied. No card-name lookup, Oracle text replacement or language-model correction supplies the predictions.</p>
-      <p>When multiple preprocessing passes are enabled, ocracle retains the candidates and selects the one with the highest mean emitted-character score. Expand an example to inspect the actual method, candidate outputs and model identity. A higher score can still produce a worse transcription. When both checkpoints are available, the model selector compares the MTG-tuned network with its general OCR baseline on the same crops; fine-tuning can help some lines and hurt others.</p>
+      <p>Each card line is cropped by fixed coordinates and passed to ocracle’s neural text recognizer. The default Paddle baseline uses its pretrained LCNetV4 and LightSVTR network; the English comparison models use CRNNs. The crop coordinates and printed transcription are human supplied. No card-name lookup, Oracle text replacement or language-model correction supplies the predictions.</p>
+      <p>When multiple preprocessing passes are enabled, ocracle retains the candidates and selects the one with the highest mean emitted-character score. Expand an example to inspect the actual method, candidate outputs and model identity. A higher score can still produce a worse transcription. When both checkpoints are available, the model selector compares Paddle with the MTG-tuned CRNN and its general OCR baseline on the same English crops; fine-tuning can help some lines and hurt others.</p>
       <p>The blur examples apply a Gaussian blur with σ = 2.4 source pixels, then reduce each crop to 30% of its original dimensions. They are deliberately difficult; lost image detail cannot always be recovered.</p>
       <p id="metric-note">Character error rate compares observed output against a manual transcription of the printed image. Case and punctuation count.</p>
-      <p class="artifact-links"><a href="assets/fixtures.json">Crops &amp; provenance JSON</a><a href="assets/results.json">Full inference JSON</a><a href="assets/results-baseline.json">General OCR baseline JSON</a></p>
+      <p class="artifact-links"><a href="assets/fixtures.json">Crops &amp; provenance JSON</a><a href="assets/results-paddle.json">Paddle inference JSON</a><a href="assets/latin/results-paddle.json">Accented-title inference JSON</a><a href="assets/results.json">English MTG inference JSON</a><a href="assets/results-baseline.json">General OCR baseline JSON</a></p>
       <p id="run-details" class="run-details"></p>
     </section>
     <section class="sources" aria-labelledby="sources-title">
       <h2 id="sources-title">The printed word matters</h2>
       <p>Reference text follows the pictured printing, including historical wording and italics. It does not substitute the current Oracle rules text. The title examples include the three standard frame families described by Wizards: Goudy Medieval, Matrix Bold and Beleren. Further crops cover Future Sight, colorshifted, Dracula, Amonkhet Invocation and D&amp;D module treatments, plus small collector type. Special treatments are labeled by their printing when the precise typeface is unverified.</p>
       <ul id="font-sources">
+        <li><a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx">Paddle: the exact pretrained baseline source</a></li>
         <li><a href="https://magic.wizards.com/en/news/making-magic/frames-reference-2003-01-27">Wizards: the original card frame and Goudy Medieval</a></li>
         <li><a href="https://magic.wizards.com/en/news/making-magic/directors-chair-2013-2014-01-06">Wizards: Matrix Bold and Beleren</a></li>
         <li><a href="https://magic.wizards.com/en/news/announcements/dominaria-frame-template-and-rules-changes-2018-03-21">Wizards: italic flavor and reminder text</a></li>
