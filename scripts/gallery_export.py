@@ -20,6 +20,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ASSETS = ROOT / "docs/gallery/assets"
 
 
+def known_recognizers() -> list[dict]:
+    """Collect registered weight identities without requiring model downloads."""
+    models = []
+    for path in [ROOT / "models/manifest.json", ROOT / "models/paddle-v6-manifest.json"]:
+        if not path.exists():
+            continue
+        manifest = json.loads(path.read_text())
+        models.extend(model for model in manifest.get("upstream_models", [])
+                      if not model.get("training_only") and "detection" not in model["path"])
+        models.extend(manifest.get("adapted_models", []))
+    return models
+
+
 def normalized(text: str) -> str:
     """Normalize Unicode and whitespace without removing OCR punctuation errors."""
     return " ".join(unicodedata.normalize("NFC", text).split())
@@ -46,15 +59,10 @@ def check_artifacts(fixtures_path: Path, output_path: Path) -> None:
     """Verify the site contains complete, internally consistent real-run artifacts."""
     fixtures = json.loads(fixtures_path.read_text())
     result = json.loads(output_path.read_text())
-    model_manifest = json.loads((ROOT / "models/manifest.json").read_text())
-    known_recognizers = [
-        model for model in model_manifest.get("upstream_models", [])
-        if not model.get("training_only") and "detection" not in model["path"]
-    ] + model_manifest.get("adapted_models", [])
-    model_entry = next((model for model in known_recognizers
+    model_entry = next((model for model in known_recognizers()
                         if model["sha256"] == result["recognition_model_sha256"]), None)
     if model_entry is None:
-        raise ValueError(f"Recorded recognition model is not registered in models/manifest.json: {output_path}")
+        raise ValueError(f"Recorded recognition model is not in a registered model manifest: {output_path}")
     local_model = ROOT / model_entry["path"]
     if local_model.exists() and sha256(local_model) != model_entry["sha256"]:
         raise ValueError(f"Local model artifact differs from its registered digest: {local_model}")
@@ -62,6 +70,20 @@ def check_artifacts(fixtures_path: Path, output_path: Path) -> None:
     if configuration and (ROOT / configuration).exists():
         if sha256(ROOT / configuration) != result.get("model_config_sha256"):
             raise ValueError(f"Model configuration changed since OCR was recorded: {configuration}")
+    profile_configurations = result.get("profile_configurations", {})
+    if profile_configurations:
+        registered = {entry["id"]: entry for entry in json.loads((ROOT / "models/profiles.json").read_text())["profiles"]}
+        for language, recorded in profile_configurations.items():
+            profile = registered[recorded["profile_id"]]
+            if (profile["language"] != language or profile["sha256"] != result["recognition_model_sha256"]
+                    or profile["configuration_sha256"] != recorded["sha256"]
+                    or profile["configuration"] != recorded["path"]):
+                raise ValueError(f"Recorded profile differs from the current registry: {language}")
+            if sha256(ROOT / recorded["path"]) != recorded["sha256"]:
+                raise ValueError(f"Registered profile configuration changed: {language}")
+    for path, expected_hash in fixtures.get("source_documents", {}).items():
+        if sha256(ROOT / path) != expected_hash:
+            raise ValueError(f"Upstream fixture source changed: {path}")
     fixture_languages = sorted({sample["language"] for sample in fixtures["samples"]})
     if fixture_languages != sorted(fixtures["covered_languages"]):
         raise ValueError("Declared fixture languages differ from the actual samples")
@@ -85,6 +107,13 @@ def check_artifacts(fixtures_path: Path, output_path: Path) -> None:
             raise ValueError(f"Fixture print language and inference model language differ: {sample['id']}")
         if model_entry.get("language") and model_entry["language"] != inference["model"]["language"]:
             raise ValueError("Inference language differs from the registered model language")
+        if profile_configurations:
+            configuration_hash = profile_configurations[sample["language"]]["sha256"]
+            if record.get("profile_configuration_sha256") != configuration_hash:
+                raise ValueError("Inference configuration differs from the recorded registered profile")
+            if (inference["model"].get("configuration_sha256") is not None
+                    and inference["model"]["configuration_sha256"] != configuration_hash):
+                raise ValueError("Runtime configuration identity differs from its registered profile")
         expected = normalized(sample["ground_truth"])
         observed = normalized(inference["text"])
         edits = edit_distance(expected, observed)
@@ -120,20 +149,60 @@ def main() -> None:
     parser.add_argument("--check", action="store_true", help="Verify checked-in artifacts without loading models")
     parser.add_argument("--detection-model", type=Path)
     parser.add_argument("--model-config", type=Path)
+    parser.add_argument("--profile-per-language", action="store_true", help="Use the registered profile matching each fixture's print language")
     parser.add_argument("--fixtures", type=Path, default=DEFAULT_ASSETS / "fixtures.json")
     parser.add_argument("--output", type=Path, default=DEFAULT_ASSETS / "results.json")
     parser.add_argument("--passes", choices=["original", "enhanced", "all"], default="all")
     args = parser.parse_args()
     if args.check:
-        outputs = sorted(set([args.output, *args.output.parent.glob("results-*.json")]))
-        for output in outputs:
-            check_artifacts(args.fixtures, output)
+        catalog_path = DEFAULT_ASSETS / "catalog.json"
+        if args.fixtures == DEFAULT_ASSETS / "fixtures.json" and args.output == DEFAULT_ASSETS / "results.json" and catalog_path.exists():
+            catalog = json.loads(catalog_path.read_text())
+            model_ids = [model["id"] for model in catalog["models"]]
+            if len(model_ids) != len(set(model_ids)) or catalog["default_model"] not in model_ids:
+                raise ValueError("Gallery catalog has duplicate models or an unavailable default")
+            sample_ids = set()
+            languages = set()
+            for bundle in catalog["bundles"]:
+                fixtures_path = catalog_path.parent.parent / bundle["fixtures"]
+                fixtures = json.loads(fixtures_path.read_text())
+                languages.update(fixtures["covered_languages"])
+                for sample in fixtures["samples"]:
+                    if sample["id"] in sample_ids:
+                        raise ValueError(f"Duplicate gallery sample ID: {sample['id']}")
+                    sample_ids.add(sample["id"])
+                run_ids = [run["model"] for run in bundle["runs"]]
+                if len(run_ids) != len(set(run_ids)) or not set(run_ids) <= set(model_ids):
+                    raise ValueError(f"Duplicate or unknown model run in bundle: {bundle['id']}")
+                for run in bundle["runs"]:
+                    check_artifacts(fixtures_path, catalog_path.parent.parent / run["results"])
+            if catalog["default_language"] not in languages:
+                raise ValueError("Default gallery language has no recorded fixtures")
+        else:
+            outputs = sorted(set([args.output, *args.output.parent.glob("results-*.json")]))
+            for output in outputs:
+                check_artifacts(args.fixtures, output)
         return
-    if args.recognition_model is None:
-        parser.error("--recognition-model is required unless --check is used")
+    if args.recognition_model is None and not args.profile_per_language:
+        parser.error("--recognition-model or --profile-per-language is required unless --check is used")
+    if args.profile_per_language and (args.recognition_model or args.model_config):
+        parser.error("--profile-per-language resolves its weights and configuration from the registry")
     fixtures = json.loads(args.fixtures.read_text())
     fixture_hash = sha256(args.fixtures)
-    model_hash = sha256(args.recognition_model)
+    profile_configurations = {}
+    model_path = args.recognition_model
+    if args.profile_per_language:
+        profiles = {entry["id"]: entry for entry in json.loads((ROOT / "models/profiles.json").read_text())["profiles"]}
+        for language in sorted({sample["language"] for sample in fixtures["samples"]}):
+            profile = profiles[language]
+            if model_path is not None and model_path != ROOT / profile["model"]:
+                raise ValueError("This gallery export requires one shared checkpoint across its language profiles")
+            model_path = ROOT / profile["model"]
+            profile_configurations[language] = {"profile_id": profile["id"], "path": profile["configuration"],
+                                                "sha256": sha256(ROOT / profile["configuration"])}
+            if profile_configurations[language]["sha256"] != profile["configuration_sha256"]:
+                raise ValueError(f"Registered configuration digest mismatch: {language}")
+    model_hash = sha256(model_path)
     executable_hash = sha256(args.executable)
     records = []
     total_edits = 0
@@ -142,9 +211,11 @@ def main() -> None:
         expected = normalized(sample["ground_truth"])
         for variant in sample["variants"]:
             image_path = args.fixtures.parent / variant["image"]
-            command = [str(args.executable.resolve()), "recognize", str(image_path.resolve()),
-                       "--recognition-model", str(args.recognition_model.resolve()),
-                       "--line", "--passes", args.passes]
+            command = [str(args.executable.resolve()), "recognize", str(image_path.resolve()), "--line", "--passes", args.passes]
+            if args.profile_per_language:
+                command.extend(["--language", sample["language"], "--model-root", str(ROOT)])
+            else:
+                command.extend(["--recognition-model", str(args.recognition_model.resolve())])
             if args.model_config:
                 command.extend(["--model-config", str(args.model_config.resolve())])
             if args.detection_model:
@@ -168,14 +239,17 @@ def main() -> None:
                 "reference_characters": characters,
                 "character_error_rate": edits / max(characters, 1),
                 "exact_match": expected == observed,
+                "profile_configuration_sha256": profile_configurations.get(sample["language"], {}).get("sha256"),
                 "inference": prediction,
             })
             total_edits += edits
             total_characters += characters
             print(f"{sample['id']}/{variant['id']}: {text!r} | confidence {confidence:.4f} | CER {edits / max(characters, 1):.1%}")
-    if (fixture_hash != sha256(args.fixtures) or model_hash != sha256(args.recognition_model)
+    if (fixture_hash != sha256(args.fixtures) or model_hash != sha256(model_path)
             or executable_hash != sha256(args.executable)):
         raise ValueError("An inference input changed during export; rerun against stable artifacts")
+    if any(sha256(ROOT / profile["path"]) != profile["sha256"] for profile in profile_configurations.values()):
+        raise ValueError("A registered profile configuration changed during export")
     result = {
         "schema_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -184,6 +258,7 @@ def main() -> None:
         "detection_model_sha256": sha256(args.detection_model) if args.detection_model else None,
         "executable_sha256": executable_hash,
         "model_config_sha256": sha256(args.model_config) if args.model_config else None,
+        "profile_configurations": profile_configurations,
         "passes": args.passes,
         "confidence_note": "Uncalibrated geometric mean of the emitted CTC character posteriors. It is a model score, not the probability that the complete transcription is correct. Selecting among preprocessing passes can increase the score without increasing accuracy.",
         "metric_note": "CER is Levenshtein character edits divided by reference length, after NFC Unicode normalization and collapsing whitespace. Case and punctuation count. CER can exceed 100% when OCR inserts many characters.",

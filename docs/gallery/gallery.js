@@ -4,7 +4,7 @@
 const gallery = document.querySelector("#gallery");
 const status = document.querySelector("#status");
 const summary = document.querySelector("#summary");
-const state = { fixtures: null, results: null, runs: {}, variant: "clean", category: "all", language: "all" };
+const state = { catalog: null, samples: [], runs: new Map(), model: "paddle", variant: "clean", category: "all", language: "en" };
 
 function element(tag, className, content) {
   const node = document.createElement(tag);
@@ -29,7 +29,11 @@ function sourceLink(source) {
   return link;
 }
 
-function renderExample(sample, variant, record) {
+function runFor(sample) {
+  return state.runs.get(`${sample.bundle}/${state.model}`);
+}
+
+function renderExample(sample, variant, record, run) {
   const article = element("article", "example");
   const heading = element("div", "example-header");
   const title = element("div");
@@ -46,7 +50,7 @@ function renderExample(sample, variant, record) {
   picture.append(element("p", "field-label", "01 / Input picture"));
   const container = element("div", "crop-container");
   const image = element("img", "crop");
-  image.src = `assets/${variant.image}`;
+  image.src = new URL(variant.image, sample.manifestUrl).href;
   image.alt = `${variant.label} of ${sample.title.toLowerCase()} on ${sample.source.name}`;
   image.loading = "lazy";
   image.width = sample.crop_bounds_xyxy[2] - sample.crop_bounds_xyxy[0];
@@ -67,7 +71,7 @@ function renderExample(sample, variant, record) {
     );
     output.append(metrics, element("p", "chosen-method", `Method: ${inference.method}`));
   } else {
-    output.append(element("p", "no-result", "No recorded inference is available for this crop."));
+    output.append(element("p", "no-result", "This model has no recorded run for this language."));
   }
   const truth = element("p", "truth");
   truth.append(element("span", "", "Printed reference"), document.createTextNode(sample.ground_truth));
@@ -83,12 +87,13 @@ function renderExample(sample, variant, record) {
   content.append(element("p", "", `Original scan crop [left, top, right, bottom]: ${sample.crop_bounds_xyxy.join(", ")}`));
   if (record) {
     content.append(element("p", "", `Actual method: ${record.inference.method}`));
-    content.append(element("p", "", state.results.confidence_note));
+    content.append(element("p", "", run.data.confidence_note));
     content.append(element("p", "", "Complete recorded inference (including preprocessing candidates):"));
     content.append(element("pre", "", JSON.stringify(record.inference, null, 2)));
   }
   const source = element("p");
-  source.append(document.createTextNode(`Scan artist: ${sample.source.artist}. `), sourceLink(sample.source));
+  if (sample.source.artist) source.append(document.createTextNode(`Scan artist: ${sample.source.artist}. `));
+  source.append(sourceLink(sample.source));
   content.append(source);
   content.append(element("p", "", `Source image SHA-256: ${sample.source.source_image_sha256}`));
   details.append(content);
@@ -96,36 +101,70 @@ function renderExample(sample, variant, record) {
   return article;
 }
 
+function languageSamples() {
+  return state.samples.filter(sample => state.language === "all" || sample.language === state.language);
+}
+
+function updateModelAvailability() {
+  const samples = languageSamples();
+  const inputs = [...document.querySelectorAll("input[name=model]")];
+  for (const input of inputs) {
+    input.disabled = !samples.some(sample => state.runs.has(`${sample.bundle}/${input.value}`));
+  }
+  const current = inputs.find(input => input.value === state.model);
+  if (!current || current.disabled) {
+    const available = inputs.find(input => !input.disabled);
+    if (available) state.model = available.value;
+  }
+  for (const input of inputs) input.checked = input.value === state.model;
+}
+
+function updateRunDetails(samples) {
+  const active = [...new Map(samples.map(sample => [`${sample.bundle}/${state.model}`, runFor(sample)]).filter(([, run]) => run)).values()];
+  const names = [...new Set(active.map(run => run.data.records[0]?.inference.model.name || "unnamed model"))];
+  document.querySelector("#checkpoint").textContent = names.length ? `Recorded checkpoint: ${names.join("; ")}` : "No recorded checkpoint for these filters";
+  const details = document.querySelector("#run-details");
+  details.replaceChildren();
+  if (!active.length) return;
+  document.querySelector("#metric-note").textContent = active[0].data.metric_note;
+  const weights = [...new Set(active.map(run => run.data.recognition_model_sha256))];
+  details.append(document.createTextNode("Recognition model SHA-256: "), element("code", "", weights.join("; ")));
+  for (const run of active) {
+    const link = element("a", "", `${run.label} · recorded ${run.data.generated_at.slice(0, 10)} · ${run.data.passes} passes`);
+    link.href = run.resultsPath;
+    details.append(element("br"), link);
+  }
+}
+
 function render() {
-  if (!state.fixtures) return;
-  const records = new Map((state.results?.records || []).map(record => [`${record.sample_id}/${record.variant_id}`, record]));
-  const samples = state.fixtures.samples.filter(sample =>
-    (state.category === "all" || sample.category === state.category) &&
-    (state.language === "all" || sample.language === state.language)
-  );
+  if (!state.catalog) return;
+  updateModelAvailability();
+  const samples = languageSamples().filter(sample => state.category === "all" || sample.category === state.category);
+  const selected = [];
   gallery.replaceChildren(...samples.map(sample => {
     const variant = sample.variants.find(item => item.id === state.variant);
-    return renderExample(sample, variant, records.get(`${sample.id}/${variant.id}`));
+    const run = runFor(sample);
+    const record = run?.records.get(`${sample.id}/${variant.id}`);
+    if (record) selected.push(record);
+    return renderExample(sample, variant, record, run);
   }));
-  const selected = samples.map(sample => records.get(`${sample.id}/${state.variant}`)).filter(Boolean);
-  if (!selected.length) {
+  updateRunDetails(samples);
+  if (!samples.length) {
+    summary.textContent = "No examples with these filters";
+  } else if (!selected.length) {
     summary.textContent = `${samples.length} examples · inference not recorded`;
-    return;
+  } else {
+    const edits = selected.reduce((sum, item) => sum + item.character_edits, 0);
+    const characters = selected.reduce((sum, item) => sum + item.reference_characters, 0);
+    const exact = selected.filter(item => item.exact_match).length;
+    const coverage = selected.length === samples.length ? `${selected.length} examples` : `${selected.length}/${samples.length} recorded`;
+    summary.textContent = `${coverage} · ${exact} exact · ${percent(edits / Math.max(characters, 1))} CER`;
   }
-  const edits = selected.reduce((sum, item) => sum + item.character_edits, 0);
-  const characters = selected.reduce((sum, item) => sum + item.reference_characters, 0);
-  const exact = selected.filter(item => item.exact_match).length;
-  summary.textContent = `${selected.length} examples · ${exact} exact · ${percent(edits / Math.max(characters, 1))} CER`;
 }
 
 for (const input of document.querySelectorAll("input[type=radio]")) {
   input.addEventListener("change", event => {
-    if (event.target.name === "model") {
-      state.results = state.runs[event.target.value];
-      updateRunDetails();
-    } else {
-      state[event.target.name] = event.target.value;
-    }
+    state[event.target.name] = event.target.value;
     render();
   });
 }
@@ -138,7 +177,7 @@ document.querySelector("#language-filter").addEventListener("change", event => {
 function initializeLanguages() {
   const select = document.querySelector("#language-filter");
   select.replaceChildren();
-  const languages = [...new Set(state.fixtures.samples.map(sample => sample.language))].sort();
+  const languages = [...new Set(state.samples.map(sample => sample.language))].sort();
   const displayNames = typeof Intl.DisplayNames === "function" ? new Intl.DisplayNames(["en"], { type: "language" }) : null;
   if (languages.length > 1) {
     const all = element("option", "", "All available");
@@ -150,8 +189,9 @@ function initializeLanguages() {
     option.value = language;
     select.append(option);
   }
+  select.value = languages.includes(state.catalog.default_language) ? state.catalog.default_language : languages[0];
   state.language = select.value;
-  document.querySelector("#coverage-note").textContent = state.fixtures.language_note;
+  document.querySelector("#coverage-note").textContent = state.catalog.language_note;
 }
 
 async function loadJson(path) {
@@ -160,40 +200,31 @@ async function loadJson(path) {
   return response.json();
 }
 
-function updateRunDetails() {
-  const modelName = state.results.records[0]?.inference.model.name || "unnamed model";
-  document.querySelector("#checkpoint").textContent = `Recorded checkpoint: ${modelName}`;
-  document.querySelector("#metric-note").textContent = state.results.metric_note;
-  const details = document.querySelector("#run-details");
-  details.replaceChildren();
-  const date = new Date(state.results.generated_at);
-  details.append(document.createTextNode(`Recorded ${Number.isNaN(date.valueOf()) ? state.results.generated_at : date.toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })} · passes: ${state.results.passes}. Recognition model SHA-256: `));
-  details.append(element("code", "", state.results.recognition_model_sha256));
-}
-
 async function initialize() {
-  const [fixtures, results, baseline] = await Promise.allSettled([
-    loadJson("assets/fixtures.json"), loadJson("assets/results.json"), loadJson("assets/results-baseline.json")
-  ]);
-  if (fixtures.status === "rejected") {
-    status.textContent = "The crop manifest could not be loaded. Serve this directory over HTTP or open the raw JSON links below.";
+  try {
+    state.catalog = await loadJson("assets/catalog.json");
+    state.model = state.catalog.default_model;
+    const bundles = await Promise.allSettled(state.catalog.bundles.map(async bundle => {
+      const files = await Promise.allSettled([loadJson(bundle.fixtures), ...bundle.runs.map(run => loadJson(run.results))]);
+      if (files[0].status !== "fulfilled") throw new Error(`Could not load ${bundle.fixtures}`);
+      const manifestUrl = new URL(bundle.fixtures, document.baseURI).href;
+      state.samples.push(...files[0].value.samples.map(sample => ({ ...sample, bundle: bundle.id, manifestUrl })));
+      for (const [index, run] of bundle.runs.entries()) {
+        const result = files[index + 1];
+        if (result.status !== "fulfilled") throw new Error(`Could not load ${run.results}`);
+        state.runs.set(`${bundle.id}/${run.model}`, { label: bundle.label, resultsPath: run.results,
+          data: result.value, records: new Map(result.value.records.map(record => [`${record.sample_id}/${record.variant_id}`, record])) });
+      }
+    }));
+    const failure = bundles.find(bundle => bundle.status === "rejected");
+    if (failure) status.textContent = "Some recorded examples could not be loaded. The raw artifact links below remain available.";
+    initializeLanguages();
+    document.querySelector("#model-controls").hidden = false;
+    render();
+  } catch (error) {
+    status.textContent = "The gallery could not be loaded. Serve this directory over HTTP or open the raw JSON links below.";
     summary.textContent = "Gallery unavailable";
-    return;
   }
-  state.fixtures = fixtures.value;
-  initializeLanguages();
-  if (results.status === "fulfilled") {
-    state.results = results.value;
-    state.runs.mtg = results.value;
-    if (baseline.status === "fulfilled") {
-      state.runs.base = baseline.value;
-      document.querySelector("#model-controls").hidden = baseline.value.recognition_model_sha256 === results.value.recognition_model_sha256;
-    }
-    updateRunDetails();
-  } else {
-    status.textContent = "Predictions have not been recorded for this build. The real input crops and printed references are shown; run scripts/gallery_export.py to produce inference results.";
-  }
-  render();
 }
 
 initialize();
