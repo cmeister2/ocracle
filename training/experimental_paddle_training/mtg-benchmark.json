@@ -1,0 +1,448 @@
+{
+  "schema_version": 1,
+  "mode": "benchmark",
+  "steps": 5,
+  "seed": 20261021,
+  "source_checkpoint_sha256": "25c9bd54b0e5900916e8bb6ada938abeffb1eac1baedac0ca54a45b1c9310825",
+  "dataset_manifest_sha256": "f64cf8216f3f2ee917c6fce2dfbe807a3e2be5fda00b26f41736d2ae2507f695",
+  "dataset_summary_sha256": "b7961ec2d9a7dbfd2c674f74748a8538c47cfd2a2811b8f0f60888730b8a5dd9",
+  "dataset_roles": {
+    "supervised": 81,
+    "synthetic": 348,
+    "teacher-anchor": 179,
+    "validation": 23
+  },
+  "training_seconds": 34.02314482899965,
+  "update_seconds": [
+    6.487509214002785,
+    11.152055061000283,
+    4.9726962099994125,
+    6.216805521002243,
+    5.193183149000106
+  ],
+  "estimated_100_update_compute_seconds_excluding_selection": 680.4449831000966,
+  "head_lr": 0.0001,
+  "neck_lr": 1e-05,
+  "upper_backbone_lr": 5e-06,
+  "objective": "physical CTC +0.25 synthetic CTC +1.0 clean old-teacher KL in full expanded softmax",
+  "appended_classes": [
+    {
+      "character": "¡",
+      "class_index": 18710,
+      "prototype": "!",
+      "prototype_class_index": 1,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "„",
+      "class_index": 18711,
+      "prototype": "“",
+      "prototype_class_index": 704,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "ẞ",
+      "class_index": 18712,
+      "prototype": "ß",
+      "prototype_class_index": 155,
+      "initial_bias_offset": -6
+    }
+  ],
+  "classes": 18713,
+  "batch_norm_state_tensors_unchanged": 116,
+  "parameter_l2_change": {
+    "head": 0.43804519659887264,
+    "neck": 0.01724150351046039,
+    "upper_backbone": 0.01748467707012783
+  },
+  "before_clean_training_anchors": {
+    "training_anchor_lines": 8,
+    "same_teacher_text": 8,
+    "mean_teacher_kl": 2.199780616860686e-06,
+    "examples": [
+      {
+        "id": "00c84cb5e287253f3261fa9d",
+        "tensor_sha256": "ccc1c9af7e37c083ba262d0e2d7bef1f1999fd695be192404d3fdb7c6f8a394d",
+        "teacher_text": "card. If you do, discard a card.",
+        "student_text": "card. If you do, discard a card.",
+        "same_text": true,
+        "teacher_kl": 4.176828660718002e-09
+      },
+      {
+        "id": "00f7c62a80915559fc20c94b",
+        "tensor_sha256": "9e6df96305652ab1676d702388a9f6256e701f150792fefbc9bd8c7f91e366ec",
+        "teacher_text": "Shadow (This creature can block or be",
+        "student_text": "Shadow (This creature can block or be",
+        "same_text": true,
+        "teacher_kl": 4.121751384644767e-09
+      },
+      {
+        "id": "04de6422579a5e9516cbbcde",
+        "tensor_sha256": "b7ecba41c27dc3daa521a2dc49ec8ba4df86456a48fa6e215228585858c6a945",
+        "teacher_text": "Bog Serpent",
+        "student_text": "Bog Serpent",
+        "same_text": true,
+        "teacher_kl": 1.332413623877926e-09
+      },
+      {
+        "id": "0755c3797bd4c5d16972fda0",
+        "tensor_sha256": "6b163ccba813988fa2e9ee6f9106877c9559094feec8d24a8a1592c7e6a36f0d",
+        "teacher_text": "What the rangers thought were warning growls",
+        "student_text": "What the rangers thought were warning growls",
+        "same_text": true,
+        "teacher_kl": 2.1809348771384407e-10
+      },
+      {
+        "id": "077d09d5bf85992a9a402ac3",
+        "tensor_sha256": "615e1b54290dba637f5abf980dfd7acb8b438455c6dfc8c4c12c57811621261d",
+        "teacher_text": "Drowsing Tyrannodon",
+        "student_text": "Drowsing Tyrannodon",
+        "same_text": true,
+        "teacher_kl": 6.810623731645649e-10
+      },
+      {
+        "id": "08d4a98b3b4e47b9543a04a9",
+        "tensor_sha256": "af2fc3ab470a0af9826c950dd0372d87accd12312dff4b4af1dd3c366f07cac8",
+        "teacher_text": "control four or more lands, untap",
+        "student_text": "control four or more lands, untap",
+        "same_text": true,
+        "teacher_kl": -3.6096112210337594e-10
+      },
+      {
+        "id": "0a4f5c6498a78a8b57d9c7e4",
+        "tensor_sha256": "159eba7fbae21325c633c197e5f2da3664bb6b2ea8c38be6aae2344ceffeab55",
+        "teacher_text": "“Life gives way to death, and death to new",
+        "student_text": "“Life gives way to death, and death to new",
+        "same_text": true,
+        "teacher_kl": 1.758375765348319e-05
+      },
+      {
+        "id": "0ab427379aae2ec97b61ff2d",
+        "tensor_sha256": "7c769a675529688498d36f770e29ec2c25baeca256556bc9d2af5fac1d88604e",
+        "teacher_text": "Gossamer Phantasm",
+        "student_text": "Gossamer Phantasm",
+        "same_text": true,
+        "teacher_kl": 4.318092994282097e-09
+      }
+    ],
+    "interpretation": "Prediction preservation on clean training anchors, not gold-label accuracy."
+  },
+  "after_clean_training_anchors": {
+    "training_anchor_lines": 8,
+    "same_teacher_text": 8,
+    "mean_teacher_kl": 0.0015520497254328802,
+    "examples": [
+      {
+        "id": "00c84cb5e287253f3261fa9d",
+        "tensor_sha256": "ccc1c9af7e37c083ba262d0e2d7bef1f1999fd695be192404d3fdb7c6f8a394d",
+        "teacher_text": "card. If you do, discard a card.",
+        "student_text": "card. If you do, discard a card.",
+        "same_text": true,
+        "teacher_kl": 0.0019644408021122217
+      },
+      {
+        "id": "00f7c62a80915559fc20c94b",
+        "tensor_sha256": "9e6df96305652ab1676d702388a9f6256e701f150792fefbc9bd8c7f91e366ec",
+        "teacher_text": "Shadow (This creature can block or be",
+        "student_text": "Shadow (This creature can block or be",
+        "same_text": true,
+        "teacher_kl": 0.0006641867803409696
+      },
+      {
+        "id": "04de6422579a5e9516cbbcde",
+        "tensor_sha256": "b7ecba41c27dc3daa521a2dc49ec8ba4df86456a48fa6e215228585858c6a945",
+        "teacher_text": "Bog Serpent",
+        "student_text": "Bog Serpent",
+        "same_text": true,
+        "teacher_kl": 0.0011257629375904799
+      },
+      {
+        "id": "0755c3797bd4c5d16972fda0",
+        "tensor_sha256": "6b163ccba813988fa2e9ee6f9106877c9559094feec8d24a8a1592c7e6a36f0d",
+        "teacher_text": "What the rangers thought were warning growls",
+        "student_text": "What the rangers thought were warning growls",
+        "same_text": true,
+        "teacher_kl": 0.0023962894920259714
+      },
+      {
+        "id": "077d09d5bf85992a9a402ac3",
+        "tensor_sha256": "615e1b54290dba637f5abf980dfd7acb8b438455c6dfc8c4c12c57811621261d",
+        "teacher_text": "Drowsing Tyrannodon",
+        "student_text": "Drowsing Tyrannodon",
+        "same_text": true,
+        "teacher_kl": 0.0003295382484793663
+      },
+      {
+        "id": "08d4a98b3b4e47b9543a04a9",
+        "tensor_sha256": "af2fc3ab470a0af9826c950dd0372d87accd12312dff4b4af1dd3c366f07cac8",
+        "teacher_text": "control four or more lands, untap",
+        "student_text": "control four or more lands, untap",
+        "same_text": true,
+        "teacher_kl": 0.0012103080516681075
+      },
+      {
+        "id": "0a4f5c6498a78a8b57d9c7e4",
+        "tensor_sha256": "159eba7fbae21325c633c197e5f2da3664bb6b2ea8c38be6aae2344ceffeab55",
+        "teacher_text": "“Life gives way to death, and death to new",
+        "student_text": "“Life gives way to death, and death to new",
+        "same_text": true,
+        "teacher_kl": 0.003350949613377452
+      },
+      {
+        "id": "0ab427379aae2ec97b61ff2d",
+        "tensor_sha256": "7c769a675529688498d36f770e29ec2c25baeca256556bc9d2af5fac1d88604e",
+        "teacher_text": "Gossamer Phantasm",
+        "student_text": "Gossamer Phantasm",
+        "same_text": true,
+        "teacher_kl": 0.0013749218778684735
+      }
+    ],
+    "interpretation": "Prediction preservation on clean training anchors, not gold-label accuracy."
+  },
+  "history": [
+    {
+      "step": 1,
+      "physical_id": "012c02761d9f6f92b1528ec0",
+      "physical_origin": "punctuation",
+      "physical_text": "„Alle Völker schätzen einen Ort, an dem",
+      "augmentation": {
+        "condition": "gaussian",
+        "seed": 4170840784,
+        "sigma_source_pixels": 1.3175658412507083
+      },
+      "physical_tensor_sha256": "2c102499192907e151b3bfdfccd25df1c84996259dcc7b842fd13c2fd8645177",
+      "synthetic_id": "c5ead1be6cf6229b3210795b",
+      "synthetic_augmentation": {
+        "condition": "gaussian",
+        "seed": 1736810939,
+        "sigma_source_pixels": 1.5103831444897806
+      },
+      "synthetic_tensor_sha256": "c39c215de0f01052f6501d89ecdaf4a07cf2af559dad619eea271148c0881dc7",
+      "anchor_id": "8e16da83e6f1e076eff2ad59",
+      "anchor_tensor_sha256": "53e7bd2a0d96c693df5c039508c657e98477f8c76cd1d4b6f1c1a555369e8151",
+      "physical_ctc": 19.776525497436523,
+      "synthetic_ctc": 39.661865234375,
+      "teacher_kl": 6.269859631480301e-10,
+      "loss": 29.691991806030273,
+      "gradient_l2_before_clipping": {
+        "head": 84.72019605482433,
+        "neck": 112.54310897654761,
+        "upper_backbone": 788.038955078989
+      },
+      "update_seconds": 6.487509214002785
+    },
+    {
+      "step": 2,
+      "physical_id": "39d4708550d47b8f5ccc795d",
+      "physical_origin": "punctuation",
+      "physical_text": "¡Salta y ya está!”.",
+      "augmentation": {
+        "condition": "downsample",
+        "seed": 1001637742,
+        "downsample_factor": 0.5618131914606902
+      },
+      "physical_tensor_sha256": "38f2c5a452bcdb20e1856018a1aa914f1c78b09e36e5bfbedfe545c0b858f25a",
+      "synthetic_id": "f1e546d83403f0a314ceda85",
+      "synthetic_augmentation": {
+        "condition": "gaussian",
+        "seed": 1742362918,
+        "sigma_source_pixels": 1.536857931394105
+      },
+      "synthetic_tensor_sha256": "16810b41265659c2a69dc221c28078f430fa5440917ccb20b3ff4838e10c8bb7",
+      "anchor_id": "ebdf4febd7d8be907945be71",
+      "anchor_tensor_sha256": "9dbe8fa4449256d1a993cad7269ff77cb8ab098d8648aed94dde68f79624799b",
+      "physical_ctc": 22.081180572509766,
+      "synthetic_ctc": 0.0272191371768713,
+      "teacher_kl": 2.066126762656495e-05,
+      "loss": 22.0880069732666,
+      "gradient_l2_before_clipping": {
+        "head": 83.24690295664696,
+        "neck": 84.69208890158491,
+        "upper_backbone": 468.08935418189196
+      },
+      "update_seconds": 11.152055061000283
+    },
+    {
+      "step": 3,
+      "physical_id": "6ceafe7fe7721b791ad2ec8f",
+      "physical_origin": "punctuation",
+      "physical_text": "„In dieser Welt gilt: Töten oder getötet",
+      "augmentation": {
+        "condition": "jpeg",
+        "seed": 2702549156,
+        "jpeg_quality": 42
+      },
+      "physical_tensor_sha256": "2b4090c94e7d5f51167b1fcc50413c772c0372da32e82a7c6890f78ac56c769c",
+      "synthetic_id": "5ffbbf849be66ecaf72e992f",
+      "synthetic_augmentation": {
+        "condition": "clean",
+        "seed": 1983102212
+      },
+      "synthetic_tensor_sha256": "2758108c6e14bc89eaf05be74673bbf3560598cb0149cb6230a58c9ed62460c4",
+      "anchor_id": "077d09d5bf85992a9a402ac3",
+      "anchor_tensor_sha256": "615e1b54290dba637f5abf980dfd7acb8b438455c6dfc8c4c12c57811621261d",
+      "physical_ctc": 16.697307586669922,
+      "synthetic_ctc": 27.189321517944336,
+      "teacher_kl": 7.893003385106567e-06,
+      "loss": 23.494646072387695,
+      "gradient_l2_before_clipping": {
+        "head": 83.29123574915586,
+        "neck": 90.8815681210336,
+        "upper_backbone": 766.1134036962388
+      },
+      "update_seconds": 4.9726962099994125
+    },
+    {
+      "step": 4,
+      "physical_id": "050520199067b6a9efaab66a",
+      "physical_origin": "v2-body",
+      "physical_text": "No início do combate no seu turno,",
+      "augmentation": {
+        "condition": "motion",
+        "seed": 767729835,
+        "motion_length": 13,
+        "motion_angle_radians": -0.10213965955787907
+      },
+      "physical_tensor_sha256": "fd42ea944e3a498b31665cc89f8ec1c4a7188e1d8f67da509c2c4b433b861176",
+      "synthetic_id": "2b279851d84c8cb255f09000",
+      "synthetic_augmentation": {
+        "condition": "clean",
+        "seed": 236780878
+      },
+      "synthetic_tensor_sha256": "86bfe5dc04a95750bb7097e967733afdf33e303d850f0fe062403b89fcdd139f",
+      "anchor_id": "21b54ce326c2e99b0864f38e",
+      "anchor_tensor_sha256": "819e9f750b5bd320858aca3cdcdadfe4d96c09be40638d4189f538d44561c65b",
+      "physical_ctc": 41.08582305908203,
+      "synthetic_ctc": 0.006707705091685057,
+      "teacher_kl": 0.0009168162359856069,
+      "loss": 41.088417053222656,
+      "gradient_l2_before_clipping": {
+        "head": 248.0155317072866,
+        "neck": 437.33849391743087,
+        "upper_backbone": 2392.1531719042496
+      },
+      "update_seconds": 6.216805521002243
+    },
+    {
+      "step": 5,
+      "physical_id": "0492cab5e79938e0f2435adb",
+      "physical_origin": "v2-title",
+      "physical_text": "Émpata fiero",
+      "augmentation": {
+        "condition": "combined",
+        "seed": 1087484152,
+        "sigma_source_pixels": 2.4045408681078597,
+        "downsample_factor": 0.536853182257769,
+        "jpeg_quality": 38
+      },
+      "physical_tensor_sha256": "ee332f3c517884c7fd44f32d81f4f88aefe7492915eba2615fb031b6b5eef045",
+      "synthetic_id": "fc123a2664db533f1cbd8034",
+      "synthetic_augmentation": {
+        "condition": "gaussian",
+        "seed": 1572420227,
+        "sigma_source_pixels": 1.483895520837737
+      },
+      "synthetic_tensor_sha256": "ab1aa3146af9273558a04227c8fbf4e1d0ad9cbddb7f632a0fb91262c6310efd",
+      "anchor_id": "0cead5a5f32de6c94decf95e",
+      "anchor_tensor_sha256": "3271a5653b457f21be2e528ae367a89086fbb10634ac781733b43ea6223445e1",
+      "physical_ctc": 0.1865125447511673,
+      "synthetic_ctc": 18.557918548583984,
+      "teacher_kl": 0.0006492746178992093,
+      "loss": 4.82664155960083,
+      "gradient_l2_before_clipping": {
+        "head": 105.62186765822835,
+        "neck": 238.74391189846727,
+        "upper_backbone": 1436.6437059228679
+      },
+      "update_seconds": 5.193183149000106
+    }
+  ],
+  "selection_history": [],
+  "selected_step": null,
+  "baseline_validation": null,
+  "saved_checkpoints": [],
+  "selection_protocol": {
+    "identity_lines": 23,
+    "observations": 92,
+    "conditions": {
+      "clean": {},
+      "gaussian": {
+        "sigma_source_pixels": 2.4
+      },
+      "downsample": {
+        "factor": 0.3,
+        "restore": "PIL bilinear"
+      },
+      "jpeg": {
+        "quality": 35,
+        "subsampling": 2
+      }
+    },
+    "score": "0.90*CER across92 title variants +0.10*decoded disagreement rate on8 fixed clean English training anchors",
+    "checkpoint_steps": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "tie": "keep earliest"
+  },
+  "process": {
+    "pid": 219786,
+    "started_utc": "2026-10-19T18:37:43.763750+00:00",
+    "mode": "benchmark",
+    "steps": 5,
+    "source_checkpoint_sha256": "25c9bd54b0e5900916e8bb6ada938abeffb1eac1baedac0ca54a45b1c9310825",
+    "dataset_manifest_sha256": "f64cf8216f3f2ee917c6fce2dfbe807a3e2be5fda00b26f41736d2ae2507f695",
+    "dataset_summary_sha256": "b7961ec2d9a7dbfd2c674f74748a8538c47cfd2a2811b8f0f60888730b8a5dd9",
+    "selection_protocol": {
+      "identity_lines": 23,
+      "observations": 92,
+      "conditions": {
+        "clean": {},
+        "gaussian": {
+          "sigma_source_pixels": 2.4
+        },
+        "downsample": {
+          "factor": 0.3,
+          "restore": "PIL bilinear"
+        },
+        "jpeg": {
+          "quality": 35,
+          "subsampling": 2
+        }
+      },
+      "score": "0.90*CER across92 title variants +0.10*decoded disagreement rate on8 fixed clean English training anchors",
+      "checkpoint_steps": [
+        0,
+        25,
+        50,
+        75,
+        100
+      ],
+      "tie": "keep earliest"
+    }
+  },
+  "validation_inference_performed": false,
+  "test_inference_performed": false,
+  "checkpoint": {
+    "path": "runs/mtg-benchmark/recognizer.pdparams",
+    "sha256": "bbe9f5ebf3038a2ec2aab3902efc99b37f1fa1482f58287fc1d53e92d5f00326",
+    "distributed": false
+  },
+  "implementation_sha256": {
+    "mtg_prepare.py": "4d0d7526a07f3e9b350ad01285302e2f5e80b3d40ef7c899ba284640ceb7cd83",
+    "mtg_augment.py": "5e13e5342f2534ae5edef99dfe5d4ec6837e077d650540494ca920f16223d62d",
+    "mtg_train.py": "345d9f3431fc5f9073bc81a3cb581b64643fe2960cfe3964c8e6ddbd408ec392",
+    "native.py": "f83c82ddc576286a324d4feb79d9d454850a208fdd5efd7323a1f54cff58a119",
+    "adapt.py": "8e72e6a8d05401765cd926085ea075ff12fcdcc9e1227fc6bca4ee5c4d8e8994",
+    "inputs.py": "be89161f5f1fdd4d198be58b89d0114edc4bbd87410fe92434e08f92733e405f"
+  },
+  "limitations": [
+    "Timing/gradient benchmark is not an MTG accuracy improvement claim.",
+    "Existing normalized English scan labels are omitted; only teacher predictions are used.",
+    "No frozen test labels used for training or checkpoint selection.",
+    "Fresh development corpus is reserved and never used for this checkpoint choice."
+  ]
+}
