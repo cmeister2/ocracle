@@ -6,8 +6,8 @@ rust-version = "1.94"
 publish = false
 
 [dependencies]
-rten = "0.27"
-rten-tensor = "0.27"
+rten = "0.26"
+rten-tensor = "0.26"
 
 [lints.rust]
 missing_docs = "deny"
