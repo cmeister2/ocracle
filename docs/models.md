@@ -1,27 +1,26 @@
 # Neural model artifacts
 
-Default Latin-script profiles and the best-effort Japanese/Chinese profiles use
-the unmodified official **PP-OCRv6 small** ONNX recognizer, downloaded by
-`training/download_models.py`. Its [manifest](../models/paddle-v6-manifest.json) pins the
-upstream revision, file digest, Apache-2.0 license, matching per-language
-configurations and evaluation. Rust preserves BGR colour, normalizes to `[-1,1]`,
-resizes to height 48 and pads short lines to width 320. It decodes the native
-NTC probability output. No ONNX wrapper or Python runtime is needed for OCR.
-This is a pretrained baseline evaluated on MTG, not an MTG-fine-tuned model.
-The [actual Rust comparison](../training/experimental_paddle/results-v6-direct.json)
-retains every prediction and failure; complete font/language coverage is unproven.
-See [the full Apache license](../models/LICENSE-PADDLE-APACHE-2.0.txt).
+The normal API is `CardOcr::open(root)?.read(&image)`. A printed language can
+be supplied through `open_language`; callers do not choose a network size or
+preprocessing recipe. Six evaluated Latin-script languages use the unmodified
+official **PP-OCRv6 medium** recognizer and its original-image pass. Latin `la`
+and best-effort Japanese/Chinese retain small pending separate evidence.
 
-The optional **PP-OCRv6 medium** profiles append `-medium` to the six evaluated
-language IDs: `en`, `es`, `fr`, `de`, `it` and `pt`. The
-[medium manifest](../models/paddle-v6-medium-manifest.json) pins its unmodified
-official ONNX graph and separate configurations; the downloader fetches both
-Paddle sizes. It uses the same BGR tensor and dictionary contract as small,
-including the missing `¡`, `„` and `ẞ` characters. It is upstream pretrained,
-without MTG fine-tuning. The [fresh comparison](experiments/paddle-blur.md)
-records lower damaged-text CER alongside clean exact-match regressions and
-higher compute cost. Existing defaults and historical small-model evidence
-remain preserved. `la` and best-effort Japanese/Chinese profiles retain small.
+The [medium manifest](../models/paddle-v6-medium-manifest.json) and
+[archived small manifest](../models/paddle-v6-manifest.json) pin upstream
+revisions, graph/configuration hashes and Apache-2.0 attribution. The downloader
+fetches the required artifacts. Rust preserves BGR colour, normalizes to
+`[-1,1]`, resizes to height48, pads short lines to width320 and decodes native
+NTC probabilities. No Python runtime is required for recognition.
+
+The [fresh comparison](experiments/paddle-blur.md) supports medium's lower
+aggregate character error while exposing clean exact-line regressions. Missing
+`¡`, `„`, `ẞ`, mana symbols and incomplete layout remain limitations. These are
+pretrained networks evaluated on MTG, without MTG fine-tuning. The
+[Apache license](../models/LICENSE-PADDLE-APACHE-2.0.txt) is retained.
+Historical weights/configurations and result bytes are preserved independently
+of active language defaults; no model-size or experimental quality aliases are
+registered.
 
 `ocracle-mtg.rten` is the distributed MTG-adapted CRNN recognizer. Its alphabet,
 input height, and model name are in [recognizer-config.json](../models/recognizer-config.json).

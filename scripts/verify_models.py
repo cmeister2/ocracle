@@ -29,7 +29,7 @@ PADDLE_YAML_SHA256 = "ab078671bb49f06228eadccd34f1bb501e157f7a047095ffb943ba8151
 PADDLE_ALPHABET_SHA256 = "d9a64a84befbb1f2e77ab4f2454acdb9cf1995e96567555aa6c30c2256d0fecb"
 MTG_ALPHABET_SHA256 = "1e3585bda6d8ad5f5f29dbafb6a56e21102bd027bbef36c68eca3b6f60dadf1e"
 PADDLE_PROFILES = {"en", "es", "fr", "de", "it", "pt", "la", "ja", "zhs", "zht"}
-MEDIUM_PROFILE_LANGUAGES = {f"{language}-medium": language for language in ("en", "es", "fr", "de", "it", "pt")}
+MEDIUM_PROFILE_LANGUAGES = {language: language for language in ("en", "es", "fr", "de", "it", "pt")}
 MEDIUM_MANIFEST = "models/paddle-v6-medium-manifest.json"
 MEDIUM_REPOSITORY = "https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_rec_onnx"
 MEDIUM_REVISION = "50c7eacafc52fa7bcf4194e8cd08e46f8558504b"
@@ -226,6 +226,27 @@ def verify_medium_source(root, manifest):
             require(path.stat().st_size == size and digest(path) == sha, f"Medium source bytes differ: {name}")
 
 
+def verify_historical_mtg(root, legacy):
+    """Retain the CRNN tensor audit without exposing a quality-choice profile."""
+    declarations = [item for item in legacy["adapted_models"] if item["path"] == "models/ocracle-mtg.rten"]
+    require(len(declarations) == 1, "Retained MTG CRNN declaration changed")
+    declaration = declarations[0]
+    require(declaration["language"] == "en" and declaration["configuration"] == "models/recognizer-config.json",
+            "Retained MTG CRNN configuration routing changed")
+    config = read_json(relative_file(root, declaration["configuration"]))
+    alphabet = config["alphabet"]
+    require(config["language"] == "en" and len(alphabet) == 96
+            and hashlib.sha256(alphabet.encode()).hexdigest() == MTG_ALPHABET_SHA256, "Retained MTG CRNN class mapping changed")
+    require(config["input_height"] == 64 and config["output_layout"] == "TNC"
+            and config.get("output_values", "log_probabilities") == "log_probabilities", "Retained MTG CRNN tensor contract changed")
+    require(config.get("blank_index", 0) == 0 and config.get("architecture", "CRNN") == "CRNN",
+            "Retained MTG CRNN blank/architecture declaration changed")
+    defaults = {"color_mode": "grayscale", "scale": 1 / 255, "offset": -.5, "padding_width": 0,
+                "width_rounding": "nearest_even", "min_content_width": 16}
+    for field, value in defaults.items():
+        require(config.get("input", {}).get(field, value) == value, f"Retained MTG CRNN input contract changed: {field}")
+
+
 def verify(root, require_models=False):
     """Verify source pinning, dictionaries, profiles, optional weights and evidence."""
     root = root.resolve()
@@ -251,6 +272,7 @@ def verify(root, require_models=False):
     require(dictionary["entries"] == dictionary["unique_entries"] == 18708 and dictionary["class_count"] == 18710, "Publisher dictionary/class audit changed")
     require(dictionary["all_entries_single_Unicode_scalar"] is True and dictionary["contains_space"] is False, "Publisher dictionary entry audit changed")
     require(digest(root / "models/LICENSE-PADDLE-APACHE-2.0.txt") == digest(root / "training/experimental_paddle/LICENSE.paddle"), "Distributed Paddle license differs from pinned source license")
+    verify_historical_mtg(root, legacy)
     small_profiles, configurations = verify_paddle_profiles(root, paddle, {key: key for key in PADDLE_PROFILES}, exact_set=True)
     medium_profiles = {}
     declarations = [legacy, paddle]
@@ -258,7 +280,7 @@ def verify(root, require_models=False):
     if medium_path.exists():
         medium = read_json(medium_path)
         verify_medium_source(root, medium)
-        medium_profiles, _ = verify_paddle_profiles(root, medium, MEDIUM_PROFILE_LANGUAGES)
+        medium_profiles, _ = verify_paddle_profiles(root, medium, MEDIUM_PROFILE_LANGUAGES, exact_set=True)
         declarations.append(medium)
     artifacts = {}
     checked, missing = set(), set()
@@ -301,22 +323,10 @@ def verify(root, require_models=False):
         alphabet = config["alphabet"]
         require(isinstance(alphabet, str) and len(alphabet) == len(set(alphabet)), f"Invalid/duplicate class alphabet: {key}")
         require(not any(0xD800 <= ord(c) <= 0xDFFF for c in alphabet), f"Non-scalar Unicode class label: {key}")
-        if key in PADDLE_PROFILES:
-            require(profile_identity(profile) == profile_identity(small_profiles[key]), f"Original profile must retain its exact small declaration: {key}")
-        elif key in medium_profiles:
-            require(profile_identity(profile) == profile_identity(medium_profiles[key]), f"Active medium profile has no exact pinned declaration: {key}")
-        elif key == "en-mtg":
-            require(profile["language"] == "en" and profile["model"] == "models/ocracle-mtg.rten", "Retained MTG CRNN routing changed")
-            require(len(alphabet) == 96 and hashlib.sha256(alphabet.encode()).hexdigest() == MTG_ALPHABET_SHA256, "Retained MTG CRNN class mapping changed")
-            require(config["input_height"] == 64 and config["output_layout"] == "TNC" and config.get("output_values", "log_probabilities") == "log_probabilities", "Retained MTG CRNN tensor contract changed")
-            require(config.get("blank_index", 0) == 0 and config.get("architecture", "CRNN") == "CRNN", "Retained MTG CRNN blank/architecture declaration changed")
-            legacy_input = config.get("input", {})
-            defaults = {"color_mode": "grayscale", "scale": 1 / 255, "offset": -.5, "padding_width": 0, "width_rounding": "nearest_even", "min_content_width": 16}
-            for field, value in defaults.items():
-                require(legacy_input.get(field, value) == value, f"Retained MTG CRNN input contract changed: {field}")
-        else:
-            raise ValueError(f"Unexpected registered profile requires explicit evidence review: {key}")
-    require(set(profiles) == PADDLE_PROFILES | {"en-mtg"} | set(medium_profiles), "Expected original/optional-medium profile set differs")
+        require(key in PADDLE_PROFILES, f"Unexpected non-language profile: {key}")
+        expected_profile = medium_profiles.get(key, small_profiles[key])
+        require(profile_identity(profile) == profile_identity(expected_profile), f"Active language profile has no exact pinned declaration: {key}")
+    require(set(profiles) == PADDLE_PROFILES, "Expected exactly ten printed-language profile IDs")
     observations = verify_evidence(root, paddle, configurations)
     return {"profiles": len(profiles), "paddle_character_classes_including_blank": 18710, "direct_observations": observations, "verified_model_files": sorted(checked), "absent_optional_model_files": sorted(missing)}
 

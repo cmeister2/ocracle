@@ -21,60 +21,60 @@
   ],
   "profiles": [
     {
-      "id": "en-medium",
+      "id": "en",
       "language": "en",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/en.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     },
     {
-      "id": "es-medium",
+      "id": "es",
       "language": "es",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/es.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "3cde33d37e351bbeea90d6b913bc7bdf07a7da04669abdfc07da53dbca7acbd5",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     },
     {
-      "id": "fr-medium",
+      "id": "fr",
       "language": "fr",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/fr.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "1220e396c6293ef732f3196f3517e46ae0d1ca85d20bb58810febf615fc3dc66",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     },
     {
-      "id": "de-medium",
+      "id": "de",
       "language": "de",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/de.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "47d02d5173c5384eb597c0868d6c6398b2640f8e73c26b93fc2d058d40bb230b",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     },
     {
-      "id": "it-medium",
+      "id": "it",
       "language": "it",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/it.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "6089e5795ae74d5e8417c8e4f145d778220834b9112fc94e4b2b10d63fef0534",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     },
     {
-      "id": "pt-medium",
+      "id": "pt",
       "language": "pt",
       "model": "models/ppocr-v6-medium.onnx",
       "configuration": "models/paddle-v6-medium/pt.json",
       "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
       "configuration_sha256": "a1d11089d8e6a5a921b7d66a5db0aa31d4818de5a0d3a691f0659a375f89a8cc",
-      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+      "coverage": "Selected default recognizer; lowest aggregate CER on fresh Latin blur development, with documented clean and individual-case regressions"
     }
   ],
   "evaluation": "training/experimental_paddle_candidates/results-blur-development.json",
-  "decision": "Opt-in six-language medium profiles; preserve existing defaults because clean exact matches regressed on fresh development."
+  "decision": "Use medium by default for the six evaluated printed languages; one recognizer per language and no model-size variants"
 }

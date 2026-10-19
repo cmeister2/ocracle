@@ -6,63 +6,39 @@ This is an experimental project. The target includes **all printed languages** a
 
 ## Read a card
 
-Requires Rust **1.94.0** or newer (edition 2024), Python 3 for downloading models, and an internet connection for that initial download. OCR itself works offline. Model files are separately distributed and are not included in the crate package.
+Requires Rust **1.94.0** or newer (edition 2024), Python 3 for the initial model download, and an internet connection for that download. Recognition then runs offline.
 
 ```sh
-git clone https://github.com/cmeister2/ocracle.git
-cd ocracle
 python3 training/download_models.py
-cargo build --release
-
-target/release/ocracle recognize card.jpg --language en
+cargo run --release -- recognize card.jpg
 ```
 
-For an isolated text line, skip detection:
+English is the default. For a French printing, add `--language fr`. Supported language codes are `en`, `es`, `fr`, `de`, `it`, `pt`, `la`, `ja`, `zhs` and `zht`; non-Latin coverage is best effort. One language applies to the whole image. Unsupported languages return an error rather than silently falling back to English.
 
-```sh
-target/release/ocracle recognize docs/gallery/assets/historic-flavor-blur.png \
-  --language en --line --passes all
-```
+The library chooses its recognizer and preprocessing. There are no model-size or quality profiles to select. Use `--model-root /path/to/ocracle` when the downloaded models are outside the current directory. `--line` identifies an already cropped text line and skips detection.
 
-`--language` selects one profile for the entire card from `models/profiles.json` and verifies SHA-256 digests of both its weights and exact configuration file. Latin-script profiles are `en`, `es`, `fr`, `de`, `it`, `pt`, and `la`; `ja`, `zhs`, and `zht` have best-effort horizontal examples. These share the upstream PP-OCRv6 small model, without MTG fine-tuning. Coverage is limited to evaluated samples, and unknown profiles return an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
-
-Optional `en-medium`, `es-medium`, `fr-medium`, `de-medium`, `it-medium` and `pt-medium` profiles use the official PP-OCRv6 medium model for the same printed languages. For example, pass `--language fr-medium` for a French card. On the [fresh blur development cohort](experiments/paddle-blur.md), medium reduced damaged-text character errors but lost clean exact matches, so the small model remains the default. Medium downloads 76.6 MB of weights versus 21.2 MB for small and took about 2.4 times as long per process in that comparison. Individual crops can regress; neither model is MTG fine-tuned.
-
-The experimental MTG-adapted English CRNN is checked into the repository with its matching configuration; select it with `--language en-mtg`. The default Paddle model is downloaded from a pinned official source. For comparison, the downloader also fetches the original Ocrs base recognizer:
-
-```sh
-target/release/ocracle recognize card.jpg \
-  --detection-model models/text-detection.onnx \
-  --recognition-model models/text-recognition-base.rten
-```
-
-The JSON output includes raw text, line coordinates in the original image, confidence, the actual preprocessing method, all competing passes, and model SHA-256 hashes. `--passes original` reads the input without enhancement; `enhanced` tries enlargement, contrast stretching and sharpening; `all` retains both and selects by character posterior score. Enhancement cannot reconstruct information erased by blur.
-
-`--layout text` (the default) scans the whole image. For conventional upright cards, `--layout standard-card` masks the illustration interior to reduce false text detections in artwork. `--layout auto` applies that mask based on aspect ratio alone; use `text` for Sagas, Adventures, split cards, full-art cards, showcase frames or arbitrary text boxes. Single-line crops always bypass masking. This geometric heuristic is not a general card-layout classifier.
-
-**Confidence** is the geometric mean of the peak posterior for each emitted CTC character, weighted by character count across lines. It is uncalibrated and is not the probability that a line is correct. Selection by this score can favor a short, incorrect result; the alternatives remain visible. No dictionary or Scryfall/Oracle lookup replaces the observed text.
-
-The default alphabet has 18,709 Unicode characters, including accents and curly quotation marks. It still lacks `¡`, `„`, and complete mana/tap symbol support. The experimental `en-mtg` alphabet is much narrower: English letters, numbers, ASCII punctuation and the euro sign. Card faces should be upright and reasonably flat; an isolated line or text-box crop can help difficult layouts. Vertical text, ruby grouping and right-to-left decoding are not implemented by the registered profiles.
+Output is JSON containing text, original-image line coordinates, the method, an uncalibrated confidence score, retained candidates and actual model identities. Scores are not probabilities of an exact transcription. Predictions read printed pixels; no card-name or Oracle lookup replaces them.
 
 ## Library
 
 ```rust,no_run
-use ocracle::{CardOcr, ModelConfig, Options};
-use std::path::Path;
+use ocracle::CardOcr;
 
 fn main() -> anyhow::Result<()> {
-    let ocr = CardOcr::load(
-        "models/text-recognition-base.rten",
-        Some(Path::new("models/text-detection.onnx")),
-        ModelConfig::default(),
-    )?;
-    let result = ocr.recognize(&image::open("card.jpg")?, Options::default())?;
-    println!("{}\nscore: {:.3}", result.text, result.confidence);
+    let ocr = CardOcr::open(".")?;
+    let result = ocr.read(&image::open("card.jpg")?)?;
+    println!("{}", result.text);
     Ok(())
 }
 ```
 
-Models can also be ONNX files compatible with RTen. Defaults retain the original CRNN contract: grayscale `[N,1,height,W]`, pixel values `/255 - 0.5`, and `[T,N,C]` **log probabilities**, with CTC blank at zero. Colour CTC exports can configure planar RGB/BGR input, affine normalization, right padding, width rounding, NTC output and probabilities. Rust processes one line per batch and uses triangle resizing; this can differ from an upstream OpenCV interpolation pipeline. Each configuration supplies the exact checkpoint alphabet, `input_height` and `architecture` for method attribution. Changing the alphabet without retraining changes what classes mean. RTen 0.26 matches `ocrs` 0.13's detector integration.
+Load once and reuse the recognizer for multiple images. `CardOcr::open_language("fr", ".")` sets the printed language without choosing a model or image-processing recipe.
+
+The default uses PP-OCRv6 medium for the six evaluated Latin-script languages and reads the original pixels in one pass. On the [fresh development comparison](experiments/paddle-blur.md), this gives 314/448 exact lines and 2.78% character error, compared with 308/448 and 2.79% when confidence selects between original and enhanced medium passes. Small remains the internal recognizer for Latin `la` and best-effort Japanese/Chinese, which lack evidence for changing models.
+
+This is a choice by aggregate accuracy, not a guarantee for every crop. Medium's clean exactness is lower than small's in that comparison, and it can drop a French diacritic even at high confidence. These failures remain in the gallery and raw reports. Strong blur can erase information, and curved lettering, symbols, vertical text and whole-card layout remain incomplete. The [coverage inventory](font-coverage.md) records the gaps.
+
+Advanced model-loading and preprocessing APIs remain available for reproducing research, rather than as required application configuration. Their reports retain original weights, configuration hashes and results independently of the current default.
 
 ## Training and evaluation
 
@@ -78,17 +54,14 @@ The [fresh blur development corpus](evaluation/blur-development.md) adds 64 inde
 
 ## Simple gallery
 
-The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](gallery/index.html)) pairs real printed crops with actual Rust inference, method and confidence. It includes original and severely blurred versions of historic titles, rules, flavor and reminder text, plus manual printed transcriptions and character error rates. Source card links and image provenance are retained.
+The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](gallery/index.html)) opens with eight fixed examples and requires no selections. Flavor and reminder italics come first, followed by historic titles and an accented French title. Every example shows both its original and severely blurred crop, actual Rust OCR, method and confidence. The selected default recognizer supplies all displayed predictions; source links, literal references and errors remain inspectable.
 
 ```sh
-python3 scripts/gallery_export.py \
-  --recognition-model models/ocracle-mtg.rten \
-  --model-config models/recognizer-config.json
 python3 scripts/gallery_export.py --check
 python3 -m http.server 8000 --directory docs/gallery
 ```
 
-Open `http://localhost:8000`. The GitHub Pages workflow publishes `docs/gallery` from the default branch when Pages uses **GitHub Actions** as its source. The model selector compares specialized and base checkpoints on the same crops; predictions and scores are never hand-authored.
+Open `http://localhost:8000`. The GitHub Pages workflow publishes `docs/gallery` from the default branch when Pages uses **GitHub Actions** as its source. Complete fixture and result JSON files retain the broader historical model comparisons; displayed predictions and scores come from recorded inference. See [gallery building](gallery-building.md) to reproduce an export.
 
 ## Development and releases
 

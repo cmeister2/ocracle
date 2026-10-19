@@ -134,11 +134,11 @@ pub enum OutputValues {
 #[serde(rename_all = "snake_case")]
 pub enum Passes {
     /// Read the input pixels without image enhancement.
+    #[default]
     Original,
     /// Enlarge, stretch contrast and apply a mild unsharp mask.
     Enhanced,
     /// Evaluate both and retain the one with the higher posterior score.
-    #[default]
     All,
 }
 

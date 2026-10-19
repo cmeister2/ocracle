@@ -67,18 +67,8 @@ fn detects_and_reads_multiple_printed_lines() {
     imageops::overlay(&mut canvas, &title, 20, 20);
     imageops::overlay(&mut canvas, &rules, 20, 100);
     let image = DynamicImage::ImageRgb8(canvas);
-    let detector = fixture("models/text-detection.onnx");
-    let ocr = CardOcr::load_profile("en", env!("CARGO_MANIFEST_DIR"), Some(&detector)).unwrap();
-    let result = ocr
-        .recognize(
-            &image,
-            Options {
-                single_line: false,
-                passes: Passes::Original,
-                ..Options::default()
-            },
-        )
-        .unwrap();
+    let ocr = CardOcr::open(env!("CARGO_MANIFEST_DIR")).unwrap();
+    let result = ocr.read(&image).unwrap();
     assert!(result.text.contains("Divination"), "{}", result.text);
     assert!(result.text.contains("Draw two cards."), "{}", result.text);
     assert!(result.lines.len() >= 2);
@@ -123,31 +113,38 @@ fn invalid_inputs_return_errors_without_inference() {
 #[test]
 #[ignore = "requires the pinned default recognizer; run training/download_models.py"]
 fn language_profile_selects_the_trained_model_for_the_whole_card() {
-    let image = image::open(fixture("docs/gallery/assets/beleren-title.png")).unwrap();
-    for (profile, expected_sha256) in [
+    for (language, path, expected) in [
+        ("en", "docs/gallery/assets/beleren-title.png", "Divination"),
         (
-            "en",
-            "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
-        ),
-        (
-            "en-medium",
-            "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+            "fr",
+            "training/latin-eval/images/fr-m21-47-clean.png",
+            "Sphère de capture",
         ),
     ] {
-        let ocr = CardOcr::load_profile(profile, env!("CARGO_MANIFEST_DIR"), None).unwrap();
+        let ocr = if language == "en" {
+            CardOcr::open(env!("CARGO_MANIFEST_DIR"))
+        } else {
+            CardOcr::open_language(language, env!("CARGO_MANIFEST_DIR"))
+        }
+        .unwrap();
+        let image = image::open(fixture(path)).unwrap();
         let result = ocr
             .recognize(
                 &image,
                 Options {
                     single_line: true,
-                    passes: Passes::Original,
                     ..Options::default()
                 },
             )
             .unwrap();
-        assert_eq!(result.text.trim(), "Divination", "{profile}");
-        assert_eq!(result.model.language, "en", "{profile}");
-        assert_eq!(result.model.sha256, expected_sha256, "{profile}");
+        assert_eq!(result.text.trim(), expected);
+        assert_eq!(result.model.language, language);
+        assert_eq!(
+            result.model.sha256,
+            "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba"
+        );
+        assert_eq!(result.candidates.len(), 1);
+        assert!(result.method.starts_with("original"));
     }
     assert!(
         CardOcr::load_profile("unsupported-test-profile", env!("CARGO_MANIFEST_DIR"), None)
@@ -160,8 +157,13 @@ fn language_profile_selects_the_trained_model_for_the_whole_card() {
 
 #[test]
 #[ignore = "requires the pinned colour recognizer; run training/download_models.py"]
-fn french_profile_preserves_printed_accents_using_native_colour_export() {
-    let ocr = CardOcr::load_profile("fr", env!("CARGO_MANIFEST_DIR"), None).unwrap();
+fn pinned_small_colour_export_preserves_printed_french_accents() {
+    // Keep the original small-model gold assertion bound to its actual weights.
+    // Medium's known fongoïde regression remains in its complete gallery report.
+    let config =
+        serde_json::from_slice(&std::fs::read(fixture("models/paddle-v6/fr.json")).unwrap())
+            .unwrap();
+    let ocr = CardOcr::load(fixture("models/ppocr-v6-small.onnx"), None, config).unwrap();
     let image = image::open(fixture("training/latin-eval/images/fr-m21-182-clean.png")).unwrap();
     let result = ocr
         .recognize(

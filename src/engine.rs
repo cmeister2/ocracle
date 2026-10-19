@@ -21,6 +21,8 @@ use crate::{
 };
 
 /// Reusable MTG text recognizer backed by a CTC neural network.
+///
+/// Use [`Self::open`] and [`Self::read`] for the default image-to-text pipeline.
 pub struct CardOcr {
     /// Optional word detector, absent for line-only deployments.
     detector: Option<OcrEngine>,
@@ -59,14 +61,56 @@ struct LanguageProfile {
 }
 
 impl CardOcr {
+    /// Open the default English card recognizer and its text detector.
+    ///
+    /// Load once and reuse this instance for multiple images. `model_root`
+    /// contains the repository's `models` directory; model choice and input
+    /// normalization are supplied by its verified language registry.
+    ///
+    /// # Errors
+    ///
+    /// Returns errors for missing, invalid or incompatible model artifacts,
+    /// registry/configuration files, or model/configuration digest mismatches.
+    pub fn open(model_root: impl AsRef<Path>) -> Result<Self> {
+        Self::open_language("en", model_root)
+    }
+
+    /// Open the default recognizer for one printed language, with text detection.
+    ///
+    /// `language` is a printed language code such as `en` or `fr`; callers do
+    /// not choose a network size or preprocessing recipe.
+    ///
+    /// # Errors
+    ///
+    /// Returns errors for an unsupported language or for any model, registry,
+    /// configuration or integrity failure described by [`Self::open`].
+    pub fn open_language(language: &str, model_root: impl AsRef<Path>) -> Result<Self> {
+        let root = model_root.as_ref();
+        let detector = root.join("models/text-detection.onnx");
+        Self::load_profile(language, root, Some(&detector))
+    }
+
+    /// Read an image using the default detection and recognition pipeline.
+    ///
+    /// Returns text, coordinates, method, uncalibrated confidence and retained
+    /// preprocessing candidates without requiring recognition options.
+    ///
+    /// # Errors
+    ///
+    /// Returns errors for invalid or oversized images, missing text detection,
+    /// or model execution and output-contract failures.
+    pub fn read(&self, image: &DynamicImage) -> Result<Recognition> {
+        self.recognize(image, Options::default())
+    }
+
     /// Select one trained language profile for a whole card.
     ///
     /// Reads `models/profiles.json` below `model_root`. Only entries backed by
     /// trained models belong in this registry. Unknown languages return an
     /// error, so an English model cannot silently stand in for another script.
-    /// Latin-script profiles use an upstream colour baseline evaluated on MTG;
-    /// `en-mtg` retains the experimental MTG-adapted CRNN. Non-Latin profiles
-    /// are best effort; registry membership does not establish full coverage.
+    /// Latin-script languages use the selected upstream colour recognizer.
+    /// Non-Latin profiles are best effort; registry membership does not
+    /// establish full coverage.
     ///
     /// # Errors
     ///

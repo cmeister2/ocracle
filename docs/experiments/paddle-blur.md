@@ -1,6 +1,6 @@
 # Paddle small versus medium on fresh printed blur lines
 
-**Paddle small remains the default.** Medium is available through six opt-in profiles: `en-medium`, `es-medium`, `fr-medium`, `de-medium`, `it-medium`, and `pt-medium`. Medium reduces character errors on this development cohort, especially strong blur, but loses exact clean lines and some literal punctuation. Latin `la` and best-effort CJK profiles remain on small; this comparison provides no evidence for changing them.
+**PP-OCRv6 medium with one original-image pass is the default** for English, Spanish, French, German, Italian and Portuguese. The library chooses this pipeline from the printed language; there are no model-size or quality profiles to select. Latin `la` and best-effort `ja`, `zhs` and `zht` retain small because this comparison provides no evidence for changing them. Medium lowers aggregate character error, especially under strong degradation, but some clean lines, accents and punctuation regress.
 
 The [fresh corpus](../evaluation/blur-development.md) was frozen before inference: 16 canonical identities absent the existing project corpora/evaluations, 64 independently pixel-reviewed native lines, seven fixed conditions, 448 observations per model. There are 36 italic base lines. Upstream pretrained membership is unknown. This is development evidence and may inform model choice, not an untouched test result.
 
@@ -8,7 +8,7 @@ The two official, unmodified checkpoints were fixed in advance: small SHA256 `54
 
 ## Results and tradeoffs
 
-CER is total Levenshtein edits divided by total reference characters after NFC and whitespace normalization only. Case, accents and printed punctuation remain literal. `Selected` is the production maximum-confidence choice between original and enhanced passes, with the last candidate winning ties. Confidence is the uncalibrated geometric mean of emitted CTC character posterior peaks, not an accuracy probability.
+CER is total Levenshtein edits divided by total reference characters after NFC and whitespace normalization only. Case, accents and printed punctuation remain literal. `Selected` denotes the recorded experiment's maximum-confidence choice between original and enhanced passes, with the last candidate winning ties. It is not the current default, which uses original alone. Confidence is the uncalibrated geometric mean of emitted CTC character posterior peaks, not an accuracy probability.
 
 | Model | Pass | Exact / 448 | CER |
 | --- | --- | ---: | ---: |
@@ -19,9 +19,11 @@ CER is total Levenshtein edits divided by total reference characters after NFC a
 | Medium | Enhanced | 296 | 3.57% |
 | Medium | Selected | 308 | 2.79% |
 
-Medium lowers selected CER from 4.55% to 2.79%, while selected exact lines fall from 313 to 308. On the 384 degraded observations, CER falls from 5.27% to 3.16%. On the 64 clean observations, CER rises from 0.23% to 0.55% and exact lines fall from **59 to 52**. Mild Gaussian blur and 50% downsampling also favor small on exact lines. The advantage on strong degradation does not imply every crop improves.
+The current medium original-pass choice has **314/448 exact lines and 422/15,162 edits (2.7833% CER)**. Medium's recorded selected output has **308/448 exact and 423/15,162 edits (2.7899%)**. Original alone avoids the extra enhanced-pass inference and has slightly lower character error on this development set. Its clean result is 53/64 exact with 11/2,166 edits (0.5078%); small original has 60/64 exact with 4/2,166 edits (0.1847%). This aggregate choice does not establish an improvement on every crop.
 
-| Condition | Small exact / 64 | Small CER | Medium exact / 64 | Medium CER |
+The historical all-pass comparison below uses `Selected` throughout. Medium lowers selected CER from 4.55% to 2.79%, while selected exact lines fall from 313 to 308. On the 384 degraded observations, CER falls from 5.27% to 3.16%. On the 64 clean observations, CER rises from 0.23% to 0.55% and exact lines fall from **59 to 52**. Mild Gaussian blur and 50% downsampling also favor small on exact lines.
+
+| Condition | Small selected exact / 64 | Small selected CER | Medium selected exact / 64 | Medium selected CER |
 | --- | ---: | ---: | ---: | ---: |
 | Clean | 59 | 0.23% | 52 | 0.55% |
 | Gaussian σ 1.2 | 55 | 0.42% | 49 | 0.78% |
@@ -50,11 +52,13 @@ Confidence selection also makes mistakes. Compared with original alone, selected
 
 The numerical eligibility gates were recorded **after the evaluation was launched but before any predictions, metrics or progress log were inspected**: selected medium CER must decrease on all 448 cases and on the 384 degraded cases; clean CER may rise at most 0.5 percentage points; no measured language may rise more than 1 percentage point. Exact match counts are secondary to these gates, and the larger download is acceptable if they pass. No frozen gallery/accent/rare/poster tests were used to choose or tune candidates.
 
-All four eligibility gates pass: overall CER changes by −1.761 percentage points, degraded CER by −2.108 points, clean CER by +0.323 points, and every measured language improves CER. Eligibility does not require replacing the default. The final decision retains small by default because the clean exact-line loss and punctuation regressions matter, and exposes medium as an explicit alternative for the six measured languages. No new preprocessing, threshold or model weights were tuned against this corpus.
+All four historical all-pass eligibility gates pass: overall CER changes by −1.761 percentage points, degraded CER by −2.108 points, clean CER by +0.323 points, and every measured language improves CER. Those recorded metrics and gates remain unchanged. The current default uses medium original alone for the six measured languages because aggregate character error is the primary objective and original outperforms selected on this set. No new preprocessing, threshold or model weights were tuned against this corpus to make that choice. The language is the only model-routing choice exposed to normal callers.
+
+After this development choice, the complete fixed gallery was evaluated with medium original. Its [localized results](../gallery/assets/latin/results-paddle-medium.json) retain `Renaissance fongoïde` read as `Renaissance fongoide` in both the clean and severe-blur inputs, at scores 0.9989691 and 0.99621046. Each is a one-character error despite high confidence. The clean case regresses from the [archived small result](../gallery/assets/latin/results-paddle.json); small also missed the diacritic under severe blur. The original correct clean gold assertion remains explicitly bound to small's pinned graph/configuration in [the neural test](../../tests/neural.rs). It is a historical baseline contract, not a claim that the new default fixes this accent.
 
 ## Reproduce and inspect
 
-[evaluate_blur.py](../../training/experimental_paddle_candidates/evaluate_blur.py) and [results-blur-development.json](../../training/experimental_paddle_candidates/results-blur-development.json) retain all **896 actual CLI processes**, both candidates, selected output, raw stdout/stderr and their digests, literal references, exact image/source/configuration/model/CLI hashes, recorded commands and process timings. The immutable production CLI hash is `1ede5e7d7a8c2060114ab471adf040d965d0e697eb55f8d8eb094a66b6b28e13`. It uses native BGR originals and the existing grayscale enhancement; discarded experimental RGB enhancement is absent.
+[evaluate_blur.py](../../training/experimental_paddle_candidates/evaluate_blur.py) and [results-blur-development.json](../../training/experimental_paddle_candidates/results-blur-development.json) retain all **896 actual CLI processes**, both candidates, selected output, raw stdout/stderr and their digests, literal references, exact image/source/configuration/model/CLI hashes, recorded commands and process timings. The historical experiment's immutable CLI hash is `1ede5e7d7a8c2060114ab471adf040d965d0e697eb55f8d8eb094a66b6b28e13`. It uses native BGR originals and the existing grayscale enhancement; discarded experimental RGB enhancement is absent.
 
 ```sh
 python3 training/experimental_paddle_candidates/evaluate_blur.py --check
