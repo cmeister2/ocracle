@@ -93,6 +93,7 @@ jobs:
         with:
           shared-key: neural
       - run: python3 training/download_models.py
+      - run: python3 scripts/verify_models.py --require-models
       - run: cargo test --release --locked --test neural -- --ignored
 
   training:
