@@ -78,7 +78,7 @@ The [fresh blur development corpus](evaluation/blur-development.md) adds 64 inde
 
 ## Simple gallery
 
-The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](gallery/index.html)) pairs real printed crops with actual Rust inference, method and confidence. It includes original and severely blurred versions of historic titles, rules, flavor and reminder text, plus manual printed transcriptions and character error rates. Source card links and image provenance are retained.
+The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](gallery/index.html)) opens with eight fixed examples and requires no selections. Flavor and reminder italics come first, followed by historic titles and an accented French title. Every example shows both its original and severely blurred crop, actual Rust OCR, method and confidence. The small Paddle model supplies all displayed predictions; source links, literal references and errors remain inspectable.
 
 ```sh
 python3 scripts/gallery_export.py \
@@ -88,7 +88,7 @@ python3 scripts/gallery_export.py --check
 python3 -m http.server 8000 --directory docs/gallery
 ```
 
-Open `http://localhost:8000`. The GitHub Pages workflow publishes `docs/gallery` from the default branch when Pages uses **GitHub Actions** as its source. The model selector compares specialized and base checkpoints on the same crops; predictions and scores are never hand-authored.
+Open `http://localhost:8000`. The GitHub Pages workflow publishes `docs/gallery` from the default branch when Pages uses **GitHub Actions** as its source. Complete fixture and result JSON files retain the broader historical model comparisons; displayed predictions and scores come from recorded inference.
 
 ## Development and releases
 
