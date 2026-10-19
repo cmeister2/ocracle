@@ -12,6 +12,7 @@ use rten::Model;
 use rten_imageproc::bounding_rect;
 use rten_tensor::Layout as _;
 use rten_tensor::{NdTensor, prelude::*};
+use serde::Deserialize;
 use sha2::{Digest, Sha256};
 
 use crate::{
@@ -30,7 +31,94 @@ pub struct CardOcr {
     identity: ModelIdentity,
 }
 
+/// Registry of available, trained per-card language profiles.
+#[derive(Deserialize)]
+struct ProfileRegistry {
+    /// Registry format understood by this crate.
+    schema_version: u32,
+    /// Trained profiles; coverage backlog entries belong in the training inventory.
+    profiles: Vec<LanguageProfile>,
+}
+
+/// Checkpoint and character mapping for a single printed card language.
+#[derive(Deserialize)]
+struct LanguageProfile {
+    /// Unique selection key, usually a Scryfall language code.
+    id: String,
+    /// Language identifier expected in the matching model configuration.
+    language: String,
+    /// Recognition model path relative to the supplied model root.
+    model: String,
+    /// Alphabet and preprocessing configuration relative to the model root.
+    configuration: String,
+    /// Digest required of the recognition weights actually loaded.
+    sha256: String,
+}
+
 impl CardOcr {
+    /// Select one trained language profile for a whole card.
+    ///
+    /// Reads `models/profiles.json` below `model_root`. Only entries backed by
+    /// trained models belong in this registry. Unknown languages return an
+    /// error, so an English model cannot silently stand in for another script.
+    /// The current distributed profile is `en`.
+    ///
+    /// # Errors
+    ///
+    /// Returns errors for unreadable or invalid registry/configuration files,
+    /// unsupported registry versions, missing/duplicate profile identifiers,
+    /// mismatched languages, model loading failures or incorrect weight digests.
+    pub fn load_profile(
+        profile_id: &str,
+        model_root: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+    ) -> Result<Self> {
+        let root = model_root.as_ref();
+        let registry: ProfileRegistry = serde_json::from_slice(
+            &fs::read(root.join("models/profiles.json"))
+                .context("read trained language profiles")?,
+        )
+        .context("parse trained language profiles")?;
+        ensure!(
+            registry.schema_version == 1,
+            "unsupported language profile registry version"
+        );
+        let mut matches = registry
+            .profiles
+            .iter()
+            .filter(|profile| profile.id == profile_id);
+        let profile = matches.next().with_context(|| {
+            format!(
+                "no trained language profile {profile_id:?}; available: {}",
+                registry
+                    .profiles
+                    .iter()
+                    .map(|p| p.id.as_str())
+                    .collect::<Vec<_>>()
+                    .join(", ")
+            )
+        })?;
+        ensure!(
+            matches.next().is_none(),
+            "duplicate language profile {profile_id:?}"
+        );
+        let config: ModelConfig = serde_json::from_slice(
+            &fs::read(root.join(&profile.configuration))
+                .context("read language profile configuration")?,
+        )
+        .context("parse language profile configuration")?;
+        ensure!(
+            config.language == profile.language,
+            "language profile and model configuration disagree"
+        );
+        let engine = Self::load(root.join(&profile.model), detection_model, config)?;
+        ensure!(
+            engine.identity.sha256 == profile.sha256,
+            "language profile recognition model SHA-256 mismatch"
+        );
+        Ok(engine)
+    }
+
     /// Load recognition weights and an optional word detector.
     ///
     /// The recognizer accepts `[1,1,height,width]` grayscale values in

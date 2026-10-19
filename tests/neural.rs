@@ -118,3 +118,33 @@ fn invalid_inputs_return_errors_without_inference() {
             .contains("requires --detection-model")
     );
 }
+
+#[test]
+#[ignore = "uses the checked-in English neural model and registry"]
+fn language_profile_selects_the_trained_model_for_the_whole_card() {
+    let ocr = CardOcr::load_profile("en", env!("CARGO_MANIFEST_DIR"), None).unwrap();
+    let image = image::open(fixture("docs/gallery/assets/beleren-title.png")).unwrap();
+    let result = ocr
+        .recognize(
+            &image,
+            Options {
+                single_line: true,
+                passes: Passes::Original,
+                ..Options::default()
+            },
+        )
+        .unwrap();
+    assert_eq!(result.text.trim(), "Divination");
+    assert_eq!(result.model.language, "en");
+    assert_eq!(
+        result.model.sha256,
+        "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f"
+    );
+    assert!(
+        CardOcr::load_profile("unsupported-test-profile", env!("CARGO_MANIFEST_DIR"), None)
+            .err()
+            .unwrap()
+            .to_string()
+            .contains("no trained language profile")
+    );
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "id": "en",
+      "language": "en",
+      "model": "models/ocracle-mtg.rten",
+      "configuration": "models/recognizer-config.json",
+      "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f"
+    }
+  ]
+}

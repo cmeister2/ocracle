@@ -14,20 +14,17 @@ cd ocracle
 python3 training/download_models.py
 cargo build --release
 
-target/release/ocracle recognize card.jpg \
-  --detection-model models/text-detection.onnx \
-  --recognition-model models/ocracle-mtg.rten \
-  --model-config models/recognizer-config.json
+target/release/ocracle recognize card.jpg --language en
 ```
 
 For an isolated text line, skip detection:
 
 ```sh
 target/release/ocracle recognize docs/gallery/assets/historic-flavor-blur.png \
-  --recognition-model models/ocracle-mtg.rten \
-  --model-config models/recognizer-config.json \
-  --line --passes all
+  --language en --line --passes all
 ```
+
+`--language` selects one trained profile for the entire card from `models/profiles.json` and verifies its weights and configuration. Currently only `en` is ready; requesting an unavailable profile returns an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
 
 The specialized checkpoint is checked into the repository with its matching configuration. For comparison, the downloader also fetches the original base recognizer:
 
