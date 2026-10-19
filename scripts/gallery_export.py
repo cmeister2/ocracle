@@ -18,19 +18,39 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ASSETS = ROOT / "docs/gallery/assets"
+MODEL_MANIFESTS = (
+    "models/manifest.json",
+    "models/paddle-v6-manifest.json",
+    "models/paddle-v6-medium-manifest.json",
+)
+
+
+def model_manifests() -> list[dict]:
+    """Read explicit model declarations, including preserved historical profiles."""
+    return [json.loads(path.read_text()) for name in MODEL_MANIFESTS
+            if (path := ROOT / name).exists()]
 
 
 def known_recognizers() -> list[dict]:
-    """Collect registered weight identities without requiring model downloads."""
+    """Collect pinned weight identities without requiring model downloads."""
     models = []
-    for path in [ROOT / "models/manifest.json", ROOT / "models/paddle-v6-manifest.json"]:
-        if not path.exists():
-            continue
-        manifest = json.loads(path.read_text())
+    for manifest in model_manifests():
         models.extend(model for model in manifest.get("upstream_models", [])
                       if not model.get("training_only") and "detection" not in model["path"])
         models.extend(manifest.get("adapted_models", []))
     return models
+
+
+def historical_profile(language: str, recorded: dict, model: dict) -> dict:
+    """Resolve recorded identity independently of mutable active profile aliases."""
+    for manifest in model_manifests():
+        for profile in manifest.get("profiles", []):
+            if (profile["id"] == recorded["profile_id"] and profile["language"] == language
+                    and profile["model"] == model["path"] and profile["sha256"] == model["sha256"]
+                    and profile["configuration"] == recorded["path"]
+                    and profile["configuration_sha256"] == recorded["sha256"]):
+                return profile
+    raise ValueError(f"Recorded profile has no matching pinned model/configuration declaration: {language}")
 
 
 def normalized(text: str) -> str:
@@ -72,15 +92,10 @@ def check_artifacts(fixtures_path: Path, output_path: Path) -> None:
             raise ValueError(f"Model configuration changed since OCR was recorded: {configuration}")
     profile_configurations = result.get("profile_configurations", {})
     if profile_configurations:
-        registered = {entry["id"]: entry for entry in json.loads((ROOT / "models/profiles.json").read_text())["profiles"]}
         for language, recorded in profile_configurations.items():
-            profile = registered[recorded["profile_id"]]
-            if (profile["language"] != language or profile["sha256"] != result["recognition_model_sha256"]
-                    or profile["configuration_sha256"] != recorded["sha256"]
-                    or profile["configuration"] != recorded["path"]):
-                raise ValueError(f"Recorded profile differs from the current registry: {language}")
+            historical_profile(language, recorded, model_entry)
             if sha256(ROOT / recorded["path"]) != recorded["sha256"]:
-                raise ValueError(f"Registered profile configuration changed: {language}")
+                raise ValueError(f"Historical profile configuration changed: {language}")
     for path, expected_hash in fixtures.get("source_documents", {}).items():
         if sha256(ROOT / path) != expected_hash:
             raise ValueError(f"Upstream fixture source changed: {path}")
