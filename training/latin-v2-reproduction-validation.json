@@ -1,0 +1,13 @@
+{
+  "replayed_records": 43145,
+  "manifest_sha256": "2a460a805eca368c4ffc8c40c95c2e32a83ed9b37e4addad56df4390676e3819",
+  "newly_rendered_images": 28276,
+  "every_manifest_row_image_hash_verified": true,
+  "parent_images": "Referenced immutable English/V1 and reviewed physical PNGs hashed from original materialization; new synthetic images regenerated into isolated directory",
+  "seed": 20261020,
+  "elapsed_seconds": 51,
+  "directory": "/tmp/ocracle-latin-v2-replay-sd6y42_c",
+  "result": "All record labels, paths and PNG digests match the frozen manifest exactly",
+  "full_pipeline_physical_recrop_verified": true,
+  "full_replay_command": "python training/latin_v2_reproduce.py --skip-train --skip-parent-replay"
+}

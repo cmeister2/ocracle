@@ -1,0 +1,2227 @@
+{
+  "schema": 1,
+  "generated_at": "2026-10-19T17:45:33.279648+00:00",
+  "recognition_model_sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+  "model_config_sha256": "d812bac5b5ae4e9fb34b87b30805e22cb3897dcb4ccfbb9ce74349e7b50c960f",
+  "executable_sha256": "5ab0598387e1637c431263065ec99713aafee55389961f3aa31eb5c75a0d03dd",
+  "fixture_manifest_sha256": "d6ddc7fab695de4347a87c06f0d3fd33d1dd32587dc6a96693a13588f427f015",
+  "passes": "all",
+  "purpose": "Post-selection English physical-font preservation check; experimental V2 remains unregistered",
+  "normalization": "NFC and collapsed whitespace; case, punctuation and accents retained",
+  "confidence_note": "Uncalibrated emitted-character posterior score, not probability of exact transcription",
+  "groups": {
+    "overall": {
+      "observations": 30,
+      "character_edits": 34,
+      "reference_characters": 576,
+      "exact_matches": 18,
+      "character_error_rate": 0.059027777777777776
+    },
+    "severity:clean": {
+      "observations": 15,
+      "character_edits": 3,
+      "reference_characters": 288,
+      "exact_matches": 12,
+      "character_error_rate": 0.010416666666666666
+    },
+    "severity:blur": {
+      "observations": 15,
+      "character_edits": 31,
+      "reference_characters": 288,
+      "exact_matches": 6,
+      "character_error_rate": 0.1076388888888889
+    }
+  },
+  "records": [
+    {
+      "sample_id": "goudy-title",
+      "variant_id": "clean",
+      "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+      "reference": "Llanowar Elves",
+      "character_edits": 0,
+      "reference_characters": 14,
+      "exact_match": true,
+      "inference": {
+        "text": "Llanowar Elves",
+        "confidence": 0.74860936,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          273,
+          47
+        ],
+        "lines": [
+          {
+            "text": "Llanowar Elves",
+            "confidence": 0.74860936,
+            "bounds": [
+              0,
+              0,
+              273,
+              47
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Llanowar Elves",
+            "confidence": 0.74860936,
+            "lines": [
+              {
+                "text": "Llanowar Elves",
+                "confidence": 0.74860936,
+                "bounds": [
+                  0,
+                  0,
+                  273,
+                  47
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "T ohŸt ve",
+            "confidence": 0.2770887,
+            "lines": [
+              {
+                "text": "T ohŸt ve",
+                "confidence": 0.2770887,
+                "bounds": [
+                  0,
+                  0,
+                  273,
+                  47
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "goudy-title",
+      "variant_id": "blur",
+      "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+      "reference": "Llanowar Elves",
+      "character_edits": 3,
+      "reference_characters": 14,
+      "exact_match": false,
+      "inference": {
+        "text": "Llanowzrelves",
+        "confidence": 0.81940895,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          82,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Llanowzrelves",
+            "confidence": 0.81940895,
+            "bounds": [
+              0,
+              0,
+              82,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Llanowarelcs",
+            "confidence": 0.6148788,
+            "lines": [
+              {
+                "text": "Llanowarelcs",
+                "confidence": 0.6148788,
+                "bounds": [
+                  0,
+                  0,
+                  82,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Llanowzrelves",
+            "confidence": 0.81940895,
+            "lines": [
+              {
+                "text": "Llanowzrelves",
+                "confidence": 0.81940895,
+                "bounds": [
+                  0,
+                  0,
+                  82,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "matrix-title",
+      "variant_id": "clean",
+      "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+      "reference": "Air Elemental",
+      "character_edits": 0,
+      "reference_characters": 13,
+      "exact_match": true,
+      "inference": {
+        "text": "Air Elemental ",
+        "confidence": 0.9405131,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          267,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Air Elemental ",
+            "confidence": 0.9405131,
+            "bounds": [
+              0,
+              0,
+              267,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Air Elemental ",
+            "confidence": 0.9403929,
+            "lines": [
+              {
+                "text": "Air Elemental ",
+                "confidence": 0.9403929,
+                "bounds": [
+                  0,
+                  0,
+                  267,
+                  45
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Air Elemental ",
+            "confidence": 0.9405131,
+            "lines": [
+              {
+                "text": "Air Elemental ",
+                "confidence": 0.9405131,
+                "bounds": [
+                  0,
+                  0,
+                  267,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "matrix-title",
+      "variant_id": "blur",
+      "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+      "reference": "Air Elemental",
+      "character_edits": 0,
+      "reference_characters": 13,
+      "exact_match": true,
+      "inference": {
+        "text": "Air Elemental",
+        "confidence": 0.960034,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          80,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.960034,
+            "bounds": [
+              0,
+              0,
+              80,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Air Elemental",
+            "confidence": 0.9590789,
+            "lines": [
+              {
+                "text": "Air Elemental",
+                "confidence": 0.9590789,
+                "bounds": [
+                  0,
+                  0,
+                  80,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Air Elemental",
+            "confidence": 0.960034,
+            "lines": [
+              {
+                "text": "Air Elemental",
+                "confidence": 0.960034,
+                "bounds": [
+                  0,
+                  0,
+                  80,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "beleren-title",
+      "variant_id": "clean",
+      "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+      "reference": "Divination",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "exact_match": true,
+      "inference": {
+        "text": "Divination",
+        "confidence": 0.98302996,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          201,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.98302996,
+            "bounds": [
+              0,
+              0,
+              201,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.98175097,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.98175097,
+                "bounds": [
+                  0,
+                  0,
+                  201,
+                  46
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.98302996,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.98302996,
+                "bounds": [
+                  0,
+                  0,
+                  201,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "beleren-title",
+      "variant_id": "blur",
+      "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+      "reference": "Divination",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "exact_match": true,
+      "inference": {
+        "text": "Divination",
+        "confidence": 0.9952232,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          60,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.9952232,
+            "bounds": [
+              0,
+              0,
+              60,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.9947135,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.9947135,
+                "bounds": [
+                  0,
+                  0,
+                  60,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.9952232,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.9952232,
+                "bounds": [
+                  0,
+                  0,
+                  60,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-rules",
+      "variant_id": "clean",
+      "image_sha256": "59a0649ed3d3a888836df0b572a7e1e5196cc45d65ffd79794133768f9455042",
+      "reference": "Tap to add 1 green mana to your",
+      "character_edits": 0,
+      "reference_characters": 31,
+      "exact_match": true,
+      "inference": {
+        "text": "Tap to add 1 green mana to your",
+        "confidence": 0.9777532,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          507,
+          38
+        ],
+        "lines": [
+          {
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.9777532,
+            "bounds": [
+              0,
+              0,
+              507,
+              38
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.9777532,
+            "lines": [
+              {
+                "text": "Tap to add 1 green mana to your",
+                "confidence": 0.9777532,
+                "bounds": [
+                  0,
+                  0,
+                  507,
+                  38
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "davto add  green ana to your",
+            "confidence": 0.7784136,
+            "lines": [
+              {
+                "text": "davto add  green ana to your",
+                "confidence": 0.7784136,
+                "bounds": [
+                  0,
+                  0,
+                  507,
+                  38
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-rules",
+      "variant_id": "blur",
+      "image_sha256": "3522ec17c8f4d56afab57bcee446d38b40d0485c96c5c2fe4d0a7ed1a9fc1a8c",
+      "reference": "Tap to add 1 green mana to your",
+      "character_edits": 1,
+      "reference_characters": 31,
+      "exact_match": false,
+      "inference": {
+        "text": "Tap to add I green mana to your",
+        "confidence": 0.9345876,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          152,
+          11
+        ],
+        "lines": [
+          {
+            "text": "Tap to add I green mana to your",
+            "confidence": 0.9345876,
+            "bounds": [
+              0,
+              0,
+              152,
+              11
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Tap to add I green mana to your",
+            "confidence": 0.9345876,
+            "lines": [
+              {
+                "text": "Tap to add I green mana to your",
+                "confidence": 0.9345876,
+                "bounds": [
+                  0,
+                  0,
+                  152,
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Tap to add I green mana to your",
+            "confidence": 0.9329895,
+            "lines": [
+              {
+                "text": "Tap to add I green mana to your",
+                "confidence": 0.9329895,
+                "bounds": [
+                  0,
+                  0,
+                  152,
+                  11
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-rules",
+      "variant_id": "clean",
+      "image_sha256": "2222522079a282cf12e66091434716a50d25bdb4000bde07cb023b256af9a464",
+      "reference": "Draw two cards.",
+      "character_edits": 0,
+      "reference_characters": 15,
+      "exact_match": true,
+      "inference": {
+        "text": "Draw two cards.",
+        "confidence": 0.99857247,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          283,
+          42
+        ],
+        "lines": [
+          {
+            "text": "Draw two cards.",
+            "confidence": 0.99857247,
+            "bounds": [
+              0,
+              0,
+              283,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Draw two cards.",
+            "confidence": 0.99857247,
+            "lines": [
+              {
+                "text": "Draw two cards.",
+                "confidence": 0.99857247,
+                "bounds": [
+                  0,
+                  0,
+                  283,
+                  42
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Draw two cards.",
+            "confidence": 0.99767077,
+            "lines": [
+              {
+                "text": "Draw two cards.",
+                "confidence": 0.99767077,
+                "bounds": [
+                  0,
+                  0,
+                  283,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-rules",
+      "variant_id": "blur",
+      "image_sha256": "9f4029ed8354ad2af3376e143c183da89f54e85e092025aa7bdb9777ac0d3690",
+      "reference": "Draw two cards.",
+      "character_edits": 1,
+      "reference_characters": 15,
+      "exact_match": false,
+      "inference": {
+        "text": "Draw two cards,",
+        "confidence": 0.9523305,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          85,
+          13
+        ],
+        "lines": [
+          {
+            "text": "Draw two cards,",
+            "confidence": 0.9523305,
+            "bounds": [
+              0,
+              0,
+              85,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Draw two cards,",
+            "confidence": 0.948786,
+            "lines": [
+              {
+                "text": "Draw two cards,",
+                "confidence": 0.948786,
+                "bounds": [
+                  0,
+                  0,
+                  85,
+                  13
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Draw two cards,",
+            "confidence": 0.9523305,
+            "lines": [
+              {
+                "text": "Draw two cards,",
+                "confidence": 0.9523305,
+                "bounds": [
+                  0,
+                  0,
+                  85,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-flavor",
+      "variant_id": "clean",
+      "image_sha256": "e31e0350e4344ad7e7d0dabeb0547c96fb252a627330c6132ac341cbfb2684bc",
+      "reference": "Whenever the Llanowar Elves gather",
+      "character_edits": 0,
+      "reference_characters": 34,
+      "exact_match": true,
+      "inference": {
+        "text": "Whenever the Llanowar Elves gather",
+        "confidence": 0.9704741,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          524,
+          40
+        ],
+        "lines": [
+          {
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.9704741,
+            "bounds": [
+              0,
+              0,
+              524,
+              40
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.9704741,
+            "lines": [
+              {
+                "text": "Whenever the Llanowar Elves gather",
+                "confidence": 0.9704741,
+                "bounds": [
+                  0,
+                  0,
+                  524,
+                  40
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Ihenever the Ilanowar Thegather",
+            "confidence": 0.74295634,
+            "lines": [
+              {
+                "text": "Ihenever the Ilanowar Thegather",
+                "confidence": 0.74295634,
+                "bounds": [
+                  0,
+                  0,
+                  524,
+                  40
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-flavor",
+      "variant_id": "blur",
+      "image_sha256": "aee039f25e92e1d6735e6f992e0d045014a5f8b52767fc0f48fc787a57640742",
+      "reference": "Whenever the Llanowar Elves gather",
+      "character_edits": 11,
+      "reference_characters": 34,
+      "exact_match": false,
+      "inference": {
+        "text": "W hewtr the Lanoar Eloe aathar",
+        "confidence": 0.6870289,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          157,
+          12
+        ],
+        "lines": [
+          {
+            "text": "W hewtr the Lanoar Eloe aathar",
+            "confidence": 0.6870289,
+            "bounds": [
+              0,
+              0,
+              157,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "W hewtr the Lanoar Eloe aathar",
+            "confidence": 0.6870289,
+            "lines": [
+              {
+                "text": "W hewtr the Lanoar Eloe aathar",
+                "confidence": 0.6870289,
+                "bounds": [
+                  0,
+                  0,
+                  157,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Whenweter the Lanowear Elve auther",
+            "confidence": 0.6639807,
+            "lines": [
+              {
+                "text": "Whenweter the Lanowear Elve auther",
+                "confidence": 0.6639807,
+                "bounds": [
+                  0,
+                  0,
+                  157,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-flavor",
+      "variant_id": "clean",
+      "image_sha256": "e58e1b8601e76530c67b6d8eeb7a5a06913933069cfd17e5a993a50b3148f844",
+      "reference": "“The key to unlocking this puzzle is",
+      "character_edits": 1,
+      "reference_characters": 36,
+      "exact_match": false,
+      "inference": {
+        "text": "sThe key to unlocking this puzzle is",
+        "confidence": 0.9382634,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          564,
+          43
+        ],
+        "lines": [
+          {
+            "text": "sThe key to unlocking this puzzle is",
+            "confidence": 0.9382634,
+            "bounds": [
+              0,
+              0,
+              564,
+              43
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "sThe key to unlocking this puzzle is ",
+            "confidence": 0.92653745,
+            "lines": [
+              {
+                "text": "sThe key to unlocking this puzzle is ",
+                "confidence": 0.92653745,
+                "bounds": [
+                  0,
+                  0,
+                  564,
+                  43
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "sThe key to unlocking this puzzle is",
+            "confidence": 0.9382634,
+            "lines": [
+              {
+                "text": "sThe key to unlocking this puzzle is",
+                "confidence": 0.9382634,
+                "bounds": [
+                  0,
+                  0,
+                  564,
+                  43
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-flavor",
+      "variant_id": "blur",
+      "image_sha256": "004793fb6e147aa93024d366231f6baddb3e22cc80be5188d743c077c76ebb41",
+      "reference": "“The key to unlocking this puzzle is",
+      "character_edits": 2,
+      "reference_characters": 36,
+      "exact_match": false,
+      "inference": {
+        "text": "\"The key to unlocking this puzele is",
+        "confidence": 0.9250904,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          169,
+          13
+        ],
+        "lines": [
+          {
+            "text": "\"The key to unlocking this puzele is",
+            "confidence": 0.9250904,
+            "bounds": [
+              0,
+              0,
+              169,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "\"The kcy to unlocking this puzzle is",
+            "confidence": 0.9206979,
+            "lines": [
+              {
+                "text": "\"The kcy to unlocking this puzzle is",
+                "confidence": 0.9206979,
+                "bounds": [
+                  0,
+                  0,
+                  169,
+                  13
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "\"The key to unlocking this puzele is",
+            "confidence": 0.9250904,
+            "lines": [
+              {
+                "text": "\"The key to unlocking this puzele is",
+                "confidence": 0.9250904,
+                "bounds": [
+                  0,
+                  0,
+                  169,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "italic-reminder",
+      "variant_id": "clean",
+      "image_sha256": "953cef42f24f6b06542d889a3782e73fe4b4517b0b2f8a91e8792721a8bfea05",
+      "reference": "except by creatures with flying.)",
+      "character_edits": 1,
+      "reference_characters": 33,
+      "exact_match": false,
+      "inference": {
+        "text": "except by creatures with flying.)) ",
+        "confidence": 0.95447356,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          497,
+          39
+        ],
+        "lines": [
+          {
+            "text": "except by creatures with flying.)) ",
+            "confidence": 0.95447356,
+            "bounds": [
+              0,
+              0,
+              497,
+              39
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "except by creatures with flying.)) ",
+            "confidence": 0.95447356,
+            "lines": [
+              {
+                "text": "except by creatures with flying.)) ",
+                "confidence": 0.95447356,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  39
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "except by creatures with flying.) ",
+            "confidence": 0.94010544,
+            "lines": [
+              {
+                "text": "except by creatures with flying.) ",
+                "confidence": 0.94010544,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  39
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "italic-reminder",
+      "variant_id": "blur",
+      "image_sha256": "7d31d55ebef018d9090d6b6cdc1dfbf7e99f619d7cc3dd115ac5da2eb5ebd119",
+      "reference": "except by creatures with flying.)",
+      "character_edits": 3,
+      "reference_characters": 33,
+      "exact_match": false,
+      "inference": {
+        "text": "except by creatures writh Aying.)",
+        "confidence": 0.86975086,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          149,
+          12
+        ],
+        "lines": [
+          {
+            "text": "except by creatures writh Aying.)",
+            "confidence": 0.86975086,
+            "bounds": [
+              0,
+              0,
+              149,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "except by creatures with fyine-)",
+            "confidence": 0.8495907,
+            "lines": [
+              {
+                "text": "except by creatures with fyine-)",
+                "confidence": 0.8495907,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "except by creatures writh Aying.)",
+            "confidence": 0.86975086,
+            "lines": [
+              {
+                "text": "except by creatures writh Aying.)",
+                "confidence": 0.86975086,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "mixed-reminder",
+      "variant_id": "clean",
+      "image_sha256": "d3f8cddfb5a4b6906725a5db947d137a5d2d8f7004205362a832a81db8e02350",
+      "reference": "Deathtouch (Any amount of damage",
+      "character_edits": 1,
+      "reference_characters": 32,
+      "exact_match": false,
+      "inference": {
+        "text": "Deathtouch (ny amount of damage",
+        "confidence": 0.99276876,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          595,
+          42
+        ],
+        "lines": [
+          {
+            "text": "Deathtouch (ny amount of damage",
+            "confidence": 0.99276876,
+            "bounds": [
+              0,
+              0,
+              595,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Deathtouch (ny amount of damage ",
+            "confidence": 0.978432,
+            "lines": [
+              {
+                "text": "Deathtouch (ny amount of damage ",
+                "confidence": 0.978432,
+                "bounds": [
+                  0,
+                  0,
+                  595,
+                  42
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Deathtouch (ny amount of damage",
+            "confidence": 0.99276876,
+            "lines": [
+              {
+                "text": "Deathtouch (ny amount of damage",
+                "confidence": 0.99276876,
+                "bounds": [
+                  0,
+                  0,
+                  595,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "mixed-reminder",
+      "variant_id": "blur",
+      "image_sha256": "72030733d4e103ce8553bf999267defea2b092ed0a1616c12ddf061161f1eddb",
+      "reference": "Deathtouch (Any amount of damage",
+      "character_edits": 0,
+      "reference_characters": 32,
+      "exact_match": true,
+      "inference": {
+        "text": "Deathtouch (Any amount of damage",
+        "confidence": 0.97842497,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          178,
+          13
+        ],
+        "lines": [
+          {
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.97842497,
+            "bounds": [
+              0,
+              0,
+              178,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.9460309,
+            "lines": [
+              {
+                "text": "Deathtouch (Any amount of damage",
+                "confidence": 0.9460309,
+                "bounds": [
+                  0,
+                  0,
+                  178,
+                  13
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.97842497,
+            "lines": [
+              {
+                "text": "Deathtouch (Any amount of damage",
+                "confidence": 0.97842497,
+                "bounds": [
+                  0,
+                  0,
+                  178,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "future-title",
+      "variant_id": "clean",
+      "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+      "reference": "Blade of the Sixth Pride",
+      "character_edits": 0,
+      "reference_characters": 24,
+      "exact_match": true,
+      "inference": {
+        "text": "Blade of the Sixth Pride",
+        "confidence": 0.9961132,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          455,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9961132,
+            "bounds": [
+              0,
+              0,
+              455,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9961132,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.9961132,
+                "bounds": [
+                  0,
+                  0,
+                  455,
+                  46
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9960478,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.9960478,
+                "bounds": [
+                  0,
+                  0,
+                  455,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "future-title",
+      "variant_id": "blur",
+      "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+      "reference": "Blade of the Sixth Pride",
+      "character_edits": 0,
+      "reference_characters": 24,
+      "exact_match": true,
+      "inference": {
+        "text": "Blade of the Sixth Pride",
+        "confidence": 0.9854768,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          136,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9854768,
+            "bounds": [
+              0,
+              0,
+              136,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.98504347,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.98504347,
+                "bounds": [
+                  0,
+                  0,
+                  136,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9854768,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.9854768,
+                "bounds": [
+                  0,
+                  0,
+                  136,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "colorshift-title",
+      "variant_id": "clean",
+      "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+      "reference": "Mana Tithe",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "exact_match": true,
+      "inference": {
+        "text": "Mana Tithe",
+        "confidence": 0.99242,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          220,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Mana Tithe",
+            "confidence": 0.99242,
+            "bounds": [
+              0,
+              0,
+              220,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Mana Tithe",
+            "confidence": 0.9896926,
+            "lines": [
+              {
+                "text": "Mana Tithe",
+                "confidence": 0.9896926,
+                "bounds": [
+                  0,
+                  0,
+                  220,
+                  45
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Mana Tithe",
+            "confidence": 0.99242,
+            "lines": [
+              {
+                "text": "Mana Tithe",
+                "confidence": 0.99242,
+                "bounds": [
+                  0,
+                  0,
+                  220,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "colorshift-title",
+      "variant_id": "blur",
+      "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+      "reference": "Mana Tithe",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "exact_match": true,
+      "inference": {
+        "text": "Mana Tithe ",
+        "confidence": 0.91161096,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          66,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Mana Tithe ",
+            "confidence": 0.91161096,
+            "bounds": [
+              0,
+              0,
+              66,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Mana Tithe ",
+            "confidence": 0.871303,
+            "lines": [
+              {
+                "text": "Mana Tithe ",
+                "confidence": 0.871303,
+                "bounds": [
+                  0,
+                  0,
+                  66,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Mana Tithe ",
+            "confidence": 0.91161096,
+            "lines": [
+              {
+                "text": "Mana Tithe ",
+                "confidence": 0.91161096,
+                "bounds": [
+                  0,
+                  0,
+                  66,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "dracula-title",
+      "variant_id": "clean",
+      "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+      "reference": "Mina Harker",
+      "character_edits": 0,
+      "reference_characters": 11,
+      "exact_match": true,
+      "inference": {
+        "text": "Mina Harker",
+        "confidence": 0.96473986,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          235,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Mina Harker",
+            "confidence": 0.96473986,
+            "bounds": [
+              0,
+              0,
+              235,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Mina Harker",
+            "confidence": 0.96142703,
+            "lines": [
+              {
+                "text": "Mina Harker",
+                "confidence": 0.96142703,
+                "bounds": [
+                  0,
+                  0,
+                  235,
+                  45
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Mina Harker",
+            "confidence": 0.96473986,
+            "lines": [
+              {
+                "text": "Mina Harker",
+                "confidence": 0.96473986,
+                "bounds": [
+                  0,
+                  0,
+                  235,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "dracula-title",
+      "variant_id": "blur",
+      "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+      "reference": "Mina Harker",
+      "character_edits": 1,
+      "reference_characters": 11,
+      "exact_match": false,
+      "inference": {
+        "text": "Mina Hatker",
+        "confidence": 0.9279136,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          70,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Mina Hatker",
+            "confidence": 0.9279136,
+            "bounds": [
+              0,
+              0,
+              70,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Mina Hatker",
+            "confidence": 0.9279136,
+            "lines": [
+              {
+                "text": "Mina Hatker",
+                "confidence": 0.9279136,
+                "bounds": [
+                  0,
+                  0,
+                  70,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Mina Hatker",
+            "confidence": 0.92241925,
+            "lines": [
+              {
+                "text": "Mina Hatker",
+                "confidence": 0.92241925,
+                "bounds": [
+                  0,
+                  0,
+                  70,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "invocation-title",
+      "variant_id": "clean",
+      "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+      "reference": "DAZE",
+      "character_edits": 0,
+      "reference_characters": 4,
+      "exact_match": true,
+      "inference": {
+        "text": "DAZE",
+        "confidence": 0.60989475,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          107,
+          39
+        ],
+        "lines": [
+          {
+            "text": "DAZE",
+            "confidence": 0.60989475,
+            "bounds": [
+              0,
+              0,
+              107,
+              39
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "DAZE",
+            "confidence": 0.60989475,
+            "lines": [
+              {
+                "text": "DAZE",
+                "confidence": 0.60989475,
+                "bounds": [
+                  0,
+                  0,
+                  107,
+                  39
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "DAZE",
+            "confidence": 0.59046924,
+            "lines": [
+              {
+                "text": "DAZE",
+                "confidence": 0.59046924,
+                "bounds": [
+                  0,
+                  0,
+                  107,
+                  39
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "invocation-title",
+      "variant_id": "blur",
+      "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+      "reference": "DAZE",
+      "character_edits": 1,
+      "reference_characters": 4,
+      "exact_match": false,
+      "inference": {
+        "text": "BAZE",
+        "confidence": 0.6833404,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          32,
+          12
+        ],
+        "lines": [
+          {
+            "text": "BAZE",
+            "confidence": 0.6833404,
+            "bounds": [
+              0,
+              0,
+              32,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "BAZE",
+            "confidence": 0.6833404,
+            "lines": [
+              {
+                "text": "BAZE",
+                "confidence": 0.6833404,
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "BAZE",
+            "confidence": 0.66950303,
+            "lines": [
+              {
+                "text": "BAZE",
+                "confidence": 0.66950303,
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "module-title",
+      "variant_id": "clean",
+      "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+      "reference": "Frost Dragon",
+      "character_edits": 0,
+      "reference_characters": 12,
+      "exact_match": true,
+      "inference": {
+        "text": "Frost Dragon",
+        "confidence": 0.99608517,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          360,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.99608517,
+            "bounds": [
+              0,
+              0,
+              360,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.99608517,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.99608517,
+                "bounds": [
+                  0,
+                  0,
+                  360,
+                  46
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.99509954,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.99509954,
+                "bounds": [
+                  0,
+                  0,
+                  360,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "module-title",
+      "variant_id": "blur",
+      "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+      "reference": "Frost Dragon",
+      "character_edits": 0,
+      "reference_characters": 12,
+      "exact_match": true,
+      "inference": {
+        "text": "Frost Dragon",
+        "confidence": 0.9971688,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          108,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.9971688,
+            "bounds": [
+              0,
+              0,
+              108,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.99422085,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.99422085,
+                "bounds": [
+                  0,
+                  0,
+                  108,
+                  14
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.9971688,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.9971688,
+                "bounds": [
+                  0,
+                  0,
+                  108,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "collector-type",
+      "variant_id": "clean",
+      "image_sha256": "055b1a45cf542fa23313729be4b57a2f698b27762547f22fe23a0180a4d22a79",
+      "reference": "052/269 C",
+      "character_edits": 0,
+      "reference_characters": 9,
+      "exact_match": true,
+      "inference": {
+        "text": "052/269 C",
+        "confidence": 0.8973459,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          150,
+          21
+        ],
+        "lines": [
+          {
+            "text": "052/269 C",
+            "confidence": 0.8973459,
+            "bounds": [
+              0,
+              0,
+              150,
+              21
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "052/269 C",
+            "confidence": 0.82928145,
+            "lines": [
+              {
+                "text": "052/269 C",
+                "confidence": 0.82928145,
+                "bounds": [
+                  0,
+                  0,
+                  150,
+                  21
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "052/269 C",
+            "confidence": 0.8973459,
+            "lines": [
+              {
+                "text": "052/269 C",
+                "confidence": 0.8973459,
+                "bounds": [
+                  0,
+                  0,
+                  150,
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "collector-type",
+      "variant_id": "blur",
+      "image_sha256": "2e311b600935e86b5b8c14d1ee6ce98114f4157629da396c132b071576781a5f",
+      "reference": "052/269 C",
+      "character_edits": 8,
+      "reference_characters": 9,
+      "exact_match": false,
+      "inference": {
+        "text": "esa/» ",
+        "confidence": 0.3060382,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          45,
+          6
+        ],
+        "lines": [
+          {
+            "text": "esa/» ",
+            "confidence": 0.3060382,
+            "bounds": [
+              0,
+              0,
+              45,
+              6
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "esa/» ",
+            "confidence": 0.3060382,
+            "lines": [
+              {
+                "text": "esa/» ",
+                "confidence": 0.3060382,
+                "bounds": [
+                  0,
+                  0,
+                  45,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "osa/ ",
+            "confidence": 0.26299757,
+            "lines": [
+              {
+                "text": "osa/ ",
+                "confidence": 0.26299757,
+                "bounds": [
+                  0,
+                  0,
+                  45,
+                  6
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v2",
+          "language": "en",
+          "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+          "detector_sha256": null
+        }
+      }
+    }
+  ]
+}

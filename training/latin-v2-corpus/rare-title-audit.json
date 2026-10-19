@@ -1,0 +1,247 @@
+{
+  "Ä": {
+    "train": [
+      {
+        "id": "800fd931-8f4b-46ce-a24b-f94d0ee3cbcb",
+        "name": "Aetherspouts",
+        "title": "Äthersauger",
+        "language": "de",
+        "set": "m15"
+      },
+      {
+        "id": "0f91a0b0-50c6-427f-89cc-0471bcfd8d47",
+        "name": "Tainted Aether",
+        "title": "Unreiner Äther",
+        "language": "de",
+        "set": "7ed"
+      },
+      {
+        "id": "5a9c6651-7e56-4a97-85c0-797d88f020a6",
+        "name": "Life and Limb",
+        "title": "Lebende Äste",
+        "language": "de",
+        "set": "plc"
+      },
+      {
+        "id": "1fa231dd-0a18-4a32-bfb9-44edbb494227",
+        "name": "Vedalken Aethermage",
+        "title": "Vedalken-Äthermagier",
+        "language": "de",
+        "set": "fut"
+      },
+      {
+        "id": "b043105d-7d6d-4a27-9a7f-756ad89987bf",
+        "name": "Aether Web",
+        "title": "Äthernetz",
+        "language": "de",
+        "set": "tsp"
+      },
+      {
+        "id": "98fa8396-0510-4de4-b6cb-d4e61960916d",
+        "name": "Pendelhaven Elder",
+        "title": "Ältester von Pendelhaven",
+        "language": "de",
+        "set": "tsp"
+      }
+    ],
+    "validation": [
+      {
+        "id": "73093135-af43-45b3-92e4-79349b266deb",
+        "name": "Caustic Tar",
+        "title": "Ätzender Teer",
+        "language": "de",
+        "set": "m15"
+      },
+      {
+        "id": "9855f6a5-3fd1-4fb9-8779-f992e52b35ed",
+        "name": "Aetherflame Wall",
+        "title": "Mauer aus Ätherflammen",
+        "language": "de",
+        "set": "tsp"
+      },
+      {
+        "id": "a1052e77-04d4-43e6-8c44-185e8b124df2",
+        "name": "Aether Flash",
+        "title": "Ätherblitz",
+        "language": "de",
+        "set": "7ed"
+      }
+    ],
+    "test": []
+  },
+  "È": {
+    "train": [
+      {
+        "id": "bc86d744-dbc1-4a85-b831-16b5e4f28a4c",
+        "name": "Furor of the Bitten",
+        "title": "Ira di Chi È Morso",
+        "language": "it",
+        "set": "m21"
+      },
+      {
+        "id": "242aadf9-7fa6-4995-84b3-9bce05f7632a",
+        "name": "Era of Innovation",
+        "title": "Ère de l'innovation",
+        "language": "fr",
+        "set": "kld"
+      }
+    ],
+    "validation": [
+      {
+        "id": "722fd8ee-0eda-4b1c-a825-f52408e5dc95",
+        "name": "Blood Age General",
+        "title": "Général de l'Ère sanglante",
+        "language": "fr",
+        "set": "stx"
+      }
+    ],
+    "test": []
+  },
+  "Ê": {
+    "train": [
+      {
+        "id": "6732dc55-1c7a-4987-94ff-a544a7418513",
+        "name": "Entish Restoration",
+        "title": "Restauração Êntica",
+        "language": "pt",
+        "set": "ltr"
+      },
+      {
+        "id": "a31cff52-b2f9-4c69-901f-e6f251707197",
+        "name": "In Too Deep",
+        "title": "Être allé trop loin",
+        "language": "fr",
+        "set": "ncc"
+      }
+    ],
+    "validation": [],
+    "test": []
+  },
+  "ï": {
+    "train": [
+      {
+        "id": "4194be47-3fa3-4d2c-9685-91d68fce3be0",
+        "name": "Fungal Behemoth",
+        "title": "Béhémoth fongoïde",
+        "language": "fr",
+        "set": "plc"
+      },
+      {
+        "id": "79fb4a39-5369-4e91-9333-89264aefa607",
+        "name": "Quilled Sliver",
+        "title": "Slivoïde à aiguilles",
+        "language": "fr",
+        "set": "tsp"
+      },
+      {
+        "id": "ac1706ca-b1c3-49b5-8879-c7b62eef70bf",
+        "name": "Fungal Reaches",
+        "title": "Étendues fongoïdes",
+        "language": "fr",
+        "set": "tsp"
+      },
+      {
+        "id": "579b2098-aff1-4e5a-9caa-775f51325edd",
+        "name": "Poultice Sliver",
+        "title": "Slivoïde à cataplasme",
+        "language": "fr",
+        "set": "plc"
+      },
+      {
+        "id": "545f405d-07d3-487a-8b1f-657e0f3cdb49",
+        "name": "Frenzy Sliver",
+        "title": "Slivoïde frénétique",
+        "language": "fr",
+        "set": "fut"
+      },
+      {
+        "id": "2e71de04-f1c5-4065-989f-cb6837b261f2",
+        "name": "Heroic Intervention",
+        "title": "Intervention héroïque",
+        "language": "fr",
+        "set": "m21"
+      }
+    ],
+    "validation": [
+      {
+        "id": "7839827a-5660-4ee0-a675-a818c72a645a",
+        "name": "Synchronous Sliver",
+        "title": "Slivoïde synchronisé",
+        "language": "fr",
+        "set": "plc"
+      },
+      {
+        "id": "a0407b77-dfd5-45b8-a2a6-4db27c8a7abb",
+        "name": "Screeching Sliver",
+        "title": "Slivoïde grinçant",
+        "language": "fr",
+        "set": "tsp"
+      },
+      {
+        "id": "fccb0960-1a5d-41b7-b2e9-9c78f0f7621b",
+        "name": "Sedge Sliver",
+        "title": "Slivoïde des laîches",
+        "language": "fr",
+        "set": "tsp"
+      }
+    ],
+    "test": [
+      {
+        "id": "7f1800b8-6015-4fe9-a3c9-c29eeb3a668a",
+        "name": "Two-Headed Sliver",
+        "title": "Slivoïde à deux têtes",
+        "language": "fr",
+        "set": "tsp"
+      },
+      {
+        "id": "e6df9baf-0be2-4b51-9947-5310370e3525",
+        "name": "Darkheart Sliver",
+        "title": "Slivoïde au cœur noir",
+        "language": "fr",
+        "set": "plc"
+      },
+      {
+        "id": "5930591d-f9ba-43b6-b002-045533ff439d",
+        "name": "Jhoira of the Ghitu",
+        "title": "Djoïra des Guitûks",
+        "language": "fr",
+        "set": "fut"
+      },
+      {
+        "id": "2278fa6c-997e-4468-a679-2a8011773994",
+        "name": "Spinneret Sliver",
+        "title": "Slivoïde à filière",
+        "language": "fr",
+        "set": "tsp"
+      }
+    ]
+  },
+  "ù": {
+    "train": [
+      {
+        "id": "012ad486-d468-402c-ae78-f1507993db06",
+        "name": "Kashi-Tribe Reaver",
+        "title": "Saccheggiatore della Tribù-Kashi",
+        "language": "it",
+        "set": "chk"
+      },
+      {
+        "id": "072856c3-80e5-48c2-b528-502649ee0ec6",
+        "name": "Sakura-Tribe Elder",
+        "title": "Anziano della Tribù-Sakura",
+        "language": "it",
+        "set": "cmd"
+      }
+    ],
+    "validation": [
+      {
+        "id": "00eacc18-fcc3-4d44-9264-866f475f0b05",
+        "name": "Teval, Arbiter of Virtue",
+        "title": "Teval, Giudice di Virtù",
+        "language": "it",
+        "set": "tdm"
+      }
+    ],
+    "test": []
+  }
+}

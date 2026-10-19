@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "path": "models/ocracle-mtg-latin-v2.rten",
+  "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9",
+  "bytes": 9960832,
+  "model_name": "ocracle-mtg-latin-v2",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "es"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "status": "Experimental CRNN research artifact; not registered as a ready language profile",
+  "configurations": {
+    "en": "models/latin-v2-profiles/en.json",
+    "fr": "models/latin-v2-profiles/fr.json",
+    "de": "models/latin-v2-profiles/de.json",
+    "it": "models/latin-v2-profiles/it.json",
+    "pt": "models/latin-v2-profiles/pt.json",
+    "es": "models/latin-v2-profiles/es.json"
+  },
+  "configuration_sha256": {
+    "en": "d812bac5b5ae4e9fb34b87b30805e22cb3897dcb4ccfbb9ce74349e7b50c960f",
+    "fr": "895c21e2935718e388313f2eb6386716a904c4171aaf6a6fb6132cae5f32bc4d",
+    "de": "9016bc5e07977e7a826208decd8daef07dbdad13eb1a2352315f51afa600e148",
+    "it": "1ae6c48ae37e996b7dcfc56211213748f3efd9dea36e397742d8515d4465dacf",
+    "pt": "ce2991f3bb260fb78610e8ec1a23b5a89a88b2a75ad2a4d354cbf678dca367bb",
+    "es": "2863fc6ddf733fa1502d507ba06902ccb2be084bed8a484bab97313d157287c6"
+  },
+  "source_checkpoint": {
+    "schema": 1,
+    "path": "models/training/latin-v1-source.pt",
+    "sha256": "7492beacfb8fe3eee9343c9c621f98fc099de23d00707de95c7a66a719008339",
+    "bytes": 9795311,
+    "format": "PyTorch weights_only-compatible model_state checkpoint",
+    "model_name": "ocracle-mtg-latin-v1",
+    "license": "CC-BY-SA-4.0",
+    "upstream": "Robert Knight / ocrs-models, official English recognition checkpoint",
+    "upstream_checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+    "v1_report": "training/latin-report.json",
+    "v1_inference_model": "models/ocracle-mtg-latin.rten",
+    "v1_inference_sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+    "purpose": "Frozen initialization of separate Latin V2 research experiment; does not register inference profiles"
+  },
+  "training_report": "training/latin-v2-report.json",
+  "training_report_sha256": "add2daaab1bc12f656c486790fb7f28875e5a82633601aabda19b7fa69d39786",
+  "dataset_manifest_sha256": "2a460a805eca368c4ffc8c40c95c2e32a83ed9b37e4addad56df4390676e3819",
+  "data_replay": "training/latin-v2-reproduction-validation.json",
+  "data_coverage": "training/latin-v2-corpus/coverage.json",
+  "physical_review": "training/latin-v2-corpus/titles-reviewed.json",
+  "training_steps": 1000,
+  "validation_selected_step": 1000,
+  "batch_norm_running_statistics_frozen": true,
+  "trainable_backbone": "conv modules index >=13 and all GRU parameters",
+  "limitations": [
+    "Latin V2 CRNN experiment only; unregistered because independent physical evaluation still shows substantial accent errors.",
+    "Exemplar glyph curriculum establishes training coverage, not physical-font accuracy.",
+    "All printed languages, arbitrary fonts and degradation conditions remain unproven.",
+    "Only 20 new physical test title crops; Italian has one. No universal font, language or degradation guarantee.",
+    "Opt is excluded from V2 updates but was present in V1 initialization training."
+  ],
+  "independent_physical_evaluation": "training/latin-eval/results-v2.json",
+  "independent_physical_evaluation_sha256": "46eb05776958746d9eeb40757009eb1b54348542c572e23386dd722a13c8c82d",
+  "english_font_evaluation": "training/latin-v2-english-gallery.json",
+  "english_font_evaluation_sha256": "ebffcb88df5c089de7d683c0df5fae13dedc1baf54ada70d0e49d89981c615cb",
+  "documentation": "docs/training/latin-v2.md",
+  "export_checks": {
+    "en": "training/latin-v2-export-validation-en.json",
+    "fr": "training/latin-v2-export-validation-fr.json",
+    "de": "training/latin-v2-export-validation-de.json",
+    "it": "training/latin-v2-export-validation-it.json",
+    "pt": "training/latin-v2-export-validation-pt.json",
+    "es": "training/latin-v2-export-validation-es.json"
+  }
+}

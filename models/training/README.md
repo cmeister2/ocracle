@@ -1,0 +1,5 @@
+`latin-v1-source.pt` is the exact PyTorch model-state checkpoint exported as the frozen Latin V1 RTen recognizer. It is pinned here to reproduce Latin V2 initialization without repeating V1 optimization and assuming bitwise-identical results.
+
+The checkpoint contains a `model_state` dictionary, Unicode alphabet and training metadata; load it with PyTorch's `weights_only=True`. Its provenance and the V1 experiment are recorded in [the Latin report](../../training/latin-report.json) and [Latin model manifest](../latin-manifest.json). It is a derivative of Robert Knight's `ocrs-models` English recognition checkpoint, under [CC-BY-SA-4.0](../LICENSE-CC-BY-SA-4.0.txt); see [the model attribution](../README.md). Card material used for adaptation remains Wizards of the Coast material and is not relicensed as crate source.
+
+`latin-v1-source.json` pins its SHA-256, bytes and upstream/frozen artifact relationships. This research training checkpoint does not register a supported inference language profile.

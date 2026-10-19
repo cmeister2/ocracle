@@ -1,0 +1,14 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡«»¿ÀÁÈÉÊßàáâãäçèéêíîñòóôõöùúûü—„ª²ºÂÃÄÅÆÇËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝåæëìïøýÿĀāĂăĆćĒēĔĕĞğĪīĬĭİıĲĳŌōŎŏŒœŘřŞşŠšŪūŬŭŸſǓǔẞ–‘’“”•…‹›−",
+  "input_height": 64,
+  "model_name": "ocracle-mtg-latin-v2",
+  "language": "pt",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "es"
+  ]
+}

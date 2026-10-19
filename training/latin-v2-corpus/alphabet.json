@@ -1,0 +1,12 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡«»¿ÀÁÈÉÊßàáâãäçèéêíîñòóôõöùúûü—„ª²ºÂÃÄÅÆÇËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝåæëìïøýÿĀāĂăĆćĒēĔĕĞğĪīĬĭİıĲĳŌōŎŏŒœŘřŞşŠšŪūŬŭŸſǓǔẞ–‘’“”•…‹›−",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "es"
+  ],
+  "normalization": "NFC; accents and typography preserved"
+}

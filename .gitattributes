@@ -1,0 +1,2 @@
+# Preserve the vendored font license byte for byte, including upstream spacing.
+training/latin-v2-corpus/DEJAVU-LICENSE.txt -whitespace

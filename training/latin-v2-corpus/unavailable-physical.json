@@ -1,0 +1,68 @@
+[
+  {
+    "id": "bf137575-1fca-41d5-83c5-55ce7581fad4",
+    "name": "Untamed Wilds",
+    "lang": "pt",
+    "printed_name": "Regiões Indômitas"
+  },
+  {
+    "id": "788495ac-d529-40f6-929f-ff88ac601e98",
+    "name": "Hollow Dogs",
+    "lang": "pt",
+    "printed_name": "Cães Ôcos"
+  },
+  {
+    "id": "286a4671-e65b-4cdd-80db-78eee09eb3f8",
+    "name": "Final Fortune",
+    "lang": "pt",
+    "printed_name": "Último Recurso"
+  },
+  {
+    "id": "33771ff8-1587-4c50-89e5-d24a037a82bb",
+    "name": "Aether Flash",
+    "lang": "pt",
+    "printed_name": "Clarão do Éter"
+  },
+  {
+    "id": "39569979-1382-4041-87bd-b15f718d518d",
+    "name": "Pride of Lions",
+    "lang": "pt",
+    "printed_name": "Bando de Leões"
+  },
+  {
+    "id": "8d4f0a4b-3198-4979-b06b-5e5d43370eb7",
+    "name": "Lightning Blast",
+    "lang": "pt",
+    "printed_name": "Explosão do Relâmpago"
+  },
+  {
+    "id": "b16c4ed2-0d58-4220-a8b0-90221aabe37a",
+    "name": "Fallen Angel",
+    "lang": "es",
+    "printed_name": "Ángel caído"
+  },
+  {
+    "id": "9b335332-f8d1-4944-a414-f5dcdc42441d",
+    "name": "Reverse Damage",
+    "lang": "es",
+    "printed_name": "Inversión de daño"
+  },
+  {
+    "id": "c20c0aff-2c4c-4622-ab44-2d8d35ffc9c5",
+    "name": "Elvish Champion",
+    "lang": "es",
+    "printed_name": "Campeona Élfica"
+  },
+  {
+    "id": "d566a6f8-e38d-42d8-9a1a-2046cb78cc76",
+    "name": "Southern Paladin",
+    "lang": "es",
+    "printed_name": "Paladín del sur"
+  },
+  {
+    "id": "72dbe133-f42f-4e99-971a-d3af0cd43cc8",
+    "name": "Underground River",
+    "lang": "es",
+    "printed_name": "Río subterráneo"
+  }
+]

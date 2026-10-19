@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "path": "models/training/latin-v1-source.pt",
+  "sha256": "7492beacfb8fe3eee9343c9c621f98fc099de23d00707de95c7a66a719008339",
+  "bytes": 9795311,
+  "format": "PyTorch weights_only-compatible model_state checkpoint",
+  "model_name": "ocracle-mtg-latin-v1",
+  "license": "CC-BY-SA-4.0",
+  "upstream": "Robert Knight / ocrs-models, official English recognition checkpoint",
+  "upstream_checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+  "v1_report": "training/latin-report.json",
+  "v1_inference_model": "models/ocracle-mtg-latin.rten",
+  "v1_inference_sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+  "purpose": "Frozen initialization of separate Latin V2 research experiment; does not register inference profiles"
+}

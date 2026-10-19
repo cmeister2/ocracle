@@ -1,0 +1,232 @@
+{
+  "languages": {
+    "en": {
+      "all_lines": 8362,
+      "new_physical_title_split": {},
+      "new_physical_title_sets": {},
+      "new_physical_titles": 0,
+      "new_body_lines": 0,
+      "training_italic_lines": 2996
+    },
+    "fr": {
+      "all_lines": 8338,
+      "new_physical_title_split": {
+        "train": 14,
+        "validation": 5,
+        "test": 4
+      },
+      "new_physical_title_sets": {
+        "plc": 5,
+        "m15": 5,
+        "m21": 4,
+        "fut": 6,
+        "kld": 1,
+        "stx": 1,
+        "ncc": 1
+      },
+      "new_physical_titles": 23,
+      "new_body_lines": 7,
+      "training_italic_lines": 2894
+    },
+    "de": {
+      "all_lines": 7190,
+      "new_physical_title_split": {
+        "train": 11,
+        "validation": 5,
+        "test": 5
+      },
+      "new_physical_title_sets": {
+        "m15": 6,
+        "m21": 5,
+        "plc": 6,
+        "fut": 4
+      },
+      "new_physical_titles": 21,
+      "new_body_lines": 1,
+      "training_italic_lines": 2493
+    },
+    "it": {
+      "all_lines": 6455,
+      "new_physical_title_split": {
+        "train": 12,
+        "validation": 4,
+        "test": 1
+      },
+      "new_physical_title_sets": {
+        "m21": 4,
+        "m15": 5,
+        "plc": 3,
+        "fut": 3,
+        "cmd": 1,
+        "tdm": 1
+      },
+      "new_physical_titles": 17,
+      "new_body_lines": 2,
+      "training_italic_lines": 2708
+    },
+    "pt": {
+      "all_lines": 6164,
+      "new_physical_title_split": {
+        "train": 11,
+        "validation": 4,
+        "test": 5
+      },
+      "new_physical_title_sets": {
+        "plc": 4,
+        "fut": 5,
+        "m21": 6,
+        "m15": 4,
+        "ltr": 1
+      },
+      "new_physical_titles": 20,
+      "new_body_lines": 5,
+      "training_italic_lines": 2121
+    },
+    "es": {
+      "all_lines": 6636,
+      "new_physical_title_split": {
+        "train": 10,
+        "validation": 5,
+        "test": 5
+      },
+      "new_physical_title_sets": {
+        "m21": 7,
+        "fut": 5,
+        "plc": 4,
+        "m15": 4
+      },
+      "new_physical_titles": 20,
+      "new_body_lines": 5,
+      "training_italic_lines": 2305
+    }
+  },
+  "characters": {
+    "Ä": {
+      "training_occurrences": 267,
+      "physical_training_occurrences": 3,
+      "new_physical_training_occurrences": 3,
+      "procedural_training_occurrences": 144
+    },
+    "ï": {
+      "training_occurrences": 424,
+      "physical_training_occurrences": 4,
+      "new_physical_training_occurrences": 4,
+      "procedural_training_occurrences": 144
+    },
+    "Ê": {
+      "training_occurrences": 194,
+      "physical_training_occurrences": 2,
+      "new_physical_training_occurrences": 2,
+      "procedural_training_occurrences": 144
+    },
+    "È": {
+      "training_occurrences": 230,
+      "physical_training_occurrences": 2,
+      "new_physical_training_occurrences": 2,
+      "procedural_training_occurrences": 144
+    },
+    "ù": {
+      "training_occurrences": 289,
+      "physical_training_occurrences": 1,
+      "new_physical_training_occurrences": 1,
+      "procedural_training_occurrences": 144
+    },
+    "ß": {
+      "training_occurrences": 255,
+      "physical_training_occurrences": 3,
+      "new_physical_training_occurrences": 2,
+      "procedural_training_occurrences": 72
+    },
+    "ẞ": {
+      "training_occurrences": 8,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 8
+    },
+    "œ": {
+      "training_occurrences": 168,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 144
+    },
+    "Œ": {
+      "training_occurrences": 168,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 144
+    },
+    "Æ": {
+      "training_occurrences": 169,
+      "physical_training_occurrences": 1,
+      "new_physical_training_occurrences": 1,
+      "procedural_training_occurrences": 144
+    },
+    "æ": {
+      "training_occurrences": 156,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 144
+    },
+    "‘": {
+      "training_occurrences": 112,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 112
+    },
+    "’": {
+      "training_occurrences": 211,
+      "physical_training_occurrences": 3,
+      "new_physical_training_occurrences": 3,
+      "procedural_training_occurrences": 112
+    },
+    "“": {
+      "training_occurrences": 112,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 112
+    },
+    "”": {
+      "training_occurrences": 112,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 112
+    },
+    "„": {
+      "training_occurrences": 300,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 128
+    },
+    "–": {
+      "training_occurrences": 144,
+      "physical_training_occurrences": 0,
+      "new_physical_training_occurrences": 0,
+      "procedural_training_occurrences": 144
+    },
+    "—": {
+      "training_occurrences": 2213,
+      "physical_training_occurrences": 1,
+      "new_physical_training_occurrences": 1,
+      "procedural_training_occurrences": 144
+    }
+  },
+  "alphabet_classes_without_training_labels": [
+    "#",
+    "$",
+    "&",
+    "<",
+    "@",
+    "[",
+    "\\",
+    "]",
+    "^",
+    "_",
+    "`",
+    "{",
+    "|",
+    "}",
+    "~",
+    "€"
+  ],
+  "interpretation": "Training occurrence coverage is not a physical accuracy claim. Procedural exemplar glyph practice is counted separately. Physical critical-glyph counts can be sparse or zero. All splits use canonical identity; inherited V1 source exposure caveat for Opt remains."
+}

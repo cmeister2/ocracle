@@ -1,0 +1,24 @@
+{
+  "physical_titles": 168,
+  "supplementary_training_prints": 87,
+  "candidate_counts": {
+    "pt:train": 499,
+    "es:test": 75,
+    "es:train": 396,
+    "fr:train": 555,
+    "es:validation": 59,
+    "de:test": 46,
+    "de:train": 298,
+    "de:validation": 50,
+    "it:train": 28,
+    "pt:validation": 75,
+    "pt:test": 129,
+    "fr:test": 88,
+    "fr:validation": 74,
+    "it:validation": 3,
+    "it:test": 1
+  },
+  "selection": "Metadata glyph/cohort coverage only; no OCR filtering",
+  "bulk_source": "https://data.scryfall.io/all-cards/all-cards-20261019091831.jsonl.gz",
+  "bulk_sha256": "b608540096ca0eead69aaa7d9b2302d480872f2a091dfd5bfafc0128bf69ea8f"
+}
