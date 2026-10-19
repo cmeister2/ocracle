@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "language": "ja",
+  "evaluation_card_names": [
+    "Opt",
+    "Divination"
+  ],
+  "training_membership_note": "Opt appeared in the frozen ocracle LatinV1 corpus; these are pretrained-model test fixtures, not globally unseen canonical identities. Original upstream pretraining membership is unknown.",
+  "scope": "Two Japanese printings and a fixed set of horizontal text/furigana lines. No vertical, language-wide or font-wide coverage claim.",
+  "samples": [
+    {
+      "id": "ja-title",
+      "language": "ja",
+      "treatment": "title",
+      "ground_truth": "選択",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        59,
+        72,
+        131,
+        104
+      ],
+      "source": {
+        "print_id": "2607d870-4995-489f-b5f9-76999a45958d",
+        "card_name": "Opt",
+        "printed_name": "選択",
+        "language": "ja",
+        "set": "j25",
+        "collector_number": "339",
+        "scryfall_url": "https://scryfall.com/card/j25/339/ja/%E9%81%B8%E6%8A%9E-(opt)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+        "image_status": "highres_scan",
+        "source_image_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-title.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-title-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-furigana",
+      "language": "ja",
+      "treatment": "furigana",
+      "ground_truth": "せんたく",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        60,
+        55,
+        124,
+        73
+      ],
+      "source": {
+        "print_id": "2607d870-4995-489f-b5f9-76999a45958d",
+        "card_name": "Opt",
+        "printed_name": "選択",
+        "language": "ja",
+        "set": "j25",
+        "collector_number": "339",
+        "scryfall_url": "https://scryfall.com/card/j25/339/ja/%E9%81%B8%E6%8A%9E-(opt)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+        "image_status": "highres_scan",
+        "source_image_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-furigana.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-furigana-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-rules",
+      "language": "ja",
+      "treatment": "rules",
+      "ground_truth": "カード１枚を引く。",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        61,
+        787,
+        322,
+        829
+      ],
+      "source": {
+        "print_id": "2607d870-4995-489f-b5f9-76999a45958d",
+        "card_name": "Opt",
+        "printed_name": "選択",
+        "language": "ja",
+        "set": "j25",
+        "collector_number": "339",
+        "scryfall_url": "https://scryfall.com/card/j25/339/ja/%E9%81%B8%E6%8A%9E-(opt)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+        "image_status": "highres_scan",
+        "source_image_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-rules.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-rules-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-reminder",
+      "language": "ja",
+      "treatment": "rules and reminder",
+      "ground_truth": "占術１を行う。（あなたのライブラリーの一番上に",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        61,
+        681,
+        675,
+        715
+      ],
+      "source": {
+        "print_id": "2607d870-4995-489f-b5f9-76999a45958d",
+        "card_name": "Opt",
+        "printed_name": "選択",
+        "language": "ja",
+        "set": "j25",
+        "collector_number": "339",
+        "scryfall_url": "https://scryfall.com/card/j25/339/ja/%E9%81%B8%E6%8A%9E-(opt)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+        "image_status": "highres_scan",
+        "source_image_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-reminder.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-reminder-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-flavor",
+      "language": "ja",
+      "treatment": "flavor",
+      "ground_truth": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        61,
+        851,
+        673,
+        882
+      ],
+      "source": {
+        "print_id": "2607d870-4995-489f-b5f9-76999a45958d",
+        "card_name": "Opt",
+        "printed_name": "選択",
+        "language": "ja",
+        "set": "j25",
+        "collector_number": "339",
+        "scryfall_url": "https://scryfall.com/card/j25/339/ja/%E9%81%B8%E6%8A%9E-(opt)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+        "image_status": "highres_scan",
+        "source_image_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-flavor.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-flavor-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-lowres-title",
+      "language": "ja",
+      "treatment": "title in low-resolution source",
+      "ground_truth": "予言",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        59,
+        56,
+        181,
+        102
+      ],
+      "source": {
+        "print_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+        "card_name": "Divination",
+        "printed_name": "予言",
+        "language": "ja",
+        "set": "m15",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/ja/%E4%BA%88%E8%A8%80-(divination)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/b/0/b024b2e5-4c29-403d-a287-25b48bbe82b6.png?1782970359",
+        "image_status": "lowres",
+        "source_image_sha256": "ecdf738be7a49dfbe3d29e8060498232b262aa72fc4a822cfafa1438b5d593d4",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-lowres-title.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-lowres-title-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    },
+    {
+      "id": "ja-lowres-rules",
+      "language": "ja",
+      "treatment": "rules in low-resolution source",
+      "ground_truth": "カードを２枚引く。",
+      "reference": "Manual transcription of this printed crop, preserving fullwidth digits and punctuation",
+      "typography_note": "Japanese flavor/reminder glyphs are upright in this print; this does not establish Latin italic or vertical-writing support",
+      "crop_bounds_xyxy": [
+        61,
+        734,
+        329,
+        777
+      ],
+      "source": {
+        "print_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+        "card_name": "Divination",
+        "printed_name": "予言",
+        "language": "ja",
+        "set": "m15",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/ja/%E4%BA%88%E8%A8%80-(divination)?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/b/0/b024b2e5-4c29-403d-a287-25b48bbe82b6.png?1782970359",
+        "image_status": "lowres",
+        "source_image_sha256": "ecdf738be7a49dfbe3d29e8060498232b262aa72fc4a822cfafa1438b5d593d4",
+        "manual_image_review": "2026-10-19: image visually verified to contain Japanese text; not an English fallback"
+      },
+      "variants": [
+        {
+          "id": "source",
+          "image": "ja-lowres-rules.png",
+          "transform": "Crop only; see source image_status for intrinsic blur"
+        },
+        {
+          "id": "blur",
+          "image": "ja-lowres-rules-blur.png",
+          "transform": "Gaussian sigma2.4 sourcepixels; bilinear downsample30%"
+        }
+      ]
+    }
+  ]
+}
