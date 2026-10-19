@@ -1,0 +1,20 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  "input_height": 64,
+  "model_name": "Ocrs generic English CRNN (s52qdbqt)",
+  "normalization": "pixel / 255 - 0.5",
+  "output_layout": "TNC",
+  "blank_index": 0,
+  "confidence": "geometric mean of selected CTC character probabilities; uncalibrated",
+  "language": "en",
+  "architecture": "CRNN",
+  "output_values": "log_probabilities",
+  "input": {
+    "color_mode": "grayscale",
+    "scale": 0.00392156862745098,
+    "offset": -0.5,
+    "padding_width": 0,
+    "width_rounding": "nearest_even",
+    "min_content_width": 16
+  }
+}

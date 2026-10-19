@@ -1,0 +1,704 @@
+[
+  {
+    "metadata": {
+      "object": "card",
+      "id": "9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5",
+      "oracle_id": "78826359-fe63-44ad-adc4-a17ffcd710e4",
+      "multiverse_ids": [],
+      "mtgo_id": 89939,
+      "tcgplayer_id": 237592,
+      "cardmarket_id": 575348,
+      "name": "Nature's Lore",
+      "lang": "en",
+      "released_at": "2021-04-26",
+      "uri": "https://api.scryfall.com/cards/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5",
+      "scryfall_uri": "https://scryfall.com/card/sld/189/natures-lore?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T07:17:58Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+        "normal": "https://cards.scryfall.io/normal/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+        "large": "https://cards.scryfall.io/large/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+        "png": "https://cards.scryfall.io/png/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.png?1783927078",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+        "thumb": "https://cards.scryfall.io/thumb/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.webp?1783927078",
+        "grid": "https://cards.scryfall.io/grid/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.webp?1783927078",
+        "display": "https://cards.scryfall.io/display/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.webp?1783927078",
+        "art": "https://cards.scryfall.io/art/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.webp?1783927078",
+        "crop": "https://cards.scryfall.io/crop/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.webp?1783927078",
+        "jpeg": "https://cards.scryfall.io/normal/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078"
+      },
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set": "sld",
+      "set_name": "Secret Lair Drop",
+      "set_type": "box",
+      "set_uri": "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asld&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/sld?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A78826359-fe63-44ad-adc4-a17ffcd710e4&unique=prints",
+      "collector_number": "189",
+      "digital": false,
+      "rarity": "rare",
+      "flavor_text": "\"Greetings, tired traveler.\"",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Jeff Soto",
+      "artist_ids": [
+        "168a394b-7cae-469c-b8ec-74ed428004d3"
+      ],
+      "illustration_id": "62188f3f-c6bc-41e2-829d-509706d40fb0",
+      "border_color": "borderless",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": true,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "poster"
+      ],
+      "edhrec_rank": 26,
+      "penny_rank": 1562,
+      "prices": {
+        "usd": "33.58",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "27.07",
+        "eur_foil": null,
+        "tix": "0.80"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DNature%2527s%2BLore",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DNature%2527s%2BLore",
+        "edhrec": "https://edhrec.com/route/?cc=Nature%27s+Lore"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F237592%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575348&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/89939?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/9/f/9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5.jpg?1783927078",
+    "scan_sha256": "57e47d18dcac98344d14a8790a92e7d36a5fd5f6761a04bf6e0b1cf7e135ad52",
+    "image_size": [
+      672,
+      936
+    ],
+    "publisher_source": "https://magic.wizards.com/en/news/announcements/now-entering-dr-lairs-secretorium-superdrop-2021-04-22"
+  },
+  {
+    "metadata": {
+      "object": "card",
+      "id": "caff117f-844b-4d11-a104-930d7f238114",
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "multiverse_ids": [],
+      "mtgo_id": 89931,
+      "tcgplayer_id": 237593,
+      "cardmarket_id": 575350,
+      "name": "Wrath of God",
+      "lang": "en",
+      "released_at": "2021-04-26",
+      "uri": "https://api.scryfall.com/cards/caff117f-844b-4d11-a104-930d7f238114",
+      "scryfall_uri": "https://scryfall.com/card/sld/185/wrath-of-god?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T07:18:01Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+        "normal": "https://cards.scryfall.io/normal/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+        "large": "https://cards.scryfall.io/large/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+        "png": "https://cards.scryfall.io/png/front/c/a/caff117f-844b-4d11-a104-930d7f238114.png?1783927081",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+        "thumb": "https://cards.scryfall.io/thumb/front/c/a/caff117f-844b-4d11-a104-930d7f238114.webp?1783927081",
+        "grid": "https://cards.scryfall.io/grid/front/c/a/caff117f-844b-4d11-a104-930d7f238114.webp?1783927081",
+        "display": "https://cards.scryfall.io/display/front/c/a/caff117f-844b-4d11-a104-930d7f238114.webp?1783927081",
+        "art": "https://cards.scryfall.io/art/front/c/a/caff117f-844b-4d11-a104-930d7f238114.webp?1783927081",
+        "crop": "https://cards.scryfall.io/crop/front/c/a/caff117f-844b-4d11-a104-930d7f238114.webp?1783927081",
+        "jpeg": "https://cards.scryfall.io/normal/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081"
+      },
+      "mana_cost": "{2}{W}{W}",
+      "cmc": 4.0,
+      "type_line": "Sorcery",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "timeless": "legal",
+        "gladiator": "legal",
+        "pioneer": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "legal",
+        "competitivebrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set": "sld",
+      "set_name": "Secret Lair Drop",
+      "set_type": "box",
+      "set_uri": "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asld&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/sld?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/caff117f-844b-4d11-a104-930d7f238114/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A34515b16-c9a4-4f98-8c77-416a7a523407&unique=prints",
+      "collector_number": "185",
+      "digital": false,
+      "rarity": "rare",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Jermaine Rogers",
+      "artist_ids": [
+        "5b82ec6e-789e-413e-9d2c-82dd64466304"
+      ],
+      "illustration_id": "3eff1388-c964-4630-bd42-a752efac683a",
+      "border_color": "borderless",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": true,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "poster"
+      ],
+      "edhrec_rank": 687,
+      "penny_rank": 98,
+      "prices": {
+        "usd": "15.06",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "11.20",
+        "eur_foil": null,
+        "tix": "1.02"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DWrath%2Bof%2BGod",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DWrath%2Bof%2BGod",
+        "edhrec": "https://edhrec.com/route/?cc=Wrath+of+God"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F237593%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575350&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/89931?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/c/a/caff117f-844b-4d11-a104-930d7f238114.jpg?1783927081",
+    "scan_sha256": "597d3b66c5953d9fabdfb13d3c5eb858f8adc64461e8d1fead7e8dd8cf0f05a3",
+    "image_size": [
+      672,
+      936
+    ],
+    "publisher_source": "https://magic.wizards.com/en/news/announcements/now-entering-dr-lairs-secretorium-superdrop-2021-04-22"
+  },
+  {
+    "metadata": {
+      "object": "card",
+      "id": "81e57561-17d4-48db-8e40-f41019010bc9",
+      "oracle_id": "a54f0869-94c8-42af-9080-166efb9486a4",
+      "multiverse_ids": [],
+      "mtgo_id": 89937,
+      "tcgplayer_id": 237594,
+      "cardmarket_id": 575347,
+      "name": "Gamble",
+      "lang": "en",
+      "released_at": "2021-04-26",
+      "uri": "https://api.scryfall.com/cards/81e57561-17d4-48db-8e40-f41019010bc9",
+      "scryfall_uri": "https://scryfall.com/card/sld/188/gamble?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T07:17:59Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+        "normal": "https://cards.scryfall.io/normal/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+        "large": "https://cards.scryfall.io/large/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+        "png": "https://cards.scryfall.io/png/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.png?1783927079",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+        "thumb": "https://cards.scryfall.io/thumb/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.webp?1783927079",
+        "grid": "https://cards.scryfall.io/grid/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.webp?1783927079",
+        "display": "https://cards.scryfall.io/display/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.webp?1783927079",
+        "art": "https://cards.scryfall.io/art/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.webp?1783927079",
+        "crop": "https://cards.scryfall.io/crop/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.webp?1783927079",
+        "jpeg": "https://cards.scryfall.io/normal/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079"
+      },
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a card, put that card into your hand, discard a card at random, then shuffle.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "timeless": "legal",
+        "gladiator": "legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "legal",
+        "competitivebrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": true,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set": "sld",
+      "set_name": "Secret Lair Drop",
+      "set_type": "box",
+      "set_uri": "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asld&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/sld?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/81e57561-17d4-48db-8e40-f41019010bc9/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa54f0869-94c8-42af-9080-166efb9486a4&unique=prints",
+      "collector_number": "188",
+      "digital": false,
+      "rarity": "rare",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Sam McKenzie",
+      "artist_ids": [
+        "ea4a41a9-1e03-416d-bd51-5746db9b156a"
+      ],
+      "illustration_id": "370dab31-225b-48ad-8996-eb837a03b7c1",
+      "border_color": "borderless",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": true,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "poster"
+      ],
+      "edhrec_rank": 240,
+      "prices": {
+        "usd": "37.26",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "37.29",
+        "eur_foil": null,
+        "tix": "0.88"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGamble",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGamble",
+        "edhrec": "https://edhrec.com/route/?cc=Gamble"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F237594%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575347&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/89937?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/8/1/81e57561-17d4-48db-8e40-f41019010bc9.jpg?1783927079",
+    "scan_sha256": "ea3a38bf026cb32e1f2937ce5f215c704ebd42b447b618031b97445db737ddde",
+    "image_size": [
+      672,
+      936
+    ],
+    "publisher_source": "https://magic.wizards.com/en/news/announcements/now-entering-dr-lairs-secretorium-superdrop-2021-04-22"
+  },
+  {
+    "metadata": {
+      "object": "card",
+      "id": "56ad5bcb-7bdc-44ec-be67-f4dd49a17450",
+      "oracle_id": "932668fa-d6e3-41c0-ad0c-8e0a00e68d11",
+      "multiverse_ids": [],
+      "mtgo_id": 89935,
+      "tcgplayer_id": 237595,
+      "cardmarket_id": 575346,
+      "name": "Decree of Pain",
+      "lang": "en",
+      "released_at": "2021-04-26",
+      "uri": "https://api.scryfall.com/cards/56ad5bcb-7bdc-44ec-be67-f4dd49a17450",
+      "scryfall_uri": "https://scryfall.com/card/sld/187/decree-of-pain?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T07:17:59Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+        "normal": "https://cards.scryfall.io/normal/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+        "large": "https://cards.scryfall.io/large/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+        "png": "https://cards.scryfall.io/png/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.png?1783927079",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+        "thumb": "https://cards.scryfall.io/thumb/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.webp?1783927079",
+        "grid": "https://cards.scryfall.io/grid/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.webp?1783927079",
+        "display": "https://cards.scryfall.io/display/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.webp?1783927079",
+        "art": "https://cards.scryfall.io/art/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.webp?1783927079",
+        "crop": "https://cards.scryfall.io/crop/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.webp?1783927079",
+        "jpeg": "https://cards.scryfall.io/normal/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079"
+      },
+      "mana_cost": "{6}{B}{B}",
+      "cmc": 8.0,
+      "type_line": "Sorcery",
+      "oracle_text": "Destroy all creatures. They can't be regenerated. Draw a card for each creature destroyed this way.\nCycling {3}{B}{B} ({3}{B}{B}, Discard this card: Draw a card.)\nWhen you cycle this card, all creatures get -2/-2 until end of turn.",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [
+        "Cycling"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set": "sld",
+      "set_name": "Secret Lair Drop",
+      "set_type": "box",
+      "set_uri": "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asld&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/sld?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/56ad5bcb-7bdc-44ec-be67-f4dd49a17450/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A932668fa-d6e3-41c0-ad0c-8e0a00e68d11&unique=prints",
+      "collector_number": "187",
+      "digital": false,
+      "rarity": "rare",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Ian Jepson",
+      "artist_ids": [
+        "832f3a57-5fae-4744-bd17-9b2854a95412"
+      ],
+      "illustration_id": "e2f32377-7830-45fa-a044-94ffed943b93",
+      "border_color": "borderless",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": true,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "poster"
+      ],
+      "edhrec_rank": 1444,
+      "prices": {
+        "usd": "7.17",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "5.31",
+        "eur_foil": null,
+        "tix": "0.44"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDecree%2Bof%2BPain",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDecree%2Bof%2BPain",
+        "edhrec": "https://edhrec.com/route/?cc=Decree+of+Pain"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F237595%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575346&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/89935?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/5/6/56ad5bcb-7bdc-44ec-be67-f4dd49a17450.jpg?1783927079",
+    "scan_sha256": "485c62376ade8c9c26d1417b264afa2bb37aee6e9342d2c762f0266ea6236a6a",
+    "image_size": [
+      672,
+      936
+    ],
+    "publisher_source": "https://magic.wizards.com/en/news/announcements/now-entering-dr-lairs-secretorium-superdrop-2021-04-22"
+  },
+  {
+    "metadata": {
+      "object": "card",
+      "id": "d382c608-b3db-4112-b0c3-0e12199c4898",
+      "oracle_id": "ac641490-ca14-48d7-8cc4-b69ce984befa",
+      "multiverse_ids": [],
+      "mtgo_id": 89933,
+      "tcgplayer_id": 237596,
+      "cardmarket_id": 575349,
+      "name": "Preordain",
+      "lang": "en",
+      "released_at": "2021-04-26",
+      "uri": "https://api.scryfall.com/cards/d382c608-b3db-4112-b0c3-0e12199c4898",
+      "scryfall_uri": "https://scryfall.com/card/sld/186/preordain?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T07:18:00Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+        "normal": "https://cards.scryfall.io/normal/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+        "large": "https://cards.scryfall.io/large/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+        "png": "https://cards.scryfall.io/png/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.png?1783927080",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+        "thumb": "https://cards.scryfall.io/thumb/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.webp?1783927080",
+        "grid": "https://cards.scryfall.io/grid/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.webp?1783927080",
+        "display": "https://cards.scryfall.io/display/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.webp?1783927080",
+        "art": "https://cards.scryfall.io/art/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.webp?1783927080",
+        "crop": "https://cards.scryfall.io/crop/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.webp?1783927080",
+        "jpeg": "https://cards.scryfall.io/normal/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080"
+      },
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "oracle_text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "keywords": [
+        "Scry"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "banned",
+        "timeless": "legal",
+        "gladiator": "legal",
+        "pioneer": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "legal",
+        "competitivebrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "legal",
+        "tlr": "legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set": "sld",
+      "set_name": "Secret Lair Drop",
+      "set_type": "box",
+      "set_uri": "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-abdc-9d70fc5ed672",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asld&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/sld?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/d382c608-b3db-4112-b0c3-0e12199c4898/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aac641490-ca14-48d7-8cc4-b69ce984befa&unique=prints",
+      "collector_number": "186",
+      "digital": false,
+      "rarity": "rare",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Alexis Ziritt",
+      "artist_ids": [
+        "add4cc84-9254-4c0b-8fcd-af4a238bdbd5"
+      ],
+      "illustration_id": "1f8ca81b-035e-4849-b5ee-1fef5231d545",
+      "border_color": "borderless",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": true,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "poster"
+      ],
+      "edhrec_rank": 214,
+      "prices": {
+        "usd": "7.97",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "7.91",
+        "eur_foil": null,
+        "tix": "6.37"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPreordain",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DPreordain",
+        "edhrec": "https://edhrec.com/route/?cc=Preordain"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F237596%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575349&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/89933?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/d/3/d382c608-b3db-4112-b0c3-0e12199c4898.jpg?1783927080",
+    "scan_sha256": "8f95d266b2dcc81a121a2905c6e019db99b6b7bf208629b37addfa53dd284202",
+    "image_size": [
+      672,
+      936
+    ],
+    "publisher_source": "https://magic.wizards.com/en/news/announcements/now-entering-dr-lairs-secretorium-superdrop-2021-04-22"
+  }
+]

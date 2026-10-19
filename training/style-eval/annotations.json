@@ -1,0 +1,146 @@
+[
+  {
+    "id": "natures-lore-title",
+    "box": [
+      3,
+      0,
+      672,
+      190
+    ],
+    "text": "NATURE'S LORE",
+    "layout": "Ragged brush capitals with long diagonal flourishes and a rising/curved baseline.",
+    "punctuation": "The visible painted apostrophe is transcribed as U+0027; its brush contour does not define an underlying digital font encoding.",
+    "incidental_visible_content": [
+      "Adjacent SORCERY lettering falls inside the full rectangular title/flourish bounds.",
+      "The top of the green mana symbol is incidentally visible at lower right."
+    ],
+    "card_id": "9f9f5e0c-8bf4-46ab-ad79-332ceeaed3d5",
+    "oracle_id": "78826359-fe63-44ad-adc4-a17ffcd710e4",
+    "card_name": "Nature's Lore",
+    "language": "en",
+    "set": "sld",
+    "collector_number": "189",
+    "artist": "Jeff Soto",
+    "role": "title",
+    "reviewed_on": "2026-10-19",
+    "review_status": "accepted_complete_title_field",
+    "label_source": "Independent manual transcription of the full printed lettering; canonical metadata used only to identify the card, never as OCR output.",
+    "reviewer": "Codex full-resolution source-image visual inspection before inference",
+    "crop_policy": "Axis-aligned rectangle preserving all title letters, shadows, curvature and incidental original pixels; no deskew, dewarp, masking, reflow or synthetic reconstruction."
+  },
+  {
+    "id": "wrath-of-god-title",
+    "box": [
+      12,
+      40,
+      666,
+      342
+    ],
+    "text": "WRATH·OF·GOD",
+    "layout": "Strongly stretched psychedelic capitals wrap above and beside the illustrated face; the small OF sits at the top.",
+    "punctuation": "Both visible circular word separators are retained as U+00B7 middle dots; this is a literal visual title transcription, not canonical card-name spacing.",
+    "incidental_visible_content": [
+      "The mana cost lies inside the upper-right rectangular title bounds.",
+      "Original face/figure pixels remain between and in front of the arched letters."
+    ],
+    "card_id": "caff117f-844b-4d11-a104-930d7f238114",
+    "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+    "card_name": "Wrath of God",
+    "language": "en",
+    "set": "sld",
+    "collector_number": "185",
+    "artist": "Jermaine Rogers",
+    "role": "title",
+    "reviewed_on": "2026-10-19",
+    "review_status": "accepted_complete_title_field",
+    "label_source": "Independent manual transcription of the full printed lettering; canonical metadata used only to identify the card, never as OCR output.",
+    "reviewer": "Codex full-resolution source-image visual inspection before inference",
+    "crop_policy": "Axis-aligned rectangle preserving all title letters, shadows, curvature and incidental original pixels; no deskew, dewarp, masking, reflow or synthetic reconstruction."
+  },
+  {
+    "id": "gamble-title",
+    "box": [
+      14,
+      6,
+      548,
+      215
+    ],
+    "text": "GAMBLE",
+    "layout": "Angular heavy-metal capitals with deep offset purple shadows and uneven letter heights.",
+    "punctuation": "No title punctuation visible.",
+    "incidental_visible_content": [
+      "Artwork remains between the diagonal letters and their shadows.",
+      "A narrow edge of the adjacent mana-symbol disc may be visible at upper right."
+    ],
+    "card_id": "81e57561-17d4-48db-8e40-f41019010bc9",
+    "oracle_id": "a54f0869-94c8-42af-9080-166efb9486a4",
+    "card_name": "Gamble",
+    "language": "en",
+    "set": "sld",
+    "collector_number": "188",
+    "artist": "Sam McKenzie",
+    "role": "title",
+    "reviewed_on": "2026-10-19",
+    "review_status": "accepted_complete_title_field",
+    "label_source": "Independent manual transcription of the full printed lettering; canonical metadata used only to identify the card, never as OCR output.",
+    "reviewer": "Codex full-resolution source-image visual inspection before inference",
+    "crop_policy": "Axis-aligned rectangle preserving all title letters, shadows, curvature and incidental original pixels; no deskew, dewarp, masking, reflow or synthetic reconstruction."
+  },
+  {
+    "id": "decree-of-pain-title",
+    "box": [
+      12,
+      44,
+      670,
+      301
+    ],
+    "text": "DECREE of PAIN",
+    "layout": "Arched block capitals with lowercase central of, thick outlines, offset shadows and flame artwork.",
+    "punctuation": "No title punctuation visible; the visibly smaller lowercase of is preserved.",
+    "incidental_visible_content": [
+      "Lower fragments of the upper-right mana cost remain inside the full rectangular bounds.",
+      "Flame/creature artwork remains beneath the arched baseline."
+    ],
+    "card_id": "56ad5bcb-7bdc-44ec-be67-f4dd49a17450",
+    "oracle_id": "932668fa-d6e3-41c0-ad0c-8e0a00e68d11",
+    "card_name": "Decree of Pain",
+    "language": "en",
+    "set": "sld",
+    "collector_number": "187",
+    "artist": "Ian Jepson",
+    "role": "title",
+    "reviewed_on": "2026-10-19",
+    "review_status": "accepted_complete_title_field",
+    "label_source": "Independent manual transcription of the full printed lettering; canonical metadata used only to identify the card, never as OCR output.",
+    "reviewer": "Codex full-resolution source-image visual inspection before inference",
+    "crop_policy": "Axis-aligned rectangle preserving all title letters, shadows, curvature and incidental original pixels; no deskew, dewarp, masking, reflow or synthetic reconstruction."
+  },
+  {
+    "id": "preordain-title",
+    "box": [
+      70,
+      31,
+      640,
+      118
+    ],
+    "text": "PREORDAIN",
+    "layout": "Heavy rounded poster capitals with dark outlines over a dense geometric background.",
+    "punctuation": "No title punctuation visible.",
+    "incidental_visible_content": [
+      "The original geometric artwork remains around the title outline."
+    ],
+    "card_id": "d382c608-b3db-4112-b0c3-0e12199c4898",
+    "oracle_id": "ac641490-ca14-48d7-8cc4-b69ce984befa",
+    "card_name": "Preordain",
+    "language": "en",
+    "set": "sld",
+    "collector_number": "186",
+    "artist": "Alexis Ziritt",
+    "role": "title",
+    "reviewed_on": "2026-10-19",
+    "review_status": "accepted_complete_title_field",
+    "label_source": "Independent manual transcription of the full printed lettering; canonical metadata used only to identify the card, never as OCR output.",
+    "reviewer": "Codex full-resolution source-image visual inspection before inference",
+    "crop_policy": "Axis-aligned rectangle preserving all title letters, shadows, curvature and incidental original pixels; no deskew, dewarp, masking, reflow or synthetic reconstruction."
+  }
+]
