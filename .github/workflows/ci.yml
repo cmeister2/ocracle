@@ -155,8 +155,10 @@ jobs:
           key: native-paddle-${{ hashFiles('training/experimental_paddle_training/source-checkpoint.json') }}
       - name: Install the CPU training and export environment
         run: |
-          sudo apt-get update
-          sudo apt-get install --yes fonts-dejavu-extra
+          python -m unittest discover -s scripts -p 'test_bootstrap_native_font.py'
+          python scripts/bootstrap_native_font.py --destination "$RUNNER_TEMP/native-font"
+          sudo install -D -m 0644 "$RUNNER_TEMP/native-font/DejaVuSerif-Italic.ttf" /usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf
+          sudo install -D -m 0644 "$RUNNER_TEMP/native-font/copyright" /usr/local/share/doc/ocracle-native-font/copyright
           python -m venv "$RUNNER_TEMP/paddle-training"
           "$RUNNER_TEMP/paddle-training/bin/python" -m pip install --require-hashes -r training/experimental_paddle_training/requirements.lock -r training/experimental_paddle_training/requirements-export.lock -r training/experimental_paddle_training/requirements-mtg.lock
           printf '%s\n' "$RUNNER_TEMP/paddle-training/bin" >> "$GITHUB_PATH"
