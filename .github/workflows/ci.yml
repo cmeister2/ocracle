@@ -160,7 +160,7 @@ jobs:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
       - name: Give unreleased builds a unique version
         run: |
-          if rg -q '^version = "0\.0\.0"$' Cargo.toml; then
+          if grep -q '^version = "0\.0\.0"$' Cargo.toml; then
             node scripts/prepare-release.mjs "0.0.${GITHUB_RUN_ID}"
           fi
       - run: cargo package --locked --allow-dirty
