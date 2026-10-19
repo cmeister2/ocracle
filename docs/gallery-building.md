@@ -2,9 +2,11 @@
 
 The static site in `docs/gallery/` displays actual printed card crops and recorded
 Rust OCR output. `assets/catalog.json` connects independent fixture bundles to
-model runs. The default is the Paddle baseline; English also offers the frozen
-MTG-tuned CRNN and original Ocrs baseline. The language filter is populated from
-the available printings.
+model runs. The page shows eight fixed examples using the small Paddle model,
+with original and severely blurred versions visible together. Four flavor and
+reminder italic examples appear first. There are no model, language or image
+selectors. Complete JSON bundles preserve the broader English and localized
+evaluations, including the frozen CRNN comparisons.
 
 The original English fixture manifest, crop images and two original result files
 are frozen. Further language examples live in separate bundles. The current
