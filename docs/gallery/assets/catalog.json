@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "default_model": "paddle",
+  "default_language": "en",
+  "language_note": "The gallery contains English, French, German, Spanish, Italian and Portuguese examples. Latin-script text is the main target; non-Latin scripts are best effort. These small fixed samples do not establish complete font or language coverage.",
+  "models": [
+    {"id": "paddle", "label": "Paddle baseline"},
+    {"id": "mtg", "label": "MTG tuned (English)"},
+    {"id": "base", "label": "General base (English)"}
+  ],
+  "bundles": [
+    {
+      "id": "english",
+      "label": "English fonts and italics",
+      "fixtures": "assets/fixtures.json",
+      "runs": [
+        {"model": "paddle", "results": "assets/results-paddle.json"},
+        {"model": "mtg", "results": "assets/results.json"},
+        {"model": "base", "results": "assets/results-baseline.json"}
+      ]
+    },
+    {
+      "id": "latin",
+      "label": "Accented localized titles",
+      "fixtures": "assets/latin/fixtures.json",
+      "runs": [
+        {"model": "paddle", "results": "assets/latin/results-paddle.json"}
+      ]
+    }
+  ]
+}

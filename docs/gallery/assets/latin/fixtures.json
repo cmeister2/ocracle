@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "held_out": true,
+  "verified_on": "2026-10-19",
+  "covered_languages": [
+    "de",
+    "es",
+    "fr",
+    "it",
+    "pt"
+  ],
+  "language_note": "Fixed accented title examples from French, German, Spanish, Italian and Portuguese printings; ten titles do not establish complete language or font coverage.",
+  "source_manifest_sha256": "fd43111290a66321ad3c74d222dabd04f631566bd8385cf0bcc0b57df7dc1278",
+  "source_cards_sha256": "e988076b74eb17590ada328d27af805b0489384982d76581c6a9e216e1151179",
+  "source_documents": {
+    "training/latin-eval/manifest.jsonl": "fd43111290a66321ad3c74d222dabd04f631566bd8385cf0bcc0b57df7dc1278",
+    "training/latin-eval/cards.json": "e988076b74eb17590ada328d27af805b0489384982d76581c6a9e216e1151179"
+  },
+  "notes": "Independent test identities excluded from custom fine-tuning; unknown original pretrained model training membership. Selection did not filter on OCR output or confidence.",
+  "samples": [
+    {
+      "id": "latin-fr-m21-47",
+      "title": "French · accented title",
+      "category": "title",
+      "language": "fr",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Sphère de capture",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        550,
+        99
+      ],
+      "source": {
+        "name": "Capture Sphere",
+        "print_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+        "oracle_id": "2dc59566-10cb-468a-b6a2-17d6c0186e6d",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "47",
+        "scryfall_url": "https://scryfall.com/card/m21/47/fr/sph%C3%A8re-de-capture-(capture-sphere)",
+        "image_url": "https://cards.scryfall.io/large/front/f/a/fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7.jpg?1782905824",
+        "source_image_sha256": "eb94a3fdb934074759650531ca1f628b266056d5d4c0b96ebb732621a73cf69b"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "fr-m21-47-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "fr-m21-47-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-fr-m21-182",
+      "title": "French · accented title",
+      "category": "title",
+      "language": "fr",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Renaissance fongoïde",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        550,
+        99
+      ],
+      "source": {
+        "name": "Fungal Rebirth",
+        "print_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+        "oracle_id": "b917f39a-3176-47ad-afda-08d09b873c02",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "182",
+        "scryfall_url": "https://scryfall.com/card/m21/182/fr/renaissance-fongo%C3%AFde-(fungal-rebirth)",
+        "image_url": "https://cards.scryfall.io/large/front/4/d/4d8605da-d353-40bf-9a94-3bff2bd43d25.jpg?1782904834",
+        "source_image_sha256": "cbd8efd435d1b405cd0e86ac589e4d4179831088242d53779fbc70bcd9954ba5"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "fr-m21-182-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "fr-m21-182-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-de-m21-25",
+      "title": "German · accented title",
+      "category": "title",
+      "language": "de",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Licht der Verheißung",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        550,
+        99
+      ],
+      "source": {
+        "name": "Light of Promise",
+        "print_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+        "oracle_id": "64c54c9f-0550-41e2-a44a-5892a199f670",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/m21/25/de/licht-der-verhei%C3%9Fung-(light-of-promise)",
+        "image_url": "https://cards.scryfall.io/large/front/2/9/2936555e-4ee7-4c91-9e3b-39be058c4efb.jpg?1782905969",
+        "source_image_sha256": "deb707de0461275b98393837c9264ab6b7e2b09765be2fb02674d837137533ef"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "de-m21-25-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "de-m21-25-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-de-m21-179",
+      "title": "German · accented title",
+      "category": "title",
+      "language": "de",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Gargaroth-Ältester",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        519,
+        99
+      ],
+      "source": {
+        "name": "Elder Gargaroth",
+        "print_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+        "oracle_id": "397b9dcf-690a-4a58-8637-bb9baab7cc2f",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "179",
+        "scryfall_url": "https://scryfall.com/card/m21/179/de/gargaroth-%C3%A4ltester-(elder-gargaroth)",
+        "image_url": "https://cards.scryfall.io/large/front/1/c/1cfb7471-be1f-4896-83dc-ee7a9f76f9cb.jpg?1782904856",
+        "source_image_sha256": "74ebc0dd2e7a0781135d93fe0eb6ffa3f13541d59d8c1a499c1eddf604d872c2"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "de-m21-179-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "de-m21-179-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-es-m21-8",
+      "title": "Spanish · accented title",
+      "category": "title",
+      "language": "es",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Acólita de Basri",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        519,
+        99
+      ],
+      "source": {
+        "name": "Basri's Acolyte",
+        "print_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+        "oracle_id": "92c824da-2351-43bd-9fa0-d09709ad8205",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "8",
+        "scryfall_url": "https://scryfall.com/card/m21/8/es/ac%C3%B3lita-de-basri-(basris-acolyte)",
+        "image_url": "https://cards.scryfall.io/large/front/2/4/24c69413-6402-49b1-ba8e-d22f7310aca7.jpg?1782906097",
+        "source_image_sha256": "0fa3297e1604327aa727b9a9078201aa6e3cc5ca18d680a2c30f38910ecc80b6"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "es-m21-8-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "es-m21-8-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-es-m21-198",
+      "title": "Spanish · accented title",
+      "category": "title",
+      "language": "es",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Dríada Quirion",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        550,
+        99
+      ],
+      "source": {
+        "name": "Quirion Dryad",
+        "print_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+        "oracle_id": "f42b6510-7322-4733-85ea-7ae6bd6ca8fc",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "198",
+        "scryfall_url": "https://scryfall.com/card/m21/198/es/dr%C3%ADada-quirion-(quirion-dryad)",
+        "image_url": "https://cards.scryfall.io/large/front/7/1/7142df39-9c9c-4821-8f73-06b5dc3f8fc3.jpg?1782904715",
+        "source_image_sha256": "d43ec4d0dcd4d19ef4bcd85754be2fc413ff33e06f746ebf84ed203194128462"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "es-m21-198-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "es-m21-198-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-pt-m21-57",
+      "title": "Portuguese · accented title",
+      "category": "title",
+      "language": "pt",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Falha na Conjuração",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        581,
+        99
+      ],
+      "source": {
+        "name": "Miscast",
+        "print_id": "a8048f57-b854-45a5-90cd-263666322d92",
+        "oracle_id": "e08c71aa-d35c-4c20-b4db-ae9d36ee3169",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "57",
+        "scryfall_url": "https://scryfall.com/card/m21/57/pt/falha-na-conjura%C3%A7%C3%A3o-(miscast)",
+        "image_url": "https://cards.scryfall.io/large/front/a/8/a8048f57-b854-45a5-90cd-263666322d92.jpg?1782905759",
+        "source_image_sha256": "e3bc9412826ac38a41bfd8b9c2f1e80a7cf69d302c6a95492136200ad483f296"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "pt-m21-57-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "pt-m21-57-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-pt-m21-118",
+      "title": "Portuguese · accented title",
+      "category": "title",
+      "language": "pt",
+      "font": "Printed M21 localized title; preserve visible diacritics",
+      "ground_truth": "Névoa Pestilenta",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        519,
+        99
+      ],
+      "source": {
+        "name": "Pestilent Haze",
+        "print_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+        "oracle_id": "b24d1540-ed8b-4df3-abfe-1b8492a58388",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m21/118/pt/n%C3%A9voa-pestilenta-(pestilent-haze)",
+        "image_url": "https://cards.scryfall.io/large/front/8/3/83a67403-ce23-474a-89ed-2df863fae9b7.jpg?1782905319",
+        "source_image_sha256": "ad060e5a91c9cab3397f84b34d859c20957f9cdfc1e2b7e3f77d4d6bd28dae1b"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "pt-m21-118-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "pt-m21-118-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-it-m14-66",
+      "title": "Italian · accented title",
+      "category": "title",
+      "language": "it",
+      "font": "Printed M14 localized title; preserve visible diacritics",
+      "ground_truth": "Opportunità",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        300,
+        99
+      ],
+      "source": {
+        "name": "Opportunity",
+        "print_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+        "oracle_id": "1f544a9f-c238-4858-be19-d6cd7d023dcc",
+        "language": "it",
+        "set": "M14",
+        "collector_number": "66",
+        "scryfall_url": "https://scryfall.com/card/m14/66/it/opportunit%C3%A0-(opportunity)",
+        "image_url": "https://cards.scryfall.io/large/front/a/4/a4b2c277-d9ae-4d53-80b1-48c6e89f9108.jpg?1782976896",
+        "source_image_sha256": "239d742f77a62dc5a56a4ee7e6da54008627b070be5666f03a8429a7b2b816c9"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "it-m14-66-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "it-m14-66-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    },
+    {
+      "id": "latin-it-akh-84",
+      "title": "Italian · accented title",
+      "category": "title",
+      "language": "it",
+      "font": "Printed AKH localized title; preserve visible diacritics",
+      "ground_truth": "Crudele Realtà",
+      "transcription": "Manual visual transcription of this printed crop, reviewed 2026-10-19; not English Oracle text.",
+      "crop_bounds_xyxy": [
+        53,
+        49,
+        519,
+        99
+      ],
+      "source": {
+        "name": "Cruel Reality",
+        "print_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+        "oracle_id": "2e3cc9b6-7849-4385-a487-c8f5364174e7",
+        "language": "it",
+        "set": "AKH",
+        "collector_number": "84",
+        "scryfall_url": "https://scryfall.com/card/akh/84/it/crudele-realt%C3%A0-(cruel-reality)",
+        "image_url": "https://cards.scryfall.io/large/front/6/a/6a339bc4-7e81-4177-9db6-61344d5c68e3.jpg?1782943113",
+        "source_image_sha256": "3a84dfc8dd58beea8b25ef46131c6facd56e9db0a15c8916e4c3d3a5dbf40eeb"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "it-akh-84-clean.png",
+          "transform": "crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "it-akh-84-blur.png",
+          "transform": "Gaussian blur sigma2.4 source pixels, then bilinear downsample to30percent in each dimension; no upsampling."
+        }
+      ]
+    }
+  ]
+}
