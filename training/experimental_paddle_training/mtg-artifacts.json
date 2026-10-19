@@ -22,7 +22,7 @@
     "training/experimental_paddle_training/mtg-export.json": "6c0feaa8fa47496cf5662bd9b159de73aa64c9b677e6c20c106f9b8ac7110b51",
     "training/experimental_paddle_training/mtg-development.json": "cd3439b4a2323a9d6bdcf0e13514b837dc51377113cddf6ddfe68d58e6ab9817",
     "training/experimental_paddle_training/mtg-gallery.json": "24482cacb62c2c3b69aa20ef13da18404d2742496f846b9c3dd5c9e643812622",
-    "docs/experiments/paddle-mtg-pilot.md": "183ab04107a76af57ec1be8fcfac9d2125fe8228f913efbb1d007e1a38341f7f"
+    "docs/experiments/paddle-mtg-pilot.md": "d0bcfdd9029dd194be8b597e74141cd032df3895def9c35ad58d74d57ee0a8e1"
   },
   "source_checkpoint_sha256": "25c9bd54b0e5900916e8bb6ada938abeffb1eac1baedac0ca54a45b1c9310825",
   "selected_step": 25,

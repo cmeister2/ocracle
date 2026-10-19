@@ -12,10 +12,10 @@ Requires **Rust 1.94+** and Python 3 for the initial model download. OCR runs of
 git clone https://github.com/cmeister2/ocracle.git
 cd ocracle
 python3 training/download_models.py
-cargo run --release -- recognize card.jpg --language en
+cargo run --release -- recognize card.jpg
 ```
 
-Choose one language per card: `en`, `es`, `fr`, `de`, `it`, `pt`, or `la`.
+English is the default; use `--language fr` for another printed language.
 Use `--line` for a text crop. Output includes raw text, coordinates, method and an
 uncalibrated confidence score. No Oracle lookup replaces the observed text.
 

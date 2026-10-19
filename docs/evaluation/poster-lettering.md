@@ -1,11 +1,15 @@
 # Complete poster-lettering challenge
 
-With each complete field supplied as a single line, the current Paddle profile
+With each complete field supplied as a single line, the archived Paddle small model
 reads **6/10** title fields exactly. It reads
 Nature's Lore, Gamble and Preordain in both clean and severe variants, but fails
 the strongly arched Wrath of God and Decree of Pain fields. The MTG English CRNN
 and generic Ocrs CRNN both score **0/10**. These are actual Rust CLI results,
 including all original/enhanced candidates and their confidence scores.
+
+The separate frozen medium assessment also reads **6/10** exactly, with
+**25/108 character edits (23.148% CER)**. Both arched titles still fail. This
+post-selection comparison does not select or promote a model.
 
 The separate detected-text path scores **4/10**, and fixes neither arched title.
 It can add artwork/neighbouring-field false positives; confidence selection makes
@@ -67,22 +71,31 @@ enlarges severe crops only for inspection; OCR receives their native dimensions.
 
 ## Actual model results
 
-The benchmark uses the production `en` Paddle profile, retained `en-mtg` profile,
-and pinned generic Ocrs base weights with an explicit grayscale CRNN
-configuration. Model/configuration/registry files and the executable are copied
-to an isolated snapshot before inference, so concurrent builds or training
-cannot change the evaluated model. The offline model-integrity verifier runs
-before the snapshot is used.
+The benchmark binds archived artifacts, independently of the mutable active
+language registry. Historical label `en` means the English artifact from
+[the Paddle small manifest](../../models/paddle-v6-manifest.json).
+`en-mtg` is a private benchmark label for the retained English CRNN in
+[the CRNN manifest](../../models/manifest.json), with its explicit retained
+configuration. `en-medium` is a private historical label for language `en` in
+[the medium manifest](../../models/paddle-v6-medium-manifest.json).
+Generic Ocrs base weights use the retained explicit grayscale configuration.
+These labels do not add caller-facing quality profiles or reinterpret the
+reports when active `en` changes. Model/configuration files and the executable
+are copied to an isolated snapshot, and their archived digests verify before
+inference.
 
 The CLI receives `--line --passes all` for every case/model. It bypasses text
 detection and retains both preprocessing candidates. The selected result is the
 engine's existing confidence choice; expected text never selects a pass. There
-are 30 successful CLI runs and 60 retained candidate observations, with no
-inference errors or omitted cases.
+are 30 successful CLI runs and 60 retained candidate observations in the original
+three-model report. The separate medium report adds ten runs and 20 candidates.
+Neither has inference errors or omitted cases. Executable hashes are retained
+in each report; the medium and original reports use different snapshots.
 
 | Model | Original exact / CER | Enhanced exact / CER | Confidence-selected exact / CER |
 | --- | --- | --- | --- |
 | Paddle PP-OCRv6 small (`en`) | 6/10 / 25.93% | 6/10 / 29.63% | 6/10 / 25.93% |
+| Paddle PP-OCRv6 medium (`en-medium`, separate assessment) | 6/10 / 23.15% | 6/10 / 27.78% | 6/10 / 23.15% |
 | MTG English CRNN (`en-mtg`) | 0/10 / 54.63% | 0/10 / 50.93% | 0/10 / 53.70% |
 | Generic Ocrs CRNN | 0/10 / 49.07% | 0/10 / 49.07% | 0/10 / 48.15% |
 
@@ -92,6 +105,12 @@ clean Decree is `DECREPAIN` (score0.786). The complete title labels, malformed
 predictions, per-pass scores, source hashes and actual inference JSON are retained
 in [results.json](../../training/style-eval/results.json). Enhancement changes
 some erroneous outputs without fixing either arched title.
+
+The medium results are retained separately in
+[results-medium.json](../../training/style-eval/results-medium.json). Medium
+also recognizes Nature's Lore, Gamble and Preordain in both variants, while
+Wrath and Decree remain incorrect. The original small/CRNN and detected-text
+reports are unchanged.
 
 Scoring uses NFC and collapsed whitespace, preserving case, apostrophes and
 middle dots. CER is total character edits divided by108 reference characters
@@ -155,8 +174,10 @@ python3 -m venv /tmp/ocracle-style-venv
 /tmp/ocracle-style-venv/bin/python training/style-eval/prepare.py --check --download-sources
 /tmp/ocracle-style-venv/bin/python training/style-eval/score.py --check
 /tmp/ocracle-style-venv/bin/python training/style-eval/score.py --detected --check
+/tmp/ocracle-style-venv/bin/python training/style-eval/score.py --medium --check
 /tmp/ocracle-style-venv/bin/python training/style-eval/score.py --output /tmp/ocracle-style-results.json
 /tmp/ocracle-style-venv/bin/python training/style-eval/score.py --detected --output /tmp/ocracle-style-detected-results.json
+/tmp/ocracle-style-venv/bin/python training/style-eval/score.py --medium --output /tmp/ocracle-style-medium-results.json
 ```
 
 `prepare.py --check` verifies all ten committed PNGs, the frozen annotations and
@@ -168,4 +189,7 @@ source digest mismatch. Missing source scans do not prevent verification of the
 already committed crop hashes; they prevent claiming a fresh source replay.
 `score.py --check` verifies complete case/model membership, raw inference JSON,
 recognizer/detector identities, confidence selection and recomputed per-case/
-aggregate metrics without running inference or rewriting either result file.
+aggregate metrics without running inference or rewriting any result file.
+All three checks bind the archived model/configuration identities, require
+finite posterior scores and verify the complete selected candidate, including
+text, method and lines. Historical labels never resolve through active `en`.

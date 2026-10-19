@@ -1,8 +1,8 @@
 # Official Paddle recognizer candidates
 
-On a fixed Latin development cohort, unmodified PP-OCRv6 medium improves original-pass recognition over the current small model, particularly on italic and blurred lines. This is evidence for further assessment; production models, profiles and frozen test results are unchanged.
+On a fixed Latin development cohort, unmodified PP-OCRv6 medium improves original-pass recognition over the small baseline, particularly on italic and blurred lines. This document preserves that candidate experiment and its original observations; the current default decision is supported by the separate fresh comparison.
 
-The subsequent [fresh blur comparison](paddle-blur.md) evaluates both production passes and supports explicit medium profiles while retaining the small default. Its separate clean-data regressions qualify this earlier result.
+The [fresh blur comparison](paddle-blur.md) supports medium with one original-image pass as the default for `en`, `es`, `fr`, `de`, `it` and `pt`. Normal callers select only the printed language; `la` and best-effort `ja`, `zhs` and `zht` retain small. Clean-data regressions qualify the aggregate improvement. In the fixed gallery, medium reads `Renaissance fongoïde` as `Renaissance fongoide` on both clean and blurred inputs; small read the clean case correctly. These failures remain in the recorded results.
 
 ## Sources and selection
 
@@ -53,7 +53,7 @@ Overall character error rate is **8.062% small, 6.732% medium, 8.233% Latin v5**
 
 Every call records elapsed process wall time, including model loading and startup. The medians are small 0.180 s, medium 0.387 s and Latin v5 0.123 s. Two concurrent calls each use two Rayon threads, with other work on the host. These measurements describe this experiment, not controlled throughput or steady-state inference. Medium's weight file is 3.62 times larger than small.
 
-These are development/training identities with known CRNN lineage. Original body discovery used accent-folded OCR matching before manual label review, which creates selection bias. The languages are French, German, Italian, Portuguese and Spanish; this is not an English historic-font inventory. Upstream Paddle training membership is unknown. No frozen English gallery, independent accented-title, rare-script or concert-poster test is used for candidate selection. The fresh card-disjoint blur corpus and full enhancement/default-layout behavior require a separate fixed evaluation before any runtime/default decision. No all-font or all-language completion claim follows from this result.
+These are development/training identities with known CRNN lineage. Original body discovery used accent-folded OCR matching before manual label review, which creates selection bias. The languages are French, German, Italian, Portuguese and Spanish; this is not an English historic-font inventory. Upstream Paddle training membership is unknown. No frozen English gallery, independent accented-title, rare-script or concert-poster test was used for candidate selection. The [separate fresh evaluation](paddle-blur.md) supplies card-disjoint evidence and retains both original/enhanced outputs for the default decision; these line-crop runs do not establish whole-card layout accuracy. No all-font or all-language completion claim follows from this result.
 
 ## Reproduction
 

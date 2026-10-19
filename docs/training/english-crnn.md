@@ -1,14 +1,18 @@
 # MTG recognition training
 
-The training workflow below produces the experimental **English CRNN**
-(`--language en-mtg`). The default Latin-language profiles use an upstream colour
-model evaluated on MTG, with [pinned provenance and actual Rust comparisons](../experiments/paddle.md).
+The training workflow below produces the retained experimental **English CRNN**
+artifact [ocracle-mtg.rten](../../models/manifest.json), paired with
+[recognizer-config.json](../../models/recognizer-config.json) for explicit
+research model loading. It has no public language profile. The normal API uses
+official PP-OCRv6 medium with one original-image pass for six evaluated
+Latin-script languages; `la` and best-effort Japanese/Chinese retain small.
+See [model provenance](../models.md) and the [fresh comparison](../experiments/paddle-blur.md).
 Latin-script languages, historic fonts, italics and blur are the priority;
 other alphabets are best effort. [Language coverage](../language-coverage.md)
 tracks the remaining gaps. Phyrexian is a separate stretch goal.
 
-This trains the neural recognizer used by `ocracle`. The detector locates text;
-the recognizer reads image pixels directly with convolutional visual features,
+The detector locates text independently. This experimental recognizer reads
+image pixels directly with convolutional visual features,
 a two-layer bidirectional GRU, and CTC. Card names are labels for training and
 scoring, never a database used to correct recognition results.
 

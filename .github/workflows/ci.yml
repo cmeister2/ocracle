@@ -121,6 +121,7 @@ jobs:
       - run: python training/style-eval/prepare.py --check
       - run: python training/style-eval/score.py --check
       - run: python training/style-eval/score.py --detected --check
+      - run: python training/style-eval/score.py --medium --check
 
   native-training:
     name: Native Paddle training and Rust export

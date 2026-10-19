@@ -28,11 +28,10 @@ class MediumRegistry(unittest.TestCase):
                  "training/experimental_paddle/direct-model-config.json",
                  "training/experimental_paddle_candidates/sources.json",
                  "training/experimental_paddle_candidates/sources/v6-medium/inference.yml"}
-        registry = json.loads((ROOT / "models/profiles.json").read_text())
-        registry["profiles"] = [profile for profile in registry["profiles"]
-                                if profile["id"] in integrity.PADDLE_PROFILES | {"en-mtg"}]
-        files.update(profile["configuration"] for profile in registry["profiles"])
         small = json.loads((ROOT / "models/paddle-v6-manifest.json").read_text())
+        registry = {"schema_version": 1, "profiles": deepcopy(small["profiles"])}
+        legacy = json.loads((ROOT / "models/manifest.json").read_text())
+        files.update(item["configuration"] for item in legacy["adapted_models"])
         files.update(profile["configuration"] for profile in small["profiles"])
         files.add(small["evaluation"])
         evidence = json.loads((ROOT / small["evaluation"]).read_text())
@@ -57,7 +56,7 @@ class MediumRegistry(unittest.TestCase):
         config["model_name"] = "Official PP-OCRv6 medium; temporary registry fixture"
         path = f"models/paddle-v6-medium/{language}.json"
         self.write(path, config)
-        return {"id": language + "-medium", "language": language, "model": "models/ppocr-v6-medium.onnx",
+        return {"id": language, "language": language, "model": "models/ppocr-v6-medium.onnx",
                 "sha256": integrity.MEDIUM_SHA256, "configuration": path,
                 "configuration_sha256": hashlib.sha256((self.root / path).read_bytes()).hexdigest()}
 
@@ -74,13 +73,14 @@ class MediumRegistry(unittest.TestCase):
                         "bytes": integrity.MEDIUM_BYTES, "license": "Apache-2.0"}], "profiles": profiles}
         self.write(integrity.MEDIUM_MANIFEST, manifest)
         registry = self.read("models/profiles.json")
-        registry["profiles"].extend(profiles)
+        replacements = {profile["id"]: profile for profile in profiles}
+        registry["profiles"] = [replacements.get(profile["id"], profile) for profile in registry["profiles"]]
         self.write("models/profiles.json", registry)
         return manifest
 
-    def test_current_registry_needs_no_medium_manifest_or_downloads(self):
+    def test_language_only_small_registry_needs_no_optional_medium_download(self):
         result = integrity.verify(self.root)
-        self.assertEqual((result["profiles"], result["direct_observations"]), (11, 58))
+        self.assertEqual((result["profiles"], result["direct_observations"]), (10, 58))
         self.assertFalse((self.root / integrity.MEDIUM_MANIFEST).exists())
 
     def test_optional_medium_and_latin_aliases_preserve_archived_small_evidence(self):
@@ -88,8 +88,10 @@ class MediumRegistry(unittest.TestCase):
         original_profiles = self.read("models/profiles.json")["profiles"]
         self.install_medium()
         result = integrity.verify(self.root)
-        self.assertEqual((result["profiles"], result["direct_observations"]), (17, 58))
-        self.assertEqual(self.read("models/profiles.json")["profiles"][:11], original_profiles)
+        self.assertEqual((result["profiles"], result["direct_observations"]), (10, 58))
+        retained = {profile["id"]: profile for profile in original_profiles if profile["id"] not in integrity.MEDIUM_PROFILE_LANGUAGES}
+        self.assertEqual({profile["id"]: profile for profile in self.read("models/profiles.json")["profiles"]
+                          if profile["id"] in retained}, retained)
         self.assertIn("models/ppocr-v6-medium.onnx", result["absent_optional_model_files"])
         self.assertEqual((self.root / "models/paddle-v6-manifest.json").read_bytes(), archived)
 
@@ -108,7 +110,7 @@ class MediumRegistry(unittest.TestCase):
     def test_active_alias_requires_the_exact_declared_configuration(self):
         self.install_medium()
         registry = self.read("models/profiles.json")
-        profile = next(profile for profile in registry["profiles"] if profile["id"] == "fr-medium")
+        profile = next(profile for profile in registry["profiles"] if profile["id"] == "fr")
         original = self.root / profile["configuration"]
         profile["configuration"] = "models/undeclared-fr.json"
         shutil.copy2(original, self.root / profile["configuration"])
@@ -126,22 +128,40 @@ class MediumRegistry(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "manifest profile set"):
                     integrity.verify(self.root)
 
-    def test_original_alias_cannot_be_repointed_to_medium(self):
-        manifest = self.install_medium()
+    def test_measured_language_cannot_silently_revert_to_small(self):
+        self.install_medium()
         registry = self.read("models/profiles.json")
-        profile = next(profile for profile in manifest["profiles"] if profile["id"] == "fr-medium")
+        profile = next(profile for profile in self.read("models/paddle-v6-manifest.json")["profiles"] if profile["id"] == "fr")
         index = next(index for index, profile in enumerate(registry["profiles"]) if profile["id"] == "fr")
         registry["profiles"][index] = {**profile, "id": "fr"}
         self.write("models/profiles.json", registry)
-        with self.assertRaisesRegex(ValueError, "Original profile must retain"):
+        with self.assertRaisesRegex(ValueError, "no exact pinned declaration"):
             integrity.verify(self.root)
 
-    def test_missing_declared_medium_alias_is_rejected(self):
+    def test_missing_printed_language_is_rejected(self):
         self.install_medium()
         registry = self.read("models/profiles.json")
-        registry["profiles"] = [profile for profile in registry["profiles"] if profile["id"] != "fr-medium"]
+        registry["profiles"] = [profile for profile in registry["profiles"] if profile["id"] != "fr"]
         self.write("models/profiles.json", registry)
-        with self.assertRaisesRegex(ValueError, "Expected original/optional-medium profile set"):
+        with self.assertRaisesRegex(ValueError, "exactly ten printed-language"):
+            integrity.verify(self.root)
+
+    def test_quality_and_diagnostic_profile_ids_are_rejected(self):
+        self.install_medium()
+        original = self.read("models/profiles.json")
+        for key in ["fr-medium", "en-blur", "en-mtg"]:
+            with self.subTest(key=key):
+                registry = deepcopy(original)
+                registry["profiles"].append({**registry["profiles"][0], "id": key})
+                self.write("models/profiles.json", registry)
+                with self.assertRaisesRegex(ValueError, "Unexpected non-language profile"):
+                    integrity.verify(self.root)
+
+    def test_unregistered_historical_crnn_contract_is_still_checked(self):
+        config = self.read("models/recognizer-config.json")
+        config["input"] = {"color_mode": "bgr"}
+        self.write("models/recognizer-config.json", config)
+        with self.assertRaisesRegex(ValueError, "Retained MTG CRNN input contract"):
             integrity.verify(self.root)
 
     def test_wrong_official_model_and_dictionary_pins_are_rejected(self):
@@ -164,7 +184,7 @@ class MediumRegistry(unittest.TestCase):
 
     def test_changed_medium_tensor_contract_is_rejected_after_rehashing(self):
         manifest = self.install_medium()
-        profile = next(profile for profile in manifest["profiles"] if profile["id"] == "fr-medium")
+        profile = next(profile for profile in manifest["profiles"] if profile["id"] == "fr")
         config = self.read(profile["configuration"])
         config["input"]["color_mode"] = "rgb"
         self.write(profile["configuration"], config)

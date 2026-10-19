@@ -27,28 +27,28 @@ enum Command {
         /// Image to read (PNG, JPEG or WebP).
         image: PathBuf,
         /// CTC recognition weights in RTen or ONNX format.
-        #[arg(long, required_unless_present = "language")]
+        #[arg(long, hide = true)]
         recognition_model: Option<PathBuf>,
-        /// Recognition profile for the whole card, such as en, fr or fr-medium.
-        #[arg(long, visible_alias = "profile", conflicts_with_all = ["recognition_model", "model_config"])]
+        /// Printed language, such as en or fr; defaults to English.
+        #[arg(long, alias = "profile", conflicts_with_all = ["recognition_model", "model_config"])]
         language: Option<String>,
-        /// Repository/model root containing models/profiles.json for --language.
+        /// Root directory containing models/ and its downloaded weights.
         #[arg(long, default_value = ".")]
         model_root: PathBuf,
         /// Detector override; profiles otherwise use models/text-detection.onnx.
-        #[arg(long)]
+        #[arg(long, hide = true)]
         detection_model: Option<PathBuf>,
         /// JSON checkpoint alphabet, input height, architecture and model name.
-        #[arg(long)]
+        #[arg(long, hide = true, requires = "recognition_model")]
         model_config: Option<PathBuf>,
         /// Treat the entire image as one line and skip detection.
         #[arg(long)]
         line: bool,
         /// Image preprocessing attempts to evaluate.
-        #[arg(long, value_enum, default_value = "all")]
+        #[arg(long, hide = true, value_enum, default_value = "original")]
         passes: Passes,
         /// Illustration masking for standard upright cards; text scans the whole image.
-        #[arg(long, value_enum, default_value = "text")]
+        #[arg(long, hide = true, value_enum, default_value = "text")]
         layout: Layout,
     },
 }
@@ -72,6 +72,7 @@ fn main() -> Result<()> {
             passes,
             layout,
         } => {
+            let language = language.or_else(|| recognition_model.is_none().then(|| "en".into()));
             let engine = if let Some(language) = language {
                 let detector = detection_model
                     .or_else(|| (!line).then(|| model_root.join("models/text-detection.onnx")));

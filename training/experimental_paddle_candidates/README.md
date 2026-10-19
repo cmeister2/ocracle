@@ -1,6 +1,6 @@
 # Official Paddle candidates
 
-Isolated development comparison of official PP-OCRv6 medium and PP-OCRv5 Latin against the current small model. Production profiles and frozen tests are unchanged.
+Frozen development comparison of official PP-OCRv6 medium and PP-OCRv5 Latin against the small baseline. The [fresh comparison](../../docs/experiments/paddle-blur.md) supports the current six-language medium original-pass default; historical observations remain unchanged.
 
 See [method, source pins, limitations and results](../../docs/experiments/paddle-candidates.md).
 

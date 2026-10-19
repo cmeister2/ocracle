@@ -1,0 +1,1734 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-19T19:12:16.254949+00:00",
+  "fixture_manifest_sha256": "d6ddc7fab695de4347a87c06f0d3fd33d1dd32587dc6a96693a13588f427f015",
+  "recognition_model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+  "detection_model_sha256": null,
+  "executable_sha256": "1ede5e7d7a8c2060114ab471adf040d965d0e697eb55f8d8eb094a66b6b28e13",
+  "model_config_sha256": null,
+  "profile_configurations": {
+    "en": {
+      "profile_id": "en",
+      "path": "models/paddle-v6-medium/en.json",
+      "sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a"
+    }
+  },
+  "passes": "original",
+  "confidence_note": "Uncalibrated geometric mean of the emitted CTC character posteriors. It is a model score, not the probability that the complete transcription is correct. Selecting among preprocessing passes can increase the score without increasing accuracy.",
+  "metric_note": "CER is Levenshtein character edits divided by reference length, after NFC Unicode normalization and collapsing whitespace. Case and punctuation count. CER can exceed 100% when OCR inserts many characters.",
+  "character_error_rate": 0.001736111111111111,
+  "exact_matches": 29,
+  "observations": 30,
+  "records": [
+    {
+      "sample_id": "goudy-title",
+      "variant_id": "clean",
+      "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+      "character_edits": 0,
+      "reference_characters": 14,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Llanowar Elves",
+        "confidence": 0.9966915,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          273,
+          47
+        ],
+        "lines": [
+          {
+            "text": "Llanowar Elves",
+            "confidence": 0.9966915,
+            "bounds": [
+              0,
+              0,
+              273,
+              47
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Llanowar Elves",
+            "confidence": 0.9966915,
+            "lines": [
+              {
+                "text": "Llanowar Elves",
+                "confidence": 0.9966915,
+                "bounds": [
+                  0,
+                  0,
+                  273,
+                  47
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "goudy-title",
+      "variant_id": "blur",
+      "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+      "character_edits": 0,
+      "reference_characters": 14,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Llanowar Elves",
+        "confidence": 0.9636441,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          82,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Llanowar Elves",
+            "confidence": 0.9636441,
+            "bounds": [
+              0,
+              0,
+              82,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Llanowar Elves",
+            "confidence": 0.9636441,
+            "lines": [
+              {
+                "text": "Llanowar Elves",
+                "confidence": 0.9636441,
+                "bounds": [
+                  0,
+                  0,
+                  82,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "matrix-title",
+      "variant_id": "clean",
+      "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+      "character_edits": 0,
+      "reference_characters": 13,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Air Elemental",
+        "confidence": 0.9999849,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          267,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.9999849,
+            "bounds": [
+              0,
+              0,
+              267,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Air Elemental",
+            "confidence": 0.9999849,
+            "lines": [
+              {
+                "text": "Air Elemental",
+                "confidence": 0.9999849,
+                "bounds": [
+                  0,
+                  0,
+                  267,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "matrix-title",
+      "variant_id": "blur",
+      "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+      "character_edits": 0,
+      "reference_characters": 13,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Air Elemental",
+        "confidence": 0.9999885,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          80,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.9999885,
+            "bounds": [
+              0,
+              0,
+              80,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Air Elemental",
+            "confidence": 0.9999885,
+            "lines": [
+              {
+                "text": "Air Elemental",
+                "confidence": 0.9999885,
+                "bounds": [
+                  0,
+                  0,
+                  80,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "beleren-title",
+      "variant_id": "clean",
+      "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Divination",
+        "confidence": 0.99999803,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          201,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.99999803,
+            "bounds": [
+              0,
+              0,
+              201,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.99999803,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.99999803,
+                "bounds": [
+                  0,
+                  0,
+                  201,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "beleren-title",
+      "variant_id": "blur",
+      "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Divination",
+        "confidence": 0.99999654,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          60,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.99999654,
+            "bounds": [
+              0,
+              0,
+              60,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Divination",
+            "confidence": 0.99999654,
+            "lines": [
+              {
+                "text": "Divination",
+                "confidence": 0.99999654,
+                "bounds": [
+                  0,
+                  0,
+                  60,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-rules",
+      "variant_id": "clean",
+      "image_sha256": "59a0649ed3d3a888836df0b572a7e1e5196cc45d65ffd79794133768f9455042",
+      "character_edits": 0,
+      "reference_characters": 31,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Tap to add 1 green mana to your",
+        "confidence": 0.99924356,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          507,
+          38
+        ],
+        "lines": [
+          {
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.99924356,
+            "bounds": [
+              0,
+              0,
+              507,
+              38
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.99924356,
+            "lines": [
+              {
+                "text": "Tap to add 1 green mana to your",
+                "confidence": 0.99924356,
+                "bounds": [
+                  0,
+                  0,
+                  507,
+                  38
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-rules",
+      "variant_id": "blur",
+      "image_sha256": "3522ec17c8f4d56afab57bcee446d38b40d0485c96c5c2fe4d0a7ed1a9fc1a8c",
+      "character_edits": 0,
+      "reference_characters": 31,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Tap to add 1 green mana to your",
+        "confidence": 0.99433213,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          152,
+          11
+        ],
+        "lines": [
+          {
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.99433213,
+            "bounds": [
+              0,
+              0,
+              152,
+              11
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.99433213,
+            "lines": [
+              {
+                "text": "Tap to add 1 green mana to your",
+                "confidence": 0.99433213,
+                "bounds": [
+                  0,
+                  0,
+                  152,
+                  11
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-rules",
+      "variant_id": "clean",
+      "image_sha256": "2222522079a282cf12e66091434716a50d25bdb4000bde07cb023b256af9a464",
+      "character_edits": 0,
+      "reference_characters": 15,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Draw two cards.",
+        "confidence": 0.9999305,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          283,
+          42
+        ],
+        "lines": [
+          {
+            "text": "Draw two cards.",
+            "confidence": 0.9999305,
+            "bounds": [
+              0,
+              0,
+              283,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Draw two cards.",
+            "confidence": 0.9999305,
+            "lines": [
+              {
+                "text": "Draw two cards.",
+                "confidence": 0.9999305,
+                "bounds": [
+                  0,
+                  0,
+                  283,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-rules",
+      "variant_id": "blur",
+      "image_sha256": "9f4029ed8354ad2af3376e143c183da89f54e85e092025aa7bdb9777ac0d3690",
+      "character_edits": 0,
+      "reference_characters": 15,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Draw two cards.",
+        "confidence": 0.99997693,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          85,
+          13
+        ],
+        "lines": [
+          {
+            "text": "Draw two cards.",
+            "confidence": 0.99997693,
+            "bounds": [
+              0,
+              0,
+              85,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Draw two cards.",
+            "confidence": 0.99997693,
+            "lines": [
+              {
+                "text": "Draw two cards.",
+                "confidence": 0.99997693,
+                "bounds": [
+                  0,
+                  0,
+                  85,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-flavor",
+      "variant_id": "clean",
+      "image_sha256": "e31e0350e4344ad7e7d0dabeb0547c96fb252a627330c6132ac341cbfb2684bc",
+      "character_edits": 0,
+      "reference_characters": 34,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Whenever the Llanowar Elves gather",
+        "confidence": 0.9999295,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          524,
+          40
+        ],
+        "lines": [
+          {
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.9999295,
+            "bounds": [
+              0,
+              0,
+              524,
+              40
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.9999295,
+            "lines": [
+              {
+                "text": "Whenever the Llanowar Elves gather",
+                "confidence": 0.9999295,
+                "bounds": [
+                  0,
+                  0,
+                  524,
+                  40
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "historic-flavor",
+      "variant_id": "blur",
+      "image_sha256": "aee039f25e92e1d6735e6f992e0d045014a5f8b52767fc0f48fc787a57640742",
+      "character_edits": 0,
+      "reference_characters": 34,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Whenever the Llanowar Elves gather",
+        "confidence": 0.99883217,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          157,
+          12
+        ],
+        "lines": [
+          {
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.99883217,
+            "bounds": [
+              0,
+              0,
+              157,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.99883217,
+            "lines": [
+              {
+                "text": "Whenever the Llanowar Elves gather",
+                "confidence": 0.99883217,
+                "bounds": [
+                  0,
+                  0,
+                  157,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-flavor",
+      "variant_id": "clean",
+      "image_sha256": "e58e1b8601e76530c67b6d8eeb7a5a06913933069cfd17e5a993a50b3148f844",
+      "character_edits": 0,
+      "reference_characters": 36,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "“The key to unlocking this puzzle is",
+        "confidence": 0.9992153,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          564,
+          43
+        ],
+        "lines": [
+          {
+            "text": "“The key to unlocking this puzzle is",
+            "confidence": 0.9992153,
+            "bounds": [
+              0,
+              0,
+              564,
+              43
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "“The key to unlocking this puzzle is",
+            "confidence": 0.9992153,
+            "lines": [
+              {
+                "text": "“The key to unlocking this puzzle is",
+                "confidence": 0.9992153,
+                "bounds": [
+                  0,
+                  0,
+                  564,
+                  43
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "modern-flavor",
+      "variant_id": "blur",
+      "image_sha256": "004793fb6e147aa93024d366231f6baddb3e22cc80be5188d743c077c76ebb41",
+      "character_edits": 1,
+      "reference_characters": 36,
+      "character_error_rate": 0.027777777777777776,
+      "exact_match": false,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "\"The key to unlocking this puzzle is",
+        "confidence": 0.9997218,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          169,
+          13
+        ],
+        "lines": [
+          {
+            "text": "\"The key to unlocking this puzzle is",
+            "confidence": 0.9997218,
+            "bounds": [
+              0,
+              0,
+              169,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "\"The key to unlocking this puzzle is",
+            "confidence": 0.9997218,
+            "lines": [
+              {
+                "text": "\"The key to unlocking this puzzle is",
+                "confidence": 0.9997218,
+                "bounds": [
+                  0,
+                  0,
+                  169,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "italic-reminder",
+      "variant_id": "clean",
+      "image_sha256": "953cef42f24f6b06542d889a3782e73fe4b4517b0b2f8a91e8792721a8bfea05",
+      "character_edits": 0,
+      "reference_characters": 33,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "except by creatures with flying.)",
+        "confidence": 0.9999141,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          497,
+          39
+        ],
+        "lines": [
+          {
+            "text": "except by creatures with flying.)",
+            "confidence": 0.9999141,
+            "bounds": [
+              0,
+              0,
+              497,
+              39
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "except by creatures with flying.)",
+            "confidence": 0.9999141,
+            "lines": [
+              {
+                "text": "except by creatures with flying.)",
+                "confidence": 0.9999141,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  39
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "italic-reminder",
+      "variant_id": "blur",
+      "image_sha256": "7d31d55ebef018d9090d6b6cdc1dfbf7e99f619d7cc3dd115ac5da2eb5ebd119",
+      "character_edits": 0,
+      "reference_characters": 33,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "except by creatures with flying.)",
+        "confidence": 0.9999236,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          149,
+          12
+        ],
+        "lines": [
+          {
+            "text": "except by creatures with flying.)",
+            "confidence": 0.9999236,
+            "bounds": [
+              0,
+              0,
+              149,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "except by creatures with flying.)",
+            "confidence": 0.9999236,
+            "lines": [
+              {
+                "text": "except by creatures with flying.)",
+                "confidence": 0.9999236,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "mixed-reminder",
+      "variant_id": "clean",
+      "image_sha256": "d3f8cddfb5a4b6906725a5db947d137a5d2d8f7004205362a832a81db8e02350",
+      "character_edits": 0,
+      "reference_characters": 32,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Deathtouch (Any amount of damage",
+        "confidence": 0.99997246,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          595,
+          42
+        ],
+        "lines": [
+          {
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.99997246,
+            "bounds": [
+              0,
+              0,
+              595,
+              42
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.99997246,
+            "lines": [
+              {
+                "text": "Deathtouch (Any amount of damage",
+                "confidence": 0.99997246,
+                "bounds": [
+                  0,
+                  0,
+                  595,
+                  42
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "mixed-reminder",
+      "variant_id": "blur",
+      "image_sha256": "72030733d4e103ce8553bf999267defea2b092ed0a1616c12ddf061161f1eddb",
+      "character_edits": 0,
+      "reference_characters": 32,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Deathtouch (Any amount of damage",
+        "confidence": 0.9999494,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          178,
+          13
+        ],
+        "lines": [
+          {
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.9999494,
+            "bounds": [
+              0,
+              0,
+              178,
+              13
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Deathtouch (Any amount of damage",
+            "confidence": 0.9999494,
+            "lines": [
+              {
+                "text": "Deathtouch (Any amount of damage",
+                "confidence": 0.9999494,
+                "bounds": [
+                  0,
+                  0,
+                  178,
+                  13
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "future-title",
+      "variant_id": "clean",
+      "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+      "character_edits": 0,
+      "reference_characters": 24,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Blade of the Sixth Pride",
+        "confidence": 0.9999794,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          455,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9999794,
+            "bounds": [
+              0,
+              0,
+              455,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9999794,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.9999794,
+                "bounds": [
+                  0,
+                  0,
+                  455,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "future-title",
+      "variant_id": "blur",
+      "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+      "character_edits": 0,
+      "reference_characters": 24,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Blade of the Sixth Pride",
+        "confidence": 0.9999928,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          136,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9999928,
+            "bounds": [
+              0,
+              0,
+              136,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9999928,
+            "lines": [
+              {
+                "text": "Blade of the Sixth Pride",
+                "confidence": 0.9999928,
+                "bounds": [
+                  0,
+                  0,
+                  136,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "colorshift-title",
+      "variant_id": "clean",
+      "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Mana Tithe",
+        "confidence": 0.9999886,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          220,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Mana Tithe",
+            "confidence": 0.9999886,
+            "bounds": [
+              0,
+              0,
+              220,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Mana Tithe",
+            "confidence": 0.9999886,
+            "lines": [
+              {
+                "text": "Mana Tithe",
+                "confidence": 0.9999886,
+                "bounds": [
+                  0,
+                  0,
+                  220,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "colorshift-title",
+      "variant_id": "blur",
+      "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+      "character_edits": 0,
+      "reference_characters": 10,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Mana Tithe",
+        "confidence": 0.9999753,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          66,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Mana Tithe",
+            "confidence": 0.9999753,
+            "bounds": [
+              0,
+              0,
+              66,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Mana Tithe",
+            "confidence": 0.9999753,
+            "lines": [
+              {
+                "text": "Mana Tithe",
+                "confidence": 0.9999753,
+                "bounds": [
+                  0,
+                  0,
+                  66,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "dracula-title",
+      "variant_id": "clean",
+      "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+      "character_edits": 0,
+      "reference_characters": 11,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Mina Harker",
+        "confidence": 0.99998367,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          235,
+          45
+        ],
+        "lines": [
+          {
+            "text": "Mina Harker",
+            "confidence": 0.99998367,
+            "bounds": [
+              0,
+              0,
+              235,
+              45
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Mina Harker",
+            "confidence": 0.99998367,
+            "lines": [
+              {
+                "text": "Mina Harker",
+                "confidence": 0.99998367,
+                "bounds": [
+                  0,
+                  0,
+                  235,
+                  45
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "dracula-title",
+      "variant_id": "blur",
+      "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+      "character_edits": 0,
+      "reference_characters": 11,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Mina Harker",
+        "confidence": 0.999956,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          70,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Mina Harker",
+            "confidence": 0.999956,
+            "bounds": [
+              0,
+              0,
+              70,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Mina Harker",
+            "confidence": 0.999956,
+            "lines": [
+              {
+                "text": "Mina Harker",
+                "confidence": 0.999956,
+                "bounds": [
+                  0,
+                  0,
+                  70,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "invocation-title",
+      "variant_id": "clean",
+      "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+      "character_edits": 0,
+      "reference_characters": 4,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "DAZE",
+        "confidence": 0.9989981,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          107,
+          39
+        ],
+        "lines": [
+          {
+            "text": "DAZE",
+            "confidence": 0.9989981,
+            "bounds": [
+              0,
+              0,
+              107,
+              39
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "DAZE",
+            "confidence": 0.9989981,
+            "lines": [
+              {
+                "text": "DAZE",
+                "confidence": 0.9989981,
+                "bounds": [
+                  0,
+                  0,
+                  107,
+                  39
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "invocation-title",
+      "variant_id": "blur",
+      "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+      "character_edits": 0,
+      "reference_characters": 4,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "DAZE",
+        "confidence": 0.97230196,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          32,
+          12
+        ],
+        "lines": [
+          {
+            "text": "DAZE",
+            "confidence": 0.97230196,
+            "bounds": [
+              0,
+              0,
+              32,
+              12
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "DAZE",
+            "confidence": 0.97230196,
+            "lines": [
+              {
+                "text": "DAZE",
+                "confidence": 0.97230196,
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  12
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "module-title",
+      "variant_id": "clean",
+      "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+      "character_edits": 0,
+      "reference_characters": 12,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Frost Dragon",
+        "confidence": 0.99999285,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          360,
+          46
+        ],
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.99999285,
+            "bounds": [
+              0,
+              0,
+              360,
+              46
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.99999285,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.99999285,
+                "bounds": [
+                  0,
+                  0,
+                  360,
+                  46
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "module-title",
+      "variant_id": "blur",
+      "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+      "character_edits": 0,
+      "reference_characters": 12,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "Frost Dragon",
+        "confidence": 0.9999853,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          108,
+          14
+        ],
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.9999853,
+            "bounds": [
+              0,
+              0,
+              108,
+              14
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "Frost Dragon",
+            "confidence": 0.9999853,
+            "lines": [
+              {
+                "text": "Frost Dragon",
+                "confidence": 0.9999853,
+                "bounds": [
+                  0,
+                  0,
+                  108,
+                  14
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "collector-type",
+      "variant_id": "clean",
+      "image_sha256": "055b1a45cf542fa23313729be4b57a2f698b27762547f22fe23a0180a4d22a79",
+      "character_edits": 0,
+      "reference_characters": 9,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "052/269 C",
+        "confidence": 0.99601215,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          150,
+          21
+        ],
+        "lines": [
+          {
+            "text": "052/269 C",
+            "confidence": 0.99601215,
+            "bounds": [
+              0,
+              0,
+              150,
+              21
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "052/269 C",
+            "confidence": 0.99601215,
+            "lines": [
+              {
+                "text": "052/269 C",
+                "confidence": 0.99601215,
+                "bounds": [
+                  0,
+                  0,
+                  150,
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "sample_id": "collector-type",
+      "variant_id": "blur",
+      "image_sha256": "2e311b600935e86b5b8c14d1ee6ce98114f4157629da396c132b071576781a5f",
+      "character_edits": 0,
+      "reference_characters": 9,
+      "character_error_rate": 0.0,
+      "exact_match": true,
+      "profile_configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "inference": {
+        "text": "052/269 C",
+        "confidence": 0.96370536,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+        "image_size": [
+          45,
+          6
+        ],
+        "lines": [
+          {
+            "text": "052/269 C",
+            "confidence": 0.96370536,
+            "bounds": [
+              0,
+              0,
+              45,
+              6
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+            "text": "052/269 C",
+            "confidence": 0.96370536,
+            "lines": [
+              {
+                "text": "052/269 C",
+                "confidence": 0.96370536,
+                "bounds": [
+                  0,
+                  0,
+                  45,
+                  6
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+          "language": "en",
+          "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+          "detector_sha256": null
+        }
+      }
+    }
+  ]
+}

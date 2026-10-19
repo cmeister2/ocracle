@@ -17,19 +17,20 @@
   <main>
     <p id="status" class="status" role="status">Loading examples…</p>
     <div id="gallery"></div>
-    <noscript><p>JavaScript displays the recorded examples. You can also read the <a href="assets/results-paddle.json">English results</a> and <a href="assets/latin/results-paddle.json">accented-title results</a>.</p></noscript>
+    <noscript><p>JavaScript displays the recorded examples. You can also read the <a href="assets/results-paddle-medium.json">English results</a> and <a href="assets/latin/results-paddle-medium.json">accented-title results</a>.</p></noscript>
   </main>
   <footer>
     <details>
       <summary>Data and notes</summary>
       <p>These are fixed crops and recorded neural OCR results. References follow the pictured printing. Confidence is an uncalibrated model score; it can be high when the text is wrong. Case, punctuation and accents count toward character error rate (CER).</p>
-      <p>Blur uses Gaussian σ = 2.4 source pixels followed by downsampling to 30%. The smaller files are displayed at the original crop width for comparison. The method shown beside each result is copied from the recorded Rust output.</p>
+      <p>Blur uses Gaussian σ = 2.4 source pixels followed by downsampling to 30%. The smaller files are displayed at the original crop width for comparison. OCR uses the default model and its original-image pass.</p>
       <p>These few examples do not establish complete font or language coverage. Pretrained model training membership is unknown. <a href="https://github.com/cmeister2/ocracle/blob/main/docs/gallery-building.md">Reproduction and methodology</a></p>
       <ul>
         <li><a href="assets/fixtures.json">English crops and provenance</a> · <a href="assets/latin/fixtures.json">Localized crops and provenance</a></li>
-        <li><a href="assets/results-paddle.json">Default model: English results</a> · <a href="assets/latin/results-paddle.json">Localized results</a></li>
+        <li><a href="assets/results-paddle-medium.json">Default model: English results</a> · <a href="assets/latin/results-paddle-medium.json">Localized results</a></li>
+        <li><a href="assets/results-paddle.json">Earlier small model: English results</a> · <a href="assets/latin/results-paddle.json">Localized results</a></li>
         <li><a href="assets/results.json">English MTG model results</a> · <a href="assets/results-baseline.json">General OCR model results</a></li>
-        <li><a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx">Pretrained model source</a></li>
+        <li><a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_rec_onnx">Pretrained model source</a></li>
       </ul>
     </details>
     <p>Card images and text © Wizards of the Coast; scans and print metadata via <a href="https://scryfall.com/">Scryfall</a>.</p>
