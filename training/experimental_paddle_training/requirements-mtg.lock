@@ -1,0 +1,2 @@
+# Add to requirements.lock for exact glyph coverage checks during preparation.
+fonttools==4.67.0 --hash=sha256:eb3c98cac93aac4b9f6e3ce2008325340b234cc9b0338ca6b513f31962a1e278
