@@ -35,7 +35,7 @@ SELECTED_SHA = '451b0e2ada65195045037b3d1db2ad60403e41599691e093415dfa3c2c1625a4
 ROLES = {'supervised': 81, 'synthetic': 348, 'teacher-anchor': 179, 'validation': 23}
 CONDITIONS = ['clean', 'gaussian', 'downsample', 'jpeg', 'motion', 'combined']
 STEPS = [0, 25, 50, 75, 100]
-EVIDENCE_MANIFEST_SHA = 'e4d5b1f625b38093f87148218412b2dc7d1b3d705bb212b7e44e2d5c3e008480'
+EVIDENCE_MANIFEST_SHA = '8038a43863917789b9bc04803ecb668606575266119906daff8c3804c3a76e3d'
 
 
 def require(condition, message):

@@ -165,7 +165,9 @@ graph parity is not a punctuation-accuracy claim.
 
 After selection and export, the adapted checkpoint was evaluated once on all
 448 frozen fresh development inputs, using the exact small-baseline CLI binary
-and unchanged production original/enhanced selection. This cohort contains 64
+and the production original/enhanced confidence-selection policy recorded at
+that evaluation. The current medium-original default was selected separately.
+This cohort contains 64
 manually transcribed lines from 16 fresh identities, seven conditions per line,
 including 36 italic base lines. It was excluded from training and checkpoint
 selection. Every raw process output, both candidates, source/config/image/model
@@ -182,13 +184,13 @@ hash and literal label is retained in
 
 CER counts Unicode character edits after NFC and collapsed whitespace, retaining
 case, accents and punctuation. The overall denominator is 15,162 reference
-characters; counts use the selected production pass, not an oracle choice of
-the more accurate pass. Portuguese CER increased from 5.408% to 5.561% across
+characters; counts use the pass selected by that historical confidence policy.
+Expected text did not select a pass. Portuguese CER increased from 5.408% to 5.561% across
 56 observations despite the aggregate gain. Motion blur remains a substantial
 failure class. This assessment did not trigger additional training or a new
-checkpoint choice. The separately measured official medium model is a stronger
-comparison candidate; this pilot only establishes a trainable small-model path
-and its measured result.
+checkpoint choice. A separate fresh comparison subsequently selected the
+official medium model with its original pass as the default. This pilot only
+establishes a trainable small-model path and its measured result.
 
 The fresh cohort contains seven variants of one line beginning with the newly
 added `„`; none of the adapted selected outputs emits that glyph, including the
@@ -209,8 +211,9 @@ stdout hashes. Predictions and aggregate metrics did not change.
 
 These are adaptation-held-out identities; upstream pretraining print identities
 are unknown. Neither corpus proves universal font, language or blur coverage.
-The experimental model remains unregistered, and gallery/default/UI files are
-unchanged.
+The experimental model remains unregistered. This pilot did not change
+gallery, default-model or UI files; subsequent changes to those files belong
+to separate work.
 
 ## Offline verification and assessment replay
 
