@@ -1,0 +1,260 @@
+{
+  "annotations_sha256": "34ff43f45a7d4587c6b5f278e5d6383e3de057db43d69f9f1d6f7319c40da737",
+  "label_normalization": "NFC; printed punctuation retained",
+  "models": [
+    {
+      "configuration_path": "models/paddle-v6/en.json",
+      "configuration_sha256": "1fb370edad3b02a0303642cada8937d068df18adec352fd4d055555a5601c68e",
+      "model_name": "PP-OCRv6 small (upstream)",
+      "audit_method": "Literal Unicode set membership only; no inference or model scoring",
+      "missing_characters": [
+        {
+          "character": "„",
+          "codepoint": "U+201E",
+          "name": "DOUBLE LOW-9 QUOTATION MARK",
+          "base_ids": [
+            "de-dom-88-03"
+          ]
+        }
+      ]
+    },
+    {
+      "configuration_path": "models/recognizer-config.json",
+      "configuration_sha256": "69a0bb1ed466999a4869d465622b57ff8b2833d51766e21d54ac654c6fa0286e",
+      "model_name": "ocracle-mtg-en-v1",
+      "audit_method": "Literal Unicode set membership only; no inference or model scoring",
+      "missing_characters": [
+        {
+          "character": "«",
+          "codepoint": "U+00AB",
+          "name": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK",
+          "base_ids": [
+            "fr-m21-76-03"
+          ]
+        },
+        {
+          "character": "»",
+          "codepoint": "U+00BB",
+          "name": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK",
+          "base_ids": [
+            "fr-m21-76-04"
+          ]
+        },
+        {
+          "character": "ß",
+          "codepoint": "U+00DF",
+          "name": "LATIN SMALL LETTER SHARP S",
+          "base_ids": [
+            "de-dom-88-01",
+            "de-dom-88-02",
+            "de-m21-67-04"
+          ]
+        },
+        {
+          "character": "à",
+          "codepoint": "U+00E0",
+          "name": "LATIN SMALL LETTER A WITH GRAVE",
+          "base_ids": [
+            "fr-dom-139-03",
+            "fr-dom-139-04",
+            "fr-m21-77-04",
+            "it-dom-97-01",
+            "it-dom-97-02",
+            "it-dom-97-03",
+            "it-dom-97-04",
+            "it-m21-166-01",
+            "it-m21-166-02"
+          ]
+        },
+        {
+          "character": "á",
+          "codepoint": "U+00E1",
+          "name": "LATIN SMALL LETTER A WITH ACUTE",
+          "base_ids": [
+            "es-dom-79-01",
+            "es-m21-29-03",
+            "pt-dom-178-02",
+            "pt-dom-178-04"
+          ]
+        },
+        {
+          "character": "â",
+          "codepoint": "U+00E2",
+          "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX",
+          "base_ids": [
+            "fr-m21-76-01"
+          ]
+        },
+        {
+          "character": "ã",
+          "codepoint": "U+00E3",
+          "name": "LATIN SMALL LETTER A WITH TILDE",
+          "base_ids": [
+            "pt-dom-178-01",
+            "pt-m21-149-01",
+            "pt-m21-149-02",
+            "pt-m21-149-04"
+          ]
+        },
+        {
+          "character": "ä",
+          "codepoint": "U+00E4",
+          "name": "LATIN SMALL LETTER A WITH DIAERESIS",
+          "base_ids": [
+            "de-dom-88-03",
+            "de-m21-212-04"
+          ]
+        },
+        {
+          "character": "ç",
+          "codepoint": "U+00E7",
+          "name": "LATIN SMALL LETTER C WITH CEDILLA",
+          "base_ids": [
+            "pt-dom-178-01",
+            "pt-dom-178-02",
+            "pt-m21-149-01",
+            "pt-m21-149-02"
+          ]
+        },
+        {
+          "character": "è",
+          "codepoint": "U+00E8",
+          "name": "LATIN SMALL LETTER E WITH GRAVE",
+          "base_ids": [
+            "it-m21-166-03"
+          ]
+        },
+        {
+          "character": "é",
+          "codepoint": "U+00E9",
+          "name": "LATIN SMALL LETTER E WITH ACUTE",
+          "base_ids": [
+            "es-m21-29-02",
+            "fr-dom-139-01",
+            "fr-dom-139-02",
+            "fr-dom-139-03",
+            "fr-m21-76-01",
+            "fr-m21-76-02",
+            "fr-m21-76-04",
+            "fr-m21-77-01",
+            "fr-m21-77-02",
+            "fr-m21-77-03",
+            "fr-m21-77-04"
+          ]
+        },
+        {
+          "character": "í",
+          "codepoint": "U+00ED",
+          "name": "LATIN SMALL LETTER I WITH ACUTE",
+          "base_ids": [
+            "es-dom-79-01",
+            "es-m21-29-01",
+            "es-m21-29-02",
+            "es-m21-29-03",
+            "pt-dom-178-03"
+          ]
+        },
+        {
+          "character": "î",
+          "codepoint": "U+00EE",
+          "name": "LATIN SMALL LETTER I WITH CIRCUMFLEX",
+          "base_ids": [
+            "fr-dom-139-01",
+            "fr-dom-139-02"
+          ]
+        },
+        {
+          "character": "ñ",
+          "codepoint": "U+00F1",
+          "name": "LATIN SMALL LETTER N WITH TILDE",
+          "base_ids": [
+            "es-dom-79-03"
+          ]
+        },
+        {
+          "character": "ò",
+          "codepoint": "U+00F2",
+          "name": "LATIN SMALL LETTER O WITH GRAVE",
+          "base_ids": [
+            "it-dom-97-03"
+          ]
+        },
+        {
+          "character": "ó",
+          "codepoint": "U+00F3",
+          "name": "LATIN SMALL LETTER O WITH ACUTE",
+          "base_ids": [
+            "es-dom-79-02",
+            "es-m21-29-03",
+            "es-m21-29-04",
+            "pt-dom-178-01",
+            "pt-dom-178-02",
+            "pt-dom-178-03"
+          ]
+        },
+        {
+          "character": "ö",
+          "codepoint": "U+00F6",
+          "name": "LATIN SMALL LETTER O WITH DIAERESIS",
+          "base_ids": [
+            "de-dom-88-01",
+            "de-dom-88-02",
+            "de-m21-212-04"
+          ]
+        },
+        {
+          "character": "ü",
+          "codepoint": "U+00FC",
+          "name": "LATIN SMALL LETTER U WITH DIAERESIS",
+          "base_ids": [
+            "de-m21-67-01",
+            "de-m21-67-02",
+            "de-m21-67-04",
+            "de-m21-212-01",
+            "de-m21-212-02"
+          ]
+        },
+        {
+          "character": "’",
+          "codepoint": "U+2019",
+          "name": "RIGHT SINGLE QUOTATION MARK",
+          "base_ids": [
+            "en-7ed-51-02",
+            "fr-dom-139-03",
+            "fr-dom-139-04",
+            "fr-m21-76-03",
+            "fr-m21-77-02",
+            "fr-m21-77-03",
+            "fr-m21-77-04",
+            "it-dom-97-04"
+          ]
+        },
+        {
+          "character": "“",
+          "codepoint": "U+201C",
+          "name": "LEFT DOUBLE QUOTATION MARK",
+          "base_ids": [
+            "es-dom-79-03",
+            "it-m21-166-03"
+          ]
+        },
+        {
+          "character": "”",
+          "codepoint": "U+201D",
+          "name": "RIGHT DOUBLE QUOTATION MARK",
+          "base_ids": [
+            "it-m21-166-04"
+          ]
+        },
+        {
+          "character": "„",
+          "codepoint": "U+201E",
+          "name": "DOUBLE LOW-9 QUOTATION MARK",
+          "base_ids": [
+            "de-dom-88-03"
+          ]
+        }
+      ]
+    }
+  ]
+}

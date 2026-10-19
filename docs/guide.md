@@ -72,6 +72,8 @@ An [experimental shared Latin model](training/latin-v1.md) adds accented classes
 
 Blur is part of training: strong Gaussian blur, directional motion blur, downsampling, JPEG damage and combinations. Clean and damaged variants of a card stay in the same split. The gallery's card identities are excluded from specialized training. Evaluation must report clean and damaged cases separately; a model can still fail badly on severe blur.
 
+The [fresh blur development corpus](evaluation/blur-development.md) adds 64 independently reviewed printed lines from sixteen further card identities, including 36 italic lines, under seven fixed image conditions. It supports development comparisons and is kept out of training.
+
 ## Simple gallery
 
 The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](gallery/index.html)) pairs real printed crops with actual Rust inference, method and confidence. It includes original and severely blurred versions of historic titles, rules, flavor and reminder text, plus manual printed transcriptions and character error rates. Source card links and image provenance are retained.
