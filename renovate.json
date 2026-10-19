@@ -1,4 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>cmeister2/renovate"]
+  "extends": ["github>cmeister2/renovate"],
+  "packageRules": [
+    {
+      "description": "Keep the ML runtime aligned with its CPython 3.12 wheel locks; validate dependency support before changing Python minor versions.",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["python"],
+      "allowedVersions": "3.12.x"
+    }
+  ]
 }
