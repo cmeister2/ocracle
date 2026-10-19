@@ -1,0 +1,61 @@
+{
+  "repository": "PaddlePaddle/PaddleOCR",
+  "revision": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE",
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e",
+      "bytes": 11376
+    },
+    {
+      "path": "configs/rec/PP-OCRv6/PP-OCRv6_small_rec.yml",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/configs/rec/PP-OCRv6/PP-OCRv6_small_rec.yml",
+      "sha256": "5efcffafdd9f5375bb5917db0a050afb52a319bf6e9bcda5a594dd49a268df43",
+      "bytes": 2856
+    },
+    {
+      "path": "ppocr/modeling/backbones/rec_lcnetv4.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/backbones/rec_lcnetv4.py",
+      "sha256": "a39161fe2819f65462a62a6d8382d557192a41e894de7b81c9a8fd6d4e1d5080",
+      "bytes": 20961
+    },
+    {
+      "path": "ppocr/modeling/backbones/rec_svtrnet.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/backbones/rec_svtrnet.py",
+      "sha256": "1fccefe856e55b8839856cea3e618fce3d2b8f2cf1b6efb033ba60b6269c8956",
+      "bytes": 20538
+    },
+    {
+      "path": "ppocr/modeling/necks/rnn.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/necks/rnn.py",
+      "sha256": "4afbd98fb98aedb008d47d4bfff59562b44023e47ac8e308c68f3d17fdebf5da",
+      "bytes": 12107
+    },
+    {
+      "path": "ppocr/modeling/heads/rec_ctc_head.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/heads/rec_ctc_head.py",
+      "sha256": "a6465dba3f4f726b419a7478a8aef7ee82d492422c0457dfb1a70cc94d8e19aa",
+      "bytes": 3795
+    },
+    {
+      "path": "ppocr/utils/dict/ppocrv6_dict.txt",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/utils/dict/ppocrv6_dict.txt",
+      "sha256": "b5f2bfe2bdd9448429e3e82b51c789775d9b42f2403d082b00662eb77e401c5d",
+      "bytes": 74947
+    },
+    {
+      "path": "ppocr/losses/rec_ctc_loss.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/losses/rec_ctc_loss.py",
+      "sha256": "55d9d23b0da3fc81475aae7bf049a34d55713f03a79b4ce0b7e1c6c96ddca6c6",
+      "bytes": 1764
+    },
+    {
+      "path": "ppocr/modeling/heads/rec_multi_head.py",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/heads/rec_multi_head.py",
+      "sha256": "88d6b1a2ee61ec8687099a98543b4179368e29c5c69def4a0bcccfd18d042d47",
+      "bytes": 5635
+    }
+  ]
+}

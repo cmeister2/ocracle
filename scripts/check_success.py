@@ -5,13 +5,21 @@ import json
 import os
 import sys
 
+REQUIRED_JOBS = frozenset({
+    'rust', 'msrv', 'coverage', 'release-tooling', 'neural', 'training',
+    'native-training', 'gallery',
+})
+
 
 def check(results):
     """Return unsuccessful dependencies; malformed or absent results also fail."""
     if not isinstance(results, dict) or not results:
         raise ValueError('No required CI job results were supplied')
-    failed = {}
+    failed = {job: 'missing job' for job in sorted(REQUIRED_JOBS - results.keys())}
     for job, details in results.items():
+        if job not in REQUIRED_JOBS:
+            failed[job] = 'unexpected job'
+            continue
         result = details.get('result') if isinstance(details, dict) else None
         if result != 'success':
             failed[job] = result or 'missing result'

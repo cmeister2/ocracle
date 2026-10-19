@@ -118,6 +118,77 @@ jobs:
       - run: python training/style-eval/score.py --check
       - run: python training/style-eval/score.py --detected --check
 
+  native-training:
+    name: Native Paddle training and Rust export
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "1"
+      RAYON_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            training/experimental_paddle_training/requirements.lock
+            training/experimental_paddle_training/requirements-export.lock
+      - uses: dtolnay/rust-toolchain@v1
+        with:
+          toolchain: stable
+      - uses: Swatinem/rust-cache@v2.9.2
+        with:
+          shared-key: native-training
+          workspaces: |
+            . -> target
+            training/experimental_paddle/runner -> target
+      - name: Cache the pinned official native checkpoint
+        uses: actions/cache@v6.1.0
+        with:
+          path: training/experimental_paddle_training/cache/official-small.pdparams
+          key: native-paddle-${{ hashFiles('training/experimental_paddle_training/source-checkpoint.json') }}
+      - name: Install the CPU training and export environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes fonts-dejavu-extra
+          python -m venv "$RUNNER_TEMP/paddle-training"
+          "$RUNNER_TEMP/paddle-training/bin/python" -m pip install --require-hashes -r training/experimental_paddle_training/requirements.lock -r training/experimental_paddle_training/requirements-export.lock
+          printf '%s\n' "$RUNNER_TEMP/paddle-training/bin" >> "$GITHUB_PATH"
+      - name: Download the exact official ONNX and native sources
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from training.download_models import fetch
+          source = json.loads(Path('training/experimental_paddle/model-source.json').read_text())
+          model = source['files']['inference.onnx']
+          fetch(model['url'], Path('models/ppocr-v6-small.onnx'), model['sha256'])
+          PY
+          python training/experimental_paddle_training/bootstrap.py
+      - name: Verify exact-weight native and ONNX parity
+        run: python training/experimental_paddle_training/parity.py
+      - name: Test class indexing and input contracts
+        run: python -m unittest discover -s training/experimental_paddle_training -p 'test_*.py'
+      - name: Prove three native updates and strict checkpoint reload
+        run: python training/experimental_paddle_training/smoke.py --steps 3
+      - name: Build the actual CLI and isolated RTen probe
+        run: |
+          cargo build --release --locked
+          cargo build --release --locked --manifest-path training/experimental_paddle/runner/Cargo.toml
+      - name: Verify adapted ONNX, RTen and actual CLI parity
+        run: python training/experimental_paddle_training/export.py --runner training/experimental_paddle/runner/target/release/paddle-rten-probe --cli target/release/ocracle
+      - name: Retain this run's native and export evidence
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: native-training-evidence
+          path: |
+            training/experimental_paddle_training/parity.json
+            training/experimental_paddle_training/smoke.json
+            training/experimental_paddle_training/export.json
+          if-no-files-found: error
+          retention-days: 14
+
   gallery:
     name: Gallery evidence
     runs-on: ubuntu-latest
@@ -128,7 +199,7 @@ jobs:
   success:
     name: Success
     if: always()
-    needs: [rust, msrv, coverage, release-tooling, neural, training, gallery]
+    needs: [rust, msrv, coverage, release-tooling, neural, training, native-training, gallery]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1

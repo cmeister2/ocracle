@@ -1,0 +1,4 @@
+# Add to requirements.lock; pinned Linux x86_64 CPython3.12 export wheels.
+onnx==1.17.0 --hash=sha256:4f3fb5cc4e2898ac5312a7dc03a65133dd2abf9a5e520e69afb880a7251ec97a
+paddle2onnx==2.1.0 --hash=sha256:7fef03d6c40bbe5e2ebc6e895b25b8860acd28803601195884e8ffec5ffa1109
+polygraphy==0.53.6 --hash=sha256:539095f64054823aabac5d4c8d64875b5a1542b71ca76443e218a01fdc1a4e03
