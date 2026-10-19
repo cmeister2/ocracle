@@ -6,6 +6,12 @@ model's Rust integration is verified on 58 fixed crops. The earlier grayscale
 ONNX adapter remains a separate reproducible comparison. No production language
 profiles are registered by these experiment scripts.
 
+The original inference pass retains colour. The existing enhancement pass
+converts to grayscale before contrast stretching and sharpening. A separate
+[172-observation development experiment](colour-preprocessing.md) tested
+preserving RGB through enhancement; it did not improve selected accuracy and
+was not promoted. Its reviewed RGB inputs also support candidate-model probes.
+
 `results-v6-direct.json` records all three direct-color pipelines: official
 ONNX Runtime, isolated RTen, and the actual Rust CLI. Every transcript agrees
 across all three. Equal-input ORT/RTen argmax sequences agree in all 58 cases;

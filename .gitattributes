@@ -1,2 +1,4 @@
 # Preserve the vendored font license byte for byte, including upstream spacing.
 training/latin-v2-corpus/DEJAVU-LICENSE.txt -whitespace
+# Keep the required space markers on empty unified-diff context lines.
+training/experimental_colour/colour-preserving.patch -whitespace

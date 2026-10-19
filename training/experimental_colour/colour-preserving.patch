@@ -1,0 +1,103 @@
+diff --git a/src/engine.rs b/src/engine.rs
+index 76dcf3c..dbeab42 100644
+--- a/src/engine.rs
++++ b/src/engine.rs
+@@ -244,14 +244,18 @@ impl CardOcr {
+             )?);
+         }
+         if matches!(options.passes, Passes::Enhanced | Passes::All) {
+-            let enhanced = enhance(&original);
++            let enhanced = enhance(&original, self.config.input.color_mode);
+             let scale = enhanced.width() / width;
++            let contrast = match self.config.input.color_mode {
++                ColorMode::Grayscale => "contrast stretch",
++                ColorMode::Rgb | ColorMode::Bgr => "RGB contrast stretch",
++            };
+             candidates.push(self.run_pass(
+                 &enhanced,
+                 [width, height],
+                 options.single_line,
+                 card_layout,
+-                &format!("{layout_method}{scale}x Lanczos + contrast stretch + unsharp mask + {architecture} / greedy CTC"),
++                &format!("{layout_method}{scale}x Lanczos + {contrast} + unsharp mask + {architecture} / greedy CTC"),
+             )?);
+         }
+         let best = candidates
+@@ -528,19 +532,15 @@ fn grayscale(image: &RgbImage) -> GrayImage {
+ }
+ 
+ /// Enlarge small type and modestly increase its local contrast.
+-fn enhance(image: &RgbImage) -> RgbImage {
++fn enhance(image: &RgbImage, color_mode: ColorMode) -> RgbImage {
+     let (width, height) = image.dimensions();
+     let scale = if u64::from(width) * u64::from(height) <= 6_000_000 {
+         2
+     } else {
+         1
+     };
+-    let mut gray = grayscale(&imageops::resize(
+-        image,
+-        width * scale,
+-        height * scale,
+-        FilterType::Lanczos3,
+-    ));
++    let mut resized = imageops::resize(image, width * scale, height * scale, FilterType::Lanczos3);
++    let mut gray = grayscale(&resized);
+     let mut hist = [0_u64; 256];
+     for pixel in gray.as_raw() {
+         hist[usize::from(*pixel)] += 1;
+@@ -557,24 +557,50 @@ fn enhance(image: &RgbImage) -> RgbImage {
+     };
+     let low = quantile(tail);
+     let high = quantile(u64::from(gray.width()) * u64::from(gray.height()) - tail - 1);
+-    if high > low {
+-        for pixel in gray.as_mut() {
++    let stretch = |pixels: &mut [u8]| {
++        if high <= low {
++            return;
++        }
++        for pixel in pixels {
+             *pixel = ((u16::from(pixel.saturating_sub(low)) * 255 / u16::from(high - low)).min(255))
+                 as u8;
+         }
++    };
++    match color_mode {
++        ColorMode::Grayscale => {
++            stretch(gray.as_mut());
++            DynamicImage::ImageLuma8(imageops::unsharpen(&gray, 1., 3)).into_rgb8()
++        }
++        ColorMode::Rgb | ColorMode::Bgr => {
++            stretch(resized.as_mut());
++            imageops::unsharpen(&resized, 1., 3)
++        }
+     }
+-    DynamicImage::ImageLuma8(imageops::unsharpen(&gray, 1., 3)).into_rgb8()
+ }
+ 
+ #[cfg(test)]
+ mod tests {
+     //! Recognition-contract regressions for original colour model exports.
+ 
+-    use super::{probabilities_to_logs, recognition_input};
++    use super::{enhance, probabilities_to_logs, recognition_input};
+     use crate::{ColorMode, InputConfig, ModelConfig, WidthRounding, ctc};
+     use image::{Rgb, RgbImage};
+     use rten_tensor::Layout;
+ 
++    #[test]
++    fn enhancement_keeps_colour_for_models_trained_on_colour() {
++        let image = RgbImage::from_pixel(8, 8, Rgb([200, 50, 20]));
++        for mode in [ColorMode::Rgb, ColorMode::Bgr] {
++            let enhanced = enhance(&image, mode);
++            assert_eq!(enhanced.dimensions(), (16, 16));
++            assert_eq!(enhanced.get_pixel(8, 8).0, [200, 50, 20]);
++        }
++        let gray = enhance(&image, ColorMode::Grayscale);
++        let [r, g, b] = gray.get_pixel(8, 8).0;
++        assert_eq!(r, g);
++        assert_eq!(g, b);
++    }
++
+     #[test]
+     fn bgr_planes_preserve_colour_and_pad_after_normalization() {
+         let image = RgbImage::from_pixel(2, 1, Rgb([255, 128, 0]));

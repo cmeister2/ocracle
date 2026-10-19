@@ -111,6 +111,7 @@ jobs:
       - run: python -m unittest discover -s training -p 'test_*.py'
       - run: python training/latin-eval/verify.py
       - run: python training/latin_v2_check.py
+      - run: python training/experimental_colour/evaluate.py --check
       - run: python training/rare-scripts/prepare.py --check
       - run: python training/style-eval/prepare.py --check
       - run: python training/style-eval/score.py --check
