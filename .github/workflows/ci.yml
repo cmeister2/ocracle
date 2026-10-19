@@ -244,20 +244,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - name: Check crates.io publishing credentials
-        id: crates-token
-        env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: |
-          if [ -n "$CARGO_REGISTRY_TOKEN" ]; then
-            printf 'configured=true\n' >> "$GITHUB_OUTPUT"
-          else
-            printf 'configured=false\n' >> "$GITHUB_OUTPUT"
-            printf '::notice::Automatic publishing skipped. Set the CARGO_REGISTRY_TOKEN repository secret to enable crates.io and GitHub releases.\n'
-            printf '### Automatic publication skipped\n\nSet the `CARGO_REGISTRY_TOKEN` repository secret in Settings → Secrets and variables → Actions to enable crates.io and GitHub releases. This run still builds a versioned crate artifact.\n' >> "$GITHUB_STEP_SUMMARY"
-          fi
       - run: npx semantic-release
-        if: steps.crates-token.outputs.configured == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
