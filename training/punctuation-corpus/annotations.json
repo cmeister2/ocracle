@@ -1,0 +1,110 @@
+[
+  {
+    "id": "de-finishing-blow",
+    "card_id": "824c3db9-82ae-4302-a6f3-2ff62956247f",
+    "oracle_id": "3c8a6c58-f4af-4809-af86-a931313fa71e",
+    "card_name": "Finishing Blow",
+    "language": "de",
+    "split": "train",
+    "kind": "flavor",
+    "italic": true,
+    "text": "„In dieser Welt gilt: Töten oder getötet",
+    "bbox": [
+      53,
+      719,
+      610,
+      756
+    ],
+    "source_size": [
+      672,
+      936
+    ],
+    "source_url": "https://cards.scryfall.io/large/front/8/2/824c3db9-82ae-4302-a6f3-2ff62956247f.jpg?1782905458",
+    "source_sha256": "78c6bc62ac475cc6a548802b61cbba8bcffd1a0142bb2bd686145f23dbc0c933",
+    "path": "images/de-finishing-blow.png",
+    "image_sha256": "175c1d99d76c0262194d8dd50f610e42801a4fe52ea1baf9cb9fd69e45dda8dd",
+    "review_status": "accepted",
+    "transcription": "Manual literal visual transcription of the printed source; metadata is used for identity/acquisition only.",
+    "reviewed_on": "2026-10-19",
+    "independent_review": {
+      "reviewer": "Codex training agent",
+      "complete_glyphs_and_line_boundaries": true,
+      "literal_nfc_transcription": true,
+      "source_hash_and_exact_rgb_crop_verified": true,
+      "canonical_train_split_verified": true,
+      "frozen_test_identity_disjointness_verified": true
+    }
+  },
+  {
+    "id": "de-radiant-fountain",
+    "card_id": "5e477ae4-62de-4991-926b-bf14492b60e2",
+    "oracle_id": "6db442e5-fbcc-4456-a4c5-bea1aee3fc8e",
+    "card_name": "Radiant Fountain",
+    "language": "de",
+    "split": "train",
+    "kind": "flavor",
+    "italic": true,
+    "text": "„Alle Völker schätzen einen Ort, an dem",
+    "bbox": [
+      53,
+      753,
+      615,
+      790
+    ],
+    "source_size": [
+      672,
+      936
+    ],
+    "source_url": "https://cards.scryfall.io/large/front/5/e/5e477ae4-62de-4991-926b-bf14492b60e2.jpg?1782904356",
+    "source_sha256": "e99dee93302b511993813cc68f28e3d2a60bfa3a2c1802e6169aa4a154b5e663",
+    "path": "images/de-radiant-fountain.png",
+    "image_sha256": "1c0184408a3ddc41450010751fec1d970ddb3b5dd78dabeeb4074170b0c24b84",
+    "review_status": "accepted",
+    "transcription": "Manual literal visual transcription of the printed source; metadata is used for identity/acquisition only.",
+    "reviewed_on": "2026-10-19",
+    "independent_review": {
+      "reviewer": "Codex training agent",
+      "complete_glyphs_and_line_boundaries": true,
+      "literal_nfc_transcription": true,
+      "source_hash_and_exact_rgb_crop_verified": true,
+      "canonical_train_split_verified": true,
+      "frozen_test_identity_disjointness_verified": true
+    }
+  },
+  {
+    "id": "es-keen-glidemaster",
+    "card_id": "502156c3-3a17-4fa1-9efa-daf469557a1e",
+    "oracle_id": "98deac9e-28ea-4d11-8d75-833bf6d66e6e",
+    "card_name": "Keen Glidemaster",
+    "language": "es",
+    "split": "train",
+    "kind": "flavor",
+    "italic": true,
+    "text": "¡Salta y ya está!”.",
+    "bbox": [
+      53,
+      806,
+      326,
+      846
+    ],
+    "source_size": [
+      672,
+      936
+    ],
+    "source_url": "https://cards.scryfall.io/large/front/5/0/502156c3-3a17-4fa1-9efa-daf469557a1e.jpg?1782905777",
+    "source_sha256": "043a1024480a6262aa1b40fbc0465dfa1b22fc3bcfb982b3e0c0641a6a1d907b",
+    "path": "images/es-keen-glidemaster.png",
+    "image_sha256": "2e9f9931d289bf87295736483cfb0986a66aac498b77a0f7b69a928e0c39f133",
+    "review_status": "accepted",
+    "transcription": "Manual literal visual transcription of the printed source; metadata is used for identity/acquisition only.",
+    "reviewed_on": "2026-10-19",
+    "independent_review": {
+      "reviewer": "Codex training agent",
+      "complete_glyphs_and_line_boundaries": true,
+      "literal_nfc_transcription": true,
+      "source_hash_and_exact_rgb_crop_verified": true,
+      "canonical_train_split_verified": true,
+      "frozen_test_identity_disjointness_verified": true
+    }
+  }
+]
