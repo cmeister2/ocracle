@@ -1,0 +1,23 @@
+{
+  "revision": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+  "files": [
+    {
+      "path": "sources/LICENSE",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE",
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e",
+      "bytes": 11376
+    },
+    {
+      "path": "sources/PP-OCRv6.en.md",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.en.md",
+      "sha256": "3c5b4d8e701b3f945ad60340cdc679d4db815f04d3176f34b750b96ce5b2468e",
+      "bytes": 14097
+    },
+    {
+      "path": "sources/PP-OCRv5_multi_languages.en.md",
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/docs/version3.x/algorithm/PP-OCRv5/PP-OCRv5_multi_languages.en.md",
+      "sha256": "30ede9c6d734409348cfdc6f911b8b3a761f638bd1273cdbca5893d7367f0ef7",
+      "bytes": 17130
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "v6-medium",
+      "yaml_sha256": "991b700facf5b50a7de193468207d5f4255b538dde0d312ae3b7c7a9b6873129",
+      "dictionary_entries": 18708,
+      "dictionary_unique_entries": 18708,
+      "multi_codepoint_entries": [],
+      "duplicate_entries": {},
+      "alphabet_utf8_sha256": "d9a64a84befbb1f2e77ab4f2454acdb9cf1995e96567555aa6c30c2256d0fecb",
+      "classes_with_blank": 18710,
+      "class_contract": "0 blank; original YAML entries at classes1..N in unchanged order; appended ordinary space at N+1. Never deduplicate.",
+      "characters": {
+        "¡": {
+          "supported": false,
+          "classes": []
+        },
+        "„": {
+          "supported": false,
+          "classes": []
+        },
+        "ẞ": {
+          "supported": false,
+          "classes": []
+        },
+        "ß": {
+          "supported": true,
+          "classes": [
+            155
+          ]
+        },
+        "ï": {
+          "supported": true,
+          "classes": [
+            171
+          ]
+        },
+        "Ä": {
+          "supported": true,
+          "classes": [
+            128
+          ]
+        },
+        "’": {
+          "supported": true,
+          "classes": [
+            703
+          ]
+        },
+        "—": {
+          "supported": true,
+          "classes": [
+            699
+          ]
+        }
+      },
+      "config_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a"
+    },
+    {
+      "id": "v5-latin",
+      "yaml_sha256": "0bbe984570f597af3638e50bdf2e8276f3ab26a61966096538b3b0d1849f5c84",
+      "dictionary_entries": 836,
+      "dictionary_unique_entries": 772,
+      "multi_codepoint_entries": [],
+      "duplicate_entries": {
+        "À": [
+          63,
+          702
+        ],
+        "Á": [
+          64,
+          703
+        ],
+        "Â": [
+          65,
+          704
+        ],
+        "Ã": [
+          66,
+          705
+        ],
+        "Ä": [
+          67,
+          706
+        ],
+        "Å": [
+          68,
+          707
+        ],
+        "Æ": [
+          69,
+          708
+        ],
+        "Ç": [
+          70,
+          709
+        ],
+        "È": [
+          71,
+          710
+        ],
+        "É": [
+          72,
+          711
+        ],
+        "Ê": [
+          73,
+          712
+        ],
+        "Ë": [
+          74,
+          713
+        ],
+        "Ì": [
+          75,
+          714
+        ],
+        "Í": [
+          76,
+          715
+        ],
+        "Î": [
+          77,
+          716
+        ],
+        "Ï": [
+          78,
+          717
+        ],
+        "Ð": [
+          79,
+          718
+        ],
+        "Ñ": [
+          80,
+          719
+        ],
+        "Ò": [
+          81,
+          720
+        ],
+        "Ó": [
+          82,
+          721
+        ],
+        "Ô": [
+          83,
+          722
+        ],
+        "Õ": [
+          84,
+          723
+        ],
+        "Ö": [
+          85,
+          724
+        ],
+        "×": [
+          86,
+          539
+        ],
+        "Ø": [
+          87,
+          725
+        ],
+        "Ù": [
+          88,
+          726
+        ],
+        "Ú": [
+          89,
+          727
+        ],
+        "Û": [
+          90,
+          728
+        ],
+        "Ü": [
+          91,
+          729
+        ],
+        "Ý": [
+          92,
+          730
+        ],
+        "Þ": [
+          93,
+          731
+        ],
+        "à": [
+          95,
+          732
+        ],
+        "á": [
+          96,
+          733
+        ],
+        "â": [
+          97,
+          734
+        ],
+        "ã": [
+          98,
+          735
+        ],
+        "ä": [
+          99,
+          736
+        ],
+        "å": [
+          100,
+          737
+        ],
+        "æ": [
+          101,
+          738
+        ],
+        "ç": [
+          102,
+          739
+        ],
+        "è": [
+          103,
+          740
+        ],
+        "é": [
+          104,
+          741
+        ],
+        "ê": [
+          105,
+          742
+        ],
+        "ë": [
+          106,
+          743
+        ],
+        "ì": [
+          107,
+          744
+        ],
+        "í": [
+          108,
+          745
+        ],
+        "î": [
+          109,
+          746
+        ],
+        "ï": [
+          110,
+          747
+        ],
+        "ð": [
+          111,
+          748
+        ],
+        "ñ": [
+          112,
+          749
+        ],
+        "ò": [
+          113,
+          750
+        ],
+        "ó": [
+          114,
+          751
+        ],
+        "ô": [
+          115,
+          752
+        ],
+        "õ": [
+          116,
+          753
+        ],
+        "ö": [
+          117,
+          754
+        ],
+        "÷": [
+          118,
+          824
+        ],
+        "ø": [
+          119,
+          755
+        ],
+        "ù": [
+          120,
+          756
+        ],
+        "ú": [
+          121,
+          757
+        ],
+        "û": [
+          122,
+          758
+        ],
+        "ü": [
+          123,
+          759
+        ],
+        "ý": [
+          124,
+          760
+        ],
+        "þ": [
+          125,
+          761
+        ],
+        "ÿ": [
+          126,
+          762
+        ],
+        "ƒ": [
+          273,
+          699
+        ]
+      },
+      "alphabet_utf8_sha256": "b0935f2331b3507d91ee1cf4af0c486d69788425fdaf7c242cce153fdc2f7275",
+      "classes_with_blank": 838,
+      "class_contract": "0 blank; original YAML entries at classes1..N in unchanged order; appended ordinary space at N+1. Never deduplicate.",
+      "characters": {
+        "¡": {
+          "supported": false,
+          "classes": []
+        },
+        "„": {
+          "supported": true,
+          "classes": [
+            553
+          ]
+        },
+        "ẞ": {
+          "supported": false,
+          "classes": []
+        },
+        "ß": {
+          "supported": true,
+          "classes": [
+            94
+          ]
+        },
+        "ï": {
+          "supported": true,
+          "classes": [
+            110,
+            747
+          ]
+        },
+        "Ä": {
+          "supported": true,
+          "classes": [
+            67,
+            706
+          ]
+        },
+        "’": {
+          "supported": true,
+          "classes": [
+            548
+          ]
+        },
+        "—": {
+          "supported": true,
+          "classes": [
+            543
+          ]
+        }
+      },
+      "config_sha256": "52ec810683ec971488a4bf7ab7fa0e6bddf8886befa02042a951b00215baf8dc"
+    }
+  ]
+}
