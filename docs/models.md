@@ -12,6 +12,17 @@ The [actual Rust comparison](../training/experimental_paddle/results-v6-direct.j
 retains every prediction and failure; complete font/language coverage is unproven.
 See [the full Apache license](../models/LICENSE-PADDLE-APACHE-2.0.txt).
 
+The optional **PP-OCRv6 medium** profiles append `-medium` to the six evaluated
+language IDs: `en`, `es`, `fr`, `de`, `it` and `pt`. The
+[medium manifest](../models/paddle-v6-medium-manifest.json) pins its unmodified
+official ONNX graph and separate configurations; the downloader fetches both
+Paddle sizes. It uses the same BGR tensor and dictionary contract as small,
+including the missing `¡`, `„` and `ẞ` characters. It is upstream pretrained,
+without MTG fine-tuning. The [fresh comparison](experiments/paddle-blur.md)
+records lower damaged-text CER alongside clean exact-match regressions and
+higher compute cost. Existing defaults and historical small-model evidence
+remain preserved. `la` and best-effort Japanese/Chinese profiles retain small.
+
 `ocracle-mtg.rten` is the distributed MTG-adapted CRNN recognizer. Its alphabet,
 input height, and model name are in [recognizer-config.json](../models/recognizer-config.json).
 The model takes grayscale `[N,1,64,W]` floats normalized as `pixel / 255 - 0.5`

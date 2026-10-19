@@ -26,6 +26,8 @@ target/release/ocracle recognize docs/gallery/assets/historic-flavor-blur.png \
 
 `--language` selects one profile for the entire card from `models/profiles.json` and verifies SHA-256 digests of both its weights and exact configuration file. Latin-script profiles are `en`, `es`, `fr`, `de`, `it`, `pt`, and `la`; `ja`, `zhs`, and `zht` have best-effort horizontal examples. These share the upstream PP-OCRv6 small model, without MTG fine-tuning. Coverage is limited to evaluated samples, and unknown profiles return an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
 
+Optional `en-medium`, `es-medium`, `fr-medium`, `de-medium`, `it-medium` and `pt-medium` profiles use the official PP-OCRv6 medium model for the same printed languages. For example, pass `--language fr-medium` for a French card. On the [fresh blur development cohort](experiments/paddle-blur.md), medium reduced damaged-text character errors but lost clean exact matches, so the small model remains the default. Medium downloads 76.6 MB of weights versus 21.2 MB for small and took about 2.4 times as long per process in that comparison. Individual crops can regress; neither model is MTG fine-tuned.
+
 The experimental MTG-adapted English CRNN is checked into the repository with its matching configuration; select it with `--language en-mtg`. The default Paddle model is downloaded from a pinned official source. For comparison, the downloader also fetches the original Ocrs base recognizer:
 
 ```sh

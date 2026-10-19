@@ -29,6 +29,14 @@ PADDLE_YAML_SHA256 = "ab078671bb49f06228eadccd34f1bb501e157f7a047095ffb943ba8151
 PADDLE_ALPHABET_SHA256 = "d9a64a84befbb1f2e77ab4f2454acdb9cf1995e96567555aa6c30c2256d0fecb"
 MTG_ALPHABET_SHA256 = "1e3585bda6d8ad5f5f29dbafb6a56e21102bd027bbef36c68eca3b6f60dadf1e"
 PADDLE_PROFILES = {"en", "es", "fr", "de", "it", "pt", "la", "ja", "zhs", "zht"}
+MEDIUM_PROFILE_LANGUAGES = {f"{language}-medium": language for language in ("en", "es", "fr", "de", "it", "pt")}
+MEDIUM_MANIFEST = "models/paddle-v6-medium-manifest.json"
+MEDIUM_REPOSITORY = "https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_rec_onnx"
+MEDIUM_REVISION = "50c7eacafc52fa7bcf4194e8cd08e46f8558504b"
+MEDIUM_SHA256 = "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba"
+MEDIUM_BYTES = 76_554_979
+MEDIUM_YAML_SHA256 = "991b700facf5b50a7de193468207d5f4255b538dde0d312ae3b7c7a9b6873129"
+PROFILE_FIELDS = ("id", "language", "model", "sha256", "configuration", "configuration_sha256")
 CONTRACT_FIELDS = ("alphabet", "input_height", "output_layout", "output_values")
 
 
@@ -100,7 +108,7 @@ def distance(left, right):
 
 
 def verify_evidence(root, manifest, configurations):
-    """Bind real direct-color observations to active contracts and frozen pixels."""
+    """Bind small-model observations to archived contracts and frozen pixels."""
     report = read_json(relative_file(root, manifest["evaluation"]))
     require(report["original_model_sha256"] == PADDLE_SHA256, "Direct evidence identifies different model weights")
     template_path = relative_file(root, "training/experimental_paddle/direct-model-config.json")
@@ -147,6 +155,77 @@ def verify_evidence(root, manifest, configurations):
     return len(seen)
 
 
+def profile_identity(profile):
+    """Return the complete runtime identity, excluding descriptive metadata."""
+    return tuple(profile[field] for field in PROFILE_FIELDS)
+
+
+def verify_paddle_profiles(root, manifest, languages, exact_set=False):
+    """Verify pinned declarations and each explicit profile-to-language mapping."""
+    profiles = {profile["id"]: profile for profile in manifest["profiles"]}
+    require(len(profiles) == len(manifest["profiles"]), "Duplicate Paddle manifest profile ID")
+    allowed = set(languages)
+    require(set(profiles) <= allowed and (not exact_set or set(profiles) == allowed), "Paddle manifest profile set differs")
+    configurations = {}
+    for key, profile in profiles.items():
+        require(profile["language"] == languages[key] and profile["model"] == manifest["model_path"]
+                and profile["sha256"] == manifest["sha256"], f"Paddle manifest profile routing mismatch: {key}")
+        path = relative_file(root, profile["configuration"])
+        require(digest(path) == profile["configuration_sha256"], f"Profile configuration SHA-256 mismatch: {key}")
+        config = read_json(path)
+        require(config["language"] == languages[key], f"Profile/configuration language mismatch: {key}")
+        alphabet = config["alphabet"]
+        require(isinstance(alphabet, str) and len(alphabet) == 18709 and len(set(alphabet)) == 18709
+                and alphabet.endswith(" "), f"Paddle blank/dictionary/space mapping mismatch: {key}")
+        require(hashlib.sha256(alphabet.encode("utf-8")).hexdigest() == PADDLE_ALPHABET_SHA256,
+                f"Paddle character class ordering changed: {key}")
+        require(config["input_height"] == 48 and config["output_layout"] == "NTC"
+                and config["output_values"] == "probabilities", f"Paddle tensor contract mismatch: {key}")
+        expected_input = {"color_mode": "bgr", "offset": -1, "padding_width": 320,
+                          "width_rounding": "ceil", "min_content_width": 1}
+        for field, value in expected_input.items():
+            require(config["input"].get(field) == value, f"Paddle input contract mismatch: {key} {field}")
+        require(math.isclose(config["input"]["scale"], 2 / 255, rel_tol=0, abs_tol=1e-12), f"Paddle pixel scale changed: {key}")
+        require(not set("¡„ẞ") & set(alphabet) and set("ïÄß選択集群攻击劃破蒼穹") <= set(alphabet),
+                f"Paddle documented glyph audit changed: {key}")
+        configurations[key] = config
+    return profiles, configurations
+
+
+def verify_medium_source(root, manifest):
+    """Verify only the immutable official medium graph and publisher dictionary."""
+    require(manifest["schema_version"] == 1, "Unsupported medium manifest schema")
+    require(manifest["source_repository"] == MEDIUM_REPOSITORY
+            and manifest["source_revision"] == MEDIUM_REVISION, "Medium publisher/revision changed")
+    require(manifest["sha256"] == MEDIUM_SHA256 and manifest["bytes"] == MEDIUM_BYTES, "Medium model identity changed")
+    require(manifest["source_graph_modified"] is False and manifest["mtg_fine_tuned"] is False,
+            "Official medium provenance changed")
+    require(manifest["license"] == "Apache-2.0", "Medium license declaration changed")
+    require(len(manifest["upstream_models"]) == 1 and not manifest.get("adapted_models"),
+            "Medium manifest must declare only the original upstream graph")
+    require(manifest["source_manifest"] == "training/experimental_paddle_candidates/sources.json", "Medium source manifest changed")
+    source_path = relative_file(root, manifest["source_manifest"])
+    source = read_json(source_path)
+    candidates = [item for item in source["candidates"] if item["id"] == "v6-medium"]
+    require(source["schema_version"] == 1 and source["publisher"] == "PaddlePaddle"
+            and len(candidates) == 1, "Medium publisher evidence changed")
+    candidate = candidates[0]
+    require(candidate["repository"] == "PaddlePaddle/PP-OCRv6_medium_rec_onnx"
+            and candidate["revision"] == MEDIUM_REVISION and candidate["license"] == "apache-2.0",
+            "Medium source evidence revision/license differs")
+    for name, sha, size in [("inference.onnx", MEDIUM_SHA256, MEDIUM_BYTES),
+                            ("inference.yml", MEDIUM_YAML_SHA256, 150_580)]:
+        item = candidate["files"][name]
+        require(item["sha256"] == sha and item["bytes"] == size
+                and item["url"] == f"{MEDIUM_REPOSITORY}/resolve/{MEDIUM_REVISION}/{name}",
+                f"Medium source graph/dictionary pin differs: {name}")
+        relative = str(Path(manifest["source_manifest"]).parent / item["path"])
+        path = relative_file(root, relative)
+        require(name != "inference.yml" or path.is_file(), "Pinned medium dictionary is absent")
+        if path.exists():
+            require(path.stat().st_size == size and digest(path) == sha, f"Medium source bytes differ: {name}")
+
+
 def verify(root, require_models=False):
     """Verify source pinning, dictionaries, profiles, optional weights and evidence."""
     root = root.resolve()
@@ -172,9 +251,18 @@ def verify(root, require_models=False):
     require(dictionary["entries"] == dictionary["unique_entries"] == 18708 and dictionary["class_count"] == 18710, "Publisher dictionary/class audit changed")
     require(dictionary["all_entries_single_Unicode_scalar"] is True and dictionary["contains_space"] is False, "Publisher dictionary entry audit changed")
     require(digest(root / "models/LICENSE-PADDLE-APACHE-2.0.txt") == digest(root / "training/experimental_paddle/LICENSE.paddle"), "Distributed Paddle license differs from pinned source license")
+    small_profiles, configurations = verify_paddle_profiles(root, paddle, {key: key for key in PADDLE_PROFILES}, exact_set=True)
+    medium_profiles = {}
+    declarations = [legacy, paddle]
+    medium_path = root / MEDIUM_MANIFEST
+    if medium_path.exists():
+        medium = read_json(medium_path)
+        verify_medium_source(root, medium)
+        medium_profiles, _ = verify_paddle_profiles(root, medium, MEDIUM_PROFILE_LANGUAGES)
+        declarations.append(medium)
     artifacts = {}
     checked, missing = set(), set()
-    for declaration in (legacy, paddle):
+    for declaration in declarations:
         for item in declaration["upstream_models"]:
             require(item["path"] not in artifacts, f"Duplicate upstream model path: {item['path']}")
             require(item["url"].startswith("https://"), f"Non-HTTPS model source: {item['path']}")
@@ -188,8 +276,15 @@ def verify(root, require_models=False):
     require(original["sha256"] == PADDLE_SHA256 and original["bytes"] == PADDLE_BYTES, "Downloader Paddle declaration differs")
     require(original["url"] == f"{PADDLE_REPOSITORY}/resolve/{PADDLE_REVISION}/inference.onnx", "Downloader URL is not the pinned original graph")
     require(original["license"] == "Apache-2.0", "Downloader Paddle license differs")
+    if medium_path.exists():
+        original = artifacts[medium["model_path"]]
+        require(original["sha256"] == MEDIUM_SHA256 and original["bytes"] == MEDIUM_BYTES,
+                "Downloader medium declaration differs")
+        require(original["url"] == f"{MEDIUM_REPOSITORY}/resolve/{MEDIUM_REVISION}/inference.onnx",
+                "Downloader medium URL is not the pinned original graph")
+        require(original["license"] == "Apache-2.0" and not original.get("training_only", False),
+                "Downloader medium license/inference declaration differs")
     profiles = {}
-    configurations = {}
     for profile in registry["profiles"]:
         key = profile["id"]
         require(key not in profiles, f"Duplicate profile ID: {key}")
@@ -207,16 +302,9 @@ def verify(root, require_models=False):
         require(isinstance(alphabet, str) and len(alphabet) == len(set(alphabet)), f"Invalid/duplicate class alphabet: {key}")
         require(not any(0xD800 <= ord(c) <= 0xDFFF for c in alphabet), f"Non-scalar Unicode class label: {key}")
         if key in PADDLE_PROFILES:
-            require(profile["language"] == key and profile["model"] == paddle["model_path"], f"Paddle profile routing mismatch: {key}")
-            require(len(alphabet) == 18709 and alphabet.endswith(" ") and alphabet.count(" ") == 1, f"Paddle blank/dictionary/space mapping mismatch: {key}")
-            require(hashlib.sha256(alphabet.encode("utf-8")).hexdigest() == PADDLE_ALPHABET_SHA256, f"Paddle character class ordering changed: {key}")
-            require(config["input_height"] == 48 and config["output_layout"] == "NTC" and config["output_values"] == "probabilities", f"Paddle tensor contract mismatch: {key}")
-            expected_input = {"color_mode": "bgr", "offset": -1, "padding_width": 320, "width_rounding": "ceil", "min_content_width": 1}
-            for field, value in expected_input.items():
-                require(config["input"].get(field) == value, f"Paddle input contract mismatch: {key} {field}")
-            require(math.isclose(config["input"]["scale"], 2 / 255, rel_tol=0, abs_tol=1e-12), f"Paddle pixel scale changed: {key}")
-            require("¡" not in alphabet and "„" not in alphabet and set("ïÄß選択集群攻击劃破蒼穹") <= set(alphabet), f"Paddle documented glyph audit changed: {key}")
-            configurations[key] = config
+            require(profile_identity(profile) == profile_identity(small_profiles[key]), f"Original profile must retain its exact small declaration: {key}")
+        elif key in medium_profiles:
+            require(profile_identity(profile) == profile_identity(medium_profiles[key]), f"Active medium profile has no exact pinned declaration: {key}")
         elif key == "en-mtg":
             require(profile["language"] == "en" and profile["model"] == "models/ocracle-mtg.rten", "Retained MTG CRNN routing changed")
             require(len(alphabet) == 96 and hashlib.sha256(alphabet.encode()).hexdigest() == MTG_ALPHABET_SHA256, "Retained MTG CRNN class mapping changed")
@@ -228,11 +316,7 @@ def verify(root, require_models=False):
                 require(legacy_input.get(field, value) == value, f"Retained MTG CRNN input contract changed: {field}")
         else:
             raise ValueError(f"Unexpected registered profile requires explicit evidence review: {key}")
-    require(set(profiles) == PADDLE_PROFILES | {"en-mtg"}, "Expected Latin/best-effort/retained profile set differs")
-    declared = {profile["id"]: profile for profile in paddle["profiles"]}
-    require(len(declared) == len(paddle["profiles"]) and set(declared) == PADDLE_PROFILES, "Paddle manifest profile set differs")
-    for key in PADDLE_PROFILES:
-        require(declared[key] == profiles[key], f"Registry and Paddle manifest profile differ: {key}")
+    require(set(profiles) == PADDLE_PROFILES | {"en-mtg"} | set(medium_profiles), "Expected original/optional-medium profile set differs")
     observations = verify_evidence(root, paddle, configurations)
     return {"profiles": len(profiles), "paddle_character_classes_including_blank": 18710, "direct_observations": observations, "verified_model_files": sorted(checked), "absent_optional_model_files": sorted(missing)}
 
