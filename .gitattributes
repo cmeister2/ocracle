@@ -2,3 +2,5 @@
 training/latin-v2-corpus/DEJAVU-LICENSE.txt -whitespace
 # Keep the required space markers on empty unified-diff context lines.
 training/experimental_colour/colour-preserving.patch -whitespace
+# Preserve byte-exact upstream documentation snapshots.
+training/experimental_paddle_candidates/sources/PP-OCRv5_multi_languages.en.md -whitespace

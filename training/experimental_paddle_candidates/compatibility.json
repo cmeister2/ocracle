@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "rten_version": "0.26.0",
+  "runner_sha256": "7427653f3314492561fb9c62bcc583b701fdec1f82a8f602dab3bbf94e1c1486",
+  "fixture_manifest_sha256": "d00a07a924b4ad3169e07c12a22a98f051dd0037d539651265fc4f54e5bab331",
+  "selection": "First title/clean, first italic/downsample in frozen development manifest, plus a normalized-zero width320 tensor; selected without OCR. The zero tensor is a runtime probe, not an accuracy case.",
+  "normalization": "Official BGR OpenCV INTER_LINEAR -> NCHW float32 ((pixel/255)-.5)*2; aspect ceil width, minimum zero-padded320. Identical input tensors for both runtimes.",
+  "production_difference": "Full development accuracy report uses actual Rust CLI Triangle resizing; these shared-tensor parity checks use official OpenCV resizing.",
+  "packages": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "records": [
+    {
+      "model": "v6-small",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "case_id": "00-7839827a-5660-4ee0-a675-a818c72a645a-clean",
+      "image_sha256": "68751b387663ba7545df02879739d7d914bcad6a65cb7bd0a905bb289a63e916",
+      "reference": "Slivoïde synchronisé",
+      "input_shape": [
+        1,
+        3,
+        48,
+        432
+      ],
+      "output_shape": [
+        1,
+        54,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 3.5762786865234375e-07,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 2.86102294921875e-06,
+      "official_bgr_ort_text": "Slivoïde synchronisé",
+      "official_bgr_rten_text": "Slivoïde synchronisé",
+      "runner_stdout": "shape=[1, 54, 18710] elapsed_ms=69.230\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v6-small",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "case_id": "27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-downsample",
+      "image_sha256": "fd0e209c847080b7df8aafaeea6f4bce6368aa9f7aa0bd97bc069091e66c38ef",
+      "reference": "travailleurs, ces derniers possèdent une",
+      "input_shape": [
+        1,
+        3,
+        48,
+        902
+      ],
+      "output_shape": [
+        1,
+        113,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 1.3262033462524414e-06,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 3.6954879760742188e-06,
+      "official_bgr_ort_text": "travailleurs, ces derniers possèdent une",
+      "official_bgr_rten_text": "travailleurs, ces derniers possèdent une",
+      "runner_stdout": "shape=[1, 113, 18710] elapsed_ms=81.705\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v6-small",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "case_id": "normalized-zero-padding-width320",
+      "image_sha256": null,
+      "reference": null,
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 4.76837158203125e-07,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 3.5762786865234375e-07,
+      "official_bgr_ort_text": "",
+      "official_bgr_rten_text": "",
+      "runner_stdout": "shape=[1, 40, 18710] elapsed_ms=58.554\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v6-medium",
+      "model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "case_id": "00-7839827a-5660-4ee0-a675-a818c72a645a-clean",
+      "image_sha256": "68751b387663ba7545df02879739d7d914bcad6a65cb7bd0a905bb289a63e916",
+      "reference": "Slivoïde synchronisé",
+      "input_shape": [
+        1,
+        3,
+        48,
+        432
+      ],
+      "output_shape": [
+        1,
+        54,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 1.9073486328125e-06,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 5.4836273193359375e-06,
+      "official_bgr_ort_text": "Slivoïde synchronisé",
+      "official_bgr_rten_text": "Slivoïde synchronisé",
+      "runner_stdout": "shape=[1, 54, 18710] elapsed_ms=132.877\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v6-medium",
+      "model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "case_id": "27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-downsample",
+      "image_sha256": "fd0e209c847080b7df8aafaeea6f4bce6368aa9f7aa0bd97bc069091e66c38ef",
+      "reference": "travailleurs, ces derniers possèdent une",
+      "input_shape": [
+        1,
+        3,
+        48,
+        902
+      ],
+      "output_shape": [
+        1,
+        113,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 1.800060272216797e-05,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 1.9073486328125e-06,
+      "official_bgr_ort_text": "travailleurs, ces derniers possèdent une",
+      "official_bgr_rten_text": "travailleurs, ces derniers possèdent une",
+      "runner_stdout": "shape=[1, 113, 18710] elapsed_ms=188.756\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v6-medium",
+      "model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "case_id": "normalized-zero-padding-width320",
+      "image_sha256": null,
+      "reference": null,
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 11
+        }
+      ],
+      "max_absolute_probability_difference": 3.5762786865234375e-07,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 3.5762786865234375e-07,
+      "official_bgr_ort_text": "",
+      "official_bgr_rten_text": "",
+      "runner_stdout": "shape=[1, 40, 18710] elapsed_ms=98.366\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v5-latin",
+      "model_sha256": "7888113072263cb471b93f66dd5e2ad70548dc526fa1ace760d0d973dd121498",
+      "case_id": "00-7839827a-5660-4ee0-a675-a818c72a645a-clean",
+      "image_sha256": "68751b387663ba7545df02879739d7d914bcad6a65cb7bd0a905bb289a63e916",
+      "reference": "Slivoïde synchronisé",
+      "input_shape": [
+        1,
+        3,
+        48,
+        432
+      ],
+      "output_shape": [
+        1,
+        54,
+        838
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 7
+        }
+      ],
+      "max_absolute_probability_difference": 6.556510925292969e-06,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 1.430511474609375e-06,
+      "official_bgr_ort_text": "Slivoïde synchronisé",
+      "official_bgr_rten_text": "Slivoïde synchronisé",
+      "runner_stdout": "shape=[1, 54, 838] elapsed_ms=62.511\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v5-latin",
+      "model_sha256": "7888113072263cb471b93f66dd5e2ad70548dc526fa1ace760d0d973dd121498",
+      "case_id": "27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-downsample",
+      "image_sha256": "fd0e209c847080b7df8aafaeea6f4bce6368aa9f7aa0bd97bc069091e66c38ef",
+      "reference": "travailleurs, ces derniers possèdent une",
+      "input_shape": [
+        1,
+        3,
+        48,
+        902
+      ],
+      "output_shape": [
+        1,
+        113,
+        838
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 7
+        }
+      ],
+      "max_absolute_probability_difference": 2.9802322387695312e-06,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 1.3113021850585938e-06,
+      "official_bgr_ort_text": "travailleurs, ces derniers possèdent une",
+      "official_bgr_rten_text": "travailleurs, ces derniers possèdent une",
+      "runner_stdout": "shape=[1, 113, 838] elapsed_ms=72.011\n",
+      "runner_stderr": ""
+    },
+    {
+      "model": "v5-latin",
+      "model_sha256": "7888113072263cb471b93f66dd5e2ad70548dc526fa1ace760d0d973dd121498",
+      "case_id": "normalized-zero-padding-width320",
+      "image_sha256": null,
+      "reference": null,
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        838
+      ],
+      "opset": [
+        {
+          "domain": "",
+          "version": 7
+        }
+      ],
+      "max_absolute_probability_difference": 0.00031197071075439453,
+      "identical_argmax": true,
+      "rten_row_sum_max_error": 1.430511474609375e-06,
+      "official_bgr_ort_text": "",
+      "official_bgr_rten_text": "",
+      "runner_stdout": "shape=[1, 40, 838] elapsed_ms=50.217\n",
+      "runner_stderr": ""
+    }
+  ]
+}
