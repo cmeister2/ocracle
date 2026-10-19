@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "frozen_on": "2026-10-19",
+  "cards": 5,
+  "observations": 10,
+  "manifest_sha256": "75bc9370a12a7a86de9625c8cbe330ee23d2a234a110002866f0cb9a9b62bcc8",
+  "cards_sha256": "3a0a1161422b2462969ae1c831df7fa3d31b56f408945bffb159502947320cee",
+  "annotations_sha256": "27b15c60a28207f8fdec610d65af20c88fa6c20bab9186658b7133271123d756",
+  "review_sha256": "201a02732c4c4f7e33a1f89034fe4b33e5db5347e502fd70dc03f8c95b50c181",
+  "publisher_set": "Our Show Is on Friday, Can You Make It? (2021 Secret Lair)",
+  "selection": "All five cards enumerated in the publisher drop; all complete title fields manually fixed before any OCR runs. No OCR filtering or training.",
+  "normalization": "NFC plus collapsed whitespace only; case, apostrophe and visible middle-dot separators are scored literally.",
+  "degradation": {
+    "gaussian_sigma_source_pixels": 2.4,
+    "linear_scale": 0.3,
+    "resample": "Pillow BILINEAR",
+    "pillow_version": "13.0.0"
+  },
+  "frozen_custom_training_exclusion_check": {
+    "training/corpus/cards.json": {
+      "cards": 126,
+      "sha256": "b24187ed4da135aa9f110e360c33447296c5b03a56aa6f80c2552148d84e0e0c"
+    },
+    "training/latin-corpus/cards.json": {
+      "cards": 120,
+      "sha256": "35cf6702e238c3c51c879d89a82d2a06faadd950ffb163a4136c9c2564038ddf"
+    },
+    "training/latin-v2-corpus/cards.json": {
+      "cards": 262,
+      "sha256": "acd5d0bcfee33a5b554df6316b52fc7dfbdb965e2ce3f150da2407393cef2142"
+    }
+  },
+  "training_isolation": "No name, Oracle ID or print ID appears in current English, Latin V1 or Latin V2 corpus selections/materialized manifests. Upstream pretrained-model membership is unknown.",
+  "scope": "Hand-drawn Latin title lettering and its actual two-dimensional layout; rectangular crops retain incidental source pixels. Not a pure single-font classification benchmark.",
+  "rights": "Original card imagery/lettering belongs to Wizards of the Coast and credited artists; frozen crop evidence is research data, not relicensed as MIT source code."
+}
