@@ -26,7 +26,7 @@ enum Command {
     Recognize {
         /// Image to read (PNG, JPEG or WebP).
         image: PathBuf,
-        /// CRNN recognition weights in RTen or ONNX format.
+        /// CTC recognition weights in RTen or ONNX format.
         #[arg(long, required_unless_present = "language")]
         recognition_model: Option<PathBuf>,
         /// One trained language profile for the whole card (currently en).
@@ -38,7 +38,7 @@ enum Command {
         /// Neural word detector; required unless --line is used.
         #[arg(long)]
         detection_model: Option<PathBuf>,
-        /// JSON checkpoint alphabet, input_height and model_name configuration.
+        /// JSON checkpoint alphabet, input height, architecture and model name.
         #[arg(long)]
         model_config: Option<PathBuf>,
         /// Treat the entire image as one line and skip detection.

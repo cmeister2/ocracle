@@ -6,7 +6,8 @@
       "language": "en",
       "model": "models/ocracle-mtg.rten",
       "configuration": "models/recognizer-config.json",
-      "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f"
+      "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
+      "configuration_sha256": "69a0bb1ed466999a4869d465622b57ff8b2833d51766e21d54ac654c6fa0286e"
     }
   ]
 }

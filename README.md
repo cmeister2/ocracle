@@ -24,7 +24,7 @@ target/release/ocracle recognize docs/gallery/assets/historic-flavor-blur.png \
   --language en --line --passes all
 ```
 
-`--language` selects one trained profile for the entire card from `models/profiles.json` and verifies its weights and configuration. Currently only `en` is ready; requesting an unavailable profile returns an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
+`--language` selects one trained profile for the entire card from `models/profiles.json` and verifies SHA-256 digests of both its weights and exact configuration file. Currently only `en` is ready; requesting an unavailable profile returns an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
 
 The specialized checkpoint is checked into the repository with its matching configuration. For comparison, the downloader also fetches the original base recognizer:
 
@@ -60,7 +60,7 @@ fn main() -> anyhow::Result<()> {
 }
 ```
 
-Models can also be ONNX files compatible with RTen. The recognition contract is grayscale `[N,1,64,W]`, pixel values `/255 - 0.5`, and `[T,N,C]` **log probabilities**, with CTC blank at zero. The configuration supplies the exact checkpoint alphabet; changing it without retraining changes what classes mean. RTen 0.26 is used to match `ocrs` 0.13's detector integration.
+Models can also be ONNX files compatible with RTen. The recognition contract is grayscale `[N,1,height,W]`, pixel values `/255 - 0.5`, and `[T,N,C]` **log probabilities**, with CTC blank at zero. The configuration supplies the exact checkpoint alphabet, `input_height` (64 by default), and `architecture` (defaults to `CRNN` for the original models). Other CTC architectures need a compatible export; the architecture label supplies method attribution. Changing the alphabet without retraining changes what classes mean. RTen 0.26 is used to match `ocrs` 0.13's detector integration.
 
 ## Training and evaluation
 

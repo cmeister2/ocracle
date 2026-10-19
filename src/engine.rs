@@ -19,7 +19,7 @@ use crate::{
     Candidate, Layout, Line, ModelConfig, ModelIdentity, Options, Passes, Recognition, ctc,
 };
 
-/// Reusable MTG text recognizer backed by a convolutional recurrent network.
+/// Reusable MTG text recognizer backed by a CTC neural network.
 pub struct CardOcr {
     /// Optional word detector, absent for line-only deployments.
     detector: Option<OcrEngine>,
@@ -53,6 +53,8 @@ struct LanguageProfile {
     configuration: String,
     /// Digest required of the recognition weights actually loaded.
     sha256: String,
+    /// Digest of the exact alphabet/preprocessing configuration file.
+    configuration_sha256: String,
 }
 
 impl CardOcr {
@@ -67,7 +69,7 @@ impl CardOcr {
     ///
     /// Returns errors for unreadable or invalid registry/configuration files,
     /// unsupported registry versions, missing/duplicate profile identifiers,
-    /// mismatched languages, model loading failures or incorrect weight digests.
+    /// mismatched languages, model loading failures or incorrect model/config digests.
     pub fn load_profile(
         profile_id: &str,
         model_root: impl AsRef<Path>,
@@ -102,11 +104,14 @@ impl CardOcr {
             matches.next().is_none(),
             "duplicate language profile {profile_id:?}"
         );
-        let config: ModelConfig = serde_json::from_slice(
-            &fs::read(root.join(&profile.configuration))
-                .context("read language profile configuration")?,
-        )
-        .context("parse language profile configuration")?;
+        let config_bytes = fs::read(root.join(&profile.configuration))
+            .context("read language profile configuration")?;
+        ensure!(
+            digest(&config_bytes) == profile.configuration_sha256,
+            "language profile configuration SHA-256 mismatch"
+        );
+        let config: ModelConfig = serde_json::from_slice(&config_bytes)
+            .context("parse language profile configuration")?;
         ensure!(
             config.language == profile.language,
             "language profile and model configuration disagree"
@@ -134,6 +139,10 @@ impl CardOcr {
         config: ModelConfig,
     ) -> Result<Self> {
         ensure!(!config.alphabet.is_empty(), "recognition alphabet is empty");
+        ensure!(
+            !config.architecture.trim().is_empty(),
+            "recognition architecture description is empty"
+        );
         ensure!(
             (8..=256).contains(&config.input_height),
             "input height must be in 8..=256"
@@ -206,13 +215,14 @@ impl CardOcr {
             ""
         };
         let mut candidates = Vec::new();
+        let architecture = &self.config.architecture;
         if matches!(options.passes, Passes::Original | Passes::All) {
             candidates.push(self.run_pass(
                 &original,
                 [width, height],
                 options.single_line,
                 card_layout,
-                &format!("{layout_method}original + CRNN / greedy CTC"),
+                &format!("{layout_method}original + {architecture} / greedy CTC"),
             )?);
         }
         if matches!(options.passes, Passes::Enhanced | Passes::All) {
@@ -223,7 +233,7 @@ impl CardOcr {
                 [width, height],
                 options.single_line,
                 card_layout,
-                &format!("{layout_method}{scale}x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC"),
+                &format!("{layout_method}{scale}x Lanczos + contrast stretch + unsharp mask + {architecture} / greedy CTC"),
             )?);
         }
         let best = candidates
@@ -352,7 +362,7 @@ impl CardOcr {
             .collect())
     }
 
-    /// Resize a grayscale line and decode its CRNN log probabilities.
+    /// Resize a grayscale line and decode the network's CTC log probabilities.
     ///
     /// # Errors
     ///

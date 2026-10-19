@@ -1,6 +1,6 @@
 //! Neural OCR dedicated to printed Magic: The Gathering card text.
 //!
-//! [`CardOcr`] reads images, detects text lines, and decodes a CRNN's CTC
+//! [`CardOcr`] reads images, detects text lines, and decodes a neural network's CTC
 //! predictions. Small crops can bypass detection with [`Options::single_line`].
 //! Results preserve competing preprocessing passes and report uncalibrated
 //! character posterior scores. They never substitute text from a card database.

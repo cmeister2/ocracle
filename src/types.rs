@@ -11,6 +11,12 @@ pub struct ModelConfig {
     pub input_height: u32,
     /// Human-readable checkpoint identifier, not an accuracy claim.
     pub model_name: String,
+    /// Recognition architecture shown in method descriptions, such as `CRNN`.
+    ///
+    /// This metadata describes the exported model; it does not select a decoder.
+    /// All supported exports must emit the same CTC tensor contract.
+    #[serde(default = "crnn")]
+    pub architecture: String,
     /// Printed card language handled by these weights (Scryfall language code).
     ///
     /// A card uses one language profile, including Latin collector/artist text.
@@ -24,6 +30,7 @@ impl Default for ModelConfig {
             alphabet: " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".into(),
             input_height: 64,
             model_name: "ocrs CRNN base".into(),
+            architecture: crnn(),
             language: english(),
         }
     }
@@ -82,6 +89,11 @@ pub struct ModelIdentity {
 /// Default language of the original Ocrs recognition checkpoint.
 fn english() -> String {
     "en".into()
+}
+
+/// Architecture of the original Ocrs recognition checkpoint.
+fn crnn() -> String {
+    "CRNN".into()
 }
 
 /// Recognized text line and its position in the original input image.
