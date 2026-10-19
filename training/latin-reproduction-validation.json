@@ -1,0 +1,8 @@
+{
+  "records": 7984,
+  "record_semantics_equal": true,
+  "byte_identical_pngs": 7984,
+  "mismatching_pngs": 0,
+  "manifest_sha256": "15602f93967027d259d53adad133829ba9a9f8d9a0ab92f426f8ec47cdb55d20",
+  "independent_materialization": "Temporary repository, frozen localized metadata and reviewed boxes, cached scans verified by digest; live model training inputs unchanged"
+}

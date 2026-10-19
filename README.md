@@ -68,11 +68,13 @@ See [training](training/README.md) for reproducible acquisition, card-identity s
 
 The [language inventory](docs/language-coverage.md) tracks verified print languages and their transcription requirements. Language profiles are recorded separately from working models: adding a profile or initializing a Unicode classifier does not enable recognition of that language.
 
+An [experimental shared Latin model](training/latin-corpus/README.md) adds accented classes for French, German, Italian, Portuguese and Spanish. Its [independent printed-title evaluation](training/latin-eval/README.md) exposed frequent accent errors, including confidently incorrect results. The frozen weights and raw failures are retained for comparison; this experiment is not a ready language profile.
+
 Blur is part of training: strong Gaussian blur, directional motion blur, downsampling, JPEG damage and combinations. Clean and damaged variants of a card stay in the same split. The gallery's card identities are excluded from specialized training. Evaluation must report clean and damaged cases separately; a model can still fail badly on severe blur.
 
 ## Simple gallery
 
-The static [gallery](docs/gallery/index.html) pairs real printed crops with actual Rust inference, method and confidence. It includes original and severely blurred versions of historic titles, rules, flavor and reminder text, plus manual printed transcriptions and character error rates. Source card links and image provenance are retained.
+The static [live gallery](https://cmeister2.github.io/ocracle/) ([source](docs/gallery/index.html)) pairs real printed crops with actual Rust inference, method and confidence. It includes original and severely blurred versions of historic titles, rules, flavor and reminder text, plus manual printed transcriptions and character error rates. Source card links and image provenance are retained.
 
 ```sh
 python3 scripts/gallery_export.py \

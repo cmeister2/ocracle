@@ -5,6 +5,7 @@
 /training/runs/
 /models/*.rten
 !/models/ocracle-mtg.rten
+!/models/ocracle-mtg-latin.rten
 /models/*.onnx
 /models/*.pt
 /training/checkpoints/

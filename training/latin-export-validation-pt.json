@@ -1,0 +1,47 @@
+{
+  "model_sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+  "dynamic_tensor_checks": [
+    {
+      "batch": 1,
+      "width": 64,
+      "shape": [
+        17,
+        1,
+        130
+      ],
+      "max_log_probability_error": 1.52587890625e-05
+    },
+    {
+      "batch": 1,
+      "width": 273,
+      "shape": [
+        69,
+        1,
+        130
+      ],
+      "max_log_probability_error": 1.71661376953125e-05
+    },
+    {
+      "batch": 2,
+      "width": 160,
+      "shape": [
+        41,
+        2,
+        130
+      ],
+      "max_log_probability_error": 1.52587890625e-05
+    }
+  ],
+  "held_out_gallery_checks": [
+    {
+      "image": "training/data/latin/images/scan-dd3e77e4-2674-40f3-9ba5-e1d09fe3cf93.png",
+      "pytorch_text": "C\u00e1o de Magma de Chandra",
+      "onnx_text": "C\u00e1o de Magma de Chandra",
+      "rust_text": "C\u00e1o de Magma de Chandra",
+      "max_log_probability_error": 1.9073486328125e-05,
+      "rust_confidence": 0.95374346,
+      "input_width": 636
+    }
+  ],
+  "comparison": "ONNX vs PyTorch same tensors; actual Rust image pipeline transcripts equal after boundary-whitespace trim. Pillow/image triangle filters can differ by pixel rounding."
+}

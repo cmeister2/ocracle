@@ -1,0 +1,13 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡«»¿ÀÁÈÉÊßàáâãäçèéêíîñòóôõöùúûü—„",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "es"
+  ],
+  "normalization": "NFC; preserve accents, punctuation and case; remove brace-encoded mana spelling from synthetic lines only",
+  "unrendered_characters": {}
+}

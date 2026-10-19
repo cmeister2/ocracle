@@ -1,0 +1,14 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡«»¿ÀÁÈÉÊßàáâãäçèéêíîñòóôõöùúûü—„",
+  "input_height": 64,
+  "model_name": "ocracle-mtg-latin-v1",
+  "language": "de",
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "pt"
+  ]
+}

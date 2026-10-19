@@ -1,0 +1,1802 @@
+{
+  "model_name": "ocracle-mtg-latin-v1",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "es"
+  ],
+  "alphabet_characters": 129,
+  "seed": 20261019,
+  "steps": 600,
+  "batch_size": 4,
+  "backbone_frozen": true,
+  "batch_norm_running_statistics_frozen": true,
+  "head_learning_rate": 0.0003,
+  "latin_row_preservation_coefficient": 0.01,
+  "validation_history": [
+    {
+      "step": 200,
+      "cer": 0.045364891518737675
+    },
+    {
+      "step": 400,
+      "cer": 0.0328133405056482
+    },
+    {
+      "step": 600,
+      "cer": 0.029047875201721356
+    }
+  ],
+  "selection": "Lowest fixed multilingual validation CER; test never used for checkpoint selection",
+  "training_seconds": 137,
+  "training_lines": 4904,
+  "loss_history": [
+    0.4118604362010956,
+    0.5330770015716553,
+    0.18120062351226807,
+    1.0020943880081177,
+    0.4382728338241577,
+    0.3070887625217438,
+    0.6905580163002014,
+    0.5136985182762146,
+    1.5435293912887573,
+    1.4775199890136719,
+    0.09676743298768997,
+    0.21353232860565186,
+    0.3281722068786621,
+    1.0714831352233887,
+    0.4267035126686096,
+    1.5204459428787231,
+    0.9235490560531616,
+    0.04754390940070152,
+    0.18214286863803864,
+    0.2761647701263428,
+    0.09710746258497238,
+    0.9421230554580688,
+    0.12977074086666107,
+    0.08284635841846466,
+    0.169810950756073,
+    0.36119410395622253,
+    0.3346925973892212,
+    0.08165432512760162,
+    0.637152910232544,
+    0.5395391583442688,
+    0.8810808062553406,
+    0.1644301563501358,
+    0.4651935398578644,
+    0.5113399028778076,
+    0.6960431933403015,
+    0.0895906314253807,
+    0.1297767609357834,
+    0.23565340042114258,
+    0.26864781975746155,
+    0.24873383343219757,
+    0.18373268842697144,
+    0.1672271341085434,
+    0.1637156903743744,
+    0.13649331033229828,
+    0.2626563608646393,
+    0.080370232462883,
+    0.32309073209762573,
+    0.7176849246025085,
+    0.11567556113004684,
+    0.42846858501434326,
+    0.660194456577301,
+    0.6529747247695923,
+    0.6334198117256165,
+    0.03859933093190193,
+    0.1267170011997223,
+    0.7356464862823486,
+    0.2752830684185028,
+    0.8009791374206543,
+    0.7400484681129456,
+    0.45961326360702515,
+    0.2859343886375427,
+    0.2850530743598938,
+    0.647282063961029,
+    0.496701180934906,
+    0.04194772616028786,
+    0.463386207818985,
+    0.265500545501709,
+    0.16067834198474884,
+    0.17510458827018738,
+    0.7286316752433777,
+    0.4941341280937195,
+    0.10346705466508865,
+    1.182908058166504,
+    0.15856654942035675,
+    0.5892127156257629,
+    0.6613498330116272,
+    0.12582644820213318,
+    0.6269529461860657,
+    0.19264456629753113,
+    0.11356963962316513,
+    0.5933045744895935,
+    0.08290649205446243,
+    0.17026422917842865,
+    0.2326098531484604,
+    0.21506205201148987,
+    0.4105101227760315,
+    1.3893117904663086,
+    0.03731134906411171,
+    0.17912203073501587,
+    0.2745892405509949,
+    0.11497393995523453,
+    0.09452401846647263,
+    0.11651099473237991,
+    0.23057423532009125,
+    0.0371878482401371,
+    0.17336523532867432,
+    0.040355097502470016,
+    0.6506680846214294,
+    0.3173975944519043,
+    0.8053028583526611,
+    2.096482038497925,
+    0.07137775421142578,
+    1.146199107170105,
+    0.4980739653110504,
+    0.24961158633232117,
+    0.0572892427444458,
+    0.2072773575782776,
+    0.18218770623207092,
+    0.40168166160583496,
+    0.536309540271759,
+    0.6188945174217224,
+    0.05628545954823494,
+    0.23032592236995697,
+    0.34253278374671936,
+    0.15709586441516876,
+    0.3508734405040741,
+    0.23077552020549774,
+    0.16653791069984436,
+    0.3170251250267029,
+    0.27536213397979736,
+    0.5285845994949341,
+    0.0930919200181961,
+    0.3771102726459503,
+    0.36868876218795776,
+    0.45591744780540466,
+    0.02507145330309868,
+    0.07655785232782364,
+    0.16151578724384308,
+    0.6132786273956299,
+    0.24034170806407928,
+    0.507181704044342,
+    0.37664270401000977,
+    0.20758911967277527,
+    0.3868028521537781,
+    0.2513512969017029,
+    0.22750906646251678,
+    0.052739448845386505,
+    0.3813413083553314,
+    0.7448387742042542,
+    0.44633400440216064,
+    0.180801123380661,
+    0.22177787125110626,
+    0.06910668313503265,
+    0.20961569249629974,
+    0.43185847997665405,
+    0.08050581812858582,
+    0.14960995316505432,
+    0.161564439535141,
+    0.6145155429840088,
+    0.231709823012352,
+    0.1529092788696289,
+    0.14906245470046997,
+    0.21018312871456146,
+    0.35711267590522766,
+    0.11896192282438278,
+    0.08541218191385269,
+    0.07158443331718445,
+    0.14930734038352966,
+    0.06060156971216202,
+    0.05159655585885048,
+    0.15585564076900482,
+    0.09516654163599014,
+    0.1781800091266632,
+    0.3606947958469391,
+    0.45929408073425293,
+    0.5075071454048157,
+    0.1107758954167366,
+    0.3696410059928894,
+    0.13115009665489197,
+    0.12102552503347397,
+    0.25924474000930786,
+    0.03016578033566475,
+    0.23872387409210205,
+    1.1118147373199463,
+    0.039727143943309784,
+    0.07759455591440201,
+    0.26048871874809265,
+    0.06886405497789383,
+    0.12010375410318375,
+    0.2613210678100586,
+    0.027020921930670738,
+    0.047326698899269104,
+    0.07823223620653152,
+    0.4498704969882965,
+    0.24960772693157196,
+    0.07880523055791855,
+    0.08098537474870682,
+    0.06379469484090805,
+    0.3393566608428955,
+    0.16879190504550934,
+    0.018226461485028267,
+    0.4117146134376526,
+    0.34389814734458923,
+    0.270028293132782,
+    0.4154778718948364,
+    0.176113098859787,
+    0.09910888969898224,
+    0.04695352539420128,
+    0.20326268672943115,
+    0.34109023213386536,
+    0.1510888636112213,
+    0.0856085941195488,
+    0.10945279896259308,
+    0.04751250147819519,
+    0.11755099892616272,
+    0.22853125631809235,
+    0.11625590920448303,
+    0.28826668858528137,
+    0.030076252296566963,
+    0.034242574125528336,
+    0.05268671363592148,
+    0.2050107717514038,
+    0.07261698693037033,
+    0.22076363861560822,
+    0.17344915866851807,
+    0.15437328815460205,
+    0.16408304870128632,
+    0.4687598645687103,
+    0.08131185919046402,
+    0.14355789124965668,
+    0.12481898814439774,
+    0.01986331306397915,
+    0.11475636810064316,
+    0.1366378217935562,
+    0.11762685328722,
+    0.12928259372711182,
+    0.04160517454147339,
+    0.1178971379995346,
+    0.031222611665725708,
+    0.100770004093647,
+    0.11495105177164078,
+    0.13666017353534698,
+    0.07865921407938004,
+    0.039699770510196686,
+    0.07990464568138123,
+    0.19980551302433014,
+    0.13938021659851074,
+    0.09419460594654083,
+    0.06961333751678467,
+    0.3551739752292633,
+    0.20007725059986115,
+    0.3516251742839813,
+    0.2546752691268921,
+    0.5668126940727234,
+    0.21131262183189392,
+    0.44378769397735596,
+    0.10769926756620407,
+    0.08019283413887024,
+    0.16599401831626892,
+    0.06419789791107178,
+    0.055172670632600784,
+    0.11663872748613358,
+    0.23579372465610504,
+    0.044290535151958466,
+    0.1066369116306305,
+    0.79330974817276,
+    0.3064635097980499,
+    0.15384231507778168,
+    0.2202666848897934,
+    0.254905104637146,
+    0.19748030602931976,
+    0.07954846322536469,
+    0.13210131227970123,
+    0.2949838638305664,
+    0.13306450843811035,
+    0.07134215533733368,
+    0.3357205390930176,
+    0.126634880900383,
+    0.10321923345327377,
+    0.05081662908196449,
+    0.10442254692316055,
+    0.07826261967420578,
+    0.21724583208560944,
+    0.022781047970056534,
+    0.09178166836500168,
+    0.2401406466960907,
+    0.022203324362635612,
+    0.12359820306301117,
+    0.33574378490448,
+    0.18526190519332886,
+    0.09583450108766556,
+    0.13420313596725464,
+    0.10961513966321945,
+    0.16752967238426208,
+    0.1141473576426506,
+    0.2589489817619324,
+    0.11970336735248566,
+    0.25314152240753174,
+    0.5814803242683411,
+    0.23893170058727264,
+    0.18186885118484497,
+    0.08147462457418442,
+    0.019093593582510948,
+    0.18901582062244415,
+    0.04369870945811272,
+    0.08419150114059448,
+    0.3887563943862915,
+    0.07464602589607239,
+    0.036359842866659164,
+    0.27153706550598145,
+    0.018114766106009483,
+    0.03695693239569664,
+    0.12834443151950836,
+    0.1594785749912262,
+    0.12303119897842407,
+    0.07691427320241928,
+    0.06253818422555923,
+    0.1714206337928772,
+    0.1406249701976776,
+    0.27961328625679016,
+    0.1794544756412506,
+    0.06238194927573204,
+    0.15232621133327484,
+    0.015216989442706108,
+    0.05229074880480766,
+    0.10453563183546066,
+    0.013848098926246166,
+    0.034183941781520844,
+    0.03525340184569359,
+    0.2848871648311615,
+    0.09512710571289062,
+    0.03676619380712509,
+    0.19605226814746857,
+    0.06651979684829712,
+    0.23289285600185394,
+    0.09913706034421921,
+    0.2543984651565552,
+    0.36281177401542664,
+    0.0826665461063385,
+    0.440296471118927,
+    0.1629008948802948,
+    0.20493583381175995,
+    0.44532129168510437,
+    0.11799617856740952,
+    0.11966831982135773,
+    0.0854564905166626,
+    0.01869879849255085,
+    0.08230563998222351,
+    0.03105870448052883,
+    0.02474919892847538,
+    0.24430124461650848,
+    0.08314553648233414,
+    0.01376221515238285,
+    0.5691413283348083,
+    0.26398321986198425,
+    0.17279595136642456,
+    0.11872262507677078,
+    0.2966074049472809,
+    0.6209027171134949,
+    0.11011894047260284,
+    0.12163770943880081,
+    0.23758572340011597,
+    0.5195673108100891,
+    0.4551992416381836,
+    0.12971068918704987,
+    0.15552619099617004,
+    0.07441858947277069,
+    0.05986297130584717,
+    0.08675620704889297,
+    0.07952188700437546,
+    0.05700221285223961,
+    0.2253982275724411,
+    0.142558291554451,
+    0.2399158775806427,
+    0.04307417944073677,
+    0.134727343916893,
+    0.04124333709478378,
+    0.042283762246370316,
+    0.07578203827142715,
+    0.11914093792438507,
+    0.16172921657562256,
+    0.020265106111764908,
+    0.034401219338178635,
+    0.23986132442951202,
+    0.045343633741140366,
+    0.0716564953327179,
+    0.8734879493713379,
+    0.0499926321208477,
+    0.03354406729340553,
+    0.23877334594726562,
+    0.1008891686797142,
+    0.06641343981027603,
+    0.07407373934984207,
+    0.09584440290927887,
+    0.08010676503181458,
+    0.20108333230018616,
+    0.247227281332016,
+    0.11052343994379044,
+    0.7450546026229858,
+    0.2352309376001358,
+    0.031390104442834854,
+    0.15150441229343414,
+    0.12922734022140503,
+    0.10307055711746216,
+    0.053157515823841095,
+    0.056931834667921066,
+    0.08200038969516754,
+    0.07346416264772415,
+    0.10079224407672882,
+    0.06424089521169662,
+    0.21260754764080048,
+    0.10054391622543335,
+    0.221961110830307,
+    0.0767364650964737,
+    0.0795750543475151,
+    0.09954655170440674,
+    0.10526862740516663,
+    0.07134544104337692,
+    0.08609815686941147,
+    0.07636041939258575,
+    0.08724072575569153,
+    0.05713120102882385,
+    0.10325641185045242,
+    0.06857452541589737,
+    0.17653170228004456,
+    0.030794499441981316,
+    0.1008448600769043,
+    0.06448904424905777,
+    0.06866376847028732,
+    0.2186281830072403,
+    0.12371104210615158,
+    0.04537161439657211,
+    0.03556416928768158,
+    0.020034464076161385,
+    0.4094700515270233,
+    0.06484716385602951,
+    0.030719559639692307,
+    0.027588950470089912,
+    0.05864515155553818,
+    0.019282594323158264,
+    0.03571208938956261,
+    0.03134319558739662,
+    0.05405907332897186,
+    0.056564491242170334,
+    0.06360727548599243,
+    0.1863337755203247,
+    0.08979923278093338,
+    0.054272428154945374,
+    0.12464123219251633,
+    0.0120745450258255,
+    0.026433926075696945,
+    0.07178749889135361,
+    0.06788367033004761,
+    0.09738213568925858,
+    0.031151873990893364,
+    0.11460813879966736,
+    0.02983006089925766,
+    0.023747004568576813,
+    0.09780550003051758,
+    0.4426581859588623,
+    0.027917401865124702,
+    0.06666295975446701,
+    0.015758631750941277,
+    0.03999936208128929,
+    0.06809200346469879,
+    0.10659650713205338,
+    0.03881104290485382,
+    0.022305713966488838,
+    0.07594992965459824,
+    0.27268409729003906,
+    0.14810775220394135,
+    0.3982640206813812,
+    0.06547366082668304,
+    0.15022434294223785,
+    0.04021885246038437,
+    0.10324535518884659,
+    0.08385710418224335,
+    0.06375548988580704,
+    0.09212912619113922,
+    0.14643289148807526,
+    0.0684434100985527,
+    0.07159776985645294,
+    0.24716514348983765,
+    0.03265988081693649,
+    0.026219883933663368,
+    0.10140978544950485,
+    0.039640072733163834,
+    0.20538674294948578,
+    0.0991227775812149,
+    0.051707133650779724,
+    0.037158988416194916,
+    0.10074329376220703,
+    0.12937726080417633,
+    0.08779565244913101,
+    0.03724762797355652,
+    0.019851788878440857,
+    0.07663845270872116,
+    0.12807142734527588,
+    0.3397136330604553,
+    0.06840942800045013,
+    0.032462555915117264,
+    0.04729700833559036,
+    0.039996061474084854,
+    0.02981727570295334,
+    0.04438524320721626,
+    0.01568707823753357,
+    0.019305186346173286,
+    0.08504710346460342,
+    0.030941059812903404,
+    0.31429749727249146,
+    0.040308885276317596,
+    0.09572094678878784,
+    0.07180169969797134,
+    0.10204175859689713,
+    0.04632534831762314,
+    0.10634882748126984,
+    0.10561671853065491,
+    0.013796862214803696,
+    0.03364447504281998,
+    0.11135684698820114,
+    0.0161526370793581,
+    0.03185252100229263,
+    0.053061969578266144,
+    0.169283926486969,
+    0.1083618551492691,
+    0.10079345107078552,
+    0.007863194681704044,
+    0.40505197644233704,
+    0.16091850399971008,
+    0.068366140127182,
+    0.09107670187950134,
+    0.038762450218200684,
+    0.05815478786826134,
+    0.21603749692440033,
+    0.08123170584440231,
+    0.03530118986964226,
+    0.025349050760269165,
+    0.16899602115154266,
+    0.04920274019241333,
+    0.019536146894097328,
+    0.1656532883644104,
+    0.47968360781669617,
+    0.015253834426403046,
+    0.031106650829315186,
+    0.016571134328842163,
+    0.04165623337030411,
+    0.09878865629434586,
+    0.09383323788642883,
+    0.06875113397836685,
+    0.03379145637154579,
+    0.07972497493028641,
+    0.05898173898458481,
+    0.06752612441778183,
+    0.0736209973692894,
+    0.07046132534742355,
+    0.05719435214996338,
+    0.020611507818102837,
+    0.030361300334334373,
+    0.013867444358766079,
+    0.03134000301361084,
+    0.18998388946056366,
+    0.011877951212227345,
+    0.06330418586730957,
+    0.07336157560348511,
+    0.07088293135166168,
+    0.17246070504188538,
+    0.1592501550912857,
+    0.31434258818626404,
+    0.03188352659344673,
+    0.06757550686597824,
+    0.05445653572678566,
+    0.07102233171463013,
+    0.019666293635964394,
+    0.08931652456521988,
+    0.01708662509918213,
+    0.06484716385602951,
+    0.10752516239881516,
+    0.05302298441529274,
+    0.06440825015306473,
+    0.0315946564078331,
+    0.025052091106772423,
+    0.07618173211812973,
+    0.03805030509829521,
+    0.1956923007965088,
+    0.03975896164774895,
+    0.08189994096755981,
+    0.1497856229543686,
+    0.030660642310976982,
+    0.08408410847187042,
+    0.03010847419500351,
+    0.0393151231110096,
+    0.006784588098526001,
+    0.020594444125890732,
+    0.06068762019276619,
+    0.09423092752695084,
+    0.021374767646193504,
+    0.10484155267477036,
+    0.34825363755226135,
+    0.21839889883995056,
+    0.02460889145731926,
+    0.31879815459251404,
+    0.030470700934529305,
+    0.08005481958389282,
+    0.03964821249246597,
+    0.07148222625255585,
+    0.059782035648822784,
+    0.03532624989748001,
+    0.2485518753528595,
+    0.01903623715043068,
+    0.1497206687927246
+  ],
+  "source_checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+  "baseline_english_validation": {
+    "groups": {
+      "overall": {
+        "lines": 216,
+        "characters": 5577,
+        "errors": 290,
+        "exact_lines": 76,
+        "cer": 0.05199928276851354,
+        "exact_line_accuracy": 0.35185185185185186
+      },
+      "language:en": {
+        "lines": 36,
+        "characters": 903,
+        "errors": 18,
+        "exact_lines": 24,
+        "cer": 0.019933554817275746,
+        "exact_line_accuracy": 0.6666666666666666
+      },
+      "severity:clean": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 77,
+        "exact_lines": 29,
+        "cer": 0.04142011834319527,
+        "exact_line_accuracy": 0.4027777777777778
+      },
+      "source:real-scan": {
+        "lines": 72,
+        "characters": 1434,
+        "errors": 66,
+        "exact_lines": 28,
+        "cer": 0.04602510460251046,
+        "exact_line_accuracy": 0.3888888888888889
+      },
+      "source:synthetic": {
+        "lines": 144,
+        "characters": 4143,
+        "errors": 224,
+        "exact_lines": 48,
+        "cer": 0.05406710113444364,
+        "exact_line_accuracy": 0.3333333333333333
+      },
+      "language:fr": {
+        "lines": 36,
+        "characters": 939,
+        "errors": 52,
+        "exact_lines": 9,
+        "cer": 0.055378061767838126,
+        "exact_line_accuracy": 0.25
+      },
+      "language:de": {
+        "lines": 36,
+        "characters": 795,
+        "errors": 58,
+        "exact_lines": 7,
+        "cer": 0.0729559748427673,
+        "exact_line_accuracy": 0.19444444444444445
+      },
+      "language:it": {
+        "lines": 36,
+        "characters": 1104,
+        "errors": 49,
+        "exact_lines": 13,
+        "cer": 0.044384057971014496,
+        "exact_line_accuracy": 0.3611111111111111
+      },
+      "language:pt": {
+        "lines": 36,
+        "characters": 975,
+        "errors": 62,
+        "exact_lines": 12,
+        "cer": 0.06358974358974359,
+        "exact_line_accuracy": 0.3333333333333333
+      },
+      "language:es": {
+        "lines": 36,
+        "characters": 861,
+        "errors": 51,
+        "exact_lines": 11,
+        "cer": 0.059233449477351915,
+        "exact_line_accuracy": 0.3055555555555556
+      },
+      "severity:severe": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 115,
+        "exact_lines": 24,
+        "cer": 0.061861215707369556,
+        "exact_line_accuracy": 0.3333333333333333
+      },
+      "severity:combined": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 98,
+        "exact_lines": 23,
+        "cer": 0.052716514254975796,
+        "exact_line_accuracy": 0.3194444444444444
+      }
+    },
+    "examples": [
+      {
+        "language": "en",
+        "card_name": "Baneslayer Angel",
+        "target": "Baneslayer Angel",
+        "prediction": "Baneslayer Angel"
+      },
+      {
+        "language": "en",
+        "card_name": "Deathbloom Thallid",
+        "target": "Deathbloom Thallid",
+        "prediction": "Deathbloom Thallid"
+      },
+      {
+        "language": "en",
+        "card_name": "Pitchburn Devils",
+        "target": "Pitchburn Devils",
+        "prediction": "Pitchburn Devils"
+      },
+      {
+        "language": "en",
+        "card_name": "Hunter's Edge",
+        "target": "Hunter's Edge",
+        "prediction": "Hunter's Edge"
+      },
+      {
+        "language": "fr",
+        "card_name": "Hunter's Edge",
+        "target": "Avantage de la chasseresse",
+        "prediction": "Avantae de la chasseresse"
+      },
+      {
+        "language": "fr",
+        "card_name": "Baneslayer Angel",
+        "target": "Ange pourfendeur",
+        "prediction": "Ange pourfendeur"
+      },
+      {
+        "language": "fr",
+        "card_name": "Pitchburn Devils",
+        "target": "Diables brûlegoudron",
+        "prediction": "Diables br?leoudron"
+      },
+      {
+        "language": "fr",
+        "card_name": "Deathbloom Thallid",
+        "target": "Thallidé à fleurs de mort",
+        "prediction": "Thallid? ? fleurs de mort"
+      },
+      {
+        "language": "de",
+        "card_name": "Pitchburn Devils",
+        "target": "Flammenkippende Teufel",
+        "prediction": "Flammenkippende Teufel"
+      },
+      {
+        "language": "de",
+        "card_name": "Baneslayer Angel",
+        "target": "Bannender Engel",
+        "prediction": "Bannender Engel"
+      },
+      {
+        "language": "de",
+        "card_name": "Deathbloom Thallid",
+        "target": "Todesblüten-Thallid",
+        "prediction": "Todesbl?ten-Thallid"
+      },
+      {
+        "language": "de",
+        "card_name": "Hunter's Edge",
+        "target": "Vorteil des Jägers",
+        "prediction": "Vorteil des J?ers"
+      },
+      {
+        "language": "it",
+        "card_name": "Pitchburn Devils",
+        "target": "Diavoli Bruciapece",
+        "prediction": "Diavoli Bruciapece"
+      },
+      {
+        "language": "it",
+        "card_name": "Hunter's Edge",
+        "target": "Vantaggio del Cacciatore",
+        "prediction": "Vantassio del Cacciatore"
+      },
+      {
+        "language": "it",
+        "card_name": "Deathbloom Thallid",
+        "target": "Thallid Germoglio di Morte",
+        "prediction": "Thallid Germoslio di Morte"
+      },
+      {
+        "language": "it",
+        "card_name": "Baneslayer Angel",
+        "target": "Angelo Flagellatore",
+        "prediction": "Angelo Flaellatore"
+      },
+      {
+        "language": "pt",
+        "card_name": "Baneslayer Angel",
+        "target": "Anjo Exterminador do Mal",
+        "prediction": "Anjo Exterminador do Mal"
+      },
+      {
+        "language": "pt",
+        "card_name": "Glorious Anthem",
+        "target": "Antífona Gloriosa",
+        "prediction": "Antifona Gloriosa"
+      },
+      {
+        "language": "pt",
+        "card_name": "Pitchburn Devils",
+        "target": "Diabos Queimados de Piche",
+        "prediction": "Diabos Queimados de Piche"
+      },
+      {
+        "language": "pt",
+        "card_name": "Chandra's Magmutt",
+        "target": "Cão de Magma de Chandra",
+        "prediction": "C?o de Magma de Chandra"
+      },
+      {
+        "language": "es",
+        "card_name": "Pitchburn Devils",
+        "target": "Diablos arrojafuego",
+        "prediction": "Diablos arrojafue0"
+      },
+      {
+        "language": "es",
+        "card_name": "Chandra's Magmutt",
+        "target": "Mestizo de magma de Chandra",
+        "prediction": "Mestizo de magma de Chandra ,"
+      },
+      {
+        "language": "es",
+        "card_name": "Glorious Anthem",
+        "target": "Himno glorioso",
+        "prediction": "Himno loroo"
+      },
+      {
+        "language": "es",
+        "card_name": "Baneslayer Angel",
+        "target": "Ángel matademonios",
+        "prediction": "Angel matademonios"
+      }
+    ],
+    "unique_lines": 72,
+    "conditions": [
+      "clean",
+      "severe",
+      "combined"
+    ],
+    "normalization": "NFC labels; strip predicted boundary whitespace only"
+  },
+  "baseline_english_test": {
+    "groups": {
+      "overall": {
+        "lines": 360,
+        "characters": 10701,
+        "errors": 436,
+        "exact_lines": 169,
+        "cer": 0.040743855714419214,
+        "exact_line_accuracy": 0.46944444444444444
+      },
+      "language:en": {
+        "lines": 60,
+        "characters": 1650,
+        "errors": 51,
+        "exact_lines": 35,
+        "cer": 0.03090909090909091,
+        "exact_line_accuracy": 0.5833333333333334
+      },
+      "severity:clean": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 100,
+        "exact_lines": 65,
+        "cer": 0.02803476310625175,
+        "exact_line_accuracy": 0.5416666666666666
+      },
+      "source:real-scan": {
+        "lines": 72,
+        "characters": 1596,
+        "errors": 63,
+        "exact_lines": 38,
+        "cer": 0.039473684210526314,
+        "exact_line_accuracy": 0.5277777777777778
+      },
+      "source:synthetic": {
+        "lines": 288,
+        "characters": 9105,
+        "errors": 373,
+        "exact_lines": 131,
+        "cer": 0.040966501922020865,
+        "exact_line_accuracy": 0.4548611111111111
+      },
+      "language:fr": {
+        "lines": 60,
+        "characters": 1740,
+        "errors": 101,
+        "exact_lines": 17,
+        "cer": 0.058045977011494256,
+        "exact_line_accuracy": 0.2833333333333333
+      },
+      "language:de": {
+        "lines": 60,
+        "characters": 1887,
+        "errors": 58,
+        "exact_lines": 34,
+        "cer": 0.03073661897191309,
+        "exact_line_accuracy": 0.5666666666666667
+      },
+      "language:it": {
+        "lines": 60,
+        "characters": 1992,
+        "errors": 73,
+        "exact_lines": 29,
+        "cer": 0.036646586345381524,
+        "exact_line_accuracy": 0.48333333333333334
+      },
+      "language:pt": {
+        "lines": 60,
+        "characters": 1596,
+        "errors": 76,
+        "exact_lines": 25,
+        "cer": 0.047619047619047616,
+        "exact_line_accuracy": 0.4166666666666667
+      },
+      "language:es": {
+        "lines": 60,
+        "characters": 1836,
+        "errors": 77,
+        "exact_lines": 29,
+        "cer": 0.041938997821350764,
+        "exact_line_accuracy": 0.48333333333333334
+      },
+      "severity:severe": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 213,
+        "exact_lines": 48,
+        "cer": 0.05971404541631623,
+        "exact_line_accuracy": 0.4
+      },
+      "severity:combined": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 123,
+        "exact_lines": 56,
+        "cer": 0.034482758620689655,
+        "exact_line_accuracy": 0.4666666666666667
+      }
+    },
+    "examples": [
+      {
+        "language": "en",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Dire Fleet Warmonger",
+        "prediction": "Dire Fleet Warmonger"
+      },
+      {
+        "language": "en",
+        "card_name": "Roaming Ghostlight",
+        "target": "Roaming Ghostlight",
+        "prediction": "Roamin Ghostliht"
+      },
+      {
+        "language": "en",
+        "card_name": "Animal Sanctuary",
+        "target": "Animal Sanctuary",
+        "prediction": "Animal Sanctuary"
+      },
+      {
+        "language": "en",
+        "card_name": "Liliana's Steward",
+        "target": "Liliana's Steward",
+        "prediction": "Liliana's Steward"
+      },
+      {
+        "language": "fr",
+        "card_name": "Liliana's Steward",
+        "target": "Intendant de Liliana",
+        "prediction": "Intendant de Liliana"
+      },
+      {
+        "language": "fr",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belliciste de la Flotte implacable",
+        "prediction": "Belliciste de la Flotte implacable ("
+      },
+      {
+        "language": "fr",
+        "card_name": "Roaming Ghostlight",
+        "target": "Luminesprit errant",
+        "prediction": "Luminesprit errant"
+      },
+      {
+        "language": "fr",
+        "card_name": "Animal Sanctuary",
+        "target": "Sanctuaire animalier",
+        "prediction": "Sanctuaire animalier"
+      },
+      {
+        "language": "de",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Schreckensflotten-Kriegstreiber",
+        "prediction": "Schreckensflotten-Kriesstreiber ("
+      },
+      {
+        "language": "de",
+        "card_name": "Roaming Ghostlight",
+        "target": "Umherstreifendes Geisterlicht",
+        "prediction": "Umherstreifendes Geisterlicht"
+      },
+      {
+        "language": "de",
+        "card_name": "Liliana's Steward",
+        "target": "Lilianas Truchsess",
+        "prediction": "Lilianas Truchsess"
+      },
+      {
+        "language": "de",
+        "card_name": "Animal Sanctuary",
+        "target": "Tierschutzgebiet",
+        "prediction": "Tierschutzebiet"
+      },
+      {
+        "language": "it",
+        "card_name": "Roaming Ghostlight",
+        "target": "Lume Fatuo Vagante",
+        "prediction": "Lume Fatuo Vaante"
+      },
+      {
+        "language": "it",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuario degli Animali",
+        "prediction": "Santuario deli Animali"
+      },
+      {
+        "language": "it",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Attaccabrighe della Flotta Funesta",
+        "prediction": "Attaccabrighe della Flotta Funesta ("
+      },
+      {
+        "language": "it",
+        "card_name": "Liliana's Steward",
+        "target": "Attendente di Liliana",
+        "prediction": "Attendente di Liliana"
+      },
+      {
+        "language": "pt",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belicista da Frota Macabra",
+        "prediction": "Belicista da Frota Macabra ("
+      },
+      {
+        "language": "pt",
+        "card_name": "Liliana's Steward",
+        "target": "Mordomo de Liliana",
+        "prediction": "Mordomo de Liliana"
+      },
+      {
+        "language": "pt",
+        "card_name": "Roaming Ghostlight",
+        "target": "Espectrolume Errante",
+        "prediction": "Espectrolume Errante"
+      },
+      {
+        "language": "pt",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuário dos Animais",
+        "prediction": "Santu?rio dos Animais"
+      },
+      {
+        "language": "es",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuario animal",
+        "prediction": "Santuario animal"
+      },
+      {
+        "language": "es",
+        "card_name": "Liliana's Steward",
+        "target": "Mayordomo de Liliana",
+        "prediction": "Mayordomo de Liliana"
+      },
+      {
+        "language": "es",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belicista de la Flota Arrasadora",
+        "prediction": "Belicista de la Flota Arrasadora ("
+      },
+      {
+        "language": "es",
+        "card_name": "Roaming Ghostlight",
+        "target": "Luz fantasmal deambuladora",
+        "prediction": "Luz fantasmal deambuladora ,"
+      }
+    ],
+    "unique_lines": 120,
+    "conditions": [
+      "clean",
+      "severe",
+      "combined"
+    ],
+    "normalization": "NFC labels; strip predicted boundary whitespace only"
+  },
+  "latin_validation": {
+    "groups": {
+      "overall": {
+        "lines": 216,
+        "characters": 5577,
+        "errors": 162,
+        "exact_lines": 120,
+        "cer": 0.029047875201721356,
+        "exact_line_accuracy": 0.5555555555555556
+      },
+      "language:en": {
+        "lines": 36,
+        "characters": 903,
+        "errors": 5,
+        "exact_lines": 31,
+        "cer": 0.005537098560354375,
+        "exact_line_accuracy": 0.8611111111111112
+      },
+      "severity:clean": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 48,
+        "exact_lines": 38,
+        "cer": 0.025820333512641205,
+        "exact_line_accuracy": 0.5277777777777778
+      },
+      "source:real-scan": {
+        "lines": 72,
+        "characters": 1434,
+        "errors": 25,
+        "exact_lines": 51,
+        "cer": 0.017433751743375175,
+        "exact_line_accuracy": 0.7083333333333334
+      },
+      "source:synthetic": {
+        "lines": 144,
+        "characters": 4143,
+        "errors": 137,
+        "exact_lines": 69,
+        "cer": 0.033067825247405265,
+        "exact_line_accuracy": 0.4791666666666667
+      },
+      "language:fr": {
+        "lines": 36,
+        "characters": 939,
+        "errors": 29,
+        "exact_lines": 14,
+        "cer": 0.0308839190628328,
+        "exact_line_accuracy": 0.3888888888888889
+      },
+      "language:de": {
+        "lines": 36,
+        "characters": 795,
+        "errors": 46,
+        "exact_lines": 10,
+        "cer": 0.05786163522012579,
+        "exact_line_accuracy": 0.2777777777777778
+      },
+      "language:it": {
+        "lines": 36,
+        "characters": 1104,
+        "errors": 20,
+        "exact_lines": 26,
+        "cer": 0.018115942028985508,
+        "exact_line_accuracy": 0.7222222222222222
+      },
+      "language:pt": {
+        "lines": 36,
+        "characters": 975,
+        "errors": 47,
+        "exact_lines": 12,
+        "cer": 0.048205128205128206,
+        "exact_line_accuracy": 0.3333333333333333
+      },
+      "language:es": {
+        "lines": 36,
+        "characters": 861,
+        "errors": 15,
+        "exact_lines": 27,
+        "cer": 0.017421602787456445,
+        "exact_line_accuracy": 0.75
+      },
+      "severity:severe": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 62,
+        "exact_lines": 39,
+        "cer": 0.03335126412049489,
+        "exact_line_accuracy": 0.5416666666666666
+      },
+      "severity:combined": {
+        "lines": 72,
+        "characters": 1859,
+        "errors": 52,
+        "exact_lines": 43,
+        "cer": 0.027972027972027972,
+        "exact_line_accuracy": 0.5972222222222222
+      }
+    },
+    "examples": [
+      {
+        "language": "en",
+        "card_name": "Baneslayer Angel",
+        "target": "Baneslayer Angel",
+        "prediction": "Baneslayer Angel"
+      },
+      {
+        "language": "en",
+        "card_name": "Deathbloom Thallid",
+        "target": "Deathbloom Thallid",
+        "prediction": "Deathbloom Thallid"
+      },
+      {
+        "language": "en",
+        "card_name": "Pitchburn Devils",
+        "target": "Pitchburn Devils",
+        "prediction": "Pitchburn Devils"
+      },
+      {
+        "language": "en",
+        "card_name": "Hunter's Edge",
+        "target": "Hunter's Edge",
+        "prediction": "Hunter's Edge"
+      },
+      {
+        "language": "fr",
+        "card_name": "Hunter's Edge",
+        "target": "Avantage de la chasseresse",
+        "prediction": "Avantage de la chasseresse"
+      },
+      {
+        "language": "fr",
+        "card_name": "Baneslayer Angel",
+        "target": "Ange pourfendeur",
+        "prediction": "Ange pourfendeur"
+      },
+      {
+        "language": "fr",
+        "card_name": "Pitchburn Devils",
+        "target": "Diables brûlegoudron",
+        "prediction": "Diables brälegoudron"
+      },
+      {
+        "language": "fr",
+        "card_name": "Deathbloom Thallid",
+        "target": "Thallidé à fleurs de mort",
+        "prediction": "Thallide a fleurs de mort"
+      },
+      {
+        "language": "de",
+        "card_name": "Pitchburn Devils",
+        "target": "Flammenkippende Teufel",
+        "prediction": "Flammenkippende Teufel"
+      },
+      {
+        "language": "de",
+        "card_name": "Baneslayer Angel",
+        "target": "Bannender Engel",
+        "prediction": "Bannender Engel"
+      },
+      {
+        "language": "de",
+        "card_name": "Deathbloom Thallid",
+        "target": "Todesblüten-Thallid",
+        "prediction": "Todesbluiten-Thallid"
+      },
+      {
+        "language": "de",
+        "card_name": "Hunter's Edge",
+        "target": "Vorteil des Jägers",
+        "prediction": "Vorteil des Jágers"
+      },
+      {
+        "language": "it",
+        "card_name": "Pitchburn Devils",
+        "target": "Diavoli Bruciapece",
+        "prediction": "Diavoli Bruciapece"
+      },
+      {
+        "language": "it",
+        "card_name": "Hunter's Edge",
+        "target": "Vantaggio del Cacciatore",
+        "prediction": "Vantaggio del Cacciatore"
+      },
+      {
+        "language": "it",
+        "card_name": "Deathbloom Thallid",
+        "target": "Thallid Germoglio di Morte",
+        "prediction": "Thallid Germoglio di Morte"
+      },
+      {
+        "language": "it",
+        "card_name": "Baneslayer Angel",
+        "target": "Angelo Flagellatore",
+        "prediction": "Angelo Flagellatore"
+      },
+      {
+        "language": "pt",
+        "card_name": "Baneslayer Angel",
+        "target": "Anjo Exterminador do Mal",
+        "prediction": "Anjo Exterminador do Mal"
+      },
+      {
+        "language": "pt",
+        "card_name": "Glorious Anthem",
+        "target": "Antífona Gloriosa",
+        "prediction": "Antifona Gloriosa"
+      },
+      {
+        "language": "pt",
+        "card_name": "Pitchburn Devils",
+        "target": "Diabos Queimados de Piche",
+        "prediction": "Diabos Queimados de Piche"
+      },
+      {
+        "language": "pt",
+        "card_name": "Chandra's Magmutt",
+        "target": "Cão de Magma de Chandra",
+        "prediction": "Cáo de Magma de Chandra"
+      },
+      {
+        "language": "es",
+        "card_name": "Pitchburn Devils",
+        "target": "Diablos arrojafuego",
+        "prediction": "Diablos arrojafuego"
+      },
+      {
+        "language": "es",
+        "card_name": "Chandra's Magmutt",
+        "target": "Mestizo de magma de Chandra",
+        "prediction": "Mestizo de magma de Chandra"
+      },
+      {
+        "language": "es",
+        "card_name": "Glorious Anthem",
+        "target": "Himno glorioso",
+        "prediction": "Himno glorioso"
+      },
+      {
+        "language": "es",
+        "card_name": "Baneslayer Angel",
+        "target": "Ángel matademonios",
+        "prediction": "Angel matademonios"
+      }
+    ],
+    "unique_lines": 72,
+    "conditions": [
+      "clean",
+      "severe",
+      "combined"
+    ],
+    "normalization": "NFC labels; strip predicted boundary whitespace only"
+  },
+  "latin_test": {
+    "groups": {
+      "overall": {
+        "lines": 360,
+        "characters": 10701,
+        "errors": 231,
+        "exact_lines": 250,
+        "cer": 0.021586767591813848,
+        "exact_line_accuracy": 0.6944444444444444
+      },
+      "language:en": {
+        "lines": 60,
+        "characters": 1650,
+        "errors": 18,
+        "exact_lines": 44,
+        "cer": 0.01090909090909091,
+        "exact_line_accuracy": 0.7333333333333333
+      },
+      "severity:clean": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 40,
+        "exact_lines": 96,
+        "cer": 0.011213905242500702,
+        "exact_line_accuracy": 0.8
+      },
+      "source:real-scan": {
+        "lines": 72,
+        "characters": 1596,
+        "errors": 1,
+        "exact_lines": 71,
+        "cer": 0.0006265664160401002,
+        "exact_line_accuracy": 0.9861111111111112
+      },
+      "source:synthetic": {
+        "lines": 288,
+        "characters": 9105,
+        "errors": 230,
+        "exact_lines": 179,
+        "cer": 0.025260845689181768,
+        "exact_line_accuracy": 0.6215277777777778
+      },
+      "language:fr": {
+        "lines": 60,
+        "characters": 1740,
+        "errors": 37,
+        "exact_lines": 43,
+        "cer": 0.021264367816091954,
+        "exact_line_accuracy": 0.7166666666666667
+      },
+      "language:de": {
+        "lines": 60,
+        "characters": 1887,
+        "errors": 43,
+        "exact_lines": 40,
+        "cer": 0.02278749337572867,
+        "exact_line_accuracy": 0.6666666666666666
+      },
+      "language:it": {
+        "lines": 60,
+        "characters": 1992,
+        "errors": 40,
+        "exact_lines": 45,
+        "cer": 0.020080321285140562,
+        "exact_line_accuracy": 0.75
+      },
+      "language:pt": {
+        "lines": 60,
+        "characters": 1596,
+        "errors": 47,
+        "exact_lines": 41,
+        "cer": 0.02944862155388471,
+        "exact_line_accuracy": 0.6833333333333333
+      },
+      "language:es": {
+        "lines": 60,
+        "characters": 1836,
+        "errors": 46,
+        "exact_lines": 37,
+        "cer": 0.02505446623093682,
+        "exact_line_accuracy": 0.6166666666666667
+      },
+      "severity:severe": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 121,
+        "exact_lines": 75,
+        "cer": 0.03392206335856462,
+        "exact_line_accuracy": 0.625
+      },
+      "severity:combined": {
+        "lines": 120,
+        "characters": 3567,
+        "errors": 70,
+        "exact_lines": 79,
+        "cer": 0.019624334174376225,
+        "exact_line_accuracy": 0.6583333333333333
+      }
+    },
+    "examples": [
+      {
+        "language": "en",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Dire Fleet Warmonger",
+        "prediction": "Dire Fleet Warmonger"
+      },
+      {
+        "language": "en",
+        "card_name": "Roaming Ghostlight",
+        "target": "Roaming Ghostlight",
+        "prediction": "Roaming Ghostlight"
+      },
+      {
+        "language": "en",
+        "card_name": "Animal Sanctuary",
+        "target": "Animal Sanctuary",
+        "prediction": "Animal Sanctuary"
+      },
+      {
+        "language": "en",
+        "card_name": "Liliana's Steward",
+        "target": "Liliana's Steward",
+        "prediction": "Liliana's Steward"
+      },
+      {
+        "language": "fr",
+        "card_name": "Liliana's Steward",
+        "target": "Intendant de Liliana",
+        "prediction": "Intendant de Liliana"
+      },
+      {
+        "language": "fr",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belliciste de la Flotte implacable",
+        "prediction": "Belliciste de la Flotte implacable"
+      },
+      {
+        "language": "fr",
+        "card_name": "Roaming Ghostlight",
+        "target": "Luminesprit errant",
+        "prediction": "Luminesprit errant"
+      },
+      {
+        "language": "fr",
+        "card_name": "Animal Sanctuary",
+        "target": "Sanctuaire animalier",
+        "prediction": "Sanctuaire animalier"
+      },
+      {
+        "language": "de",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Schreckensflotten-Kriegstreiber",
+        "prediction": "Schreckensflotten-Kriegstreiber"
+      },
+      {
+        "language": "de",
+        "card_name": "Roaming Ghostlight",
+        "target": "Umherstreifendes Geisterlicht",
+        "prediction": "Umherstreifendes Geisterlicht"
+      },
+      {
+        "language": "de",
+        "card_name": "Liliana's Steward",
+        "target": "Lilianas Truchsess",
+        "prediction": "Lilianas Truchsess"
+      },
+      {
+        "language": "de",
+        "card_name": "Animal Sanctuary",
+        "target": "Tierschutzgebiet",
+        "prediction": "Tierschutzgebiet"
+      },
+      {
+        "language": "it",
+        "card_name": "Roaming Ghostlight",
+        "target": "Lume Fatuo Vagante",
+        "prediction": "Lume Fatuo Vagante"
+      },
+      {
+        "language": "it",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuario degli Animali",
+        "prediction": "Santuario degli Animali"
+      },
+      {
+        "language": "it",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Attaccabrighe della Flotta Funesta",
+        "prediction": "Attaccabrighe della Flotta Funesta"
+      },
+      {
+        "language": "it",
+        "card_name": "Liliana's Steward",
+        "target": "Attendente di Liliana",
+        "prediction": "Attendente di Liliana"
+      },
+      {
+        "language": "pt",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belicista da Frota Macabra",
+        "prediction": "Belicista da Frota Macabra("
+      },
+      {
+        "language": "pt",
+        "card_name": "Liliana's Steward",
+        "target": "Mordomo de Liliana",
+        "prediction": "Mordomo de Liliana"
+      },
+      {
+        "language": "pt",
+        "card_name": "Roaming Ghostlight",
+        "target": "Espectrolume Errante",
+        "prediction": "Espectrolume Errante"
+      },
+      {
+        "language": "pt",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuário dos Animais",
+        "prediction": "Santuário dos Animais"
+      },
+      {
+        "language": "es",
+        "card_name": "Animal Sanctuary",
+        "target": "Santuario animal",
+        "prediction": "Santuario animal"
+      },
+      {
+        "language": "es",
+        "card_name": "Liliana's Steward",
+        "target": "Mayordomo de Liliana",
+        "prediction": "Mayordomo de Liliana"
+      },
+      {
+        "language": "es",
+        "card_name": "Dire Fleet Warmonger",
+        "target": "Belicista de la Flota Arrasadora",
+        "prediction": "Belicista de la Flota Arrasadora"
+      },
+      {
+        "language": "es",
+        "card_name": "Roaming Ghostlight",
+        "target": "Luz fantasmal deambuladora",
+        "prediction": "Luz fantasmal deambuladora"
+      }
+    ],
+    "unique_lines": 120,
+    "conditions": [
+      "clean",
+      "severe",
+      "combined"
+    ],
+    "normalization": "NFC labels; strip predicted boundary whitespace only"
+  },
+  "limitations": [
+    "Shared Latin profile only; other printed scripts remain unfinished.",
+    "Bounded held-out subset and one M21 title treatment; not all fonts or physical camera conditions.",
+    "Localized Oracle-like printed_text is used for synthetic lines; actual scans are separately scored.",
+    "Posterior confidence remains uncalibrated."
+  ],
+  "backbone_and_batch_norm_identical_to_source": true,
+  "model_sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+  "corpus": {
+    "prints": 120,
+    "card_identities": 39,
+    "lines": 7984,
+    "alphabet_characters": 129,
+    "languages": {
+      "en": {
+        "lines": 1172,
+        "actual_titles": 20
+      },
+      "fr": {
+        "lines": 1364,
+        "actual_titles": 20
+      },
+      "de": {
+        "lines": 1436,
+        "actual_titles": 20
+      },
+      "it": {
+        "lines": 1396,
+        "actual_titles": 20
+      },
+      "pt": {
+        "lines": 1284,
+        "actual_titles": 20
+      },
+      "es": {
+        "lines": 1332,
+        "actual_titles": 20
+      }
+    },
+    "scope": "Shared Latin-accent corpus with 120 visually reviewed M21 title crops; no claim of all fonts or scripts.",
+    "title_boxes_visually_reviewed": 120,
+    "manifest_sha256": "15602f93967027d259d53adad133829ba9a9f8d9a0ab92f426f8ec47cdb55d20",
+    "splits": {
+      "train": 4904,
+      "validation": 1384,
+      "test": 1696
+    }
+  },
+  "training_character_counts": {
+    " ": 20148,
+    "!": 16,
+    "\"": 160,
+    "'": 388,
+    "(": 208,
+    ")": 208,
+    "+": 304,
+    ",": 1036,
+    "-": 208,
+    ".": 1632,
+    "/": 192,
+    "0": 48,
+    "1": 320,
+    "2": 104,
+    "4": 104,
+    ":": 216,
+    "?": 24,
+    "A": 387,
+    "B": 75,
+    "C": 568,
+    "D": 337,
+    "E": 304,
+    "F": 83,
+    "G": 161,
+    "H": 126,
+    "I": 226,
+    "J": 41,
+    "K": 273,
+    "L": 339,
+    "M": 135,
+    "N": 80,
+    "O": 164,
+    "P": 259,
+    "Q": 88,
+    "R": 103,
+    "S": 648,
+    "T": 316,
+    "U": 66,
+    "V": 145,
+    "W": 210,
+    "X": 17,
+    "Z": 90,
+    "a": 13779,
+    "b": 1355,
+    "c": 4978,
+    "d": 4705,
+    "e": 15792,
+    "f": 1427,
+    "g": 2309,
+    "h": 2339,
+    "i": 7395,
+    "j": 256,
+    "k": 776,
+    "l": 5979,
+    "m": 2809,
+    "n": 8965,
+    "o": 8425,
+    "p": 2386,
+    "q": 1034,
+    "r": 10107,
+    "s": 5679,
+    "t": 8515,
+    "u": 6749,
+    "v": 1424,
+    "w": 580,
+    "x": 136,
+    "y": 404,
+    "z": 653,
+    "¡": 8,
+    "«": 32,
+    "»": 32,
+    "¿": 8,
+    "À": 56,
+    "É": 32,
+    "ß": 25,
+    "à": 137,
+    "á": 187,
+    "â": 33,
+    "ã": 121,
+    "ä": 120,
+    "ç": 40,
+    "è": 88,
+    "é": 662,
+    "ê": 152,
+    "í": 136,
+    "î": 8,
+    "ñ": 48,
+    "ò": 40,
+    "ó": 82,
+    "ô": 40,
+    "ö": 80,
+    "ú": 58,
+    "û": 8,
+    "ü": 184,
+    "—": 304,
+    "„": 16
+  },
+  "test_characters_absent_from_training": {
+    "Ê": 8,
+    "ù": 16,
+    "È": 8
+  }
+}

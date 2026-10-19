@@ -1,0 +1,40 @@
+{
+  "prints": 120,
+  "card_identities": 39,
+  "lines": 7984,
+  "alphabet_characters": 129,
+  "languages": {
+    "en": {
+      "lines": 1172,
+      "actual_titles": 20
+    },
+    "fr": {
+      "lines": 1364,
+      "actual_titles": 20
+    },
+    "de": {
+      "lines": 1436,
+      "actual_titles": 20
+    },
+    "it": {
+      "lines": 1396,
+      "actual_titles": 20
+    },
+    "pt": {
+      "lines": 1284,
+      "actual_titles": 20
+    },
+    "es": {
+      "lines": 1332,
+      "actual_titles": 20
+    }
+  },
+  "scope": "Shared Latin-accent corpus with 120 visually reviewed M21 title crops; no claim of all fonts or scripts.",
+  "title_boxes_visually_reviewed": 120,
+  "manifest_sha256": "15602f93967027d259d53adad133829ba9a9f8d9a0ab92f426f8ec47cdb55d20",
+  "splits": {
+    "train": 4904,
+    "validation": 1384,
+    "test": 1696
+  }
+}

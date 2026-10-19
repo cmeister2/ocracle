@@ -1,0 +1,32 @@
+{
+  "path": "models/ocracle-mtg-latin.rten",
+  "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+  "bytes": 9786432,
+  "model_name": "ocracle-mtg-latin-v1",
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "pt"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "base_checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+  "configurations": {
+    "en": "models/latin-profiles/en.json",
+    "es": "models/latin-profiles/es.json",
+    "fr": "models/latin-profiles/fr.json",
+    "de": "models/latin-profiles/de.json",
+    "it": "models/latin-profiles/it.json",
+    "pt": "models/latin-profiles/pt.json"
+  },
+  "training_report": "training/latin-report.json",
+  "dataset_manifest_sha256": "15602f93967027d259d53adad133829ba9a9f8d9a0ab92f426f8ec47cdb55d20",
+  "training_steps": 600,
+  "validation_selected_step": 600,
+  "backbone_and_batch_norm_frozen": true,
+  "limitations": "Independent physical-title evaluation: 2/20 exact, 6.67% CER, with confidently wrong accents. Alphabet lacks Ä and ï; Ê, È and ù have no training observations. Internal held-out improvements do not establish accented-language support. Other scripts and universal font coverage remain unfinished.",
+  "status": "experimental; not registered as a ready language profile",
+  "independent_physical_evaluation": "training/latin-eval/results-v1.json"
+}

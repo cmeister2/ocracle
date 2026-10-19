@@ -1,0 +1,1639 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-19T17:02:23.775879+00:00",
+  "recognition_model_sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+  "executable_sha256": "a7db6b51dd1adabad89e60830703897a9fc6f81d945513ee8e3ef4c2ffbd55a8",
+  "manifest_sha256": "fd43111290a66321ad3c74d222dabd04f631566bd8385cf0bcc0b57df7dc1278",
+  "passes": "all",
+  "normalization": "NFC and collapsed whitespace, preserving case/punctuation/accents. Raw inference retained.",
+  "confidence_note": "Uncalibrated emitted-character posterior score, not probability of an exact transcription.",
+  "checkpoint_selection": "This script evaluates a supplied fixed artifact; it never trains or selects weights/configurations.",
+  "groups": {
+    "overall": {
+      "observations": 20,
+      "character_edits": 22,
+      "reference_characters": 330,
+      "exact_matches": 2,
+      "character_error_rate": 0.06666666666666667
+    },
+    "language:fr": {
+      "observations": 4,
+      "character_edits": 4,
+      "reference_characters": 74,
+      "exact_matches": 0,
+      "character_error_rate": 0.05405405405405406
+    },
+    "severity:clean": {
+      "observations": 10,
+      "character_edits": 11,
+      "reference_characters": 165,
+      "exact_matches": 1,
+      "character_error_rate": 0.06666666666666667
+    },
+    "severity:severe": {
+      "observations": 10,
+      "character_edits": 11,
+      "reference_characters": 165,
+      "exact_matches": 1,
+      "character_error_rate": 0.06666666666666667
+    },
+    "language:de": {
+      "observations": 4,
+      "character_edits": 4,
+      "reference_characters": 76,
+      "exact_matches": 0,
+      "character_error_rate": 0.05263157894736842
+    },
+    "language:es": {
+      "observations": 4,
+      "character_edits": 5,
+      "reference_characters": 60,
+      "exact_matches": 0,
+      "character_error_rate": 0.08333333333333333
+    },
+    "language:pt": {
+      "observations": 4,
+      "character_edits": 3,
+      "reference_characters": 70,
+      "exact_matches": 2,
+      "character_error_rate": 0.04285714285714286
+    },
+    "language:it": {
+      "observations": 4,
+      "character_edits": 6,
+      "reference_characters": 50,
+      "exact_matches": 0,
+      "character_error_rate": 0.12
+    }
+  },
+  "records": [
+    {
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "language": "fr",
+      "severity": "clean",
+      "image": "images/fr-m21-47-clean.png",
+      "image_sha256": "06268b6ef0a5e2f60dc3ce49333bbc6527cdb90d7881fd035a691a8b4b633949",
+      "reference": "Sphère de capture",
+      "normalized_prediction": "Sphere de capture",
+      "character_edits": 1,
+      "reference_characters": 17,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "1df0cb0a9db799eaa1dc2b1d73da9d38cab3d9ce304e27f002080f2f6014d409",
+      "inference": {
+        "text": "Sphere de capture",
+        "confidence": 0.9970639,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          497,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Sphere de capture",
+            "confidence": 0.9970639,
+            "bounds": [
+              0,
+              0,
+              497,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Sphere de capture",
+            "confidence": 0.9919619,
+            "lines": [
+              {
+                "text": "Sphere de capture",
+                "confidence": 0.9919619,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Sphere de capture",
+            "confidence": 0.9970639,
+            "lines": [
+              {
+                "text": "Sphere de capture",
+                "confidence": 0.9970639,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "fr",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "language": "fr",
+      "severity": "severe",
+      "image": "images/fr-m21-47-blur.png",
+      "image_sha256": "7b27761165595d0f23d7bc7b8d06006eb1fa95954d63329987f66bda75fce805",
+      "reference": "Sphère de capture",
+      "normalized_prediction": "Sphere de capture",
+      "character_edits": 1,
+      "reference_characters": 17,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "1df0cb0a9db799eaa1dc2b1d73da9d38cab3d9ce304e27f002080f2f6014d409",
+      "inference": {
+        "text": "Sphere de capture",
+        "confidence": 0.97320557,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          149,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Sphere de capture",
+            "confidence": 0.97320557,
+            "bounds": [
+              0,
+              0,
+              149,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Sphere de capture",
+            "confidence": 0.97320557,
+            "lines": [
+              {
+                "text": "Sphere de capture",
+                "confidence": 0.97320557,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Sphere de capture",
+            "confidence": 0.96547574,
+            "lines": [
+              {
+                "text": "Sphere de capture",
+                "confidence": 0.96547574,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "fr",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "language": "fr",
+      "severity": "clean",
+      "image": "images/fr-m21-182-clean.png",
+      "image_sha256": "1fa17565236ee08cb55e5ac5567f0f7a1cde8629eb14109da5c0b5383dfa1001",
+      "reference": "Renaissance fongoïde",
+      "normalized_prediction": "Renaissance fongoide",
+      "character_edits": 1,
+      "reference_characters": 20,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [
+        "ï"
+      ],
+      "config_sha256": "1df0cb0a9db799eaa1dc2b1d73da9d38cab3d9ce304e27f002080f2f6014d409",
+      "inference": {
+        "text": "Renaissance fongoide",
+        "confidence": 0.9950901,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          497,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Renaissance fongoide",
+            "confidence": 0.9950901,
+            "bounds": [
+              0,
+              0,
+              497,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Renaissance fongoide",
+            "confidence": 0.9898345,
+            "lines": [
+              {
+                "text": "Renaissance fongoide",
+                "confidence": 0.9898345,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Renaissance fongoide",
+            "confidence": 0.9950901,
+            "lines": [
+              {
+                "text": "Renaissance fongoide",
+                "confidence": 0.9950901,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "fr",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "language": "fr",
+      "severity": "severe",
+      "image": "images/fr-m21-182-blur.png",
+      "image_sha256": "7a1f75d245fc8887ed76e9bd70b9c43588cb054affa0063d6d15d1c866407993",
+      "reference": "Renaissance fongoïde",
+      "normalized_prediction": "Renaissance fongoide",
+      "character_edits": 1,
+      "reference_characters": 20,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [
+        "ï"
+      ],
+      "config_sha256": "1df0cb0a9db799eaa1dc2b1d73da9d38cab3d9ce304e27f002080f2f6014d409",
+      "inference": {
+        "text": "Renaissance fongoide",
+        "confidence": 0.99807394,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          149,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Renaissance fongoide",
+            "confidence": 0.99807394,
+            "bounds": [
+              0,
+              0,
+              149,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Renaissance fongoide",
+            "confidence": 0.9964522,
+            "lines": [
+              {
+                "text": "Renaissance fongoide",
+                "confidence": 0.9964522,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Renaissance fongoide",
+            "confidence": 0.99807394,
+            "lines": [
+              {
+                "text": "Renaissance fongoide",
+                "confidence": 0.99807394,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "fr",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "language": "de",
+      "severity": "clean",
+      "image": "images/de-m21-25-clean.png",
+      "image_sha256": "8b41dc57c1362b9d52eb1874300b9cc12131f38c0a447f1c81cb796334cc7e7e",
+      "reference": "Licht der Verheißung",
+      "normalized_prediction": "Licht der Verheifung",
+      "character_edits": 1,
+      "reference_characters": 20,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "8d01097e1da4dfdaa2a3f04c9afee5fa1b5d09345b1417f603845bf538e86a7d",
+      "inference": {
+        "text": "Licht der Verheifung",
+        "confidence": 0.9666742,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          497,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Licht der Verheifung",
+            "confidence": 0.9666742,
+            "bounds": [
+              0,
+              0,
+              497,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Licht der Verheifung",
+            "confidence": 0.9666742,
+            "lines": [
+              {
+                "text": "Licht der Verheifung",
+                "confidence": 0.9666742,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Licht der Verheifung",
+            "confidence": 0.9584867,
+            "lines": [
+              {
+                "text": "Licht der Verheifung",
+                "confidence": 0.9584867,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "de",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "language": "de",
+      "severity": "severe",
+      "image": "images/de-m21-25-blur.png",
+      "image_sha256": "c7bf587835b79fd978bddd94fe9b23795dcf7566505aefd6beadeaea7a8f1af4",
+      "reference": "Licht der Verheißung",
+      "normalized_prediction": "Licht der Verheifung",
+      "character_edits": 1,
+      "reference_characters": 20,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "8d01097e1da4dfdaa2a3f04c9afee5fa1b5d09345b1417f603845bf538e86a7d",
+      "inference": {
+        "text": "Licht der Verheifung",
+        "confidence": 0.96873116,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          149,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Licht der Verheifung",
+            "confidence": 0.96873116,
+            "bounds": [
+              0,
+              0,
+              149,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Licht der Verheifung",
+            "confidence": 0.95315295,
+            "lines": [
+              {
+                "text": "Licht der Verheifung",
+                "confidence": 0.95315295,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Licht der Verheifung",
+            "confidence": 0.96873116,
+            "lines": [
+              {
+                "text": "Licht der Verheifung",
+                "confidence": 0.96873116,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "de",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "language": "de",
+      "severity": "clean",
+      "image": "images/de-m21-179-clean.png",
+      "image_sha256": "7b4dc8f3ecb9ed37e4fbfd78fb551c58eff79029ae906574e5c9aa4f063f2744",
+      "reference": "Gargaroth-Ältester",
+      "normalized_prediction": "Gargaroth-Altester",
+      "character_edits": 1,
+      "reference_characters": 18,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [
+        "Ä"
+      ],
+      "config_sha256": "8d01097e1da4dfdaa2a3f04c9afee5fa1b5d09345b1417f603845bf538e86a7d",
+      "inference": {
+        "text": "Gargaroth-Altester",
+        "confidence": 0.95571285,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          466,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Gargaroth-Altester",
+            "confidence": 0.95571285,
+            "bounds": [
+              0,
+              0,
+              466,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Gargaroth-Altester",
+            "confidence": 0.95571285,
+            "lines": [
+              {
+                "text": "Gargaroth-Altester",
+                "confidence": 0.95571285,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Gargaroth Altester",
+            "confidence": 0.9384453,
+            "lines": [
+              {
+                "text": "Gargaroth Altester",
+                "confidence": 0.9384453,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "de",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "language": "de",
+      "severity": "severe",
+      "image": "images/de-m21-179-blur.png",
+      "image_sha256": "e26648ae7277da435b7f2f09a7cdf673dade719024374df82c8b4160a20df51f",
+      "reference": "Gargaroth-Ältester",
+      "normalized_prediction": "Gargaroth-ltester",
+      "character_edits": 1,
+      "reference_characters": 18,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [
+        "Ä"
+      ],
+      "config_sha256": "8d01097e1da4dfdaa2a3f04c9afee5fa1b5d09345b1417f603845bf538e86a7d",
+      "inference": {
+        "text": "Gargaroth-ltester",
+        "confidence": 0.99632734,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          140,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Gargaroth-ltester",
+            "confidence": 0.99632734,
+            "bounds": [
+              0,
+              0,
+              140,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Gargaroth-Altester",
+            "confidence": 0.947082,
+            "lines": [
+              {
+                "text": "Gargaroth-Altester",
+                "confidence": 0.947082,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Gargaroth-ltester",
+            "confidence": 0.99632734,
+            "lines": [
+              {
+                "text": "Gargaroth-ltester",
+                "confidence": 0.99632734,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "de",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "language": "es",
+      "severity": "clean",
+      "image": "images/es-m21-8-clean.png",
+      "image_sha256": "3e4d22895cf8b449bc3eb850082a61e0ac157b0518e0f0c757e40334c81c2be3",
+      "reference": "Acólita de Basri",
+      "normalized_prediction": "Ac?lita de Basri",
+      "character_edits": 1,
+      "reference_characters": 16,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "c52d4d50bf18aa6bb5284ec70f2b11db695d04401229785b6a30f24213eceb38",
+      "inference": {
+        "text": "Ac?lita de Basri",
+        "confidence": 0.9267867,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          466,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Ac?lita de Basri",
+            "confidence": 0.9267867,
+            "bounds": [
+              0,
+              0,
+              466,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Ac?lita de Basri",
+            "confidence": 0.9267867,
+            "lines": [
+              {
+                "text": "Ac?lita de Basri",
+                "confidence": 0.9267867,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Ac?lita de Basri",
+            "confidence": 0.922222,
+            "lines": [
+              {
+                "text": "Ac?lita de Basri",
+                "confidence": 0.922222,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "es",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "language": "es",
+      "severity": "severe",
+      "image": "images/es-m21-8-blur.png",
+      "image_sha256": "0cc3de32663f5ecab4d1f20cab4846d7fe0758f8513d8803fdefe6c99160c074",
+      "reference": "Acólita de Basri",
+      "normalized_prediction": "Acolita de Basr",
+      "character_edits": 2,
+      "reference_characters": 16,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "c52d4d50bf18aa6bb5284ec70f2b11db695d04401229785b6a30f24213eceb38",
+      "inference": {
+        "text": "Acolita de Basr",
+        "confidence": 0.9053811,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          140,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Acolita de Basr",
+            "confidence": 0.9053811,
+            "bounds": [
+              0,
+              0,
+              140,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Acolita de Basr",
+            "confidence": 0.9053811,
+            "lines": [
+              {
+                "text": "Acolita de Basr",
+                "confidence": 0.9053811,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Acólita de Basr",
+            "confidence": 0.85568553,
+            "lines": [
+              {
+                "text": "Acólita de Basr",
+                "confidence": 0.85568553,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "es",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "language": "es",
+      "severity": "clean",
+      "image": "images/es-m21-198-clean.png",
+      "image_sha256": "c92316b95c60938814a41b6ccb464fe0626e1c658c3d4d4a6a8402bd5ecee5b4",
+      "reference": "Dríada Quirion",
+      "normalized_prediction": "Driada Quirion",
+      "character_edits": 1,
+      "reference_characters": 14,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "c52d4d50bf18aa6bb5284ec70f2b11db695d04401229785b6a30f24213eceb38",
+      "inference": {
+        "text": "Driada Quirion",
+        "confidence": 0.9976177,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          497,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Driada Quirion",
+            "confidence": 0.9976177,
+            "bounds": [
+              0,
+              0,
+              497,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Driada Quirion",
+            "confidence": 0.9974716,
+            "lines": [
+              {
+                "text": "Driada Quirion",
+                "confidence": 0.9974716,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Driada Quirion",
+            "confidence": 0.9976177,
+            "lines": [
+              {
+                "text": "Driada Quirion",
+                "confidence": 0.9976177,
+                "bounds": [
+                  0,
+                  0,
+                  497,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "es",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "language": "es",
+      "severity": "severe",
+      "image": "images/es-m21-198-blur.png",
+      "image_sha256": "688536152d0c1ec53e046c21b97054e87795703de21a9acb81cc44bb5894ac4a",
+      "reference": "Dríada Quirion",
+      "normalized_prediction": "Driada Quirion",
+      "character_edits": 1,
+      "reference_characters": 14,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "c52d4d50bf18aa6bb5284ec70f2b11db695d04401229785b6a30f24213eceb38",
+      "inference": {
+        "text": "Driada Quirion",
+        "confidence": 0.9950053,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          149,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Driada Quirion",
+            "confidence": 0.9950053,
+            "bounds": [
+              0,
+              0,
+              149,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Driada Quirion",
+            "confidence": 0.9950053,
+            "lines": [
+              {
+                "text": "Driada Quirion",
+                "confidence": 0.9950053,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Driada Quirion",
+            "confidence": 0.98612136,
+            "lines": [
+              {
+                "text": "Driada Quirion",
+                "confidence": 0.98612136,
+                "bounds": [
+                  0,
+                  0,
+                  149,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "es",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "language": "pt",
+      "severity": "clean",
+      "image": "images/pt-m21-57-clean.png",
+      "image_sha256": "c6b380758e2228c9495bf0cb9561a5c188931a79437002441b8f4bf1b804cd04",
+      "reference": "Falha na Conjuração",
+      "normalized_prediction": "Falha na Conjura?ão",
+      "character_edits": 1,
+      "reference_characters": 19,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "614bf6002e4d0269d5b1e5b3aac182af397aed7d0fc2120d12dacfd0206e84a2",
+      "inference": {
+        "text": "Falha na Conjura?ão",
+        "confidence": 0.90067357,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          528,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Falha na Conjura?ão",
+            "confidence": 0.90067357,
+            "bounds": [
+              0,
+              0,
+              528,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Falha na Conjura?ão",
+            "confidence": 0.90067357,
+            "lines": [
+              {
+                "text": "Falha na Conjura?ão",
+                "confidence": 0.90067357,
+                "bounds": [
+                  0,
+                  0,
+                  528,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Falha na Conjura?ão",
+            "confidence": 0.8916446,
+            "lines": [
+              {
+                "text": "Falha na Conjura?ão",
+                "confidence": 0.8916446,
+                "bounds": [
+                  0,
+                  0,
+                  528,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "pt",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "language": "pt",
+      "severity": "severe",
+      "image": "images/pt-m21-57-blur.png",
+      "image_sha256": "056d5f8ab10460de12354de9cdc5357dc3c0d7c817f96aa68ad60ac52d7ce894",
+      "reference": "Falha na Conjuração",
+      "normalized_prediction": "Falha na Conjura?o",
+      "character_edits": 2,
+      "reference_characters": 19,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "614bf6002e4d0269d5b1e5b3aac182af397aed7d0fc2120d12dacfd0206e84a2",
+      "inference": {
+        "text": "Falha na Conjura?o",
+        "confidence": 0.95893586,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          158,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Falha na Conjura?o",
+            "confidence": 0.95893586,
+            "bounds": [
+              0,
+              0,
+              158,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "falha na Conjura?o",
+            "confidence": 0.9446978,
+            "lines": [
+              {
+                "text": "falha na Conjura?o",
+                "confidence": 0.9446978,
+                "bounds": [
+                  0,
+                  0,
+                  158,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Falha na Conjura?o",
+            "confidence": 0.95893586,
+            "lines": [
+              {
+                "text": "Falha na Conjura?o",
+                "confidence": 0.95893586,
+                "bounds": [
+                  0,
+                  0,
+                  158,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "pt",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "language": "pt",
+      "severity": "clean",
+      "image": "images/pt-m21-118-clean.png",
+      "image_sha256": "444bd8838cbe11c0befcc46f8adc7f6996561be20d20f1bb24f91048b4d9ff79",
+      "reference": "Névoa Pestilenta",
+      "normalized_prediction": "Névoa Pestilenta",
+      "character_edits": 0,
+      "reference_characters": 16,
+      "exact_match": true,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "614bf6002e4d0269d5b1e5b3aac182af397aed7d0fc2120d12dacfd0206e84a2",
+      "inference": {
+        "text": "Névoa Pestilenta",
+        "confidence": 0.9589229,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          466,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Névoa Pestilenta",
+            "confidence": 0.9589229,
+            "bounds": [
+              0,
+              0,
+              466,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Névoa Pestilenta",
+            "confidence": 0.9579075,
+            "lines": [
+              {
+                "text": "Névoa Pestilenta",
+                "confidence": 0.9579075,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Névoa Pestilenta",
+            "confidence": 0.9589229,
+            "lines": [
+              {
+                "text": "Névoa Pestilenta",
+                "confidence": 0.9589229,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "pt",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "language": "pt",
+      "severity": "severe",
+      "image": "images/pt-m21-118-blur.png",
+      "image_sha256": "b09d493b73cbb3ca8543f912b307dff6ef1d33198e803175861d84ad9674c5bd",
+      "reference": "Névoa Pestilenta",
+      "normalized_prediction": "Névoa Pestilenta",
+      "character_edits": 0,
+      "reference_characters": 16,
+      "exact_match": true,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "614bf6002e4d0269d5b1e5b3aac182af397aed7d0fc2120d12dacfd0206e84a2",
+      "inference": {
+        "text": "Névoa Pestilenta",
+        "confidence": 0.95903474,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          140,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Névoa Pestilenta",
+            "confidence": 0.95903474,
+            "bounds": [
+              0,
+              0,
+              140,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Névoa Pestilenta",
+            "confidence": 0.9323233,
+            "lines": [
+              {
+                "text": "Névoa Pestilenta",
+                "confidence": 0.9323233,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Névoa Pestilenta",
+            "confidence": 0.95903474,
+            "lines": [
+              {
+                "text": "Névoa Pestilenta",
+                "confidence": 0.95903474,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "pt",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "language": "it",
+      "severity": "clean",
+      "image": "images/it-m14-66-clean.png",
+      "image_sha256": "f20cd6f07778a9170e23fcc8da5b2928342add9b0fbb4d51d32c134a8f83b5d1",
+      "reference": "Opportunità",
+      "normalized_prediction": "Cpportunita",
+      "character_edits": 2,
+      "reference_characters": 11,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "ee0fdc599dad11c73bbd1cc2f25575f09031822f43cbd7673c6cea669475f2a4",
+      "inference": {
+        "text": "Cpportunita",
+        "confidence": 0.8774612,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          247,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Cpportunita",
+            "confidence": 0.8774612,
+            "bounds": [
+              0,
+              0,
+              247,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "(pportunita",
+            "confidence": 0.8619579,
+            "lines": [
+              {
+                "text": "(pportunita",
+                "confidence": 0.8619579,
+                "bounds": [
+                  0,
+                  0,
+                  247,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Cpportunita",
+            "confidence": 0.8774612,
+            "lines": [
+              {
+                "text": "Cpportunita",
+                "confidence": 0.8774612,
+                "bounds": [
+                  0,
+                  0,
+                  247,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "it",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "language": "it",
+      "severity": "severe",
+      "image": "images/it-m14-66-blur.png",
+      "image_sha256": "da55b8caacc7a2cd0b68708d411df8bf529414d7766dbf145c9efca5f0d1679e",
+      "reference": "Opportunità",
+      "normalized_prediction": "Opportunita",
+      "character_edits": 1,
+      "reference_characters": 11,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "ee0fdc599dad11c73bbd1cc2f25575f09031822f43cbd7673c6cea669475f2a4",
+      "inference": {
+        "text": "Opportunita",
+        "confidence": 0.968796,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          74,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Opportunita",
+            "confidence": 0.968796,
+            "bounds": [
+              0,
+              0,
+              74,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Opportunita",
+            "confidence": 0.968796,
+            "lines": [
+              {
+                "text": "Opportunita",
+                "confidence": 0.968796,
+                "bounds": [
+                  0,
+                  0,
+                  74,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Opportunita",
+            "confidence": 0.92125154,
+            "lines": [
+              {
+                "text": "Opportunita",
+                "confidence": 0.92125154,
+                "bounds": [
+                  0,
+                  0,
+                  74,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "it",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "language": "it",
+      "severity": "clean",
+      "image": "images/it-akh-84-clean.png",
+      "image_sha256": "a30df030a4e766a1f87feec9aac4cf64dae2458b64b5302440217e0166a35a5c",
+      "reference": "Crudele Realtà",
+      "normalized_prediction": "Crudele Realra",
+      "character_edits": 2,
+      "reference_characters": 14,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "ee0fdc599dad11c73bbd1cc2f25575f09031822f43cbd7673c6cea669475f2a4",
+      "inference": {
+        "text": "Crudele Realra",
+        "confidence": 0.8827128,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + CRNN / greedy CTC",
+        "image_size": [
+          466,
+          50
+        ],
+        "lines": [
+          {
+            "text": "Crudele Realra",
+            "confidence": 0.8827128,
+            "bounds": [
+              0,
+              0,
+              466,
+              50
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Crudele Realra",
+            "confidence": 0.8827128,
+            "lines": [
+              {
+                "text": "Crudele Realra",
+                "confidence": 0.8827128,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Crudele Realra",
+            "confidence": 0.8809432,
+            "lines": [
+              {
+                "text": "Crudele Realra",
+                "confidence": 0.8809432,
+                "bounds": [
+                  0,
+                  0,
+                  466,
+                  50
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "it",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    },
+    {
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "language": "it",
+      "severity": "severe",
+      "image": "images/it-akh-84-blur.png",
+      "image_sha256": "9ce42df25d2e9128c815f432aed48f5dbd3dbb45e018fef046041a96b7125d34",
+      "reference": "Crudele Realtà",
+      "normalized_prediction": "Crudele Realt",
+      "character_edits": 1,
+      "reference_characters": 14,
+      "exact_match": false,
+      "missing_checkpoint_alphabet": [],
+      "config_sha256": "ee0fdc599dad11c73bbd1cc2f25575f09031822f43cbd7673c6cea669475f2a4",
+      "inference": {
+        "text": "Crudele Realt",
+        "confidence": 0.90439326,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+        "image_size": [
+          140,
+          15
+        ],
+        "lines": [
+          {
+            "text": "Crudele Realt",
+            "confidence": 0.90439326,
+            "bounds": [
+              0,
+              0,
+              140,
+              15
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + CRNN / greedy CTC",
+            "text": "Crudele Reale",
+            "confidence": 0.89215493,
+            "lines": [
+              {
+                "text": "Crudele Reale",
+                "confidence": 0.89215493,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          },
+          {
+            "method": "2x Lanczos + contrast stretch + unsharp mask + CRNN / greedy CTC",
+            "text": "Crudele Realt",
+            "confidence": 0.90439326,
+            "lines": [
+              {
+                "text": "Crudele Realt",
+                "confidence": 0.90439326,
+                "bounds": [
+                  0,
+                  0,
+                  140,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "ocracle-mtg-latin-v1",
+          "language": "it",
+          "sha256": "a35722103831126defa51311e17b0084fdf721b752148a74657723f551137163",
+          "detector_sha256": null
+        }
+      }
+    }
+  ]
+}
