@@ -123,24 +123,32 @@ fn invalid_inputs_return_errors_without_inference() {
 #[test]
 #[ignore = "requires the pinned default recognizer; run training/download_models.py"]
 fn language_profile_selects_the_trained_model_for_the_whole_card() {
-    let ocr = CardOcr::load_profile("en", env!("CARGO_MANIFEST_DIR"), None).unwrap();
     let image = image::open(fixture("docs/gallery/assets/beleren-title.png")).unwrap();
-    let result = ocr
-        .recognize(
-            &image,
-            Options {
-                single_line: true,
-                passes: Passes::Original,
-                ..Options::default()
-            },
-        )
-        .unwrap();
-    assert_eq!(result.text.trim(), "Divination");
-    assert_eq!(result.model.language, "en");
-    assert_eq!(
-        result.model.sha256,
-        "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
-    );
+    for (profile, expected_sha256) in [
+        (
+            "en",
+            "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+        ),
+        (
+            "en-medium",
+            "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+        ),
+    ] {
+        let ocr = CardOcr::load_profile(profile, env!("CARGO_MANIFEST_DIR"), None).unwrap();
+        let result = ocr
+            .recognize(
+                &image,
+                Options {
+                    single_line: true,
+                    passes: Passes::Original,
+                    ..Options::default()
+                },
+            )
+            .unwrap();
+        assert_eq!(result.text.trim(), "Divination", "{profile}");
+        assert_eq!(result.model.language, "en", "{profile}");
+        assert_eq!(result.model.sha256, expected_sha256, "{profile}");
+    }
     assert!(
         CardOcr::load_profile("unsupported-test-profile", env!("CARGO_MANIFEST_DIR"), None)
             .err()

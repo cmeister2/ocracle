@@ -29,13 +29,13 @@ enum Command {
         /// CTC recognition weights in RTen or ONNX format.
         #[arg(long, required_unless_present = "language")]
         recognition_model: Option<PathBuf>,
-        /// One trained language profile for the whole card (currently en).
+        /// Recognition profile for the whole card, such as en, fr or fr-medium.
         #[arg(long, visible_alias = "profile", conflicts_with_all = ["recognition_model", "model_config"])]
         language: Option<String>,
         /// Repository/model root containing models/profiles.json for --language.
         #[arg(long, default_value = ".")]
         model_root: PathBuf,
-        /// Neural word detector; required unless --line is used.
+        /// Detector override; profiles otherwise use models/text-detection.onnx.
         #[arg(long)]
         detection_model: Option<PathBuf>,
         /// JSON checkpoint alphabet, input height, architecture and model name.

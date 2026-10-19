@@ -99,6 +99,60 @@
       "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
       "configuration_sha256": "69a0bb1ed466999a4869d465622b57ff8b2833d51766e21d54ac654c6fa0286e",
       "coverage": "Experimental MTG-adapted English CRNN; historic and italic examples, limited treatment/character coverage"
+    },
+    {
+      "id": "en-medium",
+      "language": "en",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/en.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "ece53c8f32b2ab26f708595a5b219176ef443fe451de05703de3ad3a92706b9a",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+    },
+    {
+      "id": "es-medium",
+      "language": "es",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/es.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "3cde33d37e351bbeea90d6b913bc7bdf07a7da04669abdfc07da53dbca7acbd5",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+    },
+    {
+      "id": "fr-medium",
+      "language": "fr",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/fr.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "1220e396c6293ef732f3196f3517e46ae0d1ca85d20bb58810febf615fc3dc66",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+    },
+    {
+      "id": "de-medium",
+      "language": "de",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/de.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "47d02d5173c5384eb597c0868d6c6398b2640f8e73c26b93fc2d058d40bb230b",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+    },
+    {
+      "id": "it-medium",
+      "language": "it",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/it.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "6089e5795ae74d5e8417c8e4f145d778220834b9112fc94e4b2b10d63fef0534",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
+    },
+    {
+      "id": "pt-medium",
+      "language": "pt",
+      "model": "models/ppocr-v6-medium.onnx",
+      "configuration": "models/paddle-v6-medium/pt.json",
+      "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "configuration_sha256": "a1d11089d8e6a5a921b7d66a5db0aa31d4818de5a0d3a691f0659a375f89a8cc",
+      "coverage": "Optional upstream medium model; lower aggregate Latin blur-development CER, with clean and individual-case regressions"
     }
   ]
 }

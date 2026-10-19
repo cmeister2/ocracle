@@ -2,6 +2,8 @@
 
 On a fixed Latin development cohort, unmodified PP-OCRv6 medium improves original-pass recognition over the current small model, particularly on italic and blurred lines. This is evidence for further assessment; production models, profiles and frozen test results are unchanged.
 
+The subsequent [fresh blur comparison](paddle-blur.md) evaluates both production passes and supports explicit medium profiles while retaining the small default. Its separate clean-data regressions qualify this earlier result.
+
 ## Sources and selection
 
 Two official candidates were selected before inference: the larger current v6 recognizer and the current Latin-specific v5 recognizer. Paddle lists medium as its largest v6 recognizer, with LCNetV4 and LightSVTR; its internal printed-English and artistic results exceed small. Those publisher metrics motivate the experiment and do not establish MTG performance. [Pinned official model card](https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_rec_onnx/blob/50c7eacafc52fa7bcf4194e8cd08e46f8558504b/README.md).
