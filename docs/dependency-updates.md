@@ -6,7 +6,9 @@ automation policy; the repository adds these compatibility boundaries:
 - Python stays within 3.12 because the native environment locks identify CPython
   3.12 wheel bytes and pinned ONNX Runtime 1.31.0 lacks a Python 3.15 wheel.
   Validate distributions and regenerate a separate environment before moving
-  to another Python minor; patch updates remain allowed.
+  to another Python minor; patch updates remain allowed. Renovate identifies
+  this runtime package as `actions/python-versions`, despite displaying it as
+  `python` in update descriptions.
 - Ocrs 0.13 exposes RTen 0.26 models and geometry types. Keep the application's
   direct RTen family compatible until a coordinated Ocrs/runtime upgrade passes
   the Rust, MSRV and real-image checks.
