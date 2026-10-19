@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "native_autograd_and_vocabulary_smoke_passed",
+  "seed": 20261019,
+  "steps": 3,
+  "python": "3.12.3",
+  "paddle_version": "3.3.1",
+  "source_checkpoint_sha256": "25c9bd54b0e5900916e8bb6ada938abeffb1eac1baedac0ca54a45b1c9310825",
+  "parity_report_sha256": "f5d60676e4949760dd17b765e5f85986012e83ab25394b92198c689666e7453f",
+  "original_classes_including_blank": 18710,
+  "expanded_classes_including_blank": 18713,
+  "alphabet_sha256": "2efbe58c763a77bd3c2fc40c780dbb240fdbd8261419d38a70af9f8e15f020bd",
+  "appended_classes": [
+    {
+      "character": "¡",
+      "class_index": 18710,
+      "prototype": "!",
+      "prototype_class_index": 1,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "„",
+      "class_index": 18711,
+      "prototype": "“",
+      "prototype_class_index": 704,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "ẞ",
+      "class_index": 18712,
+      "prototype": "ß",
+      "prototype_class_index": 155,
+      "initial_bias_offset": -6
+    }
+  ],
+  "old_classifier_columns_preserved_before_update": true,
+  "max_old_logit_error_after_expansion_before_update": 3.814697265625e-06,
+  "unchanged_batch_norm_state_tensors": 116,
+  "model_mode": "eval; autograd enabled",
+  "learning_rates": {
+    "head": 0.0001,
+    "neck": 1e-05,
+    "upper_backbone": 1e-05
+  },
+  "parameter_l2_change": {
+    "head": 0.28299403806613604,
+    "neck": 0.015813721835524337,
+    "upper_backbone": 0.033067139755341056
+  },
+  "loss_history": [
+    {
+      "step": 1,
+      "ctc": 43.82771301269531,
+      "teacher_kl": -1.6429049232158377e-09,
+      "total": 43.82771301269531,
+      "gradient_l2_before_clipping": {
+        "head": 113.616443206924,
+        "neck": 181.86319184609883,
+        "upper_backbone": 763.0725274318797
+      }
+    },
+    {
+      "step": 2,
+      "ctc": 39.4739875793457,
+      "teacher_kl": 0.0009720178204588592,
+      "total": 39.47447204589844,
+      "gradient_l2_before_clipping": {
+        "head": 110.85084340424646,
+        "neck": 157.67418586455904,
+        "upper_backbone": 714.7739297764413
+      }
+    },
+    {
+      "step": 3,
+      "ctc": 35.55866622924805,
+      "teacher_kl": 0.002738117938861251,
+      "total": 35.560035705566406,
+      "gradient_l2_before_clipping": {
+        "head": 108.14417398044793,
+        "neck": 139.5485986084827,
+        "upper_backbone": 673.626907517236
+      }
+    }
+  ],
+  "checkpoint_reload_max_probability_error": 0.0,
+  "implementation_sha256": {
+    "native.py": "f83c82ddc576286a324d4feb79d9d454850a208fdd5efd7323a1f54cff58a119",
+    "adapt.py": "8e72e6a8d05401765cd926085ea075ff12fcdcc9e1227fc6bca4ee5c4d8e8994",
+    "inputs.py": "be89161f5f1fdd4d198be58b89d0114edc4bbd87410fe92434e08f92733e405f",
+    "smoke.py": "45423c8a74a0347bd9195938efe56dce94e87f2d29646335ebcba24a1d60963d"
+  },
+  "inputs": [
+    {
+      "text": "An old book rests here.",
+      "role": "clean frozen teacher anchor",
+      "tensor_sha256": "a347edbffe55f62786cba32d31eb7e08a392bd212bb599b5b06abfba6922a676",
+      "shape": [
+        1,
+        3,
+        48,
+        453
+      ]
+    },
+    {
+      "text": "¡Ähre! „Été“ ẞ",
+      "role": "new classes; italic; Gaussian .8; .7 downsample",
+      "tensor_sha256": "df6f23cf9234e2498dc6a712a2e673619aaaa51728bb9d4ac704d948002ca171",
+      "shape": [
+        1,
+        3,
+        48,
+        320
+      ]
+    }
+  ],
+  "font": {
+    "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
+    "sha256": "1d7476da447f9455a47c41adfd6ac2b1fc1b65e660f3ea4bf36128506c7e094c",
+    "license": "DejaVu fonts license (Bitstream Vera-derived)"
+  },
+  "checkpoint": {
+    "path": "runs/smoke/expanded-small.pdparams",
+    "sha256": "80f27dc90a4a39ad98d26a0c07ccccd5577490f77e6e3e7ec6021e1a532c47f3",
+    "bytes": 21280344,
+    "distributed": false
+  },
+  "elapsed_seconds": 14.984,
+  "limitations": [
+    "Fresh procedural inputs only; no MTG adaptation or held-out accuracy claim.",
+    "Original NRTR auxiliary branch/loss omitted.",
+    "PIL bilinear smoke preprocessing; deployment uses image-crate triangle resize.",
+    "No export, runtime change or profile registration."
+  ]
+}

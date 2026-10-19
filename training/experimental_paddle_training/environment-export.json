@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "packages": [
+    {
+      "name": "onnx",
+      "version": "1.17.0",
+      "url": "https://files.pythonhosted.org/packages/3d/7c/67f4952d1b56b3f74a154b97d0dd0630d525923b354db117d04823b8b49b/onnx-1.17.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "4f3fb5cc4e2898ac5312a7dc03a65133dd2abf9a5e520e69afb880a7251ec97a",
+      "bytes": 16046307
+    },
+    {
+      "name": "paddle2onnx",
+      "version": "2.1.0",
+      "url": "https://files.pythonhosted.org/packages/06/53/a775d7e27318f7a2f80ed494c28d8ede7a32359bf0f01c16444aaf3a9044/paddle2onnx-2.1.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "7fef03d6c40bbe5e2ebc6e895b25b8860acd28803601195884e8ffec5ffa1109",
+      "bytes": 3677429
+    },
+    {
+      "name": "polygraphy",
+      "version": "0.53.6",
+      "url": "https://files.pythonhosted.org/packages/8b/16/a3069a489c36e855d3a792a532a96e6434e1a454a21248effd3a26da2a7b/polygraphy-0.53.6-py3-none-any.whl",
+      "sha256": "539095f64054823aabac5d4c8d64875b5a1542b71ca76443e218a01fdc1a4e03",
+      "bytes": 485433
+    }
+  ],
+  "wheel_bytes": 20209169,
+  "requirements_sha256": "9a6754ecbed6acbd0952a46f0f2e4d582a90794a4b228447d10519dcce691ee7",
+  "source": {
+    "repository": "PaddlePaddle/Paddle2ONNX",
+    "release": "v2.1.0",
+    "revision": "c8b5048c3a0903986bd3ec1cce2af9915b391c49",
+    "license": "Apache-2.0"
+  }
+}
