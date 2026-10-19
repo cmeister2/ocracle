@@ -1,0 +1,13 @@
+{
+  "compiler": "rustc1.99.0 (b940084d7 2026-09-28)",
+  "paired_inputs": 172,
+  "actual_cli_calls": 344,
+  "executable_hashes": {
+    "before": "1ede5e7d7a8c2060114ab471adf040d965d0e697eb55f8d8eb094a66b6b28e13",
+    "after": "8d839b40a0da6a0f49ab7dfa0fd5117d44ffed00fc828ff37d5e2bf47a803513"
+  },
+  "original_report_sha256": "97a8967569f5b4f40c1052e066aa209171d14439885c759649748e3bef0f6b6f",
+  "all_raw_inference_records_identical": true,
+  "all_metrics_identical": true,
+  "complete_replay_path_including_report_creation_and_offline_verification_passed": true
+}

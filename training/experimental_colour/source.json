@@ -1,0 +1,10 @@
+{
+  "baseline_source_revision": "de560a4aff7c30742c1eb6624d317d72206ac838",
+  "baseline_engine_sha256": "d0b667eec34381ff66e0b963cb52a98ebacad2805f18b08f0c979f475d5e71b7",
+  "source_engine_sha256": "133a87f68dbd7e128aa4b0c8d2e8e20c0a3b1ab1ebb6d3935bac00ebabdf62ca",
+  "patch_sha256": "6ea90f1798c28520e550561146595711083a5cf0b7bb08b1252d1b5e852c7711",
+  "historical_profiles_manifest": {
+    "path": "models/paddle-v6-manifest.json",
+    "sha256": "f29d1a385ed4a05521147026bd22421d71c2dcaa2a60540dd87cf4591fc7bd8a"
+  }
+}

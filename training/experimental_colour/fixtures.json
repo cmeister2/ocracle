@@ -1,0 +1,2507 @@
+{
+  "schema_version": 1,
+  "purpose": "development; not an independent test",
+  "selection": "Every accepted LatinV2 validation title and all20 reviewed non-Opt body lines. No OCR filtering for this experiment; body discovery originally used accent-folded matching.",
+  "review_sources": {
+    "training/latin-v2-corpus/titles-reviewed.json": "954aa450c00b0b8634df7028ccd4883d751f1d3346ff3feead8eacdeb962a753",
+    "training/latin-v2-corpus/body-lines.json": "9b168c8cb44b207a2ab044f8dcf750709e8c21487c81e2a057c3f57e9d25040f"
+  },
+  "preparation": "Pillow13.0.0: RGB source resized672x936 with default bicubic; reviewed bbox; clean, Gaussian sigma2.4, then30% BILINEAR, thenJPEG quality45 subsampling2.",
+  "lineage": "Known LatinV2 development/training identities. Upstream Paddle pretraining membership unknown. No frozen gallery/accent/rare/poster tests select this change.",
+  "samples": [
+    {
+      "id": "00-7839827a-5660-4ee0-a675-a818c72a645a",
+      "card_id": "7839827a-5660-4ee0-a675-a818c72a645a",
+      "oracle_id": "b90e2fb8-9b09-4d95-a8a2-5287b5f18132",
+      "card_name": "Synchronous Sliver",
+      "language": "fr",
+      "text": "Slivoïde synchronisé",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=140446&type=card",
+      "source_sha256": "380c93d3f12b7c3f9c53cf228cb667aa70c233e658b563766dd2f8fe63fbb9a1",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/00-7839827a-5660-4ee0-a675-a818c72a645a-clean.png",
+          "sha256": "68751b387663ba7545df02879739d7d914bcad6a65cb7bd0a905bb289a63e916",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/00-7839827a-5660-4ee0-a675-a818c72a645a-gaussian.png",
+          "sha256": "91c365f8420e836fe76ee6ccf374e11945320105e55b420ed4e4d7cc23c0a83f",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/00-7839827a-5660-4ee0-a675-a818c72a645a-downsample.png",
+          "sha256": "eff8fee07ed6d9471aa00f6b6b0e56af31f3a0e9b8db4280f95b7bef2950826d",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/00-7839827a-5660-4ee0-a675-a818c72a645a-jpeg.png",
+          "sha256": "cb5a332760dd19449b1ffde00f38252f7ef8f8a907e84add276602d95a144e17",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01-a8c10eb6-2128-4bb1-ba7f-b259e9b8d217",
+      "card_id": "a8c10eb6-2128-4bb1-ba7f-b259e9b8d217",
+      "oracle_id": "00fdcc19-88ed-46c3-91f0-095806228105",
+      "card_name": "Waste Not",
+      "language": "fr",
+      "text": "Rien n’est jamais gâché",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/a/8/a8c10eb6-2128-4bb1-ba7f-b259e9b8d217.jpg?1782969886",
+      "source_sha256": "f15a85f66c07324a3c7f9d32737aa7bc725808c6562e7977715a71e487d01686",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/01-a8c10eb6-2128-4bb1-ba7f-b259e9b8d217-clean.png",
+          "sha256": "fcae673e6b37973e3753fb767c5c2072d28652b120b205b72bf19b8d28180c60",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/01-a8c10eb6-2128-4bb1-ba7f-b259e9b8d217-gaussian.png",
+          "sha256": "8536e74b7895930315497707fd125a936921c0d4bcc76ee7cc06ecd593cb09e9",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/01-a8c10eb6-2128-4bb1-ba7f-b259e9b8d217-downsample.png",
+          "sha256": "4004d8fd066190e8d5fa7ac1241204cdbdf7f5e0eda88aa51697b76a2f8a874f",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/01-a8c10eb6-2128-4bb1-ba7f-b259e9b8d217-jpeg.png",
+          "sha256": "e4ec438b50dca251313bc503c822afb8234ba84d5bb8d83ae1bbdaa57e6f5e3a",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02-b31bbd93-38ad-4dc1-aae0-11afc4768211",
+      "card_id": "b31bbd93-38ad-4dc1-aae0-11afc4768211",
+      "oracle_id": "629133e2-af20-4107-bc82-11ba32d5e2a6",
+      "card_name": "Chronomantic Escape",
+      "language": "fr",
+      "text": "Évasion chronomantique",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=145622&type=card",
+      "source_sha256": "f871586ecb2b32eae4522e44b7742a8bc2b543c721b141df4d132890b5a4c54a",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/02-b31bbd93-38ad-4dc1-aae0-11afc4768211-clean.png",
+          "sha256": "ebf180a10e7e4291f47c4b1b374b56f0a4026ff95acb22965eac8f5fd53b3449",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/02-b31bbd93-38ad-4dc1-aae0-11afc4768211-gaussian.png",
+          "sha256": "6daf6d60f3d5266dd028e73560f311790f9e0e6f00f669e5d441e06b3130fded",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/02-b31bbd93-38ad-4dc1-aae0-11afc4768211-downsample.png",
+          "sha256": "cee1a72ab3130a2b9beee3e557c2b049b82012ed6cb94285bfc7dfbf73897238",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/02-b31bbd93-38ad-4dc1-aae0-11afc4768211-jpeg.png",
+          "sha256": "fa672069d6b85745461e3bf0657ba5b0c7b3a259ce917824b4a3710d4fcca04f",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03-fa7f485c-3f86-4d3a-aee0-de5a99ecfda0",
+      "card_id": "fa7f485c-3f86-4d3a-aee0-de5a99ecfda0",
+      "oracle_id": "95a08f25-8d44-4704-a4d1-a098bf010932",
+      "card_name": "Burlfist Oak",
+      "language": "fr",
+      "text": "Chêne aux poings noueux",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/f/a/fa7f485c-3f86-4d3a-aee0-de5a99ecfda0.jpg?1782904900",
+      "source_sha256": "f332c841bf8defe2851a50ef97f436014249b1fe4776e118140227eb20ec4212",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/03-fa7f485c-3f86-4d3a-aee0-de5a99ecfda0-clean.png",
+          "sha256": "4f82d052490b9ccd7301f5c53d42229a008c283c9c5a6356b8fa67c94715404d",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/03-fa7f485c-3f86-4d3a-aee0-de5a99ecfda0-gaussian.png",
+          "sha256": "f83f7e217bb512bc55064d8a8467c9484cd25cc63dd2aacbe1c5d448d8c43ee9",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/03-fa7f485c-3f86-4d3a-aee0-de5a99ecfda0-downsample.png",
+          "sha256": "1caf23daaf23edbc82ac18f2f4af56e0624d602442dd1696e88e23a18d264534",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/03-fa7f485c-3f86-4d3a-aee0-de5a99ecfda0-jpeg.png",
+          "sha256": "19d0a812dfd8441a27095ff4537fa0ce66745d1a436aa6f44ea4ce7aa324844b",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04-722fd8ee-0eda-4b1c-a825-f52408e5dc95",
+      "card_id": "722fd8ee-0eda-4b1c-a825-f52408e5dc95",
+      "oracle_id": "10ea73c8-7cf8-4a48-a0cc-072bb541880f",
+      "card_name": "Blood Age General",
+      "language": "fr",
+      "text": "Général de l’Ère sanglante",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/7/2/722fd8ee-0eda-4b1c-a825-f52408e5dc95.jpg?1782884224",
+      "source_sha256": "a2630410564d498a1d6bf1c463e36d61be1ae3569792e25a676fbd93d13270f2",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/04-722fd8ee-0eda-4b1c-a825-f52408e5dc95-clean.png",
+          "sha256": "3d873c01cd69d939a45a2563250f573263310947af2bedbb0c4366cf1b77bdb9",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/04-722fd8ee-0eda-4b1c-a825-f52408e5dc95-gaussian.png",
+          "sha256": "7aa81865e1b3ff8e1bcfc14ae9cf9a0c6394d7a3dd701d2d67673bb335dcf28f",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/04-722fd8ee-0eda-4b1c-a825-f52408e5dc95-downsample.png",
+          "sha256": "a3881c7a1ec6295ad653484a7e0f83b3b0aafcc36aac9e527b2dabe6c12bcf6d",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/04-722fd8ee-0eda-4b1c-a825-f52408e5dc95-jpeg.png",
+          "sha256": "de5ec8899aa6da460d8d8faa2e49b70391f7440d452793026d85590a24a738ef",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-222a151b-05df-41a8-a138-0c25d6326f93",
+      "card_id": "222a151b-05df-41a8-a138-0c25d6326f93",
+      "oracle_id": "a7c46e5f-6e3a-405b-86fa-404d3b6971db",
+      "card_name": "Chronostutter",
+      "language": "it",
+      "text": "Discontinuità Temporale",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/2/2/222a151b-05df-41a8-a138-0c25d6326f93.jpg?1782970383",
+      "source_sha256": "04297e29e0f5955e5a49b749c53bb550d1cff882a28e2ea57a8f96cefe0a644a",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/05-222a151b-05df-41a8-a138-0c25d6326f93-clean.png",
+          "sha256": "cca9b0e2a12f44061353129caea8f51dda9c969341daca827be65b05c0ca1524",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/05-222a151b-05df-41a8-a138-0c25d6326f93-gaussian.png",
+          "sha256": "5a5d2acec4963609d73bc55db5a43da10ccee6bd7960930cc84937857aee883a",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/05-222a151b-05df-41a8-a138-0c25d6326f93-downsample.png",
+          "sha256": "332795abd03b0eb3671ed63ef55604018cdedd750f6241b0d836f5e4e5297679",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/05-222a151b-05df-41a8-a138-0c25d6326f93-jpeg.png",
+          "sha256": "57d1bd54308b736a10883531f16f46cf66f51c0e63e2c867761a5adf9321c218",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06-f9037785-59a9-4c77-801b-2f5a216fd8b8",
+      "card_id": "f9037785-59a9-4c77-801b-2f5a216fd8b8",
+      "oracle_id": "6c3b9136-5e4b-4bb5-bef5-17887d7211dd",
+      "card_name": "Storm Entity",
+      "language": "it",
+      "text": "Entità Tempestosa",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=144874&type=card",
+      "source_sha256": "ed7c036cd43260748012ad07c3b0bf20af060dfe728643b33d974151348fe2aa",
+      "bbox_after_resize_672_936": [
+        109,
+        48,
+        621,
+        107
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/06-f9037785-59a9-4c77-801b-2f5a216fd8b8-clean.png",
+          "sha256": "e34e74b0bce69e10736df947422b9fc77d63393ea1423af95a75b9dc411b5d33",
+          "size": [
+            512,
+            59
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/06-f9037785-59a9-4c77-801b-2f5a216fd8b8-gaussian.png",
+          "sha256": "34bf2728c4dd27c9aa2feee012e9928e155bb0b1d9370d5f2cbde0a8450c715a",
+          "size": [
+            512,
+            59
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/06-f9037785-59a9-4c77-801b-2f5a216fd8b8-downsample.png",
+          "sha256": "65b684bdcdff0f80665db13f2606800a5f7afeddb9e88d090105dbeff3313c87",
+          "size": [
+            154,
+            18
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/06-f9037785-59a9-4c77-801b-2f5a216fd8b8-jpeg.png",
+          "sha256": "eadae9bb43fd1b05e20f28725a61567674b790b05125dfdeb93c882d1a366a01",
+          "size": [
+            154,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-f578a6cd-00d6-4fa4-8b09-135e26d90b74",
+      "card_id": "f578a6cd-00d6-4fa4-8b09-135e26d90b74",
+      "oracle_id": "65c0d59b-3a94-49af-94cd-2ab4820a51f3",
+      "card_name": "Mantle of Leadership",
+      "language": "it",
+      "text": "Manto dell’Autorità",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=140649&type=card",
+      "source_sha256": "849a9228660e4e67e440bfa34714bc7936d576d4df7bc7be092e19da562370f8",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/07-f578a6cd-00d6-4fa4-8b09-135e26d90b74-clean.png",
+          "sha256": "9d2609dfa687be7e50d1d4dbaa9f5465cab9260452807c0d8c0392c42c4a94e1",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/07-f578a6cd-00d6-4fa4-8b09-135e26d90b74-gaussian.png",
+          "sha256": "31e6f7971f9a6b5aaee576c67e7b9292d0874848acede0bdf9fe81ee14497fdd",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/07-f578a6cd-00d6-4fa4-8b09-135e26d90b74-downsample.png",
+          "sha256": "2bbfca058dc3f8faeac31195bb93207df6a4eb29197c030209cb006f80ad0e1d",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/07-f578a6cd-00d6-4fa4-8b09-135e26d90b74-jpeg.png",
+          "sha256": "203833ef7c656823aa61fdb92352d5fab1c58d27218f0abc3dbf14055156d854",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08-00eacc18-fcc3-4d44-9264-866f475f0b05",
+      "card_id": "00eacc18-fcc3-4d44-9264-866f475f0b05",
+      "oracle_id": "f6cf359a-91cb-4b3c-8837-be53e4ed9c93",
+      "card_name": "Teval, Arbiter of Virtue",
+      "language": "it",
+      "text": "Teval, Giudice di Virtù",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/0/0/00eacc18-fcc3-4d44-9264-866f475f0b05.jpg?1782774952",
+      "source_sha256": "a79bd657864dd8198dcc3a35280832eab5691eefa8b8b7942490f7123b880406",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        491,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/08-00eacc18-fcc3-4d44-9264-866f475f0b05-clean.png",
+          "sha256": "6fa9787cc224d5b6056c4d92ea8d490d3a9e896dd6da8f67aeb6364a9875f6b9",
+          "size": [
+            441,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/08-00eacc18-fcc3-4d44-9264-866f475f0b05-gaussian.png",
+          "sha256": "72052e3a7aabb61269945b9baa28f8f07d624cda86207e155d1e7ad90747a186",
+          "size": [
+            441,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/08-00eacc18-fcc3-4d44-9264-866f475f0b05-downsample.png",
+          "sha256": "70e32fb4fbb07b831f3efb836ad0a73c45e76b842387e864fa0bac0c26803212",
+          "size": [
+            132,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/08-00eacc18-fcc3-4d44-9264-866f475f0b05-jpeg.png",
+          "sha256": "1609c454ca6182cbb696fa21ac2e3e42108bea84e59c74b8f40857decd386e86",
+          "size": [
+            132,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09-6fabe790-77f9-436e-89be-c6fbd3caae46",
+      "card_id": "6fabe790-77f9-436e-89be-c6fbd3caae46",
+      "oracle_id": "a7865331-4c53-46db-b2d7-7e5cb21b6b9d",
+      "card_name": "Frantic Inventory",
+      "language": "pt",
+      "text": "Inventário Frenético",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/6/f/6fabe790-77f9-436e-89be-c6fbd3caae46.jpg?1782905805",
+      "source_sha256": "03c468b4601542770a223a5ff38281c41b879fdb39f0b2908de11b342ae03193",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/09-6fabe790-77f9-436e-89be-c6fbd3caae46-clean.png",
+          "sha256": "922cdff42df66eb4ecfcb35840818530d1c5f63360bdbe2b3a3f56313c5a2da9",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/09-6fabe790-77f9-436e-89be-c6fbd3caae46-gaussian.png",
+          "sha256": "e6fac7a2e4615c990cf44158bb8781edfdfbb3d0d9f2b76d8d91c91d2062f53a",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/09-6fabe790-77f9-436e-89be-c6fbd3caae46-downsample.png",
+          "sha256": "80a3940171bcfd4eabf3d43adcb714b1322b18e7a425af1dc3eac8ce281365ae",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/09-6fabe790-77f9-436e-89be-c6fbd3caae46-jpeg.png",
+          "sha256": "6a464bb7bf2af35f23424d05bd134137a46f742021b7fcb2b19613760392bf9c",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-6e89341c-89a0-49cb-83d2-f66a1d11ea5a",
+      "card_id": "6e89341c-89a0-49cb-83d2-f66a1d11ea5a",
+      "oracle_id": "0d4ee553-f206-4e70-a7b2-a3670440aee7",
+      "card_name": "Return to the Ranks",
+      "language": "pt",
+      "text": "Retornar às Fileiras",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/6/e/6e89341c-89a0-49cb-83d2-f66a1d11ea5a.jpg?1782970507",
+      "source_sha256": "d9db965c9caeba36d882747628b033db11dc43a8dd4a2925cf7fecdb715ac52b",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/10-6e89341c-89a0-49cb-83d2-f66a1d11ea5a-clean.png",
+          "sha256": "f5e3ad15ce1438e9e219ddd81440afc1e5f482951f3c22071862eeee099a740f",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/10-6e89341c-89a0-49cb-83d2-f66a1d11ea5a-gaussian.png",
+          "sha256": "ac763b377819c49051eff1307227e7b08a65fcdbc1aa9d332f38f815d7104e03",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/10-6e89341c-89a0-49cb-83d2-f66a1d11ea5a-downsample.png",
+          "sha256": "c20c3740d4efd6a52df43cf5e9b42b8bfe2788cd577b0418894b0ccb74975936",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/10-6e89341c-89a0-49cb-83d2-f66a1d11ea5a-jpeg.png",
+          "sha256": "2466728ee4e4412351c49030ab52d03942f6677e76038510bf0e250ef22485ac",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11-f0b735c3-5375-4b50-9e64-775ada270af8",
+      "card_id": "f0b735c3-5375-4b50-9e64-775ada270af8",
+      "oracle_id": "b90e2fb8-9b09-4d95-a8a2-5287b5f18132",
+      "card_name": "Synchronous Sliver",
+      "language": "pt",
+      "text": "Fractius Sincrônico",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=141046&type=card",
+      "source_sha256": "81362b151c5999881bacee475619460a8d6aef0c5abdf480dc72984d12558522",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/11-f0b735c3-5375-4b50-9e64-775ada270af8-clean.png",
+          "sha256": "4c801bc5eb3b9d7125e7fb357b4cccaf7021b731763ecfa12a2ef8d0c1d7aa4f",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/11-f0b735c3-5375-4b50-9e64-775ada270af8-gaussian.png",
+          "sha256": "7fd873fa62691125babda36e6ab666c6271f4fabef27259f4183afe94420fb48",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/11-f0b735c3-5375-4b50-9e64-775ada270af8-downsample.png",
+          "sha256": "11d47338b528ba31e9a0199a3d4fe16d21c0dbaca4cdffec664dbd50d577ad65",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/11-f0b735c3-5375-4b50-9e64-775ada270af8-jpeg.png",
+          "sha256": "c0115eef8ab762761cdf02e11cd065c9a3adec269dd05b73a8734c4f4cf554db",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12-44901ee1-b011-427e-8498-7a02a062f403",
+      "card_id": "44901ee1-b011-427e-8498-7a02a062f403",
+      "oracle_id": "fd755ec1-6727-4165-a7fd-5d9b59754ada",
+      "card_name": "Minions' Murmurs",
+      "language": "pt",
+      "text": "Murmúrios dos Asseclas",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=144520&type=card",
+      "source_sha256": "001d84f6b7f778c395fd2dcd5be607fbf75facc511b0de79d193cb3c9ee1ad51",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/12-44901ee1-b011-427e-8498-7a02a062f403-clean.png",
+          "sha256": "83588f8da5c8778f1e3611a310e6c32e1a844004de4691ad868a19680a23fcf2",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/12-44901ee1-b011-427e-8498-7a02a062f403-gaussian.png",
+          "sha256": "6feaf09726e90e9274b17e3a0c479f370e980a66e89d2731cdfdff575ff5b246",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/12-44901ee1-b011-427e-8498-7a02a062f403-downsample.png",
+          "sha256": "c227689e51442d54473c5ea7846e0a9161fa94618eee64380d893f398ed16c4f",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/12-44901ee1-b011-427e-8498-7a02a062f403-jpeg.png",
+          "sha256": "8ecf1cd9292d56a9ae0eb781992a91e5dfa4148ed3f529db8d4dbd2b4d143090",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13-73093135-af43-45b3-92e4-79349b266deb",
+      "card_id": "73093135-af43-45b3-92e4-79349b266deb",
+      "oracle_id": "2b5f70ec-33da-4dff-9cff-fe05eb906685",
+      "card_name": "Caustic Tar",
+      "language": "de",
+      "text": "Ätzender Teer",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/7/3/73093135-af43-45b3-92e4-79349b266deb.jpg?1782970103",
+      "source_sha256": "ccfcb9bc1ec99e823f8282d77674bb49e536c0641c28e6c0b23aa8eedcc6600a",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/13-73093135-af43-45b3-92e4-79349b266deb-clean.png",
+          "sha256": "c0e7b05e149aae3da64fe9fdfd9f87c4ceb6400b51e53b119aa4325f5fc6d150",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/13-73093135-af43-45b3-92e4-79349b266deb-gaussian.png",
+          "sha256": "f4727c2169f649aae1b052d828638144f5f85af3282d365bf44a4673a1f0c2f6",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/13-73093135-af43-45b3-92e4-79349b266deb-downsample.png",
+          "sha256": "9e31f5bc920d41a73b21e2293cb24d190c34107a2ffba5018c05d99460aeebd5",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/13-73093135-af43-45b3-92e4-79349b266deb-jpeg.png",
+          "sha256": "1c9c8aede015d286e893cf318c0035fa87d66fa702b10d11eb779b9e31eba295",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14-52906cfc-7efc-4b0d-82e2-cef5ceaaa871",
+      "card_id": "52906cfc-7efc-4b0d-82e2-cef5ceaaa871",
+      "oracle_id": "c8c6924e-9af8-4212-be28-b0b4eaa4c7d8",
+      "card_name": "Warden of the Woods",
+      "language": "de",
+      "text": "Hüter der Wälder",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/5/2/52906cfc-7efc-4b0d-82e2-cef5ceaaa871.jpg?1782904613",
+      "source_sha256": "fa09d94982faebfc85ac143b83aa1dd89f826f8c7483d6956a667ed4b435f9ff",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/14-52906cfc-7efc-4b0d-82e2-cef5ceaaa871-clean.png",
+          "sha256": "619dcdad846743f95a69d07278b3592a2438c4a16c400e25a05859fb03f5cf1e",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/14-52906cfc-7efc-4b0d-82e2-cef5ceaaa871-gaussian.png",
+          "sha256": "a1bbe45ffc522c205765a4f5a014cc6277b63d33260fec9496fa19a52a373506",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/14-52906cfc-7efc-4b0d-82e2-cef5ceaaa871-downsample.png",
+          "sha256": "e70259b840e112fdc01bb4f5d8237f7087333f9224fb27917ce7f4a8bbac2aea",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/14-52906cfc-7efc-4b0d-82e2-cef5ceaaa871-jpeg.png",
+          "sha256": "72ec1842f9bae41afdd9d146a9eb76082075d0a4325d2743cb132a7ce2e43bbe",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-08a2edcf-33d1-4541-aa62-1e5c4e50a951",
+      "card_id": "08a2edcf-33d1-4541-aa62-1e5c4e50a951",
+      "oracle_id": "f5822e53-ddec-4c77-bcf4-091e35c1e731",
+      "card_name": "Rebuff the Wicked",
+      "language": "de",
+      "text": "Zurückweisung der Bösen",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=140546&type=card",
+      "source_sha256": "0092b7fbbfb128a3bf73e980486c021a3e8e0b0f59ec92c042e518150b9ab283",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        584,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/15-08a2edcf-33d1-4541-aa62-1e5c4e50a951-clean.png",
+          "sha256": "002143d40786bd49f18323de23c8346716e7093e125ba072b2ebfd1b341f585a",
+          "size": [
+            534,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/15-08a2edcf-33d1-4541-aa62-1e5c4e50a951-gaussian.png",
+          "sha256": "0e32e496562ee84efcc140ac45f61708e0d87442cf9a9f4da290b5c8cb9285c8",
+          "size": [
+            534,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/15-08a2edcf-33d1-4541-aa62-1e5c4e50a951-downsample.png",
+          "sha256": "657853fa686d01ad97aa1adf68b88b38adc050ac37e696d3f7acec438363aff1",
+          "size": [
+            160,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/15-08a2edcf-33d1-4541-aa62-1e5c4e50a951-jpeg.png",
+          "sha256": "9db59e13d4c5e5f0e00cc2f24b89ee09c965b09195315f5899a28d775ad70431",
+          "size": [
+            160,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16-8668d6ea-b889-46ce-859f-f494a3b966fb",
+      "card_id": "8668d6ea-b889-46ce-859f-f494a3b966fb",
+      "oracle_id": "0d16e52a-a7d0-4850-b49d-99f7978133e4",
+      "card_name": "Blightspeaker",
+      "language": "de",
+      "text": "Fäulnisverheißer",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=140478&type=card",
+      "source_sha256": "6044528dcd23a571531723c5820ec0d87b8c8e660b49f78c45ddb227ba4168bb",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/16-8668d6ea-b889-46ce-859f-f494a3b966fb-clean.png",
+          "sha256": "249a68821f53686ebd5c7a8895752bfaa89e98bb7cc89de44ee2c1f9b1ffba1f",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/16-8668d6ea-b889-46ce-859f-f494a3b966fb-gaussian.png",
+          "sha256": "1a30a328f75baeab7f6123f1f5bf52d7438a0cf92c24be0474edddcf9060100e",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/16-8668d6ea-b889-46ce-859f-f494a3b966fb-downsample.png",
+          "sha256": "9f7657a0356cafafa39f3a86eb332c646f22369e9031a03114b24de1e71f7fe8",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/16-8668d6ea-b889-46ce-859f-f494a3b966fb-jpeg.png",
+          "sha256": "5ea6533d179ae8e64ab34518ae9a33275594bf94403c0a3f3104b02e3562fbb2",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17-9d2f10b2-39b6-492a-af51-eb045187080b",
+      "card_id": "9d2f10b2-39b6-492a-af51-eb045187080b",
+      "oracle_id": "caeaad5e-2d68-481c-9a35-c2c3b345963d",
+      "card_name": "Overwhelm",
+      "language": "de",
+      "text": "Überschütten",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/9/d/9d2f10b2-39b6-492a-af51-eb045187080b.jpg?1782969428",
+      "source_sha256": "f0cc08dbd97cfa8433b51002cf6b9eaa399bf917fc2325fc14e1996b0301e113",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/17-9d2f10b2-39b6-492a-af51-eb045187080b-clean.png",
+          "sha256": "e0b238d5fe0ce4504b352054beb719e2446caaaedc58ed0d18308e43017c0955",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/17-9d2f10b2-39b6-492a-af51-eb045187080b-gaussian.png",
+          "sha256": "2d6170bbb554bdc47efc36947dd2c1b19a3481690c9ae5374fc8f708e98b3964",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/17-9d2f10b2-39b6-492a-af51-eb045187080b-downsample.png",
+          "sha256": "fec5f09ed80caaa82e6886d820b51f0283910d39f0ae09d84016225ddef6a8d3",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/17-9d2f10b2-39b6-492a-af51-eb045187080b-jpeg.png",
+          "sha256": "1d7cffe4b7aacb0ce1d861d726aa881f9a30a07af0266ce95ecbd357e050f491",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18-5003360c-0f88-40f7-ad3c-800340d6140d",
+      "card_id": "5003360c-0f88-40f7-ad3c-800340d6140d",
+      "oracle_id": "f6dec1e0-148a-4742-815f-56806305897d",
+      "card_name": "Unblinking Bleb",
+      "language": "es",
+      "text": "Glóbulo sin párpado",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=144330&type=card",
+      "source_sha256": "e3c1c6683b915dd1412e1230cfbba61cfdc8151de26efd8942005f7217582c12",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        553,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/18-5003360c-0f88-40f7-ad3c-800340d6140d-clean.png",
+          "sha256": "9e1880be9f990d6452a560085a353e2ae151c2a4b739f8b88979d082a5d1af61",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/18-5003360c-0f88-40f7-ad3c-800340d6140d-gaussian.png",
+          "sha256": "6563b9ca0591d85ee88ec50f87fa5c1f0ada3ce71683d8f1941717ceb0aca016",
+          "size": [
+            503,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/18-5003360c-0f88-40f7-ad3c-800340d6140d-downsample.png",
+          "sha256": "acc22764322a9f924049edc87f7cff528e3f571a86f837cd4d40fc73e8ef787c",
+          "size": [
+            151,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/18-5003360c-0f88-40f7-ad3c-800340d6140d-jpeg.png",
+          "sha256": "ad5c23a6c55c9cc35c359addee1b59e987c093967c761c3dbd150f20abedc88f",
+          "size": [
+            151,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19-733109a5-5ec7-42e7-9c6e-c38826169fd6",
+      "card_id": "733109a5-5ec7-42e7-9c6e-c38826169fd6",
+      "oracle_id": "5efea57b-937d-46ac-999e-490316e0f820",
+      "card_name": "Aether Membrane",
+      "language": "es",
+      "text": "Membrana de éter",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=141189&type=card",
+      "source_sha256": "e2ad11a4f565c82a9fb709fd1e054bc16a9e999175e4b26e5b8c17160f52b5b7",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/19-733109a5-5ec7-42e7-9c6e-c38826169fd6-clean.png",
+          "sha256": "083582d84a99b0ea0499096fda74e00c9c2f228932d5e55a90c12e1317b34ccf",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/19-733109a5-5ec7-42e7-9c6e-c38826169fd6-gaussian.png",
+          "sha256": "7ec2aa1517dcf022d9b132bea636ddba43cfc527957937601db7f25a3b1a8224",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/19-733109a5-5ec7-42e7-9c6e-c38826169fd6-downsample.png",
+          "sha256": "8b3a88d0559692eed98c29304976dd7d1e58de08a4db0aac2e1ca0ef26abd57d",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/19-733109a5-5ec7-42e7-9c6e-c38826169fd6-jpeg.png",
+          "sha256": "12d2e21cbe6c4fb5fc06dc6eb1ae77cbbcd6fe2c95524a86fa952d40ad81cba8",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20-bf5cfb07-8e1f-4339-bf9a-c7db98b72a95",
+      "card_id": "bf5cfb07-8e1f-4339-bf9a-c7db98b72a95",
+      "oracle_id": "865a2194-fca0-446e-aae3-ca475cd66e00",
+      "card_name": "Dismal Backwater",
+      "language": "es",
+      "text": "Laguna lúgubre",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/b/f/bf5cfb07-8e1f-4339-bf9a-c7db98b72a95.jpg?1782904379",
+      "source_sha256": "da98ebcbf374fdba206081ac933f29c492555ea893575d3c4a2f1d0bc8d564d4",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        615,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/20-bf5cfb07-8e1f-4339-bf9a-c7db98b72a95-clean.png",
+          "sha256": "74fbbd9ab1c470a1c0ead61814b14956f1814185fb286efe7c8125d16bf77b12",
+          "size": [
+            565,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/20-bf5cfb07-8e1f-4339-bf9a-c7db98b72a95-gaussian.png",
+          "sha256": "e386ff3b2564ed6daceeab6e81afaabd62e1475a94a8fa2636425786c08e6493",
+          "size": [
+            565,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/20-bf5cfb07-8e1f-4339-bf9a-c7db98b72a95-downsample.png",
+          "sha256": "2cc10ac16525c266905bd1cf6fe30fd78c5c2545cc72bc5a97708b6caf1e8811",
+          "size": [
+            170,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/20-bf5cfb07-8e1f-4339-bf9a-c7db98b72a95-jpeg.png",
+          "sha256": "a942ad0074934ac6bd0e540ccc8afbae14c71cb8cf08862db419aeb79d03c21d",
+          "size": [
+            170,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21-00d3aa20-3980-4f43-afef-c718dac6e171",
+      "card_id": "00d3aa20-3980-4f43-afef-c718dac6e171",
+      "oracle_id": "e8148616-9f0b-4d4e-8d6d-18251a84e5e8",
+      "card_name": "Foundry Street Denizen",
+      "language": "es",
+      "text": "Habitante de la Calle Fundición",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/0/0/00d3aa20-3980-4f43-afef-c718dac6e171.jpg?1782969760",
+      "source_sha256": "462ddd650689f499bbe71cd9a2eb0e45e59f15bd17219b4f51ccec43177e803c",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        584,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/21-00d3aa20-3980-4f43-afef-c718dac6e171-clean.png",
+          "sha256": "59cf48495d91c4b610353302e950d97fd7bfecd6d4cb62e13c5f494b5b9200f0",
+          "size": [
+            534,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/21-00d3aa20-3980-4f43-afef-c718dac6e171-gaussian.png",
+          "sha256": "f5b8f6447a49dc0eed6994e1e9c216b170c7ef6528ee5eb9f2d76582f689510d",
+          "size": [
+            534,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/21-00d3aa20-3980-4f43-afef-c718dac6e171-downsample.png",
+          "sha256": "9f6abd63d5877f0ff7c3c59db866c0f9b610414bdf399e0c425e7e41622bbc42",
+          "size": [
+            160,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/21-00d3aa20-3980-4f43-afef-c718dac6e171-jpeg.png",
+          "sha256": "1fe2e5e2c4aaae7b3c75aadb23fb49ec8844a94ecda98908d07bad5bd0228fb0",
+          "size": [
+            160,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22-317b702a-04f2-4c9d-a038-4a8c0d199b5c",
+      "card_id": "317b702a-04f2-4c9d-a038-4a8c0d199b5c",
+      "oracle_id": "95a08f25-8d44-4704-a4d1-a098bf010932",
+      "card_name": "Burlfist Oak",
+      "language": "es",
+      "text": "Roble puñolobanillo",
+      "kind": "title",
+      "italic": false,
+      "corpus_split": "validation",
+      "source_url": "https://cards.scryfall.io/large/front/3/1/317b702a-04f2-4c9d-a038-4a8c0d199b5c.jpg?1782904900",
+      "source_sha256": "9d79d2a8064b9ab8d5b4a0e65dac99b61995184e72370aa3da8bf5fab5cedbe7",
+      "bbox_after_resize_672_936": [
+        50,
+        43,
+        522,
+        99
+      ],
+      "review_source": "training/latin-v2-corpus/titles-reviewed.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/22-317b702a-04f2-4c9d-a038-4a8c0d199b5c-clean.png",
+          "sha256": "116e3d80556be6b227fe7a1878c92af35cd35e6632b3bad011ab37316a7d5f72",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/22-317b702a-04f2-4c9d-a038-4a8c0d199b5c-gaussian.png",
+          "sha256": "e444ab6fa6224628c8d2408284a4e290e3be4b22c5835188e586f1d8b1200930",
+          "size": [
+            472,
+            56
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/22-317b702a-04f2-4c9d-a038-4a8c0d199b5c-downsample.png",
+          "sha256": "23578133ac2e9be6c4c3244c0e36ad61e4498c45624f319c544b29238cbe48ff",
+          "size": [
+            142,
+            17
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/22-317b702a-04f2-4c9d-a038-4a8c0d199b5c-jpeg.png",
+          "sha256": "592e540de79618da34be5b045715b2826ceea92242f71fbbeb31ba9ee17afb79",
+          "size": [
+            142,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23-90ee9953-0e64-4e65-b192-d0f0c876e079",
+      "card_id": "90ee9953-0e64-4e65-b192-d0f0c876e079",
+      "oracle_id": "fe168bf1-f626-460c-890b-1ce758af01fc",
+      "card_name": "Ghostly Pilferer",
+      "language": "fr",
+      "text": "À chaque fois que le Chapardeur fantomal",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/9/0/90ee9953-0e64-4e65-b192-d0f0c876e079.jpg?1782905788",
+      "source_sha256": "db676313630b11e2cd5854ea28e22957e2c08ad76b61d102f176620ff8471fe4",
+      "bbox_after_resize_672_936": [
+        54,
+        600,
+        617,
+        626
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/23-90ee9953-0e64-4e65-b192-d0f0c876e079-clean.png",
+          "sha256": "c8f6f4b145fda797fdfc321918c1c1dd18433501aaf4734fa8d329de90ea0fc6",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/23-90ee9953-0e64-4e65-b192-d0f0c876e079-gaussian.png",
+          "sha256": "080f993386b6d350a69821cd1fdf04ceb89dbf182b735fe355e7057a7b733ca0",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/23-90ee9953-0e64-4e65-b192-d0f0c876e079-downsample.png",
+          "sha256": "0a103a25e1a358c380a86a9e50d5587720f0cf865d3d0b17104e541754bc3ae3",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/23-90ee9953-0e64-4e65-b192-d0f0c876e079-jpeg.png",
+          "sha256": "561edae07105f9742f7b33e88a3cba2e984fd54e09c65c256754095bc611381b",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24-90ee9953-0e64-4e65-b192-d0f0c876e079",
+      "card_id": "90ee9953-0e64-4e65-b192-d0f0c876e079",
+      "oracle_id": "fe168bf1-f626-460c-890b-1ce758af01fc",
+      "card_name": "Ghostly Pilferer",
+      "language": "fr",
+      "text": "À chaque fois qu'un adversaire lance un sort",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/9/0/90ee9953-0e64-4e65-b192-d0f0c876e079.jpg?1782905788",
+      "source_sha256": "db676313630b11e2cd5854ea28e22957e2c08ad76b61d102f176620ff8471fe4",
+      "bbox_after_resize_672_936": [
+        54,
+        688,
+        617,
+        714
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/24-90ee9953-0e64-4e65-b192-d0f0c876e079-clean.png",
+          "sha256": "75447c96eb39ede63e56fc1894c1713ff953f4109ca50f704055ed3dcbb15cf0",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/24-90ee9953-0e64-4e65-b192-d0f0c876e079-gaussian.png",
+          "sha256": "6ec32f041027492c9675a295517271a94698b2013551ca68a80e9fa9c85c567a",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/24-90ee9953-0e64-4e65-b192-d0f0c876e079-downsample.png",
+          "sha256": "b0d4c262b71cda8dc0520e560b41bd5c6402f4abc713b69fcd56f633d7032035",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/24-90ee9953-0e64-4e65-b192-d0f0c876e079-jpeg.png",
+          "sha256": "47fe55e70c0dbe312b4e68dda458befacfcb3118e8bb6a6aa4995c17027ceb16",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25-0dda80b2-ac7f-4218-b519-50b84fd5ca08",
+      "card_id": "0dda80b2-ac7f-4218-b519-50b84fd5ca08",
+      "oracle_id": "cbcb6d9a-6ae5-4bcd-8013-2b657553764a",
+      "card_name": "Mangara, the Diplomat",
+      "language": "fr",
+      "text": "À chaque fois qu'un adversaire attaque",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/d/0dda80b2-ac7f-4218-b519-50b84fd5ca08.jpg?1782905955",
+      "source_sha256": "d973c424ff1af18c64134a7ce0afb20f22b160cd347ebe7fa0dae26311918d63",
+      "bbox_after_resize_672_936": [
+        54,
+        632,
+        617,
+        659
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/25-0dda80b2-ac7f-4218-b519-50b84fd5ca08-clean.png",
+          "sha256": "8909b176050b4b7ad026205063ca0d3e3d3d8981126f0f07b3f3891085f4d8e9",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/25-0dda80b2-ac7f-4218-b519-50b84fd5ca08-gaussian.png",
+          "sha256": "9a7d2267b2367dcdb86d1871caf52324baa2d67f6618e3c5c947f8aa45499f71",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/25-0dda80b2-ac7f-4218-b519-50b84fd5ca08-downsample.png",
+          "sha256": "495dbd02aa5ef0f0350941badd64bb60f306f75b999c9c76c321585722000d51",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/25-0dda80b2-ac7f-4218-b519-50b84fd5ca08-jpeg.png",
+          "sha256": "03cdd3db70edece237f64bc21261b76a36c38a21f345648e1f5bd4924518b311",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26-0dda80b2-ac7f-4218-b519-50b84fd5ca08",
+      "card_id": "0dda80b2-ac7f-4218-b519-50b84fd5ca08",
+      "oracle_id": "cbcb6d9a-6ae5-4bcd-8013-2b657553764a",
+      "card_name": "Mangara, the Diplomat",
+      "language": "fr",
+      "text": "À chaque fois qu'un adversaire lance son",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/d/0dda80b2-ac7f-4218-b519-50b84fd5ca08.jpg?1782905955",
+      "source_sha256": "d973c424ff1af18c64134a7ce0afb20f22b160cd347ebe7fa0dae26311918d63",
+      "bbox_after_resize_672_936": [
+        54,
+        777,
+        617,
+        803
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/26-0dda80b2-ac7f-4218-b519-50b84fd5ca08-clean.png",
+          "sha256": "71ef5b2427eb6cf06d66c6678b3ed2f660e84cc9218b18b07b24653aba3703bf",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/26-0dda80b2-ac7f-4218-b519-50b84fd5ca08-gaussian.png",
+          "sha256": "02f06ccbc2aba2dc2973e741cf30c27140c1cc61558cd6bd5c47b960572f0dfa",
+          "size": [
+            563,
+            26
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/26-0dda80b2-ac7f-4218-b519-50b84fd5ca08-downsample.png",
+          "sha256": "2d5c5194a5806382bdeb588ecc3a6e8564562b6cb994cb9a831629cad239cf4f",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/26-0dda80b2-ac7f-4218-b519-50b84fd5ca08-jpeg.png",
+          "sha256": "14c7dece992cb877f73325adddfd01f4e2e5e53d57e800414cdfef564270af1c",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12",
+      "card_id": "7d58839e-ed3a-46f8-bdf8-47930a3c2b12",
+      "oracle_id": "fa10cacb-ab14-447a-b411-9d74bc3772fb",
+      "card_name": "Onakke Ogre",
+      "language": "fr",
+      "text": "travailleurs, ces derniers possèdent une",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/7/d/7d58839e-ed3a-46f8-bdf8-47930a3c2b12.jpg?1782905043",
+      "source_sha256": "d17f99d8b9d4581bb6fcd54a736fb772b3b7efcd502ff89268bbca8474b3a2f8",
+      "bbox_after_resize_672_936": [
+        54,
+        707,
+        617,
+        738
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-clean.png",
+          "sha256": "6748b6125064b626f7e0e2092277f576bdffa8e350537ae02592761b2eb2ad96",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-gaussian.png",
+          "sha256": "b6adc881f62e6f0d565ca85add05bcb50b5a163c561938763cca0e2dd503653b",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-downsample.png",
+          "sha256": "fd0e209c847080b7df8aafaeea6f4bce6368aa9f7aa0bd97bc069091e66c38ef",
+          "size": [
+            169,
+            9
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/27-7d58839e-ed3a-46f8-bdf8-47930a3c2b12-jpeg.png",
+          "sha256": "6541b69c693f19ee7e84595e2fff8026a9e2ffa2ea226183f7d73a5680bf0ec9",
+          "size": [
+            169,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28-6d610468-1222-4217-8374-f8c046eed4d1",
+      "card_id": "6d610468-1222-4217-8374-f8c046eed4d1",
+      "oracle_id": "5462cb38-7cd7-46e8-a273-35d0d1af45b4",
+      "card_name": "Run Afoul",
+      "language": "fr",
+      "text": "créature avec le vol.",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/6/d/6d610468-1222-4217-8374-f8c046eed4d1.jpg?1782904697",
+      "source_sha256": "7fd0ad6e7433c1c825f8bd910b6806eb831f38bbcb28ab9966667cab77d8bd62",
+      "bbox_after_resize_672_936": [
+        54,
+        650,
+        617,
+        674
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/28-6d610468-1222-4217-8374-f8c046eed4d1-clean.png",
+          "sha256": "ecbd8fbc4a1dad93fa44f4ac33291a528c09d761d1ef31b591974db15ab909c6",
+          "size": [
+            563,
+            24
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/28-6d610468-1222-4217-8374-f8c046eed4d1-gaussian.png",
+          "sha256": "add1e26ab6d971c685ca257000b7b4b5754cd77413a8f3e25a39b5fa9d4b7fc8",
+          "size": [
+            563,
+            24
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/28-6d610468-1222-4217-8374-f8c046eed4d1-downsample.png",
+          "sha256": "371175faa22a80c7d6a91f4370c8bb0839676ff5c1ba535a234549f3a6ab1108",
+          "size": [
+            169,
+            7
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/28-6d610468-1222-4217-8374-f8c046eed4d1-jpeg.png",
+          "sha256": "c6a182540e8c5c90e929bcc92fabce03407f750ec679686d299204f27795c18b",
+          "size": [
+            169,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29-cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "card_id": "cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "oracle_id": "72dc807b-35fb-4d69-ae4c-04eed0646170",
+      "card_name": "Battle-Rattle Shaman",
+      "language": "pt",
+      "text": "No início do combate no seu turno,",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/c/b/cb764f69-4e86-41af-85ef-de93cef8c95a.jpg?1782905234",
+      "source_sha256": "473cbe87000ce883c1faa0e4a4efaef0e35c334653a5552f9ca81a19b31d42ef",
+      "bbox_after_resize_672_936": [
+        54,
+        596,
+        617,
+        626
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/29-cb764f69-4e86-41af-85ef-de93cef8c95a-clean.png",
+          "sha256": "0a46f9bf2380def0002155ec1d5b083275aadb8dac0e3a71ceb0803a28c2d36a",
+          "size": [
+            563,
+            30
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/29-cb764f69-4e86-41af-85ef-de93cef8c95a-gaussian.png",
+          "sha256": "63e68c695449de37c00c1e93a6430f8c27bbd5903cd3cd459e6dbc634733cb0c",
+          "size": [
+            563,
+            30
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/29-cb764f69-4e86-41af-85ef-de93cef8c95a-downsample.png",
+          "sha256": "11e769b3f1fc313db002126010cb8104f0af146ee370249751caaf6781d91723",
+          "size": [
+            169,
+            9
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/29-cb764f69-4e86-41af-85ef-de93cef8c95a-jpeg.png",
+          "sha256": "109d308e6ad3df2ea03c34593a037a6f936512c49d9b76ba1b0c3430ade92825",
+          "size": [
+            169,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30-cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "card_id": "cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "oracle_id": "72dc807b-35fb-4d69-ae4c-04eed0646170",
+      "card_name": "Battle-Rattle Shaman",
+      "language": "pt",
+      "text": "você pode fazer com que a criatura",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/c/b/cb764f69-4e86-41af-85ef-de93cef8c95a.jpg?1782905234",
+      "source_sha256": "473cbe87000ce883c1faa0e4a4efaef0e35c334653a5552f9ca81a19b31d42ef",
+      "bbox_after_resize_672_936": [
+        54,
+        634,
+        617,
+        658
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/30-cb764f69-4e86-41af-85ef-de93cef8c95a-clean.png",
+          "sha256": "538e0ebbb1496cf0ac9a501e12ae15d0955d4127c67cec211c4ebcba494168b8",
+          "size": [
+            563,
+            24
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/30-cb764f69-4e86-41af-85ef-de93cef8c95a-gaussian.png",
+          "sha256": "073f7df2c87c2115bf2944c7759710ee75e74cbe478c3a43ded7ae8f41e93ab8",
+          "size": [
+            563,
+            24
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/30-cb764f69-4e86-41af-85ef-de93cef8c95a-downsample.png",
+          "sha256": "4c4532156070fb60846a5a7e7d1360e6196c61dbef0cd9a4a74b425e1621beb1",
+          "size": [
+            169,
+            7
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/30-cb764f69-4e86-41af-85ef-de93cef8c95a-jpeg.png",
+          "sha256": "7d409e151cdffbdee41a9fbfd17b5b7b15233ef414126423f6ad15649a1ed5f6",
+          "size": [
+            169,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31-5dc7ee06-cc87-4086-a086-e552acf6afb0",
+      "card_id": "5dc7ee06-cc87-4086-a086-e552acf6afb0",
+      "oracle_id": "cbcb6d9a-6ae5-4bcd-8013-2b657553764a",
+      "card_name": "Mangara, the Diplomat",
+      "language": "pt",
+      "text": "Vínculo com a vida",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/5/d/5dc7ee06-cc87-4086-a086-e552acf6afb0.jpg?1782905960",
+      "source_sha256": "34870c44604ad2a17b220f56da4e824c16e9034978fd1e4b9b86aad4662f3980",
+      "bbox_after_resize_672_936": [
+        54,
+        607,
+        617,
+        628
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/31-5dc7ee06-cc87-4086-a086-e552acf6afb0-clean.png",
+          "sha256": "68a59150fcfebce489e4a5f99f665c8e089975b35f3718f276cb1c8ff0d6dec4",
+          "size": [
+            563,
+            21
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/31-5dc7ee06-cc87-4086-a086-e552acf6afb0-gaussian.png",
+          "sha256": "720a7237cfe1ae36ee3fabf2a6d5ab8d4eea5bc3d8c37323d606c428afdc5df2",
+          "size": [
+            563,
+            21
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/31-5dc7ee06-cc87-4086-a086-e552acf6afb0-downsample.png",
+          "sha256": "89e804568fe60f8e0be3b8468fa368fc63d90252e34826c2340be6f87787cf4a",
+          "size": [
+            169,
+            6
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/31-5dc7ee06-cc87-4086-a086-e552acf6afb0-jpeg.png",
+          "sha256": "2141dfa930b1a1079993403a501218f8f9d9a364c7069ba3ca966169e1b1ec18",
+          "size": [
+            169,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32-5dc7ee06-cc87-4086-a086-e552acf6afb0",
+      "card_id": "5dc7ee06-cc87-4086-a086-e552acf6afb0",
+      "oracle_id": "cbcb6d9a-6ae5-4bcd-8013-2b657553764a",
+      "card_name": "Mangara, the Diplomat",
+      "language": "pt",
+      "text": "que você controla, compre um card.",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/5/d/5dc7ee06-cc87-4086-a086-e552acf6afb0.jpg?1782905960",
+      "source_sha256": "34870c44604ad2a17b220f56da4e824c16e9034978fd1e4b9b86aad4662f3980",
+      "bbox_after_resize_672_936": [
+        54,
+        729,
+        617,
+        750
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/32-5dc7ee06-cc87-4086-a086-e552acf6afb0-clean.png",
+          "sha256": "7c7bcc3aea4821873d1177a8a4cf150bf6ad438541980373f0b7a2108f10dcbb",
+          "size": [
+            563,
+            21
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/32-5dc7ee06-cc87-4086-a086-e552acf6afb0-gaussian.png",
+          "sha256": "eaccde33052227a18f9bd35d66b9777f5cc8152eb8ce180d4ba3e5c72ce43ca6",
+          "size": [
+            563,
+            21
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/32-5dc7ee06-cc87-4086-a086-e552acf6afb0-downsample.png",
+          "sha256": "af8374d0cb01b98bf55fc9cddba33e03f1d9e892337062991a49f65bf939d992",
+          "size": [
+            169,
+            6
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/32-5dc7ee06-cc87-4086-a086-e552acf6afb0-jpeg.png",
+          "sha256": "02f30b2b2d0e704e576f36a9d74018ce65b061de76e73321201aa0d138371cd4",
+          "size": [
+            169,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33-06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "card_id": "06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "oracle_id": "4e698713-6203-44f2-b438-1b26b951536d",
+      "card_name": "Alchemist's Gift",
+      "language": "es",
+      "text": "o vínculo vital hasta el final del turno.",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/6/06ef2d45-c200-49a2-8b93-68a837f3f252.jpg?1782905554",
+      "source_sha256": "517d330369600f52fc3bfa20a737d6c3f254bf96725889b1b434b60e25881379",
+      "bbox_after_resize_672_936": [
+        54,
+        653,
+        617,
+        680
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/33-06ef2d45-c200-49a2-8b93-68a837f3f252-clean.png",
+          "sha256": "57a222dce5ad087bd5aa0a8d189db4524c77bc1234f828532f44d0425e55f808",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/33-06ef2d45-c200-49a2-8b93-68a837f3f252-gaussian.png",
+          "sha256": "a11261aaf8f4373bb584394721c7b373033499c52c8cb39677b7b8515929ba6a",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/33-06ef2d45-c200-49a2-8b93-68a837f3f252-downsample.png",
+          "sha256": "26e0b850eaab090a2641fe00b3818ff10edd0f80553070ba4a824125ec3a3a2a",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/33-06ef2d45-c200-49a2-8b93-68a837f3f252-jpeg.png",
+          "sha256": "ecd7da153e7a6989bca79e817672d3c62588e6a185d3f03840d363051eee1a58",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34-06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "card_id": "06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "oracle_id": "4e698713-6203-44f2-b438-1b26b951536d",
+      "card_name": "Alchemist's Gift",
+      "language": "es",
+      "text": "(Cualquier cantidad de daño que una criatura",
+      "kind": "reminder",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/6/06ef2d45-c200-49a2-8b93-68a837f3f252.jpg?1782905554",
+      "source_sha256": "517d330369600f52fc3bfa20a737d6c3f254bf96725889b1b434b60e25881379",
+      "bbox_after_resize_672_936": [
+        54,
+        681,
+        617,
+        708
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/34-06ef2d45-c200-49a2-8b93-68a837f3f252-clean.png",
+          "sha256": "43d2b9cc7c4dcdceb89bb250ef950b30f25c3fc836b9c7377e59b4a69ce7ccdd",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/34-06ef2d45-c200-49a2-8b93-68a837f3f252-gaussian.png",
+          "sha256": "edd2b96c46ba2cac7f7400460cc1eeaf3d4d271238147e46c68ed2efa3f6277e",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/34-06ef2d45-c200-49a2-8b93-68a837f3f252-downsample.png",
+          "sha256": "542590ed621a4c4fcf989813005af76b241b59f6788d4c93c50d709db3b3e916",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/34-06ef2d45-c200-49a2-8b93-68a837f3f252-jpeg.png",
+          "sha256": "dd06d831c45ffa0d3a66de3a83c27cce323bedef9a018a10f51568424390fe74",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35-06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "card_id": "06ef2d45-c200-49a2-8b93-68a837f3f252",
+      "oracle_id": "4e698713-6203-44f2-b438-1b26b951536d",
+      "card_name": "Alchemist's Gift",
+      "language": "es",
+      "text": "criatura es suficiente para destruirla. El daño",
+      "kind": "reminder",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/6/06ef2d45-c200-49a2-8b93-68a837f3f252.jpg?1782905554",
+      "source_sha256": "517d330369600f52fc3bfa20a737d6c3f254bf96725889b1b434b60e25881379",
+      "bbox_after_resize_672_936": [
+        54,
+        736,
+        617,
+        763
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/35-06ef2d45-c200-49a2-8b93-68a837f3f252-clean.png",
+          "sha256": "c7fcf9a54bae50981d7864fc07655b0c995cd175148f2df3c9356a1db4ae7805",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/35-06ef2d45-c200-49a2-8b93-68a837f3f252-gaussian.png",
+          "sha256": "649f66f0d47b91ae97b7f1a90f77f18a2351ca577e4bbd841b94d5f4321ebd23",
+          "size": [
+            563,
+            27
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/35-06ef2d45-c200-49a2-8b93-68a837f3f252-downsample.png",
+          "sha256": "7862bb441d7785e5fe31d3da113fbc10a86f529efa54e423b2e3ff1e57e0a5a2",
+          "size": [
+            169,
+            8
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/35-06ef2d45-c200-49a2-8b93-68a837f3f252-jpeg.png",
+          "sha256": "f3aa66bcf61757fdeaa50e59620e24c42ffcadff39cf367c411c6462c4070326",
+          "size": [
+            169,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36-a84c1db9-6c30-4cc4-8103-0a8ea69167a7",
+      "card_id": "a84c1db9-6c30-4cc4-8103-0a8ea69167a7",
+      "oracle_id": "93c35f9e-3346-4269-b1af-df9f216bfd7a",
+      "card_name": "Concordia Pegasus",
+      "language": "es",
+      "text": "de otoño, un destello de alas blancas",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/a/8/a84c1db9-6c30-4cc4-8103-0a8ea69167a7.jpg?1782906062",
+      "source_sha256": "c28b729f69fa35797b31eb86c41109aa02b8ab7734d17e041235531bdebdab29",
+      "bbox_after_resize_672_936": [
+        54,
+        737,
+        617,
+        768
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/36-a84c1db9-6c30-4cc4-8103-0a8ea69167a7-clean.png",
+          "sha256": "f6cdb0bbccb4ab78c0d960f14b2d2c6bfa58c14b43ce4a67591f54c88e86e9eb",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/36-a84c1db9-6c30-4cc4-8103-0a8ea69167a7-gaussian.png",
+          "sha256": "fe5c3fdd614ad642eab130591c7ec3e9657be0bb97325a0b5e7483699110c65e",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/36-a84c1db9-6c30-4cc4-8103-0a8ea69167a7-downsample.png",
+          "sha256": "28d682669ccd16d05cdf09eecba488458826ff6bb2e52c0c40913de7918a1b25",
+          "size": [
+            169,
+            9
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/36-a84c1db9-6c30-4cc4-8103-0a8ea69167a7-jpeg.png",
+          "sha256": "896cf2eb029f621ac407f1f33d96e05c87392bf2a37e268a65074734b3a0ac31",
+          "size": [
+            169,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37-07591dba-a344-4e92-b722-9edf50ad57e8",
+      "card_id": "07591dba-a344-4e92-b722-9edf50ad57e8",
+      "oracle_id": "cbcb6d9a-6ae5-4bcd-8013-2b657553764a",
+      "card_name": "Mangara, the Diplomat",
+      "language": "es",
+      "text": "Vínculo vital.",
+      "kind": "rules",
+      "italic": false,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/0/7/07591dba-a344-4e92-b722-9edf50ad57e8.jpg?1782905954",
+      "source_sha256": "78d3c32f43445e5123f1532d5058b639252bccd76cfbd40aa6794bf9cde83404",
+      "bbox_after_resize_672_936": [
+        54,
+        594,
+        617,
+        623
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/37-07591dba-a344-4e92-b722-9edf50ad57e8-clean.png",
+          "sha256": "a4c953442c554d3f2130bbec209395139f732c44aa5f738a249e2144a11ec958",
+          "size": [
+            563,
+            29
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/37-07591dba-a344-4e92-b722-9edf50ad57e8-gaussian.png",
+          "sha256": "8753042ca4995a5784267eb87cd8409650784fcb2ee049fdb00863258fbce92c",
+          "size": [
+            563,
+            29
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/37-07591dba-a344-4e92-b722-9edf50ad57e8-downsample.png",
+          "sha256": "e861bb28ed285fad71ea6fca4fc9c0e460aa0fea0f2143b715370bb74b43ee78",
+          "size": [
+            169,
+            9
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/37-07591dba-a344-4e92-b722-9edf50ad57e8-jpeg.png",
+          "sha256": "ed15eec3fc0b0f35a3832966be59f0494f1f034062b5098afe4cc6f57d14bebe",
+          "size": [
+            169,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38-951dfbcc-ebf9-4ce8-9063-345207d9e312",
+      "card_id": "951dfbcc-ebf9-4ce8-9063-345207d9e312",
+      "oracle_id": "93c35f9e-3346-4269-b1af-df9f216bfd7a",
+      "card_name": "Concordia Pegasus",
+      "language": "de",
+      "text": "im wolkenverhangenen Herbsthimmel",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/9/5/951dfbcc-ebf9-4ce8-9063-345207d9e312.jpg?1782906061",
+      "source_sha256": "c8ef5f213b7be9760dfb39f4c5f8dc705015913346171d406efe1e4884de1e42",
+      "bbox_after_resize_672_936": [
+        54,
+        720,
+        617,
+        752
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/38-951dfbcc-ebf9-4ce8-9063-345207d9e312-clean.png",
+          "sha256": "cbbb9d5c5f6979d82ac32a2a1f238477d4effd457c1f602451203661c677df26",
+          "size": [
+            563,
+            32
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/38-951dfbcc-ebf9-4ce8-9063-345207d9e312-gaussian.png",
+          "sha256": "cecbb6df5ea91dc97ee18c58b4a8a60257e27d958529a7c60a576216d537ca54",
+          "size": [
+            563,
+            32
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/38-951dfbcc-ebf9-4ce8-9063-345207d9e312-downsample.png",
+          "sha256": "981dfc63610af4bc28258eb5ddc9214f7ea0262bc5f3c4dffb8e12863049fd9d",
+          "size": [
+            169,
+            10
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/38-951dfbcc-ebf9-4ce8-9063-345207d9e312-jpeg.png",
+          "sha256": "0f798d88cf3bdc84a8ef1142f184d32693903122d183c25199656e35a403e0bc",
+          "size": [
+            169,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39-187ba76e-b150-4032-856b-3cb20bab471b",
+      "card_id": "187ba76e-b150-4032-856b-3cb20bab471b",
+      "oracle_id": "72dc807b-35fb-4d69-ae4c-04eed0646170",
+      "card_name": "Battle-Rattle Shaman",
+      "language": "it",
+      "text": "infondere una furia guerriera ma per coprire",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/1/8/187ba76e-b150-4032-856b-3cb20bab471b.jpg?1782905229",
+      "source_sha256": "454279af7acfaf2bc09dbfdeda023aaed3170bc394c431f60578ee992ffc3642",
+      "bbox_after_resize_672_936": [
+        54,
+        763,
+        617,
+        797
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/39-187ba76e-b150-4032-856b-3cb20bab471b-clean.png",
+          "sha256": "b2c4c16352c70a4724dfdbbd7626af9772846a10b36a46d89dddff762323b2a1",
+          "size": [
+            563,
+            34
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/39-187ba76e-b150-4032-856b-3cb20bab471b-gaussian.png",
+          "sha256": "4aad31c7982fa34843b9b2916af0ed51ac332e76cb12ecfe44e09faaf4d1bbd4",
+          "size": [
+            563,
+            34
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/39-187ba76e-b150-4032-856b-3cb20bab471b-downsample.png",
+          "sha256": "6d50ae448dc9bbc2b17c577ba10d5d88a382796a6edc2ee70312a3c78bb28b7b",
+          "size": [
+            169,
+            10
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/39-187ba76e-b150-4032-856b-3cb20bab471b-jpeg.png",
+          "sha256": "2462108fbf67951b91c1b66bb2c32c3a48f154dc2458e85e557bc7762c30adbe",
+          "size": [
+            169,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40-b0fc00d9-6a59-4f84-bbf5-75b530265351",
+      "card_id": "b0fc00d9-6a59-4f84-bbf5-75b530265351",
+      "oracle_id": "93c35f9e-3346-4269-b1af-df9f216bfd7a",
+      "card_name": "Concordia Pegasus",
+      "language": "it",
+      "text": "dell'autunno, un lampo di candide ali",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/b/0/b0fc00d9-6a59-4f84-bbf5-75b530265351.jpg?1782906064",
+      "source_sha256": "82cde5310532dc0ae726e690e9a0314fa8c2d420c3de031d6dd5ad7cc40c8064",
+      "bbox_after_resize_672_936": [
+        54,
+        737,
+        617,
+        768
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/40-b0fc00d9-6a59-4f84-bbf5-75b530265351-clean.png",
+          "sha256": "c4c2b98313779092aa7d17cc6648034a8fee882581458c704e0db7059378155c",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/40-b0fc00d9-6a59-4f84-bbf5-75b530265351-gaussian.png",
+          "sha256": "c19138c1583a1f78d69a94287712b9dfad00ecb9b789b24079709dd4e383f6fa",
+          "size": [
+            563,
+            31
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/40-b0fc00d9-6a59-4f84-bbf5-75b530265351-downsample.png",
+          "sha256": "94daf5db9cb448b9a132162de5dbffde2d84c79c9a164bcf74711c52769f0249",
+          "size": [
+            169,
+            9
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/40-b0fc00d9-6a59-4f84-bbf5-75b530265351-jpeg.png",
+          "sha256": "e6201f7700c5c35893000a38fa3dafbc155400d767cd4fa2ec329c899abdb3ec",
+          "size": [
+            169,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41-cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "card_id": "cb764f69-4e86-41af-85ef-de93cef8c95a",
+      "oracle_id": "72dc807b-35fb-4d69-ae4c-04eed0646170",
+      "card_name": "Battle-Rattle Shaman",
+      "language": "pt",
+      "text": "abafar os gritos daqueles que fogem dos",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/c/b/cb764f69-4e86-41af-85ef-de93cef8c95a.jpg?1782905234",
+      "source_sha256": "473cbe87000ce883c1faa0e4a4efaef0e35c334653a5552f9ca81a19b31d42ef",
+      "bbox_after_resize_672_936": [
+        54,
+        780,
+        617,
+        816
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/41-cb764f69-4e86-41af-85ef-de93cef8c95a-clean.png",
+          "sha256": "2628c0d6303bad91736c387663fcfdf452871c7b1dc22bc66469637a9a16183f",
+          "size": [
+            563,
+            36
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/41-cb764f69-4e86-41af-85ef-de93cef8c95a-gaussian.png",
+          "sha256": "ccfbd22cc68e0650d665e4d94fb19912099c4f057444bae3ef458bcad43f3b53",
+          "size": [
+            563,
+            36
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/41-cb764f69-4e86-41af-85ef-de93cef8c95a-downsample.png",
+          "sha256": "bef66b57aea1b936e3d1d3bba37e9707d3b5114ab88d6f762202bbccb4da6450",
+          "size": [
+            169,
+            11
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/41-cb764f69-4e86-41af-85ef-de93cef8c95a-jpeg.png",
+          "sha256": "3566fc9ae9459aef50b109e47f8d7ef41b3eed31be10bca49201a3cb90514fcc",
+          "size": [
+            169,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42-6d610468-1222-4217-8374-f8c046eed4d1",
+      "card_id": "6d610468-1222-4217-8374-f8c046eed4d1",
+      "oracle_id": "5462cb38-7cd7-46e8-a273-35d0d1af45b4",
+      "card_name": "Run Afoul",
+      "language": "fr",
+      "text": "—Atla Palani, marraine des nids",
+      "kind": "flavor",
+      "italic": true,
+      "corpus_split": "train",
+      "source_url": "https://cards.scryfall.io/large/front/6/d/6d610468-1222-4217-8374-f8c046eed4d1.jpg?1782904697",
+      "source_sha256": "7fd0ad6e7433c1c825f8bd910b6806eb831f38bbcb28ab9966667cab77d8bd62",
+      "bbox_after_resize_672_936": [
+        54,
+        803,
+        617,
+        835
+      ],
+      "review_source": "training/latin-v2-corpus/body-lines.json",
+      "variants": [
+        {
+          "id": "clean",
+          "path": "images/42-6d610468-1222-4217-8374-f8c046eed4d1-clean.png",
+          "sha256": "602c89b0ac0d9f42ec1d0c162ca7a6249bf6d1599dfe033b383ed1e072aad988",
+          "size": [
+            563,
+            32
+          ]
+        },
+        {
+          "id": "gaussian",
+          "path": "images/42-6d610468-1222-4217-8374-f8c046eed4d1-gaussian.png",
+          "sha256": "620738c17b1461e895b34b503e8df0fa3951b12e1852dddf0c2a3a1ed209f953",
+          "size": [
+            563,
+            32
+          ]
+        },
+        {
+          "id": "downsample",
+          "path": "images/42-6d610468-1222-4217-8374-f8c046eed4d1-downsample.png",
+          "sha256": "28da8bb473f7c8f7892e1a0a606d593312af0b12928763797228d2ac38e61e95",
+          "size": [
+            169,
+            10
+          ]
+        },
+        {
+          "id": "jpeg",
+          "path": "images/42-6d610468-1222-4217-8374-f8c046eed4d1-jpeg.png",
+          "sha256": "7ff177f31ada2f3f33d26adb235ea5c8104035f7e66639a2616305aca9e99ea1",
+          "size": [
+            169,
+            10
+          ]
+        }
+      ]
+    }
+  ]
+}
