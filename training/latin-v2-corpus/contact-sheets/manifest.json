@@ -1,0 +1,18 @@
+{
+  "purpose": "Visually reviewed title candidates (including rejected English fallbacks), plus the 20 accepted body lines eligible for V2 updates. Sheet title labels are raw candidate metadata; accepted transcription overrides live in titles-reviewed.json.",
+  "pending_metadata_sha256": "15d855dfe8c301cf6202d13aee825a48958a66e163288881d031a13dd50c618b",
+  "images": {
+    "de-1.png": "b2f471b1c4216306c5b542523d5a5359515839b6e8b1c8109bfa02d96353bd5f",
+    "de-2.png": "b284593edfb814912544540e8da2935133fdd941efdcbb7ef6d2d00ea8923855",
+    "es-1.png": "93f8fb6a60668f1135e7b66fb19ee46aa9bc54d900c1a6a118d81868e4f738a7",
+    "es-2.png": "db4d4f38c90c1e1f2749e3d601559930a54ea3aa7a55462a8818f6dde33f2765",
+    "fr-1.png": "ae7977b559b3024aab49787b77bb526bb4c4325f5457dd7a48a5c5e38faef4ee",
+    "fr-2.png": "f3d0822fa0809ce26f29df29e9d273425133a8569ec1654b7155357a34ee26b7",
+    "it-1.png": "d1d6c793d25e42a119d636889bc436abd1ceacf668712698bdc84fe3adeb2358",
+    "it-2.png": "c307759e720a185b2281db0ed416099bc7e7c4a5b38f3558c3217dbadb0cc450",
+    "pt-1.png": "c0915d2ee2cc84bd810eddc2f804ad1d1ef4c7c2712e76d5e8606d9d5596b4a3",
+    "pt-2.png": "23633b0f31671cac9ff358c0ee6e3faaddf7d867ac1fd5b2865e40771e25aaf2",
+    "body-reviewed.png": "bdea29305a9f8bfd41dd6216126104aa731bb8a4077f6c9811e5e7543694f5a9"
+  },
+  "body_metadata_sha256": "9b168c8cb44b207a2ab044f8dcf750709e8c21487c81e2a057c3f57e9d25040f"
+}

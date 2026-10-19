@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Regular.otf",
+    "sha256": "fd41669443616a7ae890c42e53a58f47fa24a940fd1e367acaff665cf5b6e9d8",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Italic.otf",
+    "sha256": "b7c424e6cb79baddfcdcd9a9d87f9fc4fdd06f0e5160066e2b2e47bcd647c7b9",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/P052-Roman.otf",
+    "sha256": "f054a7389d8d0e9f4c5f7b4c21feb7e2b14bec8004a1e92778a78d149524eea9",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/P052-Italic.otf",
+    "sha256": "1feac6055211cf5c6c812c026e398195070f174064cc4d390f0db01647443b0e",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf",
+    "sha256": "7b1bc8e6a16cef53785ce03d4848f8971f3ba38cd9e266e4786a50e08bd9235b",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf",
+    "sha256": "ed722e6c2996b08e8516d27a7c017972cfabf5d1736b496b6526da78fd17691a",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+    "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf",
+    "sha256": "7b0bef5686aa58c0fd0f0d01beeae56664208490e30ca6a25431281c9a0c6402",
+    "license": "AGPL-3.0 with font exception"
+  },
+  {
+    "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+    "sha256": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+    "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+  },
+  {
+    "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
+    "sha256": "1d7476da447f9455a47c41adfd6ac2b1fc1b65e660f3ea4bf36128506c7e094c",
+    "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+  },
+  {
+    "path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+    "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+  },
+  {
+    "path": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
+    "sha256": "2d7b524ce7d51db78591b4e19c8185b89f3af0aa6534c5e524cf0c6f4ea673de",
+    "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+  }
+]

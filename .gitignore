@@ -6,6 +6,7 @@
 /models/*.rten
 !/models/ocracle-mtg.rten
 !/models/ocracle-mtg-latin.rten
+!/models/ocracle-mtg-latin-v2.rten
 /models/*.onnx
 /models/*.pt
 /training/checkpoints/

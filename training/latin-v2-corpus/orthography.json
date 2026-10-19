@@ -1,0 +1,96 @@
+{
+  "en": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/en.xml",
+    "source_sha256": "416fb34c500e969a9e3e9bd1e363f8af5938df3cdda72aa7e636fa7e72123aae",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[a b c d e f g h i j k l m n o p q r s t u v w x y z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[áàăâåäãā æ ç éèĕêëē íìĭîïī ñ óòŏôöøō œ úùŭûüū ÿ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÖØÙÚÛÜàáâãäåæçèéêëìíîïñòóôöøùúûüÿĀāĂăĒēĔĕĪīĬĭŌōŎŏŒœŪūŬŭŸ"
+  },
+  "fr": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/fr.xml",
+    "source_sha256": "ebc67e303a56940609c892ededb3697e3b291466cf9622dd2c389ad48872e98f",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[aàâ æ b cç d eéèêë f g h iîï j k l m n oô œ p q r s t uùûü v w x yÿ z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[áåäãā ć ē íìī ĳ ñ óòöõø ř šſ ß úǔ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôõöøùúûüÿĀāĆćĒēĪīĲĳŒœŘřŠšŸſǓǔ"
+  },
+  "de": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/de.xml",
+    "source_sha256": "3e14f53fd40a00527f7cbaf5b3228e35985fac0e3f93a4eecc03b6716ceb6a68",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[aä b c d e f g h i j k l m n oö p q r s ß t uü v w x y z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[áàăâåãā æ ç éèĕêëē ğ íìĭîïİī ı ñ óòŏôøō œ ş úùŭûū ÿ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôöøùúûüÿĀāĂăĒēĔĕĞğĪīĬĭİıŌōŎŏŒœŞşŪūŬŭŸẞ"
+  },
+  "it": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/it.xml",
+    "source_sha256": "51834d1632b59a345c5beef712f5dddbe4e62530bf8abfc62ed42be4f3a43653",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[aà b c d eéè f g h iì j k l m n oò p q r s t uù v w x y z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[ªáâåäã æ ç êë íîï ñ ºóôöõø œ ß úûü ÿ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôõöøùúûüÿŒœŸ"
+  },
+  "pt": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/pt.xml",
+    "source_sha256": "0c27d3da189672618048c2fdb20659fa99b28509dde3cc8720d7331a32723bdf",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[aáàâã b cç d eéê f g h ií j k l m n oóòôõ p q r s t uú v w x y z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[ªăåäā æ èĕëē ìĭîïī ñ ºŏöøō œ ùŭûüū ÿ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜàáâãäåæçèéêëìíîïñòóôõöøùúûüÿĀāĂăĒēĔĕĪīĬĭŌōŎŏŒœŪūŬŭŸ"
+  },
+  "es": {
+    "source": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/es.xml",
+    "source_sha256": "b7c05dadf71f5acafa7f2bc8013f32f03e113d155fe893bdc8e27f8088cbdf0c",
+    "exemplars": [
+      {
+        "type": "main",
+        "set": "[aá b c d eé f g h ií j k l m n ñ oó p q r s t uúü v w x y z]"
+      },
+      {
+        "type": "auxiliary",
+        "set": "[ªàăâåäãā æ ç èĕêëē ìĭîïī ºòŏôöøō œ ùŭûū ýÿ]"
+      }
+    ],
+    "letters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÖØÙÚÛÜÝàáâãäåæçèéêëìíîïñòóôöøùúûüýÿĀāĂăĒēĔĕĪīĬĭŌōŎŏŒœŪūŬŭŸ"
+  },
+  "punctuation": {
+    "characters": "‘’“”„«»‹›–—…¡¿",
+    "status": "Typography targets retained alongside ASCII punctuation"
+  }
+}
