@@ -35,7 +35,7 @@ def protected_identities():
     protected = set()
     paths = ["docs/gallery/assets/fixtures.json", "training/latin-eval/manifest.jsonl",
              "training/style-eval/cards.json", "training/rare-scripts/cards.json",
-             "training/experimental_easyocr/fixtures.json", "training/blur-corpus/cards.json"]
+             "training/experimental_easyocr/fixtures/fixtures.json", "training/blur-corpus/cards.json"]
     for name in paths:
         path = ROOT / name
         # The fresh blur corpus is developed in a separate stacked PR.
