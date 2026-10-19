@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "seed": 20261021,
+  "records": 631,
+  "manifest_sha256": "f64cf8216f3f2ee917c6fce2dfbe807a3e2be5fda00b26f41736d2ae2507f695",
+  "roles": {
+    "supervised": 81,
+    "synthetic": 348,
+    "teacher-anchor": 179,
+    "validation": 23
+  },
+  "supervised_origins": {
+    "v2-title:supervised": 58,
+    "v2-title:validation": 23,
+    "v2-body:supervised": 20,
+    "punctuation:supervised": 3
+  },
+  "fonts": [
+    {
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+      "sha256": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+      "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+    },
+    {
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
+      "sha256": "1d7476da447f9455a47c41adfd6ac2b1fc1b65e660f3ea4bf36128506c7e094c",
+      "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+    },
+    {
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+      "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+    },
+    {
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
+      "sha256": "2d7b524ce7d51db78591b4e19c8185b89f3af0aa6534c5e524cf0c6f4ea673de",
+      "license": "DejaVu fonts license (Bitstream Vera-derived; see /usr/share/doc/fonts-dejavu-core/copyright)"
+    }
+  ],
+  "input_sha256": {
+    "training/latin-v2-corpus/titles-reviewed.json": "954aa450c00b0b8634df7028ccd4883d751f1d3346ff3feead8eacdeb962a753",
+    "training/latin-v2-corpus/body-lines.json": "9b168c8cb44b207a2ab044f8dcf750709e8c21487c81e2a057c3f57e9d25040f",
+    "training/punctuation-corpus/annotations.json": "72564306749950bc15ec757847aba26be932d68d8adc52c12ee89222153efd03",
+    "training/corpus/real-lines.json": "a3ecb345d364330dc397ea938fb325e34d108cd8d45c1ca83228649a2da0a93d",
+    "training/latin-v2-corpus/fonts.json": "c86201e0caa1d13506621782e7f0e117b053f5e29d26864336a17aa9b38e48f8"
+  },
+  "reserved_names": [
+    "air elemental",
+    "basri's acolyte",
+    "blade of the sixth pride",
+    "cabal paladin",
+    "capture sphere",
+    "cat warriors",
+    "cave of the frost dragon",
+    "cruel reality",
+    "daze",
+    "divination",
+    "dread shade",
+    "elder gargaroth",
+    "fungal rebirth",
+    "havoc jester",
+    "knight of malice",
+    "light of promise",
+    "llanowar elves",
+    "mammoth spider",
+    "mana tithe",
+    "miscast",
+    "opportunity",
+    "opt",
+    "pack leader",
+    "pestilent haze",
+    "plague beetle",
+    "quirion dryad",
+    "rampaging cyclops",
+    "rousing read",
+    "saproling migration",
+    "sunweb",
+    "teferi's ageless insight",
+    "teferi's protege",
+    "thalia, guardian of thraben",
+    "traitorous greed",
+    "trufflesnout",
+    "typhoid rats"
+  ],
+  "reserved_oracle_ids": [
+    "1104a746-169c-450a-80ad-bea0493c0576",
+    "1c9e1f75-73f0-4846-b53f-458a0984b1bb",
+    "1f544a9f-c238-4858-be19-d6cd7d023dcc",
+    "2dc59566-10cb-468a-b6a2-17d6c0186e6d",
+    "2e3cc9b6-7849-4385-a487-c8f5364174e7",
+    "306549ad-84c7-4983-840b-9663799e9f40",
+    "344cdec9-60b3-42ec-a3d5-41ee1d4f7c6c",
+    "3701ed34-a97c-4d7b-a15a-4faec02ef24b",
+    "397b9dcf-690a-4a58-8637-bb9baab7cc2f",
+    "58f5bbd2-b876-4eb9-aa79-f4d3511961e0",
+    "64c54c9f-0550-41e2-a44a-5892a199f670",
+    "713332c1-5bd8-400f-bfff-c1ca0697a043",
+    "832f96a4-0f4d-47bb-bc1c-3884e73feabc",
+    "8a15841a-dcb6-454a-b865-43a067f42b4e",
+    "92c824da-2351-43bd-9fa0-d09709ad8205",
+    "96415c51-2d44-4a96-9caa-9c4fbde59fca",
+    "9b90c7d1-38c6-4210-bc76-68c5fcb91202",
+    "b24d1540-ed8b-4df3-abfe-1b8492a58388",
+    "b89d912a-65a0-4bc9-9e1d-ff8317458a72",
+    "b917f39a-3176-47ad-afda-08d09b873c02",
+    "bbbb80bd-76fa-4155-929b-4a3565d1cb35",
+    "cee3d8e5-f26f-4f47-8a7b-9ac07ebf9025",
+    "cee8ad22-12a7-4da6-a7d9-e205ada16489",
+    "df77cb98-e3c6-4927-99d5-c3380641f356",
+    "e08c71aa-d35c-4c20-b4db-ae9d36ee3169",
+    "e84f1727-ce01-44be-aebf-8a0c4e032c9a",
+    "f42b6510-7322-4733-85ea-7ae6bd6ca8fc"
+  ],
+  "fresh_validation": null,
+  "selection_ready": true,
+  "selection_protocol": {
+    "identity_lines": 23,
+    "observations": 92,
+    "conditions": {
+      "clean": {},
+      "gaussian": {
+        "sigma_source_pixels": 2.4
+      },
+      "downsample": {
+        "factor": 0.3,
+        "restore": "PIL bilinear"
+      },
+      "jpeg": {
+        "quality": 35,
+        "subsampling": 2
+      }
+    },
+    "score": "0.90*CER across92 title variants +0.10*decoded disagreement rate on8 fixed clean English training anchors",
+    "checkpoint_steps": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "tie": "keep earliest"
+  },
+  "policy": "81 reviewed physical train crops; RGB source recrops; original canonical splits; English real scans KL only; fresh corpus reserved for validation only.",
+  "implementation_sha256": "4d0d7526a07f3e9b350ad01285302e2f5e80b3d40ef7c899ba284640ceb7cd83"
+}

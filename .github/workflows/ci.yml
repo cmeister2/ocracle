@@ -116,6 +116,7 @@ jobs:
       - run: python training/punctuation-corpus/prepare.py --check
       - run: python training/blur_prepare.py --check
       - run: python training/experimental_paddle_candidates/evaluate_blur.py --check
+      - run: python -S training/experimental_paddle_training/mtg_report_check.py
       - run: python training/rare-scripts/prepare.py --check
       - run: python training/style-eval/prepare.py --check
       - run: python training/style-eval/score.py --check
@@ -156,7 +157,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes fonts-dejavu-extra
           python -m venv "$RUNNER_TEMP/paddle-training"
-          "$RUNNER_TEMP/paddle-training/bin/python" -m pip install --require-hashes -r training/experimental_paddle_training/requirements.lock -r training/experimental_paddle_training/requirements-export.lock
+          "$RUNNER_TEMP/paddle-training/bin/python" -m pip install --require-hashes -r training/experimental_paddle_training/requirements.lock -r training/experimental_paddle_training/requirements-export.lock -r training/experimental_paddle_training/requirements-mtg.lock
           printf '%s\n' "$RUNNER_TEMP/paddle-training/bin" >> "$GITHUB_PATH"
       - name: Download the exact official ONNX and native sources
         run: |

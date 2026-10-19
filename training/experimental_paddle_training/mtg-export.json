@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "status": "selected_mtg_native_onnx_rten_cli_parity_passed",
+  "source_checkpoint_sha256": "25c9bd54b0e5900916e8bb6ada938abeffb1eac1baedac0ca54a45b1c9310825",
+  "pilot_report_sha256": "16a7f8091ed380dbabdae1e3e686381291aa1ea80a698d02a7f92e5522d96eff",
+  "dataset_manifest_sha256": "f64cf8216f3f2ee917c6fce2dfbe807a3e2be5fda00b26f41736d2ae2507f695",
+  "dataset_summary_sha256": "b7961ec2d9a7dbfd2c674f74748a8538c47cfd2a2811b8f0f60888730b8a5dd9",
+  "selected_step": 25,
+  "selected_checkpoint_sha256": "451b0e2ada65195045037b3d1db2ad60403e41599691e093415dfa3c2c1625a4",
+  "onnx": {
+    "path": "runs/mtg-export/mtg-step025.onnx",
+    "sha256": "f551ae37ba046b507a53f2c6b3a1f82077056815e68be55ebb9f7f78157cb09e",
+    "bytes": 21331267,
+    "opset": 17,
+    "operators": {
+      "Add": 73,
+      "AveragePool": 1,
+      "BatchNormalization": 58,
+      "Concat": 3,
+      "Constant": 462,
+      "Conv": 68,
+      "Div": 13,
+      "Erf": 13,
+      "HardSigmoid": 5,
+      "Identity": 126,
+      "LayerNormalization": 5,
+      "MatMul": 13,
+      "MaxPool": 1,
+      "Mul": 38,
+      "ReduceMean": 5,
+      "Relu": 10,
+      "Reshape": 20,
+      "Shape": 2,
+      "Sigmoid": 5,
+      "Slice": 8,
+      "Softmax": 3,
+      "Squeeze": 8,
+      "Transpose": 9,
+      "Unsqueeze": 4
+    },
+    "classes": 18713,
+    "dynamic_batch": true,
+    "dynamic_width": true
+  },
+  "configurations": {
+    "en": {
+      "path": "runs/mtg-export/en.json",
+      "sha256": "9bfbf378095a93ba06ff15d9f611db217fe405da508eba7d09e4546050045720"
+    },
+    "de": {
+      "path": "runs/mtg-export/de.json",
+      "sha256": "48cc680f6f3200530f0a88635537a29e36ebfb186b146ebc174621a960fdb5f7"
+    },
+    "es": {
+      "path": "runs/mtg-export/es.json",
+      "sha256": "3f3b9a15182a22b6d4020f22c6b45e27fd2b19c042a7f3c27a61e38a7fe01944"
+    },
+    "fr": {
+      "path": "runs/mtg-export/fr.json",
+      "sha256": "c431f01d4ee98fbfa1b2c12f54bbc8d102f9dd128e159c97aa4b09d2802d0241"
+    },
+    "it": {
+      "path": "runs/mtg-export/it.json",
+      "sha256": "01a26bdfa593eb1e79006ddf63094aa43c78fedda73556de43babb75509f716b"
+    },
+    "pt": {
+      "path": "runs/mtg-export/pt.json",
+      "sha256": "cb2fd9a62fbdea65da40974d20451f4fc8e2931c6a8b337cb09ffda32011e423"
+    }
+  },
+  "appended_classes": [
+    {
+      "character": "¡",
+      "class_index": 18710,
+      "prototype": "!",
+      "prototype_class_index": 1,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "„",
+      "class_index": 18711,
+      "prototype": "“",
+      "prototype_class_index": 704,
+      "initial_bias_offset": -6
+    },
+    {
+      "character": "ẞ",
+      "class_index": 18712,
+      "prototype": "ß",
+      "prototype_class_index": 155,
+      "initial_bias_offset": -6
+    }
+  ],
+  "alphabet_sha256": "2efbe58c763a77bd3c2fc40c780dbb240fdbd8261419d38a70af9f8e15f020bd",
+  "packages": {
+    "paddlepaddle": "3.3.1",
+    "paddle2onnx": "2.1.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "paddle2onnx_source": {
+    "repository": "PaddlePaddle/Paddle2ONNX",
+    "release": "v2.1.0",
+    "revision": "c8b5048c3a0903986bd3ec1cce2af9915b391c49",
+    "license": "Apache-2.0"
+  },
+  "cli_sha256": "1ede5e7d7a8c2060114ab471adf040d965d0e697eb55f8d8eb094a66b6b28e13",
+  "runner_sha256": "7427653f3314492561fb9c62bcc583b701fdec1f82a8f602dab3bbf94e1c1486",
+  "rten_version": "0.26.0",
+  "runner_source_sha256": "ba52af80206934e497804ad9262a4c9e634fa879d2263b3fa13ea15cb544a3f1",
+  "runner_lock_sha256": "883141e2f707bd23ae82897ab205375d368feba2f321518514c1c5a7aea45c7b",
+  "implementation_sha256": "751c189f34f7c6b6ddc80512bc568ef1cb21f2524b7c3a8730cb5b1d1800a665",
+  "records": [
+    {
+      "id": "random-width320",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18713
+      ],
+      "tensor_sha256": "8453cdc02808cb27351faa3eb0cbf5d653c80467911a3811b7d57bf5fc22dd9b",
+      "native_onnx_max_absolute_probability_error": 1.7970800399780273e-05,
+      "native_onnx_identical_argmax": true,
+      "appended_classes_max_absolute_probability_error": 1.2960299500264227e-10,
+      "onnx_rten_max_absolute_probability_error": 8.821487426757812e-06,
+      "onnx_rten_identical_argmax": true,
+      "rten_stdout": "shape=[1, 40, 18713] elapsed_ms=46.724\n",
+      "rten_row_sum_max_error": 8.702278137207031e-06,
+      "native_text": "",
+      "onnx_text": "",
+      "rten_text": ""
+    },
+    {
+      "id": "random-width513",
+      "input_shape": [
+        1,
+        3,
+        48,
+        513
+      ],
+      "output_shape": [
+        1,
+        64,
+        18713
+      ],
+      "tensor_sha256": "d60082ba46933976795ea70b1fbd67b94cf183a3fdb7bd9518e19b2226ebd7da",
+      "native_onnx_max_absolute_probability_error": 3.3795833587646484e-05,
+      "native_onnx_identical_argmax": true,
+      "appended_classes_max_absolute_probability_error": 4.715730028692633e-10,
+      "onnx_rten_max_absolute_probability_error": 5.543231964111328e-06,
+      "onnx_rten_identical_argmax": true,
+      "rten_stdout": "shape=[1, 64, 18713] elapsed_ms=45.491\n",
+      "rten_row_sum_max_error": 1.633167266845703e-05,
+      "native_text": "",
+      "onnx_text": "",
+      "rten_text": ""
+    },
+    {
+      "id": "random-batch2-width320",
+      "input_shape": [
+        2,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        2,
+        40,
+        18713
+      ],
+      "tensor_sha256": "4e29ddf1738cd32b5ed7d320d7636e339ced98dc132f0995c3a848da493d8d85",
+      "native_onnx_max_absolute_probability_error": 1.9311904907226562e-05,
+      "native_onnx_identical_argmax": true,
+      "appended_classes_max_absolute_probability_error": 8.913048077374697e-11
+    },
+    {
+      "id": "clean-anchor",
+      "input_shape": [
+        1,
+        3,
+        48,
+        513
+      ],
+      "output_shape": [
+        1,
+        64,
+        18713
+      ],
+      "tensor_sha256": "6fddd54160c0ce45d2eadd8e2174183ac5d0cffebab8ff3d6efeeb0b6f762305",
+      "native_onnx_max_absolute_probability_error": 2.7418136596679688e-06,
+      "native_onnx_identical_argmax": true,
+      "appended_classes_max_absolute_probability_error": 3.064215547965432e-14,
+      "onnx_rten_max_absolute_probability_error": 2.4139881134033203e-06,
+      "onnx_rten_identical_argmax": true,
+      "rten_stdout": "shape=[1, 64, 18713] elapsed_ms=47.712\n",
+      "rten_row_sum_max_error": 1.9073486328125e-06,
+      "native_text": "An old book rests here.",
+      "onnx_text": "An old book rests here.",
+      "rten_text": "An old book rests here.",
+      "image_path": "runs/mtg-export/clean-anchor.png",
+      "image_sha256": "f0336d63b4f2d6de5aa37789463fd83c608a397580490b7b8bdcdca1b4563c62",
+      "actual_cli": {
+        "text": "An old book rests here.",
+        "confidence": 0.9992207,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR; validation-selected MTG pilot / greedy CTC",
+        "image_size": [
+          513,
+          48
+        ],
+        "lines": [
+          {
+            "text": "An old book rests here.",
+            "confidence": 0.9992207,
+            "bounds": [
+              0,
+              0,
+              513,
+              48
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR; validation-selected MTG pilot / greedy CTC",
+            "text": "An old book rests here.",
+            "confidence": 0.9992207,
+            "lines": [
+              {
+                "text": "An old book rests here.",
+                "confidence": 0.9992207,
+                "bounds": [
+                  0,
+                  0,
+                  513,
+                  48
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "PP-OCRv6 small MTG pilot step25; experimental",
+          "language": "en",
+          "sha256": "f551ae37ba046b507a53f2c6b3a1f82077056815e68be55ebb9f7f78157cb09e",
+          "detector_sha256": null
+        }
+      },
+      "cli_matches_native_onnx_rten": true
+    },
+    {
+      "id": "blur-expanded",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18713
+      ],
+      "tensor_sha256": "a4d4f4cd4509a9170a7de57acf272282a5ae419fba53f43c8d744fef2f7623d3",
+      "native_onnx_max_absolute_probability_error": 1.33514404296875e-05,
+      "native_onnx_identical_argmax": true,
+      "appended_classes_max_absolute_probability_error": 4.377216100692749e-08,
+      "onnx_rten_max_absolute_probability_error": 2.086162567138672e-06,
+      "onnx_rten_identical_argmax": true,
+      "rten_stdout": "shape=[1, 40, 18713] elapsed_ms=47.208\n",
+      "rten_row_sum_max_error": 1.3709068298339844e-05,
+      "native_text": "Ähre! Été“ ß",
+      "onnx_text": "Ähre! Été“ ß",
+      "rten_text": "Ähre! Été“ ß",
+      "image_path": "runs/mtg-export/blur-expanded.png",
+      "image_sha256": "42ab976bd2399d78152824af0e723b08d6859ef9d5990674c54acfec1682acbb",
+      "actual_cli": {
+        "text": "Ähre! Été“ ß",
+        "confidence": 0.9522488,
+        "confidence_kind": "uncalibrated geometric mean of emitted CTC character posterior peaks",
+        "method": "original + LCNetV4 + LightSVTR; validation-selected MTG pilot / greedy CTC",
+        "image_size": [
+          320,
+          48
+        ],
+        "lines": [
+          {
+            "text": "Ähre! Été“ ß",
+            "confidence": 0.9522488,
+            "bounds": [
+              0,
+              0,
+              320,
+              48
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "method": "original + LCNetV4 + LightSVTR; validation-selected MTG pilot / greedy CTC",
+            "text": "Ähre! Été“ ß",
+            "confidence": 0.9522488,
+            "lines": [
+              {
+                "text": "Ähre! Été“ ß",
+                "confidence": 0.9522488,
+                "bounds": [
+                  0,
+                  0,
+                  320,
+                  48
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "name": "PP-OCRv6 small MTG pilot step25; experimental",
+          "language": "en",
+          "sha256": "f551ae37ba046b507a53f2c6b3a1f82077056815e68be55ebb9f7f78157cb09e",
+          "detector_sha256": null
+        }
+      },
+      "cli_matches_native_onnx_rten": true
+    }
+  ],
+  "frozen_feasibility_files_sha256": {
+    "export.py": "d10471d3672782c9faf0b4d75e2ddbbb09ab46ca34f8f858638edc590a382ba5",
+    "export.json": "dd6d91348e7e7b07f2b45137356fb93f7ae27d81effb883574128be29833bda4",
+    "smoke.py": "45423c8a74a0347bd9195938efe56dce94e87f2d29646335ebcba24a1d60963d",
+    "smoke.json": "72d5711f6ea38a330f9fc4f50cb22c4b62eb012a61322202444c4b917d6da045",
+    "parity.py": "63dfd6ddf2afbf115c1ad65a1412621223f75eb81edbe3714867089bee9009e4",
+    "parity.json": "f5d60676e4949760dd17b765e5f85986012e83ab25394b92198c689666e7453f"
+  },
+  "limitations": [
+    "Export parity of the selected step25 MTG pilot; procedural probes do not measure MTG accuracy.",
+    "CLI checks use pre-resized height48 PNGs so shared tensor agreement is meaningful.",
+    "Raw-tensor Rust probe is batch1 only; dynamic batch2 checked in native/ONNX Runtime.",
+    "No production profile/model changes; exported weights remain ignored local outputs."
+  ]
+}
