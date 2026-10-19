@@ -83,4 +83,6 @@ Release tooling needs Node **24.15+**. CI separately checks stable, MSRV and cov
 
 Submit changes through pull requests; `main` requires the aggregate **Success** check. It passes only when every required CI job succeeds, and also gates release publication. Pull requests can be stacked against an earlier branch and retargeted after its parent merges.
 
+The [dependency update policy](dependency-updates.md) explains the Python/RTen compatibility boundaries and the frozen export runner excluded from automated updates.
+
 Rust code is MIT licensed. Downloaded model weights, open fonts, and card imagery retain their separate licenses and attribution. Magic: The Gathering is owned by Wizards of the Coast. This project is independent; sample card text/images are not covered by this project's code license. See [model provenance](models.md) and each gallery source link.

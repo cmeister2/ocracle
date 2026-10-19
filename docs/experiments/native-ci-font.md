@@ -21,4 +21,6 @@ trainer, renderer, source binding, golden font hash or report is changed.
 ```sh
 python3 -m unittest discover -s scripts -p 'test_bootstrap_native_font.py'
 python3 scripts/bootstrap_native_font.py --destination /tmp/ocracle-native-font
+sudo install -D -m 0644 /tmp/ocracle-native-font/DejaVuSerif-Italic.ttf /usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf
+sudo install -D -m 0644 /tmp/ocracle-native-font/copyright /usr/local/share/doc/ocracle-native-font/copyright
 ```

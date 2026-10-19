@@ -5,8 +5,26 @@
     {
       "description": "Keep the ML runtime aligned with its CPython 3.12 wheel locks; validate dependency support before changing Python minor versions.",
       "matchManagers": ["github-actions"],
-      "matchPackageNames": ["python"],
+      "matchPackageNames": ["actions/python-versions"],
       "allowedVersions": "3.12.x"
+    },
+    {
+      "description": "Ocrs 0.13 exposes RTen 0.26 types; upgrade this family together after Ocrs supports a newer RTen minor.",
+      "matchManagers": ["cargo"],
+      "matchFileNames": ["Cargo.toml"],
+      "matchPackageNames": ["rten", "rten-imageproc", "rten-tensor"],
+      "allowedVersions": "<0.27.0"
     }
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**",
+    "training/experimental_paddle/runner/**"
   ]
 }
