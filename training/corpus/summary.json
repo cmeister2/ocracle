@@ -1,0 +1,31 @@
+{
+  "prints": 126,
+  "card_identities": 120,
+  "lines": 6902,
+  "real_scan_lines": 230,
+  "real_scan_italic_lines": 74,
+  "splits": {
+    "train": 5067,
+    "test": 711,
+    "validation": 1124
+  },
+  "real_scan_splits": {
+    "test": 15,
+    "train": 179,
+    "validation": 36
+  },
+  "real_scan_cohorts": {
+    "lea": 7,
+    "7ed": 39,
+    "8ed": 30,
+    "tsp": 32,
+    "m15": 43,
+    "m21": 49,
+    "fut": 10,
+    "plc": 10,
+    "mp2": 10
+  },
+  "manifest_sha256": "195f0f908b93b356b761eec70062db8e2ffd93504be83e8e840de2016c4b635a",
+  "real_line_selection": "Original6set title/body crops are baseline-exact-filtered; fut/plc/mp2 special titles are unfiltered and manually bounded. Report sources separately.",
+  "images_sha256": "d31f368577b0c733270225fb7bac896e68d50f6e08ba5722cb7dd00274b11509"
+}

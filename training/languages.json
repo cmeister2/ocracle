@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "inventory_version": "2026-10-19",
+  "purpose": "Sourced implementation and evaluation backlog; this inventory does not enable language support.",
+  "all_printed_languages_complete": false,
+  "scope": {
+    "primary": "Every verified previously printed main-text language except the explicit Phyrexian stretch goal.",
+    "stretch": [
+      "ph"
+    ],
+    "watch": [
+      "tlh"
+    ],
+    "routing": "One main-text profile per card; shared Latin collector and artist metadata can use a shared recognition path.",
+    "catalogue_caveat": "Scryfall documents some unofficial languages and incomplete older-language data. Catalogue counts are dated database observations, not a complete census of physical print runs."
+  },
+  "sources": {
+    "scryfall_languages": "https://scryfall.com/docs/api/languages",
+    "scryfall_cards": "https://scryfall.com/docs/api/cards",
+    "tengwar_languages": "https://magic.wizards.com/en/news/announcements/a-first-look-at-the-lord-of-the-rings-tales-of-middle-earth",
+    "dwarvish": "https://magic.wizards.com/en/news/feature/collecting-the-hobbit",
+    "phyrexian_prints": "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
+    "phyrexian_alphabet": "https://magic.wizards.com/en/news/feature/a-breakthrough-in-phyrexian-language-and-communications",
+    "japanese_vertical": "https://magic.wizards.com/en/news/feature/collecting-strixhaven-school-mages-2021-03-25"
+  },
+  "scryfall_language_page_sha256": "c694a80d8cd7dae9c0e99d4e74bf1935dc2769ed47003cd4be83089786fd8d8f",
+  "scryfall_codes": [
+    {
+      "code": "en",
+      "printed_code": "en",
+      "name": "English",
+      "catalogued_prints_observed": 116248
+    },
+    {
+      "code": "es",
+      "printed_code": "sp",
+      "name": "Spanish",
+      "catalogued_prints_observed": 53996
+    },
+    {
+      "code": "fr",
+      "printed_code": "fr",
+      "name": "French",
+      "catalogued_prints_observed": 59506
+    },
+    {
+      "code": "de",
+      "printed_code": "de",
+      "name": "German",
+      "catalogued_prints_observed": 59171
+    },
+    {
+      "code": "it",
+      "printed_code": "it",
+      "name": "Italian",
+      "catalogued_prints_observed": 53375
+    },
+    {
+      "code": "pt",
+      "printed_code": "pt",
+      "name": "Portuguese",
+      "catalogued_prints_observed": 39593
+    },
+    {
+      "code": "ja",
+      "printed_code": "jp",
+      "name": "Japanese",
+      "catalogued_prints_observed": 62853
+    },
+    {
+      "code": "ko",
+      "printed_code": "kr",
+      "name": "Korean",
+      "catalogued_prints_observed": 15383
+    },
+    {
+      "code": "ru",
+      "printed_code": "ru",
+      "name": "Russian",
+      "catalogued_prints_observed": 21761
+    },
+    {
+      "code": "zhs",
+      "printed_code": "cs",
+      "name": "Simplified Chinese",
+      "catalogued_prints_observed": 40870
+    },
+    {
+      "code": "zht",
+      "printed_code": "ct",
+      "name": "Traditional Chinese",
+      "catalogued_prints_observed": 23582
+    },
+    {
+      "code": "he",
+      "printed_code": null,
+      "name": "Hebrew",
+      "catalogued_prints_observed": 1
+    },
+    {
+      "code": "la",
+      "printed_code": null,
+      "name": "Latin",
+      "catalogued_prints_observed": 1
+    },
+    {
+      "code": "grc",
+      "printed_code": "ag",
+      "name": "Ancient Greek",
+      "catalogued_prints_observed": 3
+    },
+    {
+      "code": "ar",
+      "printed_code": null,
+      "name": "Arabic",
+      "catalogued_prints_observed": 1
+    },
+    {
+      "code": "sa",
+      "printed_code": null,
+      "name": "Sanskrit",
+      "catalogued_prints_observed": 1
+    },
+    {
+      "code": "ph",
+      "printed_code": "ph",
+      "name": "Phyrexian",
+      "catalogued_prints_observed": 49
+    },
+    {
+      "code": "qya",
+      "printed_code": null,
+      "name": "Quenya",
+      "catalogued_prints_observed": 7
+    },
+    {
+      "code": "dw",
+      "printed_code": "dw",
+      "name": "Dwarvish",
+      "catalogued_prints_observed": 5
+    },
+    {
+      "code": "tlh",
+      "printed_code": "kl",
+      "name": "Klingon",
+      "catalogued_prints_observed": 0
+    }
+  ],
+  "profiles": [
+    {
+      "id": "en",
+      "language": "English",
+      "scryfall_codes": [
+        "en"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "experimental_english_checkpoint",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "309d95ad-e46c-4407-894d-d4cfdc7017f8",
+        "name": "Mayael the Anima",
+        "set": "c13",
+        "collector_number": "199",
+        "released_at": "2013-11-01",
+        "scryfall_uri": "https://scryfall.com/card/c13/199/mayael-the-anima",
+        "api_url": "https://api.scryfall.com/cards/309d95ad-e46c-4407-894d-d4cfdc7017f8",
+        "top_level_printed_fields_available": []
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "es",
+      "language": "Spanish",
+      "scryfall_codes": [
+        "es"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "f230ba19-82e9-4260-82ce-b64269d75dab",
+        "name": "Thirsting Roots",
+        "set": "one",
+        "collector_number": "185",
+        "released_at": "2023-02-10",
+        "scryfall_uri": "https://scryfall.com/card/one/185/es/ra%C3%ADces-sedientas-(thirsting-roots)",
+        "api_url": "https://api.scryfall.com/cards/f230ba19-82e9-4260-82ce-b64269d75dab",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "fr",
+      "language": "French",
+      "scryfall_codes": [
+        "fr"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "61cab69d-2bda-4e41-b53c-6be2ac71e487",
+        "name": "Plaguecrafter",
+        "set": "blc",
+        "collector_number": "187",
+        "released_at": "2024-08-02",
+        "scryfall_uri": "https://scryfall.com/card/blc/187/fr/fa%C3%A7onneur-de-peste-(plaguecrafter)",
+        "api_url": "https://api.scryfall.com/cards/61cab69d-2bda-4e41-b53c-6be2ac71e487",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "de",
+      "language": "German",
+      "scryfall_codes": [
+        "de"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "2afd01f1-d191-4b20-b0d5-f423fe3e46bf",
+        "name": "Metalworker",
+        "set": "uds",
+        "collector_number": "135",
+        "released_at": "1999-06-07",
+        "scryfall_uri": "https://scryfall.com/card/uds/135/de/metallarbeiter-(metalworker)",
+        "api_url": "https://api.scryfall.com/cards/2afd01f1-d191-4b20-b0d5-f423fe3e46bf",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "it",
+      "language": "Italian",
+      "scryfall_codes": [
+        "it"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "5ebf3d7c-fb82-487e-aca9-f78c917e054c",
+        "name": "Wirewood Elf",
+        "set": "ons",
+        "collector_number": "301",
+        "released_at": "2002-10-07",
+        "scryfall_uri": "https://scryfall.com/card/ons/301/it/elfo-di-boscocavo-(wirewood-elf)",
+        "api_url": "https://api.scryfall.com/cards/5ebf3d7c-fb82-487e-aca9-f78c917e054c",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "pt",
+      "language": "Portuguese",
+      "scryfall_codes": [
+        "pt"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "4dabaf1d-21b0-407d-b801-d59d9da7f26d",
+        "name": "Mausoleum Harpy",
+        "set": "rix",
+        "collector_number": "78",
+        "released_at": "2018-01-19",
+        "scryfall_uri": "https://scryfall.com/card/rix/78/pt/harpia-do-mausol%C3%A9u-(mausoleum-harpy)",
+        "api_url": "https://api.scryfall.com/cards/4dabaf1d-21b0-407d-b801-d59d9da7f26d",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "ja",
+      "language": "Japanese",
+      "scryfall_codes": [
+        "ja"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Han, Hiragana, Katakana",
+      "reading_order": "horizontal_and_vertical",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages",
+        "https://magic.wizards.com/en/news/feature/collecting-strixhaven-school-mages-2021-03-25"
+      ],
+      "example_print": {
+        "id": "bab63c03-49e2-40bc-a970-f085b9ed393b",
+        "name": "Tundra Fumarole",
+        "set": "khm",
+        "collector_number": "156",
+        "released_at": "2021-02-05",
+        "scryfall_uri": "https://scryfall.com/card/khm/156/ja/%E3%83%84%E3%83%B3%E3%83%89%E3%83%A9%E3%81%AE%E5%99%B4%E6%B0%97%E5%AD%94-(tundra-fumarole)",
+        "api_url": "https://api.scryfall.com/cards/bab63c03-49e2-40bc-a970-f085b9ed393b",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Label each field orientation and reading order; preserve kana/Han, punctuation and printed ruby when applicable."
+    },
+    {
+      "id": "ko",
+      "language": "Korean",
+      "scryfall_codes": [
+        "ko"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Hangul",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "0a70db84-ba24-483b-8917-368e4606a977",
+        "name": "Extricator of Sin // Extricator of Flesh",
+        "set": "emn",
+        "collector_number": "23",
+        "released_at": "2016-07-22",
+        "scryfall_uri": "https://scryfall.com/card/emn/23/ko/%EC%A3%84%EC%95%85%EC%9D%98-%ED%95%B4%EB%B0%A9%EC%9E%90-%EC%82%B4%EC%A0%90%EC%9D%98-%ED%95%B4%EB%B0%A9%EC%9E%90-(extricator-of-sin-extricator-of-flesh)",
+        "api_url": "https://api.scryfall.com/cards/0a70db84-ba24-483b-8917-368e4606a977",
+        "top_level_printed_fields_available": []
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "ru",
+      "language": "Russian",
+      "scryfall_codes": [
+        "ru"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Cyrillic",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "47a96e86-3bde-4fac-aea1-2238f2d5faae",
+        "name": "Pirate Ship",
+        "set": "tsb",
+        "collector_number": "28",
+        "released_at": "2006-10-06",
+        "scryfall_uri": "https://scryfall.com/card/tsb/28/ru/%D0%BF%D0%B8%D1%80%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9-%D0%BA%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D1%8C-(pirate-ship)",
+        "api_url": "https://api.scryfall.com/cards/47a96e86-3bde-4fac-aea1-2238f2d5faae",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "zhs",
+      "language": "Simplified Chinese",
+      "scryfall_codes": [
+        "zhs"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Simplified Han",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+        "name": "Pack Attack",
+        "set": "clb",
+        "collector_number": "190",
+        "released_at": "2022-06-10",
+        "scryfall_uri": "https://scryfall.com/card/clb/190/zhs/%E9%9B%86%E7%BE%A4%E6%94%BB%E5%87%BB-(pack-attack)",
+        "api_url": "https://api.scryfall.com/cards/bc588865-43e7-4f41-a002-cff30ee8dcdb",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "zht",
+      "language": "Traditional Chinese",
+      "scryfall_codes": [
+        "zht"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Traditional Han",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+        "name": "Pierce the Sky",
+        "set": "dom",
+        "collector_number": "176",
+        "released_at": "2018-04-27",
+        "scryfall_uri": "https://scryfall.com/card/dom/176/zht/%E5%8A%83%E7%A0%B4%E8%92%BC%E7%A9%B9-(pierce-the-sky)",
+        "api_url": "https://api.scryfall.com/cards/1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "he",
+      "language": "Hebrew",
+      "scryfall_codes": [
+        "he"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Hebrew",
+      "reading_order": "right_to_left",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "319724d5-8937-4470-a880-a65e674f7b3b",
+        "name": "Glory",
+        "set": "pjud",
+        "collector_number": "11",
+        "released_at": "2002-05-18",
+        "scryfall_uri": "https://scryfall.com/card/pjud/11/%D7%AA%D7%94%D7%99%D7%9C%D7%94-(glory)",
+        "api_url": "https://api.scryfall.com/cards/319724d5-8937-4470-a880-a65e674f7b3b",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve logical Unicode text, combining marks, and mixed-direction symbols; annotate visual order and use script-aware shaping."
+    },
+    {
+      "id": "la",
+      "language": "Latin",
+      "scryfall_codes": [
+        "la"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Latin",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+        "name": "Raging Kavu",
+        "set": "pinv",
+        "collector_number": "262",
+        "released_at": "2000-09-23",
+        "scryfall_uri": "https://scryfall.com/card/pinv/262/kavu-furens-(raging-kavu)",
+        "api_url": "https://api.scryfall.com/cards/c9c77844-742c-48cf-9c1e-954ffe781e25",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "grc",
+      "language": "Ancient Greek",
+      "scryfall_codes": [
+        "grc"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Greek with polytonic marks",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+        "name": "Cleopatra, Exiled Pharaoh",
+        "set": "acr",
+        "collector_number": "272",
+        "released_at": "2024-07-05",
+        "scryfall_uri": "https://scryfall.com/card/acr/272/%CE%BA%CE%BB%CE%B5%CE%BF%CF%80%CE%AC%CF%84%CF%81%CE%B1-%E1%BC%90%CE%BE%CF%8C%CF%81%CE%B9%CF%83%CF%84%CE%BF%CF%82-%CF%86%CE%B1%CF%81%CE%B1%CF%8E-(cleopatra-exiled-pharaoh)",
+        "api_url": "https://api.scryfall.com/cards/c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+    },
+    {
+      "id": "ar",
+      "language": "Arabic",
+      "scryfall_codes": [
+        "ar"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Arabic",
+      "reading_order": "right_to_left",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+        "name": "Stone-Tongue Basilisk",
+        "set": "pody",
+        "collector_number": "276",
+        "released_at": "2001-09-22",
+        "scryfall_uri": "https://scryfall.com/card/pody/276/%D8%A8%D8%A7%D8%B3%D9%84%D9%92-%D9%84%D9%8A%D8%B3%D9%83-%E2%80%93-%D8%A7%D9%84%D8%AD%D8%AC%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86-(stone-tongue-basilisk)",
+        "api_url": "https://api.scryfall.com/cards/8ec4eeb5-2f82-460c-8140-20587442d40b",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve logical Unicode text, combining marks, and mixed-direction symbols; annotate visual order and use script-aware shaping."
+    },
+    {
+      "id": "sa",
+      "language": "Sanskrit",
+      "scryfall_codes": [
+        "sa"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Devanagari",
+      "reading_order": "left_to_right",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "example_print": {
+        "id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+        "name": "Fungal Shambler",
+        "set": "papc",
+        "collector_number": "100",
+        "released_at": "2001-05-26",
+        "scryfall_uri": "https://scryfall.com/card/papc/100/%E0%A4%AB%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A5%8D%E0%A4%B6%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A4%B0%E0%A5%8D-(fungal-shambler)",
+        "api_url": "https://api.scryfall.com/cards/1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Preserve vowel signs and conjuncts; use Devanagari shaping and non-lossy labels."
+    },
+    {
+      "id": "ph",
+      "language": "Phyrexian",
+      "scryfall_codes": [
+        "ph"
+      ],
+      "priority": "stretch",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Phyrexian glyphs",
+      "reading_order": "requires_print_layout_review",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages",
+        "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
+        "https://magic.wizards.com/en/news/feature/a-breakthrough-in-phyrexian-language-and-communications"
+      ],
+      "example_print": {
+        "id": "dd4b4019-b73d-4be3-991e-2deb811ee675",
+        "name": "Vorinclex, Monstrous Raider",
+        "set": "khm",
+        "collector_number": "333",
+        "released_at": "2021-02-05",
+        "scryfall_uri": "https://scryfall.com/card/khm/333/vorinclex-monstrous-raider",
+        "api_url": "https://api.scryfall.com/cards/dd4b4019-b73d-4be3-991e-2deb811ee675",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Optional stretch. Version the glyph/font encoding or explicit transliteration; existing ASCII-looking printed fields are not English."
+    },
+    {
+      "id": "qya",
+      "language": "Quenya",
+      "scryfall_codes": [
+        "qya"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Tengwar letterforms",
+      "reading_order": "requires_print_layout_review",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages",
+        "https://magic.wizards.com/en/news/announcements/a-first-look-at-the-lord-of-the-rings-tales-of-middle-earth"
+      ],
+      "example_print": {
+        "id": "7a8db21f-722b-4a07-985b-8d25a0b0006a",
+        "name": "Sol Ring",
+        "set": "ltc",
+        "collector_number": "408",
+        "released_at": "2023-06-23",
+        "scryfall_uri": "https://scryfall.com/card/ltc/408/sol-ring",
+        "api_url": "https://api.scryfall.com/cards/7a8db21f-722b-4a07-985b-8d25a0b0006a",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "exclude_print_ids": [
+        "93de9042-cc62-4ade-8d8d-68fdbc84bfae"
+      ],
+      "transcription_requirement": "Freeze the observed Scryfall private-use glyph mapping and a compatible display font; retain transliteration separately."
+    },
+    {
+      "id": "dw",
+      "language": "Dwarvish",
+      "scryfall_codes": [
+        "dw"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_example_verified",
+      "script": "Dwarvish letterforms; exact script mapping unverified",
+      "reading_order": "requires_print_layout_review",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages",
+        "https://magic.wizards.com/en/news/feature/collecting-the-hobbit"
+      ],
+      "example_print": {
+        "id": "b89bcdd8-189e-41bb-bb3d-a53e6e6758e1",
+        "name": "Mox Amber",
+        "set": "hoc",
+        "collector_number": "96",
+        "released_at": "2026-08-14",
+        "scryfall_uri": "https://scryfall.com/card/hoc/96/mox-amber",
+        "api_url": "https://api.scryfall.com/cards/b89bcdd8-189e-41bb-bb3d-a53e6e6758e1",
+        "top_level_printed_fields_available": []
+      },
+      "transcription_requirement": "Observed printed_* fields are absent. Obtain reviewed printed glyph labels and mapping; never use English Oracle text as a replacement."
+    },
+    {
+      "id": "tlh",
+      "language": "Klingon",
+      "scryfall_codes": [
+        "tlh"
+      ],
+      "priority": "watch",
+      "printed_attestation": "catalogue_code_only_no_print_observed",
+      "script": "Unverified for printed Magic cards",
+      "reading_order": "unverified",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "sources": [
+        "https://scryfall.com/docs/api/languages"
+      ],
+      "transcription_requirement": "Watch for actual printed-card evidence before promoting into the all-previously-printed requirement."
+    },
+    {
+      "id": "black_speech",
+      "language": "Black Speech",
+      "scryfall_codes": [
+        "qya"
+      ],
+      "priority": "primary",
+      "printed_attestation": "paper_card_verified_by_wizards_and_scryfall",
+      "script": "Tengwar letterforms",
+      "reading_order": "requires_print_layout_review",
+      "capability_status": "not_trained_or_verified",
+      "comprehensive_coverage_verified": false,
+      "include_print_ids": [
+        "93de9042-cc62-4ade-8d8d-68fdbc84bfae"
+      ],
+      "example_print": {
+        "id": "93de9042-cc62-4ade-8d8d-68fdbc84bfae",
+        "name": "The One Ring",
+        "set": "ltr",
+        "collector_number": "0",
+        "scryfall_uri": "https://scryfall.com/card/ltr/0/the-one-ring",
+        "api_url": "https://api.scryfall.com/cards/93de9042-cc62-4ade-8d8d-68fdbc84bfae",
+        "released_at": "2023-06-23",
+        "top_level_printed_fields_available": [
+          "printed_name",
+          "printed_type_line",
+          "printed_text"
+        ]
+      },
+      "transcription_requirement": "Distinct language profile despite shared qya catalogue code. Preserve the versioned glyph mapping; translation is separate from recognition.",
+      "sources": [
+        "https://magic.wizards.com/en/news/announcements/a-first-look-at-the-lord-of-the-rings-tales-of-middle-earth",
+        "https://api.scryfall.com/cards/93de9042-cc62-4ade-8d8d-68fdbc84bfae"
+      ]
+    }
+  ],
+  "transcription_contract": {
+    "status": "proposed_not_implemented_for_all_profiles",
+    "source": "Printed card pixels and reviewed printed_* fields on cards and card_faces; English Oracle text is not printed-language ground truth.",
+    "normalization": "Preserve source text; NFC evaluation by default. Any presentation-form, private-use or compatibility mapping must be explicit and versioned. Do not apply English ASCII folding.",
+    "fields": "Keep main title, type, rules, reminder, flavor and footer regions distinct; retain original-pixel bounds and field orientations.",
+    "symbols": "Use a versioned shared token mapping for mana, tap and other symbols without translating surrounding text.",
+    "direction": "Keep logical transcription and visual reading-order metadata separately; Arabic/Hebrew shaping and Japanese vertical fields need matching training/inference transforms.",
+    "fictional_scripts": "Freeze glyph-to-token and font-encoding mappings; expose transliteration or translation as separate fields.",
+    "evaluation": "Hold out complete card identities/print families, report each profile and text role separately at clean and multiple blur levels; mark missing labels/evidence explicitly."
+  }
+}

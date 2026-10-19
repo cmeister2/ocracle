@@ -1,0 +1,10 @@
+{
+  "alphabet": " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\u20acABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  "input_height": 64,
+  "model_name": "ocracle-mtg-en-v1",
+  "normalization": "pixel / 255 - 0.5",
+  "output_layout": "TNC",
+  "blank_index": 0,
+  "confidence": "geometric mean of selected CTC character probabilities; uncalibrated",
+  "language": "en"
+}

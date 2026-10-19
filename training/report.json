@@ -1,0 +1,2054 @@
+{
+  "architecture": "CRNN: convolutional visual features, 2-layer bidirectional GRU, CTC",
+  "checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+  "seed": 191993,
+  "steps": 360,
+  "batch_size": 4,
+  "learning_rate": 3e-05,
+  "threads": 4,
+  "elapsed_training_seconds": 272,
+  "evaluation_normalization": "Strip leading/trailing whitespace for primary metrics; raw-untrimmed group also recorded.",
+  "real_scan_sampling_probability": 0.25,
+  "training_real_scan_lines": 179,
+  "training_lines": 5067,
+  "training_card_identities": 87,
+  "validation_lines_available": 1124,
+  "test_lines_available": 711,
+  "eval_unique_line_limit": 96,
+  "loss_history": [
+    0.1053256094455719,
+    0.07668840885162354,
+    0.15420007705688477,
+    0.24514375627040863,
+    0.07774415612220764,
+    0.07132058590650558,
+    0.43488746881484985,
+    0.11266405880451202,
+    0.04794686660170555,
+    0.08872100710868835,
+    0.10395531356334686,
+    0.15822181105613708,
+    0.13422085344791412,
+    0.06172914430499077,
+    0.18019379675388336,
+    0.1359163522720337,
+    0.07070379704236984,
+    0.10139582306146622,
+    0.13801242411136627,
+    0.3097667098045349,
+    0.06508981436491013,
+    0.0191494207829237,
+    0.22418497502803802,
+    0.068832166492939,
+    0.0934515967965126,
+    0.04910791292786598,
+    0.030390378087759018,
+    0.14060468971729279,
+    0.027035482227802277,
+    0.08265028148889542,
+    0.02889840677380562,
+    0.2136383354663849,
+    0.015409241430461407,
+    0.13225647807121277,
+    0.15881583094596863,
+    0.07223940640687943,
+    0.10166917741298676,
+    0.12890519201755524,
+    0.052938543260097504,
+    0.20214320719242096,
+    0.12079016864299774,
+    0.020921988412737846,
+    0.033563971519470215,
+    0.3742561936378479,
+    0.13992416858673096,
+    0.18233385682106018,
+    0.037914179265499115,
+    0.125396728515625,
+    0.09790802001953125,
+    0.0404026098549366,
+    0.02312064729630947,
+    0.10392355173826218,
+    0.20061084628105164,
+    0.10266926884651184,
+    0.12798872590065002,
+    0.10377448797225952,
+    0.07614995539188385,
+    0.016240056604146957,
+    0.05097968876361847,
+    0.06702418625354767,
+    0.01906202919781208,
+    0.044392772018909454,
+    0.06794487684965134,
+    0.02602558210492134,
+    0.03976235166192055,
+    0.24558021128177643,
+    0.18835847079753876,
+    0.04127531498670578,
+    0.14444147050380707,
+    0.10756757855415344,
+    0.5687488913536072,
+    0.02679561823606491,
+    0.1006954163312912,
+    0.06957409530878067,
+    0.274763822555542,
+    0.20189835131168365,
+    0.01754787005484104,
+    0.0786256194114685,
+    0.06638263911008835,
+    0.4979066550731659,
+    0.05297299101948738,
+    0.0242895670235157,
+    0.06292618811130524,
+    0.748845636844635,
+    0.09314246475696564,
+    0.05406736582517624,
+    0.08817773312330246,
+    0.21114252507686615,
+    0.013367715291678905,
+    0.19691678881645203,
+    0.7267362475395203,
+    0.2406887412071228,
+    0.053153593093156815,
+    0.06314744055271149,
+    0.13454270362854004,
+    0.19258294999599457,
+    0.02108011581003666,
+    0.017380502074956894,
+    0.11177441477775574,
+    0.5128858089447021,
+    0.098401740193367,
+    0.05819759890437126,
+    0.07886235415935516,
+    0.13216429948806763,
+    0.19280868768692017,
+    0.06888869404792786,
+    0.022757399827241898,
+    0.019772710278630257,
+    0.07303044199943542,
+    0.10965094715356827,
+    0.09585574269294739,
+    0.08700881898403168,
+    0.015539085492491722,
+    0.06269975751638412,
+    0.054595671594142914,
+    0.025393974035978317,
+    0.035720232874155045,
+    0.10655166953802109,
+    0.09177256375551224,
+    0.05356403440237045,
+    0.2251908928155899,
+    0.10230101644992828,
+    0.02661719173192978,
+    0.02913149818778038,
+    0.08610337227582932,
+    0.032065004110336304,
+    0.11834841966629028,
+    0.010802088305354118,
+    0.10874414443969727,
+    0.16256257891654968,
+    0.10155199468135834,
+    0.02294813096523285,
+    0.22618350386619568,
+    0.06035898998379707,
+    0.016451869159936905,
+    0.0491769053041935,
+    0.04955577477812767,
+    0.4972861409187317,
+    0.019051361829042435,
+    0.15039801597595215,
+    0.020155232399702072,
+    0.008171865716576576,
+    0.40116989612579346,
+    0.07008764147758484,
+    0.07525324076414108,
+    0.04020386561751366,
+    0.016496578231453896,
+    0.07123642414808273,
+    0.0596681609749794,
+    0.0370044931769371,
+    0.08811114728450775,
+    0.08469289541244507,
+    0.074153833091259,
+    0.15545852482318878,
+    0.019466476514935493,
+    0.06987468153238297,
+    0.016274914145469666,
+    0.09979753941297531,
+    0.03041677176952362,
+    0.029041403904557228,
+    0.1685919165611267,
+    0.1233331561088562,
+    0.07293806225061417,
+    0.011730559170246124,
+    0.589421272277832,
+    0.03556497395038605,
+    0.040365248918533325,
+    0.02438715286552906,
+    0.019022544845938683,
+    0.05127732455730438,
+    0.022686339914798737,
+    0.03225290775299072,
+    0.03975587338209152,
+    0.21477238833904266,
+    0.02894815057516098,
+    0.033673763275146484,
+    0.025482214987277985,
+    0.22445493936538696,
+    0.014886257238686085,
+    0.006953769363462925,
+    0.22347590327262878,
+    0.0237470343708992,
+    0.23314169049263,
+    0.054894208908081055,
+    0.21441595256328583,
+    0.011955072171986103,
+    0.023805802688002586,
+    0.1394280195236206,
+    0.013678062707185745,
+    0.03267849236726761,
+    0.013832326978445053,
+    0.0082047488540411,
+    0.16535332798957825,
+    0.0323992483317852,
+    0.02374737337231636,
+    0.007977066561579704,
+    0.13312417268753052,
+    0.07839955389499664,
+    0.004253373946994543,
+    0.04055134952068329,
+    0.6781770586967468,
+    0.03143453598022461,
+    0.07747640460729599,
+    0.056776102632284164,
+    0.022322895005345345,
+    0.027541864663362503,
+    0.07311166822910309,
+    0.030907412990927696,
+    0.04369466006755829,
+    0.04107614979147911,
+    0.10878947377204895,
+    0.042444102466106415,
+    0.5772181153297424,
+    0.027974747121334076,
+    0.034129202365875244,
+    0.048100464046001434,
+    0.008714424446225166,
+    0.022004179656505585,
+    0.06349150836467743,
+    0.05169451981782913,
+    0.024517115205526352,
+    0.01753874123096466,
+    0.09081245958805084,
+    0.061997946351766586,
+    0.12411240488290787,
+    0.12005733698606491,
+    0.02448531985282898,
+    0.019530288875102997,
+    0.989334762096405,
+    0.054193735122680664,
+    0.01086809765547514,
+    0.010558657348155975,
+    0.04389052093029022,
+    0.06842581927776337,
+    0.13897982239723206,
+    0.12406518310308456,
+    0.011595837771892548,
+    0.06180553883314133,
+    0.06526044756174088,
+    0.0378892682492733,
+    0.06991766393184662,
+    0.20047442615032196,
+    0.02430891990661621,
+    0.059389546513557434,
+    0.08820927888154984,
+    0.10262588411569595,
+    0.02958284690976143,
+    0.04197726398706436,
+    0.032685671001672745,
+    0.01161680743098259,
+    0.17674028873443604,
+    0.09934870898723602,
+    0.05215000733733177,
+    0.06972301006317139,
+    0.027801986783742905,
+    0.00471196323633194,
+    0.01449887827038765,
+    0.03611217066645622,
+    0.012141752056777477,
+    0.028128406032919884,
+    0.007838591933250427,
+    0.11717990040779114,
+    0.008116869255900383,
+    0.0182794202119112,
+    0.07525954395532608,
+    0.019496824592351913,
+    0.01138974167406559,
+    0.021825360134243965,
+    0.030356988310813904,
+    0.009578277356922626,
+    0.04472893476486206,
+    0.00430267583578825,
+    0.05554402619600296,
+    0.024779144674539566,
+    0.0062102521769702435,
+    0.20732221007347107,
+    0.4788113832473755,
+    0.03229493647813797,
+    0.07833456993103027,
+    0.023942559957504272,
+    0.026439925655722618,
+    0.14569129049777985,
+    0.17784714698791504,
+    0.031086845323443413,
+    0.00753234326839447,
+    0.1334225833415985,
+    0.03588509559631348,
+    0.034556157886981964,
+    0.401851087808609,
+    0.02832946367561817,
+    1.2185635566711426,
+    0.027371931821107864,
+    0.01876182295382023,
+    0.010849219746887684,
+    0.02417278289794922,
+    0.004932991228997707,
+    0.04511429741978645,
+    0.004223356954753399,
+    0.025162192061543465,
+    0.022434018552303314,
+    0.04593738168478012,
+    0.06610019505023956,
+    0.05772683769464493,
+    0.04223913699388504,
+    0.11951891332864761,
+    0.06563044339418411,
+    0.00795678049325943,
+    0.02327517233788967,
+    0.006744910962879658,
+    0.0031051747500896454,
+    0.02639191970229149,
+    0.15683604776859283,
+    0.12984982132911682,
+    0.017068708315491676,
+    0.057837776839733124,
+    0.030712300911545753,
+    0.014134431257843971,
+    0.3588419556617737,
+    0.0188265573233366,
+    0.2723182439804077,
+    0.03566558659076691,
+    0.12515828013420105,
+    0.013456596992909908,
+    0.07156375050544739,
+    0.006687738001346588,
+    0.05778583511710167,
+    0.04495667293667793,
+    0.0664181187748909,
+    0.016582198441028595,
+    0.00945646408945322,
+    0.09784550964832306,
+    0.026029910892248154,
+    0.07163890451192856,
+    0.009696035645902157,
+    0.044525712728500366,
+    0.0026784250512719154,
+    0.010043571703135967,
+    0.034836988896131516,
+    0.007786643225699663,
+    0.24129287898540497,
+    0.022970447316765785,
+    0.0241234228014946,
+    0.011361267417669296,
+    0.02712494507431984,
+    0.020853588357567787,
+    0.07182363420724869,
+    0.0038584868889302015,
+    0.04190206527709961,
+    0.015642892569303513,
+    0.3606111407279968,
+    0.0342961922287941,
+    0.027612803503870964,
+    0.02500864304602146,
+    0.02999960072338581,
+    0.04049159213900566,
+    0.04891425371170044,
+    0.01682688668370247,
+    0.027190638706088066,
+    0.4100154936313629,
+    0.009105679579079151
+  ],
+  "baseline_validation": {
+    "card_identities": 19,
+    "unique_lines": 96,
+    "degradations_per_line": 7,
+    "groups": {
+      "raw-untrimmed": {
+        "lines": 672,
+        "characters": 20244,
+        "character_errors": 1112,
+        "exact_lines": 18,
+        "cer": 0.05492985575973128,
+        "exact_line_accuracy": 0.026785714285714284
+      },
+      "overall": {
+        "lines": 672,
+        "characters": 20244,
+        "character_errors": 484,
+        "exact_lines": 457,
+        "cer": 0.02390831851412764,
+        "exact_line_accuracy": 0.6800595238095238
+      },
+      "severity:clean": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 34,
+        "exact_lines": 76,
+        "cer": 0.011756569847856155,
+        "exact_line_accuracy": 0.7916666666666666
+      },
+      "style:italic": {
+        "lines": 329,
+        "characters": 10885,
+        "character_errors": 284,
+        "exact_lines": 212,
+        "cer": 0.026090950849793293,
+        "exact_line_accuracy": 0.6443768996960486
+      },
+      "font:printed-tsp-body": {
+        "lines": 42,
+        "characters": 1547,
+        "character_errors": 71,
+        "exact_lines": 18,
+        "cer": 0.04589528118939883,
+        "exact_line_accuracy": 0.42857142857142855
+      },
+      "source:real-scan": {
+        "lines": 224,
+        "characters": 6006,
+        "character_errors": 172,
+        "exact_lines": 151,
+        "cer": 0.02863802863802864,
+        "exact_line_accuracy": 0.6741071428571429
+      },
+      "style:regular": {
+        "lines": 343,
+        "characters": 9359,
+        "character_errors": 200,
+        "exact_lines": 245,
+        "cer": 0.021369804466289135,
+        "exact_line_accuracy": 0.7142857142857143
+      },
+      "font:printed-8ed-body": {
+        "lines": 42,
+        "characters": 1225,
+        "character_errors": 25,
+        "exact_lines": 27,
+        "cer": 0.02040816326530612,
+        "exact_line_accuracy": 0.6428571428571429
+      },
+      "font:printed-lea-title": {
+        "lines": 7,
+        "characters": 28,
+        "character_errors": 5,
+        "exact_lines": 4,
+        "cer": 0.17857142857142858,
+        "exact_line_accuracy": 0.5714285714285714
+      },
+      "font:printed-m15-body": {
+        "lines": 56,
+        "characters": 2142,
+        "character_errors": 41,
+        "exact_lines": 41,
+        "cer": 0.019140989729225025,
+        "exact_line_accuracy": 0.7321428571428571
+      },
+      "font:printed-fut-special-title": {
+        "lines": 14,
+        "characters": 224,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-8ed-title": {
+        "lines": 7,
+        "characters": 35,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-m21-body": {
+        "lines": 14,
+        "characters": 343,
+        "character_errors": 2,
+        "exact_lines": 13,
+        "cer": 0.0058309037900874635,
+        "exact_line_accuracy": 0.9285714285714286
+      },
+      "font:printed-mp2-special-title": {
+        "lines": 14,
+        "characters": 140,
+        "character_errors": 27,
+        "exact_lines": 0,
+        "cer": 0.19285714285714287,
+        "exact_line_accuracy": 0.0
+      },
+      "font:printed-m21-title": {
+        "lines": 7,
+        "characters": 119,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-m15-title": {
+        "lines": 7,
+        "characters": 56,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-7ed-title": {
+        "lines": 7,
+        "characters": 63,
+        "character_errors": 1,
+        "exact_lines": 6,
+        "cer": 0.015873015873015872,
+        "exact_line_accuracy": 0.8571428571428571
+      },
+      "font:printed-plc-special-title": {
+        "lines": 7,
+        "characters": 84,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:P052-Roman.otf": {
+        "lines": 77,
+        "characters": 2408,
+        "character_errors": 45,
+        "exact_lines": 53,
+        "cer": 0.018687707641196014,
+        "exact_line_accuracy": 0.6883116883116883
+      },
+      "source:synthetic": {
+        "lines": 448,
+        "characters": 14238,
+        "character_errors": 312,
+        "exact_lines": 306,
+        "cer": 0.021913190054782976,
+        "exact_line_accuracy": 0.6830357142857143
+      },
+      "font:P052-Italic.otf": {
+        "lines": 70,
+        "characters": 2023,
+        "character_errors": 42,
+        "exact_lines": 57,
+        "cer": 0.020761245674740483,
+        "exact_line_accuracy": 0.8142857142857143
+      },
+      "font:URWBookman-LightItalic.otf": {
+        "lines": 70,
+        "characters": 2408,
+        "character_errors": 73,
+        "exact_lines": 35,
+        "cer": 0.0303156146179402,
+        "exact_line_accuracy": 0.5
+      },
+      "font:NimbusRoman-Regular.otf": {
+        "lines": 70,
+        "characters": 1981,
+        "character_errors": 70,
+        "exact_lines": 43,
+        "cer": 0.0353356890459364,
+        "exact_line_accuracy": 0.6142857142857143
+      },
+      "font:NimbusSans-Italic.otf": {
+        "lines": 49,
+        "characters": 1540,
+        "character_errors": 45,
+        "exact_lines": 29,
+        "cer": 0.02922077922077922,
+        "exact_line_accuracy": 0.5918367346938775
+      },
+      "font:URWBookman-Light.otf": {
+        "lines": 42,
+        "characters": 1449,
+        "character_errors": 19,
+        "exact_lines": 31,
+        "cer": 0.013112491373360938,
+        "exact_line_accuracy": 0.7380952380952381
+      },
+      "font:NimbusSans-Regular.otf": {
+        "lines": 28,
+        "characters": 966,
+        "character_errors": 6,
+        "exact_lines": 25,
+        "cer": 0.006211180124223602,
+        "exact_line_accuracy": 0.8928571428571429
+      },
+      "font:NimbusRoman-Italic.otf": {
+        "lines": 42,
+        "characters": 1463,
+        "character_errors": 12,
+        "exact_lines": 33,
+        "cer": 0.008202323991797676,
+        "exact_line_accuracy": 0.7857142857142857
+      },
+      "severity:gaussian": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 31,
+        "exact_lines": 76,
+        "cer": 0.010719225449515906,
+        "exact_line_accuracy": 0.7916666666666666
+      },
+      "severity:severe": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 122,
+        "exact_lines": 54,
+        "cer": 0.042185338865836794,
+        "exact_line_accuracy": 0.5625
+      },
+      "severity:motion": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 97,
+        "exact_lines": 53,
+        "cer": 0.03354080221300138,
+        "exact_line_accuracy": 0.5520833333333334
+      },
+      "severity:downsample": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 75,
+        "exact_lines": 62,
+        "cer": 0.025933609958506226,
+        "exact_line_accuracy": 0.6458333333333334
+      },
+      "severity:jpeg": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 37,
+        "exact_lines": 73,
+        "cer": 0.012793914246196404,
+        "exact_line_accuracy": 0.7604166666666666
+      },
+      "severity:combined": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 88,
+        "exact_lines": 63,
+        "cer": 0.030428769017980636,
+        "exact_line_accuracy": 0.65625
+      }
+    },
+    "examples": [
+      {
+        "severity": "clean",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "clean",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "clean",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "severe",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a slioer of this breed enters the hivw, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "severe",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "severe",
+        "target": "Fork",
+        "prediction": "Forke",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "motion",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "motion",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "motion",
+        "target": "Fork",
+        "prediction": "EoT",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "Whes a shir of this bveed enters the hits, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Fork",
+        "prediction": "Forke",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "combined",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "Whes a r of this bveed enters the hits, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "combined",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don\"?t untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "combined",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      }
+    ]
+  },
+  "fine_tuned_validation": {
+    "card_identities": 19,
+    "unique_lines": 96,
+    "degradations_per_line": 7,
+    "groups": {
+      "raw-untrimmed": {
+        "lines": 672,
+        "characters": 20244,
+        "character_errors": 432,
+        "exact_lines": 418,
+        "cer": 0.02133965619442798,
+        "exact_line_accuracy": 0.6220238095238095
+      },
+      "overall": {
+        "lines": 672,
+        "characters": 20244,
+        "character_errors": 307,
+        "exact_lines": 526,
+        "cer": 0.015164987156688401,
+        "exact_line_accuracy": 0.7827380952380952
+      },
+      "severity:clean": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 15,
+        "exact_lines": 86,
+        "cer": 0.005186721991701245,
+        "exact_line_accuracy": 0.8958333333333334
+      },
+      "style:italic": {
+        "lines": 329,
+        "characters": 10885,
+        "character_errors": 188,
+        "exact_lines": 237,
+        "cer": 0.017271474506201194,
+        "exact_line_accuracy": 0.7203647416413373
+      },
+      "font:printed-tsp-body": {
+        "lines": 42,
+        "characters": 1547,
+        "character_errors": 52,
+        "exact_lines": 22,
+        "cer": 0.03361344537815126,
+        "exact_line_accuracy": 0.5238095238095238
+      },
+      "source:real-scan": {
+        "lines": 224,
+        "characters": 6006,
+        "character_errors": 155,
+        "exact_lines": 158,
+        "cer": 0.025807525807525808,
+        "exact_line_accuracy": 0.7053571428571429
+      },
+      "style:regular": {
+        "lines": 343,
+        "characters": 9359,
+        "character_errors": 119,
+        "exact_lines": 289,
+        "cer": 0.012715033657442034,
+        "exact_line_accuracy": 0.8425655976676385
+      },
+      "font:printed-8ed-body": {
+        "lines": 42,
+        "characters": 1225,
+        "character_errors": 16,
+        "exact_lines": 28,
+        "cer": 0.013061224489795919,
+        "exact_line_accuracy": 0.6666666666666666
+      },
+      "font:printed-lea-title": {
+        "lines": 7,
+        "characters": 28,
+        "character_errors": 8,
+        "exact_lines": 5,
+        "cer": 0.2857142857142857,
+        "exact_line_accuracy": 0.7142857142857143
+      },
+      "font:printed-m15-body": {
+        "lines": 56,
+        "characters": 2142,
+        "character_errors": 29,
+        "exact_lines": 45,
+        "cer": 0.01353874883286648,
+        "exact_line_accuracy": 0.8035714285714286
+      },
+      "font:printed-fut-special-title": {
+        "lines": 14,
+        "characters": 224,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-8ed-title": {
+        "lines": 7,
+        "characters": 35,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-m21-body": {
+        "lines": 14,
+        "characters": 343,
+        "character_errors": 2,
+        "exact_lines": 13,
+        "cer": 0.0058309037900874635,
+        "exact_line_accuracy": 0.9285714285714286
+      },
+      "font:printed-mp2-special-title": {
+        "lines": 14,
+        "characters": 140,
+        "character_errors": 43,
+        "exact_lines": 0,
+        "cer": 0.30714285714285716,
+        "exact_line_accuracy": 0.0
+      },
+      "font:printed-m21-title": {
+        "lines": 7,
+        "characters": 119,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-m15-title": {
+        "lines": 7,
+        "characters": 56,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-7ed-title": {
+        "lines": 7,
+        "characters": 63,
+        "character_errors": 5,
+        "exact_lines": 3,
+        "cer": 0.07936507936507936,
+        "exact_line_accuracy": 0.42857142857142855
+      },
+      "font:printed-plc-special-title": {
+        "lines": 7,
+        "characters": 84,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:P052-Roman.otf": {
+        "lines": 77,
+        "characters": 2408,
+        "character_errors": 13,
+        "exact_lines": 67,
+        "cer": 0.005398671096345515,
+        "exact_line_accuracy": 0.8701298701298701
+      },
+      "source:synthetic": {
+        "lines": 448,
+        "characters": 14238,
+        "character_errors": 152,
+        "exact_lines": 368,
+        "cer": 0.010675656693355809,
+        "exact_line_accuracy": 0.8214285714285714
+      },
+      "font:P052-Italic.otf": {
+        "lines": 70,
+        "characters": 2023,
+        "character_errors": 37,
+        "exact_lines": 59,
+        "cer": 0.01828966880869995,
+        "exact_line_accuracy": 0.8428571428571429
+      },
+      "font:URWBookman-LightItalic.otf": {
+        "lines": 70,
+        "characters": 2408,
+        "character_errors": 39,
+        "exact_lines": 46,
+        "cer": 0.016196013289036543,
+        "exact_line_accuracy": 0.6571428571428571
+      },
+      "font:NimbusRoman-Regular.otf": {
+        "lines": 70,
+        "characters": 1981,
+        "character_errors": 31,
+        "exact_lines": 60,
+        "cer": 0.015648662291771833,
+        "exact_line_accuracy": 0.8571428571428571
+      },
+      "font:NimbusSans-Italic.otf": {
+        "lines": 49,
+        "characters": 1540,
+        "character_errors": 13,
+        "exact_lines": 39,
+        "cer": 0.008441558441558441,
+        "exact_line_accuracy": 0.7959183673469388
+      },
+      "font:URWBookman-Light.otf": {
+        "lines": 42,
+        "characters": 1449,
+        "character_errors": 5,
+        "exact_lines": 39,
+        "cer": 0.003450655624568668,
+        "exact_line_accuracy": 0.9285714285714286
+      },
+      "font:NimbusSans-Regular.otf": {
+        "lines": 28,
+        "characters": 966,
+        "character_errors": 2,
+        "exact_lines": 26,
+        "cer": 0.002070393374741201,
+        "exact_line_accuracy": 0.9285714285714286
+      },
+      "font:NimbusRoman-Italic.otf": {
+        "lines": 42,
+        "characters": 1463,
+        "character_errors": 12,
+        "exact_lines": 32,
+        "cer": 0.008202323991797676,
+        "exact_line_accuracy": 0.7619047619047619
+      },
+      "severity:gaussian": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 13,
+        "exact_lines": 88,
+        "cer": 0.004495159059474412,
+        "exact_line_accuracy": 0.9166666666666666
+      },
+      "severity:severe": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 97,
+        "exact_lines": 55,
+        "cer": 0.03354080221300138,
+        "exact_line_accuracy": 0.5729166666666666
+      },
+      "severity:motion": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 66,
+        "exact_lines": 65,
+        "cer": 0.022821576763485476,
+        "exact_line_accuracy": 0.6770833333333334
+      },
+      "severity:downsample": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 47,
+        "exact_lines": 76,
+        "cer": 0.01625172890733057,
+        "exact_line_accuracy": 0.7916666666666666
+      },
+      "severity:jpeg": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 16,
+        "exact_lines": 84,
+        "cer": 0.005532503457814661,
+        "exact_line_accuracy": 0.875
+      },
+      "severity:combined": {
+        "lines": 96,
+        "characters": 2892,
+        "character_errors": 53,
+        "exact_lines": 72,
+        "cer": 0.018326417704011066,
+        "exact_line_accuracy": 0.75
+      }
+    },
+    "examples": [
+      {
+        "severity": "clean",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "clean",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "clean",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "severe",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hite, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "severe",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "severe",
+        "target": "Fork",
+        "prediction": "B",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "motion",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "motion",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "motion",
+        "target": "Fork",
+        "prediction": "S",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "*When a sir of this bveed enters the hitw, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "When a sliver of this breed enters the hive, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      },
+      {
+        "severity": "combined",
+        "target": "When a sliver of this breed enters the hive, the",
+        "prediction": "*Whes a ir of this bveed enters the hite, the",
+        "card_name": "Fungus Sliver",
+        "font": "printed-tsp-body"
+      },
+      {
+        "severity": "combined",
+        "target": "Islands don't untap during their",
+        "prediction": "Islands don't untap during their",
+        "card_name": "Choke",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "combined",
+        "target": "Fork",
+        "prediction": "Fork",
+        "card_name": "Fork",
+        "font": "printed-lea-title"
+      }
+    ]
+  },
+  "baseline_test": {
+    "card_identities": 14,
+    "unique_lines": 96,
+    "degradations_per_line": 7,
+    "groups": {
+      "raw-untrimmed": {
+        "lines": 672,
+        "characters": 18830,
+        "character_errors": 1087,
+        "exact_lines": 26,
+        "cer": 0.05772703133297929,
+        "exact_line_accuracy": 0.03869047619047619
+      },
+      "overall": {
+        "lines": 672,
+        "characters": 18830,
+        "character_errors": 489,
+        "exact_lines": 443,
+        "cer": 0.025969198088157196,
+        "exact_line_accuracy": 0.6592261904761905
+      },
+      "severity:clean": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 31,
+        "exact_lines": 77,
+        "cer": 0.011524163568773234,
+        "exact_line_accuracy": 0.8020833333333334
+      },
+      "style:italic": {
+        "lines": 357,
+        "characters": 10927,
+        "character_errors": 304,
+        "exact_lines": 220,
+        "cer": 0.02782099386839938,
+        "exact_line_accuracy": 0.6162464985994398
+      },
+      "font:printed-8ed-body": {
+        "lines": 28,
+        "characters": 917,
+        "character_errors": 27,
+        "exact_lines": 11,
+        "cer": 0.029443838604143947,
+        "exact_line_accuracy": 0.39285714285714285
+      },
+      "source:real-scan": {
+        "lines": 105,
+        "characters": 2009,
+        "character_errors": 84,
+        "exact_lines": 67,
+        "cer": 0.041811846689895474,
+        "exact_line_accuracy": 0.638095238095238
+      },
+      "style:regular": {
+        "lines": 315,
+        "characters": 7903,
+        "character_errors": 185,
+        "exact_lines": 223,
+        "cer": 0.023408832089080095,
+        "exact_line_accuracy": 0.707936507936508
+      },
+      "font:printed-mp2-special-title": {
+        "lines": 14,
+        "characters": 175,
+        "character_errors": 49,
+        "exact_lines": 0,
+        "cer": 0.28,
+        "exact_line_accuracy": 0.0
+      },
+      "font:printed-plc-special-title": {
+        "lines": 14,
+        "characters": 175,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-fut-special-title": {
+        "lines": 14,
+        "characters": 189,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-7ed-body": {
+        "lines": 7,
+        "characters": 147,
+        "character_errors": 7,
+        "exact_lines": 1,
+        "cer": 0.047619047619047616,
+        "exact_line_accuracy": 0.14285714285714285
+      },
+      "font:printed-7ed-title": {
+        "lines": 7,
+        "characters": 112,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-8ed-title": {
+        "lines": 7,
+        "characters": 84,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-lea-title": {
+        "lines": 7,
+        "characters": 63,
+        "character_errors": 1,
+        "exact_lines": 6,
+        "cer": 0.015873015873015872,
+        "exact_line_accuracy": 0.8571428571428571
+      },
+      "font:printed-m15-title": {
+        "lines": 7,
+        "characters": 147,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:URWBookman-LightItalic.otf": {
+        "lines": 84,
+        "characters": 2401,
+        "character_errors": 53,
+        "exact_lines": 57,
+        "cer": 0.022074135776759683,
+        "exact_line_accuracy": 0.6785714285714286
+      },
+      "source:synthetic": {
+        "lines": 567,
+        "characters": 16821,
+        "character_errors": 405,
+        "exact_lines": 376,
+        "cer": 0.024077046548956663,
+        "exact_line_accuracy": 0.6631393298059964
+      },
+      "font:NimbusRoman-Regular.otf": {
+        "lines": 63,
+        "characters": 2296,
+        "character_errors": 25,
+        "exact_lines": 46,
+        "cer": 0.01088850174216028,
+        "exact_line_accuracy": 0.7301587301587301
+      },
+      "font:NimbusRoman-Italic.otf": {
+        "lines": 105,
+        "characters": 3283,
+        "character_errors": 108,
+        "exact_lines": 67,
+        "cer": 0.03289674078586659,
+        "exact_line_accuracy": 0.638095238095238
+      },
+      "font:P052-Roman.otf": {
+        "lines": 70,
+        "characters": 1757,
+        "character_errors": 35,
+        "exact_lines": 51,
+        "cer": 0.0199203187250996,
+        "exact_line_accuracy": 0.7285714285714285
+      },
+      "font:P052-Italic.otf": {
+        "lines": 63,
+        "characters": 2009,
+        "character_errors": 65,
+        "exact_lines": 38,
+        "cer": 0.03235440517670483,
+        "exact_line_accuracy": 0.6031746031746031
+      },
+      "font:NimbusSans-Italic.otf": {
+        "lines": 70,
+        "characters": 2170,
+        "character_errors": 44,
+        "exact_lines": 46,
+        "cer": 0.020276497695852536,
+        "exact_line_accuracy": 0.6571428571428571
+      },
+      "font:URWBookman-Light.otf": {
+        "lines": 21,
+        "characters": 742,
+        "character_errors": 22,
+        "exact_lines": 6,
+        "cer": 0.029649595687331536,
+        "exact_line_accuracy": 0.2857142857142857
+      },
+      "font:NimbusSans-Regular.otf": {
+        "lines": 91,
+        "characters": 2163,
+        "character_errors": 53,
+        "exact_lines": 65,
+        "cer": 0.024503005085529356,
+        "exact_line_accuracy": 0.7142857142857143
+      },
+      "severity:gaussian": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 40,
+        "exact_lines": 73,
+        "cer": 0.01486988847583643,
+        "exact_line_accuracy": 0.7604166666666666
+      },
+      "severity:severe": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 141,
+        "exact_lines": 46,
+        "cer": 0.05241635687732342,
+        "exact_line_accuracy": 0.4791666666666667
+      },
+      "severity:motion": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 86,
+        "exact_lines": 55,
+        "cer": 0.03197026022304833,
+        "exact_line_accuracy": 0.5729166666666666
+      },
+      "severity:downsample": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 73,
+        "exact_lines": 59,
+        "cer": 0.027137546468401486,
+        "exact_line_accuracy": 0.6145833333333334
+      },
+      "severity:jpeg": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 38,
+        "exact_lines": 74,
+        "cer": 0.01412639405204461,
+        "exact_line_accuracy": 0.7708333333333334
+      },
+      "severity:combined": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 80,
+        "exact_lines": 59,
+        "cer": 0.02973977695167286,
+        "exact_line_accuracy": 0.6145833333333334
+      }
+    },
+    "examples": [
+      {
+        "severity": "clean",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "clean",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFYMAND",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "clean",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFYFYANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "severe",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "severe",
+        "target": "AUSTERE COMMAND",
+        "prediction": "ABSTERE CONMANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "severe",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "motion",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "motion",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE CORIMANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "motion",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFFANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFYFYAND",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "combined",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Easman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "combined",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COPYFANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "combined",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      }
+    ]
+  },
+  "fine_tuned_test": {
+    "card_identities": 14,
+    "unique_lines": 96,
+    "degradations_per_line": 7,
+    "groups": {
+      "raw-untrimmed": {
+        "lines": 672,
+        "characters": 18830,
+        "character_errors": 378,
+        "exact_lines": 440,
+        "cer": 0.020074349442379184,
+        "exact_line_accuracy": 0.6547619047619048
+      },
+      "overall": {
+        "lines": 672,
+        "characters": 18830,
+        "character_errors": 271,
+        "exact_lines": 531,
+        "cer": 0.014391927774827402,
+        "exact_line_accuracy": 0.7901785714285714
+      },
+      "severity:clean": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 12,
+        "exact_lines": 87,
+        "cer": 0.0044609665427509295,
+        "exact_line_accuracy": 0.90625
+      },
+      "style:italic": {
+        "lines": 357,
+        "characters": 10927,
+        "character_errors": 172,
+        "exact_lines": 269,
+        "cer": 0.01574082547817333,
+        "exact_line_accuracy": 0.7535014005602241
+      },
+      "font:printed-8ed-body": {
+        "lines": 28,
+        "characters": 917,
+        "character_errors": 20,
+        "exact_lines": 14,
+        "cer": 0.021810250817884406,
+        "exact_line_accuracy": 0.5
+      },
+      "source:real-scan": {
+        "lines": 105,
+        "characters": 2009,
+        "character_errors": 66,
+        "exact_lines": 73,
+        "cer": 0.03285216525634644,
+        "exact_line_accuracy": 0.6952380952380952
+      },
+      "style:regular": {
+        "lines": 315,
+        "characters": 7903,
+        "character_errors": 99,
+        "exact_lines": 262,
+        "cer": 0.012526888523345565,
+        "exact_line_accuracy": 0.8317460317460318
+      },
+      "font:printed-mp2-special-title": {
+        "lines": 14,
+        "characters": 175,
+        "character_errors": 42,
+        "exact_lines": 0,
+        "cer": 0.24,
+        "exact_line_accuracy": 0.0
+      },
+      "font:printed-plc-special-title": {
+        "lines": 14,
+        "characters": 175,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-fut-special-title": {
+        "lines": 14,
+        "characters": 189,
+        "character_errors": 0,
+        "exact_lines": 14,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-7ed-body": {
+        "lines": 7,
+        "characters": 147,
+        "character_errors": 3,
+        "exact_lines": 4,
+        "cer": 0.02040816326530612,
+        "exact_line_accuracy": 0.5714285714285714
+      },
+      "font:printed-7ed-title": {
+        "lines": 7,
+        "characters": 112,
+        "character_errors": 1,
+        "exact_lines": 6,
+        "cer": 0.008928571428571428,
+        "exact_line_accuracy": 0.8571428571428571
+      },
+      "font:printed-8ed-title": {
+        "lines": 7,
+        "characters": 84,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-lea-title": {
+        "lines": 7,
+        "characters": 63,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:printed-m15-title": {
+        "lines": 7,
+        "characters": 147,
+        "character_errors": 0,
+        "exact_lines": 7,
+        "cer": 0.0,
+        "exact_line_accuracy": 1.0
+      },
+      "font:URWBookman-LightItalic.otf": {
+        "lines": 84,
+        "characters": 2401,
+        "character_errors": 22,
+        "exact_lines": 68,
+        "cer": 0.009162848812994586,
+        "exact_line_accuracy": 0.8095238095238095
+      },
+      "source:synthetic": {
+        "lines": 567,
+        "characters": 16821,
+        "character_errors": 205,
+        "exact_lines": 458,
+        "cer": 0.012187147018607692,
+        "exact_line_accuracy": 0.8077601410934744
+      },
+      "font:NimbusRoman-Regular.otf": {
+        "lines": 63,
+        "characters": 2296,
+        "character_errors": 11,
+        "exact_lines": 55,
+        "cer": 0.004790940766550522,
+        "exact_line_accuracy": 0.873015873015873
+      },
+      "font:NimbusRoman-Italic.otf": {
+        "lines": 105,
+        "characters": 3283,
+        "character_errors": 65,
+        "exact_lines": 82,
+        "cer": 0.01979896436186415,
+        "exact_line_accuracy": 0.780952380952381
+      },
+      "font:P052-Roman.otf": {
+        "lines": 70,
+        "characters": 1757,
+        "character_errors": 11,
+        "exact_lines": 61,
+        "cer": 0.006260671599317018,
+        "exact_line_accuracy": 0.8714285714285714
+      },
+      "font:P052-Italic.otf": {
+        "lines": 63,
+        "characters": 2009,
+        "character_errors": 28,
+        "exact_lines": 50,
+        "cer": 0.013937282229965157,
+        "exact_line_accuracy": 0.7936507936507936
+      },
+      "font:NimbusSans-Italic.otf": {
+        "lines": 70,
+        "characters": 2170,
+        "character_errors": 34,
+        "exact_lines": 51,
+        "cer": 0.01566820276497696,
+        "exact_line_accuracy": 0.7285714285714285
+      },
+      "font:URWBookman-Light.otf": {
+        "lines": 21,
+        "characters": 742,
+        "character_errors": 1,
+        "exact_lines": 20,
+        "cer": 0.0013477088948787063,
+        "exact_line_accuracy": 0.9523809523809523
+      },
+      "font:NimbusSans-Regular.otf": {
+        "lines": 91,
+        "characters": 2163,
+        "character_errors": 33,
+        "exact_lines": 71,
+        "cer": 0.015256588072122053,
+        "exact_line_accuracy": 0.7802197802197802
+      },
+      "severity:gaussian": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 13,
+        "exact_lines": 90,
+        "cer": 0.0048327137546468404,
+        "exact_line_accuracy": 0.9375
+      },
+      "severity:severe": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 91,
+        "exact_lines": 60,
+        "cer": 0.03382899628252788,
+        "exact_line_accuracy": 0.625
+      },
+      "severity:motion": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 55,
+        "exact_lines": 65,
+        "cer": 0.020446096654275093,
+        "exact_line_accuracy": 0.6770833333333334
+      },
+      "severity:downsample": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 43,
+        "exact_lines": 73,
+        "cer": 0.015985130111524165,
+        "exact_line_accuracy": 0.7604166666666666
+      },
+      "severity:jpeg": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 13,
+        "exact_lines": 89,
+        "cer": 0.0048327137546468404,
+        "exact_line_accuracy": 0.9270833333333334
+      },
+      "severity:combined": {
+        "lines": 96,
+        "characters": 2690,
+        "character_errors": 44,
+        "exact_lines": 67,
+        "cer": 0.016356877323420074,
+        "exact_line_accuracy": 0.6979166666666666
+      }
+    },
+    "examples": [
+      {
+        "severity": "clean",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "clean",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFMAND",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "clean",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "gaussian",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFIFANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "gaussian",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "severe",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "severe",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AUSTERE COMANS",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "severe",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "motion",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "motion",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COLIDANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "motion",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "downsample",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFIFIANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "downsample",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Crystal Eastman,",
+        "prediction": "Crystal Eastman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "jpeg",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFIBANDI",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "jpeg",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      },
+      {
+        "severity": "combined",
+        "target": "Crystal Eastman,",
+        "prediction": "-Crystal Easman,",
+        "card_name": "Defense Grid",
+        "font": "printed-8ed-body"
+      },
+      {
+        "severity": "combined",
+        "target": "AUSTERE COMMAND",
+        "prediction": "AASTERE COFMAND",
+        "card_name": "Austere Command",
+        "font": "printed-mp2-special-title"
+      },
+      {
+        "severity": "combined",
+        "target": "Essence Warden",
+        "prediction": "Essence Warden",
+        "card_name": "Essence Warden",
+        "font": "printed-plc-special-title"
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic font faces are open substitutes, not proprietary Magic fonts. See font-coverage.json.",
+    "English/Latin alphabet; mana symbols and non-Latin scripts not trained.",
+    "Fixed held-out subset, not a comprehensive card benchmark.",
+    "Blur may destroy information; neural posteriors are not calibrated correctness probabilities.",
+    "User scope includes all printed languages; this report and distributed model cover only the English baseline."
+  ],
+  "model_name": "ocracle-mtg-en-v1",
+  "language": "en",
+  "model_sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
+  "corpus": {
+    "prints": 126,
+    "card_identities": 120,
+    "lines": 6902,
+    "real_scan_lines": 230,
+    "real_scan_italic_lines": 74,
+    "splits": {
+      "train": 5067,
+      "test": 711,
+      "validation": 1124
+    },
+    "real_scan_splits": {
+      "test": 15,
+      "train": 179,
+      "validation": 36
+    },
+    "real_scan_cohorts": {
+      "lea": 7,
+      "7ed": 39,
+      "8ed": 30,
+      "tsp": 32,
+      "m15": 43,
+      "m21": 49,
+      "fut": 10,
+      "plc": 10,
+      "mp2": 10
+    },
+    "manifest_sha256": "195f0f908b93b356b761eec70062db8e2ffd93504be83e8e840de2016c4b635a",
+    "real_line_selection": "Original6set title/body crops are baseline-exact-filtered; fut/plc/mp2 special titles are unfiltered and manually bounded. Report sources separately.",
+    "images_sha256": "d31f368577b0c733270225fb7bac896e68d50f6e08ba5722cb7dd00274b11509"
+  },
+  "elapsed_training_and_final_evaluation_seconds": 361
+}

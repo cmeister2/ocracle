@@ -1,0 +1,65 @@
+{
+  "model_sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
+  "dynamic_tensor_checks": [
+    {
+      "batch": 1,
+      "width": 64,
+      "shape": [
+        17,
+        1,
+        97
+      ],
+      "max_log_probability_error": 1.9073486328125e-05
+    },
+    {
+      "batch": 1,
+      "width": 273,
+      "shape": [
+        69,
+        1,
+        97
+      ],
+      "max_log_probability_error": 1.9073486328125e-05
+    },
+    {
+      "batch": 2,
+      "width": 160,
+      "shape": [
+        41,
+        2,
+        97
+      ],
+      "max_log_probability_error": 1.9073486328125e-05
+    }
+  ],
+  "held_out_gallery_checks": [
+    {
+      "image": "docs/gallery/assets/beleren-title.png",
+      "pytorch_text": "Divination",
+      "onnx_text": "Divination",
+      "rust_text": "Divination",
+      "max_log_probability_error": 2.288818359375e-05,
+      "rust_confidence": 0.9991392,
+      "input_width": 280
+    },
+    {
+      "image": "docs/gallery/assets/modern-flavor.png",
+      "pytorch_text": "IThe key to unlocking this puzzle is",
+      "onnx_text": "IThe key to unlocking this puzzle is",
+      "rust_text": "IThe key to unlocking this puzzle is",
+      "max_log_probability_error": 0.000186920166015625,
+      "rust_confidence": 0.95441854,
+      "input_width": 839
+    },
+    {
+      "image": "docs/gallery/assets/italic-reminder.png",
+      "pytorch_text": "except by creatures with fling.)",
+      "onnx_text": "except by creatures with fling.)",
+      "rust_text": "except by creatures with fling.)",
+      "max_log_probability_error": 2.288818359375e-05,
+      "rust_confidence": 0.9930813,
+      "input_width": 816
+    }
+  ],
+  "comparison": "ONNX vs PyTorch same tensors; actual Rust image pipeline transcripts equal after boundary-whitespace trim. Pillow/image triangle filters can differ by pixel rounding."
+}

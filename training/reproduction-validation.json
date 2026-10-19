@@ -1,0 +1,13 @@
+{
+  "materialization": "Independent temporary repository using frozen metadata for 126 prints and 230 reviewed scan annotations; cached original scans verified against SHA-256.",
+  "records": 6902,
+  "record_semantics_equal": true,
+  "byte_identical_pngs": 6902,
+  "mismatching_pngs": 0,
+  "expected_manifest_sha256": "195f0f908b93b356b761eec70062db8e2ffd93504be83e8e840de2016c4b635a",
+  "observed_manifest_sha256": "195f0f908b93b356b761eec70062db8e2ffd93504be83e8e840de2016c4b635a",
+  "expected_images_sha256": "d31f368577b0c733270225fb7bac896e68d50f6e08ba5722cb7dd00274b11509",
+  "observed_images_sha256": "d31f368577b0c733270225fb7bac896e68d50f6e08ba5722cb7dd00274b11509",
+  "command": "python training/reproduce.py --skip-train",
+  "notes": "Temporary working directory kept separate from live training inputs; font programs verified by frozen hashes."
+}

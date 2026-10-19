@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "held_out": true,
+  "covered_languages": [
+    "en"
+  ],
+  "language_note": "These current fixtures and recognition checkpoints cover English only. The project objective includes every printed MTG language; other scripts remain untrained and unverified.",
+  "verified_on": "2026-10-19",
+  "notes": "All card names and source print IDs in this manifest are reserved for gallery evaluation and excluded from custom training. Font labels identify the standard card-frame families; this small sample does not establish coverage of every MTG treatment or language.",
+  "font_sources": [
+    {
+      "title": "Wizards: Frames of Reference (2003)",
+      "url": "https://magic.wizards.com/en/news/making-magic/frames-reference-2003-01-27"
+    },
+    {
+      "title": "Wizards: From the Director’s Chair: 2013 (Matrix and Beleren)",
+      "url": "https://magic.wizards.com/en/news/making-magic/directors-chair-2013-2014-01-06"
+    },
+    {
+      "title": "Wizards: Dominaria Frame, Template, and Rules Changes (italics)",
+      "url": "https://magic.wizards.com/en/news/announcements/dominaria-frame-template-and-rules-changes-2018-03-21"
+    },
+    {
+      "title": "Wizards: The Future Is Now, Part I (future-shifted frame)",
+      "url": "https://magic.wizards.com/en/news/making-magic/future-now-part-i-2007-04-09"
+    },
+    {
+      "title": "Wizards: Masterpiece Series: Amonkhet Invocations",
+      "url": "https://magic.wizards.com/en/news/card-preview/masterpiece-series-amonkhet-invocations-2017-03-29"
+    },
+    {
+      "title": "Wizards: Crimson Vow Booster Fun (Dracula)",
+      "url": "https://magic.wizards.com/en/news/feature/sink-your-teeth-booster-fun-innistrad-crimson-vow-2021-10-28"
+    },
+    {
+      "title": "Wizards: Chaos Theory (colorshifted white text)",
+      "url": "https://magic.wizards.com/en/news/making-magic/chaos-theory-2007-01-08"
+    },
+    {
+      "title": "Wizards: Behind the Scenes of Booster Fun for Adventures in the Forgotten Realms (module treatment)",
+      "url": "https://magic.wizards.com/en/news/feature/behind-scenes-booster-fun-adventures-forgotten-realms-2021-06-29"
+    }
+  ],
+  "samples": [
+    {
+      "id": "goudy-title",
+      "title": "Goudy Medieval · 1993 title",
+      "category": "title",
+      "language": "en",
+      "font": "Goudy Medieval",
+      "ground_truth": "Llanowar Elves",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        47,
+        47,
+        320,
+        94
+      ],
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "goudy-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "goudy-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "matrix-title",
+      "title": "Matrix Bold · 2003 title",
+      "category": "title",
+      "language": "en",
+      "font": "Matrix Bold",
+      "ground_truth": "Air Elemental",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        59,
+        57,
+        326,
+        102
+      ],
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "matrix-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "matrix-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "beleren-title",
+      "title": "Beleren · 2014 title",
+      "category": "title",
+      "language": "en",
+      "font": "Beleren",
+      "ground_truth": "Divination",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        59,
+        56,
+        260,
+        102
+      ],
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "beleren-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "beleren-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "historic-rules",
+      "title": "Original printed rules",
+      "category": "rules",
+      "language": "en",
+      "font": "Plantin family",
+      "ground_truth": "Tap to add 1 green mana to your",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        116,
+        635,
+        623,
+        673
+      ],
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "historic-rules.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "historic-rules-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "modern-rules",
+      "title": "Modern printed rules",
+      "category": "rules",
+      "language": "en",
+      "font": "Plantin family",
+      "ground_truth": "Draw two cards.",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        60,
+        717,
+        343,
+        759
+      ],
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "modern-rules.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "modern-rules-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "historic-flavor",
+      "title": "Historic italic flavor",
+      "category": "italic",
+      "language": "en",
+      "font": "Plantin family italic",
+      "ground_truth": "Whenever the Llanowar Elves gather",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        116,
+        736,
+        640,
+        776
+      ],
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "historic-flavor.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "historic-flavor-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "modern-flavor",
+      "title": "Modern italic flavor",
+      "category": "italic",
+      "language": "en",
+      "font": "Plantin family italic",
+      "ground_truth": "“The key to unlocking this puzzle is",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        62,
+        773,
+        626,
+        816
+      ],
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "modern-flavor.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "modern-flavor-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "italic-reminder",
+      "title": "Italic reminder text",
+      "category": "italic",
+      "language": "en",
+      "font": "Plantin family italic",
+      "ground_truth": "except by creatures with flying.)",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        70,
+        746,
+        567,
+        785
+      ],
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "italic-reminder.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "italic-reminder-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "mixed-reminder",
+      "title": "Rules with italic reminder",
+      "category": "italic",
+      "language": "en",
+      "font": "Plantin family regular + italic",
+      "ground_truth": "Deathtouch (Any amount of damage",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        61,
+        662,
+        656,
+        704
+      ],
+      "source": {
+        "name": "Typhoid Rats",
+        "print_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m15/118/typhoid-rats?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/9/f/9f8723f6-96b1-4441-8a57-435fb82d6db4.png?1783939180",
+        "source_image_sha256": "daa2485ea751a2fe8e3455213b161152a730dd23b720a43ea4a069176dde05fb",
+        "artist": "Kev Walker"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "mixed-reminder.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "mixed-reminder-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "future-title",
+      "title": "Future-shifted title · 2007",
+      "category": "title",
+      "language": "en",
+      "font": "Future Sight frame title treatment",
+      "ground_truth": "Blade of the Sixth Pride",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        129,
+        60,
+        584,
+        106
+      ],
+      "source": {
+        "name": "Blade of the Sixth Pride",
+        "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+        "set": "Future Sight",
+        "language": "en",
+        "collector_number": "19",
+        "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+        "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+        "artist": "Justin Sweet"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "future-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "future-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "colorshift-title",
+      "title": "Colorshifted white title · 2007",
+      "category": "title",
+      "language": "en",
+      "font": "Matrix Bold, white text with shadow",
+      "ground_truth": "Mana Tithe",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        59,
+        62,
+        279,
+        107
+      ],
+      "source": {
+        "name": "Mana Tithe",
+        "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+        "set": "Planar Chaos",
+        "language": "en",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+        "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+        "artist": "Martina Pilcerova"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "colorshift-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "colorshift-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "dracula-title",
+      "title": "Dracula showcase · inverted title",
+      "category": "title",
+      "language": "en",
+      "font": "Dracula showcase title treatment",
+      "ground_truth": "Mina Harker",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        56,
+        60,
+        291,
+        105
+      ],
+      "source": {
+        "name": "Thalia, Guardian of Thraben",
+        "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+        "set": "Innistrad: Crimson Vow",
+        "language": "en",
+        "collector_number": "331",
+        "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+        "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+        "artist": "Magali Villeneuve"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "dracula-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "dracula-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "invocation-title",
+      "title": "Invocation display title · 2017",
+      "category": "title",
+      "language": "en",
+      "font": "Amonkhet Invocation display; ornamental glyphs outside the word are excluded",
+      "ground_truth": "DAZE",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        318,
+        59,
+        425,
+        98
+      ],
+      "source": {
+        "name": "Daze",
+        "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+        "set": "Amonkhet Invocations",
+        "language": "en",
+        "collector_number": "12",
+        "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+        "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+        "artist": "Richard Wright"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "invocation-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "invocation-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "module-title",
+      "title": "D&D module showcase title · 2021",
+      "category": "title",
+      "language": "en",
+      "font": "D&D module showcase display serif; second printed title line",
+      "ground_truth": "Frost Dragon",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        192,
+        102,
+        552,
+        148
+      ],
+      "source": {
+        "name": "Cave of the Frost Dragon",
+        "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+        "set": "Adventures in the Forgotten Realms",
+        "language": "en",
+        "collector_number": "350",
+        "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+        "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+        "artist": "Larry Elmore"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "module-title.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "module-title-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    },
+    {
+      "id": "collector-type",
+      "title": "Small collector information",
+      "category": "metadata",
+      "language": "en",
+      "font": "Small sans-serif collector type; exact family not verified",
+      "ground_truth": "052/269 C",
+      "transcription": "Manual visual transcription of this printed crop; not Oracle text.",
+      "crop_bounds_xyxy": [
+        45,
+        969,
+        195,
+        990
+      ],
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "label": "Original scan crop",
+          "image": "collector-type.png",
+          "transform": "Crop only"
+        },
+        {
+          "id": "blur",
+          "label": "Severe blur",
+          "image": "collector-type-blur.png",
+          "transform": "Gaussian σ = 2.4 source pixels; downsample to 30% with bilinear resampling"
+        }
+      ]
+    }
+  ]
+}

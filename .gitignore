@@ -1,0 +1,17 @@
+/target
+/.venv/
+/training/.venv/
+/training/data/
+/training/runs/
+/models/*.rten
+!/models/ocracle-mtg.rten
+/models/*.onnx
+/models/*.pt
+/training/checkpoints/
+__pycache__/
+*.pyc
+/node_modules/
+/.cache/
+*.tmp
+*.part
+/lcov.info

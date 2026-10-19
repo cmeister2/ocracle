@@ -1,0 +1,65 @@
+{
+  "seed": 191993,
+  "cards": 126,
+  "samples": {
+    "train": 4888,
+    "validation": 1088,
+    "test": 696
+  },
+  "excluded_gallery_names": [
+    "air elemental",
+    "blade of the sixth pride",
+    "cave of the frost dragon",
+    "daze",
+    "divination",
+    "llanowar elves",
+    "mana tithe",
+    "thalia, guardian of thraben",
+    "typhoid rats"
+  ],
+  "fonts": [
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Regular.otf",
+      "sha256": "fd41669443616a7ae890c42e53a58f47fa24a940fd1e367acaff665cf5b6e9d8",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Italic.otf",
+      "sha256": "b7c424e6cb79baddfcdcd9a9d87f9fc4fdd06f0e5160066e2b2e47bcd647c7b9",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/P052-Roman.otf",
+      "sha256": "f054a7389d8d0e9f4c5f7b4c21feb7e2b14bec8004a1e92778a78d149524eea9",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/P052-Italic.otf",
+      "sha256": "1feac6055211cf5c6c812c026e398195070f174064cc4d390f0db01647443b0e",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf",
+      "sha256": "7b1bc8e6a16cef53785ce03d4848f8971f3ba38cd9e266e4786a50e08bd9235b",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf",
+      "sha256": "ed722e6c2996b08e8516d27a7c017972cfabf5d1736b496b6526da78fd17691a",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+      "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    },
+    {
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf",
+      "sha256": "7b0bef5686aa58c0fd0f0d01beeae56664208490e30ca6a25431281c9a0c6402",
+      "license": "GNU AGPL-3.0 with font embedding exception; URW Base35"
+    }
+  ],
+  "data_rights": "Scryfall API card text and scans; Wizards of the Coast card content, used for noncommercial fan OCR research. Not relicensed as crate source.",
+  "normalization": "English Latin; curly quotes/dashes and accented letters normalized to pretrained alphabet. Mana glyphs excluded from synthetic labels.",
+  "split_policy": "sha256(casefold(card name)) modulo10:0=test,1=validation,2..9=train. All printings/fonts/crops/augmentations grouped."
+}

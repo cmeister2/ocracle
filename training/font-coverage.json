@@ -1,0 +1,136 @@
+{
+  "claim": "sampled historical, regular, italic, and special-treatment OCR; universal historical-font coverage remains unverified",
+  "inventory": "../docs/font-coverage.md",
+  "cohorts": [
+    {
+      "set": "lea",
+      "actual_scan_lines": 7,
+      "italic_lines": 2,
+      "splits": {
+        "test": 1,
+        "train": 5,
+        "validation": 1
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "7ed",
+      "actual_scan_lines": 39,
+      "italic_lines": 15,
+      "splits": {
+        "train": 34,
+        "validation": 3,
+        "test": 2
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "8ed",
+      "actual_scan_lines": 30,
+      "italic_lines": 13,
+      "splits": {
+        "train": 18,
+        "validation": 7,
+        "test": 5
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "tsp",
+      "actual_scan_lines": 32,
+      "italic_lines": 15,
+      "splits": {
+        "train": 25,
+        "validation": 7
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "m15",
+      "actual_scan_lines": 43,
+      "italic_lines": 17,
+      "splits": {
+        "train": 33,
+        "test": 1,
+        "validation": 9
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "m21",
+      "actual_scan_lines": 49,
+      "italic_lines": 12,
+      "splits": {
+        "train": 46,
+        "validation": 3
+      },
+      "label_selection": "baseline-exact metadata match; selected readable subset",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "fut",
+      "actual_scan_lines": 10,
+      "italic_lines": 0,
+      "splits": {
+        "train": 6,
+        "validation": 2,
+        "test": 2
+      },
+      "label_selection": "manually reviewed frame-specific title box; independent of baseline success",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "plc",
+      "actual_scan_lines": 10,
+      "italic_lines": 0,
+      "splits": {
+        "train": 6,
+        "validation": 2,
+        "test": 2
+      },
+      "label_selection": "manually reviewed frame-specific title box; independent of baseline success",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    },
+    {
+      "set": "mp2",
+      "actual_scan_lines": 10,
+      "italic_lines": 0,
+      "splits": {
+        "train": 6,
+        "validation": 2,
+        "test": 2
+      },
+      "label_selection": "manually reviewed frame-specific title box; independent of baseline success",
+      "font_status": "observed printed treatment; exact font file not asserted"
+    }
+  ],
+  "synthetic_faces": [
+    "NimbusRoman-Regular",
+    "NimbusRoman-Italic",
+    "P052-Roman",
+    "P052-Italic",
+    "URWBookman-Light",
+    "URWBookman-LightItalic",
+    "NimbusSans-Regular",
+    "NimbusSans-Italic"
+  ],
+  "synthetic_status": "open URW substitutes; not equivalent to Magic proprietary font files",
+  "verified_font_sources": [
+    "https://magic.wizards.com/en/news/making-magic/frames-reference-2003-01-27",
+    "https://magic.wizards.com/en/news/making-magic/directors-chair-2013-2014-01-06"
+  ],
+  "known_gaps": [
+    "No exhaustive typeface inventory for every Secret Lair/showcase and Universes Beyond treatment.",
+    "Nine print-set cohorts are not a count of distinct fonts.",
+    "Goudy/Matrix/Beleren/rules cuts are sampled through scans; not every font weight/style/glyph has independent held-out evidence.",
+    "No trained mana/tap glyph alphabet.",
+    "No verified non-Latin or Phyrexian-script recognition.",
+    "Physical camera blur, glare, foil reflections and perspective need a separate benchmark.",
+    "Confidence is not calibrated to correctness."
+  ]
+}

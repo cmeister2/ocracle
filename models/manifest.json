@@ -1,0 +1,44 @@
+{
+  "upstream_repository": "https://huggingface.co/robertknight/ocrs",
+  "upstream_revision": "df0edd170279ab971b53e094c627255a87e1a503",
+  "license": "CC-BY-SA-4.0",
+  "attribution": "Robert Knight; pretrained Ocrs models trained on HierText and synthetic data. HierText authors: Shangbang Long, Siyang Qin, Dmitry Panteleev, Alessandro Bissacco, Yasuhisa Fujii, Michalis Raptis.",
+  "training_architecture_reference": "https://github.com/robertknight/ocrs-models/tree/068934f1725959b734edef025b13c46ddf784326",
+  "upstream_models": [
+    {
+      "url": "https://ocrs-models.s3-accelerate.amazonaws.com/text-detection.onnx",
+      "path": "models/text-detection.onnx",
+      "sha256": "a917b23dbd9524b465df7e922641b3ff2981623df4ded5a0234004ef2fee7cfe",
+      "training_only": false,
+      "source_note": "Official current Ocrs detector endpoint; mutable URL pinned by digest (download fails closed if provider changes artifact)."
+    },
+    {
+      "url": "https://huggingface.co/robertknight/ocrs/resolve/df0edd170279ab971b53e094c627255a87e1a503/text-rec-checkpoint-s52qdbqt.rten",
+      "path": "models/text-recognition-base.rten",
+      "sha256": "606d9a0414c6b73c99df75b707c11c70d1c8b12e1d4f900922e185fc37bfca65",
+      "training_only": false
+    },
+    {
+      "url": "https://huggingface.co/robertknight/ocrs/resolve/df0edd170279ab971b53e094c627255a87e1a503/text-rec-checkpoint-s52qdbqt.pt",
+      "path": "training/checkpoints/base.pt",
+      "sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+      "training_only": true
+    }
+  ],
+  "adapted_models": [
+    {
+      "path": "models/ocracle-mtg.rten",
+      "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
+      "bytes": 9718720,
+      "model_name": "ocracle-mtg-en-v1",
+      "language": "en",
+      "license": "CC-BY-SA-4.0",
+      "base_checkpoint_sha256": "91b5bf9c0a21e537f0a848fb343899e7c820cf2cfbad43450bf3b35e41420bd5",
+      "configuration": "models/recognizer-config.json",
+      "training_report": "training/report.json",
+      "dataset_manifest_sha256": "195f0f908b93b356b761eec70062db8e2ffd93504be83e8e840de2016c4b635a",
+      "training_steps": 360,
+      "limitations": "English/Latin baseline only; all printed languages and universal font coverage remain unfinished."
+    }
+  ]
+}
