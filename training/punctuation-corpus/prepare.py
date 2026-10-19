@@ -38,7 +38,8 @@ def protected_identities():
              "training/experimental_easyocr/fixtures.json", "training/blur-corpus/cards.json"]
     for name in paths:
         path = ROOT / name
-        if not path.exists():
+        # The fresh blur corpus is developed in a separate stacked PR.
+        if name == "training/blur-corpus/cards.json" and not path.exists():
             continue
         values = ([json.loads(line) for line in path.read_text().splitlines()]
                   if path.suffix == ".jsonl" else json.loads(path.read_text()))
@@ -54,10 +55,9 @@ def check(replay=False, download=False):
     cards = {card["id"]: card for card in json.loads(cards_path.read_text())}
     if len(rows) != 3 or len(cards) != 3:
         raise ValueError("Expected exactly three reviewed training sources")
-    if provenance_path.exists():
-        pins = json.loads(provenance_path.read_text())
-        if pins["annotations_sha256"] != sha(annotations_path) or pins["cards_sha256"] != sha(cards_path):
-            raise ValueError("Frozen punctuation annotations or source metadata changed")
+    pins = json.loads(provenance_path.read_text())
+    if pins["annotations_sha256"] != sha(annotations_path) or pins["cards_sha256"] != sha(cards_path):
+        raise ValueError("Frozen punctuation annotations or source metadata changed")
     protected = protected_identities()
     counts = Counter()
     sources_replayed = 0
