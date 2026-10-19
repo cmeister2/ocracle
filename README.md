@@ -1,8 +1,8 @@
 # ocracle
 
-Neural OCR for **Magic: The Gathering** card images: titles, type lines, printed rules, italic reminder text and flavor text. Rust performs inference locally using a convolutional recurrent neural network (CRNN) and CTC decoding. A separate Python workflow fine-tunes that network on Magic text with deliberately blurry training images.
+Neural OCR for **Magic: The Gathering** card images: titles, type lines, printed rules, italic reminder text and flavor text. Rust performs inference locally using CTC neural networks. The default is a colour PaddleOCR baseline evaluated on printed Magic text. A separate Python workflow fine-tunes a CRNN on Magic text with deliberately blurry training images.
 
-This is a new experimental project. The target includes **all printed languages** and historic fonts, with a single language profile per card. The current distributed checkpoint is an **English baseline**. Standard historic type families include Goudy Medieval, Matrix Bold, Beleren, and Plantin regular/italic; the gallery also evaluates special treatments. Support for every font, treatment and language is not yet established. Phyrexian is a separate stretch goal. Results and gaps are recorded instead of treating a font name in a configuration file as proof of recognition.
+This is an experimental project. The target includes **all printed languages** and historic fonts, with a single language profile per card. Latin-script languages are the priority; non-Latin alphabets are best effort. Standard historic type families include Goudy Medieval, Matrix Bold, Beleren, and Plantin regular/italic; the gallery also evaluates special treatments. Support for every font, treatment and language is not yet established. Phyrexian is a separate stretch goal. Results and gaps are recorded instead of treating a font name in a configuration file as proof of recognition.
 
 ## Read a card
 
@@ -24,9 +24,9 @@ target/release/ocracle recognize docs/gallery/assets/historic-flavor-blur.png \
   --language en --line --passes all
 ```
 
-`--language` selects one trained profile for the entire card from `models/profiles.json` and verifies SHA-256 digests of both its weights and exact configuration file. Currently only `en` is ready; requesting an unavailable profile returns an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
+`--language` selects one profile for the entire card from `models/profiles.json` and verifies SHA-256 digests of both its weights and exact configuration file. Latin-script profiles are `en`, `es`, `fr`, `de`, `it`, `pt`, and `la`; `ja`, `zhs`, and `zht` have best-effort horizontal examples. These share the upstream PP-OCRv6 small model, without MTG fine-tuning. Coverage is limited to evaluated samples, and unknown profiles return an error. Use `--model-root /path/to/ocracle` when running outside the repository. Custom weights can be selected directly with `--recognition-model` and `--model-config`.
 
-The specialized checkpoint is checked into the repository with its matching configuration. For comparison, the downloader also fetches the original base recognizer:
+The experimental MTG-adapted English CRNN is checked into the repository with its matching configuration; select it with `--language en-mtg`. The default Paddle model is downloaded from a pinned official source. For comparison, the downloader also fetches the original Ocrs base recognizer:
 
 ```sh
 target/release/ocracle recognize card.jpg \
@@ -40,7 +40,7 @@ The JSON output includes raw text, line coordinates in the original image, confi
 
 **Confidence** is the geometric mean of the peak posterior for each emitted CTC character, weighted by character count across lines. It is uncalibrated and is not the probability that a line is correct. Selection by this score can favor a short, incorrect result; the alternatives remain visible. No dictionary or Scryfall/Oracle lookup replaces the observed text.
 
-The initial alphabet supports English letters, numbers, ASCII punctuation and the euro sign. Curly quotation marks, accented letters, other scripts and pictographic mana/tap symbols need expanded training/alphabet support; the recognizer does not yet transcribe these reliably. Card faces should be upright and reasonably flat; an isolated line or text-box crop can help difficult layouts.
+The default alphabet has 18,709 Unicode characters, including accents and curly quotation marks. It still lacks `¡`, `„`, and complete mana/tap symbol support. The experimental `en-mtg` alphabet is much narrower: English letters, numbers, ASCII punctuation and the euro sign. Card faces should be upright and reasonably flat; an isolated line or text-box crop can help difficult layouts. Vertical text, ruby grouping and right-to-left decoding are not implemented by the registered profiles.
 
 ## Library
 
@@ -60,7 +60,7 @@ fn main() -> anyhow::Result<()> {
 }
 ```
 
-Models can also be ONNX files compatible with RTen. The recognition contract is grayscale `[N,1,height,W]`, pixel values `/255 - 0.5`, and `[T,N,C]` **log probabilities**, with CTC blank at zero. The configuration supplies the exact checkpoint alphabet, `input_height` (64 by default), and `architecture` (defaults to `CRNN` for the original models). Other CTC architectures need a compatible export; the architecture label supplies method attribution. Changing the alphabet without retraining changes what classes mean. RTen 0.26 is used to match `ocrs` 0.13's detector integration.
+Models can also be ONNX files compatible with RTen. Defaults retain the original CRNN contract: grayscale `[N,1,height,W]`, pixel values `/255 - 0.5`, and `[T,N,C]` **log probabilities**, with CTC blank at zero. Colour CTC exports can configure planar RGB/BGR input, affine normalization, right padding, width rounding, NTC output and probabilities. Rust processes one line per batch and uses triangle resizing; this can differ from an upstream OpenCV interpolation pipeline. Each configuration supplies the exact checkpoint alphabet, `input_height` and `architecture` for method attribution. Changing the alphabet without retraining changes what classes mean. RTen 0.26 matches `ocrs` 0.13's detector integration.
 
 ## Training and evaluation
 

@@ -1,0 +1,1735 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "scope": "gallery",
+  "fixture_manifest_sha256": "d6ddc7fab695de4347a87c06f0d3fd33d1dd32587dc6a96693a13588f427f015",
+  "status": "experimental_not_registered_or_comprehensive",
+  "original_model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "wrapper_model_sha256": "730bd4ee2107ce9afc1da146705d80849c99a3b908ae83010df2b675da75ba3c",
+  "config_template_sha256": "e4064356f1d8d68b8f0c3063caa9948ba46a357f81cad5a689bc10898e0317d5",
+  "cli_sha256": "74c6838e25039ec665094c55a8ae059d884f937685bd7ca191c6c3aae7263e5f",
+  "packages": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "comparison": "NFC plus collapsed whitespace; preserve accents, case and punctuation. No checkpoint fitting/selection. All original-pass results retained.",
+  "confidence_note": "Probe posterior is arithmetic mean of first emission steps; CLI is geometric mean of peak posterior in each emitted run. Both uncalibrated; do not compare as accuracy.",
+  "summary": {
+    "official_bgr_ort": {
+      "all": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "severe": {
+        "cases": 15,
+        "exact": 12,
+        "character_edits": 3,
+        "characters": 288,
+        "cer": 0.010416666666666666
+      },
+      "clean": {
+        "cases": 15,
+        "exact": 15,
+        "character_edits": 0,
+        "characters": 288,
+        "cer": 0.0
+      },
+      "en": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      }
+    },
+    "grayscale_wrapper_ort": {
+      "all": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      },
+      "severe": {
+        "cases": 15,
+        "exact": 11,
+        "character_edits": 4,
+        "characters": 288,
+        "cer": 0.013888888888888888
+      },
+      "clean": {
+        "cases": 15,
+        "exact": 14,
+        "character_edits": 1,
+        "characters": 288,
+        "cer": 0.003472222222222222
+      },
+      "en": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      }
+    },
+    "grayscale_wrapper_rten": {
+      "all": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      },
+      "severe": {
+        "cases": 15,
+        "exact": 11,
+        "character_edits": 4,
+        "characters": 288,
+        "cer": 0.013888888888888888
+      },
+      "clean": {
+        "cases": 15,
+        "exact": 14,
+        "character_edits": 1,
+        "characters": 288,
+        "cer": 0.003472222222222222
+      },
+      "en": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      }
+    },
+    "actual_cli_wrapper_rten": {
+      "all": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      },
+      "severe": {
+        "cases": 15,
+        "exact": 11,
+        "character_edits": 4,
+        "characters": 288,
+        "cer": 0.013888888888888888
+      },
+      "clean": {
+        "cases": 15,
+        "exact": 14,
+        "character_edits": 1,
+        "characters": 288,
+        "cer": 0.003472222222222222
+      },
+      "en": {
+        "cases": 30,
+        "exact": 25,
+        "character_edits": 5,
+        "characters": 576,
+        "cer": 0.008680555555555556
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "goudy-title-clean",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Goudy Medieval",
+      "image_path": "docs/gallery/assets/goudy-title.png",
+      "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+      "expected": "Llanowar Elves",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        279
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.38690185546875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=42.669",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9593951233795711,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9740322196268215,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9740323087325116,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Llanowar Elves",
+          "confidence": 0.9715716,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "goudy-title-blur",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Goudy Medieval",
+      "image_path": "docs/gallery/assets/goudy-title-blur.png",
+      "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+      "expected": "Llanowar Elves",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        282
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.76837158203125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=46.410",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9280922838619777,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "LlanowarElves",
+          "mean_first_emission_posterior": 0.9474519092057148,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "LlanowarElves",
+          "mean_first_emission_posterior": 0.9474519085386102,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "LlanowarElves",
+          "confidence": 0.9429868,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "matrix-title-clean",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Matrix Bold",
+      "image_path": "docs/gallery/assets/matrix-title.png",
+      "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+      "expected": "Air Elemental",
+      "expected_characters": 13,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        285
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001049041748046875,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=39.393",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999686938065749,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999665663787076,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999666397386036,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Air Elemental",
+          "confidence": 0.99996614,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "matrix-title-blur",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Matrix Bold",
+      "image_path": "docs/gallery/assets/matrix-title-blur.png",
+      "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+      "expected": "Air Elemental",
+      "expected_characters": 13,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        275
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001220703125,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=46.768",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9998878653232868,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999177868540007,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999177410059316,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Air Elemental",
+          "confidence": 0.99994123,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "beleren-title-clean",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Beleren",
+      "image_path": "docs/gallery/assets/beleren-title.png",
+      "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+      "expected": "Divination",
+      "expected_characters": 10,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        210
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 9.1552734375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=45.401",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999456584453583,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999535024174104,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999535500988135,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Divination",
+          "confidence": 0.99995345,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "beleren-title-blur",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Beleren",
+      "image_path": "docs/gallery/assets/beleren-title-blur.png",
+      "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+      "expected": "Divination",
+      "expected_characters": 10,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        206
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 6.866455078125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=43.807",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999621570110321,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999520838258406,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999521076673645,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Divination",
+          "confidence": 0.999957,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-rules-clean",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family",
+      "image_path": "docs/gallery/assets/historic-rules.png",
+      "image_sha256": "59a0649ed3d3a888836df0b572a7e1e5196cc45d65ffd79794133768f9455042",
+      "expected": "Tap to add 1 green mana to your",
+      "expected_characters": 31,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        641
+      ],
+      "output_shape": [
+        80,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.1961669921875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[80, 1, 18710] elapsed_ms=58.304",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9875284202637211,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9750472696942726,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9750471656306378,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "confidence": 0.9991506,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-rules-blur",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family",
+      "image_path": "docs/gallery/assets/historic-rules-blur.png",
+      "image_sha256": "3522ec17c8f4d56afab57bcee446d38b40d0485c96c5c2fe4d0a7ed1a9fc1a8c",
+      "expected": "Tap to add 1 green mana to your",
+      "expected_characters": 31,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        664
+      ],
+      "output_shape": [
+        83,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0003027915954589844,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[83, 1, 18710] elapsed_ms=50.640",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.989623406241017,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9902357994781178,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9902358207906805,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "confidence": 0.99699306,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "modern-rules-clean",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family",
+      "image_path": "docs/gallery/assets/modern-rules.png",
+      "image_sha256": "2222522079a282cf12e66091434716a50d25bdb4000bde07cb023b256af9a464",
+      "expected": "Draw two cards.",
+      "expected_characters": 15,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        324
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.00017547607421875,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=50.522",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9942882259686788,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9982837240458132,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9982836842678642,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Draw two cards.",
+          "confidence": 0.99970603,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "modern-rules-blur",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family",
+      "image_path": "docs/gallery/assets/modern-rules-blur.png",
+      "image_sha256": "9f4029ed8354ad2af3376e143c183da89f54e85e092025aa7bdb9777ac0d3690",
+      "expected": "Draw two cards.",
+      "expected_characters": 15,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        314
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=43.094",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9998308539390564,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.999898823101279,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9998987833658223,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Draw two cards.",
+          "confidence": 0.99981904,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-flavor-clean",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/historic-flavor.png",
+      "image_sha256": "e31e0350e4344ad7e7d0dabeb0547c96fb252a627330c6132ac341cbfb2684bc",
+      "expected": "Whenever the Llanowar Elves gather",
+      "expected_characters": 34,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        629
+      ],
+      "output_shape": [
+        79,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.76837158203125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[79, 1, 18710] elapsed_ms=50.794",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Whenever the Llanowar Elves gather",
+          "mean_first_emission_posterior": 0.9964612862643074,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Whenever the Llanowar Elves gather",
+          "mean_first_emission_posterior": 0.997955432706961,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Whenever the Llanowar Elves gather",
+          "mean_first_emission_posterior": 0.997955446677014,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Whenever the Llanowar Elves gather",
+          "confidence": 0.9994022,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-flavor-blur",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/historic-flavor-blur.png",
+      "image_sha256": "aee039f25e92e1d6735e6f992e0d045014a5f8b52767fc0f48fc787a57640742",
+      "expected": "Whenever the Llanowar Elves gather",
+      "expected_characters": 34,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        628
+      ],
+      "output_shape": [
+        78,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.00028765201568603516,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[78, 1, 18710] elapsed_ms=48.448",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "mean_first_emission_posterior": 0.9854891773532418,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "mean_first_emission_posterior": 0.9858764320676068,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "mean_first_emission_posterior": 0.9858765319232954,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "confidence": 0.9748125,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "modern-flavor-clean",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/modern-flavor.png",
+      "image_sha256": "e58e1b8601e76530c67b6d8eeb7a5a06913933069cfd17e5a993a50b3148f844",
+      "expected": "“The key to unlocking this puzzle is",
+      "expected_characters": 36,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        630
+      ],
+      "output_shape": [
+        79,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.9591064453125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[79, 1, 18710] elapsed_ms=44.111",
+      "results": {
+        "official_bgr_ort": {
+          "text": "“The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9978966895076964,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9949922891463687,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9949923091005479,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "confidence": 0.99697983,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "modern-flavor-blur",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/modern-flavor-blur.png",
+      "image_sha256": "004793fb6e147aa93024d366231f6baddb3e22cc80be5188d743c077c76ebb41",
+      "expected": "“The key to unlocking this puzzle is",
+      "expected_characters": 36,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        624
+      ],
+      "output_shape": [
+        78,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 6.67572021484375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[78, 1, 18710] elapsed_ms=49.027",
+      "results": {
+        "official_bgr_ort": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9981387472814984,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9993535843117061,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9993535776840482,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "confidence": 0.99915725,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "italic-reminder-clean",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/italic-reminder.png",
+      "image_sha256": "953cef42f24f6b06542d889a3782e73fe4b4517b0b2f8a91e8792721a8bfea05",
+      "expected": "except by creatures with flying.)",
+      "expected_characters": 33,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        612
+      ],
+      "output_shape": [
+        76,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[76, 1, 18710] elapsed_ms=50.849",
+      "results": {
+        "official_bgr_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9800202936837168,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9900729477420374,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9900729547326067,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "except by creatures with flying.)",
+          "confidence": 0.9996434,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "italic-reminder-blur",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "image_path": "docs/gallery/assets/italic-reminder-blur.png",
+      "image_sha256": "7d31d55ebef018d9090d6b6cdc1dfbf7e99f619d7cc3dd115ac5da2eb5ebd119",
+      "expected": "except by creatures with flying.)",
+      "expected_characters": 33,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        596
+      ],
+      "output_shape": [
+        74,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.7220458984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[74, 1, 18710] elapsed_ms=53.833",
+      "results": {
+        "official_bgr_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.998732920848962,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9988743988015371,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9988744204533574,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "except by creatures with flying.)",
+          "confidence": 0.99893856,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-reminder-clean",
+      "card_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Plantin family regular + italic",
+      "image_path": "docs/gallery/assets/mixed-reminder.png",
+      "image_sha256": "d3f8cddfb5a4b6906725a5db947d137a5d2d8f7004205362a832a81db8e02350",
+      "expected": "Deathtouch (Any amount of damage",
+      "expected_characters": 32,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        680
+      ],
+      "output_shape": [
+        85,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.000141143798828125,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[85, 1, 18710] elapsed_ms=56.942",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9994517862796783,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9977125656316377,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9977126214232812,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "confidence": 0.9979981,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-reminder-blur",
+      "card_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Plantin family regular + italic",
+      "image_path": "docs/gallery/assets/mixed-reminder-blur.png",
+      "image_sha256": "72030733d4e103ce8553bf999267defea2b092ed0a1616c12ddf061161f1eddb",
+      "expected": "Deathtouch (Any amount of damage",
+      "expected_characters": 32,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        658
+      ],
+      "output_shape": [
+        82,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0003809928894042969,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[82, 1, 18710] elapsed_ms=55.798",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9984535723924637,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9863674841607473,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9863674677580192,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "confidence": 0.9987475,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "future-title-clean",
+      "card_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Future Sight frame title treatment",
+      "image_path": "docs/gallery/assets/future-title.png",
+      "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+      "expected": "Blade of the Sixth Pride",
+      "expected_characters": 24,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        475
+      ],
+      "output_shape": [
+        59,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.91278076171875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[59, 1, 18710] elapsed_ms=58.225",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9996921047568321,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.99977204452182,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9997720792918381,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Blade of the Sixth Pride",
+          "confidence": 0.9998493,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "future-title-blur",
+      "card_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Future Sight frame title treatment",
+      "image_path": "docs/gallery/assets/future-title-blur.png",
+      "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+      "expected": "Blade of the Sixth Pride",
+      "expected_characters": 24,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        467
+      ],
+      "output_shape": [
+        58,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.1961669921875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[58, 1, 18710] elapsed_ms=44.557",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9999620467424393,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9797225126123266,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9797225468250814,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Blade of the Sixth Pride",
+          "confidence": 0.9999683,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "colorshift-title-clean",
+      "card_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Matrix Bold, white text with shadow",
+      "image_path": "docs/gallery/assets/colorshift-title.png",
+      "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+      "expected": "Mana Tithe",
+      "expected_characters": 10,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        235
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.7220458984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=44.389",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9940218448638916,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9967813016789965,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9967812598049381,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Mana Tithe",
+          "confidence": 0.99992585,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "colorshift-title-blur",
+      "card_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Matrix Bold, white text with shadow",
+      "image_path": "docs/gallery/assets/colorshift-title-blur.png",
+      "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+      "expected": "Mana Tithe",
+      "expected_characters": 10,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        227
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 7.82012939453125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=52.329",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.999755346775055,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9996675551019854,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.999667567005674,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Mana Tithe",
+          "confidence": 0.99976575,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "dracula-title-clean",
+      "card_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Dracula showcase title treatment",
+      "image_path": "docs/gallery/assets/dracula-title.png",
+      "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+      "expected": "Mina Harker",
+      "expected_characters": 11,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        251
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 8.58306884765625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=43.027",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9999387968670238,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9999359575183483,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9999360008674344,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Mina Harker",
+          "confidence": 0.99993575,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "dracula-title-blur",
+      "card_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Dracula showcase title treatment",
+      "image_path": "docs/gallery/assets/dracula-title-blur.png",
+      "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+      "expected": "Mina Harker",
+      "expected_characters": 11,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        240
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=41.964",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9995590990239923,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9994859261824621,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.999485991219026,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Mina Harker",
+          "confidence": 0.9995462,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "invocation-title-clean",
+      "card_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Amonkhet Invocation display; ornamental glyphs outside the word are excluded",
+      "image_path": "docs/gallery/assets/invocation-title.png",
+      "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+      "expected": "DAZE",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        132
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 9.34600830078125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=41.399",
+      "results": {
+        "official_bgr_ort": {
+          "text": "DAZE",
+          "mean_first_emission_posterior": 0.9905185103416443,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "DAZE",
+          "mean_first_emission_posterior": 0.9868136197802004,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "DAZE",
+          "mean_first_emission_posterior": 0.9868138283567839,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "DAZE",
+          "confidence": 0.9871683,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "invocation-title-blur",
+      "card_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Amonkhet Invocation display; ornamental glyphs outside the word are excluded",
+      "image_path": "docs/gallery/assets/invocation-title-blur.png",
+      "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+      "expected": "DAZE",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        128
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 9.5367431640625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=47.021",
+      "results": {
+        "official_bgr_ort": {
+          "text": "BAZE",
+          "mean_first_emission_posterior": 0.9283173382282257,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "BAZE",
+          "mean_first_emission_posterior": 0.8985461118874102,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "BAZE",
+          "mean_first_emission_posterior": 0.8985457110686196,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "BAZE",
+          "confidence": 0.8309283,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "module-title-clean",
+      "card_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+      "language": "en",
+      "severity": "clean",
+      "typography": "D&D module showcase display serif; second printed title line",
+      "image_path": "docs/gallery/assets/module-title.png",
+      "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+      "expected": "Frost Dragon",
+      "expected_characters": 12,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        376
+      ],
+      "output_shape": [
+        47,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.340576171875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[47, 1, 18710] elapsed_ms=50.201",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9999058345953623,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.999925777316844,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.999925826986822,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Frost Dragon",
+          "confidence": 0.99993414,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "module-title-blur",
+      "card_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+      "language": "en",
+      "severity": "severe",
+      "typography": "D&D module showcase display serif; second printed title line",
+      "image_path": "docs/gallery/assets/module-title-blur.png",
+      "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+      "expected": "Frost Dragon",
+      "expected_characters": 12,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        371
+      ],
+      "output_shape": [
+        46,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[46, 1, 18710] elapsed_ms=46.816",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.995995432138443,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9968180309695808,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9968180009364261,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Frost Dragon",
+          "confidence": 0.99841166,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "collector-type-clean",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "clean",
+      "typography": "Small sans-serif collector type; exact family not verified",
+      "image_path": "docs/gallery/assets/collector-type.png",
+      "image_sha256": "055b1a45cf542fa23313729be4b57a2f698b27762547f22fe23a0180a4d22a79",
+      "expected": "052/269 C",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        343
+      ],
+      "output_shape": [
+        43,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.9591064453125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[43, 1, 18710] elapsed_ms=42.651",
+      "results": {
+        "official_bgr_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9852631224526299,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9841665162632521,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9841665687062149,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "052/269 C",
+          "confidence": 0.98320574,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "collector-type-blur",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "language": "en",
+      "severity": "severe",
+      "typography": "Small sans-serif collector type; exact family not verified",
+      "image_path": "docs/gallery/assets/collector-type-blur.png",
+      "image_sha256": "2e311b600935e86b5b8c14d1ee6ce98114f4157629da396c132b071576781a5f",
+      "expected": "052/269 C",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        360
+      ],
+      "output_shape": [
+        45,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 7.43865966796875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[45, 1, 18710] elapsed_ms=46.659",
+      "results": {
+        "official_bgr_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9094123641649882,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9098997808912501,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9098980813501412,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "052/269 C",
+          "confidence": 0.93923634,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    }
+  ]
+}

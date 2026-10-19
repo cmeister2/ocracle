@@ -1,0 +1,1795 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "status": "experimental_not_registered_or_comprehensive",
+  "original_model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "wrapper_model_sha256": "730bd4ee2107ce9afc1da146705d80849c99a3b908ae83010df2b675da75ba3c",
+  "config_template_sha256": "e4064356f1d8d68b8f0c3063caa9948ba46a357f81cad5a689bc10898e0317d5",
+  "cli_sha256": "74c6838e25039ec665094c55a8ae059d884f937685bd7ca191c6c3aae7263e5f",
+  "packages": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "comparison": "NFC plus collapsed whitespace; preserve accents, case and punctuation. No checkpoint fitting/selection. All original-pass results retained.",
+  "confidence_note": "Probe posterior is arithmetic mean of first emission steps; CLI is geometric mean of peak posterior in each emitted run. Both uncalibrated; do not compare as accuracy.",
+  "summary": {
+    "official_bgr_ort": {
+      "all": {
+        "cases": 28,
+        "exact": 24,
+        "character_edits": 5,
+        "characters": 368,
+        "cer": 0.01358695652173913
+      },
+      "severe": {
+        "cases": 14,
+        "exact": 10,
+        "character_edits": 5,
+        "characters": 184,
+        "cer": 0.02717391304347826
+      },
+      "clean": {
+        "cases": 14,
+        "exact": 14,
+        "character_edits": 0,
+        "characters": 184,
+        "cer": 0.0
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 2,
+        "characters": 22,
+        "cer": 0.09090909090909091
+      }
+    },
+    "grayscale_wrapper_ort": {
+      "all": {
+        "cases": 28,
+        "exact": 24,
+        "character_edits": 6,
+        "characters": 368,
+        "cer": 0.016304347826086956
+      },
+      "severe": {
+        "cases": 14,
+        "exact": 10,
+        "character_edits": 6,
+        "characters": 184,
+        "cer": 0.03260869565217391
+      },
+      "clean": {
+        "cases": 14,
+        "exact": 14,
+        "character_edits": 0,
+        "characters": 184,
+        "cer": 0.0
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 3,
+        "characters": 22,
+        "cer": 0.13636363636363635
+      }
+    },
+    "grayscale_wrapper_rten": {
+      "all": {
+        "cases": 28,
+        "exact": 24,
+        "character_edits": 6,
+        "characters": 368,
+        "cer": 0.016304347826086956
+      },
+      "severe": {
+        "cases": 14,
+        "exact": 10,
+        "character_edits": 6,
+        "characters": 184,
+        "cer": 0.03260869565217391
+      },
+      "clean": {
+        "cases": 14,
+        "exact": 14,
+        "character_edits": 0,
+        "characters": 184,
+        "cer": 0.0
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 3,
+        "characters": 22,
+        "cer": 0.13636363636363635
+      }
+    },
+    "actual_cli_wrapper_rten": {
+      "all": {
+        "cases": 28,
+        "exact": 24,
+        "character_edits": 6,
+        "characters": 368,
+        "cer": 0.016304347826086956
+      },
+      "severe": {
+        "cases": 14,
+        "exact": 10,
+        "character_edits": 6,
+        "characters": 184,
+        "cer": 0.03260869565217391
+      },
+      "clean": {
+        "cases": 14,
+        "exact": 14,
+        "character_edits": 0,
+        "characters": 184,
+        "cer": 0.0
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 3,
+        "characters": 22,
+        "cer": 0.13636363636363635
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "ja-opt-title-clean",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-title-clean.png",
+      "image_sha256": "a2cbc5d878f7010746648fae233ed4c9f9b17b54a5fda71b38aa12a7a6418a91",
+      "expected": "選択",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        108
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001430511474609375,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=31.675",
+      "results": {
+        "official_bgr_ort": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9987325966358185,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9980699717639475,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9980699717639475,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "選択",
+          "confidence": 0.9980864,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-opt-title-severe",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-title-severe.png",
+      "image_sha256": "6a0ef534e5dcf4566132b5e391f2a0531c89df30093a24282195cfd96c4eba9c",
+      "expected": "選択",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        106
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.000118255615234375,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=34.472",
+      "results": {
+        "official_bgr_ort": {
+          "text": "退択",
+          "mean_first_emission_posterior": 0.6107761561870575,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "退积",
+          "mean_first_emission_posterior": 0.6537562323608476,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "退积",
+          "mean_first_emission_posterior": 0.6537570943458314,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "退积",
+          "confidence": 0.58230805,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-opt-rules-clean",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-rules-clean.png",
+      "image_sha256": "f358228f481b1f72e10876d67f47b8c11a67e92965d67e0eb0cb293f50d55fc3",
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        299
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.57763671875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=34.517",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9993384149339464,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9991777605449231,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9991777472860043,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カード１枚を引く。",
+          "confidence": 0.9991738,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-opt-rules-severe",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-rules-severe.png",
+      "image_sha256": "1f11b55b2453a6ec4a65330e5780c722e4dcabbcc528025013aca4b803041502",
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        288
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.340576171875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=38.699",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9753244254324172,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9675412441953344,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9675413241659927,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カード1枚を引く。",
+          "confidence": 0.9710352,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "zhs-pack-title-clean",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "language": "zhs",
+      "severity": "clean",
+      "image_path": "training/experimental_paddle/fixtures/zhs-pack-title-clean.png",
+      "image_sha256": "1b19a43b7850e0bf3b0fd16b06d329762597a8c49aaf07d83ac7ae7af4310145",
+      "expected": "集群攻击",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        186
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001010894775390625,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=37.139",
+      "results": {
+        "official_bgr_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9999802112579346,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9999674260619951,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9999674856666785,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "集群攻击",
+          "confidence": 0.9999447,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zhs-pack-title-severe",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "language": "zhs",
+      "severity": "severe",
+      "image_path": "training/experimental_paddle/fixtures/zhs-pack-title-severe.png",
+      "image_sha256": "39deac9c27e54e26eaca2e18aa0e31b09df099f4e28e2361087f828f61085e2e",
+      "expected": "集群攻击",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        183
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 9.72747802734375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=53.094",
+      "results": {
+        "official_bgr_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9998811632394791,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.999800860891211,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9998009204890282,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "集群攻击",
+          "confidence": 0.9999422,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zht-pierce-title-clean",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "language": "zht",
+      "severity": "clean",
+      "image_path": "training/experimental_paddle/fixtures/zht-pierce-title-clean.png",
+      "image_sha256": "4993988c5047a17a2895df66e3f3bf7728503f4c9b28d82030bb96c9ac78db50",
+      "expected": "劃破蒼穹",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        186
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 8.392333984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=75.356",
+      "results": {
+        "official_bgr_ort": {
+          "text": "劃破蒼穹",
+          "mean_first_emission_posterior": 0.996384784579277,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "劃破蒼穹",
+          "mean_first_emission_posterior": 0.9990074038105252,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "劃破蒼穹",
+          "mean_first_emission_posterior": 0.9990074932466069,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "劃破蒼穹",
+          "confidence": 0.999074,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zht-pierce-title-severe",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "language": "zht",
+      "severity": "severe",
+      "image_path": "training/experimental_paddle/fixtures/zht-pierce-title-severe.png",
+      "image_sha256": "bee4737d07328832a356cc4722d65912fdb6a2ed54580e35f57c8a9865835fb4",
+      "expected": "劃破蒼穹",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        183
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.000110626220703125,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=38.042",
+      "results": {
+        "official_bgr_ort": {
+          "text": "割破蒼弯",
+          "mean_first_emission_posterior": 0.9165176004171371,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_ort": {
+          "text": "割破蒼弯",
+          "mean_first_emission_posterior": 0.9060922572535143,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "割破蒼弯",
+          "mean_first_emission_posterior": 0.9060920625489579,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "割破蒼弯",
+          "confidence": 0.9084447,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "latin-fr-fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7-clean",
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "language": "fr",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/fr-m21-47-clean.png",
+      "image_sha256": "06268b6ef0a5e2f60dc3ce49333bbc6527cdb90d7881fd035a691a8b4b633949",
+      "expected": "Sphère de capture",
+      "expected_characters": 17,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        478
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.57763671875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=97.507",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9995650964624742,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9996596329405996,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9996596750162655,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Sphère de capture",
+          "confidence": 0.9997467,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7-severe",
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "language": "fr",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/fr-m21-47-blur.png",
+      "image_sha256": "7b27761165595d0f23d7bc7b8d06006eb1fa95954d63329987f66bda75fce805",
+      "expected": "Sphère de capture",
+      "expected_characters": 17,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        477
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.62396240234375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=85.301",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9987149273647982,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9994063657679616,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9994063517413402,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Sphère de capture",
+          "confidence": 0.99939144,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-4d8605da-d353-40bf-9a94-3bff2bd43d25-clean",
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "language": "fr",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/fr-m21-182-clean.png",
+      "image_sha256": "1fa17565236ee08cb55e5ac5567f0f7a1cde8629eb14109da5c0b5383dfa1001",
+      "expected": "Renaissance fongoïde",
+      "expected_characters": 20,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        478
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.38690185546875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=70.594",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Renaissance fongoïde",
+          "mean_first_emission_posterior": 0.9808376103639602,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Renaissance fongoïde",
+          "mean_first_emission_posterior": 0.9944196163877729,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Renaissance fongoïde",
+          "mean_first_emission_posterior": 0.9944196941003162,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Renaissance fongoïde",
+          "confidence": 0.99417573,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-4d8605da-d353-40bf-9a94-3bff2bd43d25-severe",
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "language": "fr",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/fr-m21-182-blur.png",
+      "image_sha256": "7a1f75d245fc8887ed76e9bd70b9c43588cb054affa0063d6d15d1c866407993",
+      "expected": "Renaissance fongoïde",
+      "expected_characters": 20,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        477
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.53131103515625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=75.509",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Renaissance fongoide",
+          "mean_first_emission_posterior": 0.9890545666217804,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Renaissance fongoide",
+          "mean_first_emission_posterior": 0.9877287758727038,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Renaissance fongoide",
+          "mean_first_emission_posterior": 0.9877286882463847,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Renaissance fongoide",
+          "confidence": 0.98823607,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "latin-de-2936555e-4ee7-4c91-9e3b-39be058c4efb-clean",
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "language": "de",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/de-m21-25-clean.png",
+      "image_sha256": "8b41dc57c1362b9d52eb1874300b9cc12131f38c0a447f1c81cb796334cc7e7e",
+      "expected": "Licht der Verheißung",
+      "expected_characters": 20,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        478
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0004444122314453125,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=66.807",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9900724500417709,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9981733471124141,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9981733649996366,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Licht der Verheißung",
+          "confidence": 0.9995957,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-2936555e-4ee7-4c91-9e3b-39be058c4efb-severe",
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "language": "de",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/de-m21-25-blur.png",
+      "image_sha256": "c7bf587835b79fd978bddd94fe9b23795dcf7566505aefd6beadeaea7a8f1af4",
+      "expected": "Licht der Verheißung",
+      "expected_characters": 20,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        477
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.62396240234375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=88.496",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9962123245000839,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9956390861846638,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9956391185948863,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Licht der Verheißung",
+          "confidence": 0.99547637,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-1cfb7471-be1f-4896-83dc-ee7a9f76f9cb-clean",
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "language": "de",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/de-m21-179-clean.png",
+      "image_sha256": "7b4dc8f3ecb9ed37e4fbfd78fb551c58eff79029ae906574e5c9aa4f063f2744",
+      "expected": "Gargaroth-Ältester",
+      "expected_characters": 18,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.7220458984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=58.404",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9993669026427798,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9994787904858209,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9994787772461439,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Gargaroth-Ältester",
+          "confidence": 0.999491,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-1cfb7471-be1f-4896-83dc-ee7a9f76f9cb-severe",
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "language": "de",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/de-m21-179-blur.png",
+      "image_sha256": "e26648ae7277da435b7f2f09a7cdf673dade719024374df82c8b4160a20df51f",
+      "expected": "Gargaroth-Ältester",
+      "expected_characters": 18,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.76837158203125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=53.923",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9911748733785417,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9931305219064122,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9931305381555438,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Gargaroth-Ältester",
+          "confidence": 0.99314433,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-24c69413-6402-49b1-ba8e-d22f7310aca7-clean",
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "language": "es",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/es-m21-8-clean.png",
+      "image_sha256": "3e4d22895cf8b449bc3eb850082a61e0ac157b0518e0f0c757e40334c81c2be3",
+      "expected": "Acólita de Basri",
+      "expected_characters": 16,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.14984130859375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=71.069",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9987124763429165,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9993029423015195,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9993029646603222,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Acólita de Basri",
+          "confidence": 0.9991761,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-24c69413-6402-49b1-ba8e-d22f7310aca7-severe",
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "language": "es",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/es-m21-8-blur.png",
+      "image_sha256": "0cc3de32663f5ecab4d1f20cab4846d7fe0758f8513d8803fdefe6c99160c074",
+      "expected": "Acólita de Basri",
+      "expected_characters": 16,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=49.591",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9986092895269394,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9988761954123425,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9988762252038913,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Acólita de Basri",
+          "confidence": 0.9989561,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-7142df39-9c9c-4821-8f73-06b5dc3f8fc3-clean",
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "language": "es",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/es-m21-198-clean.png",
+      "image_sha256": "c92316b95c60938814a41b6ccb464fe0626e1c658c3d4d4a6a8402bd5ecee5b4",
+      "expected": "Dríada Quirion",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        478
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.14984130859375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=68.132",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9919362919671195,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9990225604236371,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9990225945362018,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Dríada Quirion",
+          "confidence": 0.99897075,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-7142df39-9c9c-4821-8f73-06b5dc3f8fc3-severe",
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "language": "es",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/es-m21-198-blur.png",
+      "image_sha256": "688536152d0c1ec53e046c21b97054e87795703de21a9acb81cc44bb5894ac4a",
+      "expected": "Dríada Quirion",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        477
+      ],
+      "output_shape": [
+        60,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.4332275390625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[60, 1, 18710] elapsed_ms=52.315",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9848375405584063,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9441011457349404,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9441013796982919,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Dríada Quirion",
+          "confidence": 0.964951,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-a8048f57-b854-45a5-90cd-263666322d92-clean",
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "language": "pt",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/pt-m21-57-clean.png",
+      "image_sha256": "c6b380758e2228c9495bf0cb9561a5c188931a79437002441b8f4bf1b804cd04",
+      "expected": "Falha na Conjuração",
+      "expected_characters": 19,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        507
+      ],
+      "output_shape": [
+        63,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.7220458984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[63, 1, 18710] elapsed_ms=68.431",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9996034785320884,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9993236660675426,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.999323659793639,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Falha na Conjuração",
+          "confidence": 0.99937755,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-a8048f57-b854-45a5-90cd-263666322d92-severe",
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "language": "pt",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/pt-m21-57-blur.png",
+      "image_sha256": "056d5f8ab10460de12354de9cdc5357dc3c0d7c817f96aa68ad60ac52d7ce894",
+      "expected": "Falha na Conjuração",
+      "expected_characters": 19,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        506
+      ],
+      "output_shape": [
+        63,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.00543212890625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[63, 1, 18710] elapsed_ms=48.467",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9893974724568819,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9907146125859563,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9907145657441744,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Falha na Conjuração",
+          "confidence": 0.999687,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-83a67403-ce23-474a-89ed-2df863fae9b7-clean",
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "language": "pt",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/pt-m21-118-clean.png",
+      "image_sha256": "444bd8838cbe11c0befcc46f8adc7f6996561be20d20f1bb24f91048b4d9ff79",
+      "expected": "Névoa Pestilenta",
+      "expected_characters": 16,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.57763671875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=67.576",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9964838586747646,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9965603202457594,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9965603464284194,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Névoa Pestilenta",
+          "confidence": 0.9974338,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-83a67403-ce23-474a-89ed-2df863fae9b7-severe",
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "language": "pt",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/pt-m21-118-blur.png",
+      "image_sha256": "b09d493b73cbb3ca8543f912b307dff6ef1d33198e803175861d84ad9674c5bd",
+      "expected": "Névoa Pestilenta",
+      "expected_characters": 16,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.62396240234375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=57.529",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9896562844514847,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.989073057364071,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9890730750801198,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Névoa Pestilenta",
+          "confidence": 0.98994374,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-a4b2c277-d9ae-4d53-80b1-48c6e89f9108-clean",
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "language": "it",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/it-m14-66-clean.png",
+      "image_sha256": "f20cd6f07778a9170e23fcc8da5b2928342add9b0fbb4d51d32c134a8f83b5d1",
+      "expected": "Opportunità",
+      "expected_characters": 11,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        238
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 7.43865966796875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=48.065",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9992831132628701,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9989196279065538,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9989195736858708,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Opportunità",
+          "confidence": 0.99897856,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-a4b2c277-d9ae-4d53-80b1-48c6e89f9108-severe",
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "language": "it",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/it-m14-66-blur.png",
+      "image_sha256": "da55b8caacc7a2cd0b68708d411df8bf529414d7766dbf145c9efca5f0d1679e",
+      "expected": "Opportunità",
+      "expected_characters": 11,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        237
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 8.654594421386719e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=40.689",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9996012666008689,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9992999759442385,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9992999651082208,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Opportunità",
+          "confidence": 0.9993945,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-6a339bc4-7e81-4177-9db6-61344d5c68e3-clean",
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "language": "it",
+      "severity": "clean",
+      "image_path": "training/latin-eval/images/it-akh-84-clean.png",
+      "image_sha256": "a30df030a4e766a1f87feec9aac4cf64dae2458b64b5302440217e0166a35a5c",
+      "expected": "Crudele Realtà",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.814697265625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=55.980",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9991553808961596,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9989265416575515,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9989265033126602,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Crudele Realtà",
+          "confidence": 0.9990217,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-6a339bc4-7e81-4177-9db6-61344d5c68e3-severe",
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "language": "it",
+      "severity": "severe",
+      "image_path": "training/latin-eval/images/it-akh-84-blur.png",
+      "image_sha256": "9ce42df25d2e9128c815f432aed48f5dbd3dbb45e018fef046041a96b7125d34",
+      "expected": "Crudele Realtà",
+      "expected_characters": 14,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        448
+      ],
+      "output_shape": [
+        56,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 3.0517578125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[56, 1, 18710] elapsed_ms=51.658",
+      "results": {
+        "official_bgr_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9987182659762246,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.99898176958944,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9989818036477945,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "Crudele Realtà",
+          "confidence": 0.99865365,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    }
+  ]
+}

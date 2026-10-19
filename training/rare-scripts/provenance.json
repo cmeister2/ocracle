@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "cards_sha256": "170ab60f098fb66a1c57ffeea3a51e39f3efa79b7f2cd55ddcf156fe9958441b",
+  "annotations_sha256": "4507ce583d136139a2c7e4f4ea945fcbaf970ded11269127bba83298e1b17dc3",
+  "pillow_version": "13.0.0",
+  "observations": 26,
+  "source_images": 5,
+  "damage": "Gaussian sigma2.4 native pixels, then 30% bilinear downsample; no transcript simplification",
+  "split_policy": "Explicit singleton/rare-language holdouts override nominal card-name hash partitions; excluded from all project training/selection corpora",
+  "comparison": "NFC and collapsed whitespace only; Hebrew FB20 wide ayin mapped explicitly in the annotation to logical U+05E2. No general compatibility folding or mark stripping.",
+  "rights": "Wizards of the Coast card imagery/text, Scryfall scans/metadata; not covered by source-code MIT license",
+  "pretraining_note": "Generic upstream OCR pretraining membership is unknown; project training exclusion is verified"
+}

@@ -33,10 +33,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--checkpoint', action='store_true', help='Also fetch training checkpoint')
     args = parser.parse_args()
-    for item in json.loads((ROOT / 'models/manifest.json').read_text())['upstream_models']:
-        if item.get('training_only') and not args.checkpoint:
-            continue
-        fetch(item['url'], ROOT / item['path'], item['sha256'])
+    for manifest in ['models/manifest.json', 'models/paddle-v6-manifest.json']:
+        for item in json.loads((ROOT / manifest).read_text())['upstream_models']:
+            if item.get('training_only') and not args.checkpoint:
+                continue
+            fetch(item['url'], ROOT / item['path'], item['sha256'])
 
 
 if __name__ == '__main__':

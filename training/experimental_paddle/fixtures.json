@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "oracle_id": "713332c1-5bd8-400f-bfff-c1ca0697a043",
+      "name": "Opt",
+      "lang": "ja",
+      "set": "j25",
+      "collector_number": "339",
+      "printed_name": "選択",
+      "printed_text": "占術１を行う。（あなたのライブラリーの一番上にあるカード１枚を見る。そのカードを一番下に置いてもよい。）\nカード１枚を引く。",
+      "source_url": "https://cards.scryfall.io/png/front/2/6/2607d870-4995-489f-b5f9-76999a45958d.png?1782780387",
+      "metadata_url": "https://api.scryfall.com/cards/2607d870-4995-489f-b5f9-76999a45958d",
+      "source_sha256": "ee8a376e6e09933dbef45eb32532cafd76f9cef6645ff1eb03cd1f4bb883ac24",
+      "image_status": "highres_scan",
+      "source_size": [
+        745,
+        1040
+      ],
+      "manual_review": "Visible title/rules glyphs inspected against source pixels; exact NFC localized metadata, no English fallback.",
+      "title_ruby_policy": "Exclude Japanese title furigana from main-title crop; ruby is a separate annotation and untested."
+    },
+    {
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "oracle_id": "84b385cd-9dfd-4513-af3c-20fc1cc8fea0",
+      "name": "Pack Attack",
+      "lang": "zhs",
+      "set": "clb",
+      "collector_number": "190",
+      "printed_name": "集群攻击",
+      "printed_text": "进行攻击的生物得+X/+0直到回合结束，X为受攻击的牌手数量。\n抓一张牌。",
+      "source_url": "https://cards.scryfall.io/png/front/b/c/bc588865-43e7-4f41-a002-cff30ee8dcdb.png?1782852482",
+      "metadata_url": "https://api.scryfall.com/cards/bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "source_sha256": "39e1f154123e0d76680fa4b710d8225891f2f956ec131b4ab7f33812890e3ae0",
+      "image_status": "lowres",
+      "source_size": [
+        745,
+        1040
+      ],
+      "manual_review": "Visible title/rules glyphs inspected against source pixels; exact NFC localized metadata, no English fallback.",
+      "title_ruby_policy": null
+    },
+    {
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "oracle_id": "7e4504c1-4349-408d-8fdf-0c44efdd3f56",
+      "name": "Pierce the Sky",
+      "lang": "zht",
+      "set": "dom",
+      "collector_number": "176",
+      "printed_name": "劃破蒼穹",
+      "printed_text": "劃破蒼穹對目標具飛行異能的生物造成7點傷害。",
+      "source_url": "https://cards.scryfall.io/png/front/1/b/1bf0483c-4098-4f39-b2ef-c0b3a747d9e4.png?1782932722",
+      "metadata_url": "https://api.scryfall.com/cards/1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "source_sha256": "c19367b915244b62405cdfd99c07b1c3d7d2f85f08e785d04308b70de27e276b",
+      "image_status": "lowres",
+      "source_size": [
+        745,
+        1040
+      ],
+      "manual_review": "Visible title/rules glyphs inspected against source pixels; exact NFC localized metadata, no English fallback.",
+      "title_ruby_policy": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "ja-opt-title-clean",
+      "path": "fixtures/ja-opt-title-clean.png",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "lang": "ja",
+      "bbox": [
+        59,
+        72,
+        131,
+        104
+      ],
+      "text": "選択",
+      "metadata_field": "printed_name",
+      "severity": "clean",
+      "sha256": "a2cbc5d878f7010746648fae233ed4c9f9b17b54a5fda71b38aa12a7a6418a91",
+      "size": [
+        72,
+        32
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "ja-opt-title-severe",
+      "path": "fixtures/ja-opt-title-severe.png",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "lang": "ja",
+      "bbox": [
+        59,
+        72,
+        131,
+        104
+      ],
+      "text": "選択",
+      "metadata_field": "printed_name",
+      "severity": "severe",
+      "sha256": "6a0ef534e5dcf4566132b5e391f2a0531c89df30093a24282195cfd96c4eba9c",
+      "size": [
+        22,
+        10
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "ja-opt-rules-clean",
+      "path": "fixtures/ja-opt-rules-clean.png",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "lang": "ja",
+      "bbox": [
+        61,
+        787,
+        322,
+        829
+      ],
+      "text": "カード１枚を引く。",
+      "metadata_field": "printed_text",
+      "severity": "clean",
+      "sha256": "f358228f481b1f72e10876d67f47b8c11a67e92965d67e0eb0cb293f50d55fc3",
+      "size": [
+        261,
+        42
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "ja-opt-rules-severe",
+      "path": "fixtures/ja-opt-rules-severe.png",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "lang": "ja",
+      "bbox": [
+        61,
+        787,
+        322,
+        829
+      ],
+      "text": "カード１枚を引く。",
+      "metadata_field": "printed_text",
+      "severity": "severe",
+      "sha256": "1f11b55b2453a6ec4a65330e5780c722e4dcabbcc528025013aca4b803041502",
+      "size": [
+        78,
+        13
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "zhs-pack-title-clean",
+      "path": "fixtures/zhs-pack-title-clean.png",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "lang": "zhs",
+      "bbox": [
+        61,
+        55,
+        250,
+        104
+      ],
+      "text": "集群攻击",
+      "metadata_field": "printed_name",
+      "severity": "clean",
+      "sha256": "1b19a43b7850e0bf3b0fd16b06d329762597a8c49aaf07d83ac7ae7af4310145",
+      "size": [
+        189,
+        49
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "zhs-pack-title-severe",
+      "path": "fixtures/zhs-pack-title-severe.png",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "lang": "zhs",
+      "bbox": [
+        61,
+        55,
+        250,
+        104
+      ],
+      "text": "集群攻击",
+      "metadata_field": "printed_name",
+      "severity": "severe",
+      "sha256": "39deac9c27e54e26eaca2e18aa0e31b09df099f4e28e2361087f828f61085e2e",
+      "size": [
+        57,
+        15
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "zht-pierce-title-clean",
+      "path": "fixtures/zht-pierce-title-clean.png",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "lang": "zht",
+      "bbox": [
+        61,
+        55,
+        250,
+        104
+      ],
+      "text": "劃破蒼穹",
+      "metadata_field": "printed_name",
+      "severity": "clean",
+      "sha256": "4993988c5047a17a2895df66e3f3bf7728503f4c9b28d82030bb96c9ac78db50",
+      "size": [
+        189,
+        49
+      ],
+      "manual_reviewed_clean_source": true
+    },
+    {
+      "id": "zht-pierce-title-severe",
+      "path": "fixtures/zht-pierce-title-severe.png",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "lang": "zht",
+      "bbox": [
+        61,
+        55,
+        250,
+        104
+      ],
+      "text": "劃破蒼穹",
+      "metadata_field": "printed_name",
+      "severity": "severe",
+      "sha256": "bee4737d07328832a356cc4722d65912fdb6a2ed54580e35f57c8a9865835fb4",
+      "size": [
+        57,
+        15
+      ],
+      "manual_reviewed_clean_source": true
+    }
+  ],
+  "degradation": {
+    "severe": {
+      "gaussian_sigma_source_pixels": 2.4,
+      "linear_scale": 0.3,
+      "resample": "Pillow BILINEAR",
+      "pillow_version": "13.0.0"
+    }
+  }
+}

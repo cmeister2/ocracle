@@ -1,0 +1,1453 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "status": "experimental_not_registered_or_comprehensive",
+  "hebrew_model": "mobile",
+  "fixture_manifest_sha256": "686be641f465f0b718a19d513e5c7102bca5d3144101c3a2863a66b6f99d060b",
+  "model_inventory_sha256": "0142886a33d033b39b75600d7adbfd04764213263d5206229c64398094d1c6a1",
+  "rten_version": "0.26.0",
+  "packages": {
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "scoring": "NFC plus collapsed whitespace; no mark stripping, no ASCII folding or speculative ligature replacement.",
+  "summary": {
+    "grc": {
+      "cases": 4,
+      "exact": 0,
+      "character_edits": 15,
+      "reference_characters": 110,
+      "rten_successful_cases": 4
+    },
+    "ar": {
+      "cases": 4,
+      "exact": 0,
+      "character_edits": 23,
+      "reference_characters": 88,
+      "rten_successful_cases": 4
+    },
+    "sa": {
+      "cases": 6,
+      "exact": 1,
+      "character_edits": 24,
+      "reference_characters": 62,
+      "rten_successful_cases": 6
+    },
+    "he": {
+      "cases": 6,
+      "exact": 0,
+      "character_edits": 35,
+      "reference_characters": 60,
+      "rten_successful_cases": 6
+    },
+    "la": {
+      "cases": 6,
+      "exact": 3,
+      "character_edits": 5,
+      "reference_characters": 98,
+      "rten_successful_cases": 6
+    }
+  },
+  "records": [
+    {
+      "id": "he-title",
+      "path": "images/he-title-clean.png",
+      "text": "תהילה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "901eb2a5c69cfd46aebaea10ee7d27c66e156068330588fea0dc7f0b0c9aa38c",
+      "dimensions": [
+        133,
+        64
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        112
+      ],
+      "output_shape": [
+        1,
+        14,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "תיל",
+        "mean_first_emission_posterior": 0.74452010790507
+      },
+      "logical_text": "תיל",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 5,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 14, 122] elapsed_ms=30.561\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.516674041748047e-06,
+        "identical_argmax": true,
+        "raw_text": "תיל"
+      }
+    },
+    {
+      "id": "he-title",
+      "path": "images/he-title-severe.png",
+      "text": "תהילה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c7ab8045036d778e72771b87c11f5b38f4abe17cb98bd6c3e1a47eebabe2e004",
+      "dimensions": [
+        40,
+        19
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        112
+      ],
+      "output_shape": [
+        1,
+        14,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "תילה",
+        "mean_first_emission_posterior": 0.7617265582084656
+      },
+      "logical_text": "תילה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 1,
+      "reference_characters": 5,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 14, 122] elapsed_ms=34.290\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.6954879760742188e-06,
+        "identical_argmax": true,
+        "raw_text": "תילה"
+      }
+    },
+    {
+      "id": "he-type",
+      "path": "images/he-type-clean.png",
+      "text": "יצור — התגלמות",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "562dec64a35a7f96818f691470c14d3cfb4a2608eb08acd0681a3b11385d9afc",
+      "dimensions": [
+        309,
+        37
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        416
+      ],
+      "output_shape": [
+        1,
+        52,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "—"
+      ],
+      "raw_ort": {
+        "text": "ת",
+        "mean_first_emission_posterior": 0.5778752565383911
+      },
+      "logical_text": "ת",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 13,
+      "reference_characters": 14,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 52, 122] elapsed_ms=51.239\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.996755599975586e-06,
+        "identical_argmax": true,
+        "raw_text": "ת"
+      }
+    },
+    {
+      "id": "he-type",
+      "path": "images/he-type-severe.png",
+      "text": "יצור — התגלמות",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c588de66c719157fa74e8983d6af7d35d3cf3a75e9038dadf75c770047b78954",
+      "dimensions": [
+        93,
+        11
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        416
+      ],
+      "output_shape": [
+        1,
+        52,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "—"
+      ],
+      "raw_ort": {
+        "text": "7rd-",
+        "mean_first_emission_posterior": 0.7254452556371689
+      },
+      "logical_text": "7rd-",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 14,
+      "reference_characters": 14,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 52, 122] elapsed_ms=49.023\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 5.662441253662109e-06,
+        "identical_argmax": true,
+        "raw_text": "7rd-"
+      }
+    },
+    {
+      "id": "he-rules",
+      "path": "images/he-rules-clean.png",
+      "text": "יכולת תעופה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "rules",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "075624aca68f36d35b17f667f2ecdffcd3c7ec1d83c99dedae751c7ded3c223d",
+      "dimensions": [
+        199,
+        38
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        256
+      ],
+      "output_shape": [
+        1,
+        32,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "יכולתעופה",
+        "mean_first_emission_posterior": 0.7812343504693773
+      },
+      "logical_text": "יכולתעופה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 32, 122] elapsed_ms=40.286\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 6.258487701416016e-06,
+        "identical_argmax": true,
+        "raw_text": "יכולתעופה"
+      }
+    },
+    {
+      "id": "he-rules",
+      "path": "images/he-rules-severe.png",
+      "text": "יכולת תעופה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "rules",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c827475140fc1ac6491f3d6dca984aa75b869f1077404650bec6aed587df6e7a",
+      "dimensions": [
+        60,
+        11
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9",
+      "input_shape": [
+        1,
+        3,
+        48,
+        272
+      ],
+      "output_shape": [
+        1,
+        34,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "יכולתופה",
+        "mean_first_emission_posterior": 0.7314162999391556
+      },
+      "logical_text": "יכולתופה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 34, 122] elapsed_ms=43.042\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 8.344650268554688e-06,
+        "identical_argmax": true,
+        "raw_text": "יכולתופה"
+      }
+    },
+    {
+      "id": "la-title",
+      "path": "images/la-title-clean.png",
+      "text": "Kavu Furens",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "a6c724104a4490f4408753c4b7918583021b85a96db05cd9bda9d26f1e122062",
+      "dimensions": [
+        210,
+        56
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "Kavu Furens",
+        "mean_first_emission_posterior": 0.9948742118748751
+      },
+      "logical_text": "Kavu Furens",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 18710] elapsed_ms=45.394\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.5795230865478516e-06,
+        "identical_argmax": true,
+        "raw_text": "Kavu Furens"
+      }
+    },
+    {
+      "id": "la-title",
+      "path": "images/la-title-severe.png",
+      "text": "Kavu Furens",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "d60d4477f689c986754b1013c62933d9f57968496c51f6a22c726a7b4686f7d3",
+      "dimensions": [
+        63,
+        17
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "Kavu Furens",
+        "mean_first_emission_posterior": 0.9563896710222418
+      },
+      "logical_text": "Kavu Furens",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 18710] elapsed_ms=39.593\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 8.940696716308594e-07,
+        "identical_argmax": true,
+        "raw_text": "Kavu Furens"
+      }
+    },
+    {
+      "id": "la-type",
+      "path": "images/la-type-clean.png",
+      "text": "Animal - Kavu",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "1cb2d2989534f30abb9f65b5c76c4fbac32d33d8e44f655c78e6b1ffaadcf099",
+      "dimensions": [
+        274,
+        36
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        366
+      ],
+      "output_shape": [
+        1,
+        46,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "Animal -Kavu",
+        "mean_first_emission_posterior": 0.9707407703002294
+      },
+      "logical_text": "Animal -Kavu",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 1,
+      "reference_characters": 13,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 46, 18710] elapsed_ms=45.144\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.129243850708008e-06,
+        "identical_argmax": true,
+        "raw_text": "Animal -Kavu"
+      }
+    },
+    {
+      "id": "la-type",
+      "path": "images/la-type-severe.png",
+      "text": "Animal - Kavu",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "1c597633bf2776c043c7b08619a3e739fa626dc1076a9141d091e6e2e2514dab",
+      "dimensions": [
+        82,
+        11
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        358
+      ],
+      "output_shape": [
+        1,
+        45,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "Animal -Kava",
+        "mean_first_emission_posterior": 0.9307761639356613
+      },
+      "logical_text": "Animal -Kava",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 13,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 45, 18710] elapsed_ms=41.987\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.950429916381836e-06,
+        "identical_argmax": true,
+        "raw_text": "Animal -Kava"
+      }
+    },
+    {
+      "id": "la-reminder",
+      "path": "images/la-reminder-clean.png",
+      "text": "ordine penes tuum venit.)",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "reminder",
+      "italic": true,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "0282645d2f57103cd3f9a5b39d01cbdcf12f97fd2f2af58f11091f9832862f15",
+      "dimensions": [
+        350,
+        32
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        525
+      ],
+      "output_shape": [
+        1,
+        66,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "ordine penes tuum venit.)",
+        "mean_first_emission_posterior": 0.9907195544242859
+      },
+      "logical_text": "ordine penes tuum venit.)",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 25,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 66, 18710] elapsed_ms=44.108\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.6093254089355469e-06,
+        "identical_argmax": true,
+        "raw_text": "ordine penes tuum venit.)"
+      }
+    },
+    {
+      "id": "la-reminder",
+      "path": "images/la-reminder-severe.png",
+      "text": "ordine penes tuum venit.)",
+      "language": "la",
+      "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "card_name": "Raging Kavu",
+      "role": "reminder",
+      "italic": true,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "401af04970c9756d476ffbd2eb5e2fff338808e977ff5fe30827bf81af35e4c9",
+      "dimensions": [
+        105,
+        10
+      ],
+      "probe_model": "v6",
+      "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "input_shape": [
+        1,
+        3,
+        48,
+        504
+      ],
+      "output_shape": [
+        1,
+        63,
+        18710
+      ],
+      "dictionary_characters_including_space": 18709,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "ordine penes tum tenit.)",
+        "mean_first_emission_posterior": 0.9055078402161598
+      },
+      "logical_text": "ordine penes tum tenit.)",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 25,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 63, 18710] elapsed_ms=42.382\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 4.887580871582031e-06,
+        "identical_argmax": true,
+        "raw_text": "ordine penes tum tenit.)"
+      }
+    },
+    {
+      "id": "grc-title",
+      "path": "images/grc-title-clean.png",
+      "text": "Κλεοπάτρα, Ἐξόριστος Φαραώ",
+      "language": "grc",
+      "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+      "card_name": "Cleopatra, Exiled Pharaoh",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "6ad676e9398efa2d2c97553c4a2b136c3e290663563c778fdfa3c50b2e0da33e",
+      "dimensions": [
+        470,
+        61
+      ],
+      "probe_model": "el",
+      "model_sha256": "2acf17fcaea2bc81b878e311e6263b8885f48bb03796f75f9f30ed3242bbaa6d",
+      "input_shape": [
+        1,
+        3,
+        48,
+        370
+      ],
+      "output_shape": [
+        1,
+        46,
+        356
+      ],
+      "dictionary_characters_including_space": 355,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "Ἐ"
+      ],
+      "raw_ort": {
+        "text": "Κλεοπάτρα, Εξόριστος Φαραώ",
+        "mean_first_emission_posterior": 0.9486319101773776
+      },
+      "logical_text": "Κλεοπάτρα, Εξόριστος Φαραώ",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 1,
+      "reference_characters": 26,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 46, 356] elapsed_ms=48.467\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.516674041748047e-06,
+        "identical_argmax": true,
+        "raw_text": "Κλεοπάτρα, Εξόριστος Φαραώ"
+      }
+    },
+    {
+      "id": "grc-title",
+      "path": "images/grc-title-severe.png",
+      "text": "Κλεοπάτρα, Ἐξόριστος Φαραώ",
+      "language": "grc",
+      "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+      "card_name": "Cleopatra, Exiled Pharaoh",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "77930d7be1c22506485e33295ff97f5f7c2b99d3228360fd2ca156c18c2bedea",
+      "dimensions": [
+        141,
+        18
+      ],
+      "probe_model": "el",
+      "model_sha256": "2acf17fcaea2bc81b878e311e6263b8885f48bb03796f75f9f30ed3242bbaa6d",
+      "input_shape": [
+        1,
+        3,
+        48,
+        376
+      ],
+      "output_shape": [
+        1,
+        47,
+        356
+      ],
+      "dictionary_characters_including_space": 355,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "Ἐ"
+      ],
+      "raw_ort": {
+        "text": "Κλεοπάτρα, Εξόιστος Φαραώ",
+        "mean_first_emission_posterior": 0.8608355283737182
+      },
+      "logical_text": "Κλεοπάτρα, Εξόιστος Φαραώ",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 26,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 47, 356] elapsed_ms=47.392\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.0265579223632812e-05,
+        "identical_argmax": true,
+        "raw_text": "Κλεοπάτρα, Εξόιστος Φαραώ"
+      }
+    },
+    {
+      "id": "grc-type",
+      "path": "images/grc-type-clean.png",
+      "text": "Μυθικὸν ὄν — Ἄνθρωπος Εὐγενής",
+      "language": "grc",
+      "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+      "card_name": "Cleopatra, Exiled Pharaoh",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "2cad4a2486a5e85e506f998501c057b71f7f9644cdffcfdea09440711ea15b6d",
+      "dimensions": [
+        526,
+        43
+      ],
+      "probe_model": "el",
+      "model_sha256": "2acf17fcaea2bc81b878e311e6263b8885f48bb03796f75f9f30ed3242bbaa6d",
+      "input_shape": [
+        1,
+        3,
+        48,
+        588
+      ],
+      "output_shape": [
+        1,
+        73,
+        356
+      ],
+      "dictionary_characters_including_space": 355,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "Ἄ",
+        "ὄ",
+        "ὐ",
+        "ὸ",
+        "—"
+      ],
+      "raw_ort": {
+        "text": "Μυθικόν ν - Άνθρωπος Εύγενής",
+        "mean_first_emission_posterior": 0.9622555396386555
+      },
+      "logical_text": "Μυθικόν ν - Άνθρωπος Εύγενής",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 5,
+      "reference_characters": 29,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 73, 356] elapsed_ms=59.066\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.5795230865478516e-06,
+        "identical_argmax": true,
+        "raw_text": "Μυθικόν ν - Άνθρωπος Εύγενής"
+      }
+    },
+    {
+      "id": "grc-type",
+      "path": "images/grc-type-severe.png",
+      "text": "Μυθικὸν ὄν — Ἄνθρωπος Εὐγενής",
+      "language": "grc",
+      "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+      "card_name": "Cleopatra, Exiled Pharaoh",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "16b90b483de83a50dbcccc079a63819490bbf7c5e1a347dc735e1b1330ad5d72",
+      "dimensions": [
+        158,
+        13
+      ],
+      "probe_model": "el",
+      "model_sha256": "2acf17fcaea2bc81b878e311e6263b8885f48bb03796f75f9f30ed3242bbaa6d",
+      "input_shape": [
+        1,
+        3,
+        48,
+        584
+      ],
+      "output_shape": [
+        1,
+        73,
+        356
+      ],
+      "dictionary_characters_including_space": 355,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "Ἄ",
+        "ὄ",
+        "ὐ",
+        "ὸ",
+        "—"
+      ],
+      "raw_ort": {
+        "text": "Μυθικόν ον - Ανθροπος Εύγενς",
+        "mean_first_emission_posterior": 0.7402724102139473
+      },
+      "logical_text": "Μυθικόν ον - Ανθροπος Εύγενς",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 7,
+      "reference_characters": 29,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 73, 356] elapsed_ms=62.444\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.86102294921875e-06,
+        "identical_argmax": true,
+        "raw_text": "Μυθικόν ον - Ανθροπος Εύγενς"
+      }
+    },
+    {
+      "id": "ar-title",
+      "path": "images/ar-title-clean.png",
+      "text": "باسلْ ليسك – الحجر واللسان",
+      "language": "ar",
+      "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+      "card_name": "Stone-Tongue Basilisk",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "060ddb2e6c4e9bcac5d6db4a1a6a5dadd963bed6de4b818f05342eee7d40d37e",
+      "dimensions": [
+        390,
+        57
+      ],
+      "probe_model": "arabic",
+      "model_sha256": "799113ebf267fbe742deb99eb36e8d42c9ddc5291ceacf92add41b4d52a59110",
+      "input_shape": [
+        1,
+        3,
+        48,
+        329
+      ],
+      "output_shape": [
+        1,
+        41,
+        749
+      ],
+      "dictionary_characters_including_space": 748,
+      "dictionary_duplicate_entries": 31,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "ناسللاو رجحلا كسيل لساب",
+        "mean_first_emission_posterior": 0.8700293872667395
+      },
+      "logical_text": "باسل ليسك الحجر واللسان",
+      "logical_postprocess": "Paddle Arabic group reversal; raw output preserved",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 26,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 41, 749] elapsed_ms=43.056\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 4.1425228118896484e-06,
+        "identical_argmax": true,
+        "raw_text": "ناسللاو رجحلا كسيل لساب"
+      }
+    },
+    {
+      "id": "ar-title",
+      "path": "images/ar-title-severe.png",
+      "text": "باسلْ ليسك – الحجر واللسان",
+      "language": "ar",
+      "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+      "card_name": "Stone-Tongue Basilisk",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "88b304af0baa812daf71e535a63c9a137e1f70a0003ace016a98874c966e420f",
+      "dimensions": [
+        117,
+        17
+      ],
+      "probe_model": "arabic",
+      "model_sha256": "799113ebf267fbe742deb99eb36e8d42c9ddc5291ceacf92add41b4d52a59110",
+      "input_shape": [
+        1,
+        3,
+        48,
+        331
+      ],
+      "output_shape": [
+        1,
+        41,
+        749
+      ],
+      "dictionary_characters_including_space": 748,
+      "dictionary_duplicate_entries": 31,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "ناسلا ورحخأ كسيلوسا",
+        "mean_first_emission_posterior": 0.609183658110468
+      },
+      "logical_text": "اسوليسك أخحرو السان",
+      "logical_postprocess": "Paddle Arabic group reversal; raw output preserved",
+      "exact": false,
+      "character_edits": 12,
+      "reference_characters": 26,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 41, 749] elapsed_ms=46.246\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 7.539987564086914e-06,
+        "identical_argmax": true,
+        "raw_text": "ناسلا ورحخأ كسيلوسا"
+      }
+    },
+    {
+      "id": "ar-type",
+      "path": "images/ar-type-clean.png",
+      "text": "مخلوق – باسلْ ليسك",
+      "language": "ar",
+      "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+      "card_name": "Stone-Tongue Basilisk",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "6e1d459d2308fd4c7ff91461c669f36b9edeb42114fed11c47eaeab97868f044",
+      "dimensions": [
+        290,
+        44
+      ],
+      "probe_model": "arabic",
+      "model_sha256": "799113ebf267fbe742deb99eb36e8d42c9ddc5291ceacf92add41b4d52a59110",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        749
+      ],
+      "dictionary_characters_including_space": 748,
+      "dictionary_duplicate_entries": 31,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "كسيل لساب  قولخم",
+        "mean_first_emission_posterior": 0.8692930229008198
+      },
+      "logical_text": "مخلوق  باسل ليسك",
+      "logical_postprocess": "Paddle Arabic group reversal; raw output preserved",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 18,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 749] elapsed_ms=49.242\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.874301910400391e-06,
+        "identical_argmax": true,
+        "raw_text": "كسيل لساب  قولخم"
+      }
+    },
+    {
+      "id": "ar-type",
+      "path": "images/ar-type-severe.png",
+      "text": "مخلوق – باسلْ ليسك",
+      "language": "ar",
+      "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+      "card_name": "Stone-Tongue Basilisk",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "d3c27b7454957fc40bdb3504bfb6f659c9a5d1021f0dab0595d7901d871a8c7a",
+      "dimensions": [
+        87,
+        13
+      ],
+      "probe_model": "arabic",
+      "model_sha256": "799113ebf267fbe742deb99eb36e8d42c9ddc5291ceacf92add41b4d52a59110",
+      "input_shape": [
+        1,
+        3,
+        48,
+        322
+      ],
+      "output_shape": [
+        1,
+        40,
+        749
+      ],
+      "dictionary_characters_including_space": 748,
+      "dictionary_duplicate_entries": 31,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "كييل لساب قودخم",
+        "mean_first_emission_posterior": 0.7190606276194255
+      },
+      "logical_text": "مخدوق باسل لييك",
+      "logical_postprocess": "Paddle Arabic group reversal; raw output preserved",
+      "exact": false,
+      "character_edits": 5,
+      "reference_characters": 18,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 749] elapsed_ms=49.582\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 3.248453140258789e-06,
+        "identical_argmax": true,
+        "raw_text": "كييل لساب قودخم"
+      }
+    },
+    {
+      "id": "sa-title",
+      "path": "images/sa-title-clean.png",
+      "text": "फंगल्शम्ब्लर्",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "7b5dfa017071e5a9c52a8338b5bddcb8c1837e2beded64a31bfda36ee8ca8f86",
+      "dimensions": [
+        272,
+        67
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "फगल्शम्क्ल्",
+        "mean_first_emission_posterior": 0.6997737369754098
+      },
+      "logical_text": "फगल्शम्क्ल्",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 13,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=46.278\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.2516975402832031e-06,
+        "identical_argmax": true,
+        "raw_text": "फगल्शम्क्ल्"
+      }
+    },
+    {
+      "id": "sa-title",
+      "path": "images/sa-title-severe.png",
+      "text": "फंगल्शम्ब्लर्",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "f956b84046e5096b5343e6de0159785eba8b1a13001fa998159fbbf03f0deb52",
+      "dimensions": [
+        82,
+        20
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "कास्ाम्यु",
+        "mean_first_emission_posterior": 0.6085755460792117
+      },
+      "logical_text": "कास्ाम्यु",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 10,
+      "reference_characters": 13,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=44.536\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.86102294921875e-06,
+        "identical_argmax": true,
+        "raw_text": "कास्ाम्यु"
+      }
+    },
+    {
+      "id": "sa-type",
+      "path": "images/sa-type-clean.png",
+      "text": "भूतम् पशुः",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "de91d85fd3e35aa7631a81cd49c47bb958d0c5a0683a39bc67a3d59146dd2cc8",
+      "dimensions": [
+        183,
+        42
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "भूतम् पशुः",
+        "mean_first_emission_posterior": 0.8738005638122559
+      },
+      "logical_text": "भूतम् पशुः",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 10,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=43.032\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.341104507446289e-06,
+        "identical_argmax": true,
+        "raw_text": "भूतम् पशुः"
+      }
+    },
+    {
+      "id": "sa-type",
+      "path": "images/sa-type-severe.png",
+      "text": "भूतम् पशुः",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "0dad29bfe97dde39c5969a6ab6fa83a48e156ac8bdfb5049a17c68b796b001d5",
+      "dimensions": [
+        55,
+        13
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "पमप",
+        "mean_first_emission_posterior": 0.3403854916493098
+      },
+      "logical_text": "पमप",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 8,
+      "reference_characters": 10,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=42.198\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.1324882507324219e-06,
+        "identical_argmax": true,
+        "raw_text": "पमप"
+      }
+    },
+    {
+      "id": "sa-rules",
+      "path": "images/sa-rules-clean.png",
+      "text": "मृदितुम्",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "rules",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "3ab12935ef5dfb4a3421a38e34d9f718c30cb6319ec3b36828a0710f848374cf",
+      "dimensions": [
+        142,
+        50
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "मादेतुम्",
+        "mean_first_emission_posterior": 0.8652524687349796
+      },
+      "logical_text": "मादेतुम्",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 2,
+      "reference_characters": 8,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=42.692\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.1324882507324219e-06,
+        "identical_argmax": true,
+        "raw_text": "मादेतुम्"
+      }
+    },
+    {
+      "id": "sa-rules",
+      "path": "images/sa-rules-severe.png",
+      "text": "मृदितुम्",
+      "language": "sa",
+      "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "card_name": "Fungal Shambler",
+      "role": "rules",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "7721e6f1e44150d218ed35ed8399abc854b63206dbbf93a6c7f72c7a41c11bb2",
+      "dimensions": [
+        43,
+        15
+      ],
+      "probe_model": "devanagari",
+      "model_sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        570
+      ],
+      "dictionary_characters_including_space": 569,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "मृदतुम्",
+        "mean_first_emission_posterior": 0.9492114697183881
+      },
+      "logical_text": "मृदतुम्",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 1,
+      "reference_characters": 8,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 40, 570] elapsed_ms=46.306\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.3245811462402344e-06,
+        "identical_argmax": true,
+        "raw_text": "मृदतुम्"
+      }
+    }
+  ]
+}

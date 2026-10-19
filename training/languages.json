@@ -5,7 +5,7 @@
   "purpose": "Sourced implementation and evaluation backlog; this inventory does not enable language support.",
   "all_printed_languages_complete": false,
   "scope": {
-    "primary": "Every verified previously printed main-text language except the explicit Phyrexian stretch goal.",
+    "primary": "Latin-script printed languages: English, Spanish, French, German, Italian, Portuguese and Latin; historic type, italics and optical damage.",
     "stretch": [
       "ph"
     ],
@@ -13,7 +13,8 @@
       "tlh"
     ],
     "routing": "One main-text profile per card; shared Latin collector and artist metadata can use a shared recognition path.",
-    "catalogue_caveat": "Scryfall documents some unofficial languages and incomplete older-language data. Catalogue counts are dated database observations, not a complete census of physical print runs."
+    "catalogue_caveat": "Scryfall documents some unofficial languages and incomplete older-language data. Catalogue counts are dated database observations, not a complete census of physical print runs.",
+    "best_effort": "Non-Latin printed alphabets, following user clarification; retain actual tested examples and explicit glyph/layout gaps."
   },
   "sources": {
     "scryfall_languages": "https://scryfall.com/docs/api/languages",
@@ -158,7 +159,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "experimental_english_checkpoint",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -173,7 +174,9 @@
         "api_url": "https://api.scryfall.com/cards/309d95ad-e46c-4407-894d-d4cfdc7017f8",
         "top_level_printed_fields_available": []
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#en",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "es",
@@ -185,7 +188,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -204,7 +207,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#es",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "fr",
@@ -216,7 +221,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -235,7 +240,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#fr",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "de",
@@ -247,7 +254,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -266,7 +273,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#de",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "it",
@@ -278,7 +287,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -297,7 +306,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#it",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "pt",
@@ -309,7 +320,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -328,7 +339,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#pt",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "ja",
@@ -336,11 +349,11 @@
       "scryfall_codes": [
         "ja"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Han, Hiragana, Katakana",
       "reading_order": "horizontal_and_vertical",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages",
@@ -360,7 +373,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Label each field orientation and reading order; preserve kana/Han, punctuation and printed ruby when applicable."
+      "transcription_requirement": "Label each field orientation and reading order; preserve kana/Han, punctuation and printed ruby when applicable.",
+      "registered_profile": "models/profiles.json#ja",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "ko",
@@ -368,7 +383,7 @@
       "scryfall_codes": [
         "ko"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Hangul",
       "reading_order": "left_to_right",
@@ -395,7 +410,7 @@
       "scryfall_codes": [
         "ru"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Cyrillic",
       "reading_order": "left_to_right",
@@ -426,11 +441,11 @@
       "scryfall_codes": [
         "zhs"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Simplified Han",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -449,7 +464,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#zhs",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "zht",
@@ -457,11 +474,11 @@
       "scryfall_codes": [
         "zht"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Traditional Han",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -480,7 +497,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#zht",
+      "evidence": "training/experimental_paddle/results-v6-direct.json"
     },
     {
       "id": "he",
@@ -488,7 +507,7 @@
       "scryfall_codes": [
         "he"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Hebrew",
       "reading_order": "right_to_left",
@@ -523,7 +542,7 @@
       "printed_attestation": "paper_card_example_verified",
       "script": "Latin",
       "reading_order": "left_to_right",
-      "capability_status": "not_trained_or_verified",
+      "capability_status": "pretrained_colour_ctc_baseline_available; limited_MTG_evaluation",
       "comprehensive_coverage_verified": false,
       "sources": [
         "https://scryfall.com/docs/api/languages"
@@ -542,7 +561,9 @@
           "printed_text"
         ]
       },
-      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text."
+      "transcription_requirement": "Preserve printed Unicode, diacritics, punctuation and symbol tokens; never ASCII-fold or substitute English Oracle text.",
+      "registered_profile": "models/profiles.json#la",
+      "evidence": "training/experimental_paddle/results-rare.json"
     },
     {
       "id": "grc",
@@ -550,7 +571,7 @@
       "scryfall_codes": [
         "grc"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Greek with polytonic marks",
       "reading_order": "left_to_right",
@@ -581,7 +602,7 @@
       "scryfall_codes": [
         "ar"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Arabic",
       "reading_order": "right_to_left",
@@ -612,7 +633,7 @@
       "scryfall_codes": [
         "sa"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Devanagari",
       "reading_order": "left_to_right",
@@ -676,7 +697,7 @@
       "scryfall_codes": [
         "qya"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Tengwar letterforms",
       "reading_order": "requires_print_layout_review",
@@ -711,7 +732,7 @@
       "scryfall_codes": [
         "dw"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_example_verified",
       "script": "Dwarvish letterforms; exact script mapping unverified",
       "reading_order": "requires_print_layout_review",
@@ -756,7 +777,7 @@
       "scryfall_codes": [
         "qya"
       ],
-      "priority": "primary",
+      "priority": "best_effort",
       "printed_attestation": "paper_card_verified_by_wizards_and_scryfall",
       "script": "Tengwar letterforms",
       "reading_order": "requires_print_layout_review",

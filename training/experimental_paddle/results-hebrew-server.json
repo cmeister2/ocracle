@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "status": "experimental_not_registered_or_comprehensive",
+  "hebrew_model": "server",
+  "fixture_manifest_sha256": "686be641f465f0b718a19d513e5c7102bca5d3144101c3a2863a66b6f99d060b",
+  "model_inventory_sha256": "0142886a33d033b39b75600d7adbfd04764213263d5206229c64398094d1c6a1",
+  "rten_version": "0.26.0",
+  "packages": {
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "scoring": "NFC plus collapsed whitespace; no mark stripping, no ASCII folding or speculative ligature replacement.",
+  "summary": {
+    "he": {
+      "cases": 6,
+      "exact": 2,
+      "character_edits": 21,
+      "reference_characters": 60,
+      "rten_successful_cases": 6
+    }
+  },
+  "records": [
+    {
+      "id": "he-title",
+      "path": "images/he-title-clean.png",
+      "text": "תהילה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "title",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "901eb2a5c69cfd46aebaea10ee7d27c66e156068330588fea0dc7f0b0c9aa38c",
+      "dimensions": [
+        133,
+        64
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        112
+      ],
+      "output_shape": [
+        1,
+        14,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "תהילה",
+        "mean_first_emission_posterior": 0.8796187281608582
+      },
+      "logical_text": "תהילה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 5,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 14, 122] elapsed_ms=114.405\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.0728836059570312e-06,
+        "identical_argmax": true,
+        "raw_text": "תהילה"
+      }
+    },
+    {
+      "id": "he-title",
+      "path": "images/he-title-severe.png",
+      "text": "תהילה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "title",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c7ab8045036d778e72771b87c11f5b38f4abe17cb98bd6c3e1a47eebabe2e004",
+      "dimensions": [
+        40,
+        19
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        112
+      ],
+      "output_shape": [
+        1,
+        14,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "תחילה",
+        "mean_first_emission_posterior": 0.703608226776123
+      },
+      "logical_text": "תחילה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 1,
+      "reference_characters": 5,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 14, 122] elapsed_ms=108.717\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 4.589557647705078e-06,
+        "identical_argmax": true,
+        "raw_text": "תחילה"
+      }
+    },
+    {
+      "id": "he-type",
+      "path": "images/he-type-clean.png",
+      "text": "יצור — התגלמות",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "type",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "562dec64a35a7f96818f691470c14d3cfb4a2608eb08acd0681a3b11385d9afc",
+      "dimensions": [
+        309,
+        37
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        416
+      ],
+      "output_shape": [
+        1,
+        52,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "—"
+      ],
+      "raw_ort": {
+        "text": "ייצור התגלמות",
+        "mean_first_emission_posterior": 0.8326611862732813
+      },
+      "logical_text": "ייצור התגלמות",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 14,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 52, 122] elapsed_ms=159.036\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 6.258487701416016e-06,
+        "identical_argmax": true,
+        "raw_text": "ייצור התגלמות"
+      }
+    },
+    {
+      "id": "he-type",
+      "path": "images/he-type-severe.png",
+      "text": "יצור — התגלמות",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "type",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c588de66c719157fa74e8983d6af7d35d3cf3a75e9038dadf75c770047b78954",
+      "dimensions": [
+        93,
+        11
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        416
+      ],
+      "output_shape": [
+        1,
+        52,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [
+        "—"
+      ],
+      "raw_ort": {
+        "text": "",
+        "mean_first_emission_posterior": 0.0
+      },
+      "logical_text": "",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 14,
+      "reference_characters": 14,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 52, 122] elapsed_ms=178.235\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 2.562999725341797e-06,
+        "identical_argmax": true,
+        "raw_text": ""
+      }
+    },
+    {
+      "id": "he-rules",
+      "path": "images/he-rules-clean.png",
+      "text": "יכולת תעופה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "rules",
+      "italic": false,
+      "severity": "clean",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "075624aca68f36d35b17f667f2ecdffcd3c7ec1d83c99dedae751c7ded3c223d",
+      "dimensions": [
+        199,
+        38
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        256
+      ],
+      "output_shape": [
+        1,
+        32,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "יכולת תעופה",
+        "mean_first_emission_posterior": 0.9099588827653364
+      },
+      "logical_text": "יכולת תעופה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": true,
+      "character_edits": 0,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 32, 122] elapsed_ms=151.604\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 5.424022674560547e-06,
+        "identical_argmax": true,
+        "raw_text": "יכולת תעופה"
+      }
+    },
+    {
+      "id": "he-rules",
+      "path": "images/he-rules-severe.png",
+      "text": "יכולת תעופה",
+      "language": "he",
+      "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "card_name": "Glory",
+      "role": "rules",
+      "italic": false,
+      "severity": "severe",
+      "split": "external-evaluation",
+      "source": "reviewed-real-scan",
+      "image_sha256": "c827475140fc1ac6491f3d6dca984aa75b869f1077404650bec6aed587df6e7a",
+      "dimensions": [
+        60,
+        11
+      ],
+      "probe_model": "hebrew",
+      "model_sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205",
+      "input_shape": [
+        1,
+        3,
+        48,
+        272
+      ],
+      "output_shape": [
+        1,
+        34,
+        122
+      ],
+      "dictionary_characters_including_space": 121,
+      "dictionary_duplicate_entries": 0,
+      "missing_expected_glyphs": [],
+      "raw_ort": {
+        "text": "ימכת תעופה",
+        "mean_first_emission_posterior": 0.6564469158649444
+      },
+      "logical_text": "ימכת תעופה",
+      "logical_postprocess": "none; logical Unicode claimed by source",
+      "exact": false,
+      "character_edits": 3,
+      "reference_characters": 11,
+      "rten": {
+        "returncode": 0,
+        "stdout": "shape=[1, 34, 122] elapsed_ms=139.362\n",
+        "stderr": "",
+        "finite": true,
+        "max_abs_probability_error": 1.6123056411743164e-05,
+        "identical_argmax": true,
+        "raw_text": "ימכת תעופה"
+      }
+    }
+  ]
+}

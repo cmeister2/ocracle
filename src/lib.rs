@@ -30,5 +30,6 @@ mod types;
 
 pub use engine::CardOcr;
 pub use types::{
-    Candidate, Layout, Line, ModelConfig, ModelIdentity, Options, Passes, Recognition,
+    Candidate, ColorMode, InputConfig, Layout, Line, ModelConfig, ModelIdentity, Options,
+    OutputLayout, OutputValues, Passes, Recognition, WidthRounding,
 };

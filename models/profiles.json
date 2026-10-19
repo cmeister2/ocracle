@@ -4,10 +4,101 @@
     {
       "id": "en",
       "language": "en",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/en.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "1fb370edad3b02a0303642cada8937d068df18adec352fd4d055555a5601c68e",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "es",
+      "language": "es",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/es.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "0e6927646c399c6c1ee3ef5a42f80aa5cbad928494f8530610e32468653eb291",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "fr",
+      "language": "fr",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/fr.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "3073824925b102981f1fbf33fafb517767b90c63986dfa9f6f34a28d5e550f8f",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "de",
+      "language": "de",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/de.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "ed4b7b18ed34fae98652ce24e13e15cb8a4a7fe3f3cd2501b37af2f21789c0f9",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "it",
+      "language": "it",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/it.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "716336d625c0663b1f47ea796b1ad9c2e218a82d40589abb0dae9914505ed219",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "pt",
+      "language": "pt",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/pt.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "b8771d797fd7f5a85db79cfc7ad5b38756bd2f9a3f50fb45aef5e123d00e3d57",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "la",
+      "language": "la",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/la.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "aaaad7992743434bc4004548d26d9c8e60e7e15c21fce1ae5397d5e38e86838b",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "ja",
+      "language": "ja",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/ja.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "e746834013a696c62dedfc936d955ba4052aec35948979b207d6cc549d6c23dc",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    },
+    {
+      "id": "zhs",
+      "language": "zhs",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/zhs.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "034dfdaa848626e1b10baeb2b50c3191620aafe7fcc9959751f626b0057bfce0",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    },
+    {
+      "id": "zht",
+      "language": "zht",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/zht.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "325ef34187c608fc196e65a94025482bc8ec6919d3c132d09f13b95891277969",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    },
+    {
+      "id": "en-mtg",
+      "language": "en",
       "model": "models/ocracle-mtg.rten",
       "configuration": "models/recognizer-config.json",
       "sha256": "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f",
-      "configuration_sha256": "69a0bb1ed466999a4869d465622b57ff8b2833d51766e21d54ac654c6fa0286e"
+      "configuration_sha256": "69a0bb1ed466999a4869d465622b57ff8b2833d51766e21d54ac654c6fa0286e",
+      "coverage": "Experimental MTG-adapted English CRNN; historic and italic examples, limited treatment/character coverage"
     }
   ]
 }

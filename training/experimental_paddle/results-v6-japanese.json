@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "scope": "japanese",
+  "fixture_manifest_sha256": "fe9770d78b97500b7019e6a7949c791f1f9a0d5ec8966df1f3fbaa36d080cb3f",
+  "status": "experimental_not_registered_or_comprehensive",
+  "original_model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "wrapper_model_sha256": "730bd4ee2107ce9afc1da146705d80849c99a3b908ae83010df2b675da75ba3c",
+  "config_template_sha256": "e4064356f1d8d68b8f0c3063caa9948ba46a357f81cad5a689bc10898e0317d5",
+  "cli_sha256": "6502aaba4ab440b61324ed492b616480fd773be62c43cf3e45a3972bf71b8b12",
+  "packages": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "opencv-python-headless": "5.0.0.93",
+    "PyYAML": "6.0.3"
+  },
+  "comparison": "NFC plus collapsed whitespace; preserve accents, case and punctuation. No checkpoint fitting/selection. All original-pass results retained.",
+  "confidence_note": "Probe posterior is arithmetic mean of first emission steps; CLI is geometric mean of peak posterior in each emitted run. Both uncalibrated; do not compare as accuracy.",
+  "summary": {
+    "official_bgr_ort": {
+      "all": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 17,
+        "characters": 148,
+        "cer": 0.11486486486486487
+      },
+      "clean": {
+        "cases": 7,
+        "exact": 5,
+        "character_edits": 3,
+        "characters": 74,
+        "cer": 0.04054054054054054
+      },
+      "severe": {
+        "cases": 7,
+        "exact": 0,
+        "character_edits": 14,
+        "characters": 74,
+        "cer": 0.1891891891891892
+      },
+      "ja": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 17,
+        "characters": 148,
+        "cer": 0.11486486486486487
+      }
+    },
+    "grayscale_wrapper_ort": {
+      "all": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 20,
+        "characters": 148,
+        "cer": 0.13513513513513514
+      },
+      "clean": {
+        "cases": 7,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 74,
+        "cer": 0.05405405405405406
+      },
+      "severe": {
+        "cases": 7,
+        "exact": 0,
+        "character_edits": 16,
+        "characters": 74,
+        "cer": 0.21621621621621623
+      },
+      "ja": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 20,
+        "characters": 148,
+        "cer": 0.13513513513513514
+      }
+    },
+    "grayscale_wrapper_rten": {
+      "all": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 20,
+        "characters": 148,
+        "cer": 0.13513513513513514
+      },
+      "clean": {
+        "cases": 7,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 74,
+        "cer": 0.05405405405405406
+      },
+      "severe": {
+        "cases": 7,
+        "exact": 0,
+        "character_edits": 16,
+        "characters": 74,
+        "cer": 0.21621621621621623
+      },
+      "ja": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 20,
+        "characters": 148,
+        "cer": 0.13513513513513514
+      }
+    },
+    "actual_cli_wrapper_rten": {
+      "all": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 19,
+        "characters": 148,
+        "cer": 0.12837837837837837
+      },
+      "clean": {
+        "cases": 7,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 74,
+        "cer": 0.05405405405405406
+      },
+      "severe": {
+        "cases": 7,
+        "exact": 0,
+        "character_edits": 15,
+        "characters": 74,
+        "cer": 0.20270270270270271
+      },
+      "ja": {
+        "cases": 14,
+        "exact": 5,
+        "character_edits": 19,
+        "characters": 148,
+        "cer": 0.12837837837837837
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "ja-title-source",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "title",
+      "image_path": "training/experimental_easyocr/fixtures/ja-title.png",
+      "image_sha256": "491ed8fbb696247d8a7e13b8b07c9f49b77d900ffc9ed5baa8883830e8ab8395",
+      "expected": "選択",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        108
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001430511474609375,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=52.551",
+      "results": {
+        "official_bgr_ort": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9987325966358185,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9980699717639475,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9980699717639475,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "選択",
+          "confidence": 0.99808645,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-title-blur",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "title",
+      "image_path": "training/experimental_easyocr/fixtures/ja-title-blur.png",
+      "image_sha256": "a34089af3a614b9e96d08c451c43c65df307a2be897ce663a901cd9394873169",
+      "expected": "選択",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        106
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.000118255615234375,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=44.269",
+      "results": {
+        "official_bgr_ort": {
+          "text": "退択",
+          "mean_first_emission_posterior": 0.6107761561870575,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "退积",
+          "mean_first_emission_posterior": 0.6537562323608476,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "退积",
+          "mean_first_emission_posterior": 0.6537570943458314,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "退积",
+          "confidence": 0.58230674,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-furigana-source",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "furigana",
+      "image_path": "training/experimental_easyocr/fixtures/ja-furigana.png",
+      "image_sha256": "c656566d386f80761fe7a13451e60c8eae185d6a67da179aa4ab3edd079c2c16",
+      "expected": "せんたく",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        171
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.91278076171875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=60.484",
+      "results": {
+        "official_bgr_ort": {
+          "text": "せんたく",
+          "mean_first_emission_posterior": 0.9994749277830124,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "せんたく",
+          "mean_first_emission_posterior": 0.9992512911445887,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "せんたく",
+          "mean_first_emission_posterior": 0.999251261335065,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "せんたく",
+          "confidence": 0.99916637,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-furigana-blur",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "furigana",
+      "image_path": "training/experimental_easyocr/fixtures/ja-furigana-blur.png",
+      "image_sha256": "e24a1e441533977ce53d775628c9e68029e5829c8f708b325d3626a3b4c401e5",
+      "expected": "せんたく",
+      "expected_characters": 4,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        183
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.00011444091796875,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=73.660",
+      "results": {
+        "official_bgr_ort": {
+          "text": "WAEX",
+          "mean_first_emission_posterior": 0.5086896270513535,
+          "exact": false,
+          "character_edits": 4
+        },
+        "grayscale_wrapper_ort": {
+          "text": "WAEX",
+          "mean_first_emission_posterior": 0.616567063471825,
+          "exact": false,
+          "character_edits": 4
+        },
+        "grayscale_wrapper_rten": {
+          "text": "WAEX",
+          "mean_first_emission_posterior": 0.6165709028374988,
+          "exact": false,
+          "character_edits": 4
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "WAEX",
+          "confidence": 0.8233964,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 4
+        }
+      }
+    },
+    {
+      "id": "ja-rules-source",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "rules",
+      "image_path": "training/experimental_easyocr/fixtures/ja-rules.png",
+      "image_sha256": "08b11b35a4bad03f5fc3727a1d011f91166196d03b565abe6185e548f2815ca9",
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        299
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.57763671875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=66.533",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9993384149339464,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9991777605449231,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9991777472860043,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カード１枚を引く。",
+          "confidence": 0.9991738,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-rules-blur",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "rules",
+      "image_path": "training/experimental_easyocr/fixtures/ja-rules-blur.png",
+      "image_sha256": "9195e6de53315ce9fa01061bea14a3fd9e3c50e64f0ae190609e5057035d258f",
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        288
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.340576171875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=67.828",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9753244254324172,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9675412441953344,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9675413241659927,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カード1枚を引く。",
+          "confidence": 0.97103524,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "ja-reminder-source",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "rules and reminder",
+      "image_path": "training/experimental_easyocr/fixtures/ja-reminder.png",
+      "image_sha256": "f6f270cc911fb94b0657630cb8f52b35c2fdfca028fd496a51d1d566f4d95ddf",
+      "expected": "占術１を行う。（あなたのライブラリーの一番上に",
+      "expected_characters": 23,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        867
+      ],
+      "output_shape": [
+        108,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 5.7220458984375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[108, 1, 18710] elapsed_ms=75.270",
+      "results": {
+        "official_bgr_ort": {
+          "text": "占術１を行う。（あなたのライブラリーの一番上に",
+          "mean_first_emission_posterior": 0.9926397230314172,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "占術１を行う。（あなたのライブラリーの一番上に",
+          "mean_first_emission_posterior": 0.987944807465179,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "占術１を行う。（あなたのライブラリーの一番上に",
+          "mean_first_emission_posterior": 0.9879448673927288,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "占術１を行う。（あなたのライブラリーの一番上に",
+          "confidence": 0.98794824,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-reminder-blur",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "rules and reminder",
+      "image_path": "training/experimental_easyocr/fixtures/ja-reminder-blur.png",
+      "image_sha256": "86c7ca4f00d31c1a00076d222ff6c39fdbbf7d8d4a8c95c99894a40918e8bdf4",
+      "expected": "占術１を行う。（あなたのライブラリーの一番上に",
+      "expected_characters": 23,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        884
+      ],
+      "output_shape": [
+        110,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 7.62939453125e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[110, 1, 18710] elapsed_ms=81.111",
+      "results": {
+        "official_bgr_ort": {
+          "text": "占術1を行う。（あなたのうイブうリーの一番上に",
+          "mean_first_emission_posterior": 0.9107647019883861,
+          "exact": false,
+          "character_edits": 3
+        },
+        "grayscale_wrapper_ort": {
+          "text": "占術1を行う。（あなたのうイブうリーのー番上に",
+          "mean_first_emission_posterior": 0.9171216811322566,
+          "exact": false,
+          "character_edits": 4
+        },
+        "grayscale_wrapper_rten": {
+          "text": "占術1を行う。（あなたのうイブうリーのー番上に",
+          "mean_first_emission_posterior": 0.9171217238612737,
+          "exact": false,
+          "character_edits": 4
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "占術1を行う。（あなたのうイブうリーの一番上に",
+          "confidence": 0.91714734,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 3
+        }
+      }
+    },
+    {
+      "id": "ja-flavor-source",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "flavor",
+      "image_path": "training/experimental_easyocr/fixtures/ja-flavor.png",
+      "image_sha256": "53dcfbbbdd41029631121c85dc0f8127e6d2d9fb2786f308585518fb91656a0e",
+      "expected": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "expected_characters": 25,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        948
+      ],
+      "output_shape": [
+        118,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0002765655517578125,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[118, 1, 18710] elapsed_ms=87.908",
+      "results": {
+        "official_bgr_ort": {
+          "text": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.9912910199165345,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_ort": {
+          "text": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.9938768984789342,
+          "exact": true,
+          "character_edits": 0
+        },
+        "grayscale_wrapper_rten": {
+          "text": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.9938769341249554,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+          "confidence": 0.99412054,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-flavor-blur",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "flavor",
+      "image_path": "training/experimental_easyocr/fixtures/ja-flavor-blur.png",
+      "image_sha256": "a11107b8c420073d3f9cf8cb77e10b3932858b619babd364adb652c91f0dbf03",
+      "expected": "「風雲船長の命令は予想がつくな。『危険な方の航路を",
+      "expected_characters": 25,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        982
+      ],
+      "output_shape": [
+        123,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 0.0001049041748046875,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[123, 1, 18710] elapsed_ms=77.672",
+      "results": {
+        "official_bgr_ort": {
+          "text": "「風尝船長の命令は予想がつ（な。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.9015230429172516,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_ort": {
+          "text": "「風尝船長の命令は予想がつ（な。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.9076568214797305,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "「風尝船長の命令は予想がつ（な。『危険な方の航路を",
+          "mean_first_emission_posterior": 0.907656730560374,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "「風尝船長の命令は予想がつ（な。『危険な方の航路を",
+          "confidence": 0.89565676,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-lowres-title-source",
+      "card_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "title in low-resolution source",
+      "image_path": "training/experimental_easyocr/fixtures/ja-lowres-title.png",
+      "image_sha256": "10bfd321d3d354e5e3d1a28bfadf21fd3861d9aab079912767de4807f5b8bcf2",
+      "expected": "予言",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        128
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 6.103515625e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=56.702",
+      "results": {
+        "official_bgr_ort": {
+          "text": "搭",
+          "mean_first_emission_posterior": 0.37366774678230286,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_ort": {
+          "text": "誉",
+          "mean_first_emission_posterior": 0.5853402837647432,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "誉",
+          "mean_first_emission_posterior": 0.5853408419890044,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "誉",
+          "confidence": 0.9463061,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-lowres-title-blur",
+      "card_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "title in low-resolution source",
+      "image_path": "training/experimental_easyocr/fixtures/ja-lowres-title-blur.png",
+      "image_sha256": "dee9c1a20d0f179fc832bd5587bbc0448c1444641789b89297a674f8030c33a3",
+      "expected": "予言",
+      "expected_characters": 2,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        127
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 8.20159912109375e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=60.554",
+      "results": {
+        "official_bgr_ort": {
+          "text": "营",
+          "mean_first_emission_posterior": 0.724984347820282,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_ort": {
+          "text": "营",
+          "mean_first_emission_posterior": 0.8292176910412079,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "营",
+          "mean_first_emission_posterior": 0.8292180864431095,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "营",
+          "confidence": 0.72151285,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-lowres-rules-source",
+      "card_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+      "language": "ja",
+      "severity": "clean",
+      "typography": "rules in low-resolution source",
+      "image_path": "training/experimental_easyocr/fixtures/ja-lowres-rules.png",
+      "image_sha256": "ee7d4495a17db57f729c14f5827bda3e17ed35141f594de164f0223f0a5b3447",
+      "expected": "カードを２枚引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        300
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 4.57763671875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=94.440",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カードを2枚引く。",
+          "mean_first_emission_posterior": 0.9502201676368713,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カードを2枚引|く。",
+          "mean_first_emission_posterior": 0.9361129238512754,
+          "exact": false,
+          "character_edits": 2
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カードを2枚引|く。",
+          "mean_first_emission_posterior": 0.9361136625263413,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カードを2枚引|く。",
+          "confidence": 0.94118434,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "ja-lowres-rules-blur",
+      "card_id": "b024b2e5-4c29-403d-a287-25b48bbe82b6",
+      "language": "ja",
+      "severity": "severe",
+      "typography": "rules in low-resolution source",
+      "image_path": "training/experimental_easyocr/fixtures/ja-lowres-rules-blur.png",
+      "image_sha256": "7e5bd6ad20b008f56813f6070129d4d59b6c20949e6dc8a0c38667c6370a7647",
+      "expected": "カードを２枚引く。",
+      "expected_characters": 9,
+      "missing_alphabet": [],
+      "controlled_input_shape": [
+        1,
+        1,
+        48,
+        296
+      ],
+      "output_shape": [
+        40,
+        1,
+        18710
+      ],
+      "ort_rten_max_abs_log_error": 7.2479248046875e-05,
+      "ort_rten_identical_argmax": true,
+      "rten_runner": "shape=[40, 1, 18710] elapsed_ms=56.957",
+      "results": {
+        "official_bgr_ort": {
+          "text": "カードを2枚引く。",
+          "mean_first_emission_posterior": 0.902936942047543,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_ort": {
+          "text": "カードを2枚引く。",
+          "mean_first_emission_posterior": 0.9124554799980411,
+          "exact": false,
+          "character_edits": 1
+        },
+        "grayscale_wrapper_rten": {
+          "text": "カードを2枚引く。",
+          "mean_first_emission_posterior": 0.9124562408351129,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_wrapper_rten": {
+          "text": "カードを2枚引く。",
+          "confidence": 0.89793205,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    }
+  ]
+}

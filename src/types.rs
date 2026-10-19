@@ -7,14 +7,23 @@ use serde::{Deserialize, Serialize};
 pub struct ModelConfig {
     /// Characters indexed by CTC class minus one; class zero is blank.
     pub alphabet: String,
-    /// Fixed height of the grayscale recognition tensor.
+    /// Fixed height of the recognition tensor.
     pub input_height: u32,
+    /// Pixel channels, affine normalization, width rounding and right padding.
+    #[serde(default)]
+    pub input: InputConfig,
+    /// Axis order of the model's three-dimensional CTC output.
+    #[serde(default)]
+    pub output_layout: OutputLayout,
+    /// Whether output values are probabilities or their natural logarithms.
+    #[serde(default)]
+    pub output_values: OutputValues,
     /// Human-readable checkpoint identifier, not an accuracy claim.
     pub model_name: String,
     /// Recognition architecture shown in method descriptions, such as `CRNN`.
     ///
     /// This metadata describes the exported model; it does not select a decoder.
-    /// All supported exports must emit the same CTC tensor contract.
+    /// Tensor interpretation comes from the input and output configuration.
     #[serde(default = "crnn")]
     pub architecture: String,
     /// Printed card language handled by these weights (Scryfall language code).
@@ -29,11 +38,95 @@ impl Default for ModelConfig {
         Self {
             alphabet: " 0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~€ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".into(),
             input_height: 64,
+            input: InputConfig::default(),
+            output_layout: OutputLayout::default(),
+            output_values: OutputValues::default(),
             model_name: "ocrs CRNN base".into(),
             architecture: crnn(),
             language: english(),
         }
     }
+}
+
+/// Pixel preparation tied to a recognition model's training pipeline.
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(default)]
+pub struct InputConfig {
+    /// Channel order in the planar `[1,channels,height,width]` tensor.
+    pub color_mode: ColorMode,
+    /// Multiplier applied to each 8-bit channel before adding `offset`.
+    pub scale: f32,
+    /// Value added after multiplying each channel by `scale`.
+    pub offset: f32,
+    /// Minimum padded tensor width, using normalized zero on the right.
+    ///
+    /// Zero disables padding. Content retains its aspect ratio.
+    pub padding_width: u32,
+    /// Smallest resized content width before padding; 16 for the Ocrs CRNN.
+    ///
+    /// Colour profiles with independent right padding generally use 1.
+    pub min_content_width: u32,
+    /// Rounding used when calculating the aspect-preserving content width.
+    pub width_rounding: WidthRounding,
+}
+
+impl Default for InputConfig {
+    fn default() -> Self {
+        Self {
+            color_mode: ColorMode::default(),
+            scale: 1. / 255.,
+            offset: -0.5,
+            padding_width: 0,
+            min_content_width: 16,
+            width_rounding: WidthRounding::default(),
+        }
+    }
+}
+
+/// Channels supplied to the recognition network.
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ColorMode {
+    /// PIL-compatible, rounded Rec. 601 luminance in one channel.
+    #[default]
+    Grayscale,
+    /// Three channels in red, green, blue order.
+    Rgb,
+    /// Three channels in blue, green, red order.
+    Bgr,
+}
+
+/// Rounding convention used by the model's recognition preprocessing.
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum WidthRounding {
+    /// Round to nearest, resolving exact halves toward the even integer.
+    #[default]
+    NearestEven,
+    /// Round upward, as in PaddleOCR's recognition processor.
+    Ceil,
+}
+
+/// Axis order of a CTC recognition output tensor.
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
+#[serde(rename_all = "UPPERCASE")]
+pub enum OutputLayout {
+    /// Time, batch, class; used by the Ocrs CRNN.
+    #[default]
+    Tnc,
+    /// Batch, time, class; used by PaddleOCR inference exports.
+    Ntc,
+}
+
+/// Numeric interpretation of the recognition output.
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum OutputValues {
+    /// Natural logarithms of normalized class probabilities.
+    #[default]
+    LogProbabilities,
+    /// Normalized class probabilities, including the blank at class zero.
+    Probabilities,
 }
 
 /// Preprocessing passes to evaluate without consulting expected text.

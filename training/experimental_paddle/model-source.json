@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "model_repository": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx",
+  "revision": "b8f84f0b80c529de40b4fbb3544b84fa7233a513",
+  "license": "Apache-2.0 (declared by official PaddlePaddle model card; upstream license vendored in LICENSE.paddle)",
+  "sources": {
+    "model_metadata": "https://huggingface.co/api/models/PaddlePaddle/PP-OCRv6_small_rec_onnx/revision/b8f84f0b80c529de40b4fbb3544b84fa7233a513",
+    "architecture_documentation": "https://github.com/PaddlePaddle/PaddleOCR/blob/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.en.md",
+    "preprocessing_decoder_source": "https://github.com/PaddlePaddle/PaddleX/blob/c852371c701d83cd21955b2963834825920ffebb/paddlex/inference/models/text_recognition/processors.py",
+    "license": "https://github.com/PaddlePaddle/PaddleOCR/blob/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE"
+  },
+  "files": {
+    "inference.onnx": {
+      "url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.onnx",
+      "bytes": 21159378,
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+    },
+    "inference.yml": {
+      "url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.yml",
+      "bytes": 150579,
+      "sha256": "ab078671bb49f06228eadccd34f1bb501e157f7a047095ffb943ba81512c77d1"
+    }
+  },
+  "original_contract": {
+    "opset": 11,
+    "input": {
+      "name": "x",
+      "dtype": "float32",
+      "shape": [
+        "N",
+        3,
+        48,
+        "W"
+      ],
+      "channel_order": "BGR",
+      "normalization": "(pixel / 255 - 0.5) / 0.5",
+      "resize": "OpenCV INTER_LINEAR, ceil(aspect_ratio*48), minimum padded width320, max width3200 in official PaddleX processor",
+      "padding": "normalized zero on right"
+    },
+    "output": {
+      "name": "fetch_name_0",
+      "dtype": "float32",
+      "shape": [
+        "N",
+        "T",
+        18710
+      ],
+      "values": "softmax probabilities, not log probabilities"
+    },
+    "dictionary": {
+      "source": "inference.yml PostProcess.character_dict",
+      "entries": 18708,
+      "unique_entries": 18708,
+      "all_entries_single_Unicode_scalar": true,
+      "contains_space": false,
+      "class_zero": "CTC blank",
+      "alphabet": "dictionary followed by ordinary space",
+      "alphabet_characters": 18709,
+      "class_count": 18710,
+      "missing_from_current_latin_129_alphabet": [
+        "¡",
+        "„"
+      ]
+    },
+    "architecture": "LCNetV4 backbone + EncoderWithLightSVTR neck + CTC inference head; auxiliary NRTR training head omitted from inference"
+  },
+  "wrapper_contract": {
+    "input": [
+      "N",
+      1,
+      48,
+      "W"
+    ],
+    "input_normalization": "pixel/255 - 0.5 (existing ocracle contract)",
+    "prefix": "multiply2; repeat grayscale channel3times; right pad to width>=320 with normalized zero",
+    "postfix": "clamp probabilities to[1e-30,1]; natural log; transpose[1,0,2] to[T,N,C]",
+    "weights_changed": false,
+    "trained_or_finetuned": false,
+    "ready_language_profiles_registered": false,
+    "sha256": "730bd4ee2107ce9afc1da146705d80849c99a3b908ae83010df2b675da75ba3c"
+  },
+  "limitations": [
+    "Small fixed physical-crop probe does not establish general language/font/layout coverage.",
+    "Original publisher training corpus is not enumerated here, so upstream benchmark contamination cannot be excluded.",
+    "The grayscale adapter discards color and differs from official preprocessing; numerical parity is tested between ORT and RTen for identical wrapper input.",
+    "No Korean, Hebrew, Arabic, Devanagari, Cyrillic dictionary entries found by Unicode-name category audit; Greek glyph presence does not establish Ancient Greek coverage.",
+    "Japanese ruby/vertical layout, MTG mana symbols, full-card detector and rare scripts need separate validation."
+  ]
+}

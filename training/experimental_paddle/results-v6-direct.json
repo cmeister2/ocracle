@@ -1,0 +1,3016 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "status": "experimental_not_comprehensive",
+  "original_model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "configuration_template_sha256": "865433042dce28a62d16043ae2f40f1f6ec3dc3d8e7571bc9836b4b4d02ec680",
+  "cli_sha256": "6502aaba4ab440b61324ed492b616480fd773be62c43cf3e45a3972bf71b8b12",
+  "rten_version": "0.26.0",
+  "packages": {
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "comparison": "NFC plus collapsed whitespace; preserve accents, case, punctuation and fullwidth digits. Original pass only, no fitting or confidence selection.",
+  "preprocessing_difference": "Official ORT and isolated RTen share exact OpenCV INTER_LINEAR BGR tensors. Actual CLI uses image crate triangle resize; width ceiling, BGR order, normalized zero padding and affine normalization match model contract.",
+  "identity_limitation": "Canonical Opt identity appears in prior custom Latin V1 training; Japanese crops are transfer/runtime probes, not globally canonical-unseen evidence. Upstream Paddle pretraining prints are unknown. No current model is fine-tuned by this evaluation.",
+  "fixture_manifests": {
+    "training/experimental_paddle/fixtures.json": "17bde8a6885c582f929444f432931397e76fa38e09b18968bdfbd6098bbf4533",
+    "training/latin-eval/manifest.jsonl": "fd43111290a66321ad3c74d222dabd04f631566bd8385cf0bcc0b57df7dc1278",
+    "docs/gallery/assets/fixtures.json": "d6ddc7fab695de4347a87c06f0d3fd33d1dd32587dc6a96693a13588f427f015"
+  },
+  "summary": {
+    "official_bgr_ort": {
+      "all": {
+        "cases": 58,
+        "exact": 51,
+        "character_edits": 8,
+        "characters": 944,
+        "cer": 0.00847457627118644
+      },
+      "cjk": {
+        "cases": 8,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 38,
+        "cer": 0.10526315789473684
+      },
+      "gallery": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "latin": {
+        "cases": 20,
+        "exact": 19,
+        "character_edits": 1,
+        "characters": 330,
+        "cer": 0.0030303030303030303
+      },
+      "clean": {
+        "cases": 29,
+        "exact": 29,
+        "character_edits": 0,
+        "characters": 472,
+        "cer": 0.0
+      },
+      "severe": {
+        "cases": 29,
+        "exact": 22,
+        "character_edits": 8,
+        "characters": 472,
+        "cer": 0.01694915254237288
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "en": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 2,
+        "characters": 22,
+        "cer": 0.09090909090909091
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      }
+    },
+    "official_bgr_rten": {
+      "all": {
+        "cases": 58,
+        "exact": 51,
+        "character_edits": 8,
+        "characters": 944,
+        "cer": 0.00847457627118644
+      },
+      "cjk": {
+        "cases": 8,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 38,
+        "cer": 0.10526315789473684
+      },
+      "gallery": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "latin": {
+        "cases": 20,
+        "exact": 19,
+        "character_edits": 1,
+        "characters": 330,
+        "cer": 0.0030303030303030303
+      },
+      "clean": {
+        "cases": 29,
+        "exact": 29,
+        "character_edits": 0,
+        "characters": 472,
+        "cer": 0.0
+      },
+      "severe": {
+        "cases": 29,
+        "exact": 22,
+        "character_edits": 8,
+        "characters": 472,
+        "cer": 0.01694915254237288
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "en": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 2,
+        "characters": 22,
+        "cer": 0.09090909090909091
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      }
+    },
+    "actual_cli_bgr_rten": {
+      "all": {
+        "cases": 58,
+        "exact": 51,
+        "character_edits": 8,
+        "characters": 944,
+        "cer": 0.00847457627118644
+      },
+      "cjk": {
+        "cases": 8,
+        "exact": 5,
+        "character_edits": 4,
+        "characters": 38,
+        "cer": 0.10526315789473684
+      },
+      "gallery": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "latin": {
+        "cases": 20,
+        "exact": 19,
+        "character_edits": 1,
+        "characters": 330,
+        "cer": 0.0030303030303030303
+      },
+      "clean": {
+        "cases": 29,
+        "exact": 29,
+        "character_edits": 0,
+        "characters": 472,
+        "cer": 0.0
+      },
+      "severe": {
+        "cases": 29,
+        "exact": 22,
+        "character_edits": 8,
+        "characters": 472,
+        "cer": 0.01694915254237288
+      },
+      "de": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 76,
+        "cer": 0.0
+      },
+      "en": {
+        "cases": 30,
+        "exact": 27,
+        "character_edits": 3,
+        "characters": 576,
+        "cer": 0.005208333333333333
+      },
+      "es": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 60,
+        "cer": 0.0
+      },
+      "fr": {
+        "cases": 4,
+        "exact": 3,
+        "character_edits": 1,
+        "characters": 74,
+        "cer": 0.013513513513513514
+      },
+      "it": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 50,
+        "cer": 0.0
+      },
+      "ja": {
+        "cases": 4,
+        "exact": 2,
+        "character_edits": 2,
+        "characters": 22,
+        "cer": 0.09090909090909091
+      },
+      "pt": {
+        "cases": 4,
+        "exact": 4,
+        "character_edits": 0,
+        "characters": 70,
+        "cer": 0.0
+      },
+      "zhs": {
+        "cases": 2,
+        "exact": 2,
+        "character_edits": 0,
+        "characters": 8,
+        "cer": 0.0
+      },
+      "zht": {
+        "cases": 2,
+        "exact": 1,
+        "character_edits": 2,
+        "characters": 8,
+        "cer": 0.25
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "ja-opt-title-clean",
+      "cohort": "cjk",
+      "language": "ja",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "severity": "clean",
+      "typography": null,
+      "expected": "選択",
+      "expected_characters": 2,
+      "image_sha256": "a2cbc5d878f7010746648fae233ed4c9f9b17b54a5fda71b38aa12a7a6418a91",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-title-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.76837158203125e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9987325966358185,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "選択",
+          "mean_first_emission_posterior": 0.9987325370311737,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "選択",
+          "confidence": 0.9987386,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-opt-title-severe",
+      "cohort": "cjk",
+      "language": "ja",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "severity": "severe",
+      "typography": null,
+      "expected": "選択",
+      "expected_characters": 2,
+      "image_sha256": "6a0ef534e5dcf4566132b5e391f2a0531c89df30093a24282195cfd96c4eba9c",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-title-severe.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 8.940696716308594e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "退択",
+          "mean_first_emission_posterior": 0.6107761561870575,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "退択",
+          "mean_first_emission_posterior": 0.6107819676399231,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "退択",
+          "confidence": 0.6223281,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "ja-opt-rules-clean",
+      "cohort": "cjk",
+      "language": "ja",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "severity": "clean",
+      "typography": null,
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "image_sha256": "f358228f481b1f72e10876d67f47b8c11a67e92965d67e0eb0cb293f50d55fc3",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-rules-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 5.960464477539062e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9993384149339464,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "カード１枚を引く。",
+          "mean_first_emission_posterior": 0.9993384546703763,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "カード１枚を引く。",
+          "confidence": 0.99933195,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "ja-opt-rules-severe",
+      "cohort": "cjk",
+      "language": "ja",
+      "card_id": "2607d870-4995-489f-b5f9-76999a45958d",
+      "severity": "severe",
+      "typography": null,
+      "expected": "カード１枚を引く。",
+      "expected_characters": 9,
+      "image_sha256": "1f11b55b2453a6ec4a65330e5780c722e4dcabbcc528025013aca4b803041502",
+      "image_path": "training/experimental_paddle/fixtures/ja-opt-rules-severe.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9753244254324172,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "カード1枚を引く。",
+          "mean_first_emission_posterior": 0.9753243260913425,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "カード1枚を引く。",
+          "confidence": 0.9741865,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "zhs-pack-title-clean",
+      "cohort": "cjk",
+      "language": "zhs",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "severity": "clean",
+      "typography": null,
+      "expected": "集群攻击",
+      "expected_characters": 4,
+      "image_sha256": "1b19a43b7850e0bf3b0fd16b06d329762597a8c49aaf07d83ac7ae7af4310145",
+      "image_path": "training/experimental_paddle/fixtures/zhs-pack-title-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9999802112579346,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9999802708625793,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "集群攻击",
+          "confidence": 0.9999803,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zhs-pack-title-severe",
+      "cohort": "cjk",
+      "language": "zhs",
+      "card_id": "bc588865-43e7-4f41-a002-cff30ee8dcdb",
+      "severity": "severe",
+      "typography": null,
+      "expected": "集群攻击",
+      "expected_characters": 4,
+      "image_sha256": "39deac9c27e54e26eaca2e18aa0e31b09df099f4e28e2361087f828f61085e2e",
+      "image_path": "training/experimental_paddle/fixtures/zhs-pack-title-severe.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9998811632394791,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "集群攻击",
+          "mean_first_emission_posterior": 0.9998810440301895,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "集群攻击",
+          "confidence": 0.999889,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zht-pierce-title-clean",
+      "cohort": "cjk",
+      "language": "zht",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "severity": "clean",
+      "typography": null,
+      "expected": "劃破蒼穹",
+      "expected_characters": 4,
+      "image_sha256": "4993988c5047a17a2895df66e3f3bf7728503f4c9b28d82030bb96c9ac78db50",
+      "image_path": "training/experimental_paddle/fixtures/zht-pierce-title-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.76837158203125e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "劃破蒼穹",
+          "mean_first_emission_posterior": 0.996384784579277,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "劃破蒼穹",
+          "mean_first_emission_posterior": 0.9963847547769547,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "劃破蒼穹",
+          "confidence": 0.99666476,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "zht-pierce-title-severe",
+      "cohort": "cjk",
+      "language": "zht",
+      "card_id": "1bf0483c-4098-4f39-b2ef-c0b3a747d9e4",
+      "severity": "severe",
+      "typography": null,
+      "expected": "劃破蒼穹",
+      "expected_characters": 4,
+      "image_sha256": "bee4737d07328832a356cc4722d65912fdb6a2ed54580e35f57c8a9865835fb4",
+      "image_path": "training/experimental_paddle/fixtures/zht-pierce-title-severe.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.76837158203125e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "割破蒼弯",
+          "mean_first_emission_posterior": 0.9165176004171371,
+          "exact": false,
+          "character_edits": 2
+        },
+        "official_bgr_rten": {
+          "text": "割破蒼弯",
+          "mean_first_emission_posterior": 0.9165177494287491,
+          "exact": false,
+          "character_edits": 2
+        },
+        "actual_cli_bgr_rten": {
+          "text": "割破蒼弯",
+          "confidence": 0.9164559,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 2
+        }
+      }
+    },
+    {
+      "id": "latin-fr-fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7-clean",
+      "cohort": "latin",
+      "language": "fr",
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Sphère de capture",
+      "expected_characters": 17,
+      "image_sha256": "06268b6ef0a5e2f60dc3ce49333bbc6527cdb90d7881fd035a691a8b4b633949",
+      "image_path": "training/latin-eval/images/fr-m21-47-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        478
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.351139068603516e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9995650964624742,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9995650333516738,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Sphère de capture",
+          "confidence": 0.99959457,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7-severe",
+      "cohort": "latin",
+      "language": "fr",
+      "card_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Sphère de capture",
+      "expected_characters": 17,
+      "image_sha256": "7b27761165595d0f23d7bc7b8d06006eb1fa95954d63329987f66bda75fce805",
+      "image_path": "training/latin-eval/images/fr-m21-47-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        477
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.300126314163208e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9987149273647982,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Sphère de capture",
+          "mean_first_emission_posterior": 0.9987149273647982,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Sphère de capture",
+          "confidence": 0.9987165,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-4d8605da-d353-40bf-9a94-3bff2bd43d25-clean",
+      "cohort": "latin",
+      "language": "fr",
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Renaissance fongoïde",
+      "expected_characters": 20,
+      "image_sha256": "1fa17565236ee08cb55e5ac5567f0f7a1cde8629eb14109da5c0b5383dfa1001",
+      "image_path": "training/latin-eval/images/fr-m21-182-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        478
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 9.417533874511719e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Renaissance fongoïde",
+          "mean_first_emission_posterior": 0.9808376103639602,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Renaissance fongoïde",
+          "mean_first_emission_posterior": 0.9808375060558319,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Renaissance fongoïde",
+          "confidence": 0.976907,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-fr-4d8605da-d353-40bf-9a94-3bff2bd43d25-severe",
+      "cohort": "latin",
+      "language": "fr",
+      "card_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Renaissance fongoïde",
+      "expected_characters": 20,
+      "image_sha256": "7a1f75d245fc8887ed76e9bd70b9c43588cb054affa0063d6d15d1c866407993",
+      "image_path": "training/latin-eval/images/fr-m21-182-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        477
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 2.205371856689453e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Renaissance fongoide",
+          "mean_first_emission_posterior": 0.9890545666217804,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "Renaissance fongoide",
+          "mean_first_emission_posterior": 0.9890546083450318,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Renaissance fongoide",
+          "confidence": 0.98885626,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "latin-de-2936555e-4ee7-4c91-9e3b-39be058c4efb-clean",
+      "cohort": "latin",
+      "language": "de",
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Licht der Verheißung",
+      "expected_characters": 20,
+      "image_sha256": "8b41dc57c1362b9d52eb1874300b9cc12131f38c0a447f1c81cb796334cc7e7e",
+      "image_path": "training/latin-eval/images/de-m21-25-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        478
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 5.543231964111328e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9900724500417709,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.990072152018547,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Licht der Verheißung",
+          "confidence": 0.99951303,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-2936555e-4ee7-4c91-9e3b-39be058c4efb-severe",
+      "cohort": "latin",
+      "language": "de",
+      "card_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Licht der Verheißung",
+      "expected_characters": 20,
+      "image_sha256": "c7bf587835b79fd978bddd94fe9b23795dcf7566505aefd6beadeaea7a8f1af4",
+      "image_path": "training/latin-eval/images/de-m21-25-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        477
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 7.152557373046875e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9962123245000839,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Licht der Verheißung",
+          "mean_first_emission_posterior": 0.9962123990058899,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Licht der Verheißung",
+          "confidence": 0.99569297,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-1cfb7471-be1f-4896-83dc-ee7a9f76f9cb-clean",
+      "cohort": "latin",
+      "language": "de",
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Gargaroth-Ältester",
+      "expected_characters": 18,
+      "image_sha256": "7b4dc8f3ecb9ed37e4fbfd78fb551c58eff79029ae906574e5c9aa4f063f2744",
+      "image_path": "training/latin-eval/images/de-m21-179-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.8477439880371094e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9993669026427798,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9993669158882565,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Gargaroth-Ältester",
+          "confidence": 0.99938333,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-de-1cfb7471-be1f-4896-83dc-ee7a9f76f9cb-severe",
+      "cohort": "latin",
+      "language": "de",
+      "card_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Gargaroth-Ältester",
+      "expected_characters": 18,
+      "image_sha256": "e26648ae7277da435b7f2f09a7cdf673dade719024374df82c8b4160a20df51f",
+      "image_path": "training/latin-eval/images/de-m21-179-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.9227306842803955e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9911748733785417,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Gargaroth-Ältester",
+          "mean_first_emission_posterior": 0.9911749064922333,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Gargaroth-Ältester",
+          "confidence": 0.99108547,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-24c69413-6402-49b1-ba8e-d22f7310aca7-clean",
+      "cohort": "latin",
+      "language": "es",
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Acólita de Basri",
+      "expected_characters": 16,
+      "image_sha256": "3e4d22895cf8b449bc3eb850082a61e0ac157b0518e0f0c757e40334c81c2be3",
+      "image_path": "training/latin-eval/images/es-m21-8-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.4007091522216797e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9987124763429165,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9987124726176262,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Acólita de Basri",
+          "confidence": 0.99870366,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-24c69413-6402-49b1-ba8e-d22f7310aca7-severe",
+      "cohort": "latin",
+      "language": "es",
+      "card_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Acólita de Basri",
+      "expected_characters": 16,
+      "image_sha256": "0cc3de32663f5ecab4d1f20cab4846d7fe0758f8513d8803fdefe6c99160c074",
+      "image_path": "training/latin-eval/images/es-m21-8-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 7.748603820800781e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9986092895269394,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Acólita de Basri",
+          "mean_first_emission_posterior": 0.9986092820763588,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Acólita de Basri",
+          "confidence": 0.99829566,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-7142df39-9c9c-4821-8f73-06b5dc3f8fc3-clean",
+      "cohort": "latin",
+      "language": "es",
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Dríada Quirion",
+      "expected_characters": 14,
+      "image_sha256": "c92316b95c60938814a41b6ccb464fe0626e1c658c3d4d4a6a8402bd5ecee5b4",
+      "image_path": "training/latin-eval/images/es-m21-198-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        478
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.996755599975586e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9919362919671195,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.991936228105,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Dríada Quirion",
+          "confidence": 0.99751514,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-es-7142df39-9c9c-4821-8f73-06b5dc3f8fc3-severe",
+      "cohort": "latin",
+      "language": "es",
+      "card_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Dríada Quirion",
+      "expected_characters": 14,
+      "image_sha256": "688536152d0c1ec53e046c21b97054e87795703de21a9acb81cc44bb5894ac4a",
+      "image_path": "training/latin-eval/images/es-m21-198-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        477
+      ],
+      "output_shape": [
+        1,
+        60,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 8.910894393920898e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9848375405584063,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Dríada Quirion",
+          "mean_first_emission_posterior": 0.9848377278872898,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Dríada Quirion",
+          "confidence": 0.9827979,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-a8048f57-b854-45a5-90cd-263666322d92-clean",
+      "cohort": "latin",
+      "language": "pt",
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Falha na Conjuração",
+      "expected_characters": 19,
+      "image_sha256": "c6b380758e2228c9495bf0cb9561a5c188931a79437002441b8f4bf1b804cd04",
+      "image_path": "training/latin-eval/images/pt-m21-57-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        507
+      ],
+      "output_shape": [
+        1,
+        63,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.4007091522216797e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9996034785320884,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9996034848062616,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Falha na Conjuração",
+          "confidence": 0.9996051,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-a8048f57-b854-45a5-90cd-263666322d92-severe",
+      "cohort": "latin",
+      "language": "pt",
+      "card_id": "a8048f57-b854-45a5-90cd-263666322d92",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Falha na Conjuração",
+      "expected_characters": 19,
+      "image_sha256": "056d5f8ab10460de12354de9cdc5357dc3c0d7c817f96aa68ad60ac52d7ce894",
+      "image_path": "training/latin-eval/images/pt-m21-57-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        506
+      ],
+      "output_shape": [
+        1,
+        63,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.9222497940063477e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9893974724568819,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Falha na Conjuração",
+          "mean_first_emission_posterior": 0.9893974975535744,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Falha na Conjuração",
+          "confidence": 0.9991431,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-83a67403-ce23-474a-89ed-2df863fae9b7-clean",
+      "cohort": "latin",
+      "language": "pt",
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Névoa Pestilenta",
+      "expected_characters": 16,
+      "image_sha256": "444bd8838cbe11c0befcc46f8adc7f6996561be20d20f1bb24f91048b4d9ff79",
+      "image_path": "training/latin-eval/images/pt-m21-118-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.039836883544922e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9964838586747646,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9964838735759258,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Névoa Pestilenta",
+          "confidence": 0.9973407,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-pt-83a67403-ce23-474a-89ed-2df863fae9b7-severe",
+      "cohort": "latin",
+      "language": "pt",
+      "card_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Névoa Pestilenta",
+      "expected_characters": 16,
+      "image_sha256": "b09d493b73cbb3ca8543f912b307dff6ef1d33198e803175861d84ad9674c5bd",
+      "image_path": "training/latin-eval/images/pt-m21-118-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 8.046627044677734e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9896562844514847,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Névoa Pestilenta",
+          "mean_first_emission_posterior": 0.9896562844514847,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Névoa Pestilenta",
+          "confidence": 0.9893052,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-a4b2c277-d9ae-4d53-80b1-48c6e89f9108-clean",
+      "cohort": "latin",
+      "language": "it",
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Opportunità",
+      "expected_characters": 11,
+      "image_sha256": "f20cd6f07778a9170e23fcc8da5b2928342add9b0fbb4d51d32c134a8f83b5d1",
+      "image_path": "training/latin-eval/images/it-m14-66-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9992831132628701,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9992831457744945,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Opportunità",
+          "confidence": 0.9993811,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-a4b2c277-d9ae-4d53-80b1-48c6e89f9108-severe",
+      "cohort": "latin",
+      "language": "it",
+      "card_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Opportunità",
+      "expected_characters": 11,
+      "image_sha256": "da55b8caacc7a2cd0b68708d411df8bf529414d7766dbf145c9efca5f0d1679e",
+      "image_path": "training/latin-eval/images/it-m14-66-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 6.0498714447021484e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9996012666008689,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Opportunità",
+          "mean_first_emission_posterior": 0.9996013099497015,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Opportunità",
+          "confidence": 0.99962306,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-6a339bc4-7e81-4177-9db6-61344d5c68e3-clean",
+      "cohort": "latin",
+      "language": "it",
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "severity": "clean",
+      "typography": null,
+      "expected": "Crudele Realtà",
+      "expected_characters": 14,
+      "image_sha256": "a30df030a4e766a1f87feec9aac4cf64dae2458b64b5302440217e0166a35a5c",
+      "image_path": "training/latin-eval/images/it-akh-84-clean.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9991553808961596,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9991553894111088,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Crudele Realtà",
+          "confidence": 0.9991074,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "latin-it-6a339bc4-7e81-4177-9db6-61344d5c68e3-severe",
+      "cohort": "latin",
+      "language": "it",
+      "card_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+      "severity": "severe",
+      "typography": null,
+      "expected": "Crudele Realtà",
+      "expected_characters": 14,
+      "image_sha256": "9ce42df25d2e9128c815f432aed48f5dbd3dbb45e018fef046041a96b7125d34",
+      "image_path": "training/latin-eval/images/it-akh-84-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        448
+      ],
+      "output_shape": [
+        1,
+        56,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.4901161193847656e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9987182659762246,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Crudele Realtà",
+          "mean_first_emission_posterior": 0.9987182489463261,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Crudele Realtà",
+          "confidence": 0.9987262,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "goudy-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "clean",
+      "typography": "Goudy Medieval",
+      "expected": "Llanowar Elves",
+      "expected_characters": 14,
+      "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+      "image_path": "docs/gallery/assets/goudy-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.4901161193847656e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9593951233795711,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9593950935772487,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Llanowar Elves",
+          "confidence": 0.9618472,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "goudy-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "severe",
+      "typography": "Goudy Medieval",
+      "expected": "Llanowar Elves",
+      "expected_characters": 14,
+      "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+      "image_path": "docs/gallery/assets/goudy-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.9371509552001953e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9280922838619777,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Llanowar Elves",
+          "mean_first_emission_posterior": 0.9280923455953598,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Llanowar Elves",
+          "confidence": 0.93378454,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "matrix-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "severity": "clean",
+      "typography": "Matrix Bold",
+      "expected": "Air Elemental",
+      "expected_characters": 13,
+      "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+      "image_path": "docs/gallery/assets/matrix-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.76837158203125e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9999686938065749,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.999968748826247,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Air Elemental",
+          "confidence": 0.9999688,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "matrix-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "severity": "severe",
+      "typography": "Matrix Bold",
+      "expected": "Air Elemental",
+      "expected_characters": 13,
+      "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+      "image_path": "docs/gallery/assets/matrix-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.635883331298828e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9998878653232868,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Air Elemental",
+          "mean_first_emission_posterior": 0.9998879203429589,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Air Elemental",
+          "confidence": 0.9998908,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "beleren-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "clean",
+      "typography": "Beleren",
+      "expected": "Divination",
+      "expected_characters": 10,
+      "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+      "image_path": "docs/gallery/assets/beleren-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999456584453583,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999456346035004,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Divination",
+          "confidence": 0.9999452,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "beleren-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "severe",
+      "typography": "Beleren",
+      "expected": "Divination",
+      "expected_characters": 10,
+      "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+      "image_path": "docs/gallery/assets/beleren-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999621570110321,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Divination",
+          "mean_first_emission_posterior": 0.9999621212482452,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Divination",
+          "confidence": 0.9999626,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-rules-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "clean",
+      "typography": "Plantin family",
+      "expected": "Tap to add 1 green mana to your",
+      "expected_characters": 31,
+      "image_sha256": "59a0649ed3d3a888836df0b572a7e1e5196cc45d65ffd79794133768f9455042",
+      "image_path": "docs/gallery/assets/historic-rules.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        641
+      ],
+      "output_shape": [
+        1,
+        80,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.9073486328125e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9875284202637211,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9875284106500687,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "confidence": 0.99913484,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-rules-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "severe",
+      "typography": "Plantin family",
+      "expected": "Tap to add 1 green mana to your",
+      "expected_characters": 31,
+      "image_sha256": "3522ec17c8f4d56afab57bcee446d38b40d0485c96c5c2fe4d0a7ed1a9fc1a8c",
+      "image_path": "docs/gallery/assets/historic-rules-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        664
+      ],
+      "output_shape": [
+        1,
+        83,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.1682510375976562e-05,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.989623406241017,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "mean_first_emission_posterior": 0.9896232985681103,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Tap to add 1 green mana to your",
+          "confidence": 0.99814993,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "modern-rules-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "clean",
+      "typography": "Plantin family",
+      "expected": "Draw two cards.",
+      "expected_characters": 15,
+      "image_sha256": "2222522079a282cf12e66091434716a50d25bdb4000bde07cb023b256af9a464",
+      "image_path": "docs/gallery/assets/modern-rules.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        324
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.2186508178710938e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9942882259686788,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9942884325981141,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Draw two cards.",
+          "confidence": 0.9990171,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "modern-rules-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "severe",
+      "typography": "Plantin family",
+      "expected": "Draw two cards.",
+      "expected_characters": 15,
+      "image_sha256": "9f4029ed8354ad2af3376e143c183da89f54e85e092025aa7bdb9777ac0d3690",
+      "image_path": "docs/gallery/assets/modern-rules-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 2.682209014892578e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9998308539390564,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Draw two cards.",
+          "mean_first_emission_posterior": 0.9998308380444845,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Draw two cards.",
+          "confidence": 0.999853,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-flavor-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "expected": "Whenever the Llanowar Elves gather",
+      "expected_characters": 34,
+      "image_sha256": "e31e0350e4344ad7e7d0dabeb0547c96fb252a627330c6132ac341cbfb2684bc",
+      "image_path": "docs/gallery/assets/historic-flavor.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        629
+      ],
+      "output_shape": [
+        1,
+        79,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 9.5367431640625e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Whenever the Llanowar Elves gather",
+          "mean_first_emission_posterior": 0.9964612862643074,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Whenever the Llanowar Elves gather",
+          "mean_first_emission_posterior": 0.9964612862643074,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Whenever the Llanowar Elves gather",
+          "confidence": 0.99778473,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "historic-flavor-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "expected": "Whenever the Llanowar Elves gather",
+      "expected_characters": 34,
+      "image_sha256": "aee039f25e92e1d6735e6f992e0d045014a5f8b52767fc0f48fc787a57640742",
+      "image_path": "docs/gallery/assets/historic-flavor-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        628
+      ],
+      "output_shape": [
+        1,
+        78,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 8.165836334228516e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "mean_first_emission_posterior": 0.9854891773532418,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "mean_first_emission_posterior": 0.9854894070064321,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Whenever the Llanowar Eloes gather",
+          "confidence": 0.9776853,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "modern-flavor-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "expected": "“The key to unlocking this puzzle is",
+      "expected_characters": 36,
+      "image_sha256": "e58e1b8601e76530c67b6d8eeb7a5a06913933069cfd17e5a993a50b3148f844",
+      "image_path": "docs/gallery/assets/modern-flavor.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        630
+      ],
+      "output_shape": [
+        1,
+        79,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 2.491474151611328e-05,
+      "results": {
+        "official_bgr_ort": {
+          "text": "“The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9978966895076964,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "“The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9978966812292734,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "“The key to unlocking this puzzle is",
+          "confidence": 0.99930984,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "modern-flavor-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "expected": "“The key to unlocking this puzzle is",
+      "expected_characters": 36,
+      "image_sha256": "004793fb6e147aa93024d366231f6baddb3e22cc80be5188d743c077c76ebb41",
+      "image_path": "docs/gallery/assets/modern-flavor-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        624
+      ],
+      "output_shape": [
+        1,
+        78,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 2.2649765014648438e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9981387472814984,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "mean_first_emission_posterior": 0.9981387423144447,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "\"The key to unlocking this puzzle is",
+          "confidence": 0.99798965,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "italic-reminder-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "severity": "clean",
+      "typography": "Plantin family italic",
+      "expected": "except by creatures with flying.)",
+      "expected_characters": 33,
+      "image_sha256": "953cef42f24f6b06542d889a3782e73fe4b4517b0b2f8a91e8792721a8bfea05",
+      "image_path": "docs/gallery/assets/italic-reminder.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        612
+      ],
+      "output_shape": [
+        1,
+        76,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.430511474609375e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9800202936837168,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9800203045209249,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "except by creatures with flying.)",
+          "confidence": 0.99940264,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "italic-reminder-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+      "severity": "severe",
+      "typography": "Plantin family italic",
+      "expected": "except by creatures with flying.)",
+      "expected_characters": 33,
+      "image_sha256": "7d31d55ebef018d9090d6b6cdc1dfbf7e99f619d7cc3dd115ac5da2eb5ebd119",
+      "image_path": "docs/gallery/assets/italic-reminder-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        596
+      ],
+      "output_shape": [
+        1,
+        74,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.6689300537109375e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.998732920848962,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "except by creatures with flying.)",
+          "mean_first_emission_posterior": 0.9987329136241566,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "except by creatures with flying.)",
+          "confidence": 0.9986633,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-reminder-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+      "severity": "clean",
+      "typography": "Plantin family regular + italic",
+      "expected": "Deathtouch (Any amount of damage",
+      "expected_characters": 32,
+      "image_sha256": "d3f8cddfb5a4b6906725a5db947d137a5d2d8f7004205362a832a81db8e02350",
+      "image_path": "docs/gallery/assets/mixed-reminder.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        680
+      ],
+      "output_shape": [
+        1,
+        85,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 6.705522537231445e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9994517862796783,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9994517862796783,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "confidence": 0.99964356,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-reminder-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+      "severity": "severe",
+      "typography": "Plantin family regular + italic",
+      "expected": "Deathtouch (Any amount of damage",
+      "expected_characters": 32,
+      "image_sha256": "72030733d4e103ce8553bf999267defea2b092ed0a1616c12ddf061161f1eddb",
+      "image_path": "docs/gallery/assets/mixed-reminder-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        658
+      ],
+      "output_shape": [
+        1,
+        82,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 6.42240047454834e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.9984535723924637,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "mean_first_emission_posterior": 0.998453613370657,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Deathtouch (Any amount of damage",
+          "confidence": 0.99806744,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "future-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+      "severity": "clean",
+      "typography": "Future Sight frame title treatment",
+      "expected": "Blade of the Sixth Pride",
+      "expected_characters": 24,
+      "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+      "image_path": "docs/gallery/assets/future-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        475
+      ],
+      "output_shape": [
+        1,
+        59,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 2.002716064453125e-05,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9996921047568321,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9996921246250471,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Blade of the Sixth Pride",
+          "confidence": 0.99973583,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "future-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+      "severity": "severe",
+      "typography": "Future Sight frame title treatment",
+      "expected": "Blade of the Sixth Pride",
+      "expected_characters": 24,
+      "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+      "image_path": "docs/gallery/assets/future-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        467
+      ],
+      "output_shape": [
+        1,
+        58,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 6.198883056640625e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9999620467424393,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Blade of the Sixth Pride",
+          "mean_first_emission_posterior": 0.9999621113141378,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Blade of the Sixth Pride",
+          "confidence": 0.9999628,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "colorshift-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+      "severity": "clean",
+      "typography": "Matrix Bold, white text with shadow",
+      "expected": "Mana Tithe",
+      "expected_characters": 10,
+      "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+      "image_path": "docs/gallery/assets/colorshift-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.5299530029296875e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9940218448638916,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9940218210220337,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Mana Tithe",
+          "confidence": 0.999811,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "colorshift-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+      "severity": "severe",
+      "typography": "Matrix Bold, white text with shadow",
+      "expected": "Mana Tithe",
+      "expected_characters": 10,
+      "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+      "image_path": "docs/gallery/assets/colorshift-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.9073486328125e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.999755346775055,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Mana Tithe",
+          "mean_first_emission_posterior": 0.9997553706169129,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Mana Tithe",
+          "confidence": 0.99974877,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "dracula-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+      "severity": "clean",
+      "typography": "Dracula showcase title treatment",
+      "expected": "Mina Harker",
+      "expected_characters": 11,
+      "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+      "image_path": "docs/gallery/assets/dracula-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.11434268951416e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9999387968670238,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9999387643553994,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Mina Harker",
+          "confidence": 0.9999382,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "dracula-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+      "severity": "severe",
+      "typography": "Dracula showcase title treatment",
+      "expected": "Mina Harker",
+      "expected_characters": 11,
+      "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+      "image_path": "docs/gallery/assets/dracula-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9995590990239923,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Mina Harker",
+          "mean_first_emission_posterior": 0.9995591206984087,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Mina Harker",
+          "confidence": 0.9995799,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "invocation-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+      "severity": "clean",
+      "typography": "Amonkhet Invocation display; ornamental glyphs outside the word are excluded",
+      "expected": "DAZE",
+      "expected_characters": 4,
+      "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+      "image_path": "docs/gallery/assets/invocation-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.5762786865234375e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "DAZE",
+          "mean_first_emission_posterior": 0.9905185103416443,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "DAZE",
+          "mean_first_emission_posterior": 0.9905185699462891,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "DAZE",
+          "confidence": 0.99046725,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "invocation-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+      "severity": "severe",
+      "typography": "Amonkhet Invocation display; ornamental glyphs outside the word are excluded",
+      "expected": "DAZE",
+      "expected_characters": 4,
+      "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+      "image_path": "docs/gallery/assets/invocation-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "output_shape": [
+        1,
+        40,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 1.4156103134155273e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "BAZE",
+          "mean_first_emission_posterior": 0.9283173382282257,
+          "exact": false,
+          "character_edits": 1
+        },
+        "official_bgr_rten": {
+          "text": "BAZE",
+          "mean_first_emission_posterior": 0.928317055106163,
+          "exact": false,
+          "character_edits": 1
+        },
+        "actual_cli_bgr_rten": {
+          "text": "BAZE",
+          "confidence": 0.91081285,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": false,
+          "character_edits": 1
+        }
+      }
+    },
+    {
+      "id": "module-title-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+      "severity": "clean",
+      "typography": "D&D module showcase display serif; second printed title line",
+      "expected": "Frost Dragon",
+      "expected_characters": 12,
+      "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+      "image_path": "docs/gallery/assets/module-title.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        376
+      ],
+      "output_shape": [
+        1,
+        47,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 3.762543201446533e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9999058345953623,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9999058345953623,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Frost Dragon",
+          "confidence": 0.99990493,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "module-title-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+      "severity": "severe",
+      "typography": "D&D module showcase display serif; second printed title line",
+      "expected": "Frost Dragon",
+      "expected_characters": 12,
+      "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+      "image_path": "docs/gallery/assets/module-title-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        371
+      ],
+      "output_shape": [
+        1,
+        46,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.3585896492004395e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.995995432138443,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "Frost Dragon",
+          "mean_first_emission_posterior": 0.9959953973690668,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "Frost Dragon",
+          "confidence": 0.99862534,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "collector-type-clean",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "clean",
+      "typography": "Small sans-serif collector type; exact family not verified",
+      "expected": "052/269 C",
+      "expected_characters": 9,
+      "image_sha256": "055b1a45cf542fa23313729be4b57a2f698b27762547f22fe23a0180a4d22a79",
+      "image_path": "docs/gallery/assets/collector-type.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        343
+      ],
+      "output_shape": [
+        1,
+        43,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 8.121132850646973e-07,
+      "results": {
+        "official_bgr_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9852631224526299,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.985263274775611,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "052/269 C",
+          "confidence": 0.9845423,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    },
+    {
+      "id": "collector-type-blur",
+      "cohort": "gallery",
+      "language": "en",
+      "card_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+      "severity": "severe",
+      "typography": "Small sans-serif collector type; exact family not verified",
+      "expected": "052/269 C",
+      "expected_characters": 9,
+      "image_sha256": "2e311b600935e86b5b8c14d1ee6ce98114f4157629da396c132b071576781a5f",
+      "image_path": "docs/gallery/assets/collector-type-blur.png",
+      "input_shape": [
+        1,
+        3,
+        48,
+        360
+      ],
+      "output_shape": [
+        1,
+        45,
+        18710
+      ],
+      "ort_rten_identical_argmax": true,
+      "ort_rten_max_abs_probability_error": 4.291534423828125e-06,
+      "results": {
+        "official_bgr_ort": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.9094123641649882,
+          "exact": true,
+          "character_edits": 0
+        },
+        "official_bgr_rten": {
+          "text": "052/269 C",
+          "mean_first_emission_posterior": 0.909411801232232,
+          "exact": true,
+          "character_edits": 0
+        },
+        "actual_cli_bgr_rten": {
+          "text": "052/269 C",
+          "confidence": 0.92793316,
+          "method": "original + LCNetV4 + LightSVTR + CTC / greedy CTC",
+          "exact": true,
+          "character_edits": 0
+        }
+      }
+    }
+  ]
+}

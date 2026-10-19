@@ -1,8 +1,11 @@
 # MTG recognition training
 
-The distributed model below is the **English baseline**. The requested goal
-includes all printed languages; [language coverage](../docs/language-coverage.md)
-tracks the unfinished profiles. Phyrexian is a separate stretch goal.
+The training workflow below produces the experimental **English CRNN**
+(`--language en-mtg`). The default Latin-language profiles use an upstream colour
+model evaluated on MTG, with [pinned provenance and actual Rust comparisons](experimental_paddle/README.md).
+Latin-script languages, historic fonts, italics and blur are the priority;
+other alphabets are best effort. [Language coverage](../docs/language-coverage.md)
+tracks the remaining gaps. Phyrexian is a separate stretch goal.
 
 This trains the neural recognizer used by `ocracle`. The detector locates text;
 the recognizer reads image pixels directly with convolutional visual features,

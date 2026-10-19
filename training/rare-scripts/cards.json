@@ -1,0 +1,771 @@
+[
+  {
+    "language": "he",
+    "api_url": "https://api.scryfall.com/cards/319724d5-8937-4470-a880-a65e674f7b3b",
+    "metadata_sha256": "275fb38c633319909613d3793ed905f36cff1fb03325461043a13ff0c5bdd16f",
+    "metadata": {
+      "object": "card",
+      "id": "319724d5-8937-4470-a880-a65e674f7b3b",
+      "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "multiverse_ids": [
+        97064
+      ],
+      "tcgplayer_id": 38381,
+      "cardmarket_id": 17712,
+      "name": "Glory",
+      "printed_name": "תהילה",
+      "lang": "he",
+      "released_at": "2002-05-18",
+      "uri": "https://api.scryfall.com/cards/319724d5-8937-4470-a880-a65e674f7b3b",
+      "scryfall_uri": "https://scryfall.com/card/pjud/11/%D7%AA%D7%94%D7%99%D7%9C%D7%94-(glory)?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T12:18:59Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+        "normal": "https://cards.scryfall.io/normal/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+        "large": "https://cards.scryfall.io/large/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+        "png": "https://cards.scryfall.io/png/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.png?1783945139",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+        "thumb": "https://cards.scryfall.io/thumb/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.webp?1783945139",
+        "grid": "https://cards.scryfall.io/grid/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.webp?1783945139",
+        "display": "https://cards.scryfall.io/display/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.webp?1783945139",
+        "art": "https://cards.scryfall.io/art/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.webp?1783945139",
+        "crop": "https://cards.scryfall.io/crop/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.webp?1783945139",
+        "jpeg": "https://cards.scryfall.io/normal/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139"
+      },
+      "mana_cost": "{3}{W}{W}",
+      "cmc": 5.0,
+      "type_line": "Creature — Incarnation",
+      "printed_type_line": "יצור — התגלמות",
+      "oracle_text": "Flying\n{2}{W}: Choose a color. Creatures you control gain protection from the chosen color until end of turn. Activate only if this card is in your graveyard.",
+      "printed_text": "יכולת תﬠופה\n{W}{2}:יצורים שנמצאים בשליטתך נהנים מהגנתו של הצבﬠ שבחרת, ﬠד לסיום התור. השתמש/י ביכולת זו רק במקרה, שתהילה נמצאת בבית-הקברות שלך.",
+      "power": "3",
+      "toughness": "3",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": true,
+      "nonfoil": false,
+      "finishes": [
+        "foil"
+      ],
+      "oversized": false,
+      "promo": true,
+      "reprint": true,
+      "variation": false,
+      "set_id": "a1aed70a-561a-4766-97ce-ad56bef407c0",
+      "set": "pjud",
+      "set_name": "Judgment Promos",
+      "set_type": "promo",
+      "set_uri": "https://api.scryfall.com/sets/a1aed70a-561a-4766-97ce-ad56bef407c0",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apjud&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/pjud?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/319724d5-8937-4470-a880-a65e674f7b3b/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A3853ef6a-6771-4708-8ed5-d667f646de5a&unique=prints",
+      "collector_number": "11",
+      "digital": false,
+      "rarity": "rare",
+      "watermark": "wotc",
+      "flavor_text": "\"תהילה נﬠלמה; תהילה הייתה בכל מקום.\"\n—מגילת ההיווצרות והמקור",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Donato Giancola",
+      "artist_ids": [
+        "90332db2-aecb-4d79-917b-95cbeb8d0cb6"
+      ],
+      "illustration_id": "320966f1-490c-4331-8458-7d83155adfa5",
+      "border_color": "black",
+      "frame": "1997",
+      "frame_effects": [
+        "tombstone"
+      ],
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "datestamped",
+        "prerelease"
+      ],
+      "edhrec_rank": 12378,
+      "penny_rank": 4758,
+      "prices": {
+        "usd": null,
+        "usd_foil": "35.26",
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "9.94",
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=97064&printed=false",
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGlory",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGlory",
+        "edhrec": "https://edhrec.com/route/?cc=Glory"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F38381%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=17712&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Glory&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/3/1/319724d5-8937-4470-a880-a65e674f7b3b.jpg?1783945139",
+    "scan_sha256": "fe9623992a626d52e117195cb9ab051a12c69965206a3db8663c9bc9018a8383",
+    "image_size": [
+      672,
+      936
+    ]
+  },
+  {
+    "language": "la",
+    "api_url": "https://api.scryfall.com/cards/c9c77844-742c-48cf-9c1e-954ffe781e25",
+    "metadata_sha256": "84d86eae6bd41f92feb99af83977f2a86df15ee1ef5ca9c6908f3716adf66be6",
+    "metadata": {
+      "object": "card",
+      "id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "multiverse_ids": [
+        97061
+      ],
+      "tcgplayer_id": 38394,
+      "cardmarket_id": 17707,
+      "name": "Raging Kavu",
+      "printed_name": "Kavu Furens",
+      "lang": "la",
+      "released_at": "2000-09-23",
+      "uri": "https://api.scryfall.com/cards/c9c77844-742c-48cf-9c1e-954ffe781e25",
+      "scryfall_uri": "https://scryfall.com/card/pinv/262/kavu-furens-(raging-kavu)?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T12:29:00Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+        "normal": "https://cards.scryfall.io/normal/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+        "large": "https://cards.scryfall.io/large/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+        "png": "https://cards.scryfall.io/png/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.png?1783945740",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+        "thumb": "https://cards.scryfall.io/thumb/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.webp?1783945740",
+        "grid": "https://cards.scryfall.io/grid/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.webp?1783945740",
+        "display": "https://cards.scryfall.io/display/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.webp?1783945740",
+        "art": "https://cards.scryfall.io/art/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.webp?1783945740",
+        "crop": "https://cards.scryfall.io/crop/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.webp?1783945740",
+        "jpeg": "https://cards.scryfall.io/normal/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740"
+      },
+      "mana_cost": "{1}{R}{G}",
+      "cmc": 3.0,
+      "type_line": "Creature — Kavu",
+      "printed_type_line": "Animal — Kavu",
+      "oracle_text": "Flash\nHaste",
+      "printed_text": "Festinatio (animali oppugnare et {T} licet ordine penes tuum venit.)\nKavu Furentem adhibere tibi licet quandocumque subitum adhibere potes.",
+      "power": "3",
+      "toughness": "1",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "keywords": [
+        "Haste",
+        "Flash"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": true,
+      "nonfoil": false,
+      "finishes": [
+        "foil"
+      ],
+      "oversized": false,
+      "promo": true,
+      "reprint": true,
+      "variation": false,
+      "set_id": "907dbba9-bb5e-4d07-b681-ab8641cb1ada",
+      "set": "pinv",
+      "set_name": "Invasion Promos",
+      "set_type": "promo",
+      "set_uri": "https://api.scryfall.com/sets/907dbba9-bb5e-4d07-b681-ab8641cb1ada",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apinv&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/pinv?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/c9c77844-742c-48cf-9c1e-954ffe781e25/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ad126bb08-be60-4046-91f1-65672ef42c63&unique=prints",
+      "collector_number": "262",
+      "digital": false,
+      "rarity": "rare",
+      "watermark": "wotc",
+      "flavor_text": "\"Yavaimayae necesse mille annis fuit ut illa aluerent, sed modo momentum necesse fuit ut illa pretium probaverent.\"",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Arnie Swekel",
+      "artist_ids": [
+        "af10ecf2-eb82-4100-97b2-6c236b0fa644"
+      ],
+      "illustration_id": "af8f4210-c89e-48c6-97db-30098f64954f",
+      "border_color": "black",
+      "frame": "1997",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "datestamped",
+        "prerelease"
+      ],
+      "edhrec_rank": 29287,
+      "prices": {
+        "usd": null,
+        "usd_foil": "15.06",
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "5.30",
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=97061&printed=false",
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRaging%2BKavu",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DRaging%2BKavu",
+        "edhrec": "https://edhrec.com/route/?cc=Raging+Kavu"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F38394%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=17707&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Raging+Kavu&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/c/9/c9c77844-742c-48cf-9c1e-954ffe781e25.jpg?1783945740",
+    "scan_sha256": "445e40c7b078c4e00f3ed8becafc20e8e38b253542f2bf4c06fd267868367555",
+    "image_size": [
+      672,
+      936
+    ]
+  },
+  {
+    "language": "grc",
+    "api_url": "https://api.scryfall.com/cards/c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+    "metadata_sha256": "91dc1115648720d741cdb02ee9113289fef151c78fd3f1334cdf0c8771f1ab18",
+    "metadata": {
+      "object": "card",
+      "id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+      "multiverse_ids": [],
+      "tcgplayer_id": 557380,
+      "cardmarket_id": 776178,
+      "name": "Cleopatra, Exiled Pharaoh",
+      "printed_name": "Κλεοπάτρα, Ἐξόριστος Φαραώ",
+      "lang": "grc",
+      "released_at": "2024-07-05",
+      "uri": "https://api.scryfall.com/cards/c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+      "scryfall_uri": "https://scryfall.com/card/acr/272/%CE%BA%CE%BB%CE%B5%CE%BF%CF%80%CE%AC%CF%84%CF%81%CE%B1-%E1%BC%90%CE%BE%CF%8C%CF%81%CE%B9%CF%83%CF%84%CE%BF%CF%82-%CF%86%CE%B1%CF%81%CE%B1%CF%8E-(cleopatra-exiled-pharaoh)?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T02:48:20Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+        "normal": "https://cards.scryfall.io/normal/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+        "large": "https://cards.scryfall.io/large/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+        "png": "https://cards.scryfall.io/png/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.png?1783910900",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+        "thumb": "https://cards.scryfall.io/thumb/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.webp?1783910900",
+        "grid": "https://cards.scryfall.io/grid/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.webp?1783910900",
+        "display": "https://cards.scryfall.io/display/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.webp?1783910900",
+        "art": "https://cards.scryfall.io/art/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.webp?1783910900",
+        "crop": "https://cards.scryfall.io/crop/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.webp?1783910900",
+        "jpeg": "https://cards.scryfall.io/normal/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900"
+      },
+      "mana_cost": "{2}{B}{G}",
+      "cmc": 4.0,
+      "type_line": "Legendary Creature — Human Noble",
+      "printed_type_line": "Μυθικὸν ὄν — Ἄνθρωπος Εὐγενής",
+      "oracle_text": "Allies — At the beginning of your end step, put a +1/+1 counter on each of up to two other target legendary creatures.\nBetrayal — Whenever a legendary creature with counters on it dies, draw a card for each counter on it. You lose 2 life.",
+      "printed_text": "Σύμμαχοι — Τοῦ τελευταίου βήματος ἀρχομένου, σημαίνου σήματι +1/+1 ἓκαστον δύο τὸ πλεῖστον ἑτέρων διωκτέων μυθικῶν ὄντων.\nΠροδοσία — Ὁπόταν μυθικόν τι ὄν σεσημασμένον θνήσκῃ, χαρτία τόσα λαμβάνεις, ὅσαπερ σήματά οἱ ἐστι. Ἀποστερεῖ βίων 2.",
+      "power": "2",
+      "toughness": "4",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "keywords": [
+        "Allies",
+        "Betrayal"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": true,
+      "nonfoil": false,
+      "finishes": [
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": false,
+      "variation": false,
+      "set_id": "54b67b0b-cd3f-4e0d-ac25-fef5d966409b",
+      "set": "acr",
+      "set_name": "Assassin's Creed",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/54b67b0b-cd3f-4e0d-ac25-fef5d966409b",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aacr&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/acr?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/c2036b2e-89d6-448a-bfcb-50b2247ee17a/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae7a80464-1522-48d7-bf82-f9894f5c3ae0&unique=prints",
+      "collector_number": "272",
+      "digital": false,
+      "rarity": "mythic",
+      "flavor_text": "𓍹𓈎𓃭𓍢𓊪𓂧𓂋𓏏𓆇𓊹𓏏𓆇𓌰𓏏𓊃𓎙𓍺",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Néstor Ossandón Leal",
+      "artist_ids": [
+        "7a6f1667-a8ac-47f5-a302-f71cb54b2adf"
+      ],
+      "illustration_id": "deb2bd98-60e8-4f71-84f6-4ea6f25e65e7",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "legendary",
+        "inverted"
+      ],
+      "security_stamp": "triangle",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "serialized",
+        "doublerainbow",
+        "universesbeyond",
+        "boosterfun"
+      ],
+      "edhrec_rank": 9624,
+      "penny_rank": 12075,
+      "prices": {
+        "usd": null,
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "840.68",
+        "tix": null
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCleopatra%252C%2BExiled%2BPharaoh",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DCleopatra%252C%2BExiled%2BPharaoh",
+        "edhrec": "https://edhrec.com/route/?cc=Cleopatra%2C+Exiled+Pharaoh"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F557380%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=776178&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Cleopatra%2C+Exiled+Pharaoh&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/c/2/c2036b2e-89d6-448a-bfcb-50b2247ee17a.jpg?1783910900",
+    "scan_sha256": "dc81cd3b75a2fb832bd6760104e69ca8fcf379acd568469795b18f3978639beb",
+    "image_size": [
+      672,
+      936
+    ]
+  },
+  {
+    "language": "ar",
+    "api_url": "https://api.scryfall.com/cards/8ec4eeb5-2f82-460c-8140-20587442d40b",
+    "metadata_sha256": "8520d5141ed498a8926272dd6f67c248676b7ee917b9e6ba84d7005dabae4b40",
+    "metadata": {
+      "object": "card",
+      "id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+      "multiverse_ids": [],
+      "tcgplayer_id": 38400,
+      "cardmarket_id": 17710,
+      "name": "Stone-Tongue Basilisk",
+      "printed_name": "باسلْ ليسك – الحجر واللسان",
+      "lang": "ar",
+      "released_at": "2001-09-22",
+      "uri": "https://api.scryfall.com/cards/8ec4eeb5-2f82-460c-8140-20587442d40b",
+      "scryfall_uri": "https://scryfall.com/card/pody/276/%D8%A8%D8%A7%D8%B3%D9%84%D9%92-%D9%84%D9%8A%D8%B3%D9%83-%E2%80%93-%D8%A7%D9%84%D8%AD%D8%AC%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86-(stone-tongue-basilisk)?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T12:21:25Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+        "normal": "https://cards.scryfall.io/normal/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+        "large": "https://cards.scryfall.io/large/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+        "png": "https://cards.scryfall.io/png/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.png?1783945285",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+        "thumb": "https://cards.scryfall.io/thumb/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.webp?1783945285",
+        "grid": "https://cards.scryfall.io/grid/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.webp?1783945285",
+        "display": "https://cards.scryfall.io/display/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.webp?1783945285",
+        "art": "https://cards.scryfall.io/art/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.webp?1783945285",
+        "crop": "https://cards.scryfall.io/crop/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.webp?1783945285",
+        "jpeg": "https://cards.scryfall.io/normal/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285"
+      },
+      "mana_cost": "{4}{G}{G}{G}",
+      "cmc": 7.0,
+      "type_line": "Creature — Basilisk",
+      "printed_type_line": "مخلوق – باسلْ ليسك",
+      "oracle_text": "Whenever this creature deals combat damage to a creature, destroy that creature at end of combat.\nThreshold — As long as there are seven or more cards in your graveyard, all creatures able to block this creature do so.",
+      "printed_text": "أينما يقوم باسلْ ليسك — الحجر واللسان، بتوجيه ضرر قتالي لمخلوق اَخر، قم بتحطيم هذا المخلوق المضروب عند نهاية القتال.\nالحد — على جميع المخلوقات القادرة على سد هجوم باسلْ ليسك — الحجر واللسان، عمل ذلك. (لديك الحد طالما وجد سبع بطاقات أو أكثر في مقبرتك).",
+      "power": "4",
+      "toughness": "5",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [
+        "Threshold"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": true,
+      "nonfoil": false,
+      "finishes": [
+        "foil"
+      ],
+      "oversized": false,
+      "promo": true,
+      "reprint": true,
+      "variation": false,
+      "set_id": "52dc2f6b-0895-483d-8a15-3c6052612a79",
+      "set": "pody",
+      "set_name": "Odyssey Promos",
+      "set_type": "promo",
+      "set_uri": "https://api.scryfall.com/sets/52dc2f6b-0895-483d-8a15-3c6052612a79",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apody&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/pody?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/8ec4eeb5-2f82-460c-8140-20587442d40b/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ac38efbe5-7ace-41fa-b874-72e3702a833c&unique=prints",
+      "collector_number": "276",
+      "digital": false,
+      "rarity": "rare",
+      "watermark": "wotc",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Wayne England",
+      "artist_ids": [
+        "62dc90c0-4bc2-4d42-ad76-59cad9243566"
+      ],
+      "illustration_id": "6da430fe-63c6-4521-b55d-91304c362729",
+      "border_color": "black",
+      "frame": "1997",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "datestamped",
+        "prerelease"
+      ],
+      "edhrec_rank": 26574,
+      "prices": {
+        "usd": null,
+        "usd_foil": "33.24",
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "7.87",
+        "tix": null
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DStone-Tongue%2BBasilisk",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DStone-Tongue%2BBasilisk",
+        "edhrec": "https://edhrec.com/route/?cc=Stone-Tongue+Basilisk"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F38400%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=17710&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Stone-Tongue+Basilisk&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/8/e/8ec4eeb5-2f82-460c-8140-20587442d40b.jpg?1783945285",
+    "scan_sha256": "dff45318e974a83dfa2c0aac5e907f574fafccb00d144d1f4c7afae711d69e9c",
+    "image_size": [
+      672,
+      936
+    ]
+  },
+  {
+    "language": "sa",
+    "api_url": "https://api.scryfall.com/cards/1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+    "metadata_sha256": "248ae81c6b23d07b6abca72e201f563404095d852b86a49da60a28e4bd75a956",
+    "metadata": {
+      "object": "card",
+      "id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+      "multiverse_ids": [
+        97062
+      ],
+      "tcgplayer_id": 38379,
+      "cardmarket_id": 17709,
+      "name": "Fungal Shambler",
+      "printed_name": "फंगल्शम्ब्लर्",
+      "lang": "sa",
+      "released_at": "2001-05-26",
+      "uri": "https://api.scryfall.com/cards/1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+      "scryfall_uri": "https://scryfall.com/card/papc/100/%E0%A4%AB%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A5%8D%E0%A4%B6%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A4%B0%E0%A5%8D-(fungal-shambler)?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_updated_at": "2026-07-13T12:22:38Z",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+        "normal": "https://cards.scryfall.io/normal/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+        "large": "https://cards.scryfall.io/large/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+        "png": "https://cards.scryfall.io/png/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.png?1783945358",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+        "thumb": "https://cards.scryfall.io/thumb/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.webp?1783945358",
+        "grid": "https://cards.scryfall.io/grid/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.webp?1783945358",
+        "display": "https://cards.scryfall.io/display/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.webp?1783945358",
+        "art": "https://cards.scryfall.io/art/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.webp?1783945358",
+        "crop": "https://cards.scryfall.io/crop/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.webp?1783945358",
+        "jpeg": "https://cards.scryfall.io/normal/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358"
+      },
+      "mana_cost": "{4}{B}{G}{U}",
+      "cmc": 7.0,
+      "type_line": "Creature — Fungus Beast",
+      "printed_type_line": "भूतम् पशु",
+      "oracle_text": "Trample\nWhenever this creature deals damage to an opponent, you draw a card and that opponent discards a card.",
+      "printed_text": "मृदितुम्\nयदा फंगल्शम्ब्लर्हानिमरये प्रहरति तदा पत्रं कर्षसि च सोऽरिरपास्यति पत्रं करात् तस्य तस्या वा ॥",
+      "power": "6",
+      "toughness": "4",
+      "colors": [
+        "B",
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "U"
+      ],
+      "keywords": [
+        "Trample"
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "timeless": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "oathbreaker": "legal",
+        "standardbrawl": "not_legal",
+        "brawl": "not_legal",
+        "competitivebrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal",
+        "predh": "legal",
+        "tlr": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "game_changer": false,
+      "foil": true,
+      "nonfoil": false,
+      "finishes": [
+        "foil"
+      ],
+      "oversized": false,
+      "promo": true,
+      "reprint": true,
+      "variation": false,
+      "set_id": "3267d03d-12cd-41ae-9d4d-80af0493f138",
+      "set": "papc",
+      "set_name": "Apocalypse Promos",
+      "set_type": "promo",
+      "set_uri": "https://api.scryfall.com/sets/3267d03d-12cd-41ae-9d4d-80af0493f138",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apapc&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/papc?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/1ae5a4cc-eb0f-4195-847f-d5464a086c82/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9991941e-436f-42d4-8b0c-1ee84234774b&unique=prints",
+      "collector_number": "100",
+      "digital": false,
+      "rarity": "rare",
+      "watermark": "wotc",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Jim Nelson",
+      "artist_ids": [
+        "aa9f64d1-29e1-4c82-877e-44c18183f40b"
+      ],
+      "illustration_id": "913dfd73-c397-4ee0-906a-be386bf0069d",
+      "border_color": "black",
+      "frame": "1997",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "datestamped",
+        "prerelease"
+      ],
+      "edhrec_rank": 30349,
+      "prices": {
+        "usd": null,
+        "usd_foil": "14.73",
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "3.07",
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=97062&printed=false",
+        "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DFungal%2BShambler",
+        "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DFungal%2BShambler",
+        "edhrec": "https://edhrec.com/route/?cc=Fungal+Shambler"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F38379%3Fpage%3D1",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=17709&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Fungal+Shambler&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    "image_url": "https://cards.scryfall.io/large/front/1/a/1ae5a4cc-eb0f-4195-847f-d5464a086c82.jpg?1783945358",
+    "scan_sha256": "4484cfa7213962a5dfd8ca9a08242b957038defb90708c92bdade3cd0a6be99d",
+    "image_size": [
+      672,
+      936
+    ]
+  }
+]

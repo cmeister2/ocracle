@@ -67,7 +67,8 @@ fn detects_and_reads_multiple_printed_lines() {
     imageops::overlay(&mut canvas, &title, 20, 20);
     imageops::overlay(&mut canvas, &rules, 20, 100);
     let image = DynamicImage::ImageRgb8(canvas);
-    let ocr = engine(true);
+    let detector = fixture("models/text-detection.onnx");
+    let ocr = CardOcr::load_profile("en", env!("CARGO_MANIFEST_DIR"), Some(&detector)).unwrap();
     let result = ocr
         .recognize(
             &image,
@@ -120,7 +121,7 @@ fn invalid_inputs_return_errors_without_inference() {
 }
 
 #[test]
-#[ignore = "uses the checked-in English neural model and registry"]
+#[ignore = "requires the pinned default recognizer; run training/download_models.py"]
 fn language_profile_selects_the_trained_model_for_the_whole_card() {
     let ocr = CardOcr::load_profile("en", env!("CARGO_MANIFEST_DIR"), None).unwrap();
     let image = image::open(fixture("docs/gallery/assets/beleren-title.png")).unwrap();
@@ -138,7 +139,7 @@ fn language_profile_selects_the_trained_model_for_the_whole_card() {
     assert_eq!(result.model.language, "en");
     assert_eq!(
         result.model.sha256,
-        "887049db9c811ed9cfc5cff9f7c5b7b84f74e176a3c2786fde9ff2d63836ea4f"
+        "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
     );
     assert!(
         CardOcr::load_profile("unsupported-test-profile", env!("CARGO_MANIFEST_DIR"), None)
@@ -146,5 +147,30 @@ fn language_profile_selects_the_trained_model_for_the_whole_card() {
             .unwrap()
             .to_string()
             .contains("no trained language profile")
+    );
+}
+
+#[test]
+#[ignore = "requires the pinned colour recognizer; run training/download_models.py"]
+fn french_profile_preserves_printed_accents_using_native_colour_export() {
+    let ocr = CardOcr::load_profile("fr", env!("CARGO_MANIFEST_DIR"), None).unwrap();
+    let image = image::open(fixture("training/latin-eval/images/fr-m21-182-clean.png")).unwrap();
+    let result = ocr
+        .recognize(
+            &image,
+            Options {
+                single_line: true,
+                passes: Passes::Original,
+                ..Options::default()
+            },
+        )
+        .unwrap();
+    assert_eq!(result.text.trim(), "Renaissance fongoïde");
+    assert_eq!(result.model.language, "fr");
+    assert!(result.method.contains("LCNetV4 + LightSVTR"));
+    assert!(result.confidence.is_finite() && result.confidence > 0.5);
+    assert_eq!(
+        result.lines[0].bounds,
+        [0, 0, image.width(), image.height()]
     );
 }

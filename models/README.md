@@ -1,5 +1,17 @@
 # Neural model artifacts
 
+Default Latin-script profiles and the best-effort Japanese/Chinese profiles use
+the unmodified official **PP-OCRv6 small** ONNX recognizer, downloaded by
+`training/download_models.py`. Its [manifest](paddle-v6-manifest.json) pins the
+upstream revision, file digest, Apache-2.0 license, matching per-language
+configurations and evaluation. Rust preserves BGR colour, normalizes to `[-1,1]`,
+resizes to height 48 and pads short lines to width 320. It decodes the native
+NTC probability output. No ONNX wrapper or Python runtime is needed for OCR.
+This is a pretrained baseline evaluated on MTG, not an MTG-fine-tuned model.
+The [actual Rust comparison](../training/experimental_paddle/results-v6-direct.json)
+retains every prediction and failure; complete font/language coverage is unproven.
+See [the full Apache license](LICENSE-PADDLE-APACHE-2.0.txt).
+
 `ocracle-mtg.rten` is the distributed MTG-adapted CRNN recognizer. Its alphabet,
 input height, and model name are in [recognizer-config.json](recognizer-config.json).
 The model takes grayscale `[N,1,64,W]` floats normalized as `pixel / 255 - 0.5`
@@ -42,7 +54,7 @@ established. The model is English/Latin and does not encode Magic mana symbols.
 
 ## Model license and attribution
 
-The model weights are licensed **CC BY-SA 4.0**, separately from the MIT Rust
+The MTG-adapted and original Ocrs weights are licensed **CC BY-SA 4.0**, separately from the MIT Rust
 and Python source. See [the complete model license](LICENSE-CC-BY-SA-4.0.txt).
 The distributed recognizer is an adaptation of Robert Knight's
 [Ocrs recognition checkpoint](https://huggingface.co/robertknight/ocrs),

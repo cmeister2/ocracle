@@ -1,0 +1,239 @@
+[
+  {
+    "id": "he-title",
+    "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+    "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+    "card_name": "Glory",
+    "language": "he",
+    "role": "title",
+    "text": "תהילה",
+    "box": [
+      72,
+      35,
+      205,
+      99
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_name"
+  },
+  {
+    "id": "he-type",
+    "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+    "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+    "card_name": "Glory",
+    "language": "he",
+    "role": "type",
+    "text": "יצור — התגלמות",
+    "box": [
+      36,
+      528,
+      345,
+      565
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_type_line"
+  },
+  {
+    "id": "he-rules",
+    "card_id": "319724d5-8937-4470-a880-a65e674f7b3b",
+    "oracle_id": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+    "card_name": "Glory",
+    "language": "he",
+    "role": "rules",
+    "text": "יכולת תעופה",
+    "box": [
+      425,
+      574,
+      624,
+      612
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "Localized printed_text; FB20 wide ayin explicitly mapped to ordinary logical ayin U+05E2, preserving letter and all marks",
+    "review_notes": "Single keyword phrase; no next-line mana or rules. Wide presentation ayin mapped explicitly to logical Hebrew ayin."
+  },
+  {
+    "id": "la-title",
+    "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+    "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+    "card_name": "Raging Kavu",
+    "language": "la",
+    "role": "title",
+    "text": "Kavu Furens",
+    "box": [
+      65,
+      35,
+      275,
+      91
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_name"
+  },
+  {
+    "id": "la-type",
+    "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+    "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+    "card_name": "Raging Kavu",
+    "language": "la",
+    "role": "type",
+    "text": "Animal - Kavu",
+    "box": [
+      36,
+      528,
+      310,
+      564
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "Manual visible hyphen in Animal - Kavu; metadata uses em dash"
+  },
+  {
+    "id": "la-reminder",
+    "card_id": "c9c77844-742c-48cf-9c1e-954ffe781e25",
+    "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+    "card_name": "Raging Kavu",
+    "language": "la",
+    "role": "reminder",
+    "text": "ordine penes tuum venit.)",
+    "box": [
+      49,
+      606,
+      399,
+      638
+    ],
+    "italic": true,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "Manual whole printed italic line; localized printed_text substring",
+    "review_notes": "Entire second reminder line; starts with whole word ordine and retains closing period/parenthesis."
+  },
+  {
+    "id": "grc-title",
+    "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+    "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+    "card_name": "Cleopatra, Exiled Pharaoh",
+    "language": "grc",
+    "role": "title",
+    "text": "Κλεοπάτρα, Ἐξόριστος Φαραώ",
+    "box": [
+      44,
+      43,
+      514,
+      104
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_name"
+  },
+  {
+    "id": "grc-type",
+    "card_id": "c2036b2e-89d6-448a-bfcb-50b2247ee17a",
+    "oracle_id": "e7a80464-1522-48d7-bf82-f9894f5c3ae0",
+    "card_name": "Cleopatra, Exiled Pharaoh",
+    "language": "grc",
+    "role": "type",
+    "text": "Μυθικὸν ὄν — Ἄνθρωπος Εὐγενής",
+    "box": [
+      43,
+      539,
+      569,
+      582
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_type_line"
+  },
+  {
+    "id": "ar-title",
+    "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+    "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+    "card_name": "Stone-Tongue Basilisk",
+    "language": "ar",
+    "role": "title",
+    "text": "باسلْ ليسك – الحجر واللسان",
+    "box": [
+      60,
+      37,
+      450,
+      94
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_name"
+  },
+  {
+    "id": "ar-type",
+    "card_id": "8ec4eeb5-2f82-460c-8140-20587442d40b",
+    "oracle_id": "c38efbe5-7ace-41fa-b874-72e3702a833c",
+    "card_name": "Stone-Tongue Basilisk",
+    "language": "ar",
+    "role": "type",
+    "text": "مخلوق – باسلْ ليسك",
+    "box": [
+      45,
+      526,
+      335,
+      570
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_type_line"
+  },
+  {
+    "id": "sa-title",
+    "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+    "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+    "card_name": "Fungal Shambler",
+    "language": "sa",
+    "role": "title",
+    "text": "फंगल्शम्ब्लर्",
+    "box": [
+      60,
+      32,
+      332,
+      99
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "localized printed_name"
+  },
+  {
+    "id": "sa-type",
+    "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+    "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+    "card_name": "Fungal Shambler",
+    "language": "sa",
+    "role": "type",
+    "text": "भूतम् पशुः",
+    "box": [
+      43,
+      527,
+      226,
+      569
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "Manual transcription: includes final visible visarga U+0903 omitted in localized metadata",
+    "review_notes": "Visible final visarga retained despite omission in API printed_type_line."
+  },
+  {
+    "id": "sa-rules",
+    "card_id": "1ae5a4cc-eb0f-4195-847f-d5464a086c82",
+    "oracle_id": "9991941e-436f-42d4-8b0c-1ee84234774b",
+    "card_name": "Fungal Shambler",
+    "language": "sa",
+    "role": "rules",
+    "text": "मृदितुम्",
+    "box": [
+      43,
+      592,
+      185,
+      642
+    ],
+    "italic": false,
+    "review_status": "source pixels and boundaries reviewed; native field compared",
+    "label_source": "Manual printed keyword, checked against localized printed_text"
+  }
+]

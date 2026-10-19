@@ -1,0 +1,19 @@
+[package]
+name = "paddle-rten-probe"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.94"
+publish = false
+
+[dependencies]
+rten = "0.26"
+rten-tensor = "0.26"
+
+[lints.rust]
+missing_docs = "deny"
+unsafe_code = "forbid"
+
+[lints.clippy]
+missing_docs_in_private_items = "deny"
+missing_errors_doc = "deny"
+missing_panics_doc = "deny"

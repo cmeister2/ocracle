@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "name": "PP-OCRv6 small",
+  "model_path": "models/ppocr-v6-small.onnx",
+  "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "bytes": 21159378,
+  "license": "Apache-2.0",
+  "source_repository": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx",
+  "source_revision": "b8f84f0b80c529de40b4fbb3544b84fa7233a513",
+  "source_manifest": "training/experimental_paddle/model-source.json",
+  "source_graph_modified": false,
+  "mtg_fine_tuned": false,
+  "upstream_models": [
+    {
+      "url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.onnx",
+      "bytes": 21159378,
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "path": "models/ppocr-v6-small.onnx",
+      "license": "Apache-2.0"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "en",
+      "language": "en",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/en.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "1fb370edad3b02a0303642cada8937d068df18adec352fd4d055555a5601c68e",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "es",
+      "language": "es",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/es.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "0e6927646c399c6c1ee3ef5a42f80aa5cbad928494f8530610e32468653eb291",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "fr",
+      "language": "fr",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/fr.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "3073824925b102981f1fbf33fafb517767b90c63986dfa9f6f34a28d5e550f8f",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "de",
+      "language": "de",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/de.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "ed4b7b18ed34fae98652ce24e13e15cb8a4a7fe3f3cd2501b37af2f21789c0f9",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "it",
+      "language": "it",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/it.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "716336d625c0663b1f47ea796b1ad9c2e218a82d40589abb0dae9914505ed219",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "pt",
+      "language": "pt",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/pt.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "b8771d797fd7f5a85db79cfc7ad5b38756bd2f9a3f50fb45aef5e123d00e3d57",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "la",
+      "language": "la",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/la.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "aaaad7992743434bc4004548d26d9c8e60e7e15c21fce1ae5397d5e38e86838b",
+      "coverage": "Pretrained Latin-script baseline evaluated on MTG; historic/italic/blur samples, incomplete punctuation and symbol coverage"
+    },
+    {
+      "id": "ja",
+      "language": "ja",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/ja.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "e746834013a696c62dedfc936d955ba4052aec35948979b207d6cc549d6c23dc",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    },
+    {
+      "id": "zhs",
+      "language": "zhs",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/zhs.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "034dfdaa848626e1b10baeb2b50c3191620aafe7fcc9959751f626b0057bfce0",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    },
+    {
+      "id": "zht",
+      "language": "zht",
+      "model": "models/ppocr-v6-small.onnx",
+      "configuration": "models/paddle-v6/zht.json",
+      "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+      "configuration_sha256": "325ef34187c608fc196e65a94025482bc8ec6919d3c132d09f13b95891277969",
+      "coverage": "Best-effort non-Latin baseline; horizontal examples only, many glyph/layout/blur cases unverified"
+    }
+  ],
+  "evaluation": "training/experimental_paddle/results-v6-direct.json",
+  "limitations": [
+    "Fixed examples establish useful recognition, not comprehensive font/language coverage.",
+    "Dictionary lacks inverted exclamation ¡ and German opening low quote „; mana/tap icons and full printed symbol coverage are incomplete.",
+    "Non-Latin alphabets are best effort; vertical fields, ruby grouping and right-to-left postprocessing are not implemented here.",
+    "Model uses triangle resize in Rust; upstream OpenCV resize can differ.",
+    "Upstream pretraining membership is unknown."
+  ]
+}

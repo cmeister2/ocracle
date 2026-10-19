@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "models": [
+    {
+      "id": "PaddlePaddle/el_PP-OCRv5_mobile_rec_onnx",
+      "revision": "8152b89d2ee0e1d4c92decab75fe75e5e3d836b6",
+      "license": "apache-2.0",
+      "files": [
+        {
+          "name": "inference.yml",
+          "url": "https://huggingface.co/PaddlePaddle/el_PP-OCRv5_mobile_rec_onnx/resolve/8152b89d2ee0e1d4c92decab75fe75e5e3d836b6/inference.yml",
+          "bytes": 3317,
+          "sha256": "17d85b2fe2d2f24cd4ab07bcbc33e0c126859b956ced36e281dc65e2d0c1f0bf",
+          "cache_path": "el/inference.yml"
+        },
+        {
+          "name": "inference.onnx",
+          "url": "https://huggingface.co/PaddlePaddle/el_PP-OCRv5_mobile_rec_onnx/resolve/8152b89d2ee0e1d4c92decab75fe75e5e3d836b6/inference.onnx",
+          "bytes": 7808735,
+          "sha256": "2acf17fcaea2bc81b878e311e6263b8885f48bb03796f75f9f30ed3242bbaa6d",
+          "cache_path": "el/inference.onnx"
+        }
+      ],
+      "key": "el",
+      "probe_language": "grc",
+      "dictionary_entries": 354,
+      "unique_entries": 354,
+      "single_codepoint_entries": true,
+      "all_duplicate_indices_retained": true,
+      "class_count": 356,
+      "input_contract": "BGR float32[N,3,48,W],[-1,1], aspectpreservingOpenCVlinear ceilwidth minimum320normalizedzeropad",
+      "output_contract": "float32[N,T,C] softmaxprobabilities CTCblank0 dictionary+space",
+      "model_claim": "Language-specific pretrained OCR, no claim of AncientGreek or Sanskrit MTG coverage."
+    },
+    {
+      "id": "PaddlePaddle/arabic_PP-OCRv5_mobile_rec_onnx",
+      "revision": "14aaedcd75825982689ecf5cd64ab33ee083215a",
+      "license": "apache-2.0",
+      "files": [
+        {
+          "name": "inference.yml",
+          "url": "https://huggingface.co/PaddlePaddle/arabic_PP-OCRv5_mobile_rec_onnx/resolve/14aaedcd75825982689ecf5cd64ab33ee083215a/inference.yml",
+          "bytes": 6165,
+          "sha256": "21368419e6c016c31db55d316d59e11c128e1913e6e6fe10287084710043d3a6",
+          "cache_path": "arabic/inference.yml"
+        },
+        {
+          "name": "inference.onnx",
+          "url": "https://huggingface.co/PaddlePaddle/arabic_PP-OCRv5_mobile_rec_onnx/resolve/14aaedcd75825982689ecf5cd64ab33ee083215a/inference.onnx",
+          "bytes": 7998947,
+          "sha256": "799113ebf267fbe742deb99eb36e8d42c9ddc5291ceacf92add41b4d52a59110",
+          "cache_path": "arabic/inference.onnx"
+        }
+      ],
+      "key": "arabic",
+      "probe_language": "ar",
+      "dictionary_entries": 747,
+      "unique_entries": 716,
+      "single_codepoint_entries": true,
+      "all_duplicate_indices_retained": true,
+      "class_count": 749,
+      "input_contract": "BGR float32[N,3,48,W],[-1,1], aspectpreservingOpenCVlinear ceilwidth minimum320normalizedzeropad",
+      "output_contract": "float32[N,T,C] softmaxprobabilities CTCblank0 dictionary+space",
+      "model_claim": "Language-specific pretrained OCR, no claim of AncientGreek or Sanskrit MTG coverage."
+    },
+    {
+      "id": "PaddlePaddle/devanagari_PP-OCRv5_mobile_rec_onnx",
+      "revision": "251aec19e36739540d35e2cc943f6aa7503b98e5",
+      "license": "apache-2.0",
+      "files": [
+        {
+          "name": "inference.yml",
+          "url": "https://huggingface.co/PaddlePaddle/devanagari_PP-OCRv5_mobile_rec_onnx/resolve/251aec19e36739540d35e2cc943f6aa7503b98e5/inference.yml",
+          "bytes": 5027,
+          "sha256": "9bd172dd26440c8ce94d1cde5d5baea6aefdc7cf3c5c8492e0beedef656d4e54",
+          "cache_path": "devanagari/inference.yml"
+        },
+        {
+          "name": "inference.onnx",
+          "url": "https://huggingface.co/PaddlePaddle/devanagari_PP-OCRv5_mobile_rec_onnx/resolve/251aec19e36739540d35e2cc943f6aa7503b98e5/inference.onnx",
+          "bytes": 7912311,
+          "sha256": "cb789212ce96c69d3e74728ae4309d179281d68cb3945d0616b67cafab41c986",
+          "cache_path": "devanagari/inference.onnx"
+        }
+      ],
+      "key": "devanagari",
+      "probe_language": "sa",
+      "dictionary_entries": 568,
+      "unique_entries": 568,
+      "single_codepoint_entries": true,
+      "all_duplicate_indices_retained": true,
+      "class_count": 570,
+      "input_contract": "BGR float32[N,3,48,W],[-1,1], aspectpreservingOpenCVlinear ceilwidth minimum320normalizedzeropad",
+      "output_contract": "float32[N,T,C] softmaxprobabilities CTCblank0 dictionary+space",
+      "model_claim": "Language-specific pretrained OCR, no claim of AncientGreek or Sanskrit MTG coverage."
+    },
+    {
+      "key": "hebrew",
+      "id": "Rivok/paddleocr-hebrew",
+      "revision": "5086059bc0475771e86d2020d82710e634e44caa",
+      "code_revision": "849c4725e03c202101ddae569e1e9be9f7b9d47c",
+      "license": "apache-2.0",
+      "probe_language": "he",
+      "dictionary_entries": 120,
+      "input_contract": "BGR float32[N,3,48,W],[-1,1], aspect-preserving OpenCVlinear roundedwidth, quantize targetwidth multiple16 min32 max3200, whitepad normalized+1",
+      "output_contract": "CTCblank0 +120chars+space,122classes; logicalUnicodeorder according author",
+      "training_weights_available": false,
+      "author_limitations": [
+        "No niqqud/cantillation marks",
+        "Document typography; decorative/display faces outside stated scope",
+        "Wordlength<=25characters for mobile-word model"
+      ],
+      "files": [
+        {
+          "name": "charset_v2f.txt",
+          "cache_path": "hebrew/charset_v2f.txt",
+          "url": "https://huggingface.co/Rivok/paddleocr-hebrew/resolve/5086059bc0475771e86d2020d82710e634e44caa/charset_v2f.txt",
+          "bytes": 280,
+          "sha256": "1bdb9e6baaf155ba0661c1a0687bd84ad2bb140a912e0a7c8e5c10eb496b4766"
+        },
+        {
+          "name": "mobile-word/rec.onnx",
+          "cache_path": "hebrew/mobile-word-rec.onnx",
+          "url": "https://huggingface.co/Rivok/paddleocr-hebrew/resolve/5086059bc0475771e86d2020d82710e634e44caa/mobile-word/rec.onnx",
+          "bytes": 7723630,
+          "sha256": "f4018b7f6d1a87cd09ef7184286898186036c06dd9c90edb3971dda0f0aba4f9"
+        },
+        {
+          "name": "mobile-word/MODEL_CARD.md",
+          "cache_path": "hebrew/mobile-word-MODEL_CARD.md",
+          "url": "https://huggingface.co/Rivok/paddleocr-hebrew/resolve/5086059bc0475771e86d2020d82710e634e44caa/mobile-word/MODEL_CARD.md",
+          "bytes": 1624,
+          "sha256": "3418806f2d05d5cec4964ecd693078238fce5f49ec6bdb8726743553bb862764"
+        },
+        {
+          "name": "server-svtrv2/ctc.onnx",
+          "cache_path": "hebrew/server-svtrv2-ctc.onnx",
+          "url": "https://huggingface.co/Rivok/paddleocr-hebrew/resolve/5086059bc0475771e86d2020d82710e634e44caa/server-svtrv2/ctc.onnx",
+          "bytes": 77452240,
+          "sha256": "08c04c100cd6e91908b975bc8c343dd1f062f4a265547a0227bf055c8546b205"
+        },
+        {
+          "name": "server-svtrv2/MODEL_CARD.md",
+          "cache_path": "hebrew/server-svtrv2-MODEL_CARD.md",
+          "url": "https://huggingface.co/Rivok/paddleocr-hebrew/resolve/5086059bc0475771e86d2020d82710e634e44caa/server-svtrv2/MODEL_CARD.md",
+          "bytes": 2870,
+          "sha256": "43ca0dd3468bb32df27e6aa882e442e6d44a15c7dce4fb58c8d62399c5a32648"
+        }
+      ],
+      "primary_sources": [
+        "https://github.com/RivoksLab/paddleocr-hebrew/blob/849c4725e03c202101ddae569e1e9be9f7b9d47c/paddleocr_hebrew/rec_decode.py",
+        "https://github.com/RivoksLab/paddleocr-hebrew/blob/849c4725e03c202101ddae569e1e9be9f7b9d47c/docs/charset.md",
+        "https://huggingface.co/Rivok/paddleocr-hebrew/blob/5086059bc0475771e86d2020d82710e634e44caa/mobile-word/MODEL_CARD.md"
+      ]
+    }
+  ]
+}

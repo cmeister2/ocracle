@@ -16,7 +16,8 @@ use serde::Deserialize;
 use sha2::{Digest, Sha256};
 
 use crate::{
-    Candidate, Layout, Line, ModelConfig, ModelIdentity, Options, Passes, Recognition, ctc,
+    Candidate, ColorMode, Layout, Line, ModelConfig, ModelIdentity, Options, OutputLayout,
+    OutputValues, Passes, Recognition, WidthRounding, ctc,
 };
 
 /// Reusable MTG text recognizer backed by a CTC neural network.
@@ -63,7 +64,9 @@ impl CardOcr {
     /// Reads `models/profiles.json` below `model_root`. Only entries backed by
     /// trained models belong in this registry. Unknown languages return an
     /// error, so an English model cannot silently stand in for another script.
-    /// The current distributed profile is `en`.
+    /// Latin-script profiles use an upstream colour baseline evaluated on MTG;
+    /// `en-mtg` retains the experimental MTG-adapted CRNN. Non-Latin profiles
+    /// are best effort; registry membership does not establish full coverage.
     ///
     /// # Errors
     ///
@@ -126,8 +129,9 @@ impl CardOcr {
 
     /// Load recognition weights and an optional word detector.
     ///
-    /// The recognizer accepts `[1,1,height,width]` grayscale values in
-    /// `[-0.5,0.5]` and returns `[time,1,alphabet_size+1]` log probabilities.
+    /// Input defaults to `[1,1,height,width]` grayscale in `[-0.5,0.5]` and
+    /// output to `[time,1,alphabet_size+1]` log probabilities. Configuration can
+    /// select RGB/BGR, different normalization, padding, NTC and probabilities.
     ///
     /// # Errors
     ///
@@ -146,6 +150,20 @@ impl CardOcr {
         ensure!(
             (8..=256).contains(&config.input_height),
             "input height must be in 8..=256"
+        );
+        ensure!(
+            config.input.scale.is_finite()
+                && config.input.offset.is_finite()
+                && (255. * config.input.scale + config.input.offset).is_finite(),
+            "input normalization must be finite"
+        );
+        ensure!(
+            config.input.padding_width <= 4096,
+            "input padding width exceeds 4096"
+        );
+        ensure!(
+            (1..=4096).contains(&config.input.min_content_width),
+            "minimum content width must be in 1..=4096"
         );
         let recognition_bytes =
             fs::read(recognition_model.as_ref()).context("read recognition model")?;
@@ -275,7 +293,6 @@ impl CardOcr {
         } else {
             self.detect_regions(image)?
         };
-        let gray = grayscale(image);
         let mut lines = Vec::new();
         for [x, y, w, h] in regions {
             if w == 0 || h == 0 {
@@ -286,7 +303,7 @@ impl CardOcr {
             if card_layout && (0.105..0.54).contains(&center_y) {
                 continue;
             }
-            let crop = imageops::crop_imm(&gray, x, y, w, h).to_image();
+            let crop = imageops::crop_imm(image, x, y, w, h).to_image();
             let (text, confidence) = self.recognize_line(&crop)?;
             if text.trim().is_empty() {
                 continue;
@@ -362,40 +379,32 @@ impl CardOcr {
             .collect())
     }
 
-    /// Resize a grayscale line and decode the network's CTC log probabilities.
+    /// Prepare a line with the checkpoint's pixel contract and decode CTC.
     ///
     /// # Errors
     ///
     /// Returns an error if the line is too wide or the recognition model fails
     /// or has an unexpected shape, datatype or alphabet size.
-    fn recognize_line(&self, gray: &GrayImage) -> Result<(String, f32)> {
-        let height = self.config.input_height;
-        let width = (f64::from(gray.width()) * f64::from(height) / f64::from(gray.height()))
-            .round_ties_even()
-            .max(16.) as u64;
-        ensure!(
-            width <= 4096,
-            "text line is too wide; split into smaller crops"
-        );
-        let resized = imageops::resize(gray, width as u32, height, FilterType::Triangle);
-        let input = NdTensor::from_data(
-            [1, 1, height as usize, width as usize],
-            resized
-                .as_raw()
-                .iter()
-                .map(|p| f32::from(*p) / 255. - 0.5)
-                .collect::<Vec<_>>(),
-        );
+    fn recognize_line(&self, image: &RgbImage) -> Result<(String, f32)> {
+        let input = recognition_input(image, &self.config)?;
         let output = self
             .recognizer
             .run_one(input.view().into(), None)
             .context("recognition model inference")?;
         let output: NdTensor<f32, 3> = output
             .try_into()
-            .context("recognition model must output a float [time, 1, class] tensor")?;
-        let [steps, batch, classes] = output.shape();
+            .context("recognition model must output a three-dimensional float CTC tensor")?;
+        let [first, second, classes] = output.shape();
+        let (steps, batch) = match self.config.output_layout {
+            OutputLayout::Tnc => (first, second),
+            OutputLayout::Ntc => (second, first),
+        };
         ensure!(batch == 1, "recognition output batch must be one");
-        let data: Vec<f32> = output.iter().copied().collect();
+        // With a single batch item TNC and NTC have the same flattened order.
+        let mut data: Vec<f32> = output.iter().copied().collect();
+        if matches!(self.config.output_values, OutputValues::Probabilities) {
+            probabilities_to_logs(&mut data, classes)?;
+        }
         ctc::decode(
             &data,
             steps,
@@ -403,6 +412,89 @@ impl CardOcr {
             &self.config.alphabet.chars().collect::<Vec<_>>(),
         )
     }
+}
+
+/// Prepare planar input, retaining the trained channel order and padding value.
+///
+/// # Errors
+///
+/// Returns an error for empty input or aspect/padding widths exceeding 4096.
+fn recognition_input(image: &RgbImage, config: &ModelConfig) -> Result<NdTensor<f32, 4>> {
+    ensure!(
+        image.width() > 0 && image.height() > 0,
+        "text line has no pixels"
+    );
+    let height = config.input_height;
+    let ideal_width = f64::from(image.width()) * f64::from(height) / f64::from(image.height());
+    let width = match config.input.width_rounding {
+        WidthRounding::NearestEven => ideal_width.round_ties_even(),
+        WidthRounding::Ceil => ideal_width.ceil(),
+    }
+    .max(f64::from(config.input.min_content_width)) as u64;
+    ensure!(
+        width <= 4096 && config.input.padding_width <= 4096,
+        "text line is too wide; split into smaller crops"
+    );
+    let width = width as u32;
+    let padded_width = width.max(config.input.padding_width);
+    let channels = match config.input.color_mode {
+        ColorMode::Grayscale => 1,
+        ColorMode::Rgb | ColorMode::Bgr => 3,
+    };
+    let plane = (height * padded_width) as usize;
+    let mut data = vec![0.; channels * plane];
+    let scale = config.input.scale;
+    let offset = config.input.offset;
+    match config.input.color_mode {
+        ColorMode::Grayscale => {
+            let resized = imageops::resize(&grayscale(image), width, height, FilterType::Triangle);
+            for (x, y, pixel) in resized.enumerate_pixels() {
+                data[(y * padded_width + x) as usize] = f32::from(pixel.0[0]) * scale + offset;
+            }
+        }
+        ColorMode::Rgb | ColorMode::Bgr => {
+            let resized = imageops::resize(image, width, height, FilterType::Triangle);
+            for (x, y, pixel) in resized.enumerate_pixels() {
+                for channel in 0..3 {
+                    let source = match config.input.color_mode {
+                        ColorMode::Bgr => 2 - channel,
+                        _ => channel,
+                    };
+                    data[channel * plane + (y * padded_width + x) as usize] =
+                        f32::from(pixel.0[source]) * scale + offset;
+                }
+            }
+        }
+    }
+    Ok(NdTensor::from_data(
+        [1, channels, height as usize, padded_width as usize],
+        data,
+    ))
+}
+
+/// Validate normalized CTC probabilities and take finite natural logarithms.
+///
+/// # Errors
+///
+/// Returns an error for an empty class axis, malformed rows, nonfinite or
+/// out-of-range values, or distributions whose sum differs from one by >0.001.
+fn probabilities_to_logs(data: &mut [f32], classes: usize) -> Result<()> {
+    ensure!(
+        classes > 0 && data.len().is_multiple_of(classes),
+        "invalid CTC class axis"
+    );
+    for row in data.chunks_exact_mut(classes) {
+        ensure!(
+            row.iter()
+                .all(|value| value.is_finite() && (0. ..=1.000_001).contains(value))
+                && (row.iter().sum::<f32>() - 1.).abs() <= 0.001,
+            "model must output normalized class probabilities"
+        );
+        for value in row {
+            *value = value.clamp(1e-30, 1.).ln();
+        }
+    }
+    Ok(())
 }
 
 /// Compute a lowercase SHA-256 file identity.
@@ -472,4 +564,86 @@ fn enhance(image: &RgbImage) -> RgbImage {
         }
     }
     DynamicImage::ImageLuma8(imageops::unsharpen(&gray, 1., 3)).into_rgb8()
+}
+
+#[cfg(test)]
+mod tests {
+    //! Recognition-contract regressions for original colour model exports.
+
+    use super::{probabilities_to_logs, recognition_input};
+    use crate::{ColorMode, InputConfig, ModelConfig, WidthRounding, ctc};
+    use image::{Rgb, RgbImage};
+    use rten_tensor::Layout;
+
+    #[test]
+    fn bgr_planes_preserve_colour_and_pad_after_normalization() {
+        let image = RgbImage::from_pixel(2, 1, Rgb([255, 128, 0]));
+        let config = ModelConfig {
+            input_height: 8,
+            input: InputConfig {
+                color_mode: ColorMode::Bgr,
+                scale: 2. / 255.,
+                offset: -1.,
+                padding_width: 32,
+                min_content_width: 1,
+                width_rounding: WidthRounding::Ceil,
+            },
+            ..ModelConfig::default()
+        };
+        let tensor = recognition_input(&image, &config).unwrap();
+        assert_eq!(tensor.shape(), [1, 3, 8, 32]);
+        assert_eq!(tensor[[0, 0, 0, 0]], -1.);
+        assert!((tensor[[0, 1, 0, 0]] - (256. / 255. - 1.)).abs() < 1e-6);
+        assert_eq!(tensor[[0, 2, 0, 0]], 1.);
+        for channel in 0..3 {
+            assert_eq!(tensor[[0, channel, 0, 16]], 0.);
+            assert_eq!(tensor[[0, channel, 7, 31]], 0.);
+        }
+    }
+
+    #[test]
+    fn checkpoint_width_rounding_and_limits_are_respected() {
+        let image = RgbImage::new(33, 16);
+        let mut config = ModelConfig {
+            input_height: 8,
+            ..ModelConfig::default()
+        };
+        assert_eq!(recognition_input(&image, &config).unwrap().shape()[3], 16);
+        config.input.width_rounding = WidthRounding::Ceil;
+        assert_eq!(recognition_input(&image, &config).unwrap().shape()[3], 17);
+        assert!(recognition_input(&RgbImage::new(9000, 1), &config).is_err());
+    }
+
+    #[test]
+    fn narrow_colour_glyphs_are_padded_without_stretching_their_content() {
+        let image = RgbImage::from_pixel(3, 24, Rgb([255, 255, 255]));
+        let config = ModelConfig {
+            input_height: 48,
+            input: InputConfig {
+                color_mode: ColorMode::Bgr,
+                scale: 2. / 255.,
+                offset: -1.,
+                padding_width: 320,
+                min_content_width: 1,
+                width_rounding: WidthRounding::Ceil,
+            },
+            ..ModelConfig::default()
+        };
+        let tensor = recognition_input(&image, &config).unwrap();
+        assert_eq!(tensor.shape(), [1, 3, 48, 320]);
+        assert_eq!(tensor[[0, 0, 20, 5]], 1.);
+        assert_eq!(tensor[[0, 0, 20, 6]], 0.);
+    }
+
+    #[test]
+    fn probability_exports_keep_ctc_repetition_and_confidence_semantics() {
+        let mut probabilities = vec![0.1, 0.8, 0.1, 0.1, 0.7, 0.2, 1., 0., 0., 0.1, 0.8, 0.1];
+        probabilities_to_logs(&mut probabilities, 3).unwrap();
+        let (text, confidence) = ctc::decode(&probabilities, 4, 3, &['é', '龍']).unwrap();
+        assert_eq!(text, "éé");
+        assert!((confidence - 0.8).abs() < 1e-6);
+        assert!(probabilities_to_logs(&mut [0.2, 0.2], 2).is_err());
+        assert!(probabilities_to_logs(&mut [f32::NAN, 1.], 2).is_err());
+        assert!(probabilities_to_logs(&mut [], 0).is_err());
+    }
 }
