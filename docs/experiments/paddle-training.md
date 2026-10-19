@@ -78,14 +78,14 @@ cargo build --release --locked
 OMP_NUM_THREADS=1 /tmp/ocracle-paddle-training-venv/bin/python training/experimental_paddle_training/export.py --runner /tmp/ocracle-paddle-target/release/paddle-rten-probe --cli target/release/ocracle
 ```
 
-The smoke test additionally needs Debian/Ubuntu's `fonts-dejavu-extra` package
-(observed version `2.37-8`).
-It checks the exact SHA-256 of `DejaVuSerif-Italic.ttf` before rendering. The
-DejaVu/Bitstream Vera font license and path are recorded in the report; no font
-binary is redistributed. Install the package with your usual package manager
-if it is absent. Different font bytes deliberately stop the smoke instead of
-silently changing its input. The glyphs used by this smoke are present in the
-pinned font.
+The smoke test additionally needs the exact `DejaVuSerif-Italic.ttf` bytes from
+Ubuntu's `fonts-dejavu-extra` 2.37-8 package. Other distribution builds can
+contain different bytes even under the same upstream version. Use the
+[pinned font bootstrap](native-ci-font.md) for the original font and license;
+current CI uses it independently of the runner distribution. The smoke checks
+the font's SHA-256 before rendering, and records its DejaVu/Bitstream Vera
+license and path. Different font bytes stop the smoke instead of changing its
+input. The glyphs used by this smoke are present in the pinned font.
 
 The scripts overwrite their own `parity.json`, `smoke.json` and `export.json` when rerun.
 Native source/checkpoint and smoke weights stay in ignored `vendor/`, `cache/`
