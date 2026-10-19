@@ -51,6 +51,30 @@ class FrozenV2ArtifactContracts(unittest.TestCase):
         with self.assertRaisesRegex(InvalidArtifact, "alphabet/model/language"):
             check(ROOT, {path: data, MANIFEST: encoded(manifest)})
 
+    def test_rejects_paddle_output_layout_in_shared_crnn_configuration(self):
+        overrides = self.altered_json("models/latin-v2-recognizer-config.json",
+                                      lambda config: config.update(output_layout="NTC"))
+        with self.assertRaisesRegex(InvalidArtifact, "CRNN output"):
+            check(ROOT, overrides)
+
+    def test_rejects_paddle_input_in_shared_crnn_configuration(self):
+        overrides = self.altered_json("models/latin-v2-recognizer-config.json",
+                                      lambda config: config.update(input={"color_mode": "bgr",
+                                          "scale": 1 / 127.5, "offset": -1,
+                                          "padding_width": 320, "min_content_width": 1,
+                                          "width_rounding": "ceil"}))
+        with self.assertRaisesRegex(InvalidArtifact, "CRNN input"):
+            check(ROOT, overrides)
+
+    def test_accepts_explicit_equivalent_crnn_defaults(self):
+        overrides = self.altered_json("models/latin-v2-recognizer-config.json",
+                                      lambda config: config.update(output_layout="TNC",
+                                          output_values="log_probabilities",
+                                          input={"color_mode": "grayscale", "scale": 0.003921568859368563,
+                                                 "offset": -.5, "padding_width": 0,
+                                                 "min_content_width": 16, "width_rounding": "nearest_even"}))
+        self.assertEqual(check(ROOT, overrides)["configurations"], 6)
+
     def test_rejects_report_step_drift_even_with_updated_report_hash(self):
         overrides = self.altered_json("training/latin-v2-report.json",
                                       lambda report: report.update(selected_step=200),

@@ -10,6 +10,7 @@ import json
 import math
 from pathlib import Path
 import re
+import struct
 import sys
 import unicodedata
 
@@ -85,6 +86,29 @@ def distance(reference, prediction):
 def close(actual, expected, label):
     require(isinstance(actual, (int, float)) and math.isfinite(actual)
             and math.isclose(actual, expected, rel_tol=1e-10, abs_tol=1e-12), f"Incorrect {label}")
+
+
+def check_tensor_contract(config):
+    """Mirror the effective CRNN defaults in Rust's ModelConfig/InputConfig."""
+    require(config.get("output_layout", "TNC") == "TNC"
+            and config.get("output_values", "log_probabilities") == "log_probabilities",
+            "CRNN output must be TNC log probabilities")
+    settings = config.get("input", {})
+    require(isinstance(settings, dict), "CRNN input settings must be an object")
+    for key, expected in {"color_mode": "grayscale", "padding_width": 0,
+                          "min_content_width": 16, "width_rounding": "nearest_even"}.items():
+        value = settings.get(key, expected)
+        require(type(value) is type(expected) and value == expected, f"CRNN input contract mismatch: {key}")
+    for key, expected in {"scale": 1 / 255, "offset": -.5}.items():
+        value = settings.get(key, expected)
+        require(type(value) in (int, float) and math.isfinite(value), f"Invalid CRNN input {key}")
+        # Rust parses these settings as f32; equivalent serialized f32 values
+        # must compare equal to defaults even when their decimal spelling differs.
+        try:
+            equal = struct.pack("!f", value) == struct.pack("!f", expected)
+        except OverflowError:
+            equal = False
+        require(equal, f"CRNN input contract mismatch: {key}")
 
 
 def inference(record, language, manifest):
@@ -221,6 +245,7 @@ def check(root=ROOT, overrides=None):
         require(config["language"] == language, f"Configuration language mismatch: {language}")
         configurations.append(config)
     for config in configurations:
+        check_tensor_contract(config)
         require(config["alphabet"] == alphabet and config["input_height"] == 64
                 and config["model_name"] == MODEL_NAME and set(config["languages"]) == LANGUAGES
                 and len(config["languages"]) == 6, "Configuration alphabet/model/language contract mismatch")
