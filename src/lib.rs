@@ -10,6 +10,10 @@
 //! `training/download_models.py` script. See the README for model provenance,
 //! historic font coverage, training and limitations.
 //!
+//! Browser and other in-memory hosts can supply the same model bytes through
+//! [`CardOcr::load_bytes`]. RTen supports `wasm32-unknown-unknown`; hosts own asset
+//! fetching, configuration/model integrity checks and frame scheduling.
+//!
 //! ```no_run
 //! use ocracle::CardOcr;
 //!

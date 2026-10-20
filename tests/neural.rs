@@ -184,3 +184,28 @@ fn pinned_small_colour_export_preserves_printed_french_accents() {
         [0, 0, image.width(), image.height()]
     );
 }
+
+/// In-memory browser loading preserves actual neural predictions and model provenance.
+#[test]
+#[ignore = "requires the pinned colour recognizer; run training/download_models.py"]
+fn memory_and_file_loading_produce_identical_real_recognition() {
+    let path = fixture("models/ppocr-v6-small.onnx");
+    let config: ModelConfig =
+        serde_json::from_slice(&std::fs::read(fixture("models/paddle-v6/en.json")).unwrap())
+            .unwrap();
+    let file = CardOcr::load(&path, None, config.clone()).unwrap();
+    let memory = CardOcr::load_bytes(std::fs::read(path).unwrap(), None, config).unwrap();
+    let image = image::open(fixture("docs/gallery/assets/beleren-title.png")).unwrap();
+    let options = Options {
+        single_line: true,
+        passes: Passes::Original,
+        ..Options::default()
+    };
+    let native = file.recognize(&image, options).unwrap();
+    let from_bytes = memory.recognize(&image, options).unwrap();
+    assert_eq!(native.text.trim(), "Divination");
+    assert_eq!(
+        serde_json::to_value(native).unwrap(),
+        serde_json::to_value(from_bytes).unwrap()
+    );
+}
