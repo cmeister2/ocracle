@@ -279,6 +279,36 @@ impl CardOcr {
         )
     }
 
+    /// Load recognition weights and an optional detector directly from memory.
+    ///
+    /// This uses the same RTen initialization, configuration validation and model
+    /// provenance as [`Self::load`], without filesystem access. Browser hosts can
+    /// fetch model bytes and parse [`ModelConfig`] from their downloaded JSON.
+    /// Loading performs no downloads and does not create an explicit thread pool;
+    /// keep the returned engine alive across recognition calls.
+    ///
+    /// The caller selects and verifies the configuration/model pair. This lower-level
+    /// API does not apply a language profile registry's expected SHA-256 pins.
+    /// Actual model digests remain available in every recognition result.
+    ///
+    /// # Errors
+    ///
+    /// Returns an error for invalid configuration or malformed/incompatible model
+    /// bytes. Shape mismatches can also be reported at inference, as with [`Self::load`].
+    pub fn load_bytes(
+        recognition_bytes: Vec<u8>,
+        detector_bytes: Option<Vec<u8>>,
+        config: ModelConfig,
+    ) -> Result<Self> {
+        validate_model_config(&config)?;
+        Self::load_validated_bytes(
+            recognition_bytes,
+            detector_bytes,
+            config,
+            RuntimeOptions::new(InferenceBackend::Rten, None)?,
+        )
+    }
+
     /// Load models with an explicit CPU inference backend.
     ///
     /// ONNX Runtime requires the `onnxruntime` feature, a compatible native library,
@@ -353,39 +383,33 @@ impl CardOcr {
         config: ModelConfig,
         runtime_options: RuntimeOptions,
     ) -> Result<Self> {
-        let backend = runtime_options.backend;
-        let threads = runtime_options.threads;
-        ensure!(!config.alphabet.is_empty(), "recognition alphabet is empty");
-        ensure!(
-            !config.architecture.trim().is_empty(),
-            "recognition architecture description is empty"
-        );
-        ensure!(
-            (8..=256).contains(&config.input_height),
-            "input height must be in 8..=256"
-        );
-        ensure!(
-            config.input.scale.is_finite()
-                && config.input.offset.is_finite()
-                && (255. * config.input.scale + config.input.offset).is_finite(),
-            "input normalization must be finite"
-        );
-        ensure!(
-            config.input.padding_width <= 4096,
-            "input padding width exceeds 4096"
-        );
-        ensure!(
-            (1..=4096).contains(&config.input.min_content_width),
-            "minimum content width must be in 1..=4096"
-        );
+        validate_model_config(&config)?;
         let recognition_bytes =
             fs::read(recognition_model.as_ref()).context("read recognition model")?;
-        let recognizer = RuntimeModel::load(recognition_bytes.clone(), &runtime_options)
-            .context("load recognition model")?;
         let detector_bytes = detection_model
             .map(fs::read)
             .transpose()
             .context("read detection model")?;
+        Self::load_validated_bytes(recognition_bytes, detector_bytes, config, runtime_options)
+    }
+
+    /// Initialize both model sources through one validation-independent runtime path.
+    ///
+    /// Callers validate configuration before reading files or entering this method.
+    ///
+    /// # Errors
+    ///
+    /// Returns runtime/model-loading errors for malformed or unsupported networks.
+    fn load_validated_bytes(
+        recognition_bytes: Vec<u8>,
+        detector_bytes: Option<Vec<u8>>,
+        config: ModelConfig,
+        runtime_options: RuntimeOptions,
+    ) -> Result<Self> {
+        let backend = runtime_options.backend;
+        let threads = runtime_options.threads;
+        let recognizer = RuntimeModel::load(recognition_bytes.clone(), &runtime_options)
+            .context("load recognition model")?;
         let use_portable_detector = backend == InferenceBackend::OnnxRuntime || threads.is_some();
         let detector = detector_bytes
             .as_ref()
@@ -644,6 +668,39 @@ impl CardOcr {
     }
 }
 
+/// Validate one model's alphabet and image preprocessing before any loading.
+///
+/// # Errors
+///
+/// Returns an error for missing alphabet/architecture, invalid height, nonfinite
+/// normalization or excessive/empty content widths.
+fn validate_model_config(config: &ModelConfig) -> Result<()> {
+    ensure!(!config.alphabet.is_empty(), "recognition alphabet is empty");
+    ensure!(
+        !config.architecture.trim().is_empty(),
+        "recognition architecture description is empty"
+    );
+    ensure!(
+        (8..=256).contains(&config.input_height),
+        "input height must be in 8..=256"
+    );
+    ensure!(
+        config.input.scale.is_finite()
+            && config.input.offset.is_finite()
+            && (255. * config.input.scale + config.input.offset).is_finite(),
+        "input normalization must be finite"
+    );
+    ensure!(
+        config.input.padding_width <= 4096,
+        "input padding width exceeds 4096"
+    );
+    ensure!(
+        (1..=4096).contains(&config.input.min_content_width),
+        "minimum content width must be in 1..=4096"
+    );
+    Ok(())
+}
+
 /// Prepare planar input, retaining the trained channel order and padding value.
 ///
 /// # Errors
@@ -775,10 +832,88 @@ fn enhance(image: &RgbImage) -> RgbImage {
 mod tests {
     //! Recognition-contract regressions for original colour model exports.
 
-    use super::recognition_input;
+    use super::{CardOcr, recognition_input};
     use crate::{ColorMode, InputConfig, ModelConfig, WidthRounding};
     use image::{Rgb, RgbImage};
     use rten_tensor::Layout;
+
+    /// Untrained identity graph used to exercise model loading without network assets.
+    const IDENTITY_ONNX: &[u8] = b"\x08\x08\x3a\x68\x0a\x19\x0a\x05\x69\x6e\x70\x75\x74\x12\x06\x6f\x75\x74\x70\x75\x74\x22\x08\x49\x64\x65\x6e\x74\x69\x74\x79\x12\x08\x69\x64\x65\x6e\x74\x69\x74\x79\x5a\x1f\x0a\x05\x69\x6e\x70\x75\x74\x12\x16\x0a\x14\x08\x01\x12\x10\x0a\x02\x08\x01\x0a\x02\x08\x01\x0a\x02\x08\x02\x0a\x02\x08\x02\x62\x20\x0a\x06\x6f\x75\x74\x70\x75\x74\x12\x16\x0a\x14\x08\x01\x12\x10\x0a\x02\x08\x01\x0a\x02\x08\x01\x0a\x02\x08\x02\x0a\x02\x08\x02\x42\x04\x0a\x00\x10\x0d";
+
+    /// File and memory loading retain identical configuration and actual model identity.
+    #[test]
+    fn memory_and_file_loading_share_model_initialization() -> anyhow::Result<()> {
+        let file = tempfile::NamedTempFile::new()?;
+        std::fs::write(file.path(), IDENTITY_ONNX)?;
+        let config = ModelConfig::default();
+        let native = CardOcr::load(file.path(), None, config.clone())?;
+        let memory = CardOcr::load_bytes(IDENTITY_ONNX.to_vec(), None, config)?;
+        assert_eq!(
+            serde_json::to_value(&native.identity)?,
+            serde_json::to_value(&memory.identity)?
+        );
+        assert_eq!(native.alphabet, memory.alphabet);
+        assert_eq!(
+            native.recognizer.input_dimensions()?,
+            memory.recognizer.input_dimensions()?
+        );
+        assert!(memory.detector.is_none());
+        assert!(memory.portable_detector.is_none());
+        Ok(())
+    }
+
+    /// Both entry points validate preprocessing before attempting to read/load weights.
+    #[test]
+    fn memory_and_file_loading_share_configuration_validation() -> anyhow::Result<()> {
+        let mut invalid = Vec::new();
+        let mut config = ModelConfig::default();
+        config.alphabet.clear();
+        invalid.push(config);
+        let mut config = ModelConfig::default();
+        config.architecture.clear();
+        invalid.push(config);
+        invalid.push(ModelConfig {
+            input_height: 0,
+            ..ModelConfig::default()
+        });
+        let mut config = ModelConfig::default();
+        config.input.scale = f32::NAN;
+        invalid.push(config);
+        let mut config = ModelConfig::default();
+        config.input.padding_width = 4097;
+        invalid.push(config);
+        let mut config = ModelConfig::default();
+        config.input.min_content_width = 0;
+        invalid.push(config);
+        let missing = tempfile::tempdir()?.path().join("absent.onnx");
+        for config in invalid {
+            let file = CardOcr::load(&missing, None, config.clone())
+                .err()
+                .expect("invalid file config accepted");
+            let bytes = CardOcr::load_bytes(Vec::new(), None, config)
+                .err()
+                .expect("invalid memory config accepted");
+            assert_eq!(file.to_string(), bytes.to_string());
+        }
+        Ok(())
+    }
+
+    /// Invalid model buffers are errors on the correct network, without a file fallback.
+    #[test]
+    fn memory_loading_rejects_malformed_networks() {
+        let recognition = CardOcr::load_bytes(Vec::new(), None, ModelConfig::default())
+            .err()
+            .expect("empty recognizer accepted");
+        assert!(recognition.to_string().contains("load recognition model"));
+        let detection = CardOcr::load_bytes(
+            IDENTITY_ONNX.to_vec(),
+            Some(Vec::new()),
+            ModelConfig::default(),
+        )
+        .err()
+        .expect("empty detector accepted");
+        assert!(detection.to_string().contains("load detection model"));
+    }
 
     #[test]
     fn bgr_planes_preserve_colour_and_pad_after_normalization() {
