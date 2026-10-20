@@ -142,6 +142,10 @@ impl CardOcr {
     /// `threads` optionally configures inference workers for either backend.
     /// `None` retains the default policy, including `RTEN_NUM_THREADS` for RTen.
     /// Reuse the loaded engine between camera frames.
+    /// ONNX Runtime uses a shared process-lifetime environment; applications
+    /// that manage their own environment should use
+    /// `load_profile_with_onnxruntime_environment` (requires `onnxruntime`) from
+    /// their first native load.
     ///
     /// # Errors
     ///
@@ -153,6 +157,49 @@ impl CardOcr {
         detection_model: Option<&Path>,
         backend: InferenceBackend,
         threads: Option<usize>,
+    ) -> Result<Self> {
+        Self::load_profile_with_runtime_options(
+            profile_id,
+            model_root,
+            detection_model,
+            RuntimeOptions::new(backend, threads)?,
+        )
+    }
+
+    /// Load a verified profile in the application's ONNX Runtime environment.
+    ///
+    /// Both networks retain a handle to `environment` and use independent CPU
+    /// thread pools. No environment is stored globally by this loader. Share
+    /// the same environment with other OCR engines and native sessions because
+    /// ONNX Runtime permits only one environment to be created per process.
+    ///
+    /// # Errors
+    ///
+    /// Returns profile/integrity errors described by [`Self::load_profile`], or
+    /// errors for invalid threads, session settings or incompatible ONNX models.
+    #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+    pub fn load_profile_with_onnxruntime_environment(
+        profile_id: &str,
+        model_root: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        environment: &ort::environment::Environment,
+        threads: Option<usize>,
+    ) -> Result<Self> {
+        let mut options = RuntimeOptions::new(InferenceBackend::OnnxRuntime, threads)?;
+        options.ort_environment = Some(environment.clone());
+        Self::load_profile_with_runtime_options(profile_id, model_root, detection_model, options)
+    }
+
+    /// Verify a language profile and load it with the selected runtime settings.
+    ///
+    /// # Errors
+    ///
+    /// Returns profile, integrity and model-loading errors.
+    fn load_profile_with_runtime_options(
+        profile_id: &str,
+        model_root: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        runtime_options: RuntimeOptions,
     ) -> Result<Self> {
         let root = model_root.as_ref();
         let registry: ProfileRegistry = serde_json::from_slice(
@@ -195,12 +242,11 @@ impl CardOcr {
             config.language == profile.language,
             "language profile and model configuration disagree"
         );
-        let engine = Self::load_with_backend(
+        let engine = Self::load_with_runtime_options(
             root.join(&profile.model),
             detection_model,
             config,
-            backend,
-            threads,
+            runtime_options,
         )?;
         ensure!(
             engine.identity.sha256 == profile.sha256,
@@ -247,6 +293,11 @@ impl CardOcr {
     /// process-wide thread cap. RTen falls back to the calling thread if the
     /// platform cannot create the requested pool.
     ///
+    /// ONNX Runtime creates a shared process-lifetime environment on first use.
+    /// Applications managing their own environment should instead use
+    /// `load_with_onnxruntime_environment` (requires `onnxruntime`) from their
+    /// first native load.
+    ///
     /// # Errors
     ///
     /// Returns the errors described by [`Self::load`], or errors for a missing
@@ -258,7 +309,52 @@ impl CardOcr {
         backend: InferenceBackend,
         threads: Option<usize>,
     ) -> Result<Self> {
-        let runtime_options = RuntimeOptions::new(backend, threads)?;
+        Self::load_with_runtime_options(
+            recognition_model,
+            detection_model,
+            config,
+            RuntimeOptions::new(backend, threads)?,
+        )
+    }
+
+    /// Load ONNX models in the application's ONNX Runtime environment.
+    ///
+    /// The sessions retain `environment` for their lifetime without storing it
+    /// globally. Keep a handle if more engines or native sessions will be loaded:
+    /// ONNX Runtime permits only one environment to be created per process.
+    /// Each network uses an independent CPU pool with the optional worker count;
+    /// environment execution providers and global thread pools are not inherited.
+    ///
+    /// # Errors
+    ///
+    /// Returns the errors described by [`Self::load`], or errors for invalid
+    /// threads, session settings or incompatible ONNX models.
+    #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+    pub fn load_with_onnxruntime_environment(
+        recognition_model: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        config: ModelConfig,
+        environment: &ort::environment::Environment,
+        threads: Option<usize>,
+    ) -> Result<Self> {
+        let mut options = RuntimeOptions::new(InferenceBackend::OnnxRuntime, threads)?;
+        options.ort_environment = Some(environment.clone());
+        Self::load_with_runtime_options(recognition_model, detection_model, config, options)
+    }
+
+    /// Load validated model files using shared inference settings.
+    ///
+    /// # Errors
+    ///
+    /// Returns errors for invalid configuration, unreadable files or runtime setup.
+    fn load_with_runtime_options(
+        recognition_model: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        config: ModelConfig,
+        runtime_options: RuntimeOptions,
+    ) -> Result<Self> {
+        let backend = runtime_options.backend;
+        let threads = runtime_options.threads;
         ensure!(!config.alphabet.is_empty(), "recognition alphabet is empty");
         ensure!(
             !config.architecture.trim().is_empty(),
