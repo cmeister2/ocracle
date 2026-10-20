@@ -1,0 +1,172 @@
+{
+  "scope": "synthetic inference runtime diagnostic, not an application benchmark",
+  "measured_at": "2026-10-20T08:53:24.704027+00:00",
+  "order": "RTen subprocess first, then ONNX Runtime CPU session; no overlapping sessions",
+  "limitations": "Synthetic input only; no resizing, OCR detection postprocessing, CTC, camera, handset or thermal measurements. Python and Rust API overhead differ. Runtime migration still requires real-image correctness and end-to-end Android measurements.",
+  "records": [
+    {
+      "arch": "x86_64",
+      "cold_ms": 53.369898,
+      "input_formula": "float32((index % 251) / 128 - 1), contiguous row-major",
+      "input_sha256": "6a414dfc6ba9f7c3fe4be6250c04a0754a1646b19fb30dd3c0c393675365db68",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "load_ms": 87.619822,
+      "load_scope": "model parsing/optimization; file read excluded",
+      "median_ms": 47.844224,
+      "model": "/home/max/code/github/ocracle/models/ppocr-v6-medium.onnx",
+      "model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "os": "linux",
+      "output": {
+        "categorical_probabilities": {
+          "classes": 18710,
+          "row_sum_max_error": 1.4300020067636865e-05
+        },
+        "elements": 748400,
+        "first_values": [
+          0.8557429909706116,
+          0.00038306700298562646,
+          0.00040007237112149596,
+          0.00030055976822040975,
+          0.00017344095977023244,
+          1.6571953892707825e-05,
+          4.350265498942463e-06,
+          0.0002711561101023108
+        ],
+        "identical_between_calls": true,
+        "max": 0.928938090801239,
+        "mean": 5.3447350961517184e-05,
+        "min": 6.467814728239318e-09,
+        "raw_f32le": "/tmp/ocracle-runtime-medium/rten-output.f32",
+        "sha256": "6523ab1d2d57d61c8d8577bcd94d72750811dd0b6ae46cb7c6e5b763d1bd30ec",
+        "shape": [
+          1,
+          40,
+          18710
+        ]
+      },
+      "p95_ms": 49.457105,
+      "runtime": "rten",
+      "runtime_version": "0.26.0",
+      "samples_ms": [
+        48.0149,
+        47.133077,
+        48.676273,
+        49.457105,
+        49.072520000000004,
+        46.809098,
+        42.855561,
+        46.863325999999994,
+        49.069154,
+        44.870355,
+        47.94204,
+        47.181419000000005,
+        50.06753,
+        48.102128,
+        49.312609,
+        47.582463999999995,
+        47.844224,
+        45.842281,
+        47.410256,
+        45.557515
+      ],
+      "scope": "synthetic tensor inference only; not OCR/application or Android FPS",
+      "threads": 4,
+      "warmup_runs_after_cold": 3
+    },
+    {
+      "scope": "synthetic tensor inference only; not OCR/application or Android FPS",
+      "runtime": "onnxruntime",
+      "runtime_version": "1.31.0",
+      "provider": "CPUExecutionProvider",
+      "inter_op_threads": 1,
+      "execution_mode": "ORT_SEQUENTIAL",
+      "graph_optimization_level": "ORT_ENABLE_ALL",
+      "model": "models/ppocr-v6-medium.onnx",
+      "model_sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba",
+      "input_shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "input_sha256": "6a414dfc6ba9f7c3fe4be6250c04a0754a1646b19fb30dd3c0c393675365db68",
+      "input_formula": "float32((index % 251) / 128 - 1), contiguous row-major",
+      "threads": 4,
+      "arch": "x86_64",
+      "os": "linux",
+      "warmup_runs_after_cold": 3,
+      "load_ms": 285.052773,
+      "cold_ms": 30.276185,
+      "load_scope": "model parsing/optimization; file read excluded",
+      "samples_ms": [
+        47.938308,
+        48.882001,
+        49.980219,
+        49.988645,
+        42.227177,
+        28.644577,
+        29.765856,
+        30.588008,
+        31.914194,
+        28.791557,
+        40.838066,
+        38.926423,
+        32.223213,
+        38.642345,
+        46.076145,
+        31.49898,
+        31.913091,
+        30.170683,
+        49.460737,
+        52.023694
+      ],
+      "median_ms": 38.926423,
+      "p95_ms": 49.988645,
+      "output": {
+        "shape": [
+          1,
+          40,
+          18710
+        ],
+        "elements": 748400,
+        "min": 6.467738344895224e-09,
+        "max": 0.9289377331733704,
+        "mean": 5.344735336548356e-05,
+        "first_values": [
+          0.8557423949241638,
+          0.00038307110662572086,
+          0.00040007440838962793,
+          0.00030056157265789807,
+          0.00017344315710943192,
+          1.6572068489040248e-05,
+          4.3502545850060415e-06,
+          0.0002711577108129859
+        ],
+        "sha256": "46b574602787aebe7b1901049af1dc926cbc2e61e2215e0c0d78c969793048b1",
+        "categorical_probabilities": {
+          "classes": 18710,
+          "row_sum_max_error": 1.3873586058643639e-05
+        },
+        "identical_between_calls": true,
+        "raw_f32le": "/tmp/ocracle-runtime-medium/ort-output.f32"
+      }
+    }
+  ],
+  "rten_executable_sha256": "a1a0c579dfee69c8b3824014a9e03b2e5d38a3f6dd497a468167712a4266e2d2",
+  "comparison": {
+    "rten_median_ms": 47.844224,
+    "ort_median_ms": 38.926423,
+    "rten_over_ort_median": 1.2290937700594786,
+    "bitwise_identical_outputs": false,
+    "max_absolute_difference": 1.7285346984863281e-06,
+    "mean_absolute_difference": 6.946532747084806e-11,
+    "allclose_atol_1e-5_rtol_1e-3": true,
+    "argmax_steps": 40,
+    "argmax_steps_different": 0
+  }
+}

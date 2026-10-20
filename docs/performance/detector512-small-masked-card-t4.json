@@ -1,0 +1,157 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 312.36141499999997,
+  "image": ".cache/gallery/m15-52.png",
+  "image_size": [
+    745,
+    1040
+  ],
+  "layout": "standard_card",
+  "lines": [
+    {
+      "bounds": [
+        64,
+        57,
+        182,
+        42
+      ],
+      "confidence": 0.999939501285553,
+      "text": "Divination"
+    },
+    {
+      "bounds": [
+        615,
+        57,
+        84,
+        43
+      ],
+      "confidence": 0.7116445302963257,
+      "text": "20"
+    },
+    {
+      "bounds": [
+        611,
+        597,
+        75,
+        35
+      ],
+      "confidence": 0.9060943126678467,
+      "text": "M15"
+    },
+    {
+      "bounds": [
+        61,
+        598,
+        116,
+        36
+      ],
+      "confidence": 0.9998814463615417,
+      "text": "Sorcery"
+    },
+    {
+      "bounds": [
+        66,
+        720,
+        266,
+        31
+      ],
+      "confidence": 0.9991438388824463,
+      "text": "Draw two cards."
+    },
+    {
+      "bounds": [
+        71,
+        778,
+        399,
+        36
+      ],
+      "confidence": 0.9988868236541748,
+      "text": "“The key to unlocking this"
+    },
+    {
+      "bounds": [
+        64,
+        776,
+        553,
+        83
+      ],
+      "confidence": 0.5796306133270264,
+      "text": " nlocing tis puze i"
+    },
+    {
+      "bounds": [
+        63,
+        843,
+        482,
+        44
+      ],
+      "confidence": 0.9970975518226624,
+      "text": "—Doriel, mentor of Mistral Isle"
+    },
+    {
+      "bounds": [
+        48,
+        969,
+        109,
+        20
+      ],
+      "confidence": 0.996640682220459,
+      "text": "052/269 C"
+    },
+    {
+      "bounds": [
+        46,
+        988,
+        230,
+        18
+      ],
+      "confidence": 0.9302206039428711,
+      "text": "M15·EN HOWARD LYON"
+    },
+    {
+      "bounds": [
+        444,
+        969,
+        251,
+        21
+      ],
+      "confidence": 0.9937284588813782,
+      "text": "TM & © 2014 Wizards of the Coast"
+    },
+    {
+      "bounds": [
+        727,
+        1023,
+        17,
+        17
+      ],
+      "confidence": 0.8705241084098816,
+      "text": "1"
+    }
+  ],
+  "load_ms": 68.576377,
+  "median_ms": 294.302609,
+  "model": {
+    "detector_sha256": "9f46b004d51f160e2bf4070995304d8a40bef1e867c673d079beee8a9173860a",
+    "language": "en",
+    "name": "PP-OCRv6 small (upstream)",
+    "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+  },
+  "os": "linux",
+  "p95_ms": 331.51282399999997,
+  "samples_ms": [
+    283.958712,
+    300.223664,
+    292.768558,
+    331.51282399999997,
+    293.430957,
+    288.325703,
+    297.320999,
+    294.302609,
+    295.30073699999997,
+    290.191484
+  ],
+  "single_line": false,
+  "text": "Divination\n20\nM15\nSorcery\nDraw two cards.\n“The key to unlocking this\n nlocing tis puze i\n—Doriel, mentor of Mistral Isle\n052/269 C\nM15·EN HOWARD LYON\nTM & © 2014 Wizards of the Coast\n1",
+  "threads": "4"
+}

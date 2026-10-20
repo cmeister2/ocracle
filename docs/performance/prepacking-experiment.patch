@@ -1,0 +1,38 @@
+diff --git a/src/engine.rs b/src/engine.rs
+index b1f48dd..885c55f 100644
+--- a/src/engine.rs
++++ b/src/engine.rs
+@@ -8,7 +8,7 @@ use image::{
+     imageops::{self, FilterType},
+ };
+ use ocrs::{ImageSource, OcrEngine, OcrEngineParams};
+-use rten::Model;
++use rten::{Model, ModelOptions};
+ use rten_imageproc::bounding_rect;
+ use rten_tensor::Layout as _;
+ use rten_tensor::{NdTensor, prelude::*};
+@@ -211,8 +211,10 @@ impl CardOcr {
+         );
+         let recognition_bytes =
+             fs::read(recognition_model.as_ref()).context("read recognition model")?;
+-        let recognizer =
+-            Model::load(recognition_bytes.clone()).context("load recognition model")?;
++        let recognizer = ModelOptions::default()
++            .prepack_weights(true)
++            .load(recognition_bytes.clone())
++            .context("load recognition model")?;
+         let detector_bytes = detection_model
+             .map(fs::read)
+             .transpose()
+@@ -222,7 +224,10 @@ impl CardOcr {
+             .map(|bytes| -> Result<_> {
+                 OcrEngine::new(OcrEngineParams {
+                     detection_model: Some(
+-                        Model::load(bytes.clone()).context("load detection model")?,
++                        ModelOptions::default()
++                            .prepack_weights(true)
++                            .load(bytes.clone())
++                            .context("load detection model")?,
+                     ),
+                     ..Default::default()
+                 })

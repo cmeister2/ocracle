@@ -23,6 +23,7 @@ uncalibrated confidence score. No Oracle lookup replaces the observed text.
 - [Fonts](docs/font-coverage.md) and [languages](docs/language-coverage.md)
 - [Training and evaluation](docs/training/english-crnn.md)
 - [Model provenance and licenses](docs/models.md)
+- [Android performance benchmarks and optional native runtime](docs/performance/README.md)
 
 Changes use pull requests with the required **Success** CI check; stacked PRs are
 supported. Code is MIT licensed; models and card imagery retain separate rights.

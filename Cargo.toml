@@ -12,6 +12,11 @@ keywords = ["ocr", "mtg", "neural-network", "magic", "cards"]
 categories = ["computer-vision", "command-line-utilities"]
 include = ["/src/**", "/Cargo.toml", "/Cargo.lock", "/README.md", "/LICENSE"]
 
+[features]
+default = []
+# Applications supply the native ONNX Runtime library; no binary downloads.
+onnxruntime = ["dep:ort"]
+
 [dependencies]
 anyhow = "1.0.104"
 clap = { version = "4.6.7", features = ["derive"] }
@@ -23,6 +28,9 @@ rten-tensor = "0.26"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = "1.0.154"
 sha2 = "0.11.1"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+ort = { version = "=2.0.0-rc.13", optional = true, default-features = false, features = ["load-dynamic"] }
 
 [lints.rust]
 missing_docs = "deny"

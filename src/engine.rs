@@ -1,6 +1,6 @@
 //! Neural inference, image preprocessing and original-coordinate line layout.
 
-use std::{fs, path::Path};
+use std::{borrow::Cow, fs, path::Path};
 
 use anyhow::{Context, Result, ensure};
 use image::{
@@ -16,8 +16,10 @@ use serde::Deserialize;
 use sha2::{Digest, Sha256};
 
 use crate::{
-    Candidate, ColorMode, Layout, Line, ModelConfig, ModelIdentity, Options, OutputLayout,
-    OutputValues, Passes, Recognition, WidthRounding, ctc,
+    Candidate, ColorMode, InferenceBackend, Layout, Line, ModelConfig, ModelIdentity, Options,
+    OutputLayout, OutputValues, Passes, Recognition, WidthRounding, ctc,
+    detector::PortableDetector,
+    runtime::{RuntimeModel, RuntimeOptions},
 };
 
 /// Reusable MTG text recognizer backed by a CTC neural network.
@@ -27,11 +29,15 @@ pub struct CardOcr {
     /// Optional word detector, absent for line-only deployments.
     detector: Option<OcrEngine>,
     /// Recognition network emitting timestep log probabilities.
-    recognizer: Model,
+    recognizer: RuntimeModel,
+    /// Optional alternate detector; the Ocrs engine still handles line ordering.
+    portable_detector: Option<PortableDetector>,
     /// Checkpoint-specific alphabet and input height.
     config: ModelConfig,
     /// File digests identifying the actual weights in use.
     identity: ModelIdentity,
+    /// Cached Unicode class mapping shared by every line.
+    alphabet: Vec<char>,
 }
 
 /// Registry of available, trained per-card language profiles.
@@ -122,6 +128,32 @@ impl CardOcr {
         model_root: impl AsRef<Path>,
         detection_model: Option<&Path>,
     ) -> Result<Self> {
+        Self::load_profile_with_backend(
+            profile_id,
+            model_root,
+            detection_model,
+            InferenceBackend::Rten,
+            None,
+        )
+    }
+
+    /// Load a verified language profile using an explicit inference runtime.
+    ///
+    /// `threads` optionally configures inference workers for either backend.
+    /// `None` retains the default policy, including `RTEN_NUM_THREADS` for RTen.
+    /// Reuse the loaded engine between camera frames.
+    ///
+    /// # Errors
+    ///
+    /// Returns profile/integrity errors described by [`Self::load_profile`], or
+    /// errors for unavailable runtime support, invalid threads or incompatible models.
+    pub fn load_profile_with_backend(
+        profile_id: &str,
+        model_root: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        backend: InferenceBackend,
+        threads: Option<usize>,
+    ) -> Result<Self> {
         let root = model_root.as_ref();
         let registry: ProfileRegistry = serde_json::from_slice(
             &fs::read(root.join("models/profiles.json"))
@@ -163,7 +195,13 @@ impl CardOcr {
             config.language == profile.language,
             "language profile and model configuration disagree"
         );
-        let engine = Self::load(root.join(&profile.model), detection_model, config)?;
+        let engine = Self::load_with_backend(
+            root.join(&profile.model),
+            detection_model,
+            config,
+            backend,
+            threads,
+        )?;
         ensure!(
             engine.identity.sha256 == profile.sha256,
             "language profile recognition model SHA-256 mismatch"
@@ -186,6 +224,41 @@ impl CardOcr {
         detection_model: Option<&Path>,
         config: ModelConfig,
     ) -> Result<Self> {
+        Self::load_with_backend(
+            recognition_model,
+            detection_model,
+            config,
+            InferenceBackend::Rten,
+            None,
+        )
+    }
+
+    /// Load models with an explicit CPU inference backend.
+    ///
+    /// ONNX Runtime requires the `onnxruntime` feature, a compatible native library,
+    /// and ONNX weights for both networks. `threads` must be in `1..=i32::MAX`
+    /// when supplied. RTen shares one private inference pool between both networks;
+    /// ONNX Runtime configures each session with this worker count.
+    ///
+    /// `None` preserves the backend's default policy, including the process-level
+    /// `RTEN_NUM_THREADS` setting for RTen. No environment variables are changed.
+    /// Tensor preprocessing retains RTen's global pool policy, and RTen may also
+    /// initialize that fallback pool during model execution. This is not a
+    /// process-wide thread cap. RTen falls back to the calling thread if the
+    /// platform cannot create the requested pool.
+    ///
+    /// # Errors
+    ///
+    /// Returns the errors described by [`Self::load`], or errors for a missing
+    /// runtime feature/library, invalid thread settings, or unsupported model files.
+    pub fn load_with_backend(
+        recognition_model: impl AsRef<Path>,
+        detection_model: Option<&Path>,
+        config: ModelConfig,
+        backend: InferenceBackend,
+        threads: Option<usize>,
+    ) -> Result<Self> {
+        let runtime_options = RuntimeOptions::new(backend, threads)?;
         ensure!(!config.alphabet.is_empty(), "recognition alphabet is empty");
         ensure!(
             !config.architecture.trim().is_empty(),
@@ -211,24 +284,36 @@ impl CardOcr {
         );
         let recognition_bytes =
             fs::read(recognition_model.as_ref()).context("read recognition model")?;
-        let recognizer =
-            Model::load(recognition_bytes.clone()).context("load recognition model")?;
+        let recognizer = RuntimeModel::load(recognition_bytes.clone(), &runtime_options)
+            .context("load recognition model")?;
         let detector_bytes = detection_model
             .map(fs::read)
             .transpose()
             .context("read detection model")?;
+        let use_portable_detector = backend == InferenceBackend::OnnxRuntime || threads.is_some();
         let detector = detector_bytes
             .as_ref()
             .map(|bytes| -> Result<_> {
                 OcrEngine::new(OcrEngineParams {
-                    detection_model: Some(
-                        Model::load(bytes.clone()).context("load detection model")?,
-                    ),
+                    detection_model: if !use_portable_detector {
+                        Some(Model::load(bytes.clone()).context("load detection model")?)
+                    } else {
+                        None
+                    },
                     ..Default::default()
                 })
             })
             .transpose()?;
+        let portable_detector = if use_portable_detector {
+            detector_bytes
+                .as_ref()
+                .map(|bytes| PortableDetector::load(bytes.clone(), &runtime_options))
+                .transpose()?
+        } else {
+            None
+        };
         let identity = ModelIdentity {
+            backend,
             name: config.model_name.clone(),
             language: config.language.clone(),
             sha256: digest(&recognition_bytes),
@@ -237,6 +322,8 @@ impl CardOcr {
         Ok(Self {
             detector,
             recognizer,
+            portable_detector,
+            alphabet: config.alphabet.chars().collect(),
             config,
             identity,
         })
@@ -259,7 +346,10 @@ impl CardOcr {
             u64::from(width) * u64::from(height) <= 24_000_000,
             "image exceeds 24 megapixels"
         );
-        let mut original = image.to_rgb8();
+        let mut original = match image.as_rgb8() {
+            Some(rgb) => Cow::Borrowed(rgb),
+            None => Cow::Owned(image.to_rgb8()),
+        };
         let card_layout = !options.single_line
             && match options.layout {
                 Layout::Auto => {
@@ -269,7 +359,7 @@ impl CardOcr {
                 Layout::Text => false,
             };
         if card_layout {
-            mask_artwork(&mut original);
+            mask_artwork(original.to_mut());
         }
         let layout_method = if card_layout {
             "MTG standard-frame artwork mask + "
@@ -403,7 +493,10 @@ impl CardOcr {
             .context("multiline OCR requires --detection-model; use --line for a line crop")?;
         let source = ImageSource::from_bytes(image.as_raw(), image.dimensions())?;
         let input = detector.prepare_input(source)?;
-        let words = detector.detect_words(&input)?;
+        let words = match &self.portable_detector {
+            Some(portable) => portable.detect_words(image)?,
+            None => detector.detect_words(&input)?,
+        };
         let lines = detector.find_text_lines(&input, &words);
         Ok(lines
             .iter()
@@ -433,7 +526,7 @@ impl CardOcr {
         let input = recognition_input(image, &self.config)?;
         let output = self
             .recognizer
-            .run_one(input.view().into(), None)
+            .run(input.view())
             .context("recognition model inference")?;
         let output: NdTensor<f32, 3> = output
             .try_into()
@@ -445,16 +538,13 @@ impl CardOcr {
         };
         ensure!(batch == 1, "recognition output batch must be one");
         // With a single batch item TNC and NTC have the same flattened order.
-        let mut data: Vec<f32> = output.iter().copied().collect();
-        if matches!(self.config.output_values, OutputValues::Probabilities) {
-            probabilities_to_logs(&mut data, classes)?;
+        let data = output.into_data();
+        match self.config.output_values {
+            OutputValues::Probabilities => {
+                ctc::decode_probabilities(&data, steps, classes, &self.alphabet)
+            }
+            OutputValues::LogProbabilities => ctc::decode(&data, steps, classes, &self.alphabet),
         }
-        ctc::decode(
-            &data,
-            steps,
-            classes,
-            &self.config.alphabet.chars().collect::<Vec<_>>(),
-        )
     }
 }
 
@@ -514,31 +604,6 @@ fn recognition_input(image: &RgbImage, config: &ModelConfig) -> Result<NdTensor<
         [1, channels, height as usize, padded_width as usize],
         data,
     ))
-}
-
-/// Validate normalized CTC probabilities and take finite natural logarithms.
-///
-/// # Errors
-///
-/// Returns an error for an empty class axis, malformed rows, nonfinite or
-/// out-of-range values, or distributions whose sum differs from one by >0.001.
-fn probabilities_to_logs(data: &mut [f32], classes: usize) -> Result<()> {
-    ensure!(
-        classes > 0 && data.len().is_multiple_of(classes),
-        "invalid CTC class axis"
-    );
-    for row in data.chunks_exact_mut(classes) {
-        ensure!(
-            row.iter()
-                .all(|value| value.is_finite() && (0. ..=1.000_001).contains(value))
-                && (row.iter().sum::<f32>() - 1.).abs() <= 0.001,
-            "model must output normalized class probabilities"
-        );
-        for value in row {
-            *value = value.clamp(1e-30, 1.).ln();
-        }
-    }
-    Ok(())
 }
 
 /// Compute a lowercase SHA-256 file identity.
@@ -614,8 +679,8 @@ fn enhance(image: &RgbImage) -> RgbImage {
 mod tests {
     //! Recognition-contract regressions for original colour model exports.
 
-    use super::{probabilities_to_logs, recognition_input};
-    use crate::{ColorMode, InputConfig, ModelConfig, WidthRounding, ctc};
+    use super::recognition_input;
+    use crate::{ColorMode, InputConfig, ModelConfig, WidthRounding};
     use image::{Rgb, RgbImage};
     use rten_tensor::Layout;
 
@@ -677,17 +742,5 @@ mod tests {
         assert_eq!(tensor.shape(), [1, 3, 48, 320]);
         assert_eq!(tensor[[0, 0, 20, 5]], 1.);
         assert_eq!(tensor[[0, 0, 20, 6]], 0.);
-    }
-
-    #[test]
-    fn probability_exports_keep_ctc_repetition_and_confidence_semantics() {
-        let mut probabilities = vec![0.1, 0.8, 0.1, 0.1, 0.7, 0.2, 1., 0., 0., 0.1, 0.8, 0.1];
-        probabilities_to_logs(&mut probabilities, 3).unwrap();
-        let (text, confidence) = ctc::decode(&probabilities, 4, 3, &['é', '龍']).unwrap();
-        assert_eq!(text, "éé");
-        assert!((confidence - 0.8).abs() < 1e-6);
-        assert!(probabilities_to_logs(&mut [0.2, 0.2], 2).is_err());
-        assert!(probabilities_to_logs(&mut [f32::NAN, 1.], 2).is_err());
-        assert!(probabilities_to_logs(&mut [], 0).is_err());
     }
 }

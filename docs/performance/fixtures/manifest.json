@@ -1,0 +1,1578 @@
+{
+  "schema_version": 1,
+  "notes": "Clean full scans are not camera frames; no motion, glare or thermal coverage. Fixed gallery identities excluded from custom fine-tuning; upstream training membership unknown. Whole-card CER covers only fixed annotated regions. Card imagery/text copyright Wizards of the Coast; scans via Scryfall.",
+  "source_documents": {
+    "docs/gallery/assets/fixtures.json": "d6ddc7fab695de4347a87c06f0d3fd33d1dd32587dc6a96693a13588f427f015",
+    "docs/gallery/assets/latin/fixtures.json": "9e8b82d7f3ee378b7a0a9e2b14ce8d7dc4158f241170140a7d8cd9d0b1f8fc81"
+  },
+  "transcription_reviewed_on": "2026-10-20",
+  "samples": [
+    {
+      "id": "line-goudy-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "clean",
+      "ground_truth": "Llanowar Elves",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/goudy-title.png",
+      "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+      "image_size": [
+        273,
+        47
+      ]
+    },
+    {
+      "id": "line-goudy-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "blur",
+      "ground_truth": "Llanowar Elves",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/goudy-title-blur.png",
+      "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+      "image_size": [
+        82,
+        14
+      ]
+    },
+    {
+      "id": "line-matrix-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "clean",
+      "ground_truth": "Air Elemental",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/matrix-title.png",
+      "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+      "image_size": [
+        267,
+        45
+      ]
+    },
+    {
+      "id": "line-matrix-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "blur",
+      "ground_truth": "Air Elemental",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/matrix-title-blur.png",
+      "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+      "image_size": [
+        80,
+        14
+      ]
+    },
+    {
+      "id": "line-beleren-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "ground_truth": "Divination",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/beleren-title.png",
+      "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+      "image_size": [
+        201,
+        46
+      ]
+    },
+    {
+      "id": "line-beleren-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "blur",
+      "ground_truth": "Divination",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/beleren-title-blur.png",
+      "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+      "image_size": [
+        60,
+        14
+      ]
+    },
+    {
+      "id": "line-historic-rules-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "clean",
+      "ground_truth": "Tap to add 1 green mana to your",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/historic-rules.png",
+      "image_sha256": "59a0649ed3d3a888836df0b572a7e1e5196cc45d65ffd79794133768f9455042",
+      "image_size": [
+        507,
+        38
+      ]
+    },
+    {
+      "id": "line-historic-rules-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "blur",
+      "ground_truth": "Tap to add 1 green mana to your",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/historic-rules-blur.png",
+      "image_sha256": "3522ec17c8f4d56afab57bcee446d38b40d0485c96c5c2fe4d0a7ed1a9fc1a8c",
+      "image_size": [
+        152,
+        11
+      ]
+    },
+    {
+      "id": "line-modern-rules-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "ground_truth": "Draw two cards.",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/modern-rules.png",
+      "image_sha256": "2222522079a282cf12e66091434716a50d25bdb4000bde07cb023b256af9a464",
+      "image_size": [
+        283,
+        42
+      ]
+    },
+    {
+      "id": "line-modern-rules-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "blur",
+      "ground_truth": "Draw two cards.",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/modern-rules-blur.png",
+      "image_sha256": "9f4029ed8354ad2af3376e143c183da89f54e85e092025aa7bdb9777ac0d3690",
+      "image_size": [
+        85,
+        13
+      ]
+    },
+    {
+      "id": "line-historic-flavor-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "clean",
+      "ground_truth": "Whenever the Llanowar Elves gather",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/historic-flavor.png",
+      "image_sha256": "e31e0350e4344ad7e7d0dabeb0547c96fb252a627330c6132ac341cbfb2684bc",
+      "image_size": [
+        524,
+        40
+      ]
+    },
+    {
+      "id": "line-historic-flavor-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "blur",
+      "ground_truth": "Whenever the Llanowar Elves gather",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/historic-flavor-blur.png",
+      "image_sha256": "aee039f25e92e1d6735e6f992e0d045014a5f8b52767fc0f48fc787a57640742",
+      "image_size": [
+        157,
+        12
+      ]
+    },
+    {
+      "id": "line-modern-flavor-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "ground_truth": "“The key to unlocking this puzzle is",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/modern-flavor.png",
+      "image_sha256": "e58e1b8601e76530c67b6d8eeb7a5a06913933069cfd17e5a993a50b3148f844",
+      "image_size": [
+        564,
+        43
+      ]
+    },
+    {
+      "id": "line-modern-flavor-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "blur",
+      "ground_truth": "“The key to unlocking this puzzle is",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/modern-flavor-blur.png",
+      "image_sha256": "004793fb6e147aa93024d366231f6baddb3e22cc80be5188d743c077c76ebb41",
+      "image_size": [
+        169,
+        13
+      ]
+    },
+    {
+      "id": "line-italic-reminder-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "clean",
+      "ground_truth": "except by creatures with flying.)",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/italic-reminder.png",
+      "image_sha256": "953cef42f24f6b06542d889a3782e73fe4b4517b0b2f8a91e8792721a8bfea05",
+      "image_size": [
+        497,
+        39
+      ]
+    },
+    {
+      "id": "line-italic-reminder-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "blur",
+      "ground_truth": "except by creatures with flying.)",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/italic-reminder-blur.png",
+      "image_sha256": "7d31d55ebef018d9090d6b6cdc1dfbf7e99f619d7cc3dd115ac5da2eb5ebd119",
+      "image_size": [
+        149,
+        12
+      ]
+    },
+    {
+      "id": "line-mixed-reminder-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Typhoid Rats",
+        "print_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m15/118/typhoid-rats?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/9/f/9f8723f6-96b1-4441-8a57-435fb82d6db4.png?1783939180",
+        "source_image_sha256": "daa2485ea751a2fe8e3455213b161152a730dd23b720a43ea4a069176dde05fb",
+        "artist": "Kev Walker"
+      },
+      "variant": "clean",
+      "ground_truth": "Deathtouch (Any amount of damage",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/mixed-reminder.png",
+      "image_sha256": "d3f8cddfb5a4b6906725a5db947d137a5d2d8f7004205362a832a81db8e02350",
+      "image_size": [
+        595,
+        42
+      ]
+    },
+    {
+      "id": "line-mixed-reminder-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Typhoid Rats",
+        "print_id": "9f8723f6-96b1-4441-8a57-435fb82d6db4",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m15/118/typhoid-rats?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/9/f/9f8723f6-96b1-4441-8a57-435fb82d6db4.png?1783939180",
+        "source_image_sha256": "daa2485ea751a2fe8e3455213b161152a730dd23b720a43ea4a069176dde05fb",
+        "artist": "Kev Walker"
+      },
+      "variant": "blur",
+      "ground_truth": "Deathtouch (Any amount of damage",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/mixed-reminder-blur.png",
+      "image_sha256": "72030733d4e103ce8553bf999267defea2b092ed0a1616c12ddf061161f1eddb",
+      "image_size": [
+        178,
+        13
+      ]
+    },
+    {
+      "id": "line-future-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Blade of the Sixth Pride",
+        "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+        "set": "Future Sight",
+        "language": "en",
+        "collector_number": "19",
+        "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+        "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+        "artist": "Justin Sweet"
+      },
+      "variant": "clean",
+      "ground_truth": "Blade of the Sixth Pride",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/future-title.png",
+      "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+      "image_size": [
+        455,
+        46
+      ]
+    },
+    {
+      "id": "line-future-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Blade of the Sixth Pride",
+        "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+        "set": "Future Sight",
+        "language": "en",
+        "collector_number": "19",
+        "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+        "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+        "artist": "Justin Sweet"
+      },
+      "variant": "blur",
+      "ground_truth": "Blade of the Sixth Pride",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/future-title-blur.png",
+      "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+      "image_size": [
+        136,
+        14
+      ]
+    },
+    {
+      "id": "line-colorshift-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Mana Tithe",
+        "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+        "set": "Planar Chaos",
+        "language": "en",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+        "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+        "artist": "Martina Pilcerova"
+      },
+      "variant": "clean",
+      "ground_truth": "Mana Tithe",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/colorshift-title.png",
+      "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+      "image_size": [
+        220,
+        45
+      ]
+    },
+    {
+      "id": "line-colorshift-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Mana Tithe",
+        "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+        "set": "Planar Chaos",
+        "language": "en",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+        "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+        "artist": "Martina Pilcerova"
+      },
+      "variant": "blur",
+      "ground_truth": "Mana Tithe",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/colorshift-title-blur.png",
+      "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+      "image_size": [
+        66,
+        14
+      ]
+    },
+    {
+      "id": "line-dracula-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Thalia, Guardian of Thraben",
+        "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+        "set": "Innistrad: Crimson Vow",
+        "language": "en",
+        "collector_number": "331",
+        "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+        "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+        "artist": "Magali Villeneuve"
+      },
+      "variant": "clean",
+      "ground_truth": "Mina Harker",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/dracula-title.png",
+      "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+      "image_size": [
+        235,
+        45
+      ]
+    },
+    {
+      "id": "line-dracula-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Thalia, Guardian of Thraben",
+        "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+        "set": "Innistrad: Crimson Vow",
+        "language": "en",
+        "collector_number": "331",
+        "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+        "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+        "artist": "Magali Villeneuve"
+      },
+      "variant": "blur",
+      "ground_truth": "Mina Harker",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/dracula-title-blur.png",
+      "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+      "image_size": [
+        70,
+        14
+      ]
+    },
+    {
+      "id": "line-invocation-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Daze",
+        "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+        "set": "Amonkhet Invocations",
+        "language": "en",
+        "collector_number": "12",
+        "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+        "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+        "artist": "Richard Wright"
+      },
+      "variant": "clean",
+      "ground_truth": "DAZE",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/invocation-title.png",
+      "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+      "image_size": [
+        107,
+        39
+      ]
+    },
+    {
+      "id": "line-invocation-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Daze",
+        "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+        "set": "Amonkhet Invocations",
+        "language": "en",
+        "collector_number": "12",
+        "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+        "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+        "artist": "Richard Wright"
+      },
+      "variant": "blur",
+      "ground_truth": "DAZE",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/invocation-title-blur.png",
+      "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+      "image_size": [
+        32,
+        12
+      ]
+    },
+    {
+      "id": "line-module-title-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Cave of the Frost Dragon",
+        "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+        "set": "Adventures in the Forgotten Realms",
+        "language": "en",
+        "collector_number": "350",
+        "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+        "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+        "artist": "Larry Elmore"
+      },
+      "variant": "clean",
+      "ground_truth": "Frost Dragon",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/module-title.png",
+      "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+      "image_size": [
+        360,
+        46
+      ]
+    },
+    {
+      "id": "line-module-title-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Cave of the Frost Dragon",
+        "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+        "set": "Adventures in the Forgotten Realms",
+        "language": "en",
+        "collector_number": "350",
+        "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+        "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+        "artist": "Larry Elmore"
+      },
+      "variant": "blur",
+      "ground_truth": "Frost Dragon",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/module-title-blur.png",
+      "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+      "image_size": [
+        108,
+        14
+      ]
+    },
+    {
+      "id": "line-collector-type-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "ground_truth": "052/269 C",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/collector-type.png",
+      "image_sha256": "055b1a45cf542fa23313729be4b57a2f698b27762547f22fe23a0180a4d22a79",
+      "image_size": [
+        150,
+        21
+      ]
+    },
+    {
+      "id": "line-collector-type-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "blur",
+      "ground_truth": "052/269 C",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/collector-type-blur.png",
+      "image_sha256": "2e311b600935e86b5b8c14d1ee6ce98114f4157629da396c132b071576781a5f",
+      "image_size": [
+        45,
+        6
+      ]
+    },
+    {
+      "id": "line-latin-fr-m21-47-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "fr",
+      "source": {
+        "name": "Capture Sphere",
+        "print_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+        "oracle_id": "2dc59566-10cb-468a-b6a2-17d6c0186e6d",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "47",
+        "scryfall_url": "https://scryfall.com/card/m21/47/fr/sph%C3%A8re-de-capture-(capture-sphere)",
+        "image_url": "https://cards.scryfall.io/large/front/f/a/fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7.jpg?1782905824",
+        "source_image_sha256": "eb94a3fdb934074759650531ca1f628b266056d5d4c0b96ebb732621a73cf69b"
+      },
+      "variant": "clean",
+      "ground_truth": "Sphère de capture",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/fr-m21-47-clean.png",
+      "image_sha256": "06268b6ef0a5e2f60dc3ce49333bbc6527cdb90d7881fd035a691a8b4b633949",
+      "image_size": [
+        497,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-fr-m21-47-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "fr",
+      "source": {
+        "name": "Capture Sphere",
+        "print_id": "fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7",
+        "oracle_id": "2dc59566-10cb-468a-b6a2-17d6c0186e6d",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "47",
+        "scryfall_url": "https://scryfall.com/card/m21/47/fr/sph%C3%A8re-de-capture-(capture-sphere)",
+        "image_url": "https://cards.scryfall.io/large/front/f/a/fa8c1c6f-9dea-4b4c-9984-6c9487afe0b7.jpg?1782905824",
+        "source_image_sha256": "eb94a3fdb934074759650531ca1f628b266056d5d4c0b96ebb732621a73cf69b"
+      },
+      "variant": "blur",
+      "ground_truth": "Sphère de capture",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/fr-m21-47-blur.png",
+      "image_sha256": "7b27761165595d0f23d7bc7b8d06006eb1fa95954d63329987f66bda75fce805",
+      "image_size": [
+        149,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-fr-m21-182-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "fr",
+      "source": {
+        "name": "Fungal Rebirth",
+        "print_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+        "oracle_id": "b917f39a-3176-47ad-afda-08d09b873c02",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "182",
+        "scryfall_url": "https://scryfall.com/card/m21/182/fr/renaissance-fongo%C3%AFde-(fungal-rebirth)",
+        "image_url": "https://cards.scryfall.io/large/front/4/d/4d8605da-d353-40bf-9a94-3bff2bd43d25.jpg?1782904834",
+        "source_image_sha256": "cbd8efd435d1b405cd0e86ac589e4d4179831088242d53779fbc70bcd9954ba5"
+      },
+      "variant": "clean",
+      "ground_truth": "Renaissance fongoïde",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/fr-m21-182-clean.png",
+      "image_sha256": "1fa17565236ee08cb55e5ac5567f0f7a1cde8629eb14109da5c0b5383dfa1001",
+      "image_size": [
+        497,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-fr-m21-182-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "fr",
+      "source": {
+        "name": "Fungal Rebirth",
+        "print_id": "4d8605da-d353-40bf-9a94-3bff2bd43d25",
+        "oracle_id": "b917f39a-3176-47ad-afda-08d09b873c02",
+        "language": "fr",
+        "set": "M21",
+        "collector_number": "182",
+        "scryfall_url": "https://scryfall.com/card/m21/182/fr/renaissance-fongo%C3%AFde-(fungal-rebirth)",
+        "image_url": "https://cards.scryfall.io/large/front/4/d/4d8605da-d353-40bf-9a94-3bff2bd43d25.jpg?1782904834",
+        "source_image_sha256": "cbd8efd435d1b405cd0e86ac589e4d4179831088242d53779fbc70bcd9954ba5"
+      },
+      "variant": "blur",
+      "ground_truth": "Renaissance fongoïde",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/fr-m21-182-blur.png",
+      "image_sha256": "7a1f75d245fc8887ed76e9bd70b9c43588cb054affa0063d6d15d1c866407993",
+      "image_size": [
+        149,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-de-m21-25-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "de",
+      "source": {
+        "name": "Light of Promise",
+        "print_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+        "oracle_id": "64c54c9f-0550-41e2-a44a-5892a199f670",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/m21/25/de/licht-der-verhei%C3%9Fung-(light-of-promise)",
+        "image_url": "https://cards.scryfall.io/large/front/2/9/2936555e-4ee7-4c91-9e3b-39be058c4efb.jpg?1782905969",
+        "source_image_sha256": "deb707de0461275b98393837c9264ab6b7e2b09765be2fb02674d837137533ef"
+      },
+      "variant": "clean",
+      "ground_truth": "Licht der Verheißung",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/de-m21-25-clean.png",
+      "image_sha256": "8b41dc57c1362b9d52eb1874300b9cc12131f38c0a447f1c81cb796334cc7e7e",
+      "image_size": [
+        497,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-de-m21-25-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "de",
+      "source": {
+        "name": "Light of Promise",
+        "print_id": "2936555e-4ee7-4c91-9e3b-39be058c4efb",
+        "oracle_id": "64c54c9f-0550-41e2-a44a-5892a199f670",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "25",
+        "scryfall_url": "https://scryfall.com/card/m21/25/de/licht-der-verhei%C3%9Fung-(light-of-promise)",
+        "image_url": "https://cards.scryfall.io/large/front/2/9/2936555e-4ee7-4c91-9e3b-39be058c4efb.jpg?1782905969",
+        "source_image_sha256": "deb707de0461275b98393837c9264ab6b7e2b09765be2fb02674d837137533ef"
+      },
+      "variant": "blur",
+      "ground_truth": "Licht der Verheißung",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/de-m21-25-blur.png",
+      "image_sha256": "c7bf587835b79fd978bddd94fe9b23795dcf7566505aefd6beadeaea7a8f1af4",
+      "image_size": [
+        149,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-de-m21-179-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "de",
+      "source": {
+        "name": "Elder Gargaroth",
+        "print_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+        "oracle_id": "397b9dcf-690a-4a58-8637-bb9baab7cc2f",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "179",
+        "scryfall_url": "https://scryfall.com/card/m21/179/de/gargaroth-%C3%A4ltester-(elder-gargaroth)",
+        "image_url": "https://cards.scryfall.io/large/front/1/c/1cfb7471-be1f-4896-83dc-ee7a9f76f9cb.jpg?1782904856",
+        "source_image_sha256": "74ebc0dd2e7a0781135d93fe0eb6ffa3f13541d59d8c1a499c1eddf604d872c2"
+      },
+      "variant": "clean",
+      "ground_truth": "Gargaroth-Ältester",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/de-m21-179-clean.png",
+      "image_sha256": "7b4dc8f3ecb9ed37e4fbfd78fb551c58eff79029ae906574e5c9aa4f063f2744",
+      "image_size": [
+        466,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-de-m21-179-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "de",
+      "source": {
+        "name": "Elder Gargaroth",
+        "print_id": "1cfb7471-be1f-4896-83dc-ee7a9f76f9cb",
+        "oracle_id": "397b9dcf-690a-4a58-8637-bb9baab7cc2f",
+        "language": "de",
+        "set": "M21",
+        "collector_number": "179",
+        "scryfall_url": "https://scryfall.com/card/m21/179/de/gargaroth-%C3%A4ltester-(elder-gargaroth)",
+        "image_url": "https://cards.scryfall.io/large/front/1/c/1cfb7471-be1f-4896-83dc-ee7a9f76f9cb.jpg?1782904856",
+        "source_image_sha256": "74ebc0dd2e7a0781135d93fe0eb6ffa3f13541d59d8c1a499c1eddf604d872c2"
+      },
+      "variant": "blur",
+      "ground_truth": "Gargaroth-Ältester",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/de-m21-179-blur.png",
+      "image_sha256": "e26648ae7277da435b7f2f09a7cdf673dade719024374df82c8b4160a20df51f",
+      "image_size": [
+        140,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-es-m21-8-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "es",
+      "source": {
+        "name": "Basri's Acolyte",
+        "print_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+        "oracle_id": "92c824da-2351-43bd-9fa0-d09709ad8205",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "8",
+        "scryfall_url": "https://scryfall.com/card/m21/8/es/ac%C3%B3lita-de-basri-(basris-acolyte)",
+        "image_url": "https://cards.scryfall.io/large/front/2/4/24c69413-6402-49b1-ba8e-d22f7310aca7.jpg?1782906097",
+        "source_image_sha256": "0fa3297e1604327aa727b9a9078201aa6e3cc5ca18d680a2c30f38910ecc80b6"
+      },
+      "variant": "clean",
+      "ground_truth": "Acólita de Basri",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/es-m21-8-clean.png",
+      "image_sha256": "3e4d22895cf8b449bc3eb850082a61e0ac157b0518e0f0c757e40334c81c2be3",
+      "image_size": [
+        466,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-es-m21-8-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "es",
+      "source": {
+        "name": "Basri's Acolyte",
+        "print_id": "24c69413-6402-49b1-ba8e-d22f7310aca7",
+        "oracle_id": "92c824da-2351-43bd-9fa0-d09709ad8205",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "8",
+        "scryfall_url": "https://scryfall.com/card/m21/8/es/ac%C3%B3lita-de-basri-(basris-acolyte)",
+        "image_url": "https://cards.scryfall.io/large/front/2/4/24c69413-6402-49b1-ba8e-d22f7310aca7.jpg?1782906097",
+        "source_image_sha256": "0fa3297e1604327aa727b9a9078201aa6e3cc5ca18d680a2c30f38910ecc80b6"
+      },
+      "variant": "blur",
+      "ground_truth": "Acólita de Basri",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/es-m21-8-blur.png",
+      "image_sha256": "0cc3de32663f5ecab4d1f20cab4846d7fe0758f8513d8803fdefe6c99160c074",
+      "image_size": [
+        140,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-es-m21-198-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "es",
+      "source": {
+        "name": "Quirion Dryad",
+        "print_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+        "oracle_id": "f42b6510-7322-4733-85ea-7ae6bd6ca8fc",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "198",
+        "scryfall_url": "https://scryfall.com/card/m21/198/es/dr%C3%ADada-quirion-(quirion-dryad)",
+        "image_url": "https://cards.scryfall.io/large/front/7/1/7142df39-9c9c-4821-8f73-06b5dc3f8fc3.jpg?1782904715",
+        "source_image_sha256": "d43ec4d0dcd4d19ef4bcd85754be2fc413ff33e06f746ebf84ed203194128462"
+      },
+      "variant": "clean",
+      "ground_truth": "Dríada Quirion",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/es-m21-198-clean.png",
+      "image_sha256": "c92316b95c60938814a41b6ccb464fe0626e1c658c3d4d4a6a8402bd5ecee5b4",
+      "image_size": [
+        497,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-es-m21-198-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "es",
+      "source": {
+        "name": "Quirion Dryad",
+        "print_id": "7142df39-9c9c-4821-8f73-06b5dc3f8fc3",
+        "oracle_id": "f42b6510-7322-4733-85ea-7ae6bd6ca8fc",
+        "language": "es",
+        "set": "M21",
+        "collector_number": "198",
+        "scryfall_url": "https://scryfall.com/card/m21/198/es/dr%C3%ADada-quirion-(quirion-dryad)",
+        "image_url": "https://cards.scryfall.io/large/front/7/1/7142df39-9c9c-4821-8f73-06b5dc3f8fc3.jpg?1782904715",
+        "source_image_sha256": "d43ec4d0dcd4d19ef4bcd85754be2fc413ff33e06f746ebf84ed203194128462"
+      },
+      "variant": "blur",
+      "ground_truth": "Dríada Quirion",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/es-m21-198-blur.png",
+      "image_sha256": "688536152d0c1ec53e046c21b97054e87795703de21a9acb81cc44bb5894ac4a",
+      "image_size": [
+        149,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-pt-m21-57-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "pt",
+      "source": {
+        "name": "Miscast",
+        "print_id": "a8048f57-b854-45a5-90cd-263666322d92",
+        "oracle_id": "e08c71aa-d35c-4c20-b4db-ae9d36ee3169",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "57",
+        "scryfall_url": "https://scryfall.com/card/m21/57/pt/falha-na-conjura%C3%A7%C3%A3o-(miscast)",
+        "image_url": "https://cards.scryfall.io/large/front/a/8/a8048f57-b854-45a5-90cd-263666322d92.jpg?1782905759",
+        "source_image_sha256": "e3bc9412826ac38a41bfd8b9c2f1e80a7cf69d302c6a95492136200ad483f296"
+      },
+      "variant": "clean",
+      "ground_truth": "Falha na Conjuração",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/pt-m21-57-clean.png",
+      "image_sha256": "c6b380758e2228c9495bf0cb9561a5c188931a79437002441b8f4bf1b804cd04",
+      "image_size": [
+        528,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-pt-m21-57-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "pt",
+      "source": {
+        "name": "Miscast",
+        "print_id": "a8048f57-b854-45a5-90cd-263666322d92",
+        "oracle_id": "e08c71aa-d35c-4c20-b4db-ae9d36ee3169",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "57",
+        "scryfall_url": "https://scryfall.com/card/m21/57/pt/falha-na-conjura%C3%A7%C3%A3o-(miscast)",
+        "image_url": "https://cards.scryfall.io/large/front/a/8/a8048f57-b854-45a5-90cd-263666322d92.jpg?1782905759",
+        "source_image_sha256": "e3bc9412826ac38a41bfd8b9c2f1e80a7cf69d302c6a95492136200ad483f296"
+      },
+      "variant": "blur",
+      "ground_truth": "Falha na Conjuração",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/pt-m21-57-blur.png",
+      "image_sha256": "056d5f8ab10460de12354de9cdc5357dc3c0d7c817f96aa68ad60ac52d7ce894",
+      "image_size": [
+        158,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-pt-m21-118-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "pt",
+      "source": {
+        "name": "Pestilent Haze",
+        "print_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+        "oracle_id": "b24d1540-ed8b-4df3-abfe-1b8492a58388",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m21/118/pt/n%C3%A9voa-pestilenta-(pestilent-haze)",
+        "image_url": "https://cards.scryfall.io/large/front/8/3/83a67403-ce23-474a-89ed-2df863fae9b7.jpg?1782905319",
+        "source_image_sha256": "ad060e5a91c9cab3397f84b34d859c20957f9cdfc1e2b7e3f77d4d6bd28dae1b"
+      },
+      "variant": "clean",
+      "ground_truth": "Névoa Pestilenta",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/pt-m21-118-clean.png",
+      "image_sha256": "444bd8838cbe11c0befcc46f8adc7f6996561be20d20f1bb24f91048b4d9ff79",
+      "image_size": [
+        466,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-pt-m21-118-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "pt",
+      "source": {
+        "name": "Pestilent Haze",
+        "print_id": "83a67403-ce23-474a-89ed-2df863fae9b7",
+        "oracle_id": "b24d1540-ed8b-4df3-abfe-1b8492a58388",
+        "language": "pt",
+        "set": "M21",
+        "collector_number": "118",
+        "scryfall_url": "https://scryfall.com/card/m21/118/pt/n%C3%A9voa-pestilenta-(pestilent-haze)",
+        "image_url": "https://cards.scryfall.io/large/front/8/3/83a67403-ce23-474a-89ed-2df863fae9b7.jpg?1782905319",
+        "source_image_sha256": "ad060e5a91c9cab3397f84b34d859c20957f9cdfc1e2b7e3f77d4d6bd28dae1b"
+      },
+      "variant": "blur",
+      "ground_truth": "Névoa Pestilenta",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/pt-m21-118-blur.png",
+      "image_sha256": "b09d493b73cbb3ca8543f912b307dff6ef1d33198e803175861d84ad9674c5bd",
+      "image_size": [
+        140,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-it-m14-66-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "it",
+      "source": {
+        "name": "Opportunity",
+        "print_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+        "oracle_id": "1f544a9f-c238-4858-be19-d6cd7d023dcc",
+        "language": "it",
+        "set": "M14",
+        "collector_number": "66",
+        "scryfall_url": "https://scryfall.com/card/m14/66/it/opportunit%C3%A0-(opportunity)",
+        "image_url": "https://cards.scryfall.io/large/front/a/4/a4b2c277-d9ae-4d53-80b1-48c6e89f9108.jpg?1782976896",
+        "source_image_sha256": "239d742f77a62dc5a56a4ee7e6da54008627b070be5666f03a8429a7b2b816c9"
+      },
+      "variant": "clean",
+      "ground_truth": "Opportunità",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/it-m14-66-clean.png",
+      "image_sha256": "f20cd6f07778a9170e23fcc8da5b2928342add9b0fbb4d51d32c134a8f83b5d1",
+      "image_size": [
+        247,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-it-m14-66-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "it",
+      "source": {
+        "name": "Opportunity",
+        "print_id": "a4b2c277-d9ae-4d53-80b1-48c6e89f9108",
+        "oracle_id": "1f544a9f-c238-4858-be19-d6cd7d023dcc",
+        "language": "it",
+        "set": "M14",
+        "collector_number": "66",
+        "scryfall_url": "https://scryfall.com/card/m14/66/it/opportunit%C3%A0-(opportunity)",
+        "image_url": "https://cards.scryfall.io/large/front/a/4/a4b2c277-d9ae-4d53-80b1-48c6e89f9108.jpg?1782976896",
+        "source_image_sha256": "239d742f77a62dc5a56a4ee7e6da54008627b070be5666f03a8429a7b2b816c9"
+      },
+      "variant": "blur",
+      "ground_truth": "Opportunità",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/it-m14-66-blur.png",
+      "image_sha256": "da55b8caacc7a2cd0b68708d411df8bf529414d7766dbf145c9efca5f0d1679e",
+      "image_size": [
+        74,
+        15
+      ]
+    },
+    {
+      "id": "line-latin-it-akh-84-clean",
+      "workload": "line",
+      "mode": "line",
+      "language": "it",
+      "source": {
+        "name": "Cruel Reality",
+        "print_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+        "oracle_id": "2e3cc9b6-7849-4385-a487-c8f5364174e7",
+        "language": "it",
+        "set": "AKH",
+        "collector_number": "84",
+        "scryfall_url": "https://scryfall.com/card/akh/84/it/crudele-realt%C3%A0-(cruel-reality)",
+        "image_url": "https://cards.scryfall.io/large/front/6/a/6a339bc4-7e81-4177-9db6-61344d5c68e3.jpg?1782943113",
+        "source_image_sha256": "3a84dfc8dd58beea8b25ef46131c6facd56e9db0a15c8916e4c3d3a5dbf40eeb"
+      },
+      "variant": "clean",
+      "ground_truth": "Crudele Realtà",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/it-akh-84-clean.png",
+      "image_sha256": "a30df030a4e766a1f87feec9aac4cf64dae2458b64b5302440217e0166a35a5c",
+      "image_size": [
+        466,
+        50
+      ]
+    },
+    {
+      "id": "line-latin-it-akh-84-blur",
+      "workload": "line",
+      "mode": "line",
+      "language": "it",
+      "source": {
+        "name": "Cruel Reality",
+        "print_id": "6a339bc4-7e81-4177-9db6-61344d5c68e3",
+        "oracle_id": "2e3cc9b6-7849-4385-a487-c8f5364174e7",
+        "language": "it",
+        "set": "AKH",
+        "collector_number": "84",
+        "scryfall_url": "https://scryfall.com/card/akh/84/it/crudele-realt%C3%A0-(cruel-reality)",
+        "image_url": "https://cards.scryfall.io/large/front/6/a/6a339bc4-7e81-4177-9db6-61344d5c68e3.jpg?1782943113",
+        "source_image_sha256": "3a84dfc8dd58beea8b25ef46131c6facd56e9db0a15c8916e4c3d3a5dbf40eeb"
+      },
+      "variant": "blur",
+      "ground_truth": "Crudele Realtà",
+      "scoring": "complete crop text; NFC and collapsed whitespace",
+      "image": "docs/gallery/assets/latin/it-akh-84-blur.png",
+      "image_sha256": "9ce42df25d2e9128c815f432aed48f5dbd3dbb45e018fef046041a96b7125d34",
+      "image_size": [
+        140,
+        15
+      ]
+    },
+    {
+      "id": "multiline-divination",
+      "workload": "multiline",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "crop_bounds_xyxy": [
+        52,
+        690,
+        688,
+        925
+      ],
+      "ground_truth": "Draw two cards. “The key to unlocking this puzzle is within you.” —Doriel, mentor of Mistral Isle",
+      "scoring": "complete manually transcribed body crop; NFC and collapsed whitespace",
+      "image": "docs/performance/fixtures/divination-body.png",
+      "image_sha256": "a19886fc29cbc0ca8a0bb6f26ec3bb1234cb35078b97e91aa07158761d693e5b",
+      "image_size": [
+        636,
+        235
+      ]
+    },
+    {
+      "id": "card-divination",
+      "workload": "card",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Divination",
+        "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+        "set": "Magic 2015",
+        "language": "en",
+        "collector_number": "52",
+        "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+        "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "artist": "Howard Lyon"
+      },
+      "variant": "clean",
+      "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+      "regions": [
+        {
+          "id": "title",
+          "bounds_xyxy": [
+            40,
+            40,
+            420,
+            115
+          ],
+          "text": "Divination"
+        },
+        {
+          "id": "type",
+          "bounds_xyxy": [
+            40,
+            580,
+            580,
+            645
+          ],
+          "text": "Sorcery"
+        },
+        {
+          "id": "body",
+          "bounds_xyxy": [
+            52,
+            690,
+            688,
+            925
+          ],
+          "text": "Draw two cards. “The key to unlocking this puzzle is within you.” —Doriel, mentor of Mistral Isle"
+        }
+      ],
+      "image": ".cache/gallery/m15-52.png",
+      "image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+      "image_size": [
+        745,
+        1040
+      ]
+    },
+    {
+      "id": "multiline-air-elemental",
+      "workload": "multiline",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "clean",
+      "crop_bounds_xyxy": [
+        65,
+        680,
+        675,
+        900
+      ],
+      "ground_truth": "Flying (This creature can’t be blocked except by creatures with flying.) Pray that it doesn’t seek the safety of your lungs.",
+      "scoring": "complete manually transcribed body crop; NFC and collapsed whitespace",
+      "image": "docs/performance/fixtures/air-elemental-body.png",
+      "image_sha256": "c92880bd3ddb4456328fbe21fb87d87e2e5635de8741384e116eba7252421bea",
+      "image_size": [
+        610,
+        220
+      ]
+    },
+    {
+      "id": "card-air-elemental",
+      "workload": "card",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Air Elemental",
+        "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+        "set": "Eighth Edition",
+        "language": "en",
+        "collector_number": "59",
+        "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+        "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "artist": "Wayne England"
+      },
+      "variant": "clean",
+      "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+      "regions": [
+        {
+          "id": "title",
+          "bounds_xyxy": [
+            45,
+            40,
+            480,
+            115
+          ],
+          "text": "Air Elemental"
+        },
+        {
+          "id": "type",
+          "bounds_xyxy": [
+            45,
+            580,
+            590,
+            645
+          ],
+          "text": "Creature — Elemental"
+        },
+        {
+          "id": "body",
+          "bounds_xyxy": [
+            65,
+            680,
+            675,
+            900
+          ],
+          "text": "Flying (This creature can’t be blocked except by creatures with flying.) Pray that it doesn’t seek the safety of your lungs."
+        }
+      ],
+      "image": ".cache/gallery/8ed-59.png",
+      "image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+      "image_size": [
+        745,
+        1040
+      ]
+    },
+    {
+      "id": "multiline-llanowar-elves",
+      "workload": "multiline",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "clean",
+      "crop_bounds_xyxy": [
+        108,
+        625,
+        653,
+        893
+      ],
+      "ground_truth": "Tap to add 1 green mana to your mana pool. This tap can be played as an interrupt. Whenever the Llanowar Elves gather the fruits of their forest, they leave one plant of each type untouched, considering that nature’s portion.",
+      "scoring": "complete manually transcribed body crop; NFC and collapsed whitespace",
+      "image": "docs/performance/fixtures/llanowar-elves-body.png",
+      "image_sha256": "7938507e34afa9043ab19b610955088152c83c7d396e4fbf9f81dfffdb5e5b0f",
+      "image_size": [
+        545,
+        268
+      ]
+    },
+    {
+      "id": "card-llanowar-elves",
+      "workload": "card",
+      "mode": "full",
+      "language": "en",
+      "source": {
+        "name": "Llanowar Elves",
+        "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+        "set": "Limited Edition Alpha",
+        "language": "en",
+        "collector_number": "210",
+        "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+        "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+        "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "artist": "Anson Maddocks"
+      },
+      "variant": "clean",
+      "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+      "regions": [
+        {
+          "id": "title",
+          "bounds_xyxy": [
+            35,
+            35,
+            500,
+            100
+          ],
+          "text": "Llanowar Elves"
+        },
+        {
+          "id": "type",
+          "bounds_xyxy": [
+            65,
+            570,
+            590,
+            617
+          ],
+          "text": "Summon Elves"
+        },
+        {
+          "id": "body",
+          "bounds_xyxy": [
+            108,
+            625,
+            653,
+            893
+          ],
+          "text": "Tap to add 1 green mana to your mana pool. This tap can be played as an interrupt. Whenever the Llanowar Elves gather the fruits of their forest, they leave one plant of each type untouched, considering that nature’s portion."
+        }
+      ],
+      "image": ".cache/gallery/lea-210.png",
+      "image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+      "image_size": [
+        745,
+        1040
+      ]
+    }
+  ]
+}

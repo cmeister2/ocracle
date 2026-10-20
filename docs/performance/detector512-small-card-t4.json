@@ -1,0 +1,237 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 562.15331,
+  "image": ".cache/gallery/m15-52.png",
+  "image_size": [
+    745,
+    1040
+  ],
+  "layout": "text",
+  "lines": [
+    {
+      "bounds": [
+        64,
+        56,
+        182,
+        41
+      ],
+      "confidence": 0.999941349029541,
+      "text": "Divination"
+    },
+    {
+      "bounds": [
+        614,
+        57,
+        82,
+        43
+      ],
+      "confidence": 0.6415672302246094,
+      "text": "26"
+    },
+    {
+      "bounds": [
+        510,
+        157,
+        14,
+        19
+      ],
+      "confidence": 0.3777393400669098,
+      "text": "•"
+    },
+    {
+      "bounds": [
+        500,
+        166,
+        45,
+        48
+      ],
+      "confidence": 0.11071260273456573,
+      "text": "心"
+    },
+    {
+      "bounds": [
+        478,
+        205,
+        41,
+        40
+      ],
+      "confidence": 0.3937854766845703,
+      "text": "-"
+    },
+    {
+      "bounds": [
+        586,
+        334,
+        15,
+        17
+      ],
+      "confidence": 0.7600939869880676,
+      "text": "5"
+    },
+    {
+      "bounds": [
+        103,
+        472,
+        21,
+        15
+      ],
+      "confidence": 0.6219207048416138,
+      "text": "6"
+    },
+    {
+      "bounds": [
+        297,
+        472,
+        26,
+        14
+      ],
+      "confidence": 0.5486476421356201,
+      "text": "UR"
+    },
+    {
+      "bounds": [
+        188,
+        541,
+        248,
+        41
+      ],
+      "confidence": 0.5235335826873779,
+      "text": "NOMA"
+    },
+    {
+      "bounds": [
+        439,
+        544,
+        108,
+        23
+      ],
+      "confidence": 0.7356175780296326,
+      "text": "WG"
+    },
+    {
+      "bounds": [
+        612,
+        596,
+        76,
+        34
+      ],
+      "confidence": 0.965167760848999,
+      "text": "M15"
+    },
+    {
+      "bounds": [
+        61,
+        599,
+        117,
+        35
+      ],
+      "confidence": 0.9998893737792969,
+      "text": "Sorcery"
+    },
+    {
+      "bounds": [
+        65,
+        720,
+        267,
+        34
+      ],
+      "confidence": 0.999177098274231,
+      "text": "Draw two cards."
+    },
+    {
+      "bounds": [
+        69,
+        778,
+        401,
+        36
+      ],
+      "confidence": 0.9982312917709351,
+      "text": "“The key to unlocking this"
+    },
+    {
+      "bounds": [
+        64,
+        776,
+        549,
+        83
+      ],
+      "confidence": 0.5611696243286133,
+      "text": "nlocing tis puze is"
+    },
+    {
+      "bounds": [
+        65,
+        843,
+        478,
+        45
+      ],
+      "confidence": 0.9968688488006592,
+      "text": "—Doriel, mentor of Mistral Isle"
+    },
+    {
+      "bounds": [
+        444,
+        969,
+        251,
+        19
+      ],
+      "confidence": 0.9896038174629211,
+      "text": "TM & © 2014 Wizards of the Coast"
+    },
+    {
+      "bounds": [
+        48,
+        969,
+        109,
+        20
+      ],
+      "confidence": 0.996640682220459,
+      "text": "052/269 C"
+    },
+    {
+      "bounds": [
+        46,
+        988,
+        230,
+        18
+      ],
+      "confidence": 0.9302206039428711,
+      "text": "M15·EN HOWARD LYON"
+    },
+    {
+      "bounds": [
+        727,
+        1023,
+        17,
+        17
+      ],
+      "confidence": 0.8705241084098816,
+      "text": "1"
+    }
+  ],
+  "load_ms": 66.73004300000001,
+  "median_ms": 540.0038470000001,
+  "model": {
+    "detector_sha256": "9f46b004d51f160e2bf4070995304d8a40bef1e867c673d079beee8a9173860a",
+    "language": "en",
+    "name": "PP-OCRv6 small (upstream)",
+    "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+  },
+  "os": "linux",
+  "p95_ms": 556.313628,
+  "samples_ms": [
+    540.0038470000001,
+    531.613088,
+    523.647867,
+    526.8988850000001,
+    532.961154,
+    544.045049,
+    530.37157,
+    540.095489,
+    540.052552,
+    556.313628
+  ],
+  "single_line": false,
+  "text": "Divination\n26\n•\n心\n-\n5\n6\nUR\nNOMA\nWG\nM15\nSorcery\nDraw two cards.\n“The key to unlocking this\nnlocing tis puze is\n—Doriel, mentor of Mistral Isle\nTM & © 2014 Wizards of the Coast\n052/269 C\nM15·EN HOWARD LYON\n1",
+  "threads": "4"
+}

@@ -1,0 +1,1455 @@
+{
+  "baseline": "ort-small",
+  "runs": [
+    {
+      "label": "ort-small",
+      "groups": {
+        "line": {
+          "cases": 30,
+          "geomean_case_median_ms": 20.186455656649585,
+          "worst_case_p95_ms": 32.61617,
+          "character_edits": 3,
+          "reference_characters": 576,
+          "character_error_rate": 0.005208333333333333,
+          "exact_matches": 27
+        },
+        "multiline": {
+          "cases": 3,
+          "geomean_case_median_ms": 216.15097368855956,
+          "worst_case_p95_ms": 289.740516,
+          "character_edits": 31,
+          "reference_characters": 446,
+          "character_error_rate": 0.06950672645739911,
+          "exact_matches": 1
+        },
+        "card": {
+          "cases": 3,
+          "geomean_case_median_ms": 402.61640679793936,
+          "worst_case_p95_ms": 447.234786,
+          "character_edits": 9,
+          "reference_characters": 522,
+          "character_error_rate": 0.017241379310344827,
+          "exact_matches": 0
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.584062,
+          "p95_ms": 17.638234
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.139864,
+          "p95_ms": 17.584473
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.048755,
+          "p95_ms": 19.063268
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.367749,
+          "p95_ms": 18.073674
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.957556,
+          "p95_ms": 17.81901
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.113086,
+          "p95_ms": 19.50479
+        },
+        {
+          "sample_id": "line-historic-rules-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.978527,
+          "p95_ms": 29.761346
+        },
+        {
+          "sample_id": "line-historic-rules-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 28.213432,
+          "p95_ms": 29.640422
+        },
+        {
+          "sample_id": "line-modern-rules-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.857681,
+          "p95_ms": 18.310974
+        },
+        {
+          "sample_id": "line-modern-rules-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.663204,
+          "p95_ms": 16.998841000000002
+        },
+        {
+          "sample_id": "line-historic-flavor-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.895007,
+          "p95_ms": 32.002085
+        },
+        {
+          "sample_id": "line-historic-flavor-blur",
+          "speedup": 1.0,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 26.412747,
+          "p95_ms": 30.860779
+        },
+        {
+          "sample_id": "line-modern-flavor-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.96677,
+          "p95_ms": 28.244578
+        },
+        {
+          "sample_id": "line-modern-flavor-blur",
+          "speedup": 1.0,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 27.385248,
+          "p95_ms": 29.006565000000002
+        },
+        {
+          "sample_id": "line-italic-reminder-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.43339,
+          "p95_ms": 27.241532
+        },
+        {
+          "sample_id": "line-italic-reminder-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.52397,
+          "p95_ms": 27.769761
+        },
+        {
+          "sample_id": "line-mixed-reminder-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.192796,
+          "p95_ms": 31.508812999999996
+        },
+        {
+          "sample_id": "line-mixed-reminder-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 29.84378,
+          "p95_ms": 32.61617
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.771988,
+          "p95_ms": 24.90908
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.30592,
+          "p95_ms": 22.896545
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.928665000000002,
+          "p95_ms": 18.819997
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.559165,
+          "p95_ms": 17.269439000000002
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.322848,
+          "p95_ms": 16.382158
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.450115,
+          "p95_ms": 17.667932
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.900943,
+          "p95_ms": 18.365008
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 18.653696,
+          "p95_ms": 19.792385
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.026211,
+          "p95_ms": 21.501637
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.510348,
+          "p95_ms": 20.287035
+        },
+        {
+          "sample_id": "line-collector-type-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 19.151191,
+          "p95_ms": 20.015871
+        },
+        {
+          "sample_id": "line-collector-type-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.645808,
+          "p95_ms": 20.18868
+        },
+        {
+          "sample_id": "multiline-divination",
+          "speedup": 1.0,
+          "character_edits_before": 3,
+          "character_edits_after": 3,
+          "text_changed": false,
+          "median_ms": 190.427279,
+          "p95_ms": 196.680206
+        },
+        {
+          "sample_id": "card-divination",
+          "speedup": 1.0,
+          "character_edits_before": 4,
+          "character_edits_after": 4,
+          "text_changed": false,
+          "median_ms": 444.896511,
+          "p95_ms": 447.234786
+        },
+        {
+          "sample_id": "multiline-air-elemental",
+          "speedup": 1.0,
+          "character_edits_before": 28,
+          "character_edits_after": 28,
+          "text_changed": false,
+          "median_ms": 183.521928,
+          "p95_ms": 192.758207
+        },
+        {
+          "sample_id": "card-air-elemental",
+          "speedup": 1.0,
+          "character_edits_before": 4,
+          "character_edits_after": 4,
+          "text_changed": false,
+          "median_ms": 370.379833,
+          "p95_ms": 373.616319
+        },
+        {
+          "sample_id": "multiline-llanowar-elves",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 288.971135,
+          "p95_ms": 289.740516
+        },
+        {
+          "sample_id": "card-llanowar-elves",
+          "speedup": 1.0,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 396.066467,
+          "p95_ms": 427.401466
+        }
+      ]
+    },
+    {
+      "label": "ort-small-detector640",
+      "groups": {
+        "line": {
+          "cases": 30,
+          "geomean_case_median_ms": 21.20671702443453,
+          "worst_case_p95_ms": 33.200393,
+          "character_edits": 3,
+          "reference_characters": 576,
+          "character_error_rate": 0.005208333333333333,
+          "exact_matches": 27
+        },
+        "multiline": {
+          "cases": 3,
+          "geomean_case_median_ms": 193.05389289782792,
+          "worst_case_p95_ms": 278.420144,
+          "character_edits": 21,
+          "reference_characters": 446,
+          "character_error_rate": 0.04708520179372197,
+          "exact_matches": 0
+        },
+        "card": {
+          "cases": 3,
+          "geomean_case_median_ms": 365.9828516719655,
+          "worst_case_p95_ms": 398.94642200000004,
+          "character_edits": 79,
+          "reference_characters": 522,
+          "character_error_rate": 0.15134099616858238,
+          "exact_matches": 2
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 0.9065977646194766,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.292635,
+          "p95_ms": 18.411116000000003
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 0.921231318795412,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.519882,
+          "p95_ms": 19.017777
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 0.9520525739892702,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.857005,
+          "p95_ms": 18.261856
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 1.0085558923586793,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.220413,
+          "p95_ms": 18.48344
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 0.922346938914264,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.385225000000002,
+          "p95_ms": 18.414759999999998
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 0.9440267699999254,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.127755,
+          "p95_ms": 19.069392
+        },
+        {
+          "sample_id": "line-historic-rules-clean",
+          "speedup": 1.039074450112943,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.926393,
+          "p95_ms": 30.051524
+        },
+        {
+          "sample_id": "line-historic-rules-blur",
+          "speedup": 0.9788231134161174,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 28.823831000000002,
+          "p95_ms": 30.05509
+        },
+        {
+          "sample_id": "line-modern-rules-clean",
+          "speedup": 1.0608885959151793,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.832758,
+          "p95_ms": 18.882982
+        },
+        {
+          "sample_id": "line-modern-rules-blur",
+          "speedup": 0.9783172787206679,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.010351999999997,
+          "p95_ms": 17.254143
+        },
+        {
+          "sample_id": "line-historic-flavor-clean",
+          "speedup": 1.0211083291817005,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.339034,
+          "p95_ms": 30.227739
+        },
+        {
+          "sample_id": "line-historic-flavor-blur",
+          "speedup": 0.9241539875791367,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 28.580461,
+          "p95_ms": 29.232032
+        },
+        {
+          "sample_id": "line-modern-flavor-clean",
+          "speedup": 0.9331474289314642,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 28.898724,
+          "p95_ms": 30.228561000000003
+        },
+        {
+          "sample_id": "line-modern-flavor-blur",
+          "speedup": 0.9810239762811077,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 27.914963,
+          "p95_ms": 28.854021
+        },
+        {
+          "sample_id": "line-italic-reminder-clean",
+          "speedup": 0.8521725519159347,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 28.671881,
+          "p95_ms": 30.788151
+        },
+        {
+          "sample_id": "line-italic-reminder-blur",
+          "speedup": 0.9030441506793828,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.157,
+          "p95_ms": 29.059694
+        },
+        {
+          "sample_id": "line-mixed-reminder-clean",
+          "speedup": 0.8306786628077939,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 32.735637999999994,
+          "p95_ms": 33.200393
+        },
+        {
+          "sample_id": "line-mixed-reminder-blur",
+          "speedup": 1.0810526699379581,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.606222,
+          "p95_ms": 28.861985
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 0.913524671975099,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 22.738288999999998,
+          "p95_ms": 26.441898
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 0.9335584818790562,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 22.822266,
+          "p95_ms": 24.557676999999998
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 0.8527376860220084,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.679443,
+          "p95_ms": 19.721415
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 0.8663245206437671,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.959973,
+          "p95_ms": 19.046801
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 0.9338589645288193,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.478922,
+          "p95_ms": 18.777846
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 0.9252259546282487,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.779565,
+          "p95_ms": 18.774769
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 0.9886234508286721,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.095429999999997,
+          "p95_ms": 17.404526
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 1.0948970883268943,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 17.03694,
+          "p95_ms": 18.357782
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 0.9886514612298288,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.256088,
+          "p95_ms": 25.183126
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 0.9050136815352419,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.453114000000003,
+          "p95_ms": 21.171985
+        },
+        {
+          "sample_id": "line-collector-type-clean",
+          "speedup": 1.0509161058928307,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.22333,
+          "p95_ms": 18.97398
+        },
+        {
+          "sample_id": "line-collector-type-blur",
+          "speedup": 0.9344490074747202,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.88365,
+          "p95_ms": 19.461445
+        },
+        {
+          "sample_id": "multiline-divination",
+          "speedup": 1.1861667140369816,
+          "character_edits_before": 3,
+          "character_edits_after": 17,
+          "text_changed": true,
+          "median_ms": 160.540063,
+          "p95_ms": 163.773707
+        },
+        {
+          "sample_id": "card-divination",
+          "speedup": 1.2714010742814632,
+          "character_edits_before": 4,
+          "character_edits_after": 0,
+          "text_changed": true,
+          "median_ms": 349.92617199999995,
+          "p95_ms": 366.96915
+        },
+        {
+          "sample_id": "multiline-air-elemental",
+          "speedup": 1.1271360068523646,
+          "character_edits_before": 28,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 162.821458,
+          "p95_ms": 167.171831
+        },
+        {
+          "sample_id": "card-air-elemental",
+          "speedup": 1.0353431474187582,
+          "character_edits_before": 4,
+          "character_edits_after": 79,
+          "text_changed": true,
+          "median_ms": 357.736306,
+          "p95_ms": 367.364236
+        },
+        {
+          "sample_id": "multiline-llanowar-elves",
+          "speedup": 1.0498175812427264,
+          "character_edits_before": 0,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 275.258426,
+          "p95_ms": 278.420144
+        },
+        {
+          "sample_id": "card-llanowar-elves",
+          "speedup": 1.0114054932190704,
+          "character_edits_before": 1,
+          "character_edits_after": 0,
+          "text_changed": true,
+          "median_ms": 391.600075,
+          "p95_ms": 398.94642200000004
+        }
+      ]
+    },
+    {
+      "label": "small-detector512",
+      "groups": {
+        "line": {
+          "cases": 30,
+          "geomean_case_median_ms": 20.865478007194458,
+          "worst_case_p95_ms": 33.84841,
+          "character_edits": 3,
+          "reference_characters": 576,
+          "character_error_rate": 0.005208333333333333,
+          "exact_matches": 27
+        },
+        "multiline": {
+          "cases": 3,
+          "geomean_case_median_ms": 182.5497233983822,
+          "worst_case_p95_ms": 281.605638,
+          "character_edits": 27,
+          "reference_characters": 446,
+          "character_error_rate": 0.06053811659192825,
+          "exact_matches": 0
+        },
+        "card": {
+          "cases": 3,
+          "geomean_case_median_ms": 356.58018165299757,
+          "worst_case_p95_ms": 458.332615,
+          "character_edits": 105,
+          "reference_characters": 522,
+          "character_error_rate": 0.20114942528735633,
+          "exact_matches": 0
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 1.0165276455072911,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.314423,
+          "p95_ms": 18.134914
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 0.8878205614813768,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.179196,
+          "p95_ms": 18.753767
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 0.9585397887584721,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.74292,
+          "p95_ms": 18.440663
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 0.9330689563933849,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.613575,
+          "p95_ms": 19.449272999999998
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 0.9733580037085923,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.421705,
+          "p95_ms": 18.061146
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 1.0574319923814364,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.183628,
+          "p95_ms": 16.332113999999997
+        },
+        {
+          "sample_id": "line-historic-rules-clean",
+          "speedup": 1.0702641293109327,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.141703,
+          "p95_ms": 31.683449000000003
+        },
+        {
+          "sample_id": "line-historic-rules-blur",
+          "speedup": 0.9526848109491737,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 29.614655,
+          "p95_ms": 32.590630000000004
+        },
+        {
+          "sample_id": "line-modern-rules-clean",
+          "speedup": 1.0779092147371376,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.566962,
+          "p95_ms": 18.579352
+        },
+        {
+          "sample_id": "line-modern-rules-blur",
+          "speedup": 0.9916506295028649,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.795083000000002,
+          "p95_ms": 18.55202
+        },
+        {
+          "sample_id": "line-historic-flavor-clean",
+          "speedup": 1.024614631470271,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.2489,
+          "p95_ms": 28.401663
+        },
+        {
+          "sample_id": "line-historic-flavor-blur",
+          "speedup": 0.9751957203661422,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 27.08456,
+          "p95_ms": 28.696462
+        },
+        {
+          "sample_id": "line-modern-flavor-clean",
+          "speedup": 1.0002701831926617,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.959486000000002,
+          "p95_ms": 29.306249
+        },
+        {
+          "sample_id": "line-modern-flavor-blur",
+          "speedup": 1.033986919664758,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 26.485101,
+          "p95_ms": 29.675576
+        },
+        {
+          "sample_id": "line-italic-reminder-clean",
+          "speedup": 0.9205756661520622,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.541425,
+          "p95_ms": 28.690088999999997
+        },
+        {
+          "sample_id": "line-italic-reminder-blur",
+          "speedup": 0.9465155168101075,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 25.909739000000002,
+          "p95_ms": 27.781496999999998
+        },
+        {
+          "sample_id": "line-mixed-reminder-clean",
+          "speedup": 0.8484913462313433,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 32.048407,
+          "p95_ms": 33.84841
+        },
+        {
+          "sample_id": "line-mixed-reminder-blur",
+          "speedup": 1.0362912611049944,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 28.798641,
+          "p95_ms": 31.541151000000003
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 0.905235845843633,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 22.946492999999997,
+          "p95_ms": 23.907375000000002
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 0.976808124198598,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.811776000000002,
+          "p95_ms": 23.230844
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 0.8513699385743634,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.709452000000002,
+          "p95_ms": 20.838261
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 0.9455118924251135,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.455811,
+          "p95_ms": 16.838593999999997
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 0.8785293616310367,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.579741000000002,
+          "p95_ms": 18.978594
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 0.9066662764446385,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.143517000000003,
+          "p95_ms": 20.387971
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 0.9911040183037904,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.052643,
+          "p95_ms": 21.196818999999998
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 1.1184702598324185,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 16.677865,
+          "p95_ms": 17.755171999999998
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 1.0370766264469258,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 19.310252,
+          "p95_ms": 22.658845
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 0.9294410353306484,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 19.91557,
+          "p95_ms": 21.103886
+        },
+        {
+          "sample_id": "line-collector-type-clean",
+          "speedup": 0.9426270183514869,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.316827999999997,
+          "p95_ms": 22.422463999999998
+        },
+        {
+          "sample_id": "line-collector-type-blur",
+          "speedup": 0.9053157945258632,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 19.491329,
+          "p95_ms": 20.016849
+        },
+        {
+          "sample_id": "multiline-divination",
+          "speedup": 1.3733197551851457,
+          "character_edits_before": 3,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 138.662011,
+          "p95_ms": 140.953005
+        },
+        {
+          "sample_id": "card-divination",
+          "speedup": 1.4820142025442888,
+          "character_edits_before": 4,
+          "character_edits_after": 18,
+          "text_changed": true,
+          "median_ms": 300.197198,
+          "p95_ms": 305.122055
+        },
+        {
+          "sample_id": "multiline-air-elemental",
+          "speedup": 1.1203434094849138,
+          "character_edits_before": 28,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 163.808638,
+          "p95_ms": 168.055283
+        },
+        {
+          "sample_id": "card-air-elemental",
+          "speedup": 1.1127472674678627,
+          "character_edits_before": 4,
+          "character_edits_after": 79,
+          "text_changed": true,
+          "median_ms": 332.851712,
+          "p95_ms": 342.084791
+        },
+        {
+          "sample_id": "multiline-llanowar-elves",
+          "speedup": 1.0789596902474483,
+          "character_edits_before": 0,
+          "character_edits_after": 24,
+          "text_changed": true,
+          "median_ms": 267.823847,
+          "p95_ms": 281.605638
+        },
+        {
+          "sample_id": "card-llanowar-elves",
+          "speedup": 0.8728787042292612,
+          "character_edits_before": 1,
+          "character_edits_after": 8,
+          "text_changed": true,
+          "median_ms": 453.747428,
+          "p95_ms": 458.332615
+        }
+      ]
+    },
+    {
+      "label": "crnn-detector512",
+      "groups": {
+        "line": {
+          "cases": 30,
+          "geomean_case_median_ms": 16.148127679463222,
+          "worst_case_p95_ms": 29.416943,
+          "character_edits": 35,
+          "reference_characters": 576,
+          "character_error_rate": 0.06076388888888889,
+          "exact_matches": 18
+        },
+        "multiline": {
+          "cases": 3,
+          "geomean_case_median_ms": 164.64641960333714,
+          "worst_case_p95_ms": 251.742982,
+          "character_edits": 35,
+          "reference_characters": 446,
+          "character_error_rate": 0.07847533632286996,
+          "exact_matches": 0
+        },
+        "card": {
+          "cases": 3,
+          "geomean_case_median_ms": 284.0807142386373,
+          "worst_case_p95_ms": 375.961812,
+          "character_edits": 132,
+          "reference_characters": 522,
+          "character_error_rate": 0.25287356321839083,
+          "exact_matches": 0
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 1.2465633570372914,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 13.303825999999999,
+          "p95_ms": 14.453631
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 1.2338666373104843,
+          "character_edits_before": 0,
+          "character_edits_after": 4,
+          "text_changed": true,
+          "median_ms": 13.080720000000001,
+          "p95_ms": 14.479928
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 1.1410325375204868,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": true,
+          "median_ms": 14.065116000000002,
+          "p95_ms": 14.483095
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 1.3445803177321414,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 12.916855,
+          "p95_ms": 14.366387
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 1.558685140482957,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 10.879398,
+          "p95_ms": 12.186343
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 1.4509546636812856,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 11.794363,
+          "p95_ms": 13.39688
+        },
+        {
+          "sample_id": "line-historic-rules-clean",
+          "speedup": 1.0859500589599458,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 25.764101,
+          "p95_ms": 27.489846
+        },
+        {
+          "sample_id": "line-historic-rules-blur",
+          "speedup": 1.2101064927161822,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 23.314834,
+          "p95_ms": 24.659299999999998
+        },
+        {
+          "sample_id": "line-modern-rules-clean",
+          "speedup": 1.3137356539791827,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 13.593055,
+          "p95_ms": 15.098011
+        },
+        {
+          "sample_id": "line-modern-rules-blur",
+          "speedup": 1.0999471136192016,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 14.239961000000001,
+          "p95_ms": 17.216428
+        },
+        {
+          "sample_id": "line-historic-flavor-clean",
+          "speedup": 0.9710132667924958,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.697878,
+          "p95_ms": 29.416943
+        },
+        {
+          "sample_id": "line-historic-flavor-blur",
+          "speedup": 1.003193324873861,
+          "character_edits_before": 1,
+          "character_edits_after": 11,
+          "text_changed": true,
+          "median_ms": 26.328671,
+          "p95_ms": 26.664588
+        },
+        {
+          "sample_id": "line-modern-flavor-clean",
+          "speedup": 1.0483286465836175,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 25.723584000000002,
+          "p95_ms": 27.426498000000002
+        },
+        {
+          "sample_id": "line-modern-flavor-blur",
+          "speedup": 1.1826866605770119,
+          "character_edits_before": 1,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 23.155117,
+          "p95_ms": 25.147049000000003
+        },
+        {
+          "sample_id": "line-italic-reminder-clean",
+          "speedup": 1.0844240831596594,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 22.531213,
+          "p95_ms": 24.57376
+        },
+        {
+          "sample_id": "line-italic-reminder-blur",
+          "speedup": 0.9603442801646136,
+          "character_edits_before": 0,
+          "character_edits_after": 3,
+          "text_changed": true,
+          "median_ms": 25.536644,
+          "p95_ms": 26.058689
+        },
+        {
+          "sample_id": "line-mixed-reminder-clean",
+          "speedup": 1.0147195706479686,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 26.798336,
+          "p95_ms": 27.52496
+        },
+        {
+          "sample_id": "line-mixed-reminder-blur",
+          "speedup": 1.1977406825751487,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.916729,
+          "p95_ms": 26.170296
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 1.1103450683133624,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.707687,
+          "p95_ms": 19.660372
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 0.9786125999164873,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.771557,
+          "p95_ms": 22.372137
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 1.4723251765413157,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 10.818714,
+          "p95_ms": 14.02636
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 1.4216752417959864,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": true,
+          "median_ms": 10.944247,
+          "p95_ms": 13.415022
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 1.4669878378089327,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 11.126778,
+          "p95_ms": 12.905052
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 1.508097371986806,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 10.90786,
+          "p95_ms": 13.527421
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 2.049687846320312,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 8.245618,
+          "p95_ms": 9.211967999999999
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 2.334094234928524,
+          "character_edits_before": 1,
+          "character_edits_after": 1,
+          "text_changed": false,
+          "median_ms": 7.991834999999999,
+          "p95_ms": 9.242105
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 1.2965039497765067,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.446316999999999,
+          "p95_ms": 20.053196999999997
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 1.1305504033991853,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 16.372864,
+          "p95_ms": 17.104758
+        },
+        {
+          "sample_id": "line-collector-type-clean",
+          "speedup": 1.2128328480825956,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 15.790462000000002,
+          "p95_ms": 17.106579
+        },
+        {
+          "sample_id": "line-collector-type-blur",
+          "speedup": 1.2207663709588652,
+          "character_edits_before": 0,
+          "character_edits_after": 8,
+          "text_changed": true,
+          "median_ms": 14.454697000000001,
+          "p95_ms": 17.224188
+        },
+        {
+          "sample_id": "multiline-divination",
+          "speedup": 1.481867601008058,
+          "character_edits_before": 3,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 128.504921,
+          "p95_ms": 145.442776
+        },
+        {
+          "sample_id": "card-divination",
+          "speedup": 1.9069621285838514,
+          "character_edits_before": 4,
+          "character_edits_after": 31,
+          "text_changed": true,
+          "median_ms": 233.301178,
+          "p95_ms": 250.02855000000002
+        },
+        {
+          "sample_id": "multiline-air-elemental",
+          "speedup": 1.2777894741693938,
+          "character_edits_before": 28,
+          "character_edits_after": 4,
+          "text_changed": true,
+          "median_ms": 143.624542,
+          "p95_ms": 151.23408999999998
+        },
+        {
+          "sample_id": "card-air-elemental",
+          "speedup": 1.3427493453087962,
+          "character_edits_before": 4,
+          "character_edits_after": 80,
+          "text_changed": true,
+          "median_ms": 275.836912,
+          "p95_ms": 287.768651
+        },
+        {
+          "sample_id": "multiline-llanowar-elves",
+          "speedup": 1.1949397450991857,
+          "character_edits_before": 0,
+          "character_edits_after": 29,
+          "text_changed": true,
+          "median_ms": 241.82904299999998,
+          "p95_ms": 251.742982
+        },
+        {
+          "sample_id": "card-llanowar-elves",
+          "speedup": 1.1117627907580578,
+          "character_edits_before": 1,
+          "character_edits_after": 21,
+          "text_changed": true,
+          "median_ms": 356.250875,
+          "p95_ms": 375.961812
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/performance/suite-ort-small.json",
+      "sha256": "fcf9963894004482d330565abefdf2cf9dbb46a493d3c8532e8d7b35bf234b8d"
+    },
+    {
+      "path": "docs/performance/suite-ort-small-detector640.json",
+      "sha256": "5dd2aae688bcc47d1132cfe3a3d9cc5996e642576bf70104d7fca68552793ba2"
+    },
+    {
+      "path": "docs/performance/suite-small-detector512.json",
+      "sha256": "e252df086f45ab2bd54bb38259826c076aa99be47ed20ec28e8c9e09f2c1b8d8"
+    },
+    {
+      "path": "docs/performance/suite-crnn-detector512.json",
+      "sha256": "2818513ccebb1324831cf80703e2c8e3a4c87dc0fc7ff688620e060b89967340"
+    }
+  ]
+}

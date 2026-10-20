@@ -1,0 +1,217 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 300.422067,
+  "image": ".cache/gallery/m15-52.png",
+  "image_size": [
+    745,
+    1040
+  ],
+  "layout": "text",
+  "lines": [
+    {
+      "bounds": [
+        64,
+        56,
+        182,
+        41
+      ],
+      "confidence": 0.9900127649307251,
+      "text": "Divination"
+    },
+    {
+      "bounds": [
+        614,
+        57,
+        82,
+        43
+      ],
+      "confidence": 0.8626075983047485,
+      "text": "2"
+    },
+    {
+      "bounds": [
+        510,
+        157,
+        14,
+        19
+      ],
+      "confidence": 0.08764909952878952,
+      "text": "Ö"
+    },
+    {
+      "bounds": [
+        500,
+        166,
+        45,
+        48
+      ],
+      "confidence": 0.6067367792129517,
+      "text": "K"
+    },
+    {
+      "bounds": [
+        478,
+        205,
+        41,
+        40
+      ],
+      "confidence": 0.1867946833372116,
+      "text": "S"
+    },
+    {
+      "bounds": [
+        297,
+        472,
+        26,
+        14
+      ],
+      "confidence": 0.36010321974754333,
+      "text": "UB"
+    },
+    {
+      "bounds": [
+        188,
+        541,
+        248,
+        41
+      ],
+      "confidence": 0.30165138840675354,
+      "text": "Oeee"
+    },
+    {
+      "bounds": [
+        439,
+        544,
+        108,
+        23
+      ],
+      "confidence": 0.04590862989425659,
+      "text": "A"
+    },
+    {
+      "bounds": [
+        612,
+        596,
+        76,
+        34
+      ],
+      "confidence": 0.9729585647583008,
+      "text": "(5"
+    },
+    {
+      "bounds": [
+        61,
+        599,
+        117,
+        35
+      ],
+      "confidence": 0.9229899048805237,
+      "text": "Sorcery "
+    },
+    {
+      "bounds": [
+        65,
+        720,
+        267,
+        34
+      ],
+      "confidence": 0.9943854212760925,
+      "text": "Draw two cards."
+    },
+    {
+      "bounds": [
+        69,
+        778,
+        401,
+        36
+      ],
+      "confidence": 0.9735444188117981,
+      "text": "\"The key to unlocking this"
+    },
+    {
+      "bounds": [
+        64,
+        776,
+        549,
+        83
+      ],
+      "confidence": 0.7599363923072815,
+      "text": "wThe kevulo unlocking this puzzle is"
+    },
+    {
+      "bounds": [
+        65,
+        843,
+        478,
+        45
+      ],
+      "confidence": 0.9606737494468689,
+      "text": "—Doriel, mentor of Mistral Isle"
+    },
+    {
+      "bounds": [
+        444,
+        969,
+        251,
+        19
+      ],
+      "confidence": 0.9460758566856384,
+      "text": "TM & O 2014 Wizards of the Coast"
+    },
+    {
+      "bounds": [
+        48,
+        969,
+        109,
+        20
+      ],
+      "confidence": 0.9208308458328247,
+      "text": "052/269 C"
+    },
+    {
+      "bounds": [
+        46,
+        988,
+        230,
+        18
+      ],
+      "confidence": 0.8008789420127869,
+      "text": "M15 . EN  HOWARD LYON"
+    },
+    {
+      "bounds": [
+        727,
+        1023,
+        17,
+        17
+      ],
+      "confidence": 0.22385673224925995,
+      "text": "1"
+    }
+  ],
+  "load_ms": 27.052633999999998,
+  "median_ms": 298.747934,
+  "model": {
+    "detector_sha256": "9f46b004d51f160e2bf4070995304d8a40bef1e867c673d079beee8a9173860a",
+    "language": "mul-latin",
+    "name": "ocracle-mtg-latin-v2",
+    "sha256": "d96b5be75cd12a31bafb7d28293957934a876bae322bbf5161580b21b42e32a9"
+  },
+  "os": "linux",
+  "p95_ms": 314.620116,
+  "samples_ms": [
+    314.620116,
+    298.747934,
+    287.57723400000003,
+    282.12662,
+    271.481827,
+    281.84477200000003,
+    303.985892,
+    295.870803,
+    300.498318,
+    303.28141800000003
+  ],
+  "single_line": false,
+  "text": "Divination\n2\nÖ\nK\nS\nUB\nOeee\nA\n(5\nSorcery \nDraw two cards.\n\"The key to unlocking this\nwThe kevulo unlocking this puzzle is\n—Doriel, mentor of Mistral Isle\nTM & O 2014 Wizards of the Coast\n052/269 C\nM15 . EN  HOWARD LYON\n1",
+  "threads": "4"
+}
