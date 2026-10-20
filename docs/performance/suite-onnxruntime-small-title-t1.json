@@ -1,0 +1,1715 @@
+{
+  "schema_version": 1,
+  "label": "onnxruntime-small-title-t1",
+  "status": "complete",
+  "started_at": "2026-10-20T09:20:23.538222+00:00",
+  "measurement_scope": "warm public OCR call; model loading and image decoding excluded; desktop timings do not establish Android FPS",
+  "host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "manifest": "docs/performance/fixtures/manifest.json",
+  "manifest_sha256": "f67659bf20b23a97c9febabdd438f802b5422c4496f8f4611fc7c60a2c58fa8d",
+  "executable": "/home/max/code/github/ocracle/target/release/examples/latency",
+  "executable_sha256": "64c029b556053d211b35c3cce893b638233de7465ed525a5f1b12229d9399486",
+  "model": "models/ppocr-v6-small.onnx",
+  "model_sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "configuration": "models/paddle-v6/en.json",
+  "configuration_sha256": "1fb370edad3b02a0303642cada8937d068df18adec352fd4d055555a5601c68e",
+  "detector": "models/text-detection.onnx",
+  "detector_sha256": "a917b23dbd9524b465df7e922641b3ff2981623df4ded5a0234004ef2fee7cfe",
+  "threads": 1,
+  "layout": "text",
+  "backend": "onnxruntime",
+  "iterations": 20,
+  "requested_samples": [
+    "line-goudy-title-clean",
+    "line-goudy-title-blur",
+    "line-matrix-title-clean",
+    "line-matrix-title-blur",
+    "line-beleren-title-clean",
+    "line-beleren-title-blur",
+    "line-future-title-clean",
+    "line-future-title-blur",
+    "line-colorshift-title-clean",
+    "line-colorshift-title-blur",
+    "line-dracula-title-clean",
+    "line-dracula-title-blur",
+    "line-invocation-title-clean",
+    "line-invocation-title-blur",
+    "line-module-title-clean",
+    "line-module-title-blur"
+  ],
+  "records": [
+    {
+      "sample": {
+        "id": "line-goudy-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Llanowar Elves",
+          "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+          "set": "Limited Edition Alpha",
+          "language": "en",
+          "collector_number": "210",
+          "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+          "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+          "artist": "Anson Maddocks"
+        },
+        "variant": "clean",
+        "ground_truth": "Llanowar Elves",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/goudy-title.png",
+        "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+        "image_size": [
+          273,
+          47
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 25.546091999999998,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title.png",
+        "image_size": [
+          273,
+          47
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              273,
+              47
+            ],
+            "confidence": 0.9618472456932068,
+            "text": "Llanowar Elves"
+          }
+        ],
+        "load_ms": 163.941585,
+        "median_ms": 22.738605,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 25.849227,
+        "samples_ms": [
+          26.207067000000002,
+          21.698416,
+          24.337719,
+          21.028374,
+          22.553343,
+          21.650075,
+          22.476383,
+          21.344908,
+          23.15925,
+          22.738605,
+          23.271304,
+          25.606643,
+          22.133868,
+          25.474905999999997,
+          23.381038,
+          25.849227,
+          22.686014,
+          22.086486999999998,
+          21.430482,
+          23.303986
+        ],
+        "single_line": true,
+        "text": "Llanowar Elves",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Llanowar Elves",
+        "observed": "Llanowar Elves",
+        "character_edits": 0,
+        "reference_characters": 14,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-goudy-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Llanowar Elves",
+          "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+          "set": "Limited Edition Alpha",
+          "language": "en",
+          "collector_number": "210",
+          "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+          "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+          "artist": "Anson Maddocks"
+        },
+        "variant": "blur",
+        "ground_truth": "Llanowar Elves",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/goudy-title-blur.png",
+        "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+        "image_size": [
+          82,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 24.634687999999997,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title-blur.png",
+        "image_size": [
+          82,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              82,
+              14
+            ],
+            "confidence": 0.9337843060493469,
+            "text": "Llanowar Elves"
+          }
+        ],
+        "load_ms": 144.759162,
+        "median_ms": 22.530719,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.380526,
+        "samples_ms": [
+          23.352279,
+          24.380526,
+          23.724121,
+          21.556423000000002,
+          21.170224,
+          23.24834,
+          23.411181,
+          24.102104,
+          24.470689,
+          24.09505,
+          21.312226,
+          21.290143,
+          20.842517,
+          21.110731,
+          22.08259,
+          21.812914,
+          23.928503,
+          22.530719,
+          21.036668000000002,
+          22.13024
+        ],
+        "single_line": true,
+        "text": "Llanowar Elves",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Llanowar Elves",
+        "observed": "Llanowar Elves",
+        "character_edits": 0,
+        "reference_characters": 14,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-matrix-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Air Elemental",
+          "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+          "set": "Eighth Edition",
+          "language": "en",
+          "collector_number": "59",
+          "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+          "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+          "artist": "Wayne England"
+        },
+        "variant": "clean",
+        "ground_truth": "Air Elemental",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/matrix-title.png",
+        "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+        "image_size": [
+          267,
+          45
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 24.090217,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title.png",
+        "image_size": [
+          267,
+          45
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              267,
+              45
+            ],
+            "confidence": 0.9999687671661377,
+            "text": "Air Elemental"
+          }
+        ],
+        "load_ms": 147.126318,
+        "median_ms": 23.061986,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.235525,
+        "samples_ms": [
+          20.697801,
+          22.243456000000002,
+          21.395114,
+          23.831784000000003,
+          22.468169,
+          23.061986,
+          23.059171,
+          24.097573,
+          21.968473,
+          23.379668,
+          20.690133,
+          21.375257,
+          21.959447,
+          23.839279,
+          25.228995,
+          24.235525,
+          23.307937000000003,
+          21.920355,
+          23.526838,
+          23.296796
+        ],
+        "single_line": true,
+        "text": "Air Elemental",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Air Elemental",
+        "observed": "Air Elemental",
+        "character_edits": 0,
+        "reference_characters": 13,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-matrix-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Air Elemental",
+          "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+          "set": "Eighth Edition",
+          "language": "en",
+          "collector_number": "59",
+          "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+          "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+          "artist": "Wayne England"
+        },
+        "variant": "blur",
+        "ground_truth": "Air Elemental",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/matrix-title-blur.png",
+        "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+        "image_size": [
+          80,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 25.183424,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title-blur.png",
+        "image_size": [
+          80,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              80,
+              14
+            ],
+            "confidence": 0.9998908042907715,
+            "text": "Air Elemental"
+          }
+        ],
+        "load_ms": 160.242832,
+        "median_ms": 22.199065,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.215084,
+        "samples_ms": [
+          20.777662999999997,
+          21.642125,
+          22.199065,
+          24.276538,
+          21.206798,
+          23.37666,
+          22.327630000000003,
+          22.100413999999997,
+          21.480197999999998,
+          20.926133999999998,
+          22.686377,
+          24.215084,
+          20.478575,
+          21.078203,
+          22.460241999999997,
+          22.908263,
+          23.211187000000002,
+          22.990714,
+          21.670147,
+          21.56256
+        ],
+        "single_line": true,
+        "text": "Air Elemental",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Air Elemental",
+        "observed": "Air Elemental",
+        "character_edits": 0,
+        "reference_characters": 13,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-beleren-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Divination",
+          "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+          "set": "Magic 2015",
+          "language": "en",
+          "collector_number": "52",
+          "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+          "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+          "artist": "Howard Lyon"
+        },
+        "variant": "clean",
+        "ground_truth": "Divination",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/beleren-title.png",
+        "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+        "image_size": [
+          201,
+          46
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 25.488345,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title.png",
+        "image_size": [
+          201,
+          46
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              201,
+              46
+            ],
+            "confidence": 0.9999452233314514,
+            "text": "Divination"
+          }
+        ],
+        "load_ms": 166.434502,
+        "median_ms": 22.431098,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 23.980214999999998,
+        "samples_ms": [
+          24.707567,
+          23.619595,
+          22.395525,
+          21.742218,
+          23.980214999999998,
+          21.319063999999997,
+          23.300451,
+          21.573398,
+          21.557951,
+          22.013494,
+          22.231984,
+          23.684522,
+          23.214211,
+          21.753268,
+          23.113176,
+          22.768385,
+          22.431098,
+          22.626224999999998,
+          21.709789,
+          21.81418
+        ],
+        "single_line": true,
+        "text": "Divination",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Divination",
+        "observed": "Divination",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-beleren-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Divination",
+          "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+          "set": "Magic 2015",
+          "language": "en",
+          "collector_number": "52",
+          "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+          "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+          "artist": "Howard Lyon"
+        },
+        "variant": "blur",
+        "ground_truth": "Divination",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/beleren-title-blur.png",
+        "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+        "image_size": [
+          60,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 27.840625,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title-blur.png",
+        "image_size": [
+          60,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              60,
+              14
+            ],
+            "confidence": 0.999962568283081,
+            "text": "Divination"
+          }
+        ],
+        "load_ms": 158.28762,
+        "median_ms": 23.830118000000002,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 26.540847,
+        "samples_ms": [
+          24.278017,
+          24.100703000000003,
+          23.453989,
+          25.838061999999997,
+          23.830118000000002,
+          23.22457,
+          24.466472,
+          23.524549,
+          22.833625,
+          21.550667999999998,
+          22.48184,
+          24.541919999999998,
+          26.645979,
+          23.969662999999997,
+          22.107696,
+          23.561406,
+          26.540847,
+          24.347565000000003,
+          21.442753,
+          21.488243
+        ],
+        "single_line": true,
+        "text": "Divination",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Divination",
+        "observed": "Divination",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-future-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Blade of the Sixth Pride",
+          "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+          "set": "Future Sight",
+          "language": "en",
+          "collector_number": "19",
+          "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+          "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+          "artist": "Justin Sweet"
+        },
+        "variant": "clean",
+        "ground_truth": "Blade of the Sixth Pride",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/future-title.png",
+        "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+        "image_size": [
+          455,
+          46
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 44.312239000000005,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/future-title.png",
+        "image_size": [
+          455,
+          46
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              455,
+              46
+            ],
+            "confidence": 0.9997358322143555,
+            "text": "Blade of the Sixth Pride"
+          }
+        ],
+        "load_ms": 144.296214,
+        "median_ms": 33.999641999999994,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 34.952033,
+        "samples_ms": [
+          31.996157999999998,
+          34.003879,
+          33.609627,
+          33.064060999999995,
+          31.531569,
+          34.25065,
+          34.644731,
+          33.930324,
+          34.284172,
+          33.294641999999996,
+          33.391379,
+          34.499436,
+          33.510958,
+          32.440049,
+          30.664012,
+          33.999641999999994,
+          34.952033,
+          35.417353999999996,
+          34.546420000000005,
+          34.83697
+        ],
+        "single_line": true,
+        "text": "Blade of the Sixth Pride",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Blade of the Sixth Pride",
+        "observed": "Blade of the Sixth Pride",
+        "character_edits": 0,
+        "reference_characters": 24,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/future-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-future-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Blade of the Sixth Pride",
+          "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+          "set": "Future Sight",
+          "language": "en",
+          "collector_number": "19",
+          "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+          "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+          "artist": "Justin Sweet"
+        },
+        "variant": "blur",
+        "ground_truth": "Blade of the Sixth Pride",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/future-title-blur.png",
+        "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+        "image_size": [
+          136,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 38.72146,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/future-title-blur.png",
+        "image_size": [
+          136,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              136,
+              14
+            ],
+            "confidence": 0.9999628067016602,
+            "text": "Blade of the Sixth Pride"
+          }
+        ],
+        "load_ms": 136.96062,
+        "median_ms": 33.610128,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 36.035591,
+        "samples_ms": [
+          32.761858,
+          31.152586,
+          33.610128,
+          30.965505,
+          30.573579,
+          31.100773,
+          33.834799,
+          32.011747,
+          34.858108,
+          35.210683,
+          35.358383,
+          34.777743,
+          33.047029,
+          36.035591,
+          34.17483,
+          32.441773,
+          31.755189,
+          33.833968,
+          36.238031,
+          33.183299999999996
+        ],
+        "single_line": true,
+        "text": "Blade of the Sixth Pride",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Blade of the Sixth Pride",
+        "observed": "Blade of the Sixth Pride",
+        "character_edits": 0,
+        "reference_characters": 24,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/future-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-colorshift-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Mana Tithe",
+          "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+          "set": "Planar Chaos",
+          "language": "en",
+          "collector_number": "25",
+          "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+          "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+          "artist": "Martina Pilcerova"
+        },
+        "variant": "clean",
+        "ground_truth": "Mana Tithe",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/colorshift-title.png",
+        "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+        "image_size": [
+          220,
+          45
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 26.924074,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title.png",
+        "image_size": [
+          220,
+          45
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              220,
+              45
+            ],
+            "confidence": 0.9998108744621277,
+            "text": "Mana Tithe"
+          }
+        ],
+        "load_ms": 150.467572,
+        "median_ms": 22.211182,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.512206000000003,
+        "samples_ms": [
+          21.510724,
+          22.211182,
+          22.492298,
+          23.322758999999998,
+          23.672788,
+          23.892083000000003,
+          24.372033000000002,
+          21.360453,
+          23.005864000000003,
+          22.198258,
+          21.312259,
+          20.726703,
+          21.285357,
+          24.512206000000003,
+          24.002918,
+          25.867896000000002,
+          21.686515,
+          21.308221,
+          22.129795,
+          21.318711
+        ],
+        "single_line": true,
+        "text": "Mana Tithe",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Mana Tithe",
+        "observed": "Mana Tithe",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-colorshift-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Mana Tithe",
+          "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+          "set": "Planar Chaos",
+          "language": "en",
+          "collector_number": "25",
+          "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+          "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+          "artist": "Martina Pilcerova"
+        },
+        "variant": "blur",
+        "ground_truth": "Mana Tithe",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/colorshift-title-blur.png",
+        "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+        "image_size": [
+          66,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 27.894687,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title-blur.png",
+        "image_size": [
+          66,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              66,
+              14
+            ],
+            "confidence": 0.9997487664222717,
+            "text": "Mana Tithe"
+          }
+        ],
+        "load_ms": 155.173627,
+        "median_ms": 21.995635,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 23.723043999999998,
+        "samples_ms": [
+          21.362237,
+          21.842007,
+          22.732043,
+          21.673371,
+          22.541854,
+          21.710542,
+          23.079917,
+          24.013025,
+          23.677114999999997,
+          21.118565,
+          21.900681000000002,
+          22.838939999999997,
+          21.918085,
+          22.15783,
+          21.883257,
+          21.342188,
+          23.648479000000002,
+          21.995635,
+          21.919458,
+          23.723043999999998
+        ],
+        "single_line": true,
+        "text": "Mana Tithe",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Mana Tithe",
+        "observed": "Mana Tithe",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-dracula-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Thalia, Guardian of Thraben",
+          "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+          "set": "Innistrad: Crimson Vow",
+          "language": "en",
+          "collector_number": "331",
+          "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+          "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+          "artist": "Magali Villeneuve"
+        },
+        "variant": "clean",
+        "ground_truth": "Mina Harker",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/dracula-title.png",
+        "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+        "image_size": [
+          235,
+          45
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 27.502201,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title.png",
+        "image_size": [
+          235,
+          45
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              235,
+              45
+            ],
+            "confidence": 0.9999381899833679,
+            "text": "Mina Harker"
+          }
+        ],
+        "load_ms": 144.077348,
+        "median_ms": 23.758682,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 26.001932,
+        "samples_ms": [
+          25.255245,
+          21.267443,
+          26.177483000000002,
+          26.001932,
+          22.050441,
+          23.758682,
+          22.714879,
+          24.435034,
+          24.462738,
+          21.826668,
+          24.386808,
+          25.499807999999998,
+          24.36159,
+          22.596519999999998,
+          20.947786,
+          22.237375,
+          25.75406,
+          22.46152,
+          22.480073,
+          23.417942
+        ],
+        "single_line": true,
+        "text": "Mina Harker",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Mina Harker",
+        "observed": "Mina Harker",
+        "character_edits": 0,
+        "reference_characters": 11,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-dracula-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Thalia, Guardian of Thraben",
+          "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+          "set": "Innistrad: Crimson Vow",
+          "language": "en",
+          "collector_number": "331",
+          "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+          "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+          "artist": "Magali Villeneuve"
+        },
+        "variant": "blur",
+        "ground_truth": "Mina Harker",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/dracula-title-blur.png",
+        "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+        "image_size": [
+          70,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 27.050511999999998,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title-blur.png",
+        "image_size": [
+          70,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              70,
+              14
+            ],
+            "confidence": 0.999579906463623,
+            "text": "Mina Harker"
+          }
+        ],
+        "load_ms": 147.056755,
+        "median_ms": 23.675482000000002,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.746878,
+        "samples_ms": [
+          21.711165,
+          24.644921,
+          22.841556,
+          21.742936,
+          24.746878,
+          23.328489,
+          23.367494999999998,
+          21.949897,
+          23.854938999999998,
+          24.862001000000003,
+          22.358459,
+          24.155341,
+          23.022516,
+          24.317194999999998,
+          24.25822,
+          21.943134,
+          22.34861,
+          23.742121,
+          24.162485,
+          23.675482000000002
+        ],
+        "single_line": true,
+        "text": "Mina Harker",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Mina Harker",
+        "observed": "Mina Harker",
+        "character_edits": 0,
+        "reference_characters": 11,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-invocation-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Daze",
+          "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+          "set": "Amonkhet Invocations",
+          "language": "en",
+          "collector_number": "12",
+          "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+          "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+          "artist": "Richard Wright"
+        },
+        "variant": "clean",
+        "ground_truth": "DAZE",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/invocation-title.png",
+        "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+        "image_size": [
+          107,
+          39
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 25.296203,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title.png",
+        "image_size": [
+          107,
+          39
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              107,
+              39
+            ],
+            "confidence": 0.9904671907424927,
+            "text": "DAZE"
+          }
+        ],
+        "load_ms": 155.669083,
+        "median_ms": 22.555705999999997,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.076065,
+        "samples_ms": [
+          24.431656999999998,
+          23.917234,
+          21.005540999999997,
+          22.555705999999997,
+          21.783258,
+          23.616972999999998,
+          22.486248,
+          20.829539,
+          22.396052,
+          24.076065,
+          22.97698,
+          22.672199,
+          21.542126000000003,
+          20.802379,
+          22.916857999999998,
+          21.438406,
+          21.739910000000002,
+          22.642764999999997,
+          21.771107,
+          23.585406
+        ],
+        "single_line": true,
+        "text": "DAZE",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "DAZE",
+        "observed": "DAZE",
+        "character_edits": 0,
+        "reference_characters": 4,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-invocation-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Daze",
+          "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+          "set": "Amonkhet Invocations",
+          "language": "en",
+          "collector_number": "12",
+          "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+          "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+          "artist": "Richard Wright"
+        },
+        "variant": "blur",
+        "ground_truth": "DAZE",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/invocation-title-blur.png",
+        "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+        "image_size": [
+          32,
+          12
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 25.480603000000002,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title-blur.png",
+        "image_size": [
+          32,
+          12
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              32,
+              12
+            ],
+            "confidence": 0.9108132719993591,
+            "text": "BAZE"
+          }
+        ],
+        "load_ms": 152.834053,
+        "median_ms": 21.975903000000002,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 24.043466,
+        "samples_ms": [
+          24.063722,
+          21.479525,
+          22.050921000000002,
+          23.394225000000002,
+          21.591137,
+          21.240284000000003,
+          20.798374000000003,
+          21.616355,
+          22.735166,
+          21.001396,
+          24.043466,
+          23.902285999999997,
+          21.12881,
+          21.789161,
+          21.689047,
+          22.062611999999998,
+          23.029475,
+          21.975903000000002,
+          21.643794,
+          22.468867
+        ],
+        "single_line": true,
+        "text": "BAZE",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "DAZE",
+        "observed": "BAZE",
+        "character_edits": 1,
+        "reference_characters": 4,
+        "character_error_rate": 0.25,
+        "exact_match": false
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-module-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Cave of the Frost Dragon",
+          "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+          "set": "Adventures in the Forgotten Realms",
+          "language": "en",
+          "collector_number": "350",
+          "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+          "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+          "artist": "Larry Elmore"
+        },
+        "variant": "clean",
+        "ground_truth": "Frost Dragon",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/module-title.png",
+        "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+        "image_size": [
+          360,
+          46
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 29.128241,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/module-title.png",
+        "image_size": [
+          360,
+          46
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              360,
+              46
+            ],
+            "confidence": 0.999904990196228,
+            "text": "Frost Dragon"
+          }
+        ],
+        "load_ms": 148.68578599999998,
+        "median_ms": 25.434786000000003,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 26.961316,
+        "samples_ms": [
+          29.548192,
+          25.034893,
+          25.306893,
+          25.389864000000003,
+          26.465196,
+          25.025356,
+          25.472927,
+          24.543042,
+          25.473427,
+          25.621921,
+          26.961316,
+          25.382051999999998,
+          25.272638999999998,
+          25.545388,
+          24.939668,
+          25.880072000000002,
+          25.226823999999997,
+          25.339029999999998,
+          25.446517,
+          25.434786000000003
+        ],
+        "single_line": true,
+        "text": "Frost Dragon",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Frost Dragon",
+        "observed": "Frost Dragon",
+        "character_edits": 0,
+        "reference_characters": 12,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/module-title.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-module-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Cave of the Frost Dragon",
+          "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+          "set": "Adventures in the Forgotten Realms",
+          "language": "en",
+          "collector_number": "350",
+          "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+          "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+          "artist": "Larry Elmore"
+        },
+        "variant": "blur",
+        "ground_truth": "Frost Dragon",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/module-title-blur.png",
+        "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+        "image_size": [
+          108,
+          14
+        ]
+      },
+      "inference": {
+        "arch": "x86_64",
+        "backend": "onnxruntime",
+        "cold_ms": 35.946596,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/module-title-blur.png",
+        "image_size": [
+          108,
+          14
+        ],
+        "layout": "text",
+        "lines": [
+          {
+            "bounds": [
+              0,
+              0,
+              108,
+              14
+            ],
+            "confidence": 0.9986253976821899,
+            "text": "Frost Dragon"
+          }
+        ],
+        "load_ms": 249.980811,
+        "median_ms": 25.689213,
+        "model": {
+          "backend": "onnxruntime",
+          "detector_sha256": null,
+          "language": "en",
+          "name": "PP-OCRv6 small (upstream)",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+        },
+        "os": "linux",
+        "p95_ms": 28.708473,
+        "samples_ms": [
+          25.044780999999997,
+          27.78828,
+          25.926837000000003,
+          26.490742,
+          25.273721,
+          24.973961,
+          24.497618,
+          24.375434000000002,
+          25.108348,
+          25.689213,
+          26.564016,
+          24.758807,
+          25.982279000000002,
+          28.663134,
+          24.856062,
+          24.730875,
+          25.116390999999997,
+          27.452261,
+          28.708473,
+          28.836358
+        ],
+        "single_line": true,
+        "text": "Frost Dragon",
+        "threads": "1"
+      },
+      "evaluation": {
+        "reference": "Frost Dragon",
+        "observed": "Frost Dragon",
+        "character_edits": 0,
+        "reference_characters": 12,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/target/release/examples/latency",
+        "/home/max/code/github/ocracle/models/ppocr-v6-small.onnx",
+        "/home/max/code/github/ocracle/models/paddle-v6/en.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/module-title-blur.png",
+        "20",
+        "line"
+      ],
+      "effective_layout": "text"
+    }
+  ],
+  "runtime_library": {
+    "path": "/tmp/ocracle-training-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+    "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+  },
+  "finished_at": "2026-10-20T09:20:36.169306+00:00"
+}

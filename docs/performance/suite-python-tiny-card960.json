@@ -1,0 +1,1845 @@
+{
+  "schema_version": 1,
+  "label": "python-tiny-card960",
+  "status": "complete",
+  "started_at": "2026-10-20T09:27:44.631403+00:00",
+  "measurement_scope": "warm public OCR call; model loading and image decoding excluded; desktop timings do not establish Android FPS",
+  "host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "manifest": "docs/performance/fixtures/manifest.json",
+  "manifest_sha256": "f67659bf20b23a97c9febabdd438f802b5422c4496f8f4611fc7c60a2c58fa8d",
+  "executable": "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+  "executable_sha256": "36e77c2f7bee497d19b3fd115470a30d72b80bd2d86d9f66fd0eb7bb49f29f0b",
+  "model": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+  "model_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+  "configuration": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+  "configuration_sha256": "fcd2d1952990d7508f149307de0d9034c3f9d4d9c47c12819ad6c38e68e0763b",
+  "detector": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.onnx",
+  "detector_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+  "threads": 4,
+  "layout": "standard_card",
+  "backend": "onnxruntime",
+  "iterations": 5,
+  "requested_samples": [
+    "card-divination",
+    "card-air-elemental",
+    "card-llanowar-elves"
+  ],
+  "records": [
+    {
+      "sample": {
+        "id": "card-divination",
+        "workload": "card",
+        "mode": "full",
+        "language": "en",
+        "source": {
+          "name": "Divination",
+          "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+          "set": "Magic 2015",
+          "language": "en",
+          "collector_number": "52",
+          "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+          "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+          "artist": "Howard Lyon"
+        },
+        "variant": "clean",
+        "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              40,
+              40,
+              420,
+              115
+            ],
+            "text": "Divination"
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              40,
+              580,
+              580,
+              645
+            ],
+            "text": "Sorcery"
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              52,
+              690,
+              688,
+              925
+            ],
+            "text": "Draw two cards. “The key to unlocking this puzzle is within you.” —Doriel, mentor of Mistral Isle"
+          }
+        ],
+        "image": ".cache/gallery/m15-52.png",
+        "image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "image_size": [
+          745,
+          1040
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "standard_card",
+        "single_line": false,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.onnx",
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.onnx",
+          "published_lfs_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "detector_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.yml",
+          "sha256": "3ac018be6f97499a08faa3bbdeb33640968d9307f6736d152902747a9f259593",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "image": "/home/max/code/github/ocracle/.cache/gallery/m15-52.png",
+        "image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+        "image_size": [
+          745,
+          1040
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 152.25598200049717,
+        "cold_ms": 128.133930003969,
+        "samples_ms": [
+          97.56887599360198,
+          104.04601499612909,
+          110.2739960042527,
+          110.49170799378771,
+          105.89145199628547
+        ],
+        "median_ms": 105.89145199628547,
+        "p95_ms": 110.49170799378771,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.22807800269220024,
+            "detector_preprocess_ms": 3.237110999180004,
+            "detector_inference_ms": 45.434373008902185,
+            "detector_postprocess_and_crops_ms": 3.4142499935114756,
+            "recognition_preprocess_inference_decode_ms": 45.12659499596339
+          },
+          {
+            "layout_ms": 0.2278159954585135,
+            "detector_preprocess_ms": 3.5020319919567555,
+            "detector_inference_ms": 45.46017599932384,
+            "detector_postprocess_and_crops_ms": 4.487636004341766,
+            "recognition_preprocess_inference_decode_ms": 50.23095599608496
+          },
+          {
+            "layout_ms": 0.22844100021757185,
+            "detector_preprocess_ms": 3.360171991516836,
+            "detector_inference_ms": 52.40666000463534,
+            "detector_postprocess_and_crops_ms": 4.180504009127617,
+            "recognition_preprocess_inference_decode_ms": 49.94829700444825
+          },
+          {
+            "layout_ms": 0.2660099999047816,
+            "detector_preprocess_ms": 3.6195520078763366,
+            "detector_inference_ms": 49.651105000521056,
+            "detector_postprocess_and_crops_ms": 4.909067996777594,
+            "recognition_preprocess_inference_decode_ms": 51.85859199264087
+          },
+          {
+            "layout_ms": 0.2756000030785799,
+            "detector_preprocess_ms": 4.456883005332202,
+            "detector_inference_ms": 48.74937298882287,
+            "detector_postprocess_and_crops_ms": 5.0951050070580095,
+            "recognition_preprocess_inference_decode_ms": 47.09363701113034
+          }
+        ],
+        "text": "Divination\n20\nSorcery\nM15\nDraw two cards.\n\"The key to unlocking this puzzle is\nwithin you.\n9\nDoriel, mentor of Mistral Isle\n052/269 C\nTM & © 2014 Wizards of the Coast\nM15·EN HOWARD LYON",
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.9979106783866882,
+            "bounds": [
+              59,
+              54,
+              195,
+              46
+            ],
+            "quad": [
+              [
+                59,
+                54
+              ],
+              [
+                254,
+                58
+              ],
+              [
+                253,
+                100
+              ],
+              [
+                59,
+                96
+              ]
+            ],
+            "detector_confidence": 0.8336962291034492
+          },
+          {
+            "text": "20",
+            "confidence": 0.7359404563903809,
+            "bounds": [
+              610,
+              48,
+              75,
+              53
+            ],
+            "quad": [
+              [
+                610,
+                54
+              ],
+              [
+                681,
+                48
+              ],
+              [
+                685,
+                95
+              ],
+              [
+                614,
+                101
+              ]
+            ],
+            "detector_confidence": 0.5414061599739772
+          },
+          {
+            "text": "Sorcery",
+            "confidence": 0.997571587562561,
+            "bounds": [
+              58,
+              598,
+              119,
+              33
+            ],
+            "quad": [
+              [
+                60,
+                598
+              ],
+              [
+                177,
+                603
+              ],
+              [
+                175,
+                631
+              ],
+              [
+                58,
+                626
+              ]
+            ],
+            "detector_confidence": 0.8350148495783409
+          },
+          {
+            "text": "M15",
+            "confidence": 0.646301805973053,
+            "bounds": [
+              608,
+              590,
+              81,
+              46
+            ],
+            "quad": [
+              [
+                608,
+                594
+              ],
+              [
+                687,
+                590
+              ],
+              [
+                689,
+                632
+              ],
+              [
+                610,
+                636
+              ]
+            ],
+            "detector_confidence": 0.7718356478530749
+          },
+          {
+            "text": "Draw two cards.",
+            "confidence": 0.9747688174247742,
+            "bounds": [
+              63,
+              719,
+              268,
+              35
+            ],
+            "quad": [
+              [
+                63,
+                719
+              ],
+              [
+                331,
+                719
+              ],
+              [
+                331,
+                754
+              ],
+              [
+                63,
+                754
+              ]
+            ],
+            "detector_confidence": 0.870799915128284
+          },
+          {
+            "text": "\"The key to unlocking this puzzle is",
+            "confidence": 0.9739723205566406,
+            "bounds": [
+              68,
+              772,
+              551,
+              45
+            ],
+            "quad": [
+              [
+                68,
+                772
+              ],
+              [
+                619,
+                776
+              ],
+              [
+                618,
+                817
+              ],
+              [
+                68,
+                814
+              ]
+            ],
+            "detector_confidence": 0.8234954453060378
+          },
+          {
+            "text": "within you.",
+            "confidence": 0.9826762676239014,
+            "bounds": [
+              61,
+              815,
+              178,
+              36
+            ],
+            "quad": [
+              [
+                61,
+                815
+              ],
+              [
+                239,
+                817
+              ],
+              [
+                238,
+                851
+              ],
+              [
+                61,
+                848
+              ]
+            ],
+            "detector_confidence": 0.8864646175848181
+          },
+          {
+            "text": "9",
+            "confidence": 0.6905182600021362,
+            "bounds": [
+              233,
+              815,
+              17,
+              11
+            ],
+            "quad": [
+              [
+                233,
+                819
+              ],
+              [
+                248,
+                815
+              ],
+              [
+                250,
+                823
+              ],
+              [
+                235,
+                826
+              ]
+            ],
+            "detector_confidence": 0.4735157801991417
+          },
+          {
+            "text": "Doriel, mentor of Mistral Isle",
+            "confidence": 0.9415794610977173,
+            "bounds": [
+              99,
+              849,
+              446,
+              36
+            ],
+            "quad": [
+              [
+                99,
+                850
+              ],
+              [
+                545,
+                849
+              ],
+              [
+                545,
+                884
+              ],
+              [
+                99,
+                885
+              ]
+            ],
+            "detector_confidence": 0.8778236624685513
+          },
+          {
+            "text": "052/269 C",
+            "confidence": 0.9656344652175903,
+            "bounds": [
+              47,
+              969,
+              108,
+              19
+            ],
+            "quad": [
+              [
+                47,
+                969
+              ],
+              [
+                155,
+                969
+              ],
+              [
+                155,
+                988
+              ],
+              [
+                47,
+                988
+              ]
+            ],
+            "detector_confidence": 0.8196905219599548
+          },
+          {
+            "text": "TM & © 2014 Wizards of the Coast",
+            "confidence": 0.9446880221366882,
+            "bounds": [
+              439,
+              967,
+              257,
+              22
+            ],
+            "quad": [
+              [
+                439,
+                967
+              ],
+              [
+                696,
+                971
+              ],
+              [
+                696,
+                989
+              ],
+              [
+                439,
+                986
+              ]
+            ],
+            "detector_confidence": 0.8365246703478646
+          },
+          {
+            "text": "M15·EN HOWARD LYON",
+            "confidence": 0.9672099351882935,
+            "bounds": [
+              44,
+              988,
+              232,
+              20
+            ],
+            "quad": [
+              [
+                44,
+                988
+              ],
+              [
+                276,
+                988
+              ],
+              [
+                276,
+                1008
+              ],
+              [
+                44,
+                1008
+              ]
+            ],
+            "detector_confidence": 0.8049888143605656
+          }
+        ],
+        "recognition_batches": [
+          [
+            6,
+            3,
+            48,
+            320
+          ],
+          [
+            6,
+            3,
+            48,
+            685
+          ]
+        ],
+        "detector_input_shape": [
+          1,
+          3,
+          960,
+          672
+        ],
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              40,
+              40,
+              420,
+              115
+            ],
+            "reference": "Divination",
+            "observed": "Divination",
+            "character_edits": 0,
+            "reference_characters": 10,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              40,
+              580,
+              580,
+              645
+            ],
+            "reference": "Sorcery",
+            "observed": "Sorcery",
+            "character_edits": 0,
+            "reference_characters": 7,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              52,
+              690,
+              688,
+              925
+            ],
+            "reference": "Draw two cards. “The key to unlocking this puzzle is within you.” —Doriel, mentor of Mistral Isle",
+            "observed": "Draw two cards. \"The key to unlocking this puzzle is within you. 9 Doriel, mentor of Mistral Isle",
+            "character_edits": 4,
+            "reference_characters": 97,
+            "character_error_rate": 0.041237113402061855,
+            "exact_match": false
+          }
+        ],
+        "character_edits": 4,
+        "reference_characters": 114,
+        "character_error_rate": 0.03508771929824561,
+        "exact_match": false,
+        "unscored_prediction_lines": 5,
+        "assignment": "line center inside fixed region; predicted reading order preserved"
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/.cache/gallery/m15-52.png",
+        "5",
+        "full"
+      ],
+      "effective_layout": "standard_card"
+    },
+    {
+      "sample": {
+        "id": "card-air-elemental",
+        "workload": "card",
+        "mode": "full",
+        "language": "en",
+        "source": {
+          "name": "Air Elemental",
+          "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+          "set": "Eighth Edition",
+          "language": "en",
+          "collector_number": "59",
+          "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+          "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+          "artist": "Wayne England"
+        },
+        "variant": "clean",
+        "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              45,
+              40,
+              480,
+              115
+            ],
+            "text": "Air Elemental"
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              45,
+              580,
+              590,
+              645
+            ],
+            "text": "Creature — Elemental"
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              65,
+              680,
+              675,
+              900
+            ],
+            "text": "Flying (This creature can’t be blocked except by creatures with flying.) Pray that it doesn’t seek the safety of your lungs."
+          }
+        ],
+        "image": ".cache/gallery/8ed-59.png",
+        "image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "image_size": [
+          745,
+          1040
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "standard_card",
+        "single_line": false,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.onnx",
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.onnx",
+          "published_lfs_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "detector_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.yml",
+          "sha256": "3ac018be6f97499a08faa3bbdeb33640968d9307f6736d152902747a9f259593",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "image": "/home/max/code/github/ocracle/.cache/gallery/8ed-59.png",
+        "image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+        "image_size": [
+          745,
+          1040
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 148.0480419995729,
+        "cold_ms": 131.68305199360475,
+        "samples_ms": [
+          100.02775999600999,
+          101.34562899474986,
+          99.57674700126518,
+          97.44596701057162,
+          99.68464200210292
+        ],
+        "median_ms": 99.68464200210292,
+        "p95_ms": 101.34562899474986,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.2702719939406961,
+            "detector_preprocess_ms": 4.636052995920181,
+            "detector_inference_ms": 45.30408699065447,
+            "detector_postprocess_and_crops_ms": 3.7055830034660175,
+            "recognition_preprocess_inference_decode_ms": 45.979148999322206
+          },
+          {
+            "layout_ms": 0.28635300986934453,
+            "detector_preprocess_ms": 3.526572007103823,
+            "detector_inference_ms": 47.221910004736856,
+            "detector_postprocess_and_crops_ms": 3.6970149958506227,
+            "recognition_preprocess_inference_decode_ms": 46.48289299802855
+          },
+          {
+            "layout_ms": 0.2620049926918,
+            "detector_preprocess_ms": 3.3332489983877167,
+            "detector_inference_ms": 41.846911000902764,
+            "detector_postprocess_and_crops_ms": 3.721806002431549,
+            "recognition_preprocess_inference_decode_ms": 50.2769820013782
+          },
+          {
+            "layout_ms": 0.27067500923294574,
+            "detector_preprocess_ms": 3.5845319944201037,
+            "detector_inference_ms": 44.07906699634623,
+            "detector_postprocess_and_crops_ms": 3.8460140058305115,
+            "recognition_preprocess_inference_decode_ms": 45.543865009676665
+          },
+          {
+            "layout_ms": 0.29171499772928655,
+            "detector_preprocess_ms": 3.8400009943870828,
+            "detector_inference_ms": 44.64264299895149,
+            "detector_postprocess_and_crops_ms": 4.046096000820398,
+            "recognition_preprocess_inference_decode_ms": 46.72285099513829
+          }
+        ],
+        "text": "Air Elemental\n300\nCreature —\nElemental\nFlying (This creature can't be blocked\nexcept by creatures with flying.)\nPray that it doesn't seek the safety of\nyour lungs.\n4/4\n-Wayne England\nTM &© 1993–2003 Wizards of the Coast, Inc. 59/350",
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.9993249177932739,
+            "bounds": [
+              63,
+              60,
+              251,
+              39
+            ],
+            "quad": [
+              [
+                63,
+                60
+              ],
+              [
+                314,
+                60
+              ],
+              [
+                314,
+                99
+              ],
+              [
+                63,
+                99
+              ]
+            ],
+            "detector_confidence": 0.8359420111688168
+          },
+          {
+            "text": "300",
+            "confidence": 0.6417832970619202,
+            "bounds": [
+              561,
+              51,
+              119,
+              54
+            ],
+            "quad": [
+              [
+                561,
+                51
+              ],
+              [
+                680,
+                51
+              ],
+              [
+                680,
+                105
+              ],
+              [
+                561,
+                105
+              ]
+            ],
+            "detector_confidence": 0.8570452653925593
+          },
+          {
+            "text": "Creature —",
+            "confidence": 0.9453550577163696,
+            "bounds": [
+              65,
+              598,
+              172,
+              27
+            ],
+            "quad": [
+              [
+                65,
+                598
+              ],
+              [
+                237,
+                598
+              ],
+              [
+                237,
+                625
+              ],
+              [
+                65,
+                625
+              ]
+            ],
+            "detector_confidence": 0.7343188011800179
+          },
+          {
+            "text": "Elemental",
+            "confidence": 0.9997406005859375,
+            "bounds": [
+              237,
+              595,
+              155,
+              30
+            ],
+            "quad": [
+              [
+                237,
+                595
+              ],
+              [
+                392,
+                595
+              ],
+              [
+                392,
+                625
+              ],
+              [
+                237,
+                625
+              ]
+            ],
+            "detector_confidence": 0.9088688280582429
+          },
+          {
+            "text": "Flying (This creature can't be blocked",
+            "confidence": 0.9824995994567871,
+            "bounds": [
+              71,
+              705,
+              588,
+              38
+            ],
+            "quad": [
+              [
+                71,
+                705
+              ],
+              [
+                659,
+                705
+              ],
+              [
+                659,
+                743
+              ],
+              [
+                71,
+                743
+              ]
+            ],
+            "detector_confidence": 0.8281702141581857
+          },
+          {
+            "text": "except by creatures with flying.)",
+            "confidence": 0.9874284863471985,
+            "bounds": [
+              68,
+              742,
+              486,
+              45
+            ],
+            "quad": [
+              [
+                68,
+                742
+              ],
+              [
+                554,
+                745
+              ],
+              [
+                554,
+                787
+              ],
+              [
+                68,
+                783
+              ]
+            ],
+            "detector_confidence": 0.8144292863331856
+          },
+          {
+            "text": "Pray that it doesn't seek the safety of",
+            "confidence": 0.9813979864120483,
+            "bounds": [
+              70,
+              802,
+              548,
+              45
+            ],
+            "quad": [
+              [
+                70,
+                802
+              ],
+              [
+                618,
+                806
+              ],
+              [
+                617,
+                847
+              ],
+              [
+                70,
+                843
+              ]
+            ],
+            "detector_confidence": 0.8353520992179979
+          },
+          {
+            "text": "your lungs.",
+            "confidence": 0.9568766951560974,
+            "bounds": [
+              68,
+              845,
+              168,
+              39
+            ],
+            "quad": [
+              [
+                68,
+                845
+              ],
+              [
+                236,
+                845
+              ],
+              [
+                236,
+                884
+              ],
+              [
+                68,
+                884
+              ]
+            ],
+            "detector_confidence": 0.8621639607491508
+          },
+          {
+            "text": "4/4",
+            "confidence": 0.9743228554725647,
+            "bounds": [
+              584,
+              930,
+              75,
+              47
+            ],
+            "quad": [
+              [
+                586,
+                930
+              ],
+              [
+                659,
+                933
+              ],
+              [
+                657,
+                977
+              ],
+              [
+                584,
+                973
+              ]
+            ],
+            "detector_confidence": 0.868061812862831
+          },
+          {
+            "text": "-Wayne England",
+            "confidence": 0.9617854356765747,
+            "bounds": [
+              95,
+              951,
+              181,
+              23
+            ],
+            "quad": [
+              [
+                95,
+                951
+              ],
+              [
+                276,
+                951
+              ],
+              [
+                276,
+                974
+              ],
+              [
+                95,
+                974
+              ]
+            ],
+            "detector_confidence": 0.863104732413041
+          },
+          {
+            "text": "TM &© 1993–2003 Wizards of the Coast, Inc. 59/350",
+            "confidence": 0.9713301658630371,
+            "bounds": [
+              52,
+              974,
+              401,
+              24
+            ],
+            "quad": [
+              [
+                52,
+                974
+              ],
+              [
+                453,
+                976
+              ],
+              [
+                453,
+                998
+              ],
+              [
+                52,
+                996
+              ]
+            ],
+            "detector_confidence": 0.8020649151923843
+          }
+        ],
+        "recognition_batches": [
+          [
+            6,
+            3,
+            48,
+            320
+          ],
+          [
+            5,
+            3,
+            48,
+            916
+          ]
+        ],
+        "detector_input_shape": [
+          1,
+          3,
+          960,
+          672
+        ],
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              45,
+              40,
+              480,
+              115
+            ],
+            "reference": "Air Elemental",
+            "observed": "Air Elemental",
+            "character_edits": 0,
+            "reference_characters": 13,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              45,
+              580,
+              590,
+              645
+            ],
+            "reference": "Creature — Elemental",
+            "observed": "Creature — Elemental",
+            "character_edits": 0,
+            "reference_characters": 20,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              65,
+              680,
+              675,
+              900
+            ],
+            "reference": "Flying (This creature can’t be blocked except by creatures with flying.) Pray that it doesn’t seek the safety of your lungs.",
+            "observed": "Flying (This creature can't be blocked except by creatures with flying.) Pray that it doesn't seek the safety of your lungs.",
+            "character_edits": 2,
+            "reference_characters": 124,
+            "character_error_rate": 0.016129032258064516,
+            "exact_match": false
+          }
+        ],
+        "character_edits": 2,
+        "reference_characters": 157,
+        "character_error_rate": 0.012738853503184714,
+        "exact_match": false,
+        "unscored_prediction_lines": 4,
+        "assignment": "line center inside fixed region; predicted reading order preserved"
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/.cache/gallery/8ed-59.png",
+        "5",
+        "full"
+      ],
+      "effective_layout": "standard_card"
+    },
+    {
+      "sample": {
+        "id": "card-llanowar-elves",
+        "workload": "card",
+        "mode": "full",
+        "language": "en",
+        "source": {
+          "name": "Llanowar Elves",
+          "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+          "set": "Limited Edition Alpha",
+          "language": "en",
+          "collector_number": "210",
+          "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+          "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+          "artist": "Anson Maddocks"
+        },
+        "variant": "clean",
+        "scoring": "partial card: fixed title/type/body regions only; mana, artwork and collector text unscored; all inference is timed",
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              35,
+              35,
+              500,
+              100
+            ],
+            "text": "Llanowar Elves"
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              65,
+              570,
+              590,
+              617
+            ],
+            "text": "Summon Elves"
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              108,
+              625,
+              653,
+              893
+            ],
+            "text": "Tap to add 1 green mana to your mana pool. This tap can be played as an interrupt. Whenever the Llanowar Elves gather the fruits of their forest, they leave one plant of each type untouched, considering that nature’s portion."
+          }
+        ],
+        "image": ".cache/gallery/lea-210.png",
+        "image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "image_size": [
+          745,
+          1040
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "standard_card",
+        "single_line": false,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.onnx",
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.onnx",
+          "published_lfs_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+        },
+        "detector_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.yml",
+          "sha256": "3ac018be6f97499a08faa3bbdeb33640968d9307f6736d152902747a9f259593",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+          "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/resolve/2ba1506c0380b8f0b03dd142459aac66d4421f6c/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "image": "/home/max/code/github/ocracle/.cache/gallery/lea-210.png",
+        "image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+        "image_size": [
+          745,
+          1040
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 149.00041099463124,
+        "cold_ms": 137.55723299982492,
+        "samples_ms": [
+          105.16588900645729,
+          111.55760800465941,
+          117.40079399896786,
+          104.36324701004196,
+          101.03846099809743
+        ],
+        "median_ms": 105.16588900645729,
+        "p95_ms": 117.40079399896786,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.2767420082818717,
+            "detector_preprocess_ms": 3.231388996937312,
+            "detector_inference_ms": 41.99192598753143,
+            "detector_postprocess_and_crops_ms": 3.968190008890815,
+            "recognition_preprocess_inference_decode_ms": 55.567325005540624
+          },
+          {
+            "layout_ms": 0.2745120000327006,
+            "detector_preprocess_ms": 3.0447890021605417,
+            "detector_inference_ms": 45.38272799982224,
+            "detector_postprocess_and_crops_ms": 5.540580998058431,
+            "recognition_preprocess_inference_decode_ms": 57.131139998091385
+          },
+          {
+            "layout_ms": 0.27071600197814405,
+            "detector_preprocess_ms": 4.351777010015212,
+            "detector_inference_ms": 47.20441100653261,
+            "detector_postprocess_and_crops_ms": 5.912798005738296,
+            "recognition_preprocess_inference_decode_ms": 59.524898999370635
+          },
+          {
+            "layout_ms": 0.25321099383290857,
+            "detector_preprocess_ms": 3.3579890005057678,
+            "detector_inference_ms": 40.60347100312356,
+            "detector_postprocess_and_crops_ms": 3.862810001010075,
+            "recognition_preprocess_inference_decode_ms": 56.14766699727625
+          },
+          {
+            "layout_ms": 0.27716300974134356,
+            "detector_preprocess_ms": 3.1055129948072135,
+            "detector_inference_ms": 42.43053299433086,
+            "detector_postprocess_and_crops_ms": 4.103297003894113,
+            "recognition_preprocess_inference_decode_ms": 50.9813709941227
+          }
+        ],
+        "text": "Llanowar Elves\n堂\nSummon Elves\nTap to add 1 green mana to your\nmana pool. This tap can be played\nas an interrupt\nWhenever the Llanowar Elves gather\nthe fruits of their forest, they leave\none plant of each type untouched\nconsidering that nature's portion\nIllhus. O Anson Maddocks\n11",
+        "lines": [
+          {
+            "text": "Llanowar Elves",
+            "confidence": 0.8933331370353699,
+            "bounds": [
+              49,
+              47,
+              262,
+              44
+            ],
+            "quad": [
+              [
+                49,
+                47
+              ],
+              [
+                311,
+                52
+              ],
+              [
+                310,
+                91
+              ],
+              [
+                49,
+                86
+              ]
+            ],
+            "detector_confidence": 0.8187687198942583
+          },
+          {
+            "text": "堂",
+            "confidence": 0.18090027570724487,
+            "bounds": [
+              639,
+              51,
+              37,
+              39
+            ],
+            "quad": [
+              [
+                644,
+                51
+              ],
+              [
+                676,
+                56
+              ],
+              [
+                671,
+                90
+              ],
+              [
+                639,
+                86
+              ]
+            ],
+            "detector_confidence": 0.7173654621254544
+          },
+          {
+            "text": "Summon Elves",
+            "confidence": 0.9710212349891663,
+            "bounds": [
+              75,
+              581,
+              225,
+              30
+            ],
+            "quad": [
+              [
+                75,
+                581
+              ],
+              [
+                300,
+                581
+              ],
+              [
+                300,
+                611
+              ],
+              [
+                75,
+                611
+              ]
+            ],
+            "detector_confidence": 0.9027045953854211
+          },
+          {
+            "text": "Tap to add 1 green mana to your",
+            "confidence": 0.9615243673324585,
+            "bounds": [
+              119,
+              635,
+              495,
+              36
+            ],
+            "quad": [
+              [
+                119,
+                635
+              ],
+              [
+                614,
+                636
+              ],
+              [
+                614,
+                671
+              ],
+              [
+                119,
+                669
+              ]
+            ],
+            "detector_confidence": 0.7583915408526447
+          },
+          {
+            "text": "mana pool. This tap can be played",
+            "confidence": 0.9578184485435486,
+            "bounds": [
+              115,
+              668,
+              529,
+              36
+            ],
+            "quad": [
+              [
+                115,
+                668
+              ],
+              [
+                644,
+                670
+              ],
+              [
+                644,
+                704
+              ],
+              [
+                115,
+                703
+              ]
+            ],
+            "detector_confidence": 0.7544705705974345
+          },
+          {
+            "text": "as an interrupt",
+            "confidence": 0.9971690773963928,
+            "bounds": [
+              119,
+              705,
+              229,
+              30
+            ],
+            "quad": [
+              [
+                119,
+                707
+              ],
+              [
+                348,
+                705
+              ],
+              [
+                348,
+                732
+              ],
+              [
+                119,
+                735
+              ]
+            ],
+            "detector_confidence": 0.7979763732504701
+          },
+          {
+            "text": "Whenever the Llanowar Elves gather",
+            "confidence": 0.9388805031776428,
+            "bounds": [
+              122,
+              734,
+              514,
+              36
+            ],
+            "quad": [
+              [
+                122,
+                734
+              ],
+              [
+                636,
+                737
+              ],
+              [
+                636,
+                770
+              ],
+              [
+                122,
+                768
+              ]
+            ],
+            "detector_confidence": 0.8315000652247769
+          },
+          {
+            "text": "the fruits of their forest, they leave",
+            "confidence": 0.9312530159950256,
+            "bounds": [
+              123,
+              771,
+              469,
+              31
+            ],
+            "quad": [
+              [
+                123,
+                771
+              ],
+              [
+                592,
+                771
+              ],
+              [
+                592,
+                802
+              ],
+              [
+                123,
+                802
+              ]
+            ],
+            "detector_confidence": 0.832257410474852
+          },
+          {
+            "text": "one plant of each type untouched",
+            "confidence": 0.9763450622558594,
+            "bounds": [
+              120,
+              806,
+              460,
+              30
+            ],
+            "quad": [
+              [
+                120,
+                806
+              ],
+              [
+                580,
+                806
+              ],
+              [
+                580,
+                836
+              ],
+              [
+                120,
+                836
+              ]
+            ],
+            "detector_confidence": 0.8194458189377418
+          },
+          {
+            "text": "considering that nature's portion",
+            "confidence": 0.9533454179763794,
+            "bounds": [
+              119,
+              837,
+              456,
+              33
+            ],
+            "quad": [
+              [
+                119,
+                837
+              ],
+              [
+                575,
+                840
+              ],
+              [
+                575,
+                870
+              ],
+              [
+                119,
+                868
+              ]
+            ],
+            "detector_confidence": 0.8539731711847331
+          },
+          {
+            "text": "Illhus. O Anson Maddocks",
+            "confidence": 0.8548280596733093,
+            "bounds": [
+              72,
+              935,
+              389,
+              36
+            ],
+            "quad": [
+              [
+                72,
+                935
+              ],
+              [
+                461,
+                937
+              ],
+              [
+                461,
+                971
+              ],
+              [
+                72,
+                968
+              ]
+            ],
+            "detector_confidence": 0.8799927775823251
+          },
+          {
+            "text": "11",
+            "confidence": 0.3877270221710205,
+            "bounds": [
+              624,
+              930,
+              62,
+              42
+            ],
+            "quad": [
+              [
+                624,
+                930
+              ],
+              [
+                686,
+                930
+              ],
+              [
+                686,
+                972
+              ],
+              [
+                624,
+                972
+              ]
+            ],
+            "detector_confidence": 0.8022196423132103
+          }
+        ],
+        "recognition_batches": [
+          [
+            6,
+            3,
+            48,
+            565
+          ],
+          [
+            6,
+            3,
+            48,
+            747
+          ]
+        ],
+        "detector_input_shape": [
+          1,
+          3,
+          960,
+          672
+        ],
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "regions": [
+          {
+            "id": "title",
+            "bounds_xyxy": [
+              35,
+              35,
+              500,
+              100
+            ],
+            "reference": "Llanowar Elves",
+            "observed": "Llanowar Elves",
+            "character_edits": 0,
+            "reference_characters": 14,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "type",
+            "bounds_xyxy": [
+              65,
+              570,
+              590,
+              617
+            ],
+            "reference": "Summon Elves",
+            "observed": "Summon Elves",
+            "character_edits": 0,
+            "reference_characters": 12,
+            "character_error_rate": 0.0,
+            "exact_match": true
+          },
+          {
+            "id": "body",
+            "bounds_xyxy": [
+              108,
+              625,
+              653,
+              893
+            ],
+            "reference": "Tap to add 1 green mana to your mana pool. This tap can be played as an interrupt. Whenever the Llanowar Elves gather the fruits of their forest, they leave one plant of each type untouched, considering that nature’s portion.",
+            "observed": "Tap to add 1 green mana to your mana pool. This tap can be played as an interrupt Whenever the Llanowar Elves gather the fruits of their forest, they leave one plant of each type untouched considering that nature's portion",
+            "character_edits": 4,
+            "reference_characters": 225,
+            "character_error_rate": 0.017777777777777778,
+            "exact_match": false
+          }
+        ],
+        "character_edits": 4,
+        "reference_characters": 251,
+        "character_error_rate": 0.01593625498007968,
+        "exact_match": false,
+        "unscored_prediction_lines": 3,
+        "assignment": "line center inside fixed region; predicted reading order preserved"
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/.cache/gallery/lea-210.png",
+        "5",
+        "full"
+      ],
+      "effective_layout": "standard_card"
+    }
+  ],
+  "runtime_library": {
+    "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+    "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+  },
+  "finished_at": "2026-10-20T09:27:49.279706+00:00"
+}

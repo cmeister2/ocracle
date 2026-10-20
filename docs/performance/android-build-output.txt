@@ -1,0 +1,11 @@
+$ CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER=/tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang cargo build --release --locked --target aarch64-linux-android --lib --bin ocracle --example latency
+   Compiling ocracle v0.0.0 (/home/max/code/github/ocracle)
+    Finished `release` profile [optimized] target(s) in 3.08s
+
+$ CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER=/tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang cargo build --release --locked --target aarch64-linux-android --lib --bin ocracle --example latency --features onnxruntime
+   Compiling ocracle v0.0.0 (/home/max/code/github/ocracle)
+    Finished `release` profile [optimized] target(s) in 3.07s
+
+$ cargo +1.94.0 check --locked --all-targets --all-features
+    Checking ocracle v0.0.0 (/home/max/code/github/ocracle)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.72s

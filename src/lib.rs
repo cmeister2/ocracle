@@ -21,12 +21,14 @@
 //! # }
 //! ```
 
-mod ctc;
+pub mod ctc;
+mod detector;
 mod engine;
+mod runtime;
 mod types;
 
 pub use engine::CardOcr;
 pub use types::{
-    Candidate, ColorMode, InputConfig, Layout, Line, ModelConfig, ModelIdentity, Options,
-    OutputLayout, OutputValues, Passes, Recognition, WidthRounding,
+    Candidate, ColorMode, InferenceBackend, InputConfig, Layout, Line, ModelConfig, ModelIdentity,
+    Options, OutputLayout, OutputValues, Passes, Recognition, WidthRounding,
 };

@@ -1,0 +1,142 @@
+{
+  "schema_version": 2,
+  "date": "2026-10-20",
+  "scope": "Android ARM64 default and optional ONNX Runtime release linking; host MSRV compilation; no Android execution or performance measurement",
+  "source_git_head": "4dcea58b1160f20ad4dc170b5dce413c899d3a79",
+  "source_files_sha256": {
+    "Cargo.toml": "06bb5a09eb8916a8489c9af2c64e74f3afd2fbb3b9cd74f3da84dc291a5ff79e",
+    "Cargo.lock": "3c8bb4127d3b0c132457244d59619dbe0efdac763b119af97bb970d2ff5ef75e",
+    "src/ctc.rs": "029a422ea39a7f8f95ef3c1f76192300c3b33efcba6427bd127ddc2f42656ef1",
+    "src/detector.rs": "03bc0da5ea90a09475b0f966d4152fdc01a388e0d09a304f9e12534f125cd612",
+    "src/engine.rs": "a603329dd26d0fa76cd1adf50fda9b8aedde020df8eed0270c50bd94dcfbbd37",
+    "src/lib.rs": "15a57d7eee579979fea765c02b50b7ab0d847bc952040edf3c620414c0bb4b3c",
+    "src/main.rs": "6821c22a8edb9ca9086c5c6da1abdb5e486f969a61cd5042ac8071f692022979",
+    "src/runtime.rs": "4eadb505aec6501a47dcefb60b632a9f8a7218a91e3a929a4f8ac67209c68c22",
+    "src/types.rs": "392784533164abe5dafc0db081a65fefd2e9455f4b924e980c41b3c08a4898c7",
+    "examples/ctc_latency.rs": "d87b8c23feaff40211599f2847aa95b445647d2068d2823fc9a9e9bdef8d98a2",
+    "examples/ctc_scan_latency.rs": "3c6626bef71d62ac35bc62a178b2f22d2e6e7d26d22c865ae39106f3e2f52588",
+    "examples/inference_latency.rs": "72f556c2a6b6e9ab93cea4116a77a522c60d035032b8c5b5d24dbf7b49d098b5",
+    "examples/latency.rs": "f6445f2bad8c91dfe04bf06e9147be8c12edcbac13d5bc6907da96b229ef8227",
+    "tests/native_backend.rs": "fd9fd3ab802acb5c83786aa6f6d9e1d8030ddcaf68c044713f138eeff6e413c9",
+    "tests/neural.rs": "4183c336d5d7ed842a167b7fa751768c725dc9e7381d55355d1da250f442a114",
+    "tests/profiles.rs": "fc05899ce757343e2d0d29e2e29eb341f06aac29ce7358a6b99d1b5f954b9249"
+  },
+  "source_diff": "",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "ndk": {
+    "download_url": "https://dl.google.com/android/repository/android-ndk-r30-linux.zip",
+    "checksum_source": "https://developer.android.com/ndk/downloads",
+    "bytes": 738633529,
+    "published_sha1": "5107f898313790e449e87eee2183d9a20602dee9",
+    "observed_sha256": "753611f410d002cfcd3f3dc2ef49aad532089d3180b436c060a90bf0fcb64df2",
+    "verified": true,
+    "sha256_reverified_for_this_build": true
+  },
+  "ndk_source_properties": "Pkg.Desc = Android NDK\nPkg.Revision = 30.0.16248370\nPkg.BaseRevision = 30.0.16248370\nPkg.ReleaseName = r30\n",
+  "clang": "Android (16134705, +pgo, +bolt, +lto, +mlgo, based on r574158c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d3c681d06fd303b36f16ed5c274735eb)\nTarget: aarch64-unknown-linux-android24\nThread model: posix\nInstalledDir: /tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin",
+  "target": "aarch64-linux-android",
+  "api_level": 24,
+  "builds": [
+    {
+      "variant": "default",
+      "command": "CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER=/tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang cargo build --release --locked --target aarch64-linux-android --lib --bin ocracle --example latency",
+      "exit_code": 0,
+      "artifacts": [
+        {
+          "path": "target/aarch64-linux-android/release/ocracle",
+          "preserved_path": "/tmp/ocracle-android-final/default/ocracle",
+          "bytes": 9933464,
+          "sha256": "8d1c0b539a02ba9b6032b7ea78aae8d049e9b4ad2499ce29e5c9e4938d20592a",
+          "file": "ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, not stripped",
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "interpreter": "/system/bin/linker64",
+          "load_segment_alignment_bytes": [
+            16384
+          ]
+        },
+        {
+          "path": "target/aarch64-linux-android/release/examples/latency",
+          "preserved_path": "/tmp/ocracle-android-final/default/latency",
+          "bytes": 9315904,
+          "sha256": "c1aee3bd419833ea28b3b52902e7fccb041c19ecf061a81704f6c8e6e24c2336",
+          "file": "ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, not stripped",
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "interpreter": "/system/bin/linker64",
+          "load_segment_alignment_bytes": [
+            16384
+          ]
+        },
+        {
+          "path": "target/aarch64-linux-android/release/libocracle.rlib",
+          "preserved_path": "/tmp/ocracle-android-final/default/libocracle.rlib",
+          "bytes": 1875418,
+          "sha256": "6bbc1c89e83697cd5dc8314e939629e73351af7dc176e8165cbbd23fa6a47e30",
+          "file": "current ar archive"
+        }
+      ]
+    },
+    {
+      "variant": "onnxruntime",
+      "command": "CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER=/tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang cargo build --release --locked --target aarch64-linux-android --lib --bin ocracle --example latency --features onnxruntime",
+      "exit_code": 0,
+      "artifacts": [
+        {
+          "path": "target/aarch64-linux-android/release/ocracle",
+          "preserved_path": "/tmp/ocracle-android-final/onnxruntime/ocracle",
+          "bytes": 10242368,
+          "sha256": "5c69dee4216a7c4093b618883e27ed9c15282bd89957030adeae8103efaac000",
+          "file": "ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, not stripped",
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "interpreter": "/system/bin/linker64",
+          "load_segment_alignment_bytes": [
+            16384
+          ]
+        },
+        {
+          "path": "target/aarch64-linux-android/release/examples/latency",
+          "preserved_path": "/tmp/ocracle-android-final/onnxruntime/latency",
+          "bytes": 9625304,
+          "sha256": "ecef4038150ff53823cd98869fd22a65abbe029eadbf7387313d2b0757a0ca27",
+          "file": "ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, not stripped",
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "interpreter": "/system/bin/linker64",
+          "load_segment_alignment_bytes": [
+            16384
+          ]
+        },
+        {
+          "path": "target/aarch64-linux-android/release/libocracle.rlib",
+          "preserved_path": "/tmp/ocracle-android-final/onnxruntime/libocracle.rlib",
+          "bytes": 2154132,
+          "sha256": "c195d630a98f948520b1abbe9835b1ef7c0b0384cf190bdff931870cccd631e0",
+          "file": "current ar archive"
+        }
+      ]
+    }
+  ],
+  "msrv": {
+    "rustc": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+    "command": "cargo +1.94.0 check --locked --all-targets --all-features",
+    "exit_code": 0
+  },
+  "source_changed_during_build": false,
+  "build_log": "android-build-output.txt",
+  "elf_report": "android-elf.txt",
+  "native_runtime_requirement": "The optional feature dynamically loads an application-supplied Android libonnxruntime.so when OnnxRuntime is selected. Native loading and inference were not executed on Android."
+}

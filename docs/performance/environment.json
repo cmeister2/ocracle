@@ -1,0 +1,8 @@
+{
+  "baseline_commit": "4b0fce993747e2f7d8f80060eaa8bd5e6b66d17b",
+  "cpu": "AMD Ryzen 7 PRO 7840U; WSL2 x86_64 Linux",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "date": "2026-10-20",
+  "warmup_runs": 3,
+  "notes": "Release build. Model loading and image decoding excluded from warm latency. Sequential runs, no concurrent benchmarks. Desktop measurements do not establish Android FPS."
+}

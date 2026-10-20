@@ -2,6 +2,22 @@
 
 use serde::{Deserialize, Serialize};
 
+/// CPU runtime used for neural inference.
+///
+/// The optional ONNX Runtime backend requires the `onnxruntime` Cargo feature
+/// and a compatible native ONNX Runtime library deployed with the application.
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize, PartialEq, Eq, clap::ValueEnum)]
+#[serde(rename_all = "snake_case")]
+pub enum InferenceBackend {
+    /// Portable Rust runtime, supporting RTen and ONNX model files.
+    #[default]
+    Rten,
+    /// ONNX Runtime CPU execution; accepts ONNX model files only.
+    #[serde(rename = "onnxruntime")]
+    #[value(name = "onnxruntime")]
+    OnnxRuntime,
+}
+
 /// Configuration tied to a recognition checkpoint's training alphabet.
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct ModelConfig {
@@ -169,6 +185,9 @@ pub struct Options {
 /// Identity of the actual recognition weights used for this result.
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct ModelIdentity {
+    /// Execution runtime; old saved results default to RTen.
+    #[serde(default)]
+    pub backend: InferenceBackend,
     /// Model name supplied with its alphabet and input shape.
     pub name: String,
     /// Printed card language supported by the loaded recognition profile.

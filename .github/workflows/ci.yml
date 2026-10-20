@@ -92,9 +92,34 @@ jobs:
       - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
         with:
           shared-key: neural
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
       - run: python3 training/download_models.py
       - run: python3 scripts/verify_models.py --require-models
       - run: cargo test --release --locked --test neural -- --ignored
+      - name: Install pinned native ONNX Runtime CPU library
+        run: |
+          python -m pip install --index-url https://pypi.org/simple --only-binary=:all: --no-deps onnxruntime==1.31.0
+          python - <<'PY'
+          import importlib.metadata
+          import os
+          from pathlib import Path
+          package = importlib.metadata.distribution("onnxruntime")
+          assert package.version == "1.31.0"
+          library = Path(package.locate_file("onnxruntime/capi/libonnxruntime.so.1.31.0")).resolve()
+          assert library.is_file(), library
+          with open(os.environ["GITHUB_ENV"], "a") as environment:
+              environment.write(f"ORT_DYLIB_PATH={library}\n")
+          PY
+      - name: Exercise native runtime and real-image backend parity
+        env:
+          OCRACLE_NATIVE_TESTS: "1"
+          RTEN_NUM_THREADS: "2"
+        run: |
+          test -f "${ORT_DYLIB_PATH:?native runtime library must be configured}"
+          cargo test --release --locked --features onnxruntime --lib runtime::tests::supplied_native_runtime_matches_rten_and_serializes_shared_calls -- --exact --nocapture
+          cargo test --release --locked --features onnxruntime --test native_backend -- --nocapture --test-threads=1
 
   training:
     name: Training and degradation contracts

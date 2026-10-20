@@ -40,6 +40,13 @@ This is a choice by aggregate accuracy, not a guarantee for every crop. Medium's
 
 Advanced model-loading and preprocessing APIs remain available for reproducing research, rather than as required application configuration. Their reports retain original weights, configuration hashes and results independently of the current default.
 
+For a camera pipeline that already supplies an upright title crop, load
+`CardOcr::load_profile("en", ".", None)` once and call `recognize` with
+`Options { single_line: true, ..Options::default() }`. This skips detector loading
+and inference. Coordinates refer to that crop; retain its transform to the camera
+frame in the calling application. The [performance investigation](performance/README.md)
+compares this path, an optional native CPU runtime, and full-card workloads.
+
 ## Training and evaluation
 
 See [training](training/english-crnn.md) for reproducible acquisition, card-identity splits, augmentation, training, export and measured results, and the [font coverage audit](font-coverage.md) for the broader inventory and gaps. Real scan crops expose the historical proprietary letterforms without redistributing proprietary font files. Open fonts supply additional regular and italic synthetic examples; they are explicitly identified as substitutes, not the original Magic fonts.

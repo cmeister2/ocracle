@@ -8,7 +8,7 @@ use std::{
 
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
-use ocracle::{CardOcr, Layout, ModelConfig, Options, Passes};
+use ocracle::{CardOcr, InferenceBackend, Layout, ModelConfig, Options, Passes};
 
 /// Extract printed Magic: The Gathering text from card images.
 #[derive(Parser)]
@@ -41,6 +41,12 @@ enum Command {
         /// JSON checkpoint alphabet, input height, architecture and model name.
         #[arg(long, hide = true, requires = "recognition_model")]
         model_config: Option<PathBuf>,
+        /// CPU inference runtime; onnxruntime requires its Cargo feature and native library.
+        #[arg(long, value_enum, default_value = "rten")]
+        backend: InferenceBackend,
+        /// Inference worker threads for either backend; omission keeps runtime defaults.
+        #[arg(long)]
+        threads: Option<usize>,
         /// Treat the entire image as one line and skip detection.
         #[arg(long)]
         line: bool,
@@ -68,6 +74,8 @@ fn main() -> Result<()> {
             model_root,
             detection_model,
             model_config,
+            backend,
+            threads,
             line,
             passes,
             layout,
@@ -76,7 +84,13 @@ fn main() -> Result<()> {
             let engine = if let Some(language) = language {
                 let detector = detection_model
                     .or_else(|| (!line).then(|| model_root.join("models/text-detection.onnx")));
-                CardOcr::load_profile(&language, model_root, detector.as_deref())?
+                CardOcr::load_profile_with_backend(
+                    &language,
+                    model_root,
+                    detector.as_deref(),
+                    backend,
+                    threads,
+                )?
             } else {
                 let config = model_config
                     .map(|path| -> Result<ModelConfig> {
@@ -85,10 +99,12 @@ fn main() -> Result<()> {
                     })
                     .transpose()?
                     .unwrap_or_default();
-                CardOcr::load(
+                CardOcr::load_with_backend(
                     recognition_model.context("supply --language or --recognition-model")?,
                     detection_model.as_deref(),
                     config,
+                    backend,
+                    threads,
                 )?
             };
             let image = image::ImageReader::open(&image)

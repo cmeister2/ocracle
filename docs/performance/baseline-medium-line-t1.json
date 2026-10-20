@@ -1,0 +1,56 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 148.334775,
+  "image": "docs/gallery/assets/beleren-title.png",
+  "image_size": [
+    201,
+    46
+  ],
+  "lines": [
+    {
+      "bounds": [
+        0,
+        0,
+        201,
+        46
+      ],
+      "confidence": 0.9999980330467224,
+      "text": "Divination"
+    }
+  ],
+  "load_ms": 192.659084,
+  "median_ms": 131.23934400000002,
+  "model": {
+    "detector_sha256": null,
+    "language": "en",
+    "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+    "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba"
+  },
+  "os": "linux",
+  "p95_ms": 142.888089,
+  "samples_ms": [
+    130.777734,
+    126.23400400000001,
+    126.794038,
+    125.91607699999999,
+    132.880673,
+    129.285123,
+    129.021816,
+    127.15226499999999,
+    127.40094399999998,
+    136.798342,
+    132.062019,
+    124.842,
+    139.223392,
+    142.120725,
+    131.596462,
+    127.32018000000001,
+    131.23934400000002,
+    132.23826499999998,
+    144.657477,
+    142.888089
+  ],
+  "single_line": true,
+  "text": "Divination",
+  "threads": "1"
+}

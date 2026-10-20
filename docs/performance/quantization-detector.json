@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "purpose": "experimental export; runtime, accuracy and latency require separate validation",
+  "tool_versions": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0"
+  },
+  "settings": {
+    "mode": "dynamic",
+    "operators": [
+      "Conv",
+      "MatMul"
+    ],
+    "weight_type": "QInt8",
+    "per_channel_requested": true,
+    "reduce_range": false,
+    "MatMulConstBOnly": true
+  },
+  "source": {
+    "file": "text-detection.onnx",
+    "bytes": 2499479,
+    "sha256": "a917b23dbd9524b465df7e922641b3ff2981623df4ded5a0234004ef2fee7cfe",
+    "opsets": {
+      "": 23
+    },
+    "operators": {
+      "Concat": 6,
+      "Conv": 53,
+      "ConvTranspose": 6,
+      "MaxPool": 6,
+      "Relu": 26,
+      "Sigmoid": 1,
+      "Slice": 12
+    },
+    "inputs": [
+      {
+        "name": "input.1",
+        "element_type": 1,
+        "shape": [
+          1,
+          1,
+          800,
+          600
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "380",
+        "element_type": 1,
+        "shape": [
+          1,
+          1,
+          800,
+          600
+        ]
+      }
+    ]
+  },
+  "output": {
+    "file": "ocracle-detector-dynamic-int8.onnx",
+    "bytes": 1896177,
+    "sha256": "e5aa6f8da0047f4adaf9ee1135b9a8be40d6e85742f3e46b83c5356d68dcd911",
+    "opsets": {
+      "": 23
+    },
+    "operators": {
+      "Add": 27,
+      "Cast": 53,
+      "Concat": 6,
+      "ConvInteger": 53,
+      "ConvTranspose": 6,
+      "DynamicQuantizeLinear": 53,
+      "MaxPool": 6,
+      "Mul": 106,
+      "Relu": 26,
+      "Reshape": 27,
+      "Sigmoid": 1,
+      "Slice": 12
+    },
+    "inputs": [
+      {
+        "name": "input.1",
+        "element_type": 1,
+        "shape": [
+          1,
+          1,
+          800,
+          600
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "380",
+        "element_type": 1,
+        "shape": [
+          1,
+          1,
+          800,
+          600
+        ]
+      }
+    ]
+  }
+}

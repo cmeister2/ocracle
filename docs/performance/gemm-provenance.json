@@ -1,0 +1,17 @@
+{
+  "upstream_revision": "14cbf4620476f402237bb29f731a244d3b6bed4d",
+  "crate_version": "0.26.0",
+  "crate_archive_sha256": "8efc07c654d4b3f8d81e2efd8b13aea7475568395289e5bb35393411aa6a451e",
+  "source_change": "pub visibility for F32KernelType, Int8KernelType and WithKernel only",
+  "source_library_sha256": "ee7a3783b15fa7742b3c0d27d26ee94c3ac089ea8333616f51d88a6eb24b7c5d",
+  "copied_library_sha256": "f37da5143f6bd1128c22a25c76d904745a48cfc492f476dcc12f15b6d6f7b38f",
+  "probe_sha256": "c8ef797a31ff160b69237ccb4c6b62e91e6f81f42b117169e8b809693c0f893f",
+  "scope": "synthetic float32 GEMM; not full OCR, scalar-only, or Android evidence",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "host": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dependency_lock_sha256": "bacb079287094ecd93d0c47dc143cf3c6e00ca6283a9471b407c95d3bb43ea09",
+  "run_command": "RAYON_NUM_THREADS=1 /tmp/ocracle-gemm-probe/target/release/ocracle-gemm-probe 20",
+  "rayon_threads": 1,
+  "repetitions": 20,
+  "result_file": "gemm-kernels.jsonl"
+}

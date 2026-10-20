@@ -1,0 +1,2851 @@
+{
+  "schema_version": 1,
+  "label": "python-tiny-title",
+  "status": "complete",
+  "started_at": "2026-10-20T09:27:35.782700+00:00",
+  "measurement_scope": "warm public OCR call; model loading and image decoding excluded; desktop timings do not establish Android FPS",
+  "host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "manifest": "docs/performance/fixtures/manifest.json",
+  "manifest_sha256": "f67659bf20b23a97c9febabdd438f802b5422c4496f8f4611fc7c60a2c58fa8d",
+  "executable": "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+  "executable_sha256": "36e77c2f7bee497d19b3fd115470a30d72b80bd2d86d9f66fd0eb7bb49f29f0b",
+  "model": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+  "model_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+  "configuration": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+  "configuration_sha256": "fcd2d1952990d7508f149307de0d9034c3f9d4d9c47c12819ad6c38e68e0763b",
+  "detector": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_det_onnx/inference.onnx",
+  "detector_sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+  "threads": 4,
+  "layout": "standard_card",
+  "backend": "onnxruntime",
+  "iterations": 5,
+  "requested_samples": [
+    "line-goudy-title-clean",
+    "line-goudy-title-blur",
+    "line-matrix-title-clean",
+    "line-matrix-title-blur",
+    "line-beleren-title-clean",
+    "line-beleren-title-blur",
+    "line-future-title-clean",
+    "line-future-title-blur",
+    "line-colorshift-title-clean",
+    "line-colorshift-title-blur",
+    "line-dracula-title-clean",
+    "line-dracula-title-blur",
+    "line-invocation-title-clean",
+    "line-invocation-title-blur",
+    "line-module-title-clean",
+    "line-module-title-blur"
+  ],
+  "records": [
+    {
+      "sample": {
+        "id": "line-goudy-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Llanowar Elves",
+          "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+          "set": "Limited Edition Alpha",
+          "language": "en",
+          "collector_number": "210",
+          "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+          "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+          "artist": "Anson Maddocks"
+        },
+        "variant": "clean",
+        "ground_truth": "Llanowar Elves",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/goudy-title.png",
+        "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+        "image_size": [
+          273,
+          47
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title.png",
+        "image_sha256": "1b006e849db322bfbf76e0fd2556e6c6a09683e6af1b90f8b5de96e9adb62c22",
+        "image_size": [
+          273,
+          47
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 130.7488669990562,
+        "cold_ms": 8.284534997073933,
+        "samples_ms": [
+          4.764803990838118,
+          4.5397029898595065,
+          4.57429800007958,
+          5.330340994987637,
+          4.428043001098558
+        ],
+        "median_ms": 4.57429800007958,
+        "p95_ms": 5.330340994987637,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.002248998498544097,
+            "recognition_preprocess_inference_decode_ms": 4.730407992610708
+          },
+          {
+            "layout_ms": 0.0008750066626816988,
+            "recognition_preprocess_inference_decode_ms": 4.489013008424081
+          },
+          {
+            "layout_ms": 0.0011350057320669293,
+            "recognition_preprocess_inference_decode_ms": 4.536248990916647
+          },
+          {
+            "layout_ms": 0.0019309954950585961,
+            "recognition_preprocess_inference_decode_ms": 5.281981008010916
+          },
+          {
+            "layout_ms": 0.0013029930414631963,
+            "recognition_preprocess_inference_decode_ms": 4.397705997689627
+          }
+        ],
+        "text": "Llanowar Clves",
+        "lines": [
+          {
+            "text": "Llanowar Clves",
+            "confidence": 0.9354230165481567,
+            "bounds": [
+              0,
+              0,
+              273,
+              47
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                273,
+                0
+              ],
+              [
+                273,
+                47
+              ],
+              [
+                0,
+                47
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Llanowar Elves",
+        "observed": "Llanowar Clves",
+        "character_edits": 1,
+        "reference_characters": 14,
+        "character_error_rate": 0.07142857142857142,
+        "exact_match": false
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-goudy-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Llanowar Elves",
+          "print_id": "d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb",
+          "set": "Limited Edition Alpha",
+          "language": "en",
+          "collector_number": "210",
+          "scryfall_url": "https://scryfall.com/card/lea/210/llanowar-elves?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/4/d4f1cc9e-4f99-4c26-ac1b-8ef069fa8ceb.png?1783948674",
+          "source_image_sha256": "9ea0f32898c5ab0fc0c91a959e4543e19cdf411cd9de3b212618eaf18d70cf3c",
+          "artist": "Anson Maddocks"
+        },
+        "variant": "blur",
+        "ground_truth": "Llanowar Elves",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/goudy-title-blur.png",
+        "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+        "image_size": [
+          82,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title-blur.png",
+        "image_sha256": "6e7ef1fe40a703d3df8e29846432c8e5f3f0fa31af19ecc5ba5c3065ec2d979a",
+        "image_size": [
+          82,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 128.0365920101758,
+        "cold_ms": 6.54909000149928,
+        "samples_ms": [
+          4.620658000931144,
+          4.469614999834448,
+          5.042288001277484,
+          5.167941999388859,
+          5.025756996474229
+        ],
+        "median_ms": 5.025756996474229,
+        "p95_ms": 5.167941999388859,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0028270005714148283,
+            "recognition_preprocess_inference_decode_ms": 4.583386005833745
+          },
+          {
+            "layout_ms": 0.0012840027920901775,
+            "recognition_preprocess_inference_decode_ms": 4.443917001481168
+          },
+          {
+            "layout_ms": 0.0015830009942874312,
+            "recognition_preprocess_inference_decode_ms": 4.950075002852827
+          },
+          {
+            "layout_ms": 0.002358996425755322,
+            "recognition_preprocess_inference_decode_ms": 5.13077799405437
+          },
+          {
+            "layout_ms": 0.00048801302909851074,
+            "recognition_preprocess_inference_decode_ms": 4.990433997591026
+          }
+        ],
+        "text": "Llanowar Zlvcs",
+        "lines": [
+          {
+            "text": "Llanowar Zlvcs",
+            "confidence": 0.8781434297561646,
+            "bounds": [
+              0,
+              0,
+              82,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                82,
+                0
+              ],
+              [
+                82,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Llanowar Elves",
+        "observed": "Llanowar Zlvcs",
+        "character_edits": 2,
+        "reference_characters": 14,
+        "character_error_rate": 0.14285714285714285,
+        "exact_match": false
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/goudy-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-matrix-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Air Elemental",
+          "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+          "set": "Eighth Edition",
+          "language": "en",
+          "collector_number": "59",
+          "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+          "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+          "artist": "Wayne England"
+        },
+        "variant": "clean",
+        "ground_truth": "Air Elemental",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/matrix-title.png",
+        "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+        "image_size": [
+          267,
+          45
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title.png",
+        "image_sha256": "9332474ccffac13b46b5a21449f1dc8dfa6959efed356354118e74ea31f9d1b7",
+        "image_size": [
+          267,
+          45
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 123.97406400123145,
+        "cold_ms": 7.026487000985071,
+        "samples_ms": [
+          4.499204005696811,
+          5.279553006403148,
+          5.06789400242269,
+          4.928933005430736,
+          6.139789998997003
+        ],
+        "median_ms": 5.06789400242269,
+        "p95_ms": 6.139789998997003,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.009972005500458181,
+            "recognition_preprocess_inference_decode_ms": 4.458310999325477
+          },
+          {
+            "layout_ms": 0.0011350057320669293,
+            "recognition_preprocess_inference_decode_ms": 5.241716004093178
+          },
+          {
+            "layout_ms": 0.0017309939721599221,
+            "recognition_preprocess_inference_decode_ms": 5.02042198786512
+          },
+          {
+            "layout_ms": 0.001701992005109787,
+            "recognition_preprocess_inference_decode_ms": 4.888158990070224
+          },
+          {
+            "layout_ms": 0.0012740056263282895,
+            "recognition_preprocess_inference_decode_ms": 6.068452988984063
+          }
+        ],
+        "text": "Air Elemental",
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.9982163906097412,
+            "bounds": [
+              0,
+              0,
+              267,
+              45
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                267,
+                0
+              ],
+              [
+                267,
+                45
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Air Elemental",
+        "observed": "Air Elemental",
+        "character_edits": 0,
+        "reference_characters": 13,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-matrix-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Air Elemental",
+          "print_id": "3b15648c-1d88-42ec-b2f7-aab9a8c256a2",
+          "set": "Eighth Edition",
+          "language": "en",
+          "collector_number": "59",
+          "scryfall_url": "https://scryfall.com/card/8ed/59/air-elemental?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/3/b/3b15648c-1d88-42ec-b2f7-aab9a8c256a2.png?1783944816",
+          "source_image_sha256": "3bbd32b43f05b37fdedb0fd04b181bbbe50c1dd4745c92b7848245029a26a9a4",
+          "artist": "Wayne England"
+        },
+        "variant": "blur",
+        "ground_truth": "Air Elemental",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/matrix-title-blur.png",
+        "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+        "image_size": [
+          80,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title-blur.png",
+        "image_sha256": "5bc93045fc36f8ea7c31ca7b6fbfed8bb398c245898edfc600437747e96a6c08",
+        "image_size": [
+          80,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 127.31274000543635,
+        "cold_ms": 6.567160002305172,
+        "samples_ms": [
+          4.065383007400669,
+          5.629448001855053,
+          4.5041889970889315,
+          4.2543819872662425,
+          4.367019995697774
+        ],
+        "median_ms": 4.367019995697774,
+        "p95_ms": 5.629448001855053,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0015530094970017672,
+            "recognition_preprocess_inference_decode_ms": 4.038981001940556
+          },
+          {
+            "layout_ms": 0.0008950009942054749,
+            "recognition_preprocess_inference_decode_ms": 5.5963380000321195
+          },
+          {
+            "layout_ms": 0.0010350049706175923,
+            "recognition_preprocess_inference_decode_ms": 4.469765000976622
+          },
+          {
+            "layout_ms": 0.0007660128176212311,
+            "recognition_preprocess_inference_decode_ms": 4.223939002258703
+          },
+          {
+            "layout_ms": 0.0009359937394037843,
+            "recognition_preprocess_inference_decode_ms": 4.336715996032581
+          }
+        ],
+        "text": "Air Elemental",
+        "lines": [
+          {
+            "text": "Air Elemental",
+            "confidence": 0.9988941550254822,
+            "bounds": [
+              0,
+              0,
+              80,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                80,
+                0
+              ],
+              [
+                80,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Air Elemental",
+        "observed": "Air Elemental",
+        "character_edits": 0,
+        "reference_characters": 13,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/matrix-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-beleren-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Divination",
+          "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+          "set": "Magic 2015",
+          "language": "en",
+          "collector_number": "52",
+          "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+          "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+          "artist": "Howard Lyon"
+        },
+        "variant": "clean",
+        "ground_truth": "Divination",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/beleren-title.png",
+        "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+        "image_size": [
+          201,
+          46
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title.png",
+        "image_sha256": "03d8a5e09e75ab3f040b90b9ef4ef9cd886390a299a2e7569f3b6ba18f226df7",
+        "image_size": [
+          201,
+          46
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 132.83135599340312,
+        "cold_ms": 5.948089994490147,
+        "samples_ms": [
+          5.163609006558545,
+          5.67985899397172,
+          5.064174998551607,
+          5.049059007433243,
+          4.855603008763865
+        ],
+        "median_ms": 5.064174998551607,
+        "p95_ms": 5.67985899397172,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.000557003659196198,
+            "recognition_preprocess_inference_decode_ms": 5.113214996526949
+          },
+          {
+            "layout_ms": 0.0013730023056268692,
+            "recognition_preprocess_inference_decode_ms": 5.6272649962920696
+          },
+          {
+            "layout_ms": 0.0009950017556548119,
+            "recognition_preprocess_inference_decode_ms": 5.018210009438917
+          },
+          {
+            "layout_ms": 0.000676998752169311,
+            "recognition_preprocess_inference_decode_ms": 5.003700003726408
+          },
+          {
+            "layout_ms": 0.0010839867172762752,
+            "recognition_preprocess_inference_decode_ms": 4.810084996279329
+          }
+        ],
+        "text": "Divination",
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.9975835680961609,
+            "bounds": [
+              0,
+              0,
+              201,
+              46
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                201,
+                0
+              ],
+              [
+                201,
+                46
+              ],
+              [
+                0,
+                46
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Divination",
+        "observed": "Divination",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-beleren-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Divination",
+          "print_id": "ddd1187d-f43f-4508-b312-7af0bb8b9789",
+          "set": "Magic 2015",
+          "language": "en",
+          "collector_number": "52",
+          "scryfall_url": "https://scryfall.com/card/m15/52/divination?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/d/d/ddd1187d-f43f-4508-b312-7af0bb8b9789.png?1783939193",
+          "source_image_sha256": "eb256a50578f2ac51c7271371b2779bdff6d13921c071cae810baacc2249b308",
+          "artist": "Howard Lyon"
+        },
+        "variant": "blur",
+        "ground_truth": "Divination",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/beleren-title-blur.png",
+        "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+        "image_size": [
+          60,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title-blur.png",
+        "image_sha256": "74fcae75d877eb25fc87e4e5d127d607da40f06f1e4756b7c1cb9876c9ab1843",
+        "image_size": [
+          60,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 129.81101400509942,
+        "cold_ms": 6.548119999933988,
+        "samples_ms": [
+          5.454520010971464,
+          4.858390006120317,
+          5.430456003523432,
+          5.30741699913051,
+          5.34937200427521
+        ],
+        "median_ms": 5.34937200427521,
+        "p95_ms": 5.454520010971464,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0026180059649050236,
+            "recognition_preprocess_inference_decode_ms": 5.404523995821364
+          },
+          {
+            "layout_ms": 0.0013929966371506453,
+            "recognition_preprocess_inference_decode_ms": 4.809079997357912
+          },
+          {
+            "layout_ms": 0.0020000006770715117,
+            "recognition_preprocess_inference_decode_ms": 5.383893003454432
+          },
+          {
+            "layout_ms": 0.0020599982235580683,
+            "recognition_preprocess_inference_decode_ms": 5.272337992209941
+          },
+          {
+            "layout_ms": 0.00177200126927346,
+            "recognition_preprocess_inference_decode_ms": 5.314901005476713
+          }
+        ],
+        "text": "Divination",
+        "lines": [
+          {
+            "text": "Divination",
+            "confidence": 0.9999502301216125,
+            "bounds": [
+              0,
+              0,
+              60,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                60,
+                0
+              ],
+              [
+                60,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Divination",
+        "observed": "Divination",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/beleren-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-future-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Blade of the Sixth Pride",
+          "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+          "set": "Future Sight",
+          "language": "en",
+          "collector_number": "19",
+          "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+          "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+          "artist": "Justin Sweet"
+        },
+        "variant": "clean",
+        "ground_truth": "Blade of the Sixth Pride",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/future-title.png",
+        "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+        "image_size": [
+          455,
+          46
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/future-title.png",
+        "image_sha256": "1dee54d384423cf0dc5572165918226737acca3f3b766b7fd9f2b084dba49cf0",
+        "image_size": [
+          455,
+          46
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 130.15536501188762,
+        "cold_ms": 8.46447299409192,
+        "samples_ms": [
+          6.853854996734299,
+          7.063272991217673,
+          6.92934900871478,
+          6.923548004124314,
+          7.212505006464198
+        ],
+        "median_ms": 6.92934900871478,
+        "p95_ms": 7.212505006464198,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0029049988370388746,
+            "recognition_preprocess_inference_decode_ms": 6.802992007578723
+          },
+          {
+            "layout_ms": 0.0014269899111241102,
+            "recognition_preprocess_inference_decode_ms": 7.008251006482169
+          },
+          {
+            "layout_ms": 0.0013550015864893794,
+            "recognition_preprocess_inference_decode_ms": 6.869409000501037
+          },
+          {
+            "layout_ms": 0.0015090045053511858,
+            "recognition_preprocess_inference_decode_ms": 6.871032004710287
+          },
+          {
+            "layout_ms": 0.0011500087566673756,
+            "recognition_preprocess_inference_decode_ms": 7.1660260000498965
+          }
+        ],
+        "text": "Blade of the Sixth Pride",
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.9965758919715881,
+            "bounds": [
+              0,
+              0,
+              455,
+              46
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                455,
+                0
+              ],
+              [
+                455,
+                46
+              ],
+              [
+                0,
+                46
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            474
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Blade of the Sixth Pride",
+        "observed": "Blade of the Sixth Pride",
+        "character_edits": 0,
+        "reference_characters": 24,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/future-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-future-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Blade of the Sixth Pride",
+          "print_id": "f6ccfe28-ec08-4751-b65c-c40b2bafa955",
+          "set": "Future Sight",
+          "language": "en",
+          "collector_number": "19",
+          "scryfall_url": "https://scryfall.com/card/fut/19/blade-of-the-sixth-pride?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/f/6/f6ccfe28-ec08-4751-b65c-c40b2bafa955.png?1783943127",
+          "source_image_sha256": "3f520a8e5d4cb108568ba34d13d97c9bfaa2283b5a6c02d7730612b104cf573f",
+          "artist": "Justin Sweet"
+        },
+        "variant": "blur",
+        "ground_truth": "Blade of the Sixth Pride",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/future-title-blur.png",
+        "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+        "image_size": [
+          136,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/future-title-blur.png",
+        "image_sha256": "f2ba8e2bf9ef184b38c66ea03b19148dda605bc3915ae3fce43395afcd0be5f3",
+        "image_size": [
+          136,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 132.19847399159335,
+        "cold_ms": 8.124843006953597,
+        "samples_ms": [
+          6.462974997702986,
+          5.880400000023656,
+          5.652592008118518,
+          7.282910999492742,
+          6.642307009315118
+        ],
+        "median_ms": 6.462974997702986,
+        "p95_ms": 7.282910999492742,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0014420074876397848,
+            "recognition_preprocess_inference_decode_ms": 6.421391008188948
+          },
+          {
+            "layout_ms": 0.0013199896784499288,
+            "recognition_preprocess_inference_decode_ms": 5.841937003424391
+          },
+          {
+            "layout_ms": 0.0006960035534575582,
+            "recognition_preprocess_inference_decode_ms": 5.604014004347846
+          },
+          {
+            "layout_ms": 0.0018200080376118422,
+            "recognition_preprocess_inference_decode_ms": 7.224605011288077
+          },
+          {
+            "layout_ms": 0.0015030091162770987,
+            "recognition_preprocess_inference_decode_ms": 6.5983509994111955
+          }
+        ],
+        "text": "Blade of the Sixth Pride",
+        "lines": [
+          {
+            "text": "Blade of the Sixth Pride",
+            "confidence": 0.966084897518158,
+            "bounds": [
+              0,
+              0,
+              136,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                136,
+                0
+              ],
+              [
+                136,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            466
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Blade of the Sixth Pride",
+        "observed": "Blade of the Sixth Pride",
+        "character_edits": 0,
+        "reference_characters": 24,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/future-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-colorshift-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Mana Tithe",
+          "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+          "set": "Planar Chaos",
+          "language": "en",
+          "collector_number": "25",
+          "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+          "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+          "artist": "Martina Pilcerova"
+        },
+        "variant": "clean",
+        "ground_truth": "Mana Tithe",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/colorshift-title.png",
+        "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+        "image_size": [
+          220,
+          45
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title.png",
+        "image_sha256": "91452aa9515f219bb405df0f02bf0f1ef7801aed3383d287c1a21866283d102b",
+        "image_size": [
+          220,
+          45
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 127.27482999616768,
+        "cold_ms": 5.8328239974798635,
+        "samples_ms": [
+          5.3259090054780245,
+          4.4373400014592335,
+          5.223137995926663,
+          4.845860996283591,
+          4.236706008668989
+        ],
+        "median_ms": 4.845860996283591,
+        "p95_ms": 5.3259090054780245,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.00205499236471951,
+            "recognition_preprocess_inference_decode_ms": 5.285349005134776
+          },
+          {
+            "layout_ms": 0.0010840012691915035,
+            "recognition_preprocess_inference_decode_ms": 4.405697996844538
+          },
+          {
+            "layout_ms": 0.0007969938451424241,
+            "recognition_preprocess_inference_decode_ms": 5.173362995265052
+          },
+          {
+            "layout_ms": 0.0012689997674897313,
+            "recognition_preprocess_inference_decode_ms": 4.814136991626583
+          },
+          {
+            "layout_ms": 0.0008590141078457236,
+            "recognition_preprocess_inference_decode_ms": 4.213225009152666
+          }
+        ],
+        "text": "Mana Tithe",
+        "lines": [
+          {
+            "text": "Mana Tithe",
+            "confidence": 0.9955584406852722,
+            "bounds": [
+              0,
+              0,
+              220,
+              45
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                220,
+                0
+              ],
+              [
+                220,
+                45
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Mana Tithe",
+        "observed": "Mana Tithe",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-colorshift-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Mana Tithe",
+          "print_id": "7d48d622-f397-4f31-b1a5-0c23f60aa71c",
+          "set": "Planar Chaos",
+          "language": "en",
+          "collector_number": "25",
+          "scryfall_url": "https://scryfall.com/card/plc/25/mana-tithe?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.png?1783943165",
+          "source_image_sha256": "eba69aa910e876063172f2d288afda276ce4de82208cd7e9cd865eff76472586",
+          "artist": "Martina Pilcerova"
+        },
+        "variant": "blur",
+        "ground_truth": "Mana Tithe",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/colorshift-title-blur.png",
+        "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+        "image_size": [
+          66,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title-blur.png",
+        "image_sha256": "2a983edeacf562d103ed947f7ecd78a3b60c55d1351ac7bd529fb2e631fa5488",
+        "image_size": [
+          66,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 135.17471301020123,
+        "cold_ms": 6.902913999510929,
+        "samples_ms": [
+          4.4390060065779835,
+          4.737511000712402,
+          4.939924998325296,
+          5.77447000250686,
+          4.7809389943722636
+        ],
+        "median_ms": 4.7809389943722636,
+        "p95_ms": 5.77447000250686,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0009380019037052989,
+            "recognition_preprocess_inference_decode_ms": 4.393426992464811
+          },
+          {
+            "layout_ms": 0.00183499651029706,
+            "recognition_preprocess_inference_decode_ms": 4.700197008787654
+          },
+          {
+            "layout_ms": 0.0007649941835552454,
+            "recognition_preprocess_inference_decode_ms": 4.895824007689953
+          },
+          {
+            "layout_ms": 0.0015080004232004285,
+            "recognition_preprocess_inference_decode_ms": 5.729665994294919
+          },
+          {
+            "layout_ms": 0.0015800032997503877,
+            "recognition_preprocess_inference_decode_ms": 4.749801999423653
+          }
+        ],
+        "text": "Mana Tithe",
+        "lines": [
+          {
+            "text": "Mana Tithe",
+            "confidence": 0.9968709945678711,
+            "bounds": [
+              0,
+              0,
+              66,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                66,
+                0
+              ],
+              [
+                66,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Mana Tithe",
+        "observed": "Mana Tithe",
+        "character_edits": 0,
+        "reference_characters": 10,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/colorshift-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-dracula-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Thalia, Guardian of Thraben",
+          "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+          "set": "Innistrad: Crimson Vow",
+          "language": "en",
+          "collector_number": "331",
+          "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+          "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+          "artist": "Magali Villeneuve"
+        },
+        "variant": "clean",
+        "ground_truth": "Mina Harker",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/dracula-title.png",
+        "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+        "image_size": [
+          235,
+          45
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title.png",
+        "image_sha256": "6a4eba7fead8ef2c33c04a473c172f1a412ace5f9c48a71b70637d816c7117c5",
+        "image_size": [
+          235,
+          45
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 122.69781000213698,
+        "cold_ms": 5.645723998895846,
+        "samples_ms": [
+          4.273098995327018,
+          5.3525300027104095,
+          5.229064001468942,
+          4.249901990988292,
+          5.543273990042508
+        ],
+        "median_ms": 5.229064001468942,
+        "p95_ms": 5.543273990042508,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.001344989868812263,
+            "recognition_preprocess_inference_decode_ms": 4.248698998708278
+          },
+          {
+            "layout_ms": 0.0004989997250959277,
+            "recognition_preprocess_inference_decode_ms": 5.298939999192953
+          },
+          {
+            "layout_ms": 0.0017530110199004412,
+            "recognition_preprocess_inference_decode_ms": 5.178705003345385
+          },
+          {
+            "layout_ms": 0.0009069917723536491,
+            "recognition_preprocess_inference_decode_ms": 4.2285800009267405
+          },
+          {
+            "layout_ms": 0.00042800093069672585,
+            "recognition_preprocess_inference_decode_ms": 5.4868810111656785
+          }
+        ],
+        "text": "Mina Harker",
+        "lines": [
+          {
+            "text": "Mina Harker",
+            "confidence": 0.9981424808502197,
+            "bounds": [
+              0,
+              0,
+              235,
+              45
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                235,
+                0
+              ],
+              [
+                235,
+                45
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Mina Harker",
+        "observed": "Mina Harker",
+        "character_edits": 0,
+        "reference_characters": 11,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-dracula-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Thalia, Guardian of Thraben",
+          "print_id": "1830002a-b512-4e51-b3fa-0137d2b4c749",
+          "set": "Innistrad: Crimson Vow",
+          "language": "en",
+          "collector_number": "331",
+          "scryfall_url": "https://scryfall.com/card/vow/331/thalia-guardian-of-thraben?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/1/8/1830002a-b512-4e51-b3fa-0137d2b4c749.png?1783924747",
+          "source_image_sha256": "ee2dc0436d38151782adfec852cfa1fc5605632df3d5556a971994bd7b621044",
+          "artist": "Magali Villeneuve"
+        },
+        "variant": "blur",
+        "ground_truth": "Mina Harker",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/dracula-title-blur.png",
+        "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+        "image_size": [
+          70,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title-blur.png",
+        "image_sha256": "574e52ece5fbe53f0e8ce83788a9ceea5c4d532a48245efd98908dfe938dfbbe",
+        "image_size": [
+          70,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 148.29214999917895,
+        "cold_ms": 7.017156996880658,
+        "samples_ms": [
+          5.635042994981632,
+          6.045543996151537,
+          5.126036005094647,
+          5.240942002274096,
+          5.233279996900819
+        ],
+        "median_ms": 5.240942002274096,
+        "p95_ms": 6.045543996151537,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0021839950932189822,
+            "recognition_preprocess_inference_decode_ms": 5.57886999740731
+          },
+          {
+            "layout_ms": 0.0014630059013143182,
+            "recognition_preprocess_inference_decode_ms": 5.981232010526583
+          },
+          {
+            "layout_ms": 0.001138003426603973,
+            "recognition_preprocess_inference_decode_ms": 5.085889002657495
+          },
+          {
+            "layout_ms": 0.0012289965525269508,
+            "recognition_preprocess_inference_decode_ms": 5.204716988373548
+          },
+          {
+            "layout_ms": 0.0011180090950801969,
+            "recognition_preprocess_inference_decode_ms": 5.170188000192866
+          }
+        ],
+        "text": "Mina Harker",
+        "lines": [
+          {
+            "text": "Mina Harker",
+            "confidence": 0.9699639678001404,
+            "bounds": [
+              0,
+              0,
+              70,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ],
+              [
+                70,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Mina Harker",
+        "observed": "Mina Harker",
+        "character_edits": 0,
+        "reference_characters": 11,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/dracula-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-invocation-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Daze",
+          "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+          "set": "Amonkhet Invocations",
+          "language": "en",
+          "collector_number": "12",
+          "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+          "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+          "artist": "Richard Wright"
+        },
+        "variant": "clean",
+        "ground_truth": "DAZE",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/invocation-title.png",
+        "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+        "image_size": [
+          107,
+          39
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title.png",
+        "image_sha256": "b50e45388089cc08a4a48dfb30f9edc1c34907feb64007bece23cf1afc19954e",
+        "image_size": [
+          107,
+          39
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 134.5081420004135,
+        "cold_ms": 6.447184001444839,
+        "samples_ms": [
+          5.81183101166971,
+          5.776235993835144,
+          5.255990996374749,
+          5.612412001937628,
+          5.916930007515475
+        ],
+        "median_ms": 5.776235993835144,
+        "p95_ms": 5.916930007515475,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0008330098353326321,
+            "recognition_preprocess_inference_decode_ms": 5.738200998166576
+          },
+          {
+            "layout_ms": 0.0023569882614538074,
+            "recognition_preprocess_inference_decode_ms": 5.712727011996321
+          },
+          {
+            "layout_ms": 0.0016459962353110313,
+            "recognition_preprocess_inference_decode_ms": 5.219279002631083
+          },
+          {
+            "layout_ms": 0.000934989657253027,
+            "recognition_preprocess_inference_decode_ms": 5.562774007557891
+          },
+          {
+            "layout_ms": 0.0015450059436261654,
+            "recognition_preprocess_inference_decode_ms": 5.86312600353267
+          }
+        ],
+        "text": "DAZE",
+        "lines": [
+          {
+            "text": "DAZE",
+            "confidence": 0.6631755828857422,
+            "bounds": [
+              0,
+              0,
+              107,
+              39
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                107,
+                0
+              ],
+              [
+                107,
+                39
+              ],
+              [
+                0,
+                39
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "DAZE",
+        "observed": "DAZE",
+        "character_edits": 0,
+        "reference_characters": 4,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-invocation-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Daze",
+          "print_id": "a9b037f1-3298-4ba8-92a8-0843f6e497d7",
+          "set": "Amonkhet Invocations",
+          "language": "en",
+          "collector_number": "12",
+          "scryfall_url": "https://scryfall.com/card/mp2/12/daze?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/a/9/a9b037f1-3298-4ba8-92a8-0843f6e497d7.png?1783936431",
+          "source_image_sha256": "f62ea9fb5f9e13283b49491686035972ec81989bcb7da9d612e326942c908109",
+          "artist": "Richard Wright"
+        },
+        "variant": "blur",
+        "ground_truth": "DAZE",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/invocation-title-blur.png",
+        "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+        "image_size": [
+          32,
+          12
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title-blur.png",
+        "image_sha256": "1097faf2ce56231167734682f8a6d06719ddc4c44dcf996744088e266a641a6e",
+        "image_size": [
+          32,
+          12
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 137.01138300530147,
+        "cold_ms": 6.434961993363686,
+        "samples_ms": [
+          5.540545011172071,
+          4.903160996036604,
+          5.082764007966034,
+          5.566045001614839,
+          4.763247998198494
+        ],
+        "median_ms": 5.082764007966034,
+        "p95_ms": 5.566045001614839,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.0019459985196590424,
+            "recognition_preprocess_inference_decode_ms": 5.483565997565165
+          },
+          {
+            "layout_ms": 0.003598004695959389,
+            "recognition_preprocess_inference_decode_ms": 4.859114997088909
+          },
+          {
+            "layout_ms": 0.001134991180151701,
+            "recognition_preprocess_inference_decode_ms": 5.02114299160894
+          },
+          {
+            "layout_ms": 0.001610998879186809,
+            "recognition_preprocess_inference_decode_ms": 5.527977002202533
+          },
+          {
+            "layout_ms": 0.0014690012903884053,
+            "recognition_preprocess_inference_decode_ms": 4.729366002720781
+          }
+        ],
+        "text": "DAZ€",
+        "lines": [
+          {
+            "text": "DAZ€",
+            "confidence": 0.7412765026092529,
+            "bounds": [
+              0,
+              0,
+              32,
+              12
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ],
+              [
+                32,
+                12
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            320
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "DAZE",
+        "observed": "DAZ€",
+        "character_edits": 1,
+        "reference_characters": 4,
+        "character_error_rate": 0.25,
+        "exact_match": false
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/invocation-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-module-title-clean",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Cave of the Frost Dragon",
+          "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+          "set": "Adventures in the Forgotten Realms",
+          "language": "en",
+          "collector_number": "350",
+          "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+          "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+          "artist": "Larry Elmore"
+        },
+        "variant": "clean",
+        "ground_truth": "Frost Dragon",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/module-title.png",
+        "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+        "image_size": [
+          360,
+          46
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/module-title.png",
+        "image_sha256": "4b9533d47116e12d5cf33f011a4b1daa80df568e8a21b0cd61f3cead83fb696f",
+        "image_size": [
+          360,
+          46
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 135.18996299535502,
+        "cold_ms": 8.01625101303216,
+        "samples_ms": [
+          5.904675999772735,
+          4.75165199895855,
+          5.777715006843209,
+          5.6914149899967015,
+          5.293908005114645
+        ],
+        "median_ms": 5.6914149899967015,
+        "p95_ms": 5.904675999772735,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.002878005034290254,
+            "recognition_preprocess_inference_decode_ms": 5.859484008396976
+          },
+          {
+            "layout_ms": 0.0008710048859938979,
+            "recognition_preprocess_inference_decode_ms": 4.712754001957364
+          },
+          {
+            "layout_ms": 0.0008619972504675388,
+            "recognition_preprocess_inference_decode_ms": 5.736474995501339
+          },
+          {
+            "layout_ms": 0.0011039956007152796,
+            "recognition_preprocess_inference_decode_ms": 5.653600994264707
+          },
+          {
+            "layout_ms": 0.0010130024747923017,
+            "recognition_preprocess_inference_decode_ms": 5.256489006569609
+          }
+        ],
+        "text": "Frost Dragon",
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.9990093111991882,
+            "bounds": [
+              0,
+              0,
+              360,
+              46
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                360,
+                0
+              ],
+              [
+                360,
+                46
+              ],
+              [
+                0,
+                46
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            375
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Frost Dragon",
+        "observed": "Frost Dragon",
+        "character_edits": 0,
+        "reference_characters": 12,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/module-title.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    },
+    {
+      "sample": {
+        "id": "line-module-title-blur",
+        "workload": "line",
+        "mode": "line",
+        "language": "en",
+        "source": {
+          "name": "Cave of the Frost Dragon",
+          "print_id": "c4c35234-2518-494c-8c1e-fd5702145967",
+          "set": "Adventures in the Forgotten Realms",
+          "language": "en",
+          "collector_number": "350",
+          "scryfall_url": "https://scryfall.com/card/afr/350/cave-of-the-frost-dragon?utm_source=api",
+          "image_url": "https://cards.scryfall.io/png/front/c/4/c4c35234-2518-494c-8c1e-fd5702145967.png?1783926398",
+          "source_image_sha256": "2f5d1fd067df14b1c681a0770fb15daf8ad5b211a3223c2e1e2026af5e6d50e1",
+          "artist": "Larry Elmore"
+        },
+        "variant": "blur",
+        "ground_truth": "Frost Dragon",
+        "scoring": "complete crop text; NFC and collapsed whitespace",
+        "image": "docs/gallery/assets/module-title-blur.png",
+        "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+        "image_size": [
+          108,
+          14
+        ]
+      },
+      "inference": {
+        "implementation": "experimental_python_paddle_db_ctc",
+        "measurement_scope": "warm fresh Python OCR pipeline; excludes model loading and image decoding; not Android production or handset FPS",
+        "source_contract": "https://github.com/PaddlePaddle/PaddleX/tree/c852371c701d83cd21955b2963834825920ffebb",
+        "backend": "onnxruntime",
+        "layout": "text",
+        "single_line": true,
+        "model": {
+          "name": "PP-OCRv6_tiny_rec",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "detector_sha256": null
+        },
+        "recognition_artifact": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.onnx",
+          "published_lfs_sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+        },
+        "recognition_configuration": {
+          "path": "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.yml",
+          "sha256": "66170210bad538e83fff3c4a3867e547d6bf20b50d64b20347c4b913f3034ea1",
+          "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+          "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+          "source_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/resolve/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30/inference.yml",
+          "published_lfs_sha256": null
+        },
+        "detector_artifact": null,
+        "detector_configuration": null,
+        "image": "/home/max/code/github/ocracle/docs/gallery/assets/module-title-blur.png",
+        "image_sha256": "51e6077d418e82f6eb401161394b818236b18f0b98ea069ffe81c8816f11033d",
+        "image_size": [
+          108,
+          14
+        ],
+        "threads": 4,
+        "opencv_threads": 1,
+        "recognition_batch_size": 6,
+        "detector_max_side": 960,
+        "detector_limit_type": "max",
+        "runtime": {
+          "onnxruntime": "1.31.0",
+          "numpy": "2.5.4",
+          "opencv": "5.0.0",
+          "pyclipper": "1.4.0",
+          "python": "3.12.3",
+          "native_library": {
+            "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+            "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+          }
+        },
+        "arch": "x86_64",
+        "os": "Linux",
+        "load_ms": 149.02900799643248,
+        "cold_ms": 6.922017011675052,
+        "samples_ms": [
+          5.369374004658312,
+          5.603972007520497,
+          5.996200008667074,
+          5.257105003693141,
+          5.44091199117247
+        ],
+        "median_ms": 5.44091199117247,
+        "p95_ms": 5.996200008667074,
+        "stage_samples_ms": [
+          {
+            "layout_ms": 0.001920998329296708,
+            "recognition_preprocess_inference_decode_ms": 5.318349998560734
+          },
+          {
+            "layout_ms": 0.0011830125004053116,
+            "recognition_preprocess_inference_decode_ms": 5.55463699856773
+          },
+          {
+            "layout_ms": 0.0015680125216022134,
+            "recognition_preprocess_inference_decode_ms": 5.956876004347578
+          },
+          {
+            "layout_ms": 0.0008899951353669167,
+            "recognition_preprocess_inference_decode_ms": 5.220894992817193
+          },
+          {
+            "layout_ms": 0.0011119991540908813,
+            "recognition_preprocess_inference_decode_ms": 5.401083995820954
+          }
+        ],
+        "text": "Frost Dragon",
+        "lines": [
+          {
+            "text": "Frost Dragon",
+            "confidence": 0.9977787137031555,
+            "bounds": [
+              0,
+              0,
+              108,
+              14
+            ],
+            "quad": [
+              [
+                0,
+                0
+              ],
+              [
+                108,
+                0
+              ],
+              [
+                108,
+                14
+              ],
+              [
+                0,
+                14
+              ]
+            ],
+            "detector_confidence": null
+          }
+        ],
+        "recognition_batches": [
+          [
+            1,
+            3,
+            48,
+            370
+          ]
+        ],
+        "detector_input_shape": null,
+        "confidence_method": "Paddle arithmetic mean of first emitted timestep posteriors; uncalibrated"
+      },
+      "evaluation": {
+        "reference": "Frost Dragon",
+        "observed": "Frost Dragon",
+        "character_edits": 0,
+        "reference_characters": 12,
+        "character_error_rate": 0.0,
+        "exact_match": true
+      },
+      "command": [
+        "/home/max/code/github/ocracle/scripts/mobile_ocr_probe.py",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/inference.onnx",
+        "/tmp/ocracle-mobile-v5/PP-OCRv6_tiny_rec_onnx/probe-config.json",
+        "/home/max/code/github/ocracle/docs/gallery/assets/module-title-blur.png",
+        "5",
+        "line"
+      ],
+      "effective_layout": "text"
+    }
+  ],
+  "runtime_library": {
+    "path": "/tmp/ocracle-mobile-probe-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime.so.1.31.0",
+    "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001"
+  },
+  "finished_at": "2026-10-20T09:27:44.548366+00:00"
+}

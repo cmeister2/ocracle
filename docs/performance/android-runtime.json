@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "inspected_on": "2026-10-20",
+  "scope": "Official Android native runtime package inspection; no device execution or latency measurement",
+  "maven_coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.31.0",
+  "archive_url": "https://repo.maven.apache.org/maven2/com/microsoft/onnxruntime/onnxruntime-android/1.31.0/onnxruntime-android-1.31.0.aar",
+  "archive_bytes": 55138854,
+  "published_sha1_url": "https://repo.maven.apache.org/maven2/com/microsoft/onnxruntime/onnxruntime-android/1.31.0/onnxruntime-android-1.31.0.aar.sha1",
+  "published_sha1_verified": "09e434725ac3aea8a313f74d942c1b6e0ad5091e",
+  "observed_sha256": "72683787a80d0608a3121b967d8e1239aef48286826661c953211626690540a7",
+  "manifest_min_sdk": 24,
+  "library": {
+    "archive_path": "jni/arm64-v8a/libonnxruntime.so",
+    "bytes": 34208680,
+    "sha256": "8005a741e57117b4d7b476417706c0e9af13cf1b89db47e60f0cbc56e1af91e0",
+    "elf_type": "DYN",
+    "architecture": "AArch64",
+    "load_segment_alignment": 16384,
+    "android_api_note": 24,
+    "android_ndk_note": "r28 / 13004108",
+    "build_id": "971fd35cd3168b0537d4597eeea1b18fd69e1689",
+    "needed": ["libdl.so", "liblog.so", "libandroid.so", "libm.so", "libc.so"],
+    "inspection_command": "/tmp/android-ndk-r30/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-readelf --dynamic --notes --program-headers /tmp/ocracle-ort-android-1.31.0/jni/arm64-v8a/libonnxruntime.so"
+  },
+  "rust_binding": "ort =2.0.0-rc.13, default-features=false, load-dynamic",
+  "packaging_note": "Only libonnxruntime.so is required by the Rust C API client; libonnxruntime4j_jni.so belongs to the Java binding.",
+  "installation_documentation": "https://onnxruntime.ai/docs/install/#install-on-android"
+}

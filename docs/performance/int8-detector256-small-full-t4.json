@@ -1,0 +1,57 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 57.139717,
+  "image": "docs/gallery/assets/modern-rules.png",
+  "image_size": [
+    283,
+    42
+  ],
+  "layout": "text",
+  "lines": [
+    {
+      "bounds": [
+        0,
+        4,
+        275,
+        32
+      ],
+      "confidence": 0.9494513273239136,
+      "text": "DraW two cards."
+    }
+  ],
+  "load_ms": 37.670162,
+  "median_ms": 56.253381999999995,
+  "model": {
+    "detector_sha256": "e1afe709ee88aef42f4a59aecfca4f83a79bb75ed90671369994c0af54436fec",
+    "language": "en",
+    "name": "PP-OCRv6 small (upstream)",
+    "sha256": "b70588f6f4a06895c54925d4283b48d70186e0cd2fbfccb1275a33bf26d33275"
+  },
+  "os": "linux",
+  "p95_ms": 59.587553,
+  "samples_ms": [
+    56.253381999999995,
+    59.355782000000005,
+    57.611919,
+    56.628108000000005,
+    63.952664000000006,
+    54.582372,
+    56.925461,
+    59.587553,
+    57.253492,
+    54.847916,
+    51.705186,
+    50.869541,
+    55.415296000000005,
+    55.584531,
+    51.138621,
+    59.415086,
+    55.300123,
+    54.645784000000006,
+    56.779203,
+    52.661794
+  ],
+  "single_line": false,
+  "text": "DraW two cards.",
+  "threads": "4"
+}

@@ -1,0 +1,56 @@
+{
+  "arch": "x86_64",
+  "cold_ms": 570.1152099999999,
+  "image": "docs/gallery/assets/modern-rules.png",
+  "image_size": [
+    283,
+    42
+  ],
+  "lines": [
+    {
+      "bounds": [
+        0,
+        4,
+        275,
+        32
+      ],
+      "confidence": 0.9999828338623047,
+      "text": "Draw two cards."
+    }
+  ],
+  "load_ms": 216.919568,
+  "median_ms": 533.6631309999999,
+  "model": {
+    "detector_sha256": "a917b23dbd9524b465df7e922641b3ff2981623df4ded5a0234004ef2fee7cfe",
+    "language": "en",
+    "name": "Paddle PP-OCRv6_medium_rec (unmodified official candidate)",
+    "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba"
+  },
+  "os": "linux",
+  "p95_ms": 557.638439,
+  "samples_ms": [
+    527.572599,
+    519.817281,
+    522.26928,
+    550.593255,
+    527.9395850000001,
+    531.650097,
+    559.082952,
+    538.3213340000001,
+    533.6631309999999,
+    517.090469,
+    537.6329549999999,
+    556.469232,
+    520.004412,
+    542.021827,
+    548.109104,
+    526.3542610000001,
+    527.0276120000001,
+    557.638439,
+    520.950942,
+    538.285246
+  ],
+  "single_line": false,
+  "text": "Draw two cards.",
+  "threads": "1"
+}

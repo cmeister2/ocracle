@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "purpose": "experimental export; runtime, accuracy and latency require separate validation",
+  "tool_versions": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0"
+  },
+  "settings": {
+    "mode": "dynamic",
+    "operators": [
+      "Conv",
+      "MatMul"
+    ],
+    "weight_type": "QInt8",
+    "per_channel_requested": true,
+    "reduce_range": false,
+    "MatMulConstBOnly": true
+  },
+  "source": {
+    "file": "ppocr-v6-small.onnx",
+    "bytes": 21159378,
+    "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+    "opsets": {
+      "": 11
+    },
+    "operators": {
+      "Add": 103,
+      "AveragePool": 1,
+      "BatchNormalization": 3,
+      "Concat": 3,
+      "Conv": 57,
+      "Div": 18,
+      "Erf": 13,
+      "HardSigmoid": 5,
+      "Identity": 135,
+      "MatMul": 13,
+      "MaxPool": 1,
+      "Mul": 43,
+      "Pow": 5,
+      "ReduceMean": 15,
+      "Relu": 10,
+      "Reshape": 8,
+      "Shape": 4,
+      "Sigmoid": 5,
+      "Slice": 8,
+      "Softmax": 3,
+      "Sqrt": 5,
+      "Squeeze": 8,
+      "Sub": 5,
+      "Transpose": 9,
+      "Unsqueeze": 1
+    },
+    "inputs": [
+      {
+        "name": "x",
+        "element_type": 1,
+        "shape": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fetch_name_0",
+        "element_type": 1,
+        "shape": [
+          "DynamicDimension.0",
+          "Reshape_471_o0__d2",
+          18710
+        ]
+      }
+    ]
+  },
+  "output": {
+    "file": "ocracle-small-dynamic-int8.onnx",
+    "bytes": 5613990,
+    "sha256": "b70588f6f4a06895c54925d4283b48d70186e0cd2fbfccb1275a33bf26d33275",
+    "opsets": {
+      "": 11
+    },
+    "operators": {
+      "Add": 103,
+      "AveragePool": 1,
+      "BatchNormalization": 3,
+      "Cast": 66,
+      "Concat": 3,
+      "ConvInteger": 57,
+      "Div": 18,
+      "DynamicQuantizeLinear": 65,
+      "Erf": 13,
+      "HardSigmoid": 5,
+      "Identity": 135,
+      "MatMul": 4,
+      "MatMulInteger": 9,
+      "MaxPool": 1,
+      "Mul": 175,
+      "Pow": 5,
+      "ReduceMean": 15,
+      "Relu": 10,
+      "Reshape": 8,
+      "Shape": 4,
+      "Sigmoid": 5,
+      "Slice": 8,
+      "Softmax": 3,
+      "Sqrt": 5,
+      "Squeeze": 8,
+      "Sub": 5,
+      "Transpose": 9,
+      "Unsqueeze": 1
+    },
+    "inputs": [
+      {
+        "name": "x",
+        "element_type": 1,
+        "shape": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fetch_name_0",
+        "element_type": 1,
+        "shape": [
+          "DynamicDimension.0",
+          "Reshape_471_o0__d2",
+          18710
+        ]
+      }
+    ]
+  }
+}

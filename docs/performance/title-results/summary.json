@@ -1,0 +1,663 @@
+{
+  "baseline": "baseline-medium-title",
+  "runs": [
+    {
+      "label": "baseline-medium-title",
+      "groups": {
+        "line": {
+          "cases": 16,
+          "geomean_case_median_ms": 58.307013398524035,
+          "worst_case_p95_ms": 97.24310999999999,
+          "character_edits": 0,
+          "reference_characters": 196,
+          "character_error_rate": 0.0,
+          "exact_matches": 16
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 52.576857999999994,
+          "p95_ms": 54.195225
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 55.600324,
+          "p95_ms": 56.803744
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 54.407669,
+          "p95_ms": 56.789764999999996
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 54.294265,
+          "p95_ms": 57.886458000000005
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 59.101778,
+          "p95_ms": 60.861989
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 53.588957,
+          "p95_ms": 56.223088
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 81.862038,
+          "p95_ms": 84.534406
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 70.327602,
+          "p95_ms": 73.24800099999999
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 57.058066999999994,
+          "p95_ms": 60.510389999999994
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 55.094735,
+          "p95_ms": 56.506118
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 54.148492,
+          "p95_ms": 58.775386
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 54.813202,
+          "p95_ms": 56.979897
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 52.917749,
+          "p95_ms": 55.002852
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 54.412673000000005,
+          "p95_ms": 97.24310999999999
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 64.84996,
+          "p95_ms": 68.40650199999999
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 1.0,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 65.050805,
+          "p95_ms": 69.943661
+        }
+      ]
+    },
+    {
+      "label": "rten-small-title-t4",
+      "groups": {
+        "line": {
+          "cases": 16,
+          "geomean_case_median_ms": 19.311497356206523,
+          "worst_case_p95_ms": 26.959361,
+          "character_edits": 1,
+          "reference_characters": 196,
+          "character_error_rate": 0.00510204081632653,
+          "exact_matches": 15
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 2.9436429999787803,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.861153,
+          "p95_ms": 19.897283
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 3.0265131347999463,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.371083,
+          "p95_ms": 22.029295
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 2.8742384143709416,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.929420999999998,
+          "p95_ms": 20.062447000000002
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 2.991580428787796,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.149024,
+          "p95_ms": 20.09985
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 3.2621285990655466,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.11755,
+          "p95_ms": 19.591727
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 2.8960920425039367,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.503886,
+          "p95_ms": 20.108064
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 3.377144274397816,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.240018,
+          "p95_ms": 26.959361
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 2.868162942005995,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.520086,
+          "p95_ms": 26.447918
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 3.126823055495153,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.247936,
+          "p95_ms": 20.477323
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 3.0493802165089736,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.067519,
+          "p95_ms": 19.891783999999998
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 2.945947992749774,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.380668,
+          "p95_ms": 21.165195
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 3.11010831123778,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 17.62421,
+          "p95_ms": 20.043887
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 2.9313176140740698,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 18.052546999999997,
+          "p95_ms": 20.383681
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 2.846855686993732,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 19.113253,
+          "p95_ms": 20.213161
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 3.040521479058717,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.328565,
+          "p95_ms": 22.768584
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 3.069499980630067,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.192639,
+          "p95_ms": 22.730574999999998
+        }
+      ]
+    },
+    {
+      "label": "ort-small-title",
+      "groups": {
+        "line": {
+          "cases": 16,
+          "geomean_case_median_ms": 22.294225856960487,
+          "worst_case_p95_ms": 30.627485999999998,
+          "character_edits": 1,
+          "reference_characters": 196,
+          "character_error_rate": 0.00510204081632653,
+          "exact_matches": 15
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 2.431220306462119,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.625707000000002,
+          "p95_ms": 23.214805000000002
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 2.7342051397249367,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.335096,
+          "p95_ms": 22.718021
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 2.59484955857052,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.967561999999997,
+          "p95_ms": 23.201535999999997
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 2.3595187324943137,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 23.010737,
+          "p95_ms": 27.650258
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 2.7477898624203014,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.508842,
+          "p95_ms": 23.903861
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 2.4379332601984616,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.981306,
+          "p95_ms": 23.827586
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 2.9464797480271834,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 27.782997,
+          "p95_ms": 30.627485999999998
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 2.6425846463790807,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 26.613188,
+          "p95_ms": 28.789307
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 2.7410826644091597,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.815887,
+          "p95_ms": 23.06409
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 2.7171713131612827,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 20.276504,
+          "p95_ms": 23.752873
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 2.4348760220131513,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 22.238706,
+          "p95_ms": 24.529293
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 2.5428434110986933,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.555870000000002,
+          "p95_ms": 23.871142000000003
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 2.4474841087143577,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 21.621284,
+          "p95_ms": 24.015449
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 2.680443878617178,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 20.299874,
+          "p95_ms": 23.589019
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 2.625297618252424,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 24.701946,
+          "p95_ms": 26.590299
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 2.841743742278132,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 22.891158,
+          "p95_ms": 25.820462
+        }
+      ]
+    },
+    {
+      "label": "ort-tiny-title",
+      "groups": {
+        "line": {
+          "cases": 16,
+          "geomean_case_median_ms": 7.44790403616894,
+          "worst_case_p95_ms": 10.695255000000001,
+          "character_edits": 4,
+          "reference_characters": 196,
+          "character_error_rate": 0.02040816326530612,
+          "exact_matches": 13
+        }
+      },
+      "paired": [
+        {
+          "sample_id": "line-goudy-title-clean",
+          "speedup": 7.627175372702915,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 6.893359,
+          "p95_ms": 8.151857999999999
+        },
+        {
+          "sample_id": "line-goudy-title-blur",
+          "speedup": 7.548801017072817,
+          "character_edits_before": 0,
+          "character_edits_after": 2,
+          "text_changed": true,
+          "median_ms": 7.365451,
+          "p95_ms": 8.730131
+        },
+        {
+          "sample_id": "line-matrix-title-clean",
+          "speedup": 8.015133060444736,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 6.788118,
+          "p95_ms": 8.051693
+        },
+        {
+          "sample_id": "line-matrix-title-blur",
+          "speedup": 7.507273006829713,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.232222,
+          "p95_ms": 8.293384000000001
+        },
+        {
+          "sample_id": "line-beleren-title-clean",
+          "speedup": 8.050425202221687,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.341448000000001,
+          "p95_ms": 8.311406999999999
+        },
+        {
+          "sample_id": "line-beleren-title-blur",
+          "speedup": 7.728071153284566,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 6.934325,
+          "p95_ms": 7.932832000000001
+        },
+        {
+          "sample_id": "line-future-title-clean",
+          "speedup": 8.434551580182037,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 9.705559000000001,
+          "p95_ms": 10.695255000000001
+        },
+        {
+          "sample_id": "line-future-title-blur",
+          "speedup": 8.157265328827991,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 8.621468,
+          "p95_ms": 10.149550999999999
+        },
+        {
+          "sample_id": "line-colorshift-title-clean",
+          "speedup": 8.226408791396377,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 6.935963,
+          "p95_ms": 7.600094
+        },
+        {
+          "sample_id": "line-colorshift-title-blur",
+          "speedup": 7.604535082479132,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.2449840000000005,
+          "p95_ms": 7.930965
+        },
+        {
+          "sample_id": "line-dracula-title-clean",
+          "speedup": 7.576947973533256,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.146478,
+          "p95_ms": 7.832095000000001
+        },
+        {
+          "sample_id": "line-dracula-title-blur",
+          "speedup": 7.741492200206653,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.080444,
+          "p95_ms": 8.075443
+        },
+        {
+          "sample_id": "line-invocation-title-clean",
+          "speedup": 7.456247493695313,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.0971020000000005,
+          "p95_ms": 7.671068
+        },
+        {
+          "sample_id": "line-invocation-title-blur",
+          "speedup": 7.80170743041358,
+          "character_edits_before": 0,
+          "character_edits_after": 1,
+          "text_changed": true,
+          "median_ms": 6.974457,
+          "p95_ms": 8.145894
+        },
+        {
+          "sample_id": "line-module-title-clean",
+          "speedup": 8.179354111890605,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 7.928494,
+          "p95_ms": 9.563516
+        },
+        {
+          "sample_id": "line-module-title-blur",
+          "speedup": 7.688214438134395,
+          "character_edits_before": 0,
+          "character_edits_after": 0,
+          "text_changed": false,
+          "median_ms": 8.461107,
+          "p95_ms": 9.496902
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/performance/suite-baseline-medium-title.json",
+      "sha256": "87c6a8ed3052e7bdbd78b3d7db26aa34721c5fae5c63650da33e317aa069acca"
+    },
+    {
+      "path": "docs/performance/suite-rten-small-title-t4.json",
+      "sha256": "d19f6b1f0c5defd9ec1dfc9e712744426c84a4aa4fb46e5c5da14d1e4ddd9490"
+    },
+    {
+      "path": "docs/performance/suite-ort-small-title.json",
+      "sha256": "688c8df508161fe37a5f4521f4326a0b7f23e25dd4de7a3083a333812b009300"
+    },
+    {
+      "path": "docs/performance/suite-ort-tiny-title.json",
+      "sha256": "2aa87f26b64b694df791f3a01ed5505a6b4b118dba0950ed711fb89389c7ccdc"
+    }
+  ]
+}
