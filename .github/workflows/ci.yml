@@ -120,6 +120,7 @@ jobs:
           test -f "${ORT_DYLIB_PATH:?native runtime library must be configured}"
           cargo test --release --locked --features onnxruntime --lib runtime::tests::supplied_native_runtime_matches_rten_and_serializes_shared_calls -- --exact --nocapture
           cargo test --release --locked --features onnxruntime --test native_backend -- --nocapture --test-threads=1
+          cargo test --release --locked --features onnxruntime --test native_environment -- --nocapture
 
   training:
     name: Training and degradation contracts

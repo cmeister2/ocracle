@@ -11,12 +11,14 @@ use crate::InferenceBackend;
 /// Validated inference settings shared by an engine's detector and recognizer.
 pub(crate) struct RuntimeOptions {
     /// Selected model execution backend.
-    backend: InferenceBackend,
-    /// Optional worker count for each native session.
-    #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
-    threads: Option<usize>,
+    pub(crate) backend: InferenceBackend,
+    /// Optional worker count for inference.
+    pub(crate) threads: Option<usize>,
     /// Explicit RTen pool reused by every model in this engine.
     rten_pool: Option<Arc<ThreadPool>>,
+    /// Caller-owned native environment, bypassing the compatibility cache.
+    #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+    pub(crate) ort_environment: Option<ort::environment::Environment>,
 }
 
 impl RuntimeOptions {
@@ -40,9 +42,10 @@ impl RuntimeOptions {
         };
         Ok(Self {
             backend,
-            #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
             threads,
             rten_pool,
+            #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+            ort_environment: None,
         })
     }
 }
@@ -86,7 +89,11 @@ impl RuntimeModel {
             InferenceBackend::OnnxRuntime => {
                 #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
                 {
-                    load_onnx(bytes, options.threads)
+                    let environment = match &options.ort_environment {
+                        Some(environment) => environment.clone(),
+                        None => default_onnx_environment()?,
+                    };
+                    load_onnx(bytes, options.threads, &environment)
                 }
                 #[cfg(not(all(feature = "onnxruntime", not(target_arch = "wasm32"))))]
                 {
@@ -184,19 +191,29 @@ impl RuntimeModel {
     }
 }
 
-/// Load an explicitly supplied native CPU runtime and create one independent session.
+/// Retain the default environment for callers using the backend-only loaders.
+///
+/// ORT allows only one environment to be created, even after its last handle is
+/// dropped. Keep a successful initialization alive for repeated engine loads.
+/// Explicit environment loaders bypass this cache and retain caller ownership.
+#[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+static DEFAULT_ONNX_ENVIRONMENT: std::sync::Mutex<Option<ort::environment::Environment>> =
+    std::sync::Mutex::new(None);
+
+/// Initialize or reuse the process-lifetime default native environment.
 ///
 /// # Errors
 ///
-/// Returns errors for a missing/incompatible library, invalid ONNX graph, invalid
-/// session options or a model that does not have one float input and output.
+/// Returns errors for a missing/incompatible library, a poisoned initialization
+/// lock or an environment already created outside the default loader.
 #[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
-fn load_onnx(bytes: Vec<u8>, threads: Option<usize>) -> Result<RuntimeModel> {
-    use ort::{
-        session::{Session, builder::GraphOptimizationLevel},
-        value::{TensorElementType, ValueType},
-    };
-
+fn default_onnx_environment() -> Result<ort::environment::Environment> {
+    let mut cached = DEFAULT_ONNX_ENVIRONMENT
+        .lock()
+        .map_err(|_| anyhow::anyhow!("ONNX Runtime environment lock poisoned"))?;
+    if let Some(environment) = &*cached {
+        return Ok(environment.clone());
+    }
     let library = std::env::var_os("ORT_DYLIB_PATH")
         .filter(|path| !path.is_empty())
         .map(std::path::PathBuf::from)
@@ -209,16 +226,43 @@ fn load_onnx(bytes: Vec<u8>, threads: Option<usize>) -> Result<RuntimeModel> {
                 "libonnxruntime.so".into()
             }
         });
-    // Eagerly load via the fallible API; lazy Session::builder loading can panic
-    // when a library is absent. Do not commit a process-global environment:
-    // downstream applications retain ownership of their environment settings.
-    drop(ort::init_from(&library).with_context(|| {
-        format!(
-            "load ONNX Runtime native library {}; set ORT_DYLIB_PATH to an installed library",
-            library.display()
-        )
-    })?);
-    let mut builder = Session::builder()?
+    // Eagerly load via the fallible API so a missing library returns an error.
+    // Cache only successes so a missing-library error does not prevent retries.
+    let environment = ort::init_from(&library)
+        .with_context(|| {
+            format!(
+                "load ONNX Runtime native library {}; set ORT_DYLIB_PATH to an installed library",
+                library.display()
+            )
+        })?
+        .build()
+        .context(
+            "create ONNX Runtime environment; if the application already created one, \
+             use CardOcr::load_with_onnxruntime_environment or \
+             CardOcr::load_profile_with_onnxruntime_environment",
+        )?;
+    *cached = Some(environment.clone());
+    Ok(environment)
+}
+
+/// Create one independent CPU session in an existing native environment.
+///
+/// # Errors
+///
+/// Returns errors for an invalid ONNX graph, invalid session options or a model
+/// that does not have one float input and output.
+#[cfg(all(feature = "onnxruntime", not(target_arch = "wasm32")))]
+fn load_onnx(
+    bytes: Vec<u8>,
+    threads: Option<usize>,
+    environment: &ort::environment::Environment,
+) -> Result<RuntimeModel> {
+    use ort::{
+        session::{Session, builder::GraphOptimizationLevel},
+        value::{TensorElementType, ValueType},
+    };
+
+    let mut builder = Session::builder(environment)?
         .with_no_environment_execution_providers()
         .map_err(session_option_error)?
         .with_independent_thread_pool()
@@ -386,6 +430,19 @@ mod tests {
             eprintln!("Native runtime test requires ORT_DYLIB_PATH; skipped");
             return Ok(());
         }
+        // Concurrent first loads must initialize only one environment. Dropping
+        // every model must still allow subsequent engines to reuse it.
+        std::thread::scope(|scope| -> Result<()> {
+            let workers: Vec<_> = (0..4)
+                .map(|_| scope.spawn(|| load_identity(InferenceBackend::OnnxRuntime, Some(1))))
+                .collect();
+            for worker in workers {
+                let model = worker.join().unwrap()?;
+                let input = NdTensor::from_data([1, 1, 2, 2], vec![-1., 0., 0.5, 1.]);
+                assert_eq!(model.run(input.view())?.into_data(), input.into_data());
+            }
+            Ok(())
+        })?;
         let model = load_identity(InferenceBackend::OnnxRuntime, Some(1))?;
         assert_eq!(
             model.input_dimensions()?,

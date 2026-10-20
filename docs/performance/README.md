@@ -175,6 +175,37 @@ thread spinning. Output provenance records
 the selected backend. Do not change `ORT_DYLIB_PATH` after process initialization.
 RTen-format custom checkpoints require the RTen backend; ORT accepts ONNX.
 
+The `ort` binding is pinned to `2.0.0-rc.15`; native regression tests use ONNX
+Runtime 1.31.0. The backend-only loaders initialize one shared environment and
+retain it until process exit, allowing repeated and concurrent engine creation.
+Applications that already use ONNX Runtime, or need to control its shutdown,
+should create the environment themselves and use
+`CardOcr::load_with_onnxruntime_environment` or
+`CardOcr::load_profile_with_onnxruntime_environment`. Those methods bypass the
+default environment cache. Sessions retain their own handles, so the environment
+is released when the application and all sessions release theirs. Keep a handle
+while more models may be loaded: `ort` permits only one environment creation per
+process, even after it has been released. Choose one initialization path for the
+application.
+
+```rust,no_run
+use ocracle::{CardOcr, Options};
+
+fn main() -> anyhow::Result<()> {
+    let environment = ort::init_from("/absolute/path/libonnxruntime.so")?.build()?;
+    let ocr = CardOcr::load_profile_with_onnxruntime_environment(
+        "en", ".", None, &environment, Some(2),
+    )?;
+    // The same environment can be passed to other OCR engines or native sessions.
+    let result = ocr.recognize(
+        &image::open("title.png")?,
+        Options { single_line: true, ..Options::default() },
+    )?;
+    println!("{}", result.text);
+    Ok(())
+}
+```
+
 ```sh
 cargo build --release --locked --all-features --example latency
 python3 scripts/performance_suite.py --prepare --download-sources
