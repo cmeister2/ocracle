@@ -3,6 +3,6 @@
 numpy==2.5.4
 Pillow==13.0.0
 onnx==1.23.2
-onnxruntime==1.31.0
+onnxruntime==1.31.1
 rten-convert==0.22.0
-fonttools==4.67.0
+fonttools==4.68.0
