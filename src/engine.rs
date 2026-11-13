@@ -414,14 +414,14 @@ impl CardOcr {
         let detector = detector_bytes
             .as_ref()
             .map(|bytes| -> Result<_> {
-                OcrEngine::new(OcrEngineParams {
+                Ok(OcrEngine::new(OcrEngineParams {
                     detection_model: if !use_portable_detector {
                         Some(Model::load(bytes.clone()).context("load detection model")?)
                     } else {
                         None
                     },
                     ..Default::default()
-                })
+                })?)
             })
             .transpose()?;
         let portable_detector = if use_portable_detector {
