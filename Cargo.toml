@@ -22,7 +22,7 @@ anyhow = "1.0.104"
 clap = { version = "4.6.7", features = ["derive"] }
 image = { version = "0.25.10", default-features = false, features = ["png", "jpeg", "webp"] }
 ocrs = "0.14.0"
-rten = "0.28"
+rten = { version = "0.28", features = ["rten_format"] }
 rten-imageproc = "0.28"
 rten-tensor = "0.28"
 serde = { version = "1.0.229", features = ["derive"] }
