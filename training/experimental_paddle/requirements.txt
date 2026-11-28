@@ -3,4 +3,4 @@ Pillow==13.0.0
 onnx==1.23.2
 onnxruntime==1.32.0
 opencv-python-headless==5.1.0.95
-PyYAML==6.0.3
+PyYAML==6.0.4
